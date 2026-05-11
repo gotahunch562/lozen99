@@ -24,6 +24,19 @@ const featuredPost =
 const otherPosts = featuredPost
   ? allPosts.filter((post) => post.id !== featuredPost.id)
   : allPosts;
+
+const postsByCategory = otherPosts.reduce((groups, post) => {
+  const category = post.data.category || "Articles";
+
+  if (!groups[category]) {
+    groups[category] = [];
+  }
+
+  groups[category].push(post);
+  return groups;
+}, {});
+
+const categorySections = Object.entries(postsByCategory);
 ---
 
 <BaseLayout>
@@ -88,14 +101,14 @@ const otherPosts = featuredPost
   </section>
 
   <section>
-    <Wrapper variant="standard" class="py-12 lg:py-24">
+    <Wrapper variant="standard" class="py-12 lg:py-20">
       <div class="max-w-3xl">
         <Text
           tag="span"
           variant="textSM"
           class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
         >
-          Articles
+          Series
         </Text>
 
         <Text
@@ -103,7 +116,7 @@ const otherPosts = featuredPost
           variant="displayLG"
           class="mt-8 uppercase font-display text-base-900"
         >
-          Performance, Identity, Policy, and the Cost of Staying Silent
+          Menopause at Work, Policy, and the Measurement Gap
         </Text>
 
         <Text
@@ -111,17 +124,44 @@ const otherPosts = featuredPost
           variant="textBase"
           class="mt-4 text-base-600 text-balance"
         >
-          Lozen Advisory writes for the woman who is still performing while
-          managing what the workplace does not see. These articles examine
-          perimenopause, leadership visibility, women lawyers, disclosure,
-          workplace policy, and the systems that often recognize risk only after
-          the cost has already been paid.
+          This article is part of a nine-part series examining how existing
+          menopause workplace frameworks, legislation, and workforce studies are
+          bounded by the same disclosure condition they are designed to address.
         </Text>
-      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-12">
-        {otherPosts.map((post) => <BlogCard post={post} />)}
+        <div class="mt-8">
+          <a
+            href="/blog/menopause-policy-laws-dependence-disclosure"
+            class="inline-flex text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
+          >
+            View the full series index
+          </a>
+        </div>
       </div>
+    </Wrapper>
+  </section>
+
+  <section>
+    <Wrapper variant="standard" class="py-12 lg:py-24">
+      {
+        categorySections.map(([category, posts]) => (
+          <div class="mb-16 last:mb-0">
+            <div class="max-w-3xl">
+              <Text
+                tag="span"
+                variant="textSM"
+                class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+              >
+                {category}
+              </Text>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-12">
+              {posts.map((post) => <BlogCard post={post} />)}
+            </div>
+          </div>
+        ))
+      }
     </Wrapper>
   </section>
 </BaseLayout>
