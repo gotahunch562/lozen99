@@ -4,16 +4,76 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-// Components
-import CustomerCard from "@/components/customers/CustomerCard.astro";
-// Content
-import { getCollection } from "astro:content";
-const allCustomers = await getCollection("customers");
-allCustomers.sort((a, b) => a.data.name.localeCompare(b.data.name));
----
 
+const stories = [
+  {
+    category: "Executive Health & Performance",
+    source: "CNBC",
+    date: "April 2026",
+    headline: "OpenAI's Fidji Simo Takes Medical Leave After Postponing Care for Entire Tenure",
+    summary: "Simo wrote in her staff memo: 'For my entire time here, I've postponed medical tests and new therapies to stay completely focused on the job and not miss a single day of work.' She had disclosed her neuroimmune condition publicly months earlier. The disclosure did not change how she performed. The organizational record showed no signal. The leave came without warning.",
+    href: "https://www.cnbc.com/2026/04/03/openai-fidji-simo-medical-leave-executive-changes.html",
+  },
+  {
+    category: "Executive Health & Performance",
+    source: "Fortune",
+    date: "April 2026",
+    headline: "OpenAI CMO Kate Rouch Steps Down for Cancer Treatment: 'You Can't Outwork Your Body'",
+    summary: "Rouch wrote on LinkedIn: 'At a certain point, you have to be honest about your limits. I've reached mine.' She stepped down to prioritize treatment, with plans to return in a narrower role. Two senior women at the same organization, both exiting for health reasons within hours of each other, both having acknowledged they had been managing health while performing at the highest level.",
+    href: "https://fortune.com/2026/04/06/fidji-simo-openai-medical-leave-expansive-role-women-health/",
+  },
+  {
+    category: "Workplace Research",
+    source: "Korn Ferry / Vira Health",
+    date: "2023",
+    headline: "73% of Women Did Not Discuss Menopause with HR, Senior Leadership, or Their Manager",
+    summary: "A global survey of more than 8,000 women found that only 27% spoke with senior leadership about their perimenopause or menopause experience. Among senior executives, 28% had quit a job due to symptoms -- more than three times the rate of individual contributors. Only 26% felt supported by formal work policies or programs, the lowest support source in the study.",
+    href: "https://www.kornferry.com/institute/korn-ferry-and-vira-health-survey-findings",
+  },
+  {
+    category: "Workplace Research",
+    source: "Bonafide State of Menopause",
+    date: "2023",
+    headline: "73% of Women Are Not Treating Their Menopause Symptoms",
+    summary: "Bonafide's annual State of Menopause survey of 1,039 U.S. women ages 40 to 65 found that nearly three quarters were not treating their symptoms. 65% would not consider hormone replacement therapy. The survey documented a consistent pattern across multiple years: awareness of options does not move the utilization number when the barrier is not access but the cost of being seen accessing it.",
+    href: "https://hellobonafide.com/pages/state-of-menopause",
+  },
+  {
+    category: "Health Equity",
+    source: "Black Women's Health Imperative",
+    date: "November 2025",
+    headline: "Largest National Survey on Black Women's Menopause Experience Documents Systemic Gaps",
+    summary: "The BWHI released preliminary findings from a survey of more than 1,500 Black women ages 30 to 65 -- the largest of its kind. The population was educated, insured, and professionally active. 52% did not know which medical recommendations to follow. 46% lacked adequate information to manage symptoms. 43% reported discrimination or unfair treatment when seeking healthcare. Access to a system and confidence in that system are not the same condition.",
+    href: "https://bwhi.org/2025/11/05/black-womens-health-imperative-releases-preliminary-findings-from-the-largest-national-survey-on-the-lived-experiences-of-black-women-during-menopause/",
+  },
+  {
+    category: "Autoimmune & Workplace",
+    source: "WellTheory / Autoimmune Association",
+    date: "March 2026",
+    headline: "61% of Working Women with Autoimmune Conditions Have Not Disclosed to Their Employer",
+    summary: "A national survey of 250 U.S. working women with autoimmune conditions, conducted in partnership with the Autoimmune Association, found that 61% had not disclosed to their employer. Of those, 41% did not believe disclosure would help. 28% were concerned about professional consequences. Autoimmune conditions disproportionately affect women and frequently emerge or worsen during perimenopause -- a connection the clinical system and the employer benefits system have not yet integrated.",
+    href: "https://www.autoimmune.org",
+  },
+  {
+    category: "Market Analysis",
+    source: "MUTU System",
+    date: "June 2025",
+    headline: "Menowashing: How the Wellness Industry Hijacked Midlife for Profit",
+    summary: "The term menowashing names what happens when menopause awareness becomes a marketing vehicle rather than a care framework. Products are repositioned with perimenopause language. Wellness programs are relabeled. The woman in the middle gets more content and fewer answers. The piece documents the gap between the $600M menopause market and the clinical evidence base for most of what it sells.",
+    href: "https://mutusystem.com/en-us/perimenopause/menowashing-how-the-wellness-industry-hijacked-midlife-for-profit/",
+  },
+  {
+    category: "Legislation",
+    source: "DLA Piper",
+    date: "March 2026",
+    headline: "UK Mandates Menopause Action Plans for Large Employers by Spring 2027",
+    summary: "The UK Employment Rights Act 2025 requires large employers with 250 or more employees to publish menopause action plans, encouraged from April 2026 and mandatory in spring 2027. Employers must select at least one measure and account for intersectional needs and workforce demographics. Policy is moving faster than utilization data. The women the legislation was built to reach remain the least likely to engage with the systems it creates.",
+    href: "https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2026/government-launches-gender-pay-gap-and-menopause-reforms",
+  },
+];
+---
 <BaseLayout>
-  <section >
+  <section>
     <Wrapper variant="standard" class="py-24 lg:py-32">
       <div class="max-w-3xl mx-auto text-center">
         <Text
@@ -21,37 +81,75 @@ allCustomers.sort((a, b) => a.data.name.localeCompare(b.data.name));
           variant="textSM"
           class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
         >
-          Customer Stories
+          Research & Press
         </Text>
         <Text
           tag="h1"
           variant="displayXL"
           class="mt-8 uppercase font-display text-base-900"
         >
-          Why drivers trust Copperlane
+          In The News
         </Text>
         <Text tag="p" variant="textBase" class="mt-4 text-base-600 text-balance">
-          Real experiences from owners and fleet managers across California —
-          from diagnostics and inspections to detailing and long-term
-          maintenance.
+          The research is accumulating. The legislation is moving. Senior women are naming what they carried in silence. This is the context Lozen Advisory was built inside.
         </Text>
       </div>
-
-      <div class="space-y-8  mt-12">
-        {allCustomers.map((customer) => <CustomerCard customer={customer} />)}
+      <div class="space-y-8 mt-12">
+        {stories.map((story) => (
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 bg-base-50 rounded-3xl shadow-2xl outline-4 outline-base-500/10">
+            <div>
+              <Text
+                tag="span"
+                variant="textXS"
+                class="pl-4 font-medium uppercase border-l-2 font-display text-base-500 border-accent-500"
+              >
+                {story.category}
+              </Text>
+              <Text
+                tag="p"
+                variant="textXS"
+                class="mt-4 text-base-400 uppercase font-display"
+              >
+                {story.source} &mdash; {story.date}
+              </Text>
+            </div>
+            <div class="md:col-span-2">
+              <Text
+                tag="h3"
+                variant="textBase"
+                class="font-medium font-display text-base-900"
+              >
+                {story.headline}
+              </Text>
+              <Text
+                tag="p"
+                variant="textXS"
+                class="mt-4 text-base-600 text-balance"
+              >
+                {story.summary}
+              </Text>
+              <a
+                href={story.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-4 inline-block text-sm font-medium text-accent-600 hover:text-accent-700 transition-colors font-display uppercase"
+              >
+                Read more &rarr;
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
-
-      <div class="mt-12  text-center">
+      <div class="mt-12 text-center">
         <Text tag="p" variant="textBase" class="text-base-600 max-w-2xl mx-auto">
-          Want to be our next success story? Tell us what you need and we’ll
-          tailor a plan for your vehicle or fleet.
+          The data describes the problem. Lozen Advisory addresses what the data cannot measure.
         </Text>
         <div class="flex flex-wrap gap-3 justify-center mt-8">
-          <Button isLink href="/book-appointment" variant="default" size="base">
-            Book an appointment
+          <Button isLink href="/request-briefing" variant="default" size="base">
+            Request a Briefing
           </Button>
-          <Button isLink href="/contact" variant="muted" size="base">
-            Talk to our team
+          <Button isLink href="https://www.lozenadvisory.com/booking" variant="muted" size="base">
+            Book a Session
           </Button>
         </div>
       </div>
