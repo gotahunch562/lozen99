@@ -54,7 +54,7 @@ const features = [
         <Text
           tag="p"
           variant="textBase"
-          class="mt-4 text-base-600 text-balance !text-lg !leading-relaxed"
+          class="mt-4 text-base-600 text-balance"
         >
           The women who sustain leadership through perimenopause and menopause do not do it by accident. They do it because they treated it the same way they treated every other professional challenge: with clarity, with a plan, and with the right resource in their corner.
         </Text>
@@ -63,19 +63,19 @@ const features = [
       <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4 lg:col-span-2">
         {
           features.map((feature) => (
-            <div class="flex flex-col justify-end p-8 shadow-2xl min-h-[320px] bg-base-50 rounded-3xl outline-4 outline-base-500/10">
+            <div class="flex flex-col p-6 shadow-2xl pt-42 bg-base-50 rounded-3xl outline-4 outline-base-500/10">
               <Text
                 tag="h3"
                 variant="textBase"
-                class="pl-4 font-medium uppercase border-l-2 font-display text-base-900 border-accent-500 !text-xl lg:!text-2xl !leading-tight"
+                class="pl-4 font-medium uppercase border-l-2 font-display text-base-900 border-accent-500"
               >
                 {feature.title}
               </Text>
 
               <Text
                 tag="p"
-                variant="textBase"
-                class="mt-5 text-base-600 text-balance !text-base lg:!text-lg !leading-relaxed"
+                variant="textSM"
+                class="mt-4 text-base-600 text-balance"
               >
                 {feature.description}
               </Text>
