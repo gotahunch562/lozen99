@@ -8,15 +8,19 @@ import BlogCard from "@/components/blog/BlogCard.astro";
 import BlogBigCard from "@/components/blog/BlogBigCard.astro";
 // Content
 import { getCollection } from "astro:content";
+
 const allPosts = await getCollection("posts");
+
 allPosts.sort((a, b) => {
   const dateA = new Date(a.data.pubDate).getTime();
   const dateB = new Date(b.data.pubDate).getTime();
   return dateB - dateA;
 });
-// Get featured post (marked as featured, or fallback to most recent)
+
+// Get featured post marked as featured, or fallback to most recent
 const featuredPost =
   allPosts.find((post) => post.data.isFeatured) || allPosts[0];
+
 const otherPosts = allPosts.filter((post) => post.id !== featuredPost.id);
 ---
 
@@ -29,29 +33,35 @@ const otherPosts = allPosts.filter((post) => post.id !== featuredPost.id);
           variant="textSM"
           class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
         >
-          Automotive Insights
+          Lozen Advisory Research
         </Text>
+
         <Text
           tag="h1"
           variant="displayXL"
           class="mt-8 uppercase font-display text-base-900"
         >
-          Expert Advice for Vehicle Owners
+          Disclosure-Dependent Systems Do Not Measure Everyone at Risk
         </Text>
+
         <Text
           tag="p"
           variant="textBase"
           class="mt-4 text-base-600 text-balance"
         >
-          Stay informed with the latest automotive tips, maintenance guides, and
-          industry insights to keep your vehicle running at its best.
+          Lozen Advisory examines the measurement gap inside workplace systems
+          that depend on disclosure, self-reporting, utilization, claims,
+          requests, surveys, or exit data before organizational risk becomes
+          visible.
         </Text>
       </div>
+
       <div class="mt-12">
         {featuredPost && <BlogBigCard post={featuredPost} />}
       </div>
     </Wrapper>
   </section>
+
   <section>
     <Wrapper variant="standard" class="py-12 lg:py-24">
       <div class="max-w-3xl">
@@ -60,24 +70,28 @@ const otherPosts = allPosts.filter((post) => post.id !== featuredPost.id);
           variant="textSM"
           class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
         >
-          All Articles
+          Articles
         </Text>
+
         <Text
           tag="h2"
           variant="displayLG"
           class="mt-8 uppercase font-display text-base-900"
         >
-          More Automotive Insights
+          Measurement, Retention, Policy, and Invisible Attrition
         </Text>
+
         <Text
           tag="p"
           variant="textBase"
           class="mt-4 text-base-600 text-balance"
         >
-          Explore our collection of expert articles covering maintenance tips,
-          vehicle care guides, and the latest automotive trends.
+          These articles analyze how workplace policy, benefits design,
+          leadership systems, and retention models miss the population that
+          remains outside the record until loss has already occurred.
         </Text>
       </div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-12">
         {otherPosts.map((post) => <BlogCard post={post} />)}
       </div>
