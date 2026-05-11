@@ -21,7 +21,9 @@ allPosts.sort((a, b) => {
 const featuredPost =
   allPosts.find((post) => post.data.isFeatured) || allPosts[0];
 
-const otherPosts = allPosts.filter((post) => post.id !== featuredPost.id);
+const otherPosts = featuredPost
+  ? allPosts.filter((post) => post.id !== featuredPost.id)
+  : allPosts;
 ---
 
 <BaseLayout>
@@ -33,7 +35,7 @@ const otherPosts = allPosts.filter((post) => post.id !== featuredPost.id);
           variant="textSM"
           class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
         >
-          Lozen Advisory Research
+          Insights
         </Text>
 
         <Text
@@ -41,7 +43,7 @@ const otherPosts = allPosts.filter((post) => post.id !== featuredPost.id);
           variant="displayXL"
           class="mt-8 uppercase font-display text-base-900"
         >
-          Disclosure-Dependent Systems Do Not Measure Everyone at Risk
+          Menopause at Work: Leadership and Perimenopause Insights
         </Text>
 
         <Text
@@ -49,11 +51,34 @@ const otherPosts = allPosts.filter((post) => post.id !== featuredPost.id);
           variant="textBase"
           class="mt-4 text-base-600 text-balance"
         >
-          Lozen Advisory examines the measurement gap inside workplace systems
-          that depend on disclosure, self-reporting, utilization, claims,
-          requests, surveys, or exit data before organizational risk becomes
-          visible.
+          What do we write about? What matters to her.
         </Text>
+
+        <div class="grid grid-cols-1 gap-3 mt-8 sm:grid-cols-3">
+          <Text
+            tag="p"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-base-900 font-display"
+          >
+            Performance.
+          </Text>
+
+          <Text
+            tag="p"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-base-900 font-display"
+          >
+            Identity.
+          </Text>
+
+          <Text
+            tag="p"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-base-900 font-display"
+          >
+            The career she built.
+          </Text>
+        </div>
       </div>
 
       <div class="mt-12">
@@ -78,7 +103,7 @@ const otherPosts = allPosts.filter((post) => post.id !== featuredPost.id);
           variant="displayLG"
           class="mt-8 uppercase font-display text-base-900"
         >
-          Measurement, Retention, Policy, and Invisible Attrition
+          Performance, Identity, Policy, and the Cost of Staying Silent
         </Text>
 
         <Text
@@ -86,9 +111,11 @@ const otherPosts = allPosts.filter((post) => post.id !== featuredPost.id);
           variant="textBase"
           class="mt-4 text-base-600 text-balance"
         >
-          These articles analyze how workplace policy, benefits design,
-          leadership systems, and retention models miss the population that
-          remains outside the record until loss has already occurred.
+          Lozen Advisory writes for the woman who is still performing while
+          managing what the workplace does not see. These articles examine
+          perimenopause, leadership visibility, women lawyers, disclosure,
+          workplace policy, and the systems that often recognize risk only after
+          the cost has already been paid.
         </Text>
       </div>
 
