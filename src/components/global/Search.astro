@@ -4,75 +4,22 @@ import Button from "@/components/fundations/elements/Button.astro";
 // Icons
 import SearchIcon from "@/components/fundations/icons/Search.astro";
 import { getCollection } from "astro:content";
-const [posts, services, packages, customers, jobs, team, legal] =
-  await Promise.all([
-    getCollection("posts"),
-    getCollection("services"),
-    getCollection("packages"),
-    getCollection("customers"),
-    getCollection("jobs"),
-    getCollection("team"),
-    getCollection("legal"),
-  ]);
+
+const posts = await getCollection("posts");
 
 const searchItems = [
   ...posts.map((post) => ({
     title: post.data.title,
-    description: post.data.description,
-    meta: new Date(post.data.pubDate).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    }),
-    url: `/blog/posts/${post.id}`,
+    description: post.data.description || "",
+    meta: post.data.pubDate
+      ? new Date(post.data.pubDate).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })
+      : "",
+    url: `/blog/${post.id}`,
     type: "Article",
-  })),
-  ...services.map((service) => ({
-    title: service.data.title,
-    description:
-      service.data.shortDescription || service.data.description || "",
-    meta: service.data.category || "Service",
-    url: `/services/${service.id}`,
-    type: "Service",
-  })),
-  ...packages.map((pack) => ({
-    title: pack.data.title,
-    description: pack.data.description,
-    meta: pack.data.price ? `Package • ${pack.data.price}` : "Package",
-    url: `/packages/${pack.id}`,
-    type: "Package",
-  })),
-  ...customers.map((customer) => ({
-    title: customer.data.name,
-    description: customer.data.quote || "",
-    meta:
-      customer.data.serviceUsed ||
-      customer.data.vehicle ||
-      customer.data.location ||
-      "Customer Story",
-    url: `/customers/${customer.id}`,
-    type: "Customer Story",
-  })),
-  ...jobs.map((job) => ({
-    title: job.data.title,
-    description: job.data.description || "",
-    meta: [job.data.location, job.data.type].filter(Boolean).join(" • "),
-    url: `/jobs/${job.id}`,
-    type: "Job",
-  })),
-  ...team.map((person) => ({
-    title: person.data.name,
-    description: "",
-    meta: person.data.role || "Team",
-    url: `/team/${person.id}`,
-    type: "Team",
-  })),
-  ...legal.map((page) => ({
-    title: page.data.page,
-    description: "",
-    meta: "Legal",
-    url: `/legal/${page.id}`,
-    type: "Legal",
   })),
 ];
 ---
@@ -123,7 +70,7 @@ const searchItems = [
       </div>
       <div
         id="searchResults"
-        class="w-full mt-2 overflow-hidden overflow-y-auto rounded-l2xlg max-h-100 divide-y divide-base-200 scrollbar-hide bg-white shadow-2xl outline-4 outline-base-500/5 outline-inset rounded-3xl"
+        class="w-full mt-2 overflow-hidden overflow-y-auto max-h-100 divide-y divide-base-200 scrollbar-hide bg-white shadow-2xl outline-4 outline-base-500/5 outline-inset rounded-3xl"
       >
       </div>
     </div>
@@ -222,14 +169,12 @@ const searchItems = [
       renderResults(results);
     });
 
-    // Close on escape key
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && !searchModal.classList.contains("hidden")) {
         closeSearchModal();
       }
     });
 
-    // NEW: Click outside modal content to close
     searchModal.addEventListener("click", (e) => {
       const modalContent = e.target.closest(".inline-block");
       if (!modalContent) {
