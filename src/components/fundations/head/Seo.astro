@@ -1,31 +1,36 @@
 ---
 import { AstroSeo } from "@lexingtonthemes/seo";
+
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+
+const title = "Institutional Risk & Executive Performance Continuity | Lozen Advisory";
+
+const description =
+  "Strategic counsel addressing the disclosure-dependent measurement failure in leadership pipelines. Protect executive trajectory and institutional authority.";
 ---
 
 <AstroSeo
-  title="Your Page Title"
-  description="A detailed description of your page content."
-  canonical="https://yourwebsite.com/current-page"
+  title={title}
+  description={description}
+  canonical={canonical}
   openGraph={{
-    url: "https://yourwebsite.com/current-page",
-    title: "Your Page Title",
-    description: "A detailed description of your page content.",
+    url: canonical,
+    title,
+    description,
     images: [
       {
-        url: "https://yourwebsite.com/og-image.jpg",
+        url: "https://www.lozenadvisory.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Open Graph Image Alt",
+        alt: "Lozen Advisory",
         type: "image/jpeg",
       },
     ],
-    site_name: "Your Site Name",
+    site_name: "Lozen Advisory",
     type: "website",
     locale: "en_US",
   }}
   twitter={{
-    handle: "@yourhandle",
-    site: "@yourwebsite",
     cardType: "summary_large_image",
   }}
 />
