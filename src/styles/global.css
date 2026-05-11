@@ -22,17 +22,22 @@
   --color-accent-950: oklch(0.205 0.037 104.42);
 
   /* Base */
-  --color-base-50: #f5f9fd;
-  --color-base-100: #e8f2fb;
-  --color-base-200: #d5e7f7;
-  --color-base-300: #b7d5f0;
-  --color-base-400: #8ab6e8;
-  --color-base-500: #3b80b6;
-  --color-base-600: #286392;
-  --color-base-700: #1f4f76;
-  --color-base-800: #193f63;
-  --color-base-900: #102033;
-  --color-base-950: #08111f;
+  --color-base-50: oklch(0.985 0.002 247.839);
+  --color-base-100: oklch(0.967 0.003 264.542);
+  --color-base-200: oklch(0.928 0.006 264.531);
+  --color-base-300: oklch(0.872 0.01 258.338);
+  --color-base-400: oklch(0.707 0.022 261.325);
+  --color-base-500: oklch(0.551 0.027 264.364);
+  --color-base-600: oklch(0.446 0.03 256.802);
+  --color-base-700: oklch(0.373 0.034 259.733);
+  --color-base-800: oklch(0.278 0.033 256.848);
+  --color-base-900: oklch(0.21 0.034 264.665);
+  --color-base-950: oklch(0.13 0.028 261.692);
+
+  /* Lozen blue tokens for later selective use */
+  --color-lozen-blue-300: #8ab6e8;
+  --color-lozen-blue-500: #5a9bd4;
+  --color-lozen-blue-700: #3b80b6;
 
   /* Shadows */
   --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
