@@ -4,22 +4,23 @@ import Logo from "@/components/assets/Logo.astro";
 // Fundations
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-// Icons
-import Plus from "@/components/fundations/icons/Plus.astro";
 // Components
-import MegaMenu from "@/components/global/MegaMenu.astro";
 import MobileMenu from "@/components/global/MobileMenu.astro";
 // Icons
 import Close from "@/components/fundations/icons/Close.astro";
 import Burger from "@/components/fundations/icons/Burger.astro";
+
 const quickLinks = [
-  { href: "/services", label: "Services" },
-  { href: "/packages", label: "Packages" },
-  { href: "/customers", label: "Customers" },
+  { href: "/invisible-attrition", label: "Invisible Attrition" },
+  {
+    href: "/disclosure-independence-infrastructure",
+    label: "Disclosure Infrastructure",
+  },
+  { href: "/blog", label: "Research" },
   { href: "/about", label: "About" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/system/overview", label: "Overview" },
+  { href: "/contact", label: "Contact" },
 ];
+
 // Sets link color based on current path
 const currentPath = Astro.url.pathname;
 ---
@@ -29,23 +30,11 @@ const currentPath = Astro.url.pathname;
     <nav
       class="flex items-center justify-between p-4 shadow-xl bg-base-900/60 outline-4 outline-base-500/5 backdrop-blur-xl rounded-xl"
     >
-      <a href="/">
+      <a href="/" aria-label="Go to Lozen Advisory home page">
         <Logo class="text-lg font-medium text-white uppercase font-display" />
       </a>
+
       <div class="items-center hidden lg:flex gap-8">
-        <button
-          id="megamenu-trigger"
-          type="button"
-          class="text-sm flex items-center gap-2 focus:outline-none font-medium text-white group transition-colors duration-200 hover:text-white group"
-          aria-expanded="false"
-        >
-          Explore
-          <Plus
-            slot="icon"
-            size="sm"
-            class="group-focus:rotate-45 duration-300"
-          />
-        </button>
         {
           quickLinks.map((link) => (
             <a
@@ -62,15 +51,12 @@ const currentPath = Astro.url.pathname;
           ))
         }
       </div>
+
       <div class="flex items-center gap-2">
-        <Button
-          isLink
-          size="xs"
-          variant="accent"
-          href="https://lexingtonthemes.com/templates/copperlane"
-        >
-          Buy Copperlane
+        <Button isLink size="xs" variant="accent" href="/request-briefing">
+          Request Briefing
         </Button>
+
         <Button
           iconOnly
           size="sm"
@@ -87,6 +73,6 @@ const currentPath = Astro.url.pathname;
       </div>
     </nav>
   </Wrapper>
-  <MegaMenu />
+
   <MobileMenu />
 </header>
