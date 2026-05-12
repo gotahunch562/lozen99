@@ -13,9 +13,15 @@ const SERIES_INDEX_SLUG = "menopause-policy-laws-dependence-disclosure";
 
 const getData = (post: any) => post.data as any;
 
+const normalizeSlug = (value: string) =>
+  String(value || "")
+    .replace(/^\/?blog\//, "")
+    .replace(/^\/+/, "")
+    .replace(/\.mdx?$/, "");
+
 const getSlug = (post: any) => {
   const data = getData(post);
-  return String(data.slug || post.id).replace(/^\/?blog\//, "").replace(/^\/+/, "");
+  return normalizeSlug(data.slug || post.slug || post.id);
 };
 
 const getPostHref = (post: any) => `/blog/${getSlug(post)}`;
@@ -52,6 +58,16 @@ const getImageAlt = (post: any) => {
   return data.image?.alt || data.heroAlt || data.title || "";
 };
 
+const getCategory = (post: any) => {
+  const data = getData(post);
+  return data.category || data.tags?.[0] || "Articles";
+};
+
+const getExcerpt = (post: any) => {
+  const data = getData(post);
+  return data.excerpt || data.metaDescription || data.description || "";
+};
+
 const formatDate = (dateValue: string | Date) => {
   if (!dateValue) return "";
 
@@ -69,13 +85,10 @@ const slugify = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
-// Only use migrated Lozen blog posts.
-// This prevents Copperlane demo posts from rendering if they still exist.
+// Use all non-draft posts. Do not require data.slug because the template schema
+// may strip custom frontmatter fields; post.id is the stable fallback.
 const livePosts = allPosts
-  .filter((post) => {
-    const data = getData(post);
-    return data.draft !== true && Boolean(data.slug) && Boolean(data.datePublished || data.pubDate);
-  })
+  .filter((post) => getData(post).draft !== true)
   .sort((a, b) => getSortDate(b) - getSortDate(a));
 
 const articlePosts = livePosts.filter((post) => getSlug(post) !== SERIES_INDEX_SLUG);
@@ -86,20 +99,16 @@ const latestPosts = articlePosts
   .filter((post) => !featuredPost || post.id !== featuredPost.id)
   .slice(0, 6);
 
-const postsByCategory = articlePosts.reduce(
-  (groups: Record<string, typeof articlePosts>, post) => {
-    const data = getData(post);
-    const category = data.category || "Articles";
+const postsByCategory = articlePosts.reduce((groups: Record<string, any[]>, post) => {
+  const category = getCategory(post);
 
-    if (!groups[category]) {
-      groups[category] = [];
-    }
+  if (!groups[category]) {
+    groups[category] = [];
+  }
 
-    groups[category].push(post);
-    return groups;
-  },
-  {}
-);
+  groups[category].push(post);
+  return groups;
+}, {});
 
 const preferredCategoryOrder = [
   "Legislative Analysis",
@@ -160,26 +169,28 @@ const categoryLinks = categorySections.map(([category, posts]) => ({
           </Text>
         </div>
 
-        <nav
-          class="rounded-sm border border-base-300 bg-white p-5 shadow-sm"
-          aria-label="Blog categories"
-        >
-          <p class="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent-600 font-display">
-            Explore the research
-          </p>
+        {categoryLinks.length > 0 && (
+          <nav
+            class="rounded-sm border border-base-300 bg-white p-5 shadow-sm"
+            aria-label="Blog categories"
+          >
+            <p class="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent-600 font-display">
+              Explore the research
+            </p>
 
-          <div class="flex flex-wrap gap-2">
-            {categoryLinks.map((item) => (
-              <a
-                href={item.href}
-                class="rounded-full border border-base-300 px-4 py-2 text-sm text-base-700 transition-colors hover:border-accent-500 hover:text-base-900"
-              >
-                {item.category}
-                <span class="ml-1 text-base-500">({item.count})</span>
-              </a>
-            ))}
-          </div>
-        </nav>
+            <div class="flex flex-wrap gap-2">
+              {categoryLinks.map((item) => (
+                <a
+                  href={item.href}
+                  class="rounded-full border border-base-300 px-4 py-2 text-sm text-base-700 transition-colors hover:border-accent-500 hover:text-base-900"
+                >
+                  {item.category}
+                  <span class="ml-1 text-base-500">({item.count})</span>
+                </a>
+              ))}
+            </div>
+          </nav>
+        )}
       </div>
     </Wrapper>
   </section>
@@ -201,7 +212,7 @@ const categoryLinks = categorySections.map(([category, posts]) => ({
 
           <div class="flex flex-col justify-center p-8 lg:p-12">
             <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-wide text-accent-600 font-display">
-              {getData(featuredPost).category && <span>{getData(featuredPost).category}</span>}
+              <span>{getCategory(featuredPost)}</span>
               {getPublishedDate(featuredPost) && (
                 <>
                   <span aria-hidden="true">·</span>
@@ -218,9 +229,9 @@ const categoryLinks = categorySections.map(([category, posts]) => ({
               </a>
             </h2>
 
-            {getData(featuredPost).excerpt && (
+            {getExcerpt(featuredPost) && (
               <p class="mt-6 text-base leading-8 text-base-600">
-                {getData(featuredPost).excerpt}
+                {getExcerpt(featuredPost)}
               </p>
             )}
 
@@ -306,7 +317,6 @@ const categoryLinks = categorySections.map(([category, posts]) => ({
 
         <div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {latestPosts.map((post) => {
-            const data = getData(post);
             const publishedDate = getPublishedDate(post);
 
             return (
@@ -324,8 +334,8 @@ const categoryLinks = categorySections.map(([category, posts]) => ({
 
                 <div class="p-6">
                   <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-wide text-accent-600 font-display">
-                    {data.category && <span>{data.category}</span>}
-                    {data.category && publishedDate && <span aria-hidden="true">·</span>}
+                    <span>{getCategory(post)}</span>
+                    {publishedDate && <span aria-hidden="true">·</span>}
                     {publishedDate && (
                       <time datetime={String(publishedDate)}>
                         {formatDate(publishedDate)}
@@ -335,13 +345,13 @@ const categoryLinks = categorySections.map(([category, posts]) => ({
 
                   <h3 class="mt-4 text-2xl leading-tight font-display text-base-900">
                     <a href={getPostHref(post)} class="transition-colors hover:text-accent-600">
-                      {data.title}
+                      {getData(post).title}
                     </a>
                   </h3>
 
-                  {data.excerpt && (
+                  {getExcerpt(post) && (
                     <p class="mt-4 line-clamp-4 text-sm leading-7 text-base-600">
-                      {data.excerpt}
+                      {getExcerpt(post)}
                     </p>
                   )}
 
@@ -394,7 +404,6 @@ const categoryLinks = categorySections.map(([category, posts]) => ({
 
               <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
                 {posts.map((post) => {
-                  const data = getData(post);
                   const publishedDate = getPublishedDate(post);
 
                   return (
@@ -421,13 +430,13 @@ const categoryLinks = categorySections.map(([category, posts]) => ({
 
                         <h3 class="mt-4 text-xl leading-tight font-display text-base-900">
                           <a href={getPostHref(post)} class="transition-colors hover:text-accent-600">
-                            {data.title}
+                            {getData(post).title}
                           </a>
                         </h3>
 
-                        {data.excerpt && (
+                        {getExcerpt(post) && (
                           <p class="mt-4 line-clamp-4 text-sm leading-7 text-base-600">
-                            {data.excerpt}
+                            {getExcerpt(post)}
                           </p>
                         )}
 
