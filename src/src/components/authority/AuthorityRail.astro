@@ -1,0 +1,125 @@
+---
+interface RailLink {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  category?: string;
+  published?: string;
+  updated?: string;
+  contextTitle?: string;
+  contextBody?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  linksTitle?: string;
+  links?: RailLink[];
+}
+
+const {
+  category,
+  published,
+  updated,
+  contextTitle,
+  contextBody,
+  ctaLabel,
+  ctaHref,
+  linksTitle = "Related",
+  links = [],
+} = Astro.props;
+---
+
+<div class="space-y-5">
+  <div class="rounded-3xl border border-base-300 bg-base-50 p-6 shadow-sm">
+    <p class="font-display text-xs font-medium uppercase tracking-[0.2em] text-accent-600">
+      Page Context
+    </p>
+
+    <dl class="mt-5 space-y-4 text-sm leading-6">
+      {
+        category && (
+          <div>
+            <dt class="font-medium text-base-900">Category</dt>
+            <dd class="mt-1 text-base-600">{category}</dd>
+          </div>
+        )
+      }
+
+      {
+        published && (
+          <div>
+            <dt class="font-medium text-base-900">Published</dt>
+            <dd class="mt-1 text-base-600">{published}</dd>
+          </div>
+        )
+      }
+
+      {
+        updated && (
+          <div>
+            <dt class="font-medium text-base-900">Updated</dt>
+            <dd class="mt-1 text-base-600">{updated}</dd>
+          </div>
+        )
+      }
+    </dl>
+  </div>
+
+  {
+    contextTitle && (
+      <div class="rounded-3xl border border-base-300 bg-white p-6 shadow-sm">
+        <p class="font-display text-xl leading-tight text-base-900">
+          {contextTitle}
+        </p>
+
+        {
+          contextBody && (
+            <p class="mt-4 text-sm leading-7 text-base-600">
+              {contextBody}
+            </p>
+          )
+        }
+      </div>
+    )
+  }
+
+  {
+    ctaLabel && ctaHref && (
+      <div class="rounded-3xl border border-base-300 bg-base-900 p-6 shadow-xl">
+        <p class="font-display text-xs font-medium uppercase tracking-[0.2em] text-accent-500">
+          Advisory
+        </p>
+
+        <a
+          href={ctaHref}
+          class="mt-4 inline-flex font-display text-xl leading-tight text-white transition-colors hover:text-accent-400"
+        >
+          {ctaLabel}
+        </a>
+      </div>
+    )
+  }
+
+  {
+    links.length > 0 && (
+      <div class="rounded-3xl border border-base-300 bg-base-50 p-6 shadow-sm">
+        <p class="font-display text-xs font-medium uppercase tracking-[0.2em] text-accent-600">
+          {linksTitle}
+        </p>
+
+        <div class="mt-5 space-y-4">
+          {
+            links.map((link) => (
+              <a
+                href={link.href}
+                class="block text-sm font-medium leading-6 text-base-700 transition-colors hover:text-accent-600"
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    )
+  }
+</div>
