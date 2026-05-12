@@ -1,0 +1,230 @@
+---
+import AuthorityPage from "@/components/authority/AuthorityPage.astro";
+import AuthorityRail from "@/components/authority/AuthorityRail.astro";
+import AuthoritySeries from "@/components/authority/AuthoritySeries.astro";
+import AuthorityRelated from "@/components/authority/AuthorityRelated.astro";
+
+const title = "The Leadership Pipeline Is Draining From Both Ends";
+
+const seoTitle =
+  "Leadership Pipeline Risk: Why Manager Engagement Collapse and Invisible Attrition℠ Are the Same Problem";
+
+const metaDescription =
+  "Gallup's 2026 data shows manager engagement at a nine-year low. This analysis examines why that collapse and Invisible Attrition℠ are compounding the same succession gap.";
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: seoTitle,
+  description: metaDescription,
+  author: {
+    "@type": "Person",
+    name: "Akilah E. Kamaria",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Lozen Advisory",
+    url: "https://www.lozenadvisory.com",
+  },
+  url: "https://www.lozenadvisory.com/leadership-pipeline-manager-engagement",
+};
+
+const railItems = [
+  {
+    label: "Authority Page",
+    value: "Leadership pipeline and manager engagement",
+  },
+  {
+    label: "Framework",
+    value: "Invisible Attrition℠ and leadership continuity risk",
+  },
+  {
+    label: "Primary Buyer Question",
+    value: "What happens when manager disengagement and unmeasured attrition compound the same succession gap.",
+  },
+];
+
+const railLinks = [
+  {
+    label: "Architecture of Invisible Attrition℠ Series",
+    href: "/architecture-of-invisible-attrition-series",
+  },
+  {
+    label: "Report Three",
+    href: "/succession-planning-retention-risk-data-gap",
+  },
+  {
+    label: "Invisible Attrition℠ Framework",
+    href: "/invisible-attrition",
+  },
+];
+
+const seriesItems = [
+  {
+    number: "01",
+    title: "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most",
+    href: "/voluntary-benefit-disclosure-gap",
+    status: "available",
+  },
+  {
+    number: "02",
+    title: "Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers",
+    href: "/billable-hour-visibility-tax",
+    status: "available",
+  },
+  {
+    number: "03",
+    title: "Succession Planning and the Retention Risk Data Gap",
+    href: "/succession-planning-retention-risk-data-gap",
+    status: "available",
+  },
+  {
+    number: "04",
+    title: "The Leadership Pipeline Is Draining From Both Ends",
+    status: "current",
+  },
+];
+
+const relatedItems = [
+  {
+    eyebrow: "Series Hub",
+    title: "The Architecture of Invisible Attrition — Executive Report Series",
+    href: "/architecture-of-invisible-attrition-series",
+    description:
+      "A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure.",
+  },
+  {
+    eyebrow: "Retention Risk",
+    title: "Retention Risk Analysis",
+    href: "/retention-risk-analysis",
+    description:
+      "A search-capture page connecting replacement cost, workforce attrition risk assessment, and the limits of standard retention analysis.",
+  },
+];
+---
+
+<AuthorityPage
+  eyebrow="Research & Policy"
+  title={title}
+  description="The Architecture of Invisible Attrition℠ — Executive Report Series"
+  image="/images/unrecorded-talent-infrastructure-gap.webp"
+  imageAlt="A diagnostic visualization of leadership pipeline risk and unrecorded organizational exposure."
+  dateLabel="May 2026"
+  backHref="/blog"
+  backLabel="Back to Research"
+  articleJsonLd={articleJsonLd}
+>
+  <AuthorityRail
+    slot="rail"
+    title="Page Context"
+    items={railItems}
+    links={railLinks}
+    cta={{
+      label: "Strategic Briefing",
+      title: "Invisible Attrition℠ Retention Risk Audit",
+      description:
+        "A strategic consultation to identify why clean performance records and engagement scores can mask compounding leadership continuity risk.",
+      href: "/book-appointment",
+    }}
+  />
+
+  <div class="authority-article-body">
+    <p>
+      The Gallup 2026 State of the Global Workplace report confirmed what succession planners have not yet fully priced into their models. Manager engagement dropped nine points between 2022 and 2025, falling to 22% globally. Global employee engagement fell to 20%, its lowest level since 2020, and the first time it has declined for two consecutive years. Low engagement cost the global economy approximately $10 trillion in lost productivity in 2025.
+    </p>
+
+    <p>
+      Those are supply-side numbers. They document what is happening at the top of the leadership pipeline. They do not document what is happening underneath it, where a separate and older pattern has been operating without measurement for years. That pattern is examined in <a href="https://www.lozenadvisory.com/succession-planning-retention-risk-data-gap">Succession Planning and the Retention Risk Data Gap</a>: organizations are making continuity decisions against datasets that were never built to count the risk they are now facing.
+    </p>
+
+    <p>
+      The leadership pipeline is draining from both ends simultaneously. Organizations are aware of one drain. They have not yet built the data sources to see the other.
+    </p>
+
+    <h2>What the Gallup Data Confirms</h2>
+
+    <p>
+      Manager engagement has historically carried a premium over individual contributor engagement. Managers used to be more engaged than the people they led. That premium is gone. In 2025, managers were only as engaged as those they manage, and in some regions, less so.
+    </p>
+
+    <p>
+      The implications for succession planning are direct. An organization that cannot retain engaged managers cannot develop the next generation of leaders from within. The pipeline thins not because talent is absent but because the role itself has become increasingly difficult to sustain. At the root of the manager engagement crisis is a role that nobody designed. Instead, the role accumulated everything organizations had nowhere else to put.
+    </p>
+
+    <p>
+      Higher-level leaders report higher engagement than other employees on average, yet they are also more likely to experience stress, anger, sadness, and loneliness. The engagement premium at the leadership level comes at a measurable emotional cost. That cost is not in the succession plan.
+    </p>
+
+    <h2>The Second Drain</h2>
+
+    <p>
+      The <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx">Gallup 2026 State of the Global Workplace report</a> measures what enters the formal engagement system. It captures the managers who are still in the role and still responding to surveys. It does not capture the women in leadership who assessed the professional environment, concluded that disclosing what they were managing carried more risk than the support was worth, and kept producing until they could not.
+    </p>
+
+    <p>
+      This is where <a href="https://www.lozenadvisory.com/invisible-attrition">Invisible Attrition℠</a> operates. The unmeasured erosion of leadership and performance capacity that occurs before traditional retention metrics detect risk does not appear in engagement data. It operates underneath the output line, in the gap between what the organization can measure and what its existing data sources were never designed to capture.
+    </p>
+
+    <p>
+      The succession plan inherits both gaps. It sees declining manager engagement as a pipeline risk. It does not see the women whose departure data was clean, whose performance record showed no flags, and whose exit the organization had no analytical reason to anticipate.
+    </p>
+
+    <h2>Why Both Problems Compound the Same Gap</h2>
+
+    <p>
+      These are not two separate problems. They are two measurement failures converging on the same succession exposure.
+    </p>
+
+    <p>
+      An organization losing managers to disengagement is losing the infrastructure through which leadership capacity is developed and transferred. An organization losing women in leadership to Invisible Attrition℠ is losing the relationships, institutional knowledge, and informal authority that were not transferable on the day they departed.
+    </p>
+
+    <p>
+      Neither loss is fully visible in standard succession data. Engagement surveys reach the managers who are still present and still willing to respond. Attrition data captures the departure date. Neither data source was built to document the erosion that preceded the loss or the continuity risk that followed it.
+    </p>
+
+    <p>
+      The organization is making succession decisions against two incomplete datasets simultaneously. One documents declining commitment among the managers who remain. The other reflects only the women who were willing to disclose what they were managing before they left.
+    </p>
+
+    <h2>What a Board-Level Risk Assessment Requires</h2>
+
+    <p>
+      A succession plan built on engagement scores and departure data is built on the portion of the workforce story that became measurable. What it does not capture is the erosion occurring in the gap between those two data sources.
+    </p>
+
+    <p>
+      A board-level assessment of leadership continuity risk requires analysis that operates in that gap. Not surveillance. Not individual disclosure. An examination of where the organization's existing data sources end and where the actual exposure begins.
+    </p>
+
+    <p>
+      Research from the <a href="https://www.americanprogress.org/article/there-are-significant-business-costs-to-replacing-employees/">Center for American Progress</a> puts the cost of replacing a highly educated executive at up to 213% of annual salary. That figure does not capture the compounding cost when the replacement pipeline is simultaneously thinning from disengagement above and undocumented attrition below.
+    </p>
+
+    <p>
+      The <a href="https://www.lozenadvisory.com/invisible-attrition">Invisible Attrition℠ framework</a> and the published SSRN paper are available for review. The <a href="https://www.lozenadvisory.com/retention-calculator">Retention Calculator</a> produces the same number regardless of who runs it. A woman uses it to see the value the organization has placed at risk. An organizational buyer uses it to estimate the replacement cost of the critical talent the organization may lose.
+    </p>
+
+    <div class="mt-12 rounded-3xl border border-accent-400 bg-accent-50 p-6 shadow-sm transition-all duration-300 hover:border-accent-600 hover:bg-accent-100 sm:p-8">
+      <a
+        href="https://www.lozenadvisory.com/request-briefing"
+        class="inline-flex text-base font-semibold text-base-950 no-underline"
+      >
+        Schedule an Invisible Attrition℠ Retention Risk Audit →
+      </a>
+      <p class="mt-4 text-sm leading-6 text-base-700">
+        A strategic consultation to identify why clean performance records and engagement scores can mask compounding leadership continuity risk.
+      </p>
+    </div>
+  </div>
+
+  <div class="authority-bottom-stack">
+    <AuthoritySeries
+      title="The Architecture of Invisible Attrition℠ — Executive Report Series"
+      description="A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure."
+      items={seriesItems}
+    />
+
+    <AuthorityRelated items={relatedItems} />
+  </div>
+</AuthorityPage>
