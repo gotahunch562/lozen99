@@ -1,0 +1,243 @@
+---
+import AuthorityPage from "@/components/authority/AuthorityPage.astro";
+import AuthorityRail from "@/components/authority/AuthorityRail.astro";
+import AuthoritySeries from "@/components/authority/AuthoritySeries.astro";
+import AuthorityRelated from "@/components/authority/AuthorityRelated.astro";
+
+const title = "Succession Planning and the Retention Risk Data Gap";
+
+const metaDescription =
+  "Succession plans depend on workplace data that may not show why critical talent leaves. This analysis examines the retention risk created by disclosure gaps.";
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description: metaDescription,
+  author: {
+    "@type": "Person",
+    name: "Akilah E. Kamaria",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Lozen Advisory",
+    url: "https://www.lozenadvisory.com",
+  },
+  url: "https://www.lozenadvisory.com/succession-planning-retention-risk-data-gap",
+};
+
+const railItems = [
+  {
+    label: "Authority Page",
+    value: "Succession planning and retention risk data",
+  },
+  {
+    label: "Framework",
+    value: "Invisible Attrition℠ and succession exposure",
+  },
+  {
+    label: "Primary Buyer Question",
+    value: "What succession plans inherit when workforce data cannot count risk until disclosure occurs.",
+  },
+];
+
+const railLinks = [
+  {
+    label: "Architecture of Invisible Attrition℠ Series",
+    href: "/architecture-of-invisible-attrition-series",
+  },
+  {
+    label: "Report Two",
+    href: "/billable-hour-visibility-tax",
+  },
+  {
+    label: "Report Four",
+    href: "/leadership-pipeline-manager-engagement",
+  },
+];
+
+const seriesItems = [
+  {
+    number: "01",
+    title: "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most",
+    href: "/voluntary-benefit-disclosure-gap",
+    status: "available",
+  },
+  {
+    number: "02",
+    title: "Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers",
+    href: "/billable-hour-visibility-tax",
+    status: "available",
+  },
+  {
+    number: "03",
+    title: "Succession Planning and the Retention Risk Data Gap",
+    status: "current",
+  },
+  {
+    number: "04",
+    title: "The Leadership Pipeline Is Draining From Both Ends",
+    href: "/leadership-pipeline-manager-engagement",
+    status: "available",
+  },
+];
+
+const relatedItems = [
+  {
+    eyebrow: "Next Report",
+    title: "The Leadership Pipeline Is Draining From Both Ends",
+    href: "/leadership-pipeline-manager-engagement",
+    description:
+      "Gallup's 2026 data shows manager engagement at a nine-year low. This analysis examines why that collapse and Invisible Attrition℠ are compounding the same succession gap.",
+  },
+  {
+    eyebrow: "Series Hub",
+    title: "The Architecture of Invisible Attrition — Executive Report Series",
+    href: "/architecture-of-invisible-attrition-series",
+    description:
+      "A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure.",
+  },
+];
+---
+
+<AuthorityPage
+  eyebrow="Research & Policy"
+  title={title}
+  description="The Architecture of Invisible Attrition℠ — Executive Report Series"
+  image="/images/unrecorded-talent-infrastructure-gap.webp"
+  imageAlt="A diagnostic visualization of corporate data gaps where succession risk remains outside the organization's formal reporting systems."
+  dateLabel="May 2026"
+  backHref="/blog"
+  backLabel="Back to Research"
+  articleJsonLd={articleJsonLd}
+>
+  <AuthorityRail
+    slot="rail"
+    title="Page Context"
+    items={railItems}
+    links={railLinks}
+    cta={{
+      label: "Strategic Briefing",
+      title: "Invisible Attrition℠ Retention Risk Audit",
+      description:
+        "A strategic consultation to identify why clean performance records can mask leadership attrition risk and where disclosure-dependent systems fail to capture exposure.",
+      href: "/book-appointment",
+    }}
+  />
+
+  <div class="authority-article-body">
+    <p>
+      The Bank of America and National Menopause Foundation research produced one number with direct implications for succession planning. Seventy-six percent of HR benefit managers say they discuss menopause regularly or sometimes. Three percent of peri- and post-menopausal employees said they had talked to HR.
+    </p>
+
+    <p>
+      That 73-point gap is not a communication failure. It is the condition succession plans inherit when workforce data cannot count risk until a woman discloses it. It is also the predictable outcome of any workforce where <a href="https://www.lozenadvisory.com/disclosure-independence-infrastructure">menopause remains undisclosed and unmeasured</a>.
+    </p>
+
+    <p>
+      The scale of that condition is now documented beyond a single survey. <a href="https://www.businesstimes.com.sg/opinion-features/hidden-economic-costs-menopause">Research across the US, UK, and Scandinavia</a> shows that women's employment, work hours, and earnings decrease with menopause, while sick leave and reliance on transfer income increase. The data gap is not an American anomaly. It is a structural feature of every workforce where women leave before the organization has documented why.
+    </p>
+
+    <p>
+      The limitation extends beyond performance systems. As outlined in <a href="https://www.lozenadvisory.com/billable-hour-visibility-tax">Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers</a>, the organization cannot act on what its data sources were never designed to capture. Attrition data inherits that same constraint.
+    </p>
+
+    <p>
+      Organizations are making decisions about who to develop, who to retain, and who to flag as flight risk against a dataset that reflects only the women who were willing to disclose. Those who do not disclose continue performing, and when they leave, nothing the organization can see explains why the departure was predictable. The operating cause behind their performance erosion and eventual departure was never created as data.
+    </p>
+
+    <p>
+      This is not a data quality problem. The data is accurate and structurally incomplete at the same time.
+    </p>
+
+    <h2>What Attrition Data Captures in Succession Planning</h2>
+
+    <p>
+      Attrition data tells the organization who left. It records the departure date, the role, the tenure, and in some cases the exit interview response. What it does not capture is which relationships, institutional knowledge, and informal authority the organization lost at departure, because that information was never in any system the organization owned.
+    </p>
+
+    <p>
+      The client relationships she maintained informally, the institutional knowledge she carried, and the performance capacity she sustained privately under conditions the organization was never designed to detect are not automatically captured in attrition data. The organization can see that she left. It often cannot see the operating cause that preceded the departure.
+    </p>
+
+    <p>
+      The succession plan built on that information is built on a structurally incomplete dataset. It knows who left. It does not know which client relationships, institutional knowledge, or leadership continuity depended on her.
+    </p>
+
+    <h2>The 73-Point Gap as Retention Risk</h2>
+
+    <p>
+      The condition documented in the <a href="https://business.bofa.com/en-us/content/workplace-benefits/menopause-in-the-workplace.html">Bank of America and National Menopause Foundation research</a> is not limited to menopause. It is the predictable outcome of any support architecture that requires her to disclose, request support, use a benefit, or enter a formal process before protection activates. As established in this series, voluntary benefits require her to log in. Performance review systems require her to produce variance. Exit interviews require her to be candid in a conversation the organization controls.
+    </p>
+
+    <p>
+      Each system shares the same structural feature. The organization cannot count the risk until she moves first.
+    </p>
+
+    <p>
+      The women least likely to move first are the women operating in hierarchical and intense professional environments where disclosure carries professional risk. They are also the women whose departures are logged as standard separations with no organizational flag, no retention intervention, and no post-departure analysis that captures what actually happened.
+    </p>
+
+    <p>
+      The system cannot count a risk she never disclosed.
+    </p>
+
+    <h2>Why Clean Departure Data Creates a Succession Gap</h2>
+
+    <p>
+      The organizational buyer working from departure data and utilization reports is working from the portion of the workforce story that became measurable. That information is accurate as far as it goes. The question is how far it goes, and what is sitting in the gap between what the organization believes it knows and what its data sources were designed to capture.
+    </p>
+
+    <p>
+      A succession gap does not begin on the day a role becomes vacant. It begins earlier, when the organization continues to treat critical talent as stable because no visible signal suggests otherwise. The executive is still producing. Her work still appears intact. Her benefit utilization may show nothing. Her manager may have no issue to escalate. From the organization's point of view, there is no reason to intervene.
+    </p>
+
+    <p>
+      However, the absence of a signal is not the same as the absence of risk. In a disclosure-dependent system, silence can be misread as stability because the organization only counts what enters its formal data sources. If the condition affecting her leadership capacity never enters those sources, the succession plan remains clean while continuity risk accumulates outside the model.
+    </p>
+
+    <p>
+      The organization can document the departure. It often cannot document the client relationships, judgment, institutional memory, and informal authority that were not transferable on the day she left.
+    </p>
+
+    <h2>What a Retention Risk Audit Examines</h2>
+
+    <p>
+      A systems-level analysis does not require individual disclosure. It does not require medical data, personal history, or any information a woman has decided not to produce. It works from organizational data already available: performance data, succession plans, attrition patterns, and benefit utilization rates. The analysis operates in the gap between what the organization can already see and what its existing data sources cannot count.
+    </p>
+
+    <p>
+      Research from the <a href="https://www.americanprogress.org/article/there-are-significant-business-costs-to-replacing-employees/">Center for American Progress</a> puts the cost of replacing a highly educated executive at up to 213% of annual salary. For a VP earning $200,000, that is over $426,000 per departure.
+    </p>
+
+    <p>
+      That figure captures only what is spent finding and onboarding a replacement. It does not capture the client relationships, institutional knowledge, informal decision-making authority, and leadership continuity that departed with her. Those are separate costs. One is visible in financial planning. The other is often recognized only after the vacancy creates operational consequences.
+    </p>
+
+    <p>
+      The <a href="https://www.lozenadvisory.com/invisible-attrition">Invisible Attrition℠ framework</a> is the analytical foundation for this work. The <a href="https://www.lozenadvisory.com/retention-calculator">Retention Calculator</a> produces the same number regardless of who runs it. A woman uses it to see the value the organization has placed at risk. An organizational buyer uses it to estimate the replacement cost of the critical talent the organization may lose.
+    </p>
+
+    <div class="mt-12 rounded-3xl border border-accent-400 bg-accent-50 p-6 shadow-sm transition-all duration-300 hover:border-accent-600 hover:bg-accent-100 sm:p-8">
+      <a
+        href="https://www.lozenadvisory.com/request-briefing"
+        class="inline-flex text-base font-semibold text-base-950 no-underline"
+      >
+        Schedule an Invisible Attrition℠ Retention Risk Audit →
+      </a>
+      <p class="mt-4 text-sm leading-6 text-base-700">
+        A strategic consultation to identify why clean performance records can mask leadership attrition risk and where disclosure-dependent systems fail to capture exposure.
+      </p>
+    </div>
+  </div>
+
+  <div class="authority-bottom-stack">
+    <AuthoritySeries
+      title="The Architecture of Invisible Attrition℠ — Executive Report Series"
+      description="A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure."
+      items={seriesItems}
+    />
+
+    <AuthorityRelated items={relatedItems} />
+  </div>
+</AuthorityPage>
