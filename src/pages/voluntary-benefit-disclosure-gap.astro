@@ -1,0 +1,307 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+const title = "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most";
+const metaDescription =
+  "Voluntary benefits like Maven Clinic require an initiating act before protection activates. This analysis examines why that design excludes the women most at risk of attrition.";
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: title,
+  description: metaDescription,
+  datePublished: "2026-04-27",
+  dateModified: "2026-04-27",
+  author: {
+    "@type": "Person",
+    name: "Akilah E. Kamaria",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Lozen Advisory",
+    url: "https://www.lozenadvisory.com",
+  },
+  url: "https://www.lozenadvisory.com/voluntary-benefit-disclosure-gap",
+};
+---
+
+<BaseLayout
+  title={`${title} | Lozen Advisory`}
+  description={metaDescription}
+>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(articleJsonLd)}
+  />
+
+  <section class="bg-gradient-to-t from-base-200 to-white">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div>
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+          >
+            Research & Policy
+          </Text>
+
+          <Text
+            tag="h1"
+            variant="displayLG"
+            class="mt-8 font-display text-base-900"
+          >
+            {title}
+          </Text>
+
+          <p class="mt-6 text-sm uppercase tracking-[0.16em] text-base-500 font-display">
+            April 27, 2026 · The Architecture of Invisible Attrition℠, Executive Report Series
+          </p>
+        </div>
+
+        <div class="overflow-hidden rounded-3xl border border-base-300 bg-white shadow-xl outline outline-1 outline-base-500/10">
+          <img
+            src="/images/unrecorded-talent-infrastructure-gap.webp"
+            alt="A diagnostic visualization of corporate data gaps where a woman in the shadowed background remains invisible to the organization's tracking systems because she has not met the disclosure-based collection condition required for support."
+            loading="eager"
+            width="1600"
+            height="900"
+            class="aspect-[16/10] w-full object-cover"
+          />
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  <article class="bg-white">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl space-y-6 text-lg leading-9 text-base-600">
+        <p>
+          Every voluntary employee benefit program designed to support women managing health conditions at work shares one architectural feature. The woman has to do something first: raise her hand, be visible accessing the benefit. That pattern is examined in <a href="/blog/menopause-workplace-visibility-constraint" class="text-accent-600 underline underline-offset-4 transition-colors hover:text-base-900">Menopause Workplace Frameworks: A Visibility Constraint</a>, where support systems depend on a condition many women have already decided not to meet.
+        </p>
+
+        <p>
+          In practice, that means she has to log in. She has to self-identify. She has to signal, in a system her employer purchased and monitors for utilization, that she is managing something she has not disclosed to anyone in the corporate environment.
+        </p>
+
+        <p>
+          That initiating act is the activation condition. It also acts as a collection condition. And it is the reason programs in this category consistently underperform with the population they were designed to reach.
+        </p>
+
+        <p>
+          This is not a communication problem. It is a design problem.
+        </p>
+
+        <p>
+          Programs like Maven Clinic are well-funded, widely adopted, and actively promoted. Organizations announce them during open enrollment, track enrollment as progress, and report utilization as evidence of responsiveness. The architecture of the benefit itself, though, has not changed. It still requires her to move first.
+        </p>
+      </div>
+    </Wrapper>
+  </article>
+
+  <section class="bg-base-100">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl">
+        <div class="mb-10 grid grid-cols-[auto_1fr] gap-5">
+          <div class="font-display text-5xl text-accent-500/60">01</div>
+          <div>
+            <div class="mb-4 h-px w-20 bg-accent-500"></div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="font-display uppercase text-base-900"
+            >
+              What the Data Already Shows
+            </Text>
+          </div>
+        </div>
+
+        <div class="space-y-6 text-lg leading-9 text-base-600">
+          <p>
+            Among millennials experiencing menopause, 44% have avoided discussing symptoms at work. Among Gen X women, that figure is 34%. These are the women the benefit was purchased to reach. They are also the women least likely to meet the collection condition.
+          </p>
+
+          <p>
+            The pattern extends beyond menopause. A March 2026 national survey of 250 U.S. working women with autoimmune conditions found that 61% had not disclosed to their employer. Of those, 41% did not believe disclosure would help, and 28% were concerned about professional consequences.
+          </p>
+
+          <p>
+            The employee benefit exists in many of their organizations. The collection condition was never met.
+          </p>
+
+          <p>
+            Enrollment numbers do not reflect coverage. They reflect willingness to meet the collection condition.
+          </p>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section class="bg-white">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl">
+        <div class="mb-10 grid grid-cols-[auto_1fr] gap-5">
+          <div class="font-display text-5xl text-accent-500/60">02</div>
+          <div>
+            <div class="mb-4 h-px w-20 bg-accent-500"></div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="font-display uppercase text-base-900"
+            >
+              The Architecture of the Problem
+            </Text>
+          </div>
+        </div>
+
+        <div class="space-y-6 text-lg leading-9 text-base-600">
+          <p>
+            A voluntary benefit program creates access only for the population willing to generate the required signal. For the woman who has already determined that visibility carries professional risk, the system introduces no new incentive. It reinforces the existing constraint.
+          </p>
+
+          <p>
+            A voluntary benefit that requires disclosure as its activation condition does not change that decision. It asks her to accept the same professional cost she has already declined due to stigma and concerns she has for her career advancement.
+          </p>
+
+          <p>
+            That is the visibility tax. <strong class="font-semibold text-base-900">Visibility Tax℠</strong> refers to the structural requirement that an individual generate a visible signal before support, protection, or inclusion activates, resulting in the systematic exclusion of those for whom that signal carries professional risk.
+          </p>
+
+          <p>
+            The Visibility Tax℠ is not punitive by design — it is structural by default. The program was built for women who are willing to engage. Yet it excludes, by architecture, the women who have determined engagement carries risk.
+          </p>
+
+          <p>
+            Those populations are not interchangeable. In performance-driven environments, they are not evenly distributed across career levels. The women most likely to have concluded that disclosure is professionally costly are also the women the organization can least afford to lose.
+          </p>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section class="bg-base-900">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <p class="mx-auto max-w-5xl font-display text-3xl leading-tight text-white lg:text-5xl">
+        Those women are not missing from the organization — they are missing from the dataset.
+      </p>
+    </Wrapper>
+  </section>
+
+  <section class="bg-base-100">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl">
+        <div class="mb-10 grid grid-cols-[auto_1fr] gap-5">
+          <div class="font-display text-5xl text-accent-500/60">03</div>
+          <div>
+            <div class="mb-4 h-px w-20 bg-accent-500"></div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="font-display uppercase text-base-900"
+            >
+              What Support-Only Models Cannot See
+            </Text>
+          </div>
+        </div>
+
+        <div class="space-y-6 text-lg leading-9 text-base-600">
+          <p>
+            The organizational buyer is measuring the wrong variable.
+          </p>
+
+          <p>
+            Utilization data captures only the population that met the collection condition. It does not include the population that evaluated the system, assessed the professional cost of generating that signal, and chose not to enter.
+          </p>
+
+          <p>
+            Those women are not missing from the organization — they are missing from the dataset. They remain fully performing, visible, and recorded as stable.
+          </p>
+
+          <p>
+            This is the ceiling of support-only design. A program can only measure what it can collect. What it cannot collect, it cannot measure. What it cannot measure, the organization cannot act on.
+          </p>
+
+          <p>
+            The result is a structurally incomplete dataset. Renewal decisions are made against utilization metrics that have never included the highest-risk population.
+          </p>
+
+          <p>
+            Measuring retention exposure requires a model that includes the population the system cannot collect. The <a href="/invisible-attrition" class="text-accent-600 underline underline-offset-4 transition-colors hover:text-base-900">Invisible Attrition℠ framework</a> addresses that gap: the erosion of leadership and performance capacity that occurs before traditional retention signals appear.
+          </p>
+
+          <p>
+            The financial implications are not marginal. Replacing a highly educated executive can cost up to 213% of annual salary. For a $200,000 leader, that exceeds $426,000 per departure. That figure captures replacement cost. It does not capture the client relationships, institutional knowledge, or informal authority that departed with her.
+          </p>
+
+          <p>
+            None of that appears in utilization data. None of it was ever captured by the system.
+          </p>
+        </div>
+
+        <div class="my-12 rounded-3xl border border-base-300 bg-white p-8 shadow-xl outline outline-1 outline-base-500/10">
+          <a
+            href="/request-briefing"
+            class="font-display text-2xl leading-tight text-base-900 transition-colors hover:text-accent-600"
+          >
+            Request the Strategic Briefing on Non-Disclosure Infrastructure →
+          </a>
+
+          <p class="mt-5 text-base leading-8 text-base-600">
+            A strategic consultation to identify why high-performance metrics mask retention risk and how to address the disclosure gap.
+          </p>
+        </div>
+
+        <div class="rounded-3xl border border-base-300 bg-base-50 p-8 shadow-sm">
+          <p class="text-xs font-medium uppercase tracking-[0.2em] text-accent-600 font-display">
+            Series
+          </p>
+
+          <h3 class="mt-4 font-display text-2xl leading-tight text-base-900">
+            The Architecture of Invisible Attrition℠, Executive Report Series
+          </h3>
+
+          <p class="mt-4 text-base leading-8 text-base-600">
+            A three-part executive report series examining the structural design of corporate retention infrastructure.
+          </p>
+
+          <ol class="mt-6 space-y-4 text-base leading-7 text-base-600">
+            <li class="grid grid-cols-[2rem_1fr] gap-3">
+              <span class="text-base-500">1.</span>
+              <span class="font-medium text-base-900">{title}</span>
+            </li>
+
+            <li class="grid grid-cols-[2rem_1fr] gap-3">
+              <span class="text-base-500">2.</span>
+              <a
+                href="/billable-hour-visibility-tax"
+                class="text-accent-600 underline underline-offset-4 transition-colors hover:text-base-900"
+              >
+                Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers
+              </a>
+            </li>
+
+            <li class="grid grid-cols-[2rem_1fr] gap-3">
+              <span class="text-base-500">3.</span>
+              <span class="text-base-500">Beyond the Spreadsheet: Mapping the Erosion of Succession Plans</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="mt-12 border-t border-base-300 pt-8">
+          <p class="text-xs font-medium uppercase tracking-[0.2em] text-accent-600 font-display">
+            Related Reading
+          </p>
+
+          <a
+            href="/retention-risk-analysis"
+            class="mt-4 inline-flex text-base font-medium text-accent-600 underline underline-offset-4 transition-colors hover:text-base-900"
+          >
+            Retention Risk Analysis: Quantifying the 213% Replacement Cost
+          </a>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>
