@@ -1,22 +1,23 @@
 ---
-title: "ABA 2026 Study: Women Lawyers & the Disclosure Gap"
-slug: "aba-study-women-lawyers-mental-health"
-pubDate: 2026-04-15
-datePublished: 2026-04-15
+title: 'ABA 2026 Study: Women Lawyers & the Disclosure Gap'
+slug: aba-study-women-lawyers-mental-health
+pubDate: &id001 2026-04-15
+datePublished: *id001
 dateModified: 2026-05-05
-category: "Legal Profession"
-excerpt: "The American Bar Association will release its national study on women lawyers and mental wellness in August 2026. The data will be cited, the findings will circulate, and the conversation will follow. The legal profession will treat it as a starting point."
-description: "The ABA 2026 study measures reported data. Learn why non-disclosure is a strategic choice for women leaders protecting their career trajectory."
-metaDescription: "The ABA 2026 study measures reported data. Learn why non-disclosure is a strategic choice for women leaders protecting their career trajectory."
+category: Legal Profession
+excerpt: The American Bar Association will release its national study on women lawyers and mental wellness in August 2026. The data will be cited, the findings will circulate, and the conversation will follow. The legal profession will treat it as a starting point.
+description: The ABA 2026 study measures reported data. Learn why non-disclosure is a strategic choice for women leaders protecting their career trajectory.
+metaDescription: The ABA 2026 study measures reported data. Learn why non-disclosure is a strategic choice for women leaders protecting their career trajectory.
 image:
-  url: "/images/LozenAdvisoryLegalBlog.webp"
-  alt: "Blue Gold Red Cord with the symbol of justice"
-heroImage: "/images/LozenAdvisoryLegalBlog.webp"
-heroAlt: "Blue Gold Red Cord with the symbol of justice"
+  url: /src/images/blog/LozenAdvisoryLegalBlog.webp
+  alt: Blue Gold Red Cord with the symbol of justice
+heroImage: /src/images/blog/LozenAdvisoryLegalBlog.webp
+heroAlt: Blue Gold Red Cord with the symbol of justice
 tags:
-  - "Legal Profession"
-spineDestination: "menopause-support-women-lawyers"
+- Legal Profession
+spineDestination: menopause-support-women-lawyers
 draft: false
+isFeatured: false
 ---
 The American Bar Association will release its national study on women lawyers and mental wellness in August 2026. The data will be cited, the findings will circulate, and the conversation will follow. The profession will treat it as a starting point. You are not starting. You are already inside the condition the data will attempt to describe.
 

@@ -1,22 +1,23 @@
 ---
-title: "Menopause at Work: When Workplace Support Isn't an Option"
-slug: "menopause-at-work-study"
-pubDate: 2026-03-01
-datePublished: 2026-03-01
+title: 'Menopause at Work: When Workplace Support Isn''t an Option'
+slug: menopause-at-work-study
+pubDate: &id001 2026-03-01
+datePublished: *id001
 dateModified: 2026-05-05
-category: "Performance & Career"
-excerpt: "New 2026 research aims to mainstream menopause support, but will it reach senior leaders? Learn why disclosure-independent paths are required for professional continuity."
-description: "New research from The Fuchsia Tent aims to mainstream menopause support, but for senior leaders, visibility is a liability. Discover why organizational programs fail those who require a disclosure-independent path to protect their professional record."
-metaDescription: "New research from The Fuchsia Tent aims to mainstream menopause support, but for senior leaders, visibility is a liability. Discover why organizational programs fail those who require a disclosure-independent path to protect their professional record."
+category: Performance & Career
+excerpt: New 2026 research aims to mainstream menopause support, but will it reach senior leaders? Learn why disclosure-independent paths are required for professional continuity.
+description: New research from The Fuchsia Tent aims to mainstream menopause support, but for senior leaders, visibility is a liability. Discover why organizational programs fail those who require a disclosure-independent path to protect their professional record.
+metaDescription: New research from The Fuchsia Tent aims to mainstream menopause support, but for senior leaders, visibility is a liability. Discover why organizational programs fail those who require a disclosure-independent path to protect their professional record.
 image:
-  url: "/images/professional_woman_executive.webp"
-  alt: "Abstract blue editorial placeholder image."
-heroImage: "/images/professional_woman_executive.webp"
-heroAlt: "Abstract blue editorial placeholder image."
+  url: /src/images/blog/professional_woman_executive.webp
+  alt: Abstract blue editorial placeholder image.
+heroImage: /src/images/blog/professional_woman_executive.webp
+heroAlt: Abstract blue editorial placeholder image.
 tags:
-  - "Performance & Career"
-spineDestination: "why-lozen-advisory"
+- Performance & Career
+spineDestination: why-lozen-advisory
 draft: false
+isFeatured: false
 ---
 A national research partnership launched in February 2026 between the [Society for Women's Health Research](https://swhr.org/) and [The Fuchsia Tent](https://www.thefuchsiatent.com/) is doing something genuinely useful. It is trying to move menopause support from advocacy circles into mainstream business practice. The goal is to produce evidence that speaks to CFOs, frontline managers, male executives, and policymakers. The study, titled *Menopause at Work: From Echo Chamber to Mainstream Practice*, will release findings in fall 2026. The framing is sharp and the ambition is real.
 
