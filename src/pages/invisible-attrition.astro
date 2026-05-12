@@ -1,6 +1,7 @@
 ---
 import AuthorityPage from "@/components/authority/AuthorityPage.astro";
 import AuthorityRail from "@/components/authority/AuthorityRail.astro";
+import AuthorityCluster from "@/components/authority/AuthorityCluster.astro";
 import AuthorityRelated from "@/components/authority/AuthorityRelated.astro";
 
 const title = "Invisible Attrition℠";
@@ -11,7 +12,8 @@ const metaDescription =
 const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Invisible Attrition℠: How Organizations Lose Leadership Capacity Before Data Sources Detect It",
+  headline:
+    "Invisible Attrition℠: How Organizations Lose Leadership Capacity Before Data Sources Detect It",
   description: metaDescription,
   datePublished: "2026-02-15",
   author: {
@@ -32,8 +34,8 @@ const railItems = [
     value: "Invisible Attrition℠",
   },
   {
-    label: "Framework",
-    value: "Leadership capacity erosion before retention metrics detect risk.",
+    label: "Page Type",
+    value: "Pillar and cluster hub",
   },
   {
     label: "Core Definition",
@@ -44,40 +46,80 @@ const railItems = [
 
 const railLinks = [
   {
-    label: "Architecture of Invisible Attrition℠ Series",
-    href: "/architecture-of-invisible-attrition-series",
+    label: "Disclosure Infrastructure",
+    href: "/disclosure-independence-infrastructure",
   },
   {
     label: "Retention Risk Analysis",
     href: "/retention-risk-analysis",
   },
   {
-    label: "Disclosure Infrastructure",
-    href: "/disclosure-independence-infrastructure",
+    label: "Architecture of Invisible Attrition℠ Series",
+    href: "/architecture-of-invisible-attrition-series",
+  },
+];
+
+const clusterItems = [
+  {
+    title: "Exit Data Failure: Why 'Personal Reasons' Mask Risk",
+    href: "/invisible-attrition/exit-data-failure",
+  },
+  {
+    title: "Structural Silence: Why Leaders Can't Disclose Strain",
+    href: "/invisible-attrition/structural-silence",
+  },
+  {
+    title: "Succession Blindness: Why Your Bench Can't See Risk",
+    href: "/invisible-attrition/succession-blindness",
+  },
+  {
+    title: "Performer Masking: Why Your Best Leaders are at Risk",
+    href: "/invisible-attrition/performer-masking",
+  },
+  {
+    title: "Your Performance Looks Fine. That Is the Problem.",
+    href: "/invisible-attrition/dashboard-delay",
+  },
+  {
+    title: "Stable Performance Risk: The Illusion of Leader Safety",
+    href: "/invisible-attrition/stable-performance-as-risk",
+  },
+  {
+    title: "Late Governance: Why Metrics Only Detect Vacancy",
+    href: "/invisible-attrition/late-governance",
+  },
+  {
+    title: "AI Is Increasing Workload for Top Performers (The Power User Trap)",
+    href: "/invisible-attrition/power-user-trap",
+  },
+  {
+    title: "The Women Who Leave Without Saying Why",
+    href: "/invisible-attrition/who-disappears",
   },
 ];
 
 const relatedItems = [
   {
-    eyebrow: "Executive Report Series",
+    eyebrow: "Architecture",
+    title:
+      "Disclosure Independence: The Infrastructure Women in Leadership Actually Need",
+    href: "/disclosure-independence-infrastructure",
+    description:
+      "Employee benefit systems fail when disclosure carries career risk. Disclosure Independence is the performance protection infrastructure women in leadership need.",
+  },
+  {
+    eyebrow: "Executive Reports",
     title: "The Architecture of Invisible Attrition — Executive Report Series",
     href: "/architecture-of-invisible-attrition-series",
     description:
       "A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure.",
   },
   {
-    eyebrow: "Retention Risk",
+    eyebrow: "B2B Entry Point",
     title: "Retention Risk Analysis",
     href: "/retention-risk-analysis",
     description:
-      "Retention risk analysis is typically built on performance data, engagement signals, and recorded attrition patterns. This page examines what those systems miss.",
-  },
-  {
-    eyebrow: "Disclosure Infrastructure",
-    title: "Disclosure Independence: The Infrastructure Women in Leadership Actually Need",
-    href: "/disclosure-independence-infrastructure",
-    description:
-      "Employee benefit systems fail when disclosure carries career risk. Disclosure Independence is the performance protection infrastructure women in leadership need.",
+      "A search-capture page connecting replacement cost, workforce attrition risk assessment, and the limits of standard retention analysis.",
   },
 ];
 ---
@@ -301,7 +343,9 @@ const relatedItems = [
         </div>
 
         <div class="rounded-2xl border border-accent-400 bg-accent-50 p-4">
-          <p class="text-sm font-semibold text-base-950">05. Exit becomes the first measurable signal</p>
+          <p class="text-sm font-semibold text-base-950">
+            05. Exit becomes the first measurable signal
+          </p>
           <p class="mt-2 text-sm leading-6 text-base-700">
             The exit is coded as voluntary, while the accumulation that preceded it does not appear in any report.
           </p>
@@ -331,6 +375,12 @@ const relatedItems = [
   </div>
 
   <div class="authority-bottom-stack">
+    <AuthorityCluster
+      title="The Dimensions of Invisible Attrition℠"
+      description="Core articles in the Invisible Attrition℠ cluster."
+      items={clusterItems}
+    />
+
     <AuthorityRelated items={relatedItems} />
   </div>
 </AuthorityPage>
