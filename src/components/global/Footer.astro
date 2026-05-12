@@ -11,20 +11,28 @@ const footerLinks = [
       { label: "Invisible Attrition", href: "/invisible-attrition" },
       { label: "Retention Risk Analysis", href: "/retention-risk-analysis" },
       { label: "Retention Calculator", href: "/retention-calculator" },
-      { label: "Request Briefing", href: "/request-briefing" },
+      { label: "Request Briefing", href: "/book-appointment" },
     ],
   },
   {
     title: "Research",
     links: [
       { label: "Blog", href: "/blog" },
+      { label: "Architecture of Invisible Attrition Series", href: "/architecture-of-invisible-attrition-series" },
       { label: "Menopause Legislation Tracker", href: "/menopause-legislation-tracker" },
       {
         label: "Menopause Policy & Laws Series",
         href: "/blog/menopause-policy-laws-dependence-disclosure",
       },
+    ],
+  },
+  {
+    title: "Executive Reports",
+    links: [
       { label: "Voluntary Benefit Disclosure Gap", href: "/voluntary-benefit-disclosure-gap" },
       { label: "Billable Hour Visibility Tax", href: "/billable-hour-visibility-tax" },
+      { label: "Succession Planning and the Retention Risk Data Gap", href: "/succession-planning-retention-risk-data-gap" },
+      { label: "Leadership Pipeline Manager Engagement", href: "/leadership-pipeline-manager-engagement" },
     ],
   },
   {
@@ -51,6 +59,7 @@ const footerLinks = [
     >
       <source src="/videos/car3.mp4" type="video/mp4" />
     </video>
+
     <div
       aria-hidden="true"
       class="absolute inset-0 pointer-events-none bg-base-950/90"
@@ -62,7 +71,7 @@ const footerLinks = [
     variant="standard"
     class="relative z-10 flex flex-col justify-between h-full pt-24 pb-8 gap-8 lg:gap-44"
   >
-    <div class="grid grid-cols-2 lg:grid-cols-5 gap-12">
+    <div class="grid grid-cols-2 gap-12 lg:grid-cols-6">
       <div class="col-span-2">
         <a
           href="/"
@@ -80,7 +89,7 @@ const footerLinks = [
 
         <div class="mt-8">
           <a
-            href="/request-briefing"
+            href="/book-appointment"
             class="inline-flex h-10 items-center justify-center rounded-lg bg-accent-500 px-4 py-2 text-xs font-medium text-white transition-colors hover:bg-accent-600"
           >
             Request a Briefing
@@ -98,6 +107,7 @@ const footerLinks = [
             >
               {section.title}
             </Text>
+
             <ul class="mt-2 space-y-1">
               {section.links.map((item) => (
                 <li>
@@ -130,18 +140,21 @@ const footerLinks = [
           >
             Privacy Policy
           </a>
+
           <a
             href="/terms-of-service"
             class="text-xs text-base-500 hover:text-accent-500 transition-colors"
           >
             Terms of Service
           </a>
+
           <a
             href="/about-ai"
             class="text-xs text-base-500 hover:text-accent-500 transition-colors"
           >
             About AI
           </a>
+
           <a
             href="/tools-resources"
             class="text-xs text-base-500 hover:text-accent-500 transition-colors"
