@@ -1,19 +1,21 @@
 ---
 title: "Menopause at Work: The Data Employers Do Not See"
-slug: menopause-at-work-unquantified-data-gap
+slug: "menopause-at-work-unquantified-data-gap"
+pubDate: 2026-04-23
 datePublished: 2026-04-23
 dateModified: 2026-05-05
-category: Research & Policy
-excerpt: Standard HR metrics from leave requests to benefit engagement capture
-  only what is disclosed. They cannot measure the calculated silence of a leader
-  who views visibility as a professional liability. This analysis explores the
-  "73-point perception gap"
-metaDescription: Employers measure benefit utilization but miss the decision not
-  to utilize. Discover why the 73-point data gap and the Power User Trap℠ leave
-  organizations blind to the true cost of Invisible Attrition℠.
-heroImage: /images/73-point-menopause-data-perception-gap.webp
-heroAlt: infographic on invisible attrition
-spineDestination: retention-risk-analysis
+category: "Research & Policy"
+excerpt: "Standard HR metrics from leave requests to benefit engagement capture only what is disclosed. They cannot measure the calculated silence of a leader who views visibility as a professional liability. This analysis explores the \"73-point perception gap\""
+description: "Employers measure benefit utilization but miss the decision not to utilize. Discover why the 73-point data gap and the Power User Trap℠ leave organizations blind to the true cost of Invisible Attrition℠."
+metaDescription: "Employers measure benefit utilization but miss the decision not to utilize. Discover why the 73-point data gap and the Power User Trap℠ leave organizations blind to the true cost of Invisible Attrition℠."
+image:
+  url: "/images/73-point-menopause-data-perception-gap.webp"
+  alt: "infographic on invisible attrition"
+heroImage: "/images/73-point-menopause-data-perception-gap.webp"
+heroAlt: "infographic on invisible attrition"
+tags:
+  - "Research & Policy"
+spineDestination: "retention-risk-analysis"
 draft: false
 ---
 Employers making decisions about [menopause at work](/blog/menopause-at-work-study) support are working from available data. Accommodation requests, leave utilization, healthcare benefit engagement, and manager escalations form the basis for what most organizations can measure. What prior articles establish at the level of policy and law appears here at the level of organizational data. If [S7495 is a study of the legislative policy gap](/blog/ny-s7495-invisible-majority-policy-gap), the following analysis is a study of the organizational data gap. The visibility constraint is the same: the system cannot measure what it has not been designed to collect.

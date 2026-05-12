@@ -1,20 +1,21 @@
 ---
 title: "Menopause in Law: Visible Performance vs Invisible Cost"
-slug: menopause-law-invisible-cost
+slug: "menopause-law-invisible-cost"
+pubDate: 2026-04-07
 datePublished: 2026-04-07
 dateModified: 2026-05-05
-category: Legal Profession
-excerpt: The legal profession evaluates authority through consistency and
-  steadiness of judgment. For the woman attorney, perimenopause arrives during
-  her most consequential leadership window, creating a performance risk that
-  existing law firm frameworks are not built to see.
-metaDescription: Women leave legal practice at higher rates during the
-  associate-to-partner transition—the same window as perimenopause. Explore why
-  traditional wellness programs fail women lawyers and the role of Tacere in the
-  partnership pipeline.
-heroImage: /images/menopause-law-women-lawyers-performance-leadership.webp
-heroAlt: women partners in law firm
-spineDestination: menopause-support-women-lawyers
+category: "Legal Profession"
+excerpt: "The legal profession evaluates authority through consistency and steadiness of judgment. For the woman attorney, perimenopause arrives during her most consequential leadership window, creating a performance risk that existing law firm frameworks are not built to see."
+description: "Women leave legal practice at higher rates during the associate-to-partner transition—the same window as perimenopause. Explore why traditional wellness programs fail women lawyers and the role of Tacere in the partnership pipeline."
+metaDescription: "Women leave legal practice at higher rates during the associate-to-partner transition—the same window as perimenopause. Explore why traditional wellness programs fail women lawyers and the role of Tacere in the partnership pipeline."
+image:
+  url: "/images/menopause-law-women-lawyers-performance-leadership.webp"
+  alt: "women partners in law firm"
+heroImage: "/images/menopause-law-women-lawyers-performance-leadership.webp"
+heroAlt: "women partners in law firm"
+tags:
+  - "Legal Profession"
+spineDestination: "menopause-support-women-lawyers"
 draft: false
 ---
 The legal profession is in the middle of a demographic shift that has no historical precedent. Women now make up the majority of law school graduates, the majority of law firm associates, and a growing share of senior attorneys. The pipeline is fuller than it has ever been. The partnership numbers tell a different story.

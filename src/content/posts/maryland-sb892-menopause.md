@@ -1,19 +1,21 @@
 ---
 title: "Maryland SB892: The Limits of Menopause Mandates"
-slug: maryland-sb892-menopause
+slug: "maryland-sb892-menopause"
+pubDate: 2026-04-16
 datePublished: 2026-04-16
 dateModified: 2026-05-05
-category: Legislative Analysis
-excerpt: "Maryland SB892: The Limits of Menopause Mandates. The legislation
-  improves training. It expands coverage. It strengthens the clinical system at
-  the point of care. But it does not alter the condition that governs entry into
-  that system."
-metaDescription: Maryland SB892 passed with near-unanimous support, but can
-  training alone fix the menopause retention crisis? Explore why insurance
-  mandates often miss the "Invisible Majority℠."
-heroImage: /images/Maryland_SB892_and_menopause_healthcare.webp
-heroAlt: Legislation on the Government desk
-spineDestination: menopause-legislation-tracker
+category: "Legislative Analysis"
+excerpt: "Maryland SB892: The Limits of Menopause Mandates. The legislation improves training. It expands coverage. It strengthens the clinical system at the point of care. But it does not alter the condition that governs entry into that system."
+description: "Maryland SB892 passed with near-unanimous support, but can training alone fix the menopause retention crisis? Explore why insurance mandates often miss the \"Invisible Majority℠.\""
+metaDescription: "Maryland SB892 passed with near-unanimous support, but can training alone fix the menopause retention crisis? Explore why insurance mandates often miss the \"Invisible Majority℠.\""
+image:
+  url: "/images/Maryland_SB892_and_menopause_healthcare.webp"
+  alt: "Legislation on the Government desk"
+heroImage: "/images/Maryland_SB892_and_menopause_healthcare.webp"
+heroAlt: "Legislation on the Government desk"
+tags:
+  - "Legislative Analysis"
+spineDestination: "menopause-legislation-tracker"
 draft: false
 ---
 Maryland's Senate passed Senate Bill 892 by a vote of 41 to 0. The House followed at 135 to 2. The bill enrolled on April 8, 2026.
