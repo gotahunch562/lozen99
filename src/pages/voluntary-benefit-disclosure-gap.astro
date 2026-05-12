@@ -36,41 +36,46 @@ const articleJsonLd = {
     set:html={JSON.stringify(articleJsonLd)}
   />
 
-  <section class="bg-gradient-to-t from-base-200 to-white">
-    <Wrapper variant="standard" class="py-16 lg:py-24">
-      <div class="grid grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-        <div>
-          <Text
-            tag="span"
-            variant="textSM"
-            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-          >
-            Research & Policy
-          </Text>
+  <section class="bg-white">
+    <div class="h-[360px] overflow-hidden md:h-[460px] lg:h-[520px]">
+      <img
+        src="/images/unrecorded-talent-infrastructure-gap.webp"
+        alt="A diagnostic visualization of corporate data gaps where a woman in the shadowed background remains invisible to the organization's tracking systems because she has not met the disclosure-based collection condition required for support."
+        loading="eager"
+        width="1600"
+        height="900"
+        class="h-full w-full object-cover"
+      />
+    </div>
+  </section>
 
-          <Text
-            tag="h1"
-            variant="displayLG"
-            class="mt-8 font-display text-base-900"
-          >
-            {title}
-          </Text>
+  <section class="bg-base-100">
+    <Wrapper variant="standard" class="py-12 lg:py-16">
+      <div class="mx-auto max-w-3xl">
+        <a
+          href="/blog"
+          class="font-display text-xs font-medium uppercase tracking-[0.24em] text-base-500 transition-colors hover:text-accent-600"
+        >
+          ← Back to Research
+        </a>
 
-          <p class="mt-6 text-sm uppercase tracking-[0.16em] text-base-500 font-display">
-            April 27, 2026 · The Architecture of Invisible Attrition℠, Executive Report Series
-          </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-[0.16em] text-accent-600 font-display">
+          <span>Research & Policy</span>
+          <span aria-hidden="true">·</span>
+          <time datetime="2026-04-27">April 27, 2026</time>
         </div>
 
-        <div class="overflow-hidden rounded-3xl border border-base-300 bg-white shadow-xl outline outline-1 outline-base-500/10">
-          <img
-            src="/images/unrecorded-talent-infrastructure-gap.webp"
-            alt="A diagnostic visualization of corporate data gaps where a woman in the shadowed background remains invisible to the organization's tracking systems because she has not met the disclosure-based collection condition required for support."
-            loading="eager"
-            width="1600"
-            height="900"
-            class="aspect-[16/10] w-full object-cover"
-          />
-        </div>
+        <Text
+          tag="h1"
+          variant="displayLG"
+          class="mt-6 font-display text-base-900"
+        >
+          {title}
+        </Text>
+
+        <p class="mt-6 text-sm uppercase tracking-[0.16em] text-base-500 font-display">
+          The Architecture of Invisible Attrition℠, Executive Report Series
+        </p>
       </div>
     </Wrapper>
   </section>
