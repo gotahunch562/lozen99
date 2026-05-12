@@ -1,8 +1,11 @@
 ---
 import AuthorityPage from "@/components/authority/AuthorityPage.astro";
 import AuthorityRail from "@/components/authority/AuthorityRail.astro";
+import AuthoritySeries from "@/components/authority/AuthoritySeries.astro";
+import AuthorityRelated from "@/components/authority/AuthorityRelated.astro";
 
 const title = "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most";
+
 const metaDescription =
   "Voluntary benefits like Maven Clinic require an initiating act before protection activates. This analysis examines why that design excludes the women most at risk of attrition.";
 
@@ -24,83 +27,107 @@ const articleJsonLd = {
   },
   url: "https://www.lozenadvisory.com/voluntary-benefit-disclosure-gap",
 };
+
+const railItems = [
+  {
+    label: "Authority Page",
+    value: "Voluntary benefit disclosure gap",
+  },
+  {
+    label: "Framework",
+    value: "Visibility Tax℠ and Invisible Attrition℠",
+  },
+  {
+    label: "Primary Buyer Question",
+    value: "Why utilization data cannot measure the population that never entered the system.",
+  },
+];
+
+const railLinks = [
+  {
+    label: "Architecture of Invisible Attrition℠ Series",
+    href: "/architecture-of-invisible-attrition-series",
+  },
+  {
+    label: "Disclosure Infrastructure",
+    href: "/disclosure-independence-infrastructure",
+  },
+  {
+    label: "Invisible Attrition℠ Framework",
+    href: "/invisible-attrition",
+  },
+];
+
+const seriesItems = [
+  {
+    number: "01",
+    title: "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most",
+    status: "current",
+  },
+  {
+    number: "02",
+    title: "Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers",
+    href: "/billable-hour-visibility-tax",
+    status: "available",
+  },
+  {
+    number: "03",
+    title: "Succession Planning and the Retention Risk Data Gap",
+    href: "/succession-planning-retention-risk-data-gap",
+    status: "available",
+  },
+  {
+    number: "04",
+    title: "The Leadership Pipeline Is Draining From Both Ends",
+    href: "/leadership-pipeline-manager-engagement",
+    status: "available",
+  },
+];
+
+const relatedItems = [
+  {
+    eyebrow: "Series Hub",
+    title: "The Architecture of Invisible Attrition — Executive Report Series",
+    href: "/architecture-of-invisible-attrition-series",
+    description:
+      "A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure.",
+  },
+  {
+    eyebrow: "Retention Risk",
+    title: "Retention Risk Analysis",
+    href: "/retention-risk-analysis",
+    description:
+      "A search-capture page connecting replacement cost, workforce attrition risk assessment, and the limits of standard retention analysis.",
+  },
+];
 ---
 
 <AuthorityPage
-  title={title}
-  description={metaDescription}
   eyebrow="Research & Policy"
-  publishedDate="2026-04-27"
-  publishedLabel="April 27, 2026"
-  seriesLabel="The Architecture of Invisible Attrition℠, Executive Report Series"
-  imageSrc="/images/unrecorded-talent-infrastructure-gap.webp"
+  title={title}
+  description="The Architecture of Invisible Attrition℠ — Executive Report Series"
+  image="/images/unrecorded-talent-infrastructure-gap.webp"
   imageAlt="A diagnostic visualization of corporate data gaps where a woman in the shadowed background remains invisible to the organization's tracking systems because she has not met the disclosure-based collection condition required for support."
-  imagePosition="center 28%"
+  dateLabel="April 27, 2026"
+  backHref="/blog"
+  backLabel="Back to Research"
   articleJsonLd={articleJsonLd}
 >
   <AuthorityRail
     slot="rail"
-    category="Research & Policy"
-    published="April 27, 2026"
-    updated="April 27, 2026"
-    ctaLabel="Request the Strategic Briefing on Non-Disclosure Infrastructure →"
-    ctaHref="/request-briefing"
-  >
-    <div class="rounded-3xl border border-base-300 bg-base-50 p-6 shadow-sm">
-      <p class="font-display text-xs font-medium uppercase tracking-[0.2em] text-accent-600">
-        Series
-      </p>
+    title="Page Context"
+    items={railItems}
+    links={railLinks}
+    cta={{
+      label: "Strategic Briefing",
+      title: "Non-Disclosure Infrastructure",
+      description:
+        "A strategic consultation to identify why high-performance metrics mask retention risk and how to address the disclosure gap.",
+      href: "/book-appointment",
+    }}
+  />
 
-      <h3 class="mt-4 font-display text-xl leading-tight text-base-900">
-        The Architecture of Invisible Attrition℠, Executive Report Series
-      </h3>
-
-      <p class="mt-4 text-sm leading-7 text-base-600">
-        A three-part executive report series examining the structural design of corporate retention infrastructure.
-      </p>
-
-      <ol class="mt-5 space-y-4 text-sm leading-6 text-base-600">
-        <li class="grid grid-cols-[1.5rem_1fr] gap-3">
-          <span class="text-base-500">1.</span>
-          <span class="font-medium text-base-900">
-            Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most
-          </span>
-        </li>
-
-        <li class="grid grid-cols-[1.5rem_1fr] gap-3">
-          <span class="text-base-500">2.</span>
-          <a
-            href="/billable-hour-visibility-tax"
-            class="font-medium text-accent-600 transition-colors hover:text-base-900"
-          >
-            Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers
-          </a>
-        </li>
-
-        <li class="grid grid-cols-[1.5rem_1fr] gap-3">
-          <span class="text-base-500">3.</span>
-          <span class="text-base-500">
-            Beyond the Spreadsheet: Mapping the Erosion of Succession Plans
-          </span>
-        </li>
-      </ol>
-    </div>
-
-    <div class="rounded-3xl border border-base-300 bg-white p-6 shadow-sm">
-      <p class="font-display text-xs font-medium uppercase tracking-[0.2em] text-accent-600">
-        Related Reading
-      </p>
-
-      <a
-        href="/retention-risk-analysis"
-        class="mt-5 block text-sm font-medium leading-6 text-base-700 transition-colors hover:text-accent-600"
-      >
-        Retention Risk Analysis: Quantifying the 213% Replacement Cost
-      </a>
-    </div>
-  </AuthorityRail>
-
-  <section class="authority-section">
+  <div class="authority-article-body">
     <p>
       Every voluntary employee benefit program designed to support women managing health conditions at work shares one architectural feature. The woman has to do something first: raise her hand, be visible accessing the benefit. That pattern is examined in <a href="/blog/menopause-workplace-visibility-constraint">Menopause Workplace Frameworks: A Visibility Constraint</a>, where support systems depend on a condition many women have already decided not to meet.
     </p>
@@ -120,16 +147,9 @@ const articleJsonLd = {
     <p>
       Programs like Maven Clinic are well-funded, widely adopted, and actively promoted. Organizations announce them during open enrollment, track enrollment as progress, and report utilization as evidence of responsiveness. The architecture of the benefit itself, though, has not changed. It still requires her to move first.
     </p>
-  </section>
 
-  <section class="authority-section">
-    <div class="authority-section-header">
-      <div class="authority-section-number">01</div>
-      <div>
-        <div class="authority-rule"></div>
-        <h2>What the Data Already Shows</h2>
-      </div>
-    </div>
+    <span class="section-number">01</span>
+    <h2>What the Data Already Shows</h2>
 
     <p>
       Among millennials experiencing menopause, 44% have avoided discussing symptoms at work. Among Gen X women, that figure is 34%. These are the women the benefit was purchased to reach. They are also the women least likely to meet the collection condition.
@@ -146,16 +166,9 @@ const articleJsonLd = {
     <p>
       Enrollment numbers do not reflect coverage. They reflect willingness to meet the collection condition.
     </p>
-  </section>
 
-  <section class="authority-section">
-    <div class="authority-section-header">
-      <div class="authority-section-number">02</div>
-      <div>
-        <div class="authority-rule"></div>
-        <h2>The Architecture of the Problem</h2>
-      </div>
-    </div>
+    <span class="section-number">02</span>
+    <h2>The Architecture of the Problem</h2>
 
     <p>
       A voluntary benefit program creates access only for the population willing to generate the required signal. For the woman who has already determined that visibility carries professional risk, the system introduces no new incentive. It reinforces the existing constraint.
@@ -166,7 +179,7 @@ const articleJsonLd = {
     </p>
 
     <p>
-      That is the visibility tax. <strong>Visibility Tax℠</strong> refers to the structural requirement that an individual generate a visible signal before support, protection, or inclusion activates, resulting in the systematic exclusion of those for whom that signal carries professional risk.
+      That is the visibility tax. Visibility Tax℠ refers to the structural requirement that an individual generate a visible signal before support, protection, or inclusion activates, resulting in the systematic exclusion of those for whom that signal carries professional risk.
     </p>
 
     <p>
@@ -176,16 +189,9 @@ const articleJsonLd = {
     <p>
       Those populations are not interchangeable. In performance-driven environments, they are not evenly distributed across career levels. The women most likely to have concluded that disclosure is professionally costly are also the women the organization can least afford to lose.
     </p>
-  </section>
 
-  <section class="authority-section">
-    <div class="authority-section-header">
-      <div class="authority-section-number">03</div>
-      <div>
-        <div class="authority-rule"></div>
-        <h2>What Support-Only Models Cannot See</h2>
-      </div>
-    </div>
+    <span class="section-number">03</span>
+    <h2>What Support-Only Models Cannot See</h2>
 
     <p>
       The organizational buyer is measuring the wrong variable.
@@ -218,5 +224,15 @@ const articleJsonLd = {
     <p>
       None of that appears in utilization data. None of it was ever captured by the system.
     </p>
-  </section>
+  </div>
+
+  <div class="authority-bottom-stack">
+    <AuthoritySeries
+      title="The Architecture of Invisible Attrition℠ — Executive Report Series"
+      description="A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure."
+      items={seriesItems}
+    />
+
+    <AuthorityRelated items={relatedItems} />
+  </div>
 </AuthorityPage>
