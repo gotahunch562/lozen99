@@ -3,40 +3,89 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-// Components
-import BlogCard from "@/components/blog/BlogCard.astro";
-import BlogBigCard from "@/components/blog/BlogBigCard.astro";
+
 // Content
 import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("posts");
 
-allPosts.sort((a, b) => {
-  const dateA = new Date(a.data.pubDate).getTime();
-  const dateB = new Date(b.data.pubDate).getTime();
-  return dateB - dateA;
+const SERIES_INDEX_SLUG = "menopause-policy-laws-dependence-disclosure";
+
+const getData = (post: any) => post.data as any;
+
+const getSlug = (post: any) => {
+  const data = getData(post);
+  return String(data.slug || post.id).replace(/^\/?blog\//, "").replace(/^\/+/, "");
+};
+
+const getPostHref = (post: any) => `/blog/${getSlug(post)}`;
+
+const getSortDate = (post: any) => {
+  const data = getData(post);
+  return new Date(data.dateModified || data.datePublished || "1970-01-01").getTime();
+};
+
+const getPublishedDate = (post: any) => {
+  const data = getData(post);
+  return data.datePublished || data.dateModified || "";
+};
+
+const formatDate = (dateValue: string | Date) => {
+  if (!dateValue) return "";
+
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(new Date(dateValue));
+};
+
+// Only use migrated Lozen blog posts.
+// This prevents Copperlane demo posts from rendering if they still exist.
+const livePosts = allPosts
+  .filter((post) => {
+    const data = getData(post);
+    return data.draft !== true && Boolean(data.slug) && Boolean(data.datePublished);
+  })
+  .sort((a, b) => getSortDate(b) - getSortDate(a));
+
+const articlePosts = livePosts.filter((post) => getSlug(post) !== SERIES_INDEX_SLUG);
+
+const latestPosts = articlePosts.slice(0, 3);
+
+const postsByCategory = articlePosts.reduce(
+  (groups: Record<string, typeof articlePosts>, post) => {
+    const data = getData(post);
+    const category = data.category || "Articles";
+
+    if (!groups[category]) {
+      groups[category] = [];
+    }
+
+    groups[category].push(post);
+    return groups;
+  },
+  {}
+);
+
+const preferredCategoryOrder = [
+  "Legislative Analysis",
+  "Research & Policy",
+  "Legal Profession",
+  "Performance & Career",
+  "Series Hub",
+];
+
+const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
+  const aIndex = preferredCategoryOrder.indexOf(a);
+  const bIndex = preferredCategoryOrder.indexOf(b);
+
+  if (aIndex === -1 && bIndex === -1) return a.localeCompare(b);
+  if (aIndex === -1) return 1;
+  if (bIndex === -1) return -1;
+
+  return aIndex - bIndex;
 });
-
-// Get featured post marked as featured, or fallback to most recent
-const featuredPost =
-  allPosts.find((post) => post.data.isFeatured) || allPosts[0];
-
-const otherPosts = featuredPost
-  ? allPosts.filter((post) => post.id !== featuredPost.id)
-  : allPosts;
-
-const postsByCategory = otherPosts.reduce((groups, post) => {
-  const category = post.data.category || "Articles";
-
-  if (!groups[category]) {
-    groups[category] = [];
-  }
-
-  groups[category].push(post);
-  return groups;
-}, {});
-
-const categorySections = Object.entries(postsByCategory);
 ---
 
 <BaseLayout>
@@ -48,7 +97,7 @@ const categorySections = Object.entries(postsByCategory);
           variant="textSM"
           class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
         >
-          Insights
+          Research
         </Text>
 
         <Text
@@ -56,7 +105,7 @@ const categorySections = Object.entries(postsByCategory);
           variant="displayXL"
           class="mt-8 uppercase font-display text-base-900"
         >
-          Menopause at Work: Leadership and Perimenopause Insights
+          Lozen Advisory Research & Analysis
         </Text>
 
         <Text
@@ -64,104 +113,216 @@ const categorySections = Object.entries(postsByCategory);
           variant="textBase"
           class="mt-4 text-base-600 text-balance"
         >
-          What do we write about? What matters to her.
+          Disclosure-independent analysis on retention risk, menopause at work,
+          invisible attrition, leadership continuity, and the organizational data
+          sources that fail to capture what was never disclosed.
         </Text>
-
-        <div class="grid grid-cols-1 gap-3 mt-8 sm:grid-cols-3">
-          <Text
-            tag="p"
-            variant="textSM"
-            class="font-medium uppercase tracking-wide text-base-900 font-display"
-          >
-            Performance.
-          </Text>
-
-          <Text
-            tag="p"
-            variant="textSM"
-            class="font-medium uppercase tracking-wide text-base-900 font-display"
-          >
-            Identity.
-          </Text>
-
-          <Text
-            tag="p"
-            variant="textSM"
-            class="font-medium uppercase tracking-wide text-base-900 font-display"
-          >
-            The career she built.
-          </Text>
-        </div>
-      </div>
-
-      <div class="mt-12">
-        {featuredPost && <BlogBigCard post={featuredPost} />}
       </div>
     </Wrapper>
   </section>
 
   <section>
     <Wrapper variant="standard" class="py-12 lg:py-20">
+      <div class="rounded-sm border border-accent-500/40 bg-base-100 p-8 lg:p-10">
+        <div class="max-w-4xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+          >
+            Series Index
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displayLG"
+            class="mt-8 uppercase font-display text-base-900"
+          >
+            Menopause at Work: Policy, Laws and the Dependence on Disclosure
+          </Text>
+
+          <Text
+            tag="p"
+            variant="textBase"
+            class="mt-4 text-base-600 text-balance"
+          >
+            A nine-part series examining how workplace frameworks, legislation,
+            and research are structurally dependent on disclosure, and what
+            remains unaccounted for when disclosure does not occur.
+          </Text>
+
+          <div class="mt-8">
+            <a
+              href="/blog/menopause-policy-laws-dependence-disclosure"
+              class="inline-flex text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
+            >
+              Read the series →
+            </a>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  {latestPosts.length > 0 && (
+    <section>
+      <Wrapper variant="standard" class="py-12 lg:py-20">
+        <div class="max-w-3xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+          >
+            Latest Analysis
+          </Text>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 mt-12 md:grid-cols-3">
+          {latestPosts.map((post) => {
+            const data = getData(post);
+            const publishedDate = getPublishedDate(post);
+
+            return (
+              <article class="overflow-hidden border rounded-sm border-base-300 bg-white">
+                {data.heroImage && (
+                  <a href={getPostHref(post)} class="block">
+                    <img
+                      src={data.heroImage}
+                      alt={data.heroAlt || data.title}
+                      class="object-cover w-full h-56"
+                      loading="lazy"
+                    />
+                  </a>
+                )}
+
+                <div class="p-6">
+                  <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-wide text-accent-600 font-display">
+                    {data.category && <span>{data.category}</span>}
+                    {data.category && publishedDate && <span aria-hidden="true">·</span>}
+                    {publishedDate && (
+                      <time datetime={String(publishedDate)}>
+                        {formatDate(publishedDate)}
+                      </time>
+                    )}
+                  </div>
+
+                  <h2 class="mt-4 text-2xl leading-tight uppercase font-display text-base-900">
+                    <a
+                      href={getPostHref(post)}
+                      class="transition-colors hover:text-accent-600"
+                    >
+                      {data.title}
+                    </a>
+                  </h2>
+
+                  {data.excerpt && (
+                    <p class="mt-4 text-sm leading-7 text-base-600">
+                      {data.excerpt}
+                    </p>
+                  )}
+
+                  <div class="mt-6">
+                    <a
+                      href={getPostHref(post)}
+                      class="inline-flex text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
+                    >
+                      Read article →
+                    </a>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </Wrapper>
+    </section>
+  )}
+
+  <section>
+    <Wrapper variant="standard" class="py-12 lg:py-24">
       <div class="max-w-3xl">
         <Text
           tag="span"
           variant="textSM"
           class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
         >
-          Series
+          Browse by Category
         </Text>
-
-        <Text
-          tag="h2"
-          variant="displayLG"
-          class="mt-8 uppercase font-display text-base-900"
-        >
-          Menopause at Work, Policy, and the Measurement Gap
-        </Text>
-
-        <Text
-          tag="p"
-          variant="textBase"
-          class="mt-4 text-base-600 text-balance"
-        >
-          This article is part of a nine-part series examining how existing
-          menopause workplace frameworks, legislation, and workforce studies are
-          bounded by the same disclosure condition they are designed to address.
-        </Text>
-
-        <div class="mt-8">
-          <a
-            href="/blog/menopause-policy-laws-dependence-disclosure"
-            class="inline-flex text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
-          >
-            View the full series index
-          </a>
-        </div>
       </div>
-    </Wrapper>
-  </section>
 
-  <section>
-    <Wrapper variant="standard" class="py-12 lg:py-24">
-      {
-        categorySections.map(([category, posts]) => (
-          <div class="mb-16 last:mb-0">
-            <div class="max-w-3xl">
-              <Text
-                tag="span"
-                variant="textSM"
-                class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-              >
-                {category}
-              </Text>
-            </div>
+      <div class="mt-12">
+        {
+          categorySections.map(([category, posts]) => (
+            <div class="mb-16 last:mb-0">
+              <div class="max-w-3xl">
+                <Text
+                  tag="h2"
+                  variant="displayLG"
+                  class="uppercase font-display text-base-900"
+                >
+                  {category}
+                </Text>
+              </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-12">
-              {posts.map((post) => <BlogCard post={post} />)}
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-8">
+                {posts.map((post) => {
+                  const data = getData(post);
+                  const publishedDate = getPublishedDate(post);
+
+                  return (
+                    <article class="grid grid-cols-1 gap-0 overflow-hidden border rounded-sm border-base-300 bg-white md:grid-cols-[0.85fr_1.15fr]">
+                      {data.heroImage && (
+                        <a href={getPostHref(post)} class="block min-h-full">
+                          <img
+                            src={data.heroImage}
+                            alt={data.heroAlt || data.title}
+                            class="object-cover w-full h-56 md:h-full"
+                            loading="lazy"
+                          />
+                        </a>
+                      )}
+
+                      <div class="p-6">
+                        <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-wide text-accent-600 font-display">
+                          {publishedDate && (
+                            <time datetime={String(publishedDate)}>
+                              {formatDate(publishedDate)}
+                            </time>
+                          )}
+                        </div>
+
+                        <h3 class="mt-4 text-xl leading-tight uppercase font-display text-base-900">
+                          <a
+                            href={getPostHref(post)}
+                            class="transition-colors hover:text-accent-600"
+                          >
+                            {data.title}
+                          </a>
+                        </h3>
+
+                        {data.excerpt && (
+                          <p class="mt-4 text-sm leading-7 text-base-600">
+                            {data.excerpt}
+                          </p>
+                        )}
+
+                        <div class="mt-5">
+                          <a
+                            href={getPostHref(post)}
+                            class="inline-flex text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
+                          >
+                            Read article →
+                          </a>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
     </Wrapper>
   </section>
 </BaseLayout>
