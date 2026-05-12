@@ -1,0 +1,257 @@
+---
+import AuthorityPage from "@/components/authority/AuthorityPage.astro";
+import AuthorityRail from "@/components/authority/AuthorityRail.astro";
+import AuthoritySeries from "@/components/authority/AuthoritySeries.astro";
+import AuthorityRelated from "@/components/authority/AuthorityRelated.astro";
+
+const title = "The Architecture of Invisible Attrition — Executive Report Series";
+
+const seoTitle =
+  "The Architecture of Invisible Attrition: Why Corporate Retention Systems Miss the Women Most at Risk";
+
+const metaDescription =
+  "A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure.";
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: seoTitle,
+  description: metaDescription,
+  author: {
+    "@type": "Person",
+    name: "Akilah E. Kamaria",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Lozen Advisory",
+    url: "https://www.lozenadvisory.com",
+  },
+  url: "https://www.lozenadvisory.com/architecture-of-invisible-attrition-series",
+};
+
+const railItems = [
+  {
+    label: "Series Type",
+    value: "Executive report series",
+  },
+  {
+    label: "Series Scope",
+    value: "Voluntary benefits, performance management systems, attrition data, and leadership pipeline design",
+  },
+  {
+    label: "Core Condition",
+    value: "Each system depends on an initiating act the organization does not control.",
+  },
+];
+
+const railLinks = [
+  {
+    label: "Invisible Attrition℠ Framework",
+    href: "/invisible-attrition",
+  },
+  {
+    label: "Disclosure Infrastructure",
+    href: "/disclosure-independence-infrastructure",
+  },
+  {
+    label: "Retention Risk Analysis",
+    href: "/retention-risk-analysis",
+  },
+];
+
+const seriesItems = [
+  {
+    number: "01",
+    title: "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most",
+    href: "/voluntary-benefit-disclosure-gap",
+    status: "available",
+  },
+  {
+    number: "02",
+    title: "Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers",
+    href: "/billable-hour-visibility-tax",
+    status: "available",
+  },
+  {
+    number: "03",
+    title: "Succession Planning and the Retention Risk Data Gap",
+    href: "/succession-planning-retention-risk-data-gap",
+    status: "available",
+  },
+  {
+    number: "04",
+    title: "The Leadership Pipeline Is Draining From Both Ends",
+    href: "/leadership-pipeline-manager-engagement",
+    status: "available",
+  },
+];
+
+const relatedItems = [
+  {
+    eyebrow: "Framework",
+    title: "Invisible Attrition℠",
+    href: "/invisible-attrition",
+    description:
+      "The analytical foundation for the series and the framework for leadership capacity erosion prior to organizational detection.",
+  },
+  {
+    eyebrow: "B2B Entry Point",
+    title: "Retention Risk Analysis",
+    href: "/retention-risk-analysis",
+    description:
+      "A search-capture page connecting replacement cost, workforce attrition risk assessment, and the limits of standard retention analysis.",
+  },
+];
+---
+
+<AuthorityPage
+  eyebrow="Executive Report Series"
+  title={title}
+  description={metaDescription}
+  image="/images/unrecorded-talent-infrastructure-gap.webp"
+  imageAlt="A diagnostic visualization of corporate retention infrastructure and the data gaps that remain outside formal reporting systems."
+  dateLabel="May 2026"
+  backHref="/blog"
+  backLabel="Back to Research"
+  articleJsonLd={articleJsonLd}
+>
+  <AuthorityRail
+    slot="rail"
+    title="Series Context"
+    items={railItems}
+    links={railLinks}
+    cta={{
+      label: "Strategic Briefing",
+      title: "Invisible Attrition℠ Retention Risk Audit",
+      description:
+        "A strategic consultation to identify why clean performance records and engagement scores can mask compounding leadership continuity risk.",
+      href: "/book-appointment",
+    }}
+  />
+
+  <div class="authority-article-body">
+    <p>
+      Lozen Advisory has released a four-part audit of corporate retention infrastructure.
+    </p>
+
+    <p>
+      The audit examines a single structural condition across voluntary benefits, performance management systems, attrition data, and leadership pipeline design: each depends on an initiating act the organization does not control. The system requires her to move first. The population most likely to move is not the population most at risk of exit.
+    </p>
+
+    <p>
+      The result is a consistent pattern across all four layers of the retention architecture. The organization can only access the population that enters the system. It can only measure the population that produces variance inside it. It can only record the population that generated data in the first place. And when that population begins to thin, the pipeline gap compounds before the succession plan registers it.
+    </p>
+
+    <p>
+      That constraint is not a failure of execution. It is a property of the system design.
+    </p>
+
+    <p>
+      Each report isolates one layer of that design. Together, they form a single audit of what corporate retention systems are built to capture and what they systematically exclude.
+    </p>
+
+    <h2>Report One: Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most</h2>
+
+    <p>
+      <strong>Published:</strong> April 27, 2026<br />
+      <strong>Focus:</strong> Voluntary benefit architecture
+    </p>
+
+    <p>
+      Every voluntary benefit program in this category shares one design feature: the woman has to initiate access before protection activates. Maven Clinic is among the most recognized names in the space. Its own data documents that 44% of millennials and 34% of Gen X women experiencing menopause have avoided discussing symptoms at work. Those are the women the benefit was purchased to reach. They are also the women least likely to log in.
+    </p>
+
+    <p>
+      Enrollment numbers do not reflect coverage. They reflect willingness to be visible.
+    </p>
+
+    <p>
+      <a href="https://www.lozenadvisory.com/voluntary-benefit-disclosure-gap">Read Report One: Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most →</a>
+    </p>
+
+    <h2>Report Two: Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers</h2>
+
+    <p>
+      <strong>Published:</strong> April 28, 2026<br />
+      <strong>Focus:</strong> Performance management systems and professional services
+    </p>
+
+    <p>
+      The ABA mental health study documents attorney wellbeing at scale. What it cannot document is the population it never reached: the women who read the findings, recognized themselves, and kept working. A billable-hour system records output. It does not record the cost of producing it. In a data-driven firm, silence is recorded as stability.
+    </p>
+
+    <p>
+      <a href="https://www.lozenadvisory.com/billable-hour-visibility-tax">Read Report Two →</a>
+    </p>
+
+    <h2>Report Three: Succession Planning and the Retention Risk Data Gap</h2>
+
+    <p>
+      <strong>Publishing:</strong> May 2026<br />
+      <strong>Focus:</strong> Attrition data and succession planning
+    </p>
+
+    <p>
+      The Bank of America and National Menopause Foundation research identified a 73-point gap between what HR believes it knows and what employees have disclosed. That gap is not a communication failure. It is the operating condition of every succession plan built on that data. Organizations are making retention decisions against a dataset that reflects only the women who were willing to disclose.
+    </p>
+
+    <p>
+      <a href="https://www.lozenadvisory.com/succession-planning-retention-risk-data-gap">Read Report Three →</a>
+    </p>
+
+    <h2>Report Four: The Leadership Pipeline Is Draining From Both Ends</h2>
+
+    <p>
+      <strong>Publishing:</strong> May 2026<br />
+      <strong>Focus:</strong> Leadership pipeline and manager engagement
+    </p>
+
+    <p>
+      The Gallup 2026 State of the Global Workplace report confirmed that manager engagement dropped nine points between 2022 and 2025. The pipeline is thinning from disengagement above. Invisible Attrition℠ is draining it from below. Both losses are occurring in the gap between what the organization can measure and what its existing data sources were never built to count. The succession plan inherits both gaps simultaneously.
+    </p>
+
+    <p>
+      <a href="https://www.lozenadvisory.com/leadership-pipeline-manager-engagement">Read Report Four →</a>
+    </p>
+
+    <h2>The Structural Argument</h2>
+
+    <p>
+      Across all four reports, the same condition operates. The system requires her to move first. The women least likely to move are the women operating in performance-driven environments where disclosure carries professional risk. They appear in utilization reports as non-participants. They appear in performance reviews as stable. They appear in attrition data as standard separations. They appear in succession plans as losses the organization had no analytical reason to anticipate.
+    </p>
+
+    <p>
+      The data is accurate. It is structurally incomplete.
+    </p>
+
+    <p>
+      The data was never created because she never entered the system, and the decisions built on that data reflect a workforce the organization has never fully seen.
+    </p>
+
+    <p>
+      The <a href="https://www.lozenadvisory.com/invisible-attrition">Invisible Attrition℠ framework</a> is the analytical foundation for this series. The published SSRN paper is available at <a href="http://ssrn.com/abstract=6397780">http://ssrn.com/abstract=6397780</a>.
+    </p>
+
+    <div class="mt-12 rounded-3xl border border-accent-400 bg-accent-50 p-6 shadow-sm transition-all duration-300 hover:border-accent-600 hover:bg-accent-100 sm:p-8">
+      <a
+        href="https://www.lozenadvisory.com/request-briefing"
+        class="inline-flex text-base font-semibold text-base-950 no-underline"
+      >
+        Schedule an Invisible Attrition℠ Retention Risk Audit →
+      </a>
+      <p class="mt-4 text-sm leading-6 text-base-700">
+        A strategic consultation to identify why clean performance records and engagement scores can mask compounding leadership continuity risk.
+      </p>
+    </div>
+  </div>
+
+  <div class="authority-bottom-stack">
+    <AuthoritySeries
+      title="The Architecture of Invisible Attrition℠ — Executive Report Series"
+      description="A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure."
+      items={seriesItems}
+    />
+
+    <AuthorityRelated items={relatedItems} />
+  </div>
+</AuthorityPage>
