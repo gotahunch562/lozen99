@@ -1,125 +1,104 @@
 ---
+interface RailItem {
+  label: string;
+  value: string;
+}
+
 interface RailLink {
   label: string;
   href: string;
 }
 
+interface Cta {
+  label?: string;
+  title: string;
+  description?: string;
+  href: string;
+}
+
 interface Props {
-  category?: string;
-  published?: string;
-  updated?: string;
-  contextTitle?: string;
-  contextBody?: string;
-  ctaLabel?: string;
-  ctaHref?: string;
-  linksTitle?: string;
+  title?: string;
+  items?: RailItem[];
   links?: RailLink[];
+  cta?: Cta;
 }
 
 const {
-  category,
-  published,
-  updated,
-  contextTitle,
-  contextBody,
-  ctaLabel,
-  ctaHref,
-  linksTitle = "Related",
+  title = "Page Context",
+  items = [],
   links = [],
+  cta,
 } = Astro.props;
 ---
 
-<div class="space-y-5">
-  <div class="rounded-3xl border border-base-300 bg-base-50 p-6 shadow-sm">
-    <p class="font-display text-xs font-medium uppercase tracking-[0.2em] text-accent-600">
-      Page Context
+<div class="grid gap-6">
+  <section class="rounded-3xl border border-base-200 bg-white p-6 shadow-sm">
+    <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-500">
+      {title}
     </p>
 
-    <dl class="mt-5 space-y-4 text-sm leading-6">
-      {
-        category && (
-          <div>
-            <dt class="font-medium text-base-900">Category</dt>
-            <dd class="mt-1 text-base-600">{category}</dd>
+    {items.length > 0 && (
+      <dl class="mt-6 grid gap-5">
+        {items.map((item) => (
+          <div class="border-b border-base-100 pb-5 last:border-b-0 last:pb-0">
+            <dt class="text-xs font-medium uppercase tracking-[0.16em] text-base-400">
+              {item.label}
+            </dt>
+            <dd class="mt-2 text-sm leading-6 text-base-800">
+              {item.value}
+            </dd>
           </div>
-        )
-      }
+        ))}
+      </dl>
+    )}
+  </section>
 
-      {
-        published && (
-          <div>
-            <dt class="font-medium text-base-900">Published</dt>
-            <dd class="mt-1 text-base-600">{published}</dd>
-          </div>
-        )
-      }
-
-      {
-        updated && (
-          <div>
-            <dt class="font-medium text-base-900">Updated</dt>
-            <dd class="mt-1 text-base-600">{updated}</dd>
-          </div>
-        )
-      }
-    </dl>
-  </div>
-
-  {
-    contextTitle && (
-      <div class="rounded-3xl border border-base-300 bg-white p-6 shadow-sm">
-        <p class="font-display text-xl leading-tight text-base-900">
-          {contextTitle}
+  {cta && (
+    <a
+      href={cta.href}
+      class="group block rounded-3xl border border-accent-400 bg-accent-50 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-600 hover:bg-accent-100 hover:shadow-md"
+    >
+      {cta.label && (
+        <p class="text-xs font-medium uppercase tracking-[0.18em] text-accent-700">
+          {cta.label}
         </p>
+      )}
 
-        {
-          contextBody && (
-            <p class="mt-4 text-sm leading-7 text-base-600">
-              {contextBody}
-            </p>
-          )
-        }
-      </div>
-    )
-  }
+      <h2 class="mt-4 font-display text-2xl font-medium uppercase leading-none tracking-tight text-base-950">
+        {cta.title}
+      </h2>
 
-  {
-    ctaLabel && ctaHref && (
-      <div class="rounded-3xl border border-base-300 bg-base-900 p-6 shadow-xl">
-        <p class="font-display text-xs font-medium uppercase tracking-[0.2em] text-accent-500">
-          Advisory
+      {cta.description && (
+        <p class="mt-4 text-sm leading-6 text-base-700">
+          {cta.description}
         </p>
+      )}
 
-        <a
-          href={ctaHref}
-          class="mt-4 inline-flex font-display text-xl leading-tight text-white transition-colors hover:text-accent-400"
-        >
-          {ctaLabel}
-        </a>
-      </div>
-    )
-  }
+      <span class="mt-6 inline-flex text-sm font-medium text-base-950 transition-transform duration-300 group-hover:translate-x-1">
+        Request Briefing →
+      </span>
+    </a>
+  )}
 
-  {
-    links.length > 0 && (
-      <div class="rounded-3xl border border-base-300 bg-base-50 p-6 shadow-sm">
-        <p class="font-display text-xs font-medium uppercase tracking-[0.2em] text-accent-600">
-          {linksTitle}
-        </p>
+  {links.length > 0 && (
+    <section class="rounded-3xl border border-base-200 bg-white p-6 shadow-sm">
+      <p class="text-xs font-medium uppercase tracking-[0.18em] text-base-500">
+        Related Architecture
+      </p>
 
-        <div class="mt-5 space-y-4">
-          {
-            links.map((link) => (
-              <a
-                href={link.href}
-                class="block text-sm font-medium leading-6 text-base-700 transition-colors hover:text-accent-600"
-              >
-                {link.label}
-              </a>
-            ))
-          }
-        </div>
-      </div>
-    )
-  }
+      <nav class="mt-5 grid gap-3" aria-label="Authority page related links">
+        {links.map((link) => (
+          <a
+            href={link.href}
+            class="group flex items-center justify-between gap-4 rounded-2xl border border-base-100 bg-base-50 px-4 py-3 text-sm font-medium text-base-800 transition-all duration-300 hover:border-accent-400 hover:bg-white hover:text-base-950"
+          >
+            <span>{link.label}</span>
+            <span class="text-accent-600 transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </a>
+        ))}
+      </nav>
+    </section>
+  )}
 </div>
