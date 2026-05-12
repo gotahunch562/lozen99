@@ -5,8 +5,7 @@ image:
   url: "/src/images/services/diagnostics.png"
   alt: "Abstract diagnostic dashboard representing leadership capacity loss before detection"
 description: |
-  Invisible Attrition℠ is the unmeasured erosion of leadership capacity before retention metrics detect risk. It explains how organizations lose senior women while every dashboard still shows stability.
-priceFrom: "Framework"
+  Invisible Attrition℠ is the unmeasured erosion of leadership capacity before retention metrics detect risk. See how organizations lose top female talent without a signal.
 duration: "Pillar Article"
 isFeatured: true
 ---
