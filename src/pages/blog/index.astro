@@ -20,14 +20,37 @@ const getSlug = (post: any) => {
 
 const getPostHref = (post: any) => `/blog/${getSlug(post)}`;
 
-const getSortDate = (post: any) => {
-  const data = getData(post);
-  return new Date(data.dateModified || data.datePublished || "1970-01-01").getTime();
-};
-
 const getPublishedDate = (post: any) => {
   const data = getData(post);
-  return data.datePublished || data.dateModified || "";
+  return data.datePublished || data.pubDate || data.dateModified || "";
+};
+
+const getModifiedDate = (post: any) => {
+  const data = getData(post);
+  return data.dateModified || data.datePublished || data.pubDate || "";
+};
+
+const getSortDate = (post: any) => {
+  return new Date(getModifiedDate(post) || getPublishedDate(post) || "1970-01-01").getTime();
+};
+
+const getHeroImage = (post: any) => {
+  const data = getData(post);
+
+  if (data.image?.url?.src) return data.image.url.src;
+  if (typeof data.image?.url === "string") return data.image.url;
+
+  return data.heroImage || "";
+};
+
+const getHeroAlt = (post: any) => {
+  const data = getData(post);
+  return data.image?.alt || data.heroAlt || data.title || "";
+};
+
+const getExcerpt = (post: any) => {
+  const data = getData(post);
+  return data.excerpt || data.description || data.metaDescription || "";
 };
 
 const formatDate = (dateValue: string | Date) => {
@@ -45,7 +68,7 @@ const formatDate = (dateValue: string | Date) => {
 const livePosts = allPosts
   .filter((post) => {
     const data = getData(post);
-    return data.draft !== true && Boolean(data.slug) && Boolean(data.datePublished);
+    return data.draft !== true && Boolean(data.slug || post.id) && Boolean(getPublishedDate(post));
   })
   .sort((a, b) => getSortDate(b) - getSortDate(a));
 
@@ -73,6 +96,7 @@ const preferredCategoryOrder = [
   "Research & Policy",
   "Legal Profession",
   "Performance & Career",
+  "The Tender Path",
   "Series Hub",
 ];
 
@@ -181,14 +205,17 @@ const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
           {latestPosts.map((post) => {
             const data = getData(post);
             const publishedDate = getPublishedDate(post);
+            const heroImage = getHeroImage(post);
+            const heroAlt = getHeroAlt(post);
+            const excerpt = getExcerpt(post);
 
             return (
               <article class="overflow-hidden border rounded-sm border-base-300 bg-white">
-                {data.heroImage && (
+                {heroImage && (
                   <a href={getPostHref(post)} class="block">
                     <img
-                      src={data.heroImage}
-                      alt={data.heroAlt || data.title}
+                      src={heroImage}
+                      alt={heroAlt}
                       class="object-cover w-full h-56"
                       loading="lazy"
                     />
@@ -215,9 +242,9 @@ const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
                     </a>
                   </h2>
 
-                  {data.excerpt && (
+                  {excerpt && (
                     <p class="mt-4 text-sm leading-7 text-base-600">
-                      {data.excerpt}
+                      {excerpt}
                     </p>
                   )}
 
@@ -268,14 +295,17 @@ const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
                 {posts.map((post) => {
                   const data = getData(post);
                   const publishedDate = getPublishedDate(post);
+                  const heroImage = getHeroImage(post);
+                  const heroAlt = getHeroAlt(post);
+                  const excerpt = getExcerpt(post);
 
                   return (
                     <article class="grid grid-cols-1 gap-0 overflow-hidden border rounded-sm border-base-300 bg-white md:grid-cols-[0.85fr_1.15fr]">
-                      {data.heroImage && (
+                      {heroImage && (
                         <a href={getPostHref(post)} class="block min-h-full">
                           <img
-                            src={data.heroImage}
-                            alt={data.heroAlt || data.title}
+                            src={heroImage}
+                            alt={heroAlt}
                             class="object-cover w-full h-56 md:h-full"
                             loading="lazy"
                           />
@@ -300,9 +330,9 @@ const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
                           </a>
                         </h3>
 
-                        {data.excerpt && (
+                        {excerpt && (
                           <p class="mt-4 text-sm leading-7 text-base-600">
-                            {data.excerpt}
+                            {excerpt}
                           </p>
                         )}
 
