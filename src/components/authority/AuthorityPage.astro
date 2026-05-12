@@ -45,7 +45,7 @@ const {
               <img
                 src={image}
                 alt={imageAlt}
-                class="h-[18rem] w-full object-cover sm:h-[24rem] lg:h-[34rem]"
+                class="h-[18rem] w-full object-cover sm:h-[24rem] lg:h-[32rem]"
                 loading="eager"
                 decoding="async"
               />
@@ -76,13 +76,13 @@ const {
             }
           </div>
 
-          <h1 class="mt-6 max-w-5xl font-display text-4xl font-medium uppercase leading-[0.95] tracking-tight text-base-950 sm:text-5xl lg:text-7xl">
+          <h1 class="mt-6 max-w-4xl font-display text-3xl font-medium uppercase leading-[1.02] tracking-tight text-base-950 sm:text-4xl lg:text-5xl">
             {title}
           </h1>
 
           {
             description && (
-              <p class="mt-8 max-w-3xl text-lg leading-8 text-base-700 sm:text-xl">
+              <p class="mt-7 max-w-3xl text-base leading-7 text-base-700 sm:text-lg">
                 {description}
               </p>
             )
@@ -141,12 +141,12 @@ const {
   }
 
   .authority-prose :global(.authority-article-body h2) {
-    margin-top: 4rem;
+    margin-top: 3.5rem;
     font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1.75rem, 3vw, 2.75rem);
     font-weight: 500;
-    line-height: 0.98;
-    letter-spacing: -0.04em;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
     text-transform: uppercase;
     color: var(--color-base-950);
   }
