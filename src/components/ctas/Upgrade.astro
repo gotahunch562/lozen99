@@ -15,14 +15,16 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
     >
       <Image
         src={carBack}
-        alt="Service Package Background"
+        alt="Employee Benefits Utilization"
         class="absolute inset-0 object-cover size-full"
       />
+
       <div
         aria-hidden="true"
         class="absolute inset-0 pointer-events-none bg-gradient-to-b from-base-900/70 via-base-900/50 to-base-900/90"
       >
       </div>
+
       <div
         class="relative items-end grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16"
       >
@@ -32,27 +34,25 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
             variant="textBase"
             class="pl-4 font-medium text-white uppercase border-l border-white font-display"
           >
-            Limited Time Offer
+            Employee Benefits Utilization
           </Text>
+
           <Text
             tag="h2"
             variant="displayLG"
             class="mt-12 text-white uppercase font-display"
           >
-            Upgrade to a Full Service Package
+            Low utilization does not always mean low need.
           </Text>
+
           <Text tag="p" variant="textBase" class="mt-4 text-base-300">
-            Save up to 20% when you bundle services together. Our comprehensive
-            packages include everything your vehicle needs to stay in peak
-            condition—all at one great price.
+            When menopause-at-work benefits show limited uptake, the issue may not be awareness alone. The question is whether claims data, HR inquiry logs, employee feedback, and usage metrics are capturing the population the benefit was designed to reach.
           </Text>
         </div>
+
         <div class="flex flex-col sm:flex-row lg:justify-end gap-4">
-          <Button href="/packages" variant="accent" size="xs">
-            View Packages
-          </Button>
-          <Button href="/book-appointment" variant="muted" size="xs">
-            Book Now
+          <Button isLink href="/book-appointment" variant="accent" size="xs">
+            Request Briefing
           </Button>
         </div>
       </div>
