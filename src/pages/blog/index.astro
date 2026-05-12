@@ -20,37 +20,36 @@ const getSlug = (post: any) => {
 
 const getPostHref = (post: any) => `/blog/${getSlug(post)}`;
 
+const getDateValue = (post: any) => {
+  const data = getData(post);
+  return data.dateModified || data.datePublished || data.pubDate || "";
+};
+
 const getPublishedDate = (post: any) => {
   const data = getData(post);
   return data.datePublished || data.pubDate || data.dateModified || "";
 };
 
-const getModifiedDate = (post: any) => {
-  const data = getData(post);
-  return data.dateModified || data.datePublished || data.pubDate || "";
-};
-
 const getSortDate = (post: any) => {
-  return new Date(getModifiedDate(post) || getPublishedDate(post) || "1970-01-01").getTime();
+  const dateValue = getDateValue(post);
+  return dateValue ? new Date(dateValue).getTime() : 0;
 };
 
-const getHeroImage = (post: any) => {
+const getImageSrc = (post: any) => {
   const data = getData(post);
+  const imageUrl = data.image?.url;
 
-  if (data.image?.url?.src) return data.image.url.src;
-  if (typeof data.image?.url === "string") return data.image.url;
+  if (imageUrl?.src) return imageUrl.src;
+  if (typeof imageUrl === "string") return imageUrl;
+  if (data.heroImage?.src) return data.heroImage.src;
+  if (typeof data.heroImage === "string") return data.heroImage;
 
-  return data.heroImage || "";
+  return "";
 };
 
-const getHeroAlt = (post: any) => {
+const getImageAlt = (post: any) => {
   const data = getData(post);
   return data.image?.alt || data.heroAlt || data.title || "";
-};
-
-const getExcerpt = (post: any) => {
-  const data = getData(post);
-  return data.excerpt || data.description || data.metaDescription || "";
 };
 
 const formatDate = (dateValue: string | Date) => {
@@ -63,18 +62,29 @@ const formatDate = (dateValue: string | Date) => {
   }).format(new Date(dateValue));
 };
 
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
 // Only use migrated Lozen blog posts.
 // This prevents Copperlane demo posts from rendering if they still exist.
 const livePosts = allPosts
   .filter((post) => {
     const data = getData(post);
-    return data.draft !== true && Boolean(data.slug || post.id) && Boolean(getPublishedDate(post));
+    return data.draft !== true && Boolean(data.slug) && Boolean(data.datePublished || data.pubDate);
   })
   .sort((a, b) => getSortDate(b) - getSortDate(a));
 
 const articlePosts = livePosts.filter((post) => getSlug(post) !== SERIES_INDEX_SLUG);
 
-const latestPosts = articlePosts.slice(0, 3);
+const featuredPost = articlePosts.find((post) => getData(post).isFeatured) || articlePosts[0];
+
+const latestPosts = articlePosts
+  .filter((post) => !featuredPost || post.id !== featuredPost.id)
+  .slice(0, 6);
 
 const postsByCategory = articlePosts.reduce(
   (groups: Record<string, typeof articlePosts>, post) => {
@@ -110,79 +120,162 @@ const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
 
   return aIndex - bIndex;
 });
+
+const categoryLinks = categorySections.map(([category, posts]) => ({
+  category,
+  href: `#${slugify(category)}`,
+  count: posts.length,
+}));
 ---
 
 <BaseLayout>
-  <section class="bg-gradient-to-t from-base-200 to-white">
-    <Wrapper variant="standard" class="py-24 lg:py-32">
-      <div class="max-w-3xl mx-auto text-center">
-        <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-        >
-          Research
-        </Text>
-
-        <Text
-          tag="h1"
-          variant="displayXL"
-          class="mt-8 uppercase font-display text-base-900"
-        >
-          Lozen Advisory Research & Analysis
-        </Text>
-
-        <Text
-          tag="p"
-          variant="textBase"
-          class="mt-4 text-base-600 text-balance"
-        >
-          Disclosure-independent analysis on retention risk, menopause at work,
-          invisible attrition, leadership continuity, and the organizational data
-          sources that fail to capture what was never disclosed.
-        </Text>
-      </div>
-    </Wrapper>
-  </section>
-
-  <section>
-    <Wrapper variant="standard" class="py-12 lg:py-20">
-      <div class="rounded-sm border border-accent-500/40 bg-base-100 p-8 lg:p-10">
-        <div class="max-w-4xl">
+  <section class="bg-gradient-to-b from-base-200 via-white to-base-100">
+    <Wrapper variant="standard" class="py-20 lg:py-28">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+        <div>
           <Text
             tag="span"
             variant="textSM"
             class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
           >
-            Series Index
+            Research
           </Text>
 
           <Text
-            tag="h2"
-            variant="displayLG"
-            class="mt-8 uppercase font-display text-base-900"
+            tag="h1"
+            variant="displayXL"
+            class="mt-8 font-display text-base-900"
           >
-            Menopause at Work: Policy, Laws and the Dependence on Disclosure
+            Lozen Advisory Research & Analysis
           </Text>
 
           <Text
             tag="p"
             variant="textBase"
-            class="mt-4 text-base-600 text-balance"
+            class="mt-6 max-w-2xl text-base-600 text-balance"
           >
-            A nine-part series examining how workplace frameworks, legislation,
-            and research are structurally dependent on disclosure, and what
-            remains unaccounted for when disclosure does not occur.
+            Disclosure-independent analysis on retention risk, menopause at work,
+            invisible attrition, leadership continuity, and the organizational data
+            sources that fail to capture what was never disclosed.
           </Text>
+        </div>
 
-          <div class="mt-8">
-            <a
-              href="/blog/menopause-policy-laws-dependence-disclosure"
-              class="inline-flex text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
-            >
-              Read the series →
-            </a>
+        <nav
+          class="rounded-sm border border-base-300 bg-white p-5 shadow-sm"
+          aria-label="Blog categories"
+        >
+          <p class="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent-600 font-display">
+            Explore the research
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            {categoryLinks.map((item) => (
+              <a
+                href={item.href}
+                class="rounded-full border border-base-300 px-4 py-2 text-sm text-base-700 transition-colors hover:border-accent-500 hover:text-base-900"
+              >
+                {item.category}
+                <span class="ml-1 text-base-500">({item.count})</span>
+              </a>
+            ))}
           </div>
+        </nav>
+      </div>
+    </Wrapper>
+  </section>
+
+  {featuredPost && (
+    <section>
+      <Wrapper variant="standard" class="py-8 lg:py-14">
+        <div class="grid grid-cols-1 overflow-hidden rounded-sm border border-base-300 bg-white shadow-sm lg:grid-cols-[1.15fr_0.85fr]">
+          {getImageSrc(featuredPost) && (
+            <a href={getPostHref(featuredPost)} class="block">
+              <img
+                src={getImageSrc(featuredPost)}
+                alt={getImageAlt(featuredPost)}
+                class="h-72 w-full object-cover lg:h-full"
+                loading="eager"
+              />
+            </a>
+          )}
+
+          <div class="flex flex-col justify-center p-8 lg:p-12">
+            <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-wide text-accent-600 font-display">
+              {getData(featuredPost).category && <span>{getData(featuredPost).category}</span>}
+              {getPublishedDate(featuredPost) && (
+                <>
+                  <span aria-hidden="true">·</span>
+                  <time datetime={String(getPublishedDate(featuredPost))}>
+                    {formatDate(getPublishedDate(featuredPost))}
+                  </time>
+                </>
+              )}
+            </div>
+
+            <h2 class="mt-5 text-3xl leading-tight font-display text-base-900 lg:text-5xl">
+              <a href={getPostHref(featuredPost)} class="transition-colors hover:text-accent-600">
+                {getData(featuredPost).title}
+              </a>
+            </h2>
+
+            {getData(featuredPost).excerpt && (
+              <p class="mt-6 text-base leading-8 text-base-600">
+                {getData(featuredPost).excerpt}
+              </p>
+            )}
+
+            <div class="mt-8">
+              <a
+                href={getPostHref(featuredPost)}
+                class="inline-flex text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
+              >
+                Read article →
+              </a>
+            </div>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+  )}
+
+  <section>
+    <Wrapper variant="standard" class="py-8 lg:py-14">
+      <div class="rounded-sm border border-accent-500/40 bg-base-100 p-8 lg:p-10">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div class="max-w-4xl">
+            <Text
+              tag="span"
+              variant="textSM"
+              class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+            >
+              Series Index
+            </Text>
+
+            <Text
+              tag="h2"
+              variant="displayLG"
+              class="mt-8 font-display text-base-900"
+            >
+              Menopause at Work: Policy, Laws and the Dependence on Disclosure
+            </Text>
+
+            <Text
+              tag="p"
+              variant="textBase"
+              class="mt-4 text-base-600 text-balance"
+            >
+              A nine-part series examining how workplace frameworks, legislation,
+              and research are structurally dependent on disclosure, and what
+              remains unaccounted for when disclosure does not occur.
+            </Text>
+          </div>
+
+          <a
+            href="/blog/menopause-policy-laws-dependence-disclosure"
+            class="inline-flex whitespace-nowrap text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
+          >
+            Read the series →
+          </a>
         </div>
       </div>
     </Wrapper>
@@ -190,33 +283,40 @@ const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
 
   {latestPosts.length > 0 && (
     <section>
-      <Wrapper variant="standard" class="py-12 lg:py-20">
-        <div class="max-w-3xl">
-          <Text
-            tag="span"
-            variant="textSM"
-            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-          >
-            Latest Analysis
-          </Text>
+      <Wrapper variant="standard" class="py-10 lg:py-16">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-3xl">
+            <Text
+              tag="span"
+              variant="textSM"
+              class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+            >
+              Latest Stories
+            </Text>
+
+            <Text
+              tag="h2"
+              variant="displayLG"
+              class="mt-8 font-display text-base-900"
+            >
+              Recent Analysis
+            </Text>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 gap-6 mt-12 md:grid-cols-3">
+        <div class="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {latestPosts.map((post) => {
             const data = getData(post);
             const publishedDate = getPublishedDate(post);
-            const heroImage = getHeroImage(post);
-            const heroAlt = getHeroAlt(post);
-            const excerpt = getExcerpt(post);
 
             return (
-              <article class="overflow-hidden border rounded-sm border-base-300 bg-white">
-                {heroImage && (
-                  <a href={getPostHref(post)} class="block">
+              <article class="group overflow-hidden rounded-sm border border-base-300 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1">
+                {getImageSrc(post) && (
+                  <a href={getPostHref(post)} class="block overflow-hidden">
                     <img
-                      src={heroImage}
-                      alt={heroAlt}
-                      class="object-cover w-full h-56"
+                      src={getImageSrc(post)}
+                      alt={getImageAlt(post)}
+                      class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                       loading="lazy"
                     />
                   </a>
@@ -233,18 +333,15 @@ const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
                     )}
                   </div>
 
-                  <h2 class="mt-4 text-2xl leading-tight uppercase font-display text-base-900">
-                    <a
-                      href={getPostHref(post)}
-                      class="transition-colors hover:text-accent-600"
-                    >
+                  <h3 class="mt-4 text-2xl leading-tight font-display text-base-900">
+                    <a href={getPostHref(post)} class="transition-colors hover:text-accent-600">
                       {data.title}
                     </a>
-                  </h2>
+                  </h3>
 
-                  {excerpt && (
-                    <p class="mt-4 text-sm leading-7 text-base-600">
-                      {excerpt}
+                  {data.excerpt && (
+                    <p class="mt-4 line-clamp-4 text-sm leading-7 text-base-600">
+                      {data.excerpt}
                     </p>
                   )}
 
@@ -266,7 +363,7 @@ const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
   )}
 
   <section>
-    <Wrapper variant="standard" class="py-12 lg:py-24">
+    <Wrapper variant="standard" class="py-10 lg:py-24">
       <div class="max-w-3xl">
         <Text
           tag="span"
@@ -277,43 +374,44 @@ const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
         </Text>
       </div>
 
-      <div class="mt-12">
+      <div class="mt-12 space-y-20">
         {
           categorySections.map(([category, posts]) => (
-            <div class="mb-16 last:mb-0">
-              <div class="max-w-3xl">
+            <section id={slugify(category)} class="scroll-mt-28">
+              <div class="mb-8 flex flex-col gap-3 border-b border-base-300 pb-5 md:flex-row md:items-end md:justify-between">
                 <Text
                   tag="h2"
                   variant="displayLG"
-                  class="uppercase font-display text-base-900"
+                  class="font-display text-base-900"
                 >
                   {category}
                 </Text>
+
+                <p class="text-sm text-base-500">
+                  {posts.length} {posts.length === 1 ? "article" : "articles"}
+                </p>
               </div>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-8">
+              <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
                 {posts.map((post) => {
                   const data = getData(post);
                   const publishedDate = getPublishedDate(post);
-                  const heroImage = getHeroImage(post);
-                  const heroAlt = getHeroAlt(post);
-                  const excerpt = getExcerpt(post);
 
                   return (
-                    <article class="grid grid-cols-1 gap-0 overflow-hidden border rounded-sm border-base-300 bg-white md:grid-cols-[0.85fr_1.15fr]">
-                      {heroImage && (
-                        <a href={getPostHref(post)} class="block min-h-full">
+                    <article class="grid grid-cols-1 overflow-hidden rounded-sm border border-base-300 bg-white shadow-sm md:grid-cols-[0.9fr_1.1fr]">
+                      {getImageSrc(post) && (
+                        <a href={getPostHref(post)} class="block overflow-hidden">
                           <img
-                            src={heroImage}
-                            alt={heroAlt}
-                            class="object-cover w-full h-56 md:h-full"
+                            src={getImageSrc(post)}
+                            alt={getImageAlt(post)}
+                            class="h-56 w-full object-cover transition-transform duration-500 hover:scale-[1.03] md:h-full"
                             loading="lazy"
                           />
                         </a>
                       )}
 
                       <div class="p-6">
-                        <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-wide text-accent-600 font-display">
+                        <div class="text-xs font-medium uppercase tracking-wide text-accent-600 font-display">
                           {publishedDate && (
                             <time datetime={String(publishedDate)}>
                               {formatDate(publishedDate)}
@@ -321,18 +419,15 @@ const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
                           )}
                         </div>
 
-                        <h3 class="mt-4 text-xl leading-tight uppercase font-display text-base-900">
-                          <a
-                            href={getPostHref(post)}
-                            class="transition-colors hover:text-accent-600"
-                          >
+                        <h3 class="mt-4 text-xl leading-tight font-display text-base-900">
+                          <a href={getPostHref(post)} class="transition-colors hover:text-accent-600">
                             {data.title}
                           </a>
                         </h3>
 
-                        {excerpt && (
-                          <p class="mt-4 text-sm leading-7 text-base-600">
-                            {excerpt}
+                        {data.excerpt && (
+                          <p class="mt-4 line-clamp-4 text-sm leading-7 text-base-600">
+                            {data.excerpt}
                           </p>
                         )}
 
@@ -349,7 +444,7 @@ const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
                   );
                 })}
               </div>
-            </div>
+            </section>
           ))
         }
       </div>
