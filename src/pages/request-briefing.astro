@@ -1,1 +1,253 @@
-request-briefing.astro
+---
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+const companySizes = [
+  "Under 500",
+  "500–2,000",
+  "2,000–10,000",
+  "10,000+",
+];
+---
+<BaseLayout>
+  <section class="bg-gradient-to-t from-base-200 to-white">
+    <Wrapper variant="standard" class="py-24 lg:py-32">
+      <div class="max-w-3xl">
+        <Text
+          tag="span"
+          variant="textSM"
+          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+        >
+          Business Advisory
+        </Text>
+        <Text
+          tag="h1"
+          variant="displayXL"
+          class="mt-8 uppercase font-display text-base-900"
+        >
+          Request a Briefing
+        </Text>
+        <Text
+          tag="p"
+          variant="textBase"
+          class="mt-4 text-base-600 text-balance"
+        >
+          You have a question about what is happening inside your organization. Start here.
+        </Text>
+      </div>
+    </Wrapper>
+  </section>
+  <section>
+    <Wrapper variant="standard" class="py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2">
+          <Text
+            tag="h2"
+            variant="textLG"
+            class="text-base-900 font-bold uppercase"
+          >
+            Briefing Details
+          </Text>
+          <form class="space-y-8 mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label
+                  for="first-name"
+                  class="text-sm font-medium text-base-900 font-display uppercase"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  class="w-full rounded-lg border border-base-200 bg-base-50 px-4 py-3 text-base-900 placeholder:text-base-400 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 transition-all duration-200"
+                  required
+                />
+              </div>
+              <div class="space-y-2">
+                <label
+                  for="last-name"
+                  class="text-sm font-medium text-base-900 font-display uppercase"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  class="w-full rounded-lg border border-base-200 bg-base-50 px-4 py-3 text-base-900 placeholder:text-base-400 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 transition-all duration-200"
+                  required
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label
+                  for="title"
+                  class="text-sm font-medium text-base-900 font-display uppercase"
+                  >Title</label
+                >
+                <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  class="w-full rounded-lg border border-base-200 bg-base-50 px-4 py-3 text-base-900 placeholder:text-base-400 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 transition-all duration-200"
+                  required
+                />
+              </div>
+              <div class="space-y-2">
+                <label
+                  for="company"
+                  class="text-sm font-medium text-base-900 font-display uppercase"
+                  >Company</label
+                >
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="w-full rounded-lg border border-base-200 bg-base-50 px-4 py-3 text-base-900 placeholder:text-base-400 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 transition-all duration-200"
+                  required
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label
+                  for="email"
+                  class="text-sm font-medium text-base-900 font-display uppercase"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full rounded-lg border border-base-200 bg-base-50 px-4 py-3 text-base-900 placeholder:text-base-400 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 transition-all duration-200"
+                  required
+                />
+              </div>
+              <div class="space-y-2">
+                <label
+                  for="phone"
+                  class="text-sm font-medium text-base-900 font-display uppercase"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full rounded-lg border border-base-200 bg-base-50 px-4 py-3 text-base-900 placeholder:text-base-400 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 transition-all duration-200"
+                  required
+                />
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label
+                for="company-size"
+                class="text-sm font-medium text-base-900 font-display uppercase"
+                >Company Size</label
+              >
+              <select
+                id="company-size"
+                name="company-size"
+                class="w-full rounded-lg border border-base-200 bg-base-50 px-4 py-3 text-base-900 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 transition-all duration-200 appearance-none"
+                required
+              >
+                <option value="" disabled selected>Select company size</option>
+                {
+                  companySizes.map((size) => (
+                    <option value={size}>{size}</option>
+                  ))
+                }
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label
+                for="details"
+                class="text-sm font-medium text-base-900 font-display uppercase"
+                >What are you trying to solve?</label
+              >
+              <textarea
+                id="details"
+                name="details"
+                rows="4"
+                class="w-full rounded-lg border border-base-200 bg-base-50 px-4 py-3 text-base-900 placeholder:text-base-400 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 transition-all duration-200"
+                placeholder="Describe what you are seeing inside your organization."
+              ></textarea>
+            </div>
+            <Button size="sm" variant="default" type="submit" class="w-fit">
+              Request Briefing
+            </Button>
+          </form>
+        </div>
+        <!-- Sidebar -->
+        <div>
+          <aside class="lg:sticky lg:top-32">
+            <div
+              class="flex flex-col bg-white shadow-2xl rounded-3xl outline-4 outline-base-500/10 divide-y divide-base-500/10"
+            >
+              <div class="p-6">
+                <Text
+                  tag="h3"
+                  variant="textLG"
+                  class="font-medium uppercase font-display text-base-900"
+                >
+                  What Happens Next
+                </Text>
+                <ul class="mt-6 space-y-4">
+                  <li class="flex items-start gap-3">
+                    <div
+                      class="mt-1.5 size-2 rounded-full bg-accent-500 shrink-0"
+                    >
+                    </div>
+                    <Text tag="span" variant="textBase" class="text-base-600">
+                      We review your submission within one business day.
+                    </Text>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div
+                      class="mt-1.5 size-2 rounded-full bg-accent-500 shrink-0"
+                    >
+                    </div>
+                    <Text tag="span" variant="textBase" class="text-base-600">
+                      If there is a fit, we will reach out to schedule a confidential conversation.
+                    </Text>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div
+                      class="mt-1.5 size-2 rounded-full bg-accent-500 shrink-0"
+                    >
+                    </div>
+                    <Text tag="span" variant="textBase" class="text-base-600">
+                      No obligation. No information shared outside this inquiry.
+                    </Text>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-6">
+                <Text
+                  tag="h3"
+                  variant="textLG"
+                  class="font-medium uppercase font-display text-base-900"
+                >
+                  Prefer Email?
+                </Text>
+                <Text tag="p" variant="textBase" class="mt-4 text-base-600">
+                  Reach us directly at
+                </Text>
+                <div class="mt-6">
+                  <a
+                    href="mailto:inquiry@lozenadvisory.com"
+                    class="text-accent-600 font-medium hover:text-accent-700 transition-colors text-lg"
+                  >
+                    inquiry@lozenadvisory.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>
