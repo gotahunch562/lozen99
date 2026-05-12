@@ -1,1 +1,330 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
+interface Props {
+  title: string;
+  description: string;
+  eyebrow?: string;
+  publishedDate?: string;
+  publishedLabel?: string;
+  seriesLabel?: string;
+  backHref?: string;
+  backLabel?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  imagePosition?: string;
+  articleJsonLd?: Record<string, unknown>;
+}
+
+const {
+  title,
+  description,
+  eyebrow = "Research & Policy",
+  publishedDate,
+  publishedLabel,
+  seriesLabel,
+  backHref = "/blog",
+  backLabel = "Back to Research",
+  imageSrc,
+  imageAlt = "",
+  imagePosition = "center center",
+  articleJsonLd,
+} = Astro.props;
+---
+
+<BaseLayout title={`${title} | Lozen Advisory`} description={description}>
+  {
+    articleJsonLd && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify(articleJsonLd)}
+      />
+    )
+  }
+
+  <main class="bg-white">
+    <section class="pt-28 lg:pt-32">
+      <Wrapper variant="standard" class="pb-10 lg:pb-14">
+        {
+          imageSrc && (
+            <div class="overflow-hidden rounded-sm border border-base-300 bg-base-100 shadow-sm">
+              <img
+                src={imageSrc}
+                alt={imageAlt}
+                loading="eager"
+                width="1600"
+                height="900"
+                class="h-[340px] w-full object-cover md:h-[420px] lg:h-[480px]"
+                style={`object-position: ${imagePosition};`}
+              />
+            </div>
+          )
+        }
+      </Wrapper>
+    </section>
+
+    <section class="bg-base-100 border-y border-base-300">
+      <Wrapper variant="standard" class="py-12 lg:py-16">
+        <div class="max-w-5xl">
+          <a
+            href={backHref}
+            class="font-display text-xs font-medium uppercase tracking-[0.24em] text-base-500 transition-colors hover:text-accent-600"
+          >
+            ← {backLabel}
+          </a>
+
+          <div class="mt-8 flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-[0.16em] text-accent-600 font-display">
+            <span>{eyebrow}</span>
+
+            {
+              publishedDate && (
+                <>
+                  <span aria-hidden="true">·</span>
+                  <time datetime={publishedDate}>
+                    {publishedLabel || publishedDate}
+                  </time>
+                </>
+              )
+            }
+          </div>
+
+          <Text
+            tag="h1"
+            variant="displayLG"
+            class="mt-6 max-w-5xl font-display text-base-900"
+          >
+            {title}
+          </Text>
+
+          {
+            seriesLabel && (
+              <p class="mt-6 max-w-4xl text-sm uppercase tracking-[0.16em] text-base-500 font-display">
+                {seriesLabel}
+              </p>
+            )
+          }
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-white">
+      <Wrapper variant="standard" class="py-16 lg:py-24">
+        <div class="grid grid-cols-1 gap-12 xl:grid-cols-[minmax(0,900px)_320px] xl:gap-14">
+          <article class="authority-content min-w-0">
+            <slot />
+          </article>
+
+          <aside class="order-first xl:order-none">
+            <div class="sticky top-32 space-y-5">
+              <slot name="rail" />
+            </div>
+          </aside>
+        </div>
+      </Wrapper>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .authority-content :global(p) {
+    margin-bottom: 1.5rem;
+    color: var(--color-base-600);
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    line-height: 1.9;
+  }
+
+  .authority-content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .authority-content :global(h2) {
+    margin: 0 0 1.5rem;
+    color: var(--color-base-900);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+  }
+
+  .authority-content :global(h3) {
+    margin: 2.5rem 0 1rem;
+    color: var(--color-base-900);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+
+  .authority-content :global(ul),
+  .authority-content :global(ol) {
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    padding-left: 1rem;
+    color: var(--color-base-600);
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    line-height: 1.85;
+  }
+
+  .authority-content :global(ul) {
+    list-style: disc;
+  }
+
+  .authority-content :global(ol) {
+    list-style: decimal;
+  }
+
+  .authority-content :global(li) {
+    margin-bottom: 0.75rem;
+    padding-left: 0.25rem;
+  }
+
+  .authority-content :global(strong) {
+    color: var(--color-base-900);
+    font-weight: 600;
+  }
+
+  .authority-content :global(a) {
+    color: var(--color-accent-600);
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    transition: color 180ms ease;
+  }
+
+  .authority-content :global(a:hover) {
+    color: var(--color-base-900);
+  }
+
+  .authority-content :global(.authority-section) {
+    margin-top: 4.5rem;
+    padding-top: 4.5rem;
+    border-top: 1px solid var(--color-base-300);
+  }
+
+  .authority-content :global(.authority-section:first-child) {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .authority-content :global(.authority-section-header) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    margin-bottom: 2.5rem;
+  }
+
+  .authority-content :global(.authority-section-number) {
+    color: var(--color-accent-500);
+    opacity: 0.65;
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 0.9;
+  }
+
+  .authority-content :global(.authority-rule) {
+    width: 5rem;
+    height: 1px;
+    margin-bottom: 1rem;
+    background: var(--color-accent-500);
+  }
+
+  .authority-content :global(.authority-quote-band) {
+    margin: 4.5rem 0;
+    padding: 3rem;
+    background: var(--color-base-900);
+  }
+
+  .authority-content :global(.authority-quote-band p) {
+    margin: 0;
+    color: white;
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+  }
+
+  .authority-content :global(.authority-callout) {
+    margin: 3rem 0;
+    padding: 2rem;
+    border: 1px solid var(--color-base-300);
+    border-left: 4px solid var(--color-accent-500);
+    border-radius: 1.5rem;
+    background: var(--color-base-50);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .authority-content :global(.authority-callout p) {
+    margin: 0;
+    color: var(--color-base-700);
+  }
+
+  .authority-content :global(.authority-card) {
+    margin: 3rem 0;
+    padding: 2rem;
+    border: 1px solid var(--color-base-300);
+    border-radius: 1.5rem;
+    background: var(--color-base-50);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .authority-content :global(.authority-card p) {
+    margin-bottom: 1rem;
+  }
+
+  .authority-content :global(.authority-card p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .authority-content :global(.authority-cta-card) {
+    margin: 3.5rem 0;
+    padding: 2rem;
+    border: 1px solid var(--color-base-300);
+    border-radius: 1.5rem;
+    background: white;
+    box-shadow: var(--shadow-xl);
+    outline: 1px solid color-mix(in oklch, var(--color-base-500) 10%, transparent);
+  }
+
+  .authority-content :global(.authority-cta-card a) {
+    color: var(--color-base-900);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    line-height: 1.15;
+    text-decoration: none;
+  }
+
+  .authority-content :global(.authority-cta-card a:hover) {
+    color: var(--color-accent-600);
+  }
+
+  .authority-content :global(.authority-cta-card p) {
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 768px) {
+    .authority-content :global(p),
+    .authority-content :global(ul),
+    .authority-content :global(ol) {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .authority-content :global(.authority-section-header) {
+      grid-template-columns: 1fr;
+    }
+
+    .authority-content :global(.authority-quote-band),
+    .authority-content :global(.authority-callout),
+    .authority-content :global(.authority-card),
+    .authority-content :global(.authority-cta-card) {
+      padding: 1.5rem;
+    }
+  }
+</style>
