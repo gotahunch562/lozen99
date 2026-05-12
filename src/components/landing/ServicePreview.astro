@@ -7,29 +7,32 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import ServiceCard from "@/components/services/ServiceCard.astro";
 // Content
 import { getCollection } from "astro:content";
+
 const allServices = await getCollection("services");
 const services = allServices.filter((service) => service.data.isFeatured);
 ---
 
 <section>
   <Wrapper variant="standard" class="py-12 lg:py-24">
-    <div class="grid grid-cols-1 lg:grid-cols-3 lg:itmes-end">
+    <div class="grid grid-cols-1 lg:grid-cols-3 lg:items-end">
       <div class="lg:col-span-2">
         <Text
           tag="span"
           variant="textSM"
           class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
         >
-          Services
+          Invisible Attrition℠
         </Text>
+
         <Text
           tag="h2"
           variant="displayXL"
           class="mt-8 uppercase font-display text-base-900"
         >
-          Expert Automotive Services
+          Frameworks and Analysis
         </Text>
       </div>
+
       <Button
         isLink
         href="/services"
@@ -37,7 +40,7 @@ const services = allServices.filter((service) => service.data.isFeatured);
         size="sm"
         class="w-fit lg:mt-auto lg:ml-auto"
       >
-        View All Services
+        Invisible Attrition℠
       </Button>
     </div>
 
