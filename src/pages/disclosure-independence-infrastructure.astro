@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const articleJsonLd = {
@@ -32,60 +33,68 @@ const articleJsonLd = {
     set:html={JSON.stringify(articleJsonLd)}
   />
 
-  <div class="disclosure-page">
-    <div class="disclosure-progress-bar" aria-hidden="true"></div>
+  <section class="overflow-hidden bg-gradient-to-t from-base-200 to-white">
+    <Wrapper variant="standard" class="py-24 lg:py-32">
+      <div class="max-w-4xl">
+        <Text
+          tag="span"
+          variant="textSM"
+          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+        >
+          Ambition was never the problem
+        </Text>
 
-    <section class="disclosure-hero">
-      <div class="disclosure-hero-bg"></div>
-      <div class="disclosure-hero-rule"></div>
-
-      <Wrapper variant="standard" class="relative z-10">
-        <div class="max-w-3xl">
-          <p class="disclosure-hero-label">Ambition was never the problem</p>
-
-          <h1>
-            Disclosure Independence:
-            <em>The Infrastructure Women in Leadership Actually Need</em>
-          </h1>
-        </div>
-      </Wrapper>
-
-      <div class="disclosure-scroll-cue">
-        <span>Read</span>
-        <div class="disclosure-scroll-line"></div>
+        <Text
+          tag="h1"
+          variant="displayXL"
+          class="mt-8 font-display text-base-900 uppercase max-w-5xl"
+        >
+          Disclosure Independence:
+          <em class="block normal-case text-accent-600">
+            The Infrastructure Women in Leadership Actually Need
+          </em>
+        </Text>
       </div>
-    </section>
+    </Wrapper>
+  </section>
 
-    <section class="disclosure-section disclosure-section--whisper disclosure-reveal">
-      <Wrapper variant="standard">
-        <div class="disclosure-copy-block">
-          <p>
-            Employee benefit systems fail when disclosure carries career risk. That is the disclosure problem. Not the absence of ambition, not the absence of performance, not the absence of commitment. Women in senior roles, women building careers inside demanding and performance-driven environments, women who have spent years delivering at a level that would be unremarkable if they were men, have never lacked ambition.
-          </p>
+  <section class="bg-white">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl space-y-6">
+        <p class="text-lg leading-9 text-base-600">
+          Employee benefit systems fail when disclosure carries career risk. That is the disclosure problem. Not the absence of ambition, not the absence of performance, not the absence of commitment. Women in senior roles, women building careers inside demanding and performance-driven environments, women who have spent years delivering at a level that would be unremarkable if they were men, have never lacked ambition.
+        </p>
 
-          <p>
-            What they have lacked is infrastructure that does not require them to surface what they are managing before protection activates. This is not theoretical. Women across industries and career levels are describing the same pattern in real time: performing past capacity, absorbing costs without record, staying until the health collapse forces the exit the organization never saw coming. Disclosure-dependent systems don't provide the infrastructure needed for women's ambition.
-          </p>
-        </div>
-      </Wrapper>
-    </section>
+        <p class="text-lg leading-9 text-base-600">
+          What they have lacked is infrastructure that does not require them to surface what they are managing before protection activates. This is not theoretical. Women across industries and career levels are describing the same pattern in real time: performing past capacity, absorbing costs without record, staying until the health collapse forces the exit the organization never saw coming. Disclosure-dependent systems don't provide the infrastructure needed for women's ambition.
+        </p>
+      </div>
+    </Wrapper>
+  </section>
 
-    <section class="disclosure-section disclosure-section--soft disclosure-reveal">
-      <Wrapper variant="standard">
-        <div class="disclosure-chapter-header">
-          <div class="disclosure-chapter-num">01</div>
+  <section class="bg-base-100">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl">
+        <div class="mb-10 grid grid-cols-[auto_1fr] gap-5">
+          <div class="font-display text-5xl text-accent-500/60">01</div>
           <div>
-            <div class="disclosure-section-rule"></div>
-            <p class="disclosure-chapter-label">When Disclosure Does Not Protect Women</p>
+            <div class="mb-4 h-px w-20 bg-accent-500"></div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="font-display uppercase text-base-900"
+            >
+              When Disclosure Does Not Protect Women
+            </Text>
           </div>
         </div>
 
-        <div class="disclosure-copy-block">
+        <div class="space-y-6 text-lg leading-9 text-base-600">
           <p>
             The systems that exist were not built for women. They were built for organizations. Every one assumes the same initiating act: a woman who names her condition, submits a request, and generates a record.
           </p>
 
-          <ul>
+          <ul class="ml-6 list-disc space-y-3">
             <li>Accommodation frameworks activate when a request is filed</li>
             <li>Clinical pathways open when a condition is named</li>
             <li>Workplace protections apply when a disclosure is made</li>
@@ -108,20 +117,28 @@ const articleJsonLd = {
             In early 2026, two senior women executives at a major technology company departed for health reasons within hours of each other. Both had publicly acknowledged they had deprioritized their own health for the role. They both had access to resources that represent the upper limit of what exists. The structure produced this outcome anyway. The record showed full performance until it showed departure, with nothing in between. That pattern, a record that reflects output while the conditions sustaining it erode, is the structural problem this work was built to solve.
           </p>
         </div>
-      </Wrapper>
-    </section>
+      </div>
+    </Wrapper>
+  </section>
 
-    <section class="disclosure-section disclosure-section--whisper disclosure-reveal">
-      <Wrapper variant="standard">
-        <div class="disclosure-chapter-header">
-          <div class="disclosure-chapter-num">02</div>
+  <section class="bg-white">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl">
+        <div class="mb-10 grid grid-cols-[auto_1fr] gap-5">
+          <div class="font-display text-5xl text-accent-500/60">02</div>
           <div>
-            <div class="disclosure-section-rule"></div>
-            <p class="disclosure-chapter-label">The Disclosure Calculation Is Not Abstract</p>
+            <div class="mb-4 h-px w-20 bg-accent-500"></div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="font-display uppercase text-base-900"
+            >
+              The Disclosure Calculation Is Not Abstract
+            </Text>
           </div>
         </div>
 
-        <div class="disclosure-copy-block">
+        <div class="space-y-6 text-lg leading-9 text-base-600">
           <p>
             For many women, the calculation about disclosure is not theoretical. It is historical.
           </p>
@@ -134,28 +151,36 @@ const articleJsonLd = {
             That is not a menopause problem. It is a structural condition that menopause intersects. The disclosure-independent framework was not built as an accommodation for that reality. It was built because that reality confirmed what the governance analysis already showed: any framework that requires disclosure to function will fail the women for whom disclosure carries the highest cost.
           </p>
         </div>
-      </Wrapper>
-    </section>
+      </div>
+    </Wrapper>
+  </section>
 
-    <section class="disclosure-anchor-band disclosure-reveal">
-      <Wrapper variant="standard">
-        <p>
-          Any framework that requires disclosure to function will fail the women for whom disclosure carries the highest cost.
-        </p>
-      </Wrapper>
-    </section>
+  <section class="bg-base-900">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <p class="mx-auto max-w-5xl font-display text-3xl leading-tight text-white lg:text-5xl">
+        Any framework that requires disclosure to function will fail the women for whom disclosure carries the highest cost.
+      </p>
+    </Wrapper>
+  </section>
 
-    <section class="disclosure-section disclosure-section--soft disclosure-reveal">
-      <Wrapper variant="standard">
-        <div class="disclosure-chapter-header">
-          <div class="disclosure-chapter-num">03</div>
+  <section class="bg-base-100">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl">
+        <div class="mb-10 grid grid-cols-[auto_1fr] gap-5">
+          <div class="font-display text-5xl text-accent-500/60">03</div>
           <div>
-            <div class="disclosure-section-rule"></div>
-            <p class="disclosure-chapter-label">Silence and Disclosure at Work</p>
+            <div class="mb-4 h-px w-20 bg-accent-500"></div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="font-display uppercase text-base-900"
+            >
+              Silence and Disclosure at Work
+            </Text>
           </div>
         </div>
 
-        <div class="disclosure-copy-block">
+        <div class="space-y-6 text-lg leading-9 text-base-600">
           <p>
             There is a Latin word for the decision that precedes the record that never exists. Tacere. To be silent. To withhold. To leave unmentioned.
           </p>
@@ -165,16 +190,17 @@ const articleJsonLd = {
           </p>
         </div>
 
-        <div class="disclosure-callout disclosure-reveal">
-          <p>
-            <strong>Tacere</strong> <em>(tah-CHEH-reh)</em> is the sustained,
+        <div class="my-10 rounded-3xl border border-base-300 bg-white p-8 shadow-xl outline outline-1 outline-base-500/10">
+          <p class="text-lg leading-9 text-base-700">
+            <strong class="font-semibold text-base-900">Tacere</strong>
+            <em> (tah-CHEH-reh)</em> is the sustained,
             strategic practice of keeping one's own counsel by a
             senior executive operating in a professional environment where
             disclosure carries professional risk.
           </p>
         </div>
 
-        <div class="disclosure-copy-block">
+        <div class="space-y-6 text-lg leading-9 text-base-600">
           <p>
             It is not hiding. It is a calculation made with full awareness of what is being managed and full understanding of what visibility would risk. Women have been practicing it in professional environments long before perimenopause arrived. The menopause transition does not create the condition. It intensifies it during the years when leadership responsibility is highest and the cost of any perceived vulnerability is most consequential.
           </p>
@@ -183,20 +209,28 @@ const articleJsonLd = {
             The system measures what she surfaces. Tacere is the discipline that keeps the self intact while the role continues. Disclosure Independence is built to operate in its presence.
           </p>
         </div>
-      </Wrapper>
-    </section>
+      </div>
+    </Wrapper>
+  </section>
 
-    <section class="disclosure-section disclosure-section--whisper disclosure-reveal">
-      <Wrapper variant="standard">
-        <div class="disclosure-chapter-header">
-          <div class="disclosure-chapter-num">04</div>
+  <section class="bg-white">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl">
+        <div class="mb-10 grid grid-cols-[auto_1fr] gap-5">
+          <div class="font-display text-5xl text-accent-500/60">04</div>
           <div>
-            <div class="disclosure-section-rule"></div>
-            <p class="disclosure-chapter-label">Where Disclosure Independence Began</p>
+            <div class="mb-4 h-px w-20 bg-accent-500"></div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="font-display uppercase text-base-900"
+            >
+              Where Disclosure Independence Began
+            </Text>
           </div>
         </div>
 
-        <div class="disclosure-copy-block">
+        <div class="space-y-6 text-lg leading-9 text-base-600">
           <p>
             The Peri Nation identified this before it had a policy context. The work of building frameworks for women navigating perimenopause and menopause ran immediately into the same wall: every intervention that required disclosure excluded the women who needed it most. That was not a design oversight. It was a structural condition. The clinical system, the organizational system, and the legal system all operate on the same logic: risk and need become visible when they are reported. What is not reported does not exist in the data, does not trigger review, and does not generate a record that anything needs to be addressed.
           </p>
@@ -213,20 +247,28 @@ const articleJsonLd = {
             I built The Peri Nation and Lozen Advisory because of my daughter. Not in the way people expect, and not as a soft origin story meant to make the work more palatable. I built it because the cliff was already visible. An infinite number of women before her had fallen off the disclosure cliff, because there was no barrier to stop them.
           </p>
         </div>
-      </Wrapper>
-    </section>
+      </div>
+    </Wrapper>
+  </section>
 
-    <section class="disclosure-section disclosure-section--soft disclosure-reveal">
-      <Wrapper variant="standard">
-        <div class="disclosure-chapter-header">
-          <div class="disclosure-chapter-num">05</div>
+  <section class="bg-base-100">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl">
+        <div class="mb-10 grid grid-cols-[auto_1fr] gap-5">
+          <div class="font-display text-5xl text-accent-500/60">05</div>
           <div>
-            <div class="disclosure-section-rule"></div>
-            <p class="disclosure-chapter-label">What Disclosure Independence Means</p>
+            <div class="mb-4 h-px w-20 bg-accent-500"></div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="font-display uppercase text-base-900"
+            >
+              What Disclosure Independence Means
+            </Text>
           </div>
         </div>
 
-        <div class="disclosure-copy-block">
+        <div class="space-y-6 text-lg leading-9 text-base-600">
           <p>
             Disclosure Independence is not a privacy policy. It is not a confidentiality promise. It is a structural design principle.
           </p>
@@ -240,11 +282,13 @@ const articleJsonLd = {
           </p>
         </div>
 
-        <div class="disclosure-pull-quote disclosure-reveal">
-          All of those women are the same woman.
+        <div class="my-12 border-l-2 border-accent-500 pl-6">
+          <p class="font-display text-4xl leading-tight text-base-900 lg:text-6xl">
+            All of those women are the same woman.
+          </p>
         </div>
 
-        <div class="disclosure-copy-block">
+        <div class="space-y-6 text-lg leading-9 text-base-600">
           <p>
             She has ambition. She needed infrastructure.
           </p>
@@ -253,331 +297,24 @@ const articleJsonLd = {
             Lozen Advisory Disclosure-Independent Performance Protection&#8480; was built for her.
           </p>
         </div>
-      </Wrapper>
-    </section>
+      </div>
+    </Wrapper>
+  </section>
 
-    <section class="disclosure-closing-line">
-      <Wrapper variant="standard">
-        <p><em>She was never silent. She decided.</em></p>
-      </Wrapper>
-    </section>
+  <section class="bg-white">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="mx-auto max-w-3xl rounded-3xl border border-base-300 bg-base-50 p-8 shadow-xl outline outline-1 outline-base-500/10 lg:p-10">
+        <p class="font-display text-3xl leading-tight text-base-900 lg:text-5xl">
+          <em>She was never silent. She decided.</em>
+        </p>
 
-    <div class="disclosure-sticky-cta">
-      <a href="/booking">Begin Here</a>
-    </div>
-  </div>
+        <a
+          href="/booking"
+          class="mt-8 inline-flex text-sm font-medium text-accent-600 transition-colors hover:text-base-900"
+        >
+          Begin Here →
+        </a>
+      </div>
+    </Wrapper>
+  </section>
 </BaseLayout>
-
-<script>
-  const progressBar = document.querySelector(".disclosure-progress-bar");
-
-  const updateProgress = () => {
-    if (!progressBar) return;
-
-    const doc = document.documentElement;
-    const scrollable = doc.scrollHeight - doc.clientHeight;
-    const progress = scrollable > 0 ? (doc.scrollTop / scrollable) * 100 : 0;
-
-    progressBar.setAttribute("style", `width: ${progress}%`);
-  };
-
-  updateProgress();
-  window.addEventListener("scroll", updateProgress, { passive: true });
-
-  const revealElements = document.querySelectorAll(".disclosure-reveal");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("disclosure-visible");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  revealElements.forEach((element) => observer.observe(element));
-</script>
-
-<style>
-  .disclosure-page {
-    --disclosure-ink: #181512;
-    --disclosure-muted: #62584d;
-    --disclosure-soft: #f6f1e8;
-    --disclosure-whisper: #fbf8f2;
-    --disclosure-rule: rgba(122, 86, 47, 0.28);
-    --disclosure-accent: #9a6a35;
-    position: relative;
-    overflow: hidden;
-    background: #fbf8f2;
-    color: var(--disclosure-ink);
-  }
-
-  .disclosure-progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 80;
-    height: 3px;
-    width: 0%;
-    background: var(--disclosure-accent);
-  }
-
-  .disclosure-hero {
-    position: relative;
-    min-height: 78vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background:
-      radial-gradient(circle at 80% 20%, rgba(154, 106, 53, 0.16), transparent 34%),
-      linear-gradient(135deg, #f7efe4 0%, #ffffff 52%, #efe3d3 100%);
-  }
-
-  .disclosure-hero-bg {
-    position: absolute;
-    inset: 0;
-    background:
-      linear-gradient(90deg, rgba(24, 21, 18, 0.08) 1px, transparent 1px),
-      linear-gradient(180deg, rgba(24, 21, 18, 0.06) 1px, transparent 1px);
-    background-size: 72px 72px;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent 90%);
-  }
-
-  .disclosure-hero-rule {
-    position: absolute;
-    left: 7vw;
-    top: 15%;
-    bottom: 15%;
-    width: 1px;
-    background: var(--disclosure-rule);
-  }
-
-  .disclosure-hero-label,
-  .disclosure-chapter-label {
-    font-family: var(--font-display);
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    color: var(--disclosure-accent);
-    font-size: 0.78rem;
-    font-weight: 600;
-  }
-
-  .disclosure-hero h1 {
-    margin-top: 1.8rem;
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 7vw, 6.8rem);
-    line-height: 0.92;
-    letter-spacing: -0.055em;
-    color: var(--disclosure-ink);
-  }
-
-  .disclosure-hero h1 em {
-    display: block;
-    margin-top: 0.3rem;
-    font-style: italic;
-    color: var(--disclosure-accent);
-  }
-
-  .disclosure-scroll-cue {
-    position: absolute;
-    right: 4vw;
-    bottom: 3rem;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-family: var(--font-display);
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    font-size: 0.75rem;
-    color: var(--disclosure-muted);
-  }
-
-  .disclosure-scroll-line {
-    width: 5rem;
-    height: 1px;
-    background: var(--disclosure-rule);
-  }
-
-  .disclosure-section {
-    padding: 6.5rem 0;
-  }
-
-  .disclosure-section--whisper {
-    background: var(--disclosure-whisper);
-  }
-
-  .disclosure-section--soft {
-    background: var(--disclosure-soft);
-  }
-
-  .disclosure-copy-block {
-    max-width: 820px;
-    margin: 0 auto;
-  }
-
-  .disclosure-copy-block p {
-    margin: 0 0 1.55rem;
-    color: var(--disclosure-muted);
-    font-size: clamp(1.05rem, 1.35vw, 1.25rem);
-    line-height: 1.9;
-  }
-
-  .disclosure-copy-block ul {
-    margin: 0 0 1.8rem 1.25rem;
-    padding-left: 1rem;
-    color: var(--disclosure-muted);
-    font-size: clamp(1.05rem, 1.35vw, 1.25rem);
-    line-height: 1.85;
-    list-style: disc;
-  }
-
-  .disclosure-copy-block li {
-    padding-left: 0.35rem;
-  }
-
-  .disclosure-chapter-header {
-    max-width: 820px;
-    margin: 0 auto 2.5rem;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1.25rem;
-    align-items: start;
-  }
-
-  .disclosure-chapter-num {
-    font-family: var(--font-display);
-    font-size: clamp(2.4rem, 5vw, 4.5rem);
-    line-height: 0.85;
-    color: rgba(154, 106, 53, 0.32);
-  }
-
-  .disclosure-section-rule {
-    width: 5rem;
-    height: 1px;
-    margin-bottom: 1rem;
-    background: var(--disclosure-rule);
-  }
-
-  .disclosure-anchor-band {
-    padding: 4.5rem 0;
-    background: var(--disclosure-ink);
-  }
-
-  .disclosure-anchor-band p {
-    max-width: 980px;
-    margin: 0 auto;
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 4vw, 4rem);
-    line-height: 1.05;
-    letter-spacing: -0.04em;
-    color: #f8f2ea;
-  }
-
-  .disclosure-callout {
-    max-width: 820px;
-    margin: 2.75rem auto;
-    padding: 2rem;
-    border-left: 4px solid var(--disclosure-accent);
-    background: rgba(255, 255, 255, 0.58);
-    box-shadow: 0 24px 60px rgba(24, 21, 18, 0.08);
-  }
-
-  .disclosure-callout p {
-    margin: 0;
-    color: var(--disclosure-ink);
-    font-size: clamp(1.1rem, 1.5vw, 1.35rem);
-    line-height: 1.75;
-  }
-
-  .disclosure-pull-quote {
-    max-width: 820px;
-    margin: 3rem auto;
-    font-family: var(--font-display);
-    font-size: clamp(2.25rem, 5vw, 5rem);
-    line-height: 0.98;
-    letter-spacing: -0.055em;
-    color: var(--disclosure-accent);
-  }
-
-  .disclosure-closing-line {
-    padding: 5rem 0 7rem;
-    background: var(--disclosure-whisper);
-    text-align: center;
-  }
-
-  .disclosure-closing-line p {
-    margin: 0;
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 4vw, 4rem);
-    line-height: 1;
-    color: var(--disclosure-ink);
-  }
-
-  .disclosure-sticky-cta {
-    display: none;
-  }
-
-  .disclosure-reveal {
-    opacity: 0;
-    transform: translateY(20px);
-    transition:
-      opacity 700ms ease,
-      transform 700ms ease;
-  }
-
-  .disclosure-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  @media (max-width: 768px) {
-    .disclosure-hero {
-      min-height: 72vh;
-      padding: 6rem 0 5rem;
-    }
-
-    .disclosure-hero-rule,
-    .disclosure-scroll-cue {
-      display: none;
-    }
-
-    .disclosure-section {
-      padding: 4.5rem 0;
-    }
-
-    .disclosure-chapter-header {
-      grid-template-columns: 1fr;
-    }
-
-    .disclosure-anchor-band {
-      padding: 3.5rem 0;
-    }
-
-    .disclosure-sticky-cta {
-      position: fixed;
-      left: 1rem;
-      right: 1rem;
-      bottom: 1rem;
-      z-index: 70;
-      display: block;
-    }
-
-    .disclosure-sticky-cta a {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      border-radius: 999px;
-      background: var(--disclosure-ink);
-      color: #fff;
-      padding: 0.95rem 1.25rem;
-      font-family: var(--font-display);
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      box-shadow: 0 18px 40px rgba(24, 21, 18, 0.22);
-    }
-  }
-</style>
