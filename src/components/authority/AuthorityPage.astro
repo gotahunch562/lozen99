@@ -110,18 +110,23 @@ const {
     max-width: 56rem;
   }
 
-  .authority-prose :global(p) {
+  .authority-prose :global(.authority-article-body) {
+    border-bottom: 1px solid var(--color-base-200);
+    padding-bottom: 3rem;
+  }
+
+  .authority-prose :global(.authority-article-body p) {
     margin-top: 1.35rem;
     font-size: 1.0625rem;
     line-height: 1.85;
     color: var(--color-base-700);
   }
 
-  .authority-prose :global(p:first-child) {
+  .authority-prose :global(.authority-article-body p:first-child) {
     margin-top: 0;
   }
 
-  .authority-prose :global(a) {
+  .authority-prose :global(.authority-article-body a) {
     color: var(--color-accent-700);
     text-decoration: none;
     border-bottom: 1px solid var(--color-accent-400);
@@ -130,12 +135,12 @@ const {
       border-color 300ms ease;
   }
 
-  .authority-prose :global(a:hover) {
+  .authority-prose :global(.authority-article-body a:hover) {
     color: var(--color-base-950);
     border-color: var(--color-base-950);
   }
 
-  .authority-prose :global(h2) {
+  .authority-prose :global(.authority-article-body h2) {
     margin-top: 4rem;
     font-family: var(--font-display);
     font-size: clamp(2rem, 5vw, 4rem);
@@ -146,7 +151,7 @@ const {
     color: var(--color-base-950);
   }
 
-  .authority-prose :global(.section-number) {
+  .authority-prose :global(.authority-article-body .section-number) {
     display: inline-flex;
     margin-top: 4rem;
     margin-bottom: 1rem;
@@ -157,11 +162,6 @@ const {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--color-base-500);
-  }
-
-  .authority-prose :global(.authority-article-body) {
-    border-bottom: 1px solid var(--color-base-200);
-    padding-bottom: 3rem;
   }
 
   .authority-prose :global(.authority-bottom-stack) {
