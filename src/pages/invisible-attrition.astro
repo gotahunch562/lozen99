@@ -2,7 +2,6 @@
 import AuthorityPage from "@/components/authority/AuthorityPage.astro";
 import AuthorityRail from "@/components/authority/AuthorityRail.astro";
 import AuthorityCluster from "@/components/authority/AuthorityCluster.astro";
-import AuthorityRelated from "@/components/authority/AuthorityRelated.astro";
 
 const title = "Invisible Attrition℠";
 
@@ -95,31 +94,6 @@ const clusterItems = [
   {
     title: "The Women Who Leave Without Saying Why",
     href: "/invisible-attrition/who-disappears",
-  },
-];
-
-const relatedItems = [
-  {
-    eyebrow: "Architecture",
-    title:
-      "Disclosure Independence: The Infrastructure Women in Leadership Actually Need",
-    href: "/disclosure-independence-infrastructure",
-    description:
-      "Employee benefit systems fail when disclosure carries career risk. Disclosure Independence is the performance protection infrastructure women in leadership need.",
-  },
-  {
-    eyebrow: "Executive Reports",
-    title: "The Architecture of Invisible Attrition — Executive Report Series",
-    href: "/architecture-of-invisible-attrition-series",
-    description:
-      "A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure.",
-  },
-  {
-    eyebrow: "B2B Entry Point",
-    title: "Retention Risk Analysis",
-    href: "/retention-risk-analysis",
-    description:
-      "A search-capture page connecting replacement cost, workforce attrition risk assessment, and the limits of standard retention analysis.",
   },
 ];
 ---
@@ -376,11 +350,10 @@ const relatedItems = [
 
   <div class="authority-bottom-stack">
     <AuthorityCluster
+      eyebrow="Pillar Cluster"
       title="The Dimensions of Invisible Attrition℠"
-      description="Core articles in the Invisible Attrition℠ cluster."
+      description="Cluster articles connected to the Invisible Attrition℠ pillar."
       items={clusterItems}
     />
-
-    <AuthorityRelated items={relatedItems} />
   </div>
 </AuthorityPage>
