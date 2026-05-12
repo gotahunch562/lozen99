@@ -7,9 +7,11 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import CustomerCard from "@/components/customers/CustomerCard.astro";
 // Content
 import { getCollection } from "astro:content";
+
 const allCustomers = await getCollection("customers");
 allCustomers.sort((a, b) => a.data.name.localeCompare(b.data.name));
 ---
+
 <section>
   <Wrapper variant="standard" class="py-24 lg:py-32">
     <div class="max-w-3xl mx-auto text-center">
@@ -18,20 +20,22 @@ allCustomers.sort((a, b) => a.data.name.localeCompare(b.data.name));
         variant="textSM"
         class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
       >
-        Customer Stories
+        Research & Press
       </Text>
+
       <Text
         tag="h1"
         variant="displayXL"
         class="mt-8 uppercase font-display text-base-900"
       >
-        Why drivers trust Copperlane
+        In The News
       </Text>
+
       <Text tag="p" variant="textBase" class="mt-4 text-base-600 text-balance">
-        Real experiences from owners and fleet managers across California — from
-        diagnostics and inspections to detailing and long-term maintenance.
+        Curated research, legislation, and press coverage on menopause, workplace health, and the cost of non-disclosure.
       </Text>
     </div>
+
     <div class="space-y-8 mt-12">
       {
         allCustomers
@@ -39,6 +43,7 @@ allCustomers.sort((a, b) => a.data.name.localeCompare(b.data.name));
           .map((customer) => <CustomerCard customer={customer} />)
       }
     </div>
+
     <Button
       isLink
       href="/customers"
@@ -46,7 +51,7 @@ allCustomers.sort((a, b) => a.data.name.localeCompare(b.data.name));
       size="base"
       class="mx-auto mt-12 w-fit"
     >
-      Customer stories
+      Research & Press
     </Button>
   </Wrapper>
 </section>
