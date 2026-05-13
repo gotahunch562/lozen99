@@ -13,53 +13,60 @@ export interface Props {
     | "h3"
     | "h4"
     | "h5"
-    | "h6"; // Defines allowed HTML tags
-  id?: string; // Optional 'id' attribute
-  rel?: string; // Optional rel attribute for anchor tags
-  style?: string; // Specifies inline styles
-  target?: string; // Optional target attribute for links
-  href?: string; // Optional 'href' attribute for anchor tags
-  title?: string; // Optional title attribute for anchor tags
-  variant?: string; // Specifies the style variant of the text
-  class?: string; // Optional prop for additional custom classes
-  ariaLabel?: string; // Optional aria-label attribute for anchor tags
+    | "h6";
+  id?: string;
+  rel?: string;
+  style?: string;
+  target?: string;
+  href?: string;
+  title?: string;
+  variant?: keyof typeof textStyles;
+  class?: string;
+  ariaLabel?: string;
 }
 
-// Define text styles for each variant
-const textStyles: Record<string, string> = {
-  display6XL: "text-4xl  sm:text-7xl md:text-9xl lg:text-[12rem]",
-  display5XL: "text-4xl  sm:text-7xl md:text-8xl lg:text-[10rem]",
-  display4XL: "text-4xl  sm:text-7xl md:text-8xl lg:text-9xl",
-  display3XL: "text-5xl  sm:text-6xl md:text-7xl lg:text-8xl",
-  display2XL: "text-5xl  sm:text-5xl md:text-6xl lg:text-7xl",
-  displayXL: "text-4xl  sm:text-4xl md:text-5xl lg:text-6xl",
-  displayLG: "text-3xl  sm:text-3xl md:text-4xl lg:text-5xl",
-  displayMD: "text-2xl  sm:text-2xl md:text-3xl lg:text-4xl",
-  displaySM: "text-lg  sm:text-xl md:text-2xl lg:text-3xl",
-  displayXS: "text-base  sm:text-lg md:text-xl lg:text-2xl",
-  textXL: "text-lg sm:text-xl md:text-2xl",
-  textLG: "text-base sm:text-lg md:text-xl ",
-  textBase: "text-base",
-  textSM: "text-sm ",
-  textXS: "text-xs ",
-};
+const textStyles = {
+  display6XL:
+    "font-display font-normal leading-[0.9] tracking-[-0.045em] text-5xl sm:text-7xl md:text-9xl lg:text-[11rem] xl:text-[12rem]",
+  display5XL:
+    "font-display font-normal leading-[0.9] tracking-[-0.045em] text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] xl:text-[10rem]",
+  display4XL:
+    "font-display font-normal leading-[0.92] tracking-[-0.04em] text-5xl sm:text-6xl md:text-8xl lg:text-9xl",
+  display3XL:
+    "font-display font-normal leading-[0.95] tracking-[-0.04em] text-4xl sm:text-5xl md:text-7xl lg:text-8xl",
+  display2XL:
+    "font-display font-normal leading-[0.98] tracking-[-0.035em] text-4xl sm:text-5xl md:text-6xl lg:text-7xl",
+  displayXL:
+    "font-display font-normal leading-none tracking-[-0.03em] text-3xl sm:text-4xl md:text-5xl lg:text-6xl",
+  displayLG:
+    "font-display font-normal leading-tight tracking-[-0.025em] text-3xl sm:text-3xl md:text-4xl lg:text-5xl",
+  displayMD:
+    "font-display font-normal leading-tight tracking-[-0.02em] text-2xl sm:text-2xl md:text-3xl lg:text-4xl",
+  displaySM:
+    "font-display font-normal leading-tight tracking-[-0.015em] text-xl sm:text-xl md:text-2xl lg:text-3xl",
+  displayXS:
+    "font-display font-normal leading-snug tracking-[-0.01em] text-lg sm:text-lg md:text-xl lg:text-2xl",
 
-// Destructure props with default values
+  textXL: "font-sans text-lg leading-relaxed sm:text-xl md:text-2xl",
+  textLG: "font-sans text-base leading-relaxed sm:text-lg md:text-xl",
+  textBase: "font-sans text-base leading-relaxed",
+  textSM: "font-sans text-sm leading-relaxed",
+  textXS: "font-sans text-xs leading-relaxed",
+} as const;
+
 const {
-  tag: Tag = "p", // Defaults to paragraph tag
-  class: className = "", // No additional classes by default
-  variant = "textBase", // Defaults to textMD style variant
-  ...rest // Collect remaining props
+  tag: Tag = "p",
+  class: className = "",
+  variant = "textBase",
+  ariaLabel,
+  ...rest
 } = Astro.props;
 
-// Get the base classes for the specified variant
-const baseClasses = textStyles[variant] || textStyles.textBase; // Fallback to textMD if variant not found
-
-// Combine base classes with any additional custom classes
+const baseClasses = textStyles[variant] || textStyles.textBase;
 const combinedClasses = `${baseClasses} ${className}`.trim();
 ---
 
-<Tag class={combinedClasses} {...rest}>
+<Tag class={combinedClasses} aria-label={ariaLabel} {...rest}>
   <slot name="left-icon" />
   <slot />
   <slot name="right-icon" />
