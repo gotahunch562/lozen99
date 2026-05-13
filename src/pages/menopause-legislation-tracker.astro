@@ -106,22 +106,22 @@ const columnDefinitions = [
 ];
 
 const tableWrapClass =
-  "overflow-x-auto rounded-3xl border border-base-400 bg-white shadow-md ring-1 ring-base-950/10";
+  "overflow-x-auto rounded-3xl border-2 border-base-500 bg-white shadow-lg ring-1 ring-base-950/15";
 
-const tableClass =
-  "min-w-[1220px] w-full border-collapse text-left";
-
-const compactTableClass =
-  "min-w-[1120px] w-full border-collapse text-left";
+const tableClass = "min-w-[1220px] w-full border-collapse text-left";
+const compactTableClass = "min-w-[1120px] w-full border-collapse text-left";
 
 const thClass =
-  "border border-base-700 bg-base-950 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white";
+  "border border-base-600 bg-base-950 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white";
 
 const tdStrongClass =
-  "border border-base-300 px-4 py-4 text-sm leading-6 text-base-950";
+  "border border-base-400 px-4 py-4 text-sm leading-6 text-base-950";
 
 const tdMutedClass =
-  "border border-base-300 px-4 py-4 text-sm leading-6 text-base-700";
+  "border border-base-400 px-4 py-4 text-sm leading-6 text-base-700";
+
+const rowClass =
+  "odd:bg-white even:bg-base-100 hover:bg-accent-50/70 transition-colors duration-200";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -270,7 +270,7 @@ const tdMutedClass =
                             const c = classification(row.classification);
 
                             return (
-                              <tr class="odd:bg-base-50 even:bg-white hover:bg-accent-50/50">
+                              <tr class={rowClass}>
                                 <td class={tdStrongClass}>
                                   {row.jurisdiction}
                                 </td>
@@ -300,7 +300,7 @@ const tdMutedClass =
                                 </td>
 
                                 <td
-                                  class="border border-base-300 px-4 py-4 text-sm font-semibold leading-6"
+                                  class="border border-base-400 px-4 py-4 text-sm font-semibold leading-6"
                                   style={`color:${getStatusColor(row.status)};`}
                                 >
                                   {row.status}
@@ -380,7 +380,7 @@ const tdMutedClass =
                 <tbody>
                   {
                     DID_NOT_PASS.map((row) => (
-                      <tr class="odd:bg-base-50 even:bg-white hover:bg-accent-50/50">
+                      <tr class={rowClass}>
                         <td class={tdStrongClass}>
                           {row.jurisdiction}
                         </td>
@@ -410,7 +410,7 @@ const tdMutedClass =
                         </td>
 
                         <td
-                          class="border border-base-300 px-4 py-4 text-sm font-semibold leading-6"
+                          class="border border-base-400 px-4 py-4 text-sm font-semibold leading-6"
                           style={`color:${getStatusColor(row.status)};`}
                         >
                           {row.status}
@@ -469,7 +469,7 @@ const tdMutedClass =
                       const c = classification(row.classification);
 
                       return (
-                        <tr class="odd:bg-base-50 even:bg-white hover:bg-accent-50/50">
+                        <tr class={rowClass}>
                           <td class={tdStrongClass}>
                             {row.jurisdiction}
                           </td>
@@ -499,7 +499,7 @@ const tdMutedClass =
                           </td>
 
                           <td
-                            class="border border-base-300 px-4 py-4 text-sm font-semibold leading-6"
+                            class="border border-base-400 px-4 py-4 text-sm font-semibold leading-6"
                             style={`color:${getStatusColor(row.status)};`}
                           >
                             {row.status}
