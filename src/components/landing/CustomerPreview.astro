@@ -4,7 +4,7 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const proofCards = [
   {
-    title: "Executive Analytics",
+    title: "Descriptive Analytics",
     description:
       "Lozen Advisory is built from experience with the decision systems executives use to evaluate performance, risk, and organizational movement.",
   },
@@ -22,35 +22,48 @@ const proofCards = [
 ---
 
 <section class="bg-white">
-  <Wrapper variant="standard" class="py-16 lg:py-24">
+  <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-24">
     <div class="mx-auto max-w-6xl">
-      <div class="grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(320px,0.55fr)] lg:items-end">
+      <div
+        class="grid gap-6 lg:grid-cols-[minmax(0,0.85fr)_minmax(320px,0.55fr)] lg:items-end lg:gap-8"
+      >
         <div>
-          <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-600">
+          <p
+            class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-600"
+          >
             Advisory Foundation
           </p>
 
-          <h2 class="mt-6 max-w-4xl font-display text-3xl font-medium uppercase leading-[1.08] tracking-tight text-base-950 sm:text-4xl lg:text-5xl">
+          <h2
+            class="mt-5 max-w-4xl font-display text-3xl font-normal uppercase leading-[1.05] tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-4xl lg:text-5xl"
+          >
             Built for the gap between data and reality.
           </h2>
         </div>
 
-        <p class="max-w-md text-base leading-7 text-base-700 sm:text-lg lg:pb-1">
+        <p class="max-w-md font-sans text-base leading-7 text-base-700 sm:text-lg lg:pb-1">
           Lozen Advisory examines the systems that record visible activity while missing the capacity loss, disclosure risk, and implementation burden that precede departure.
         </p>
       </div>
 
-      <div class="mt-12 grid gap-5 md:grid-cols-3">
+      <div class="mt-10 grid gap-5 sm:mt-12 md:grid-cols-3">
         {
           proofCards.map((card) => (
-            <article class="rounded-3xl border border-base-300 bg-base-50 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-400 hover:bg-white hover:shadow-md sm:p-8">
-              <div class="mb-6 h-10 w-px bg-accent-500"></div>
+            <article class="group relative overflow-hidden rounded-2xl border border-base-400 bg-base-50 p-5 shadow-lg ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-white hover:shadow-xl sm:p-6 lg:rounded-3xl lg:p-8">
+              <div
+                aria-hidden="true"
+                class="absolute inset-x-0 top-0 h-1 bg-accent-500"
+              >
+              </div>
 
-              <h3 class="font-display text-xl font-medium uppercase leading-tight tracking-tight text-base-950">
+              <div class="mb-5 h-8 w-px bg-accent-500 sm:mb-6 sm:h-10">
+              </div>
+
+              <h3 class="font-display text-xl font-normal uppercase leading-tight tracking-[-0.015em] text-base-950">
                 {card.title}
               </h3>
 
-              <p class="mt-5 text-sm leading-7 text-base-700">
+              <p class="mt-4 font-sans text-sm leading-7 text-base-700 sm:mt-5">
                 {card.description}
               </p>
             </article>
