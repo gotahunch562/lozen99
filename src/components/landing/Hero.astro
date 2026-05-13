@@ -1,96 +1,82 @@
 ---
 // Foundations
-import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-
-const stats = [
-  {
-    id: "01",
-    title: "Did not speak to HR or leadership",
-    value: "73%",
-    description:
-      "Data collection didn't occur because the trigger conditions did not activate.",
-  },
-  {
-    id: "02",
-    title: "Senior executives who quit",
-    value: "28%",
-    description:
-      "The exit that no performance review predicted. Loss in organizational stability and resilience",
-  },
-  {
-    id: "03",
-    title: "Felt supported by programs",
-    value: "26%",
-    description:
-      "The lowest support source in the study-below colleagues, managers, and healthcare providers.",
-  },
-];
 ---
 
-<section class="relative w-full overflow-hidden lg:h-dvh lg:p-8">
-  <div class="absolute inset-0 overflow-hidden lg:m-4 lg:rounded-3xl">
-    <video
-      class="object-cover object-center size-full"
-      autoplay
-      muted
-      loop
-      playsinline
-    >
-      <source src="/videos/womenworkingvideo.mp4" type="video/mp4" />
-    </video>
-    <div
-      aria-hidden="true"
-      class="absolute inset-0 pointer-events-none bg-gradient-to-b from-base-900/70 via-base-900/50 to-base-900/90"
-    >
-    </div>
-  </div>
-  <Wrapper
-    variant="standard"
-    class="relative z-10 flex flex-col gap-y-8 lg:gap-y-0 justify-center h-full pt-32 pb-12"
-  >
-    <div class="max-w-4xl">
-      <Text
-        tag="span"
-        variant="textSM"
-        class="pl-4 font-medium text-white uppercase border-l font-display border-accent-600"
-      >
-        Disclosure-Independent Performance Protection℠
-      </Text>
-      <Text
-        tag="h1"
-        variant="displayLG"
-        class="mt-8 text-white uppercase font-display text-balance"
-      >
-      Your leadership pipeline has a gap your retention data will not show.
-      </Text>
-    </div>
-    <div class="mt-8 mt-auto grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-12">
-      {
-        stats.map((stat) => (
-          <div class="relative group">
-            <span class="absolute -top-10 right-0 text-[110px] font-display font-bold text-white/5 select-none leading-none z-0 transition-colors duration-500 group-hover:text-white/20">
-              {stat.value}
-            </span>
-            <div class="relative z-10 flex flex-col justify-end h-full">
-              <Text
-                tag="h3"
-                variant="textLG"
-                class="pl-4 font-medium uppercase border-l-2 font-display text-base-300 border-accent-500"
-              >
-                {stat.title}
-              </Text>
-              <Text
-                tag="p"
-                variant="textSM"
-                class="mt-4 text-base-400 text-balance"
-              >
-                {stat.description}
-              </Text>
+<section class="relative overflow-hidden bg-gradient-to-b from-base-50 via-base-100 to-white">
+  <Wrapper variant="standard" class="py-20 lg:py-28">
+    <div class="mx-auto max-w-6xl">
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.5fr)] lg:items-end">
+        <div>
+          <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-700">
+            Disclosure-Independent Performance Protection℠
+          </p>
+
+          <h1 class="mt-8 max-w-5xl font-display text-4xl font-medium uppercase leading-[1.04] tracking-tight text-base-950 sm:text-5xl lg:text-6xl">
+            Working at the edge of what organizations can measure and what leaders are managing.
+          </h1>
+
+          <p class="mt-8 max-w-4xl text-lg leading-8 text-base-700 sm:text-xl">
+            Lozen Advisory helps organizations and senior women leaders navigate the gap between visible performance records and the private constraints that shape retention, succession, benefits utilization, and leadership continuity.
+          </p>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <Button
+              isLink
+              href="/request-briefing"
+              variant="accent"
+              size="xs"
+            >
+              Request Briefing
+            </Button>
+
+            <Button
+              isLink
+              href="/invisible-attrition"
+              variant="secondary"
+              size="xs"
+            >
+              Explore Invisible Attrition℠
+            </Button>
+          </div>
+        </div>
+
+        <aside class="rounded-3xl border border-base-300 bg-white p-6 shadow-sm ring-1 ring-base-950/5 sm:p-8">
+          <p class="text-xs font-medium uppercase tracking-[0.18em] text-base-500">
+            What Lozen Measures
+          </p>
+
+          <div class="mt-8 grid gap-4">
+            <div class="rounded-2xl border border-base-300 bg-base-50 p-5">
+              <p class="text-sm font-semibold uppercase tracking-[0.12em] text-base-950">
+                Retention Risk
+              </p>
+              <p class="mt-3 text-sm leading-6 text-base-700">
+                The exposure that forms before departure appears in the data.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-base-300 bg-base-50 p-5">
+              <p class="text-sm font-semibold uppercase tracking-[0.12em] text-base-950">
+                Succession Exposure
+              </p>
+              <p class="mt-3 text-sm leading-6 text-base-700">
+                The gap between who appears stable and who is already carrying unsustainable load.
+              </p>
+            </div>
+
+            <div class="rounded-2xl border border-accent-500 bg-accent-50 p-5">
+              <p class="text-sm font-semibold uppercase tracking-[0.12em] text-base-950">
+                Disclosure Dependency
+              </p>
+              <p class="mt-3 text-sm leading-6 text-base-800">
+                The systems that cannot measure risk until someone creates a record.
+              </p>
             </div>
           </div>
-        ))
-      }
+        </aside>
+      </div>
     </div>
   </Wrapper>
 </section>
