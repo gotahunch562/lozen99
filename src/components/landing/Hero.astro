@@ -4,18 +4,35 @@ import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 ---
 
-<section class="relative overflow-hidden bg-gradient-to-b from-base-50 via-base-100 to-white">
-  <Wrapper variant="standard" class="py-24 lg:py-36">
-    <div class="mx-auto max-w-7xl text-center">
-      <p class="mx-auto inline-flex border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-700">
-        Disclosure-Independent Performance Protection℠
-      </p>
+<section class="relative min-h-[calc(100vh-7rem)] overflow-hidden bg-base-950">
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 bg-[url('/images/herobg.webp')] bg-cover bg-center"
+  >
+  </div>
 
-      <h1 class="mx-auto mt-10 max-w-6xl font-display text-[2.65rem] font-medium leading-[1.12] tracking-tight text-base-950 sm:text-5xl lg:text-[4.85rem]">
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 bg-base-950/78"
+  >
+  </div>
+
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 bg-gradient-to-b from-base-950/55 via-base-950/40 to-base-950/85"
+  >
+  </div>
+
+  <Wrapper
+    variant="standard"
+    class="relative z-10 flex min-h-[calc(100vh-7rem)] items-center py-24 lg:py-32"
+  >
+    <div class="mx-auto max-w-6xl text-center">
+      <h1 class="mx-auto max-w-6xl font-sans text-[2.45rem] font-normal leading-[1.1] tracking-[-0.045em] text-white sm:text-[3.6rem] lg:text-[4.85rem]">
         Working at the edge of what organizations can measure and what leaders are managing.
       </h1>
 
-      <p class="mx-auto mt-8 max-w-4xl text-lg leading-8 text-base-700 sm:text-xl lg:text-[1.45rem] lg:leading-10">
+      <p class="mx-auto mt-8 max-w-5xl font-sans text-lg font-normal leading-8 text-base-100 sm:text-xl lg:text-[1.45rem] lg:leading-10">
         Lozen Advisory helps organizations and senior women leaders navigate the gap between visible performance records and the private constraints that shape retention, succession, benefits utilization, and leadership continuity.
       </p>
 
