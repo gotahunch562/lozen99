@@ -104,13 +104,31 @@ const columnDefinitions = [
     "Observations from the bill text or legislative record with strategic or analytical value beyond the core gap classification.",
   ],
 ];
+
+const tableWrapClass =
+  "overflow-x-auto rounded-3xl border border-base-400 bg-white shadow-md ring-1 ring-base-950/10";
+
+const tableClass =
+  "min-w-[1220px] w-full border-collapse text-left";
+
+const compactTableClass =
+  "min-w-[1120px] w-full border-collapse text-left";
+
+const thClass =
+  "border border-base-700 bg-base-950 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white";
+
+const tdStrongClass =
+  "border border-base-300 px-4 py-4 text-sm leading-6 text-base-950";
+
+const tdMutedClass =
+  "border border-base-300 px-4 py-4 text-sm leading-6 text-base-700";
 ---
 
 <BaseLayout title={title} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(reportSchema)} />
 
   <main class="bg-base-50">
-    <section class="border-b border-base-200 bg-gradient-to-t from-base-100 to-white">
+    <section class="border-b border-base-300 bg-gradient-to-t from-base-100 to-white">
       <Wrapper variant="standard" class="py-20 lg:py-28">
         <div class="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.55fr)] lg:items-end">
           <div class="max-w-5xl">
@@ -131,7 +149,7 @@ const columnDefinitions = [
             </p>
           </div>
 
-          <aside class="rounded-3xl border border-base-200 bg-white p-6 shadow-sm">
+          <aside class="rounded-3xl border border-base-300 bg-white p-6 shadow-sm ring-1 ring-base-950/5">
             <p class="text-xs font-medium uppercase tracking-[0.18em] text-base-500">
               Audit thesis
             </p>
@@ -194,7 +212,7 @@ const columnDefinitions = [
           <dl class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {
               columnDefinitions.map(([term, definition]) => (
-                <div class="rounded-3xl border border-base-200 bg-white p-5 shadow-sm">
+                <div class="rounded-3xl border border-base-300 bg-white p-5 shadow-sm">
                   <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-base-950">
                     {term}
                   </dt>
@@ -231,34 +249,18 @@ const columnDefinitions = [
                     </h2>
                   </div>
 
-                  <div class="overflow-x-auto rounded-3xl border border-base-200 bg-white shadow-sm">
-                    <table class="min-w-[1220px] w-full border-collapse text-left">
-                      <thead class="bg-base-950">
+                  <div class={tableWrapClass}>
+                    <table class={tableClass}>
+                      <thead>
                         <tr>
-                          <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                            Jurisdiction
-                          </th>
-                          <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                            Bill
-                          </th>
-                          <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                            Focus
-                          </th>
-                          <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                            Status
-                          </th>
-                          <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                            Policy Assumption
-                          </th>
-                          <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                            Governance Blind Spot
-                          </th>
-                          <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                            Classification
-                          </th>
-                          <th class="px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                            Legislative Outcome
-                          </th>
+                          <th class={thClass}>Jurisdiction</th>
+                          <th class={thClass}>Bill</th>
+                          <th class={thClass}>Focus</th>
+                          <th class={thClass}>Status</th>
+                          <th class={thClass}>Policy Assumption</th>
+                          <th class={thClass}>Governance Blind Spot</th>
+                          <th class={thClass}>Classification</th>
+                          <th class={thClass}>Legislative Outcome</th>
                         </tr>
                       </thead>
 
@@ -268,18 +270,18 @@ const columnDefinitions = [
                             const c = classification(row.classification);
 
                             return (
-                              <tr class="border-b border-base-200 odd:bg-base-50 even:bg-white">
-                                <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-950">
+                              <tr class="odd:bg-base-50 even:bg-white hover:bg-accent-50/50">
+                                <td class={tdStrongClass}>
                                   {row.jurisdiction}
                                 </td>
 
-                                <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-950">
+                                <td class={tdStrongClass}>
                                   {row.url ? (
                                     <a
                                       href={row.url}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      class="font-semibold text-base-950 underline decoration-accent-400 underline-offset-4 transition-colors hover:text-accent-700"
+                                      class="font-semibold text-base-950 underline decoration-accent-500 underline-offset-4 transition-colors hover:text-accent-700"
                                     >
                                       {row.bill}
                                     </a>
@@ -288,7 +290,7 @@ const columnDefinitions = [
                                   )}
                                 </td>
 
-                                <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-950">
+                                <td class={tdStrongClass}>
                                   <span
                                     class="inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]"
                                     style={focusStyle(row.focus)}
@@ -297,19 +299,22 @@ const columnDefinitions = [
                                   </span>
                                 </td>
 
-                                <td class="border-r border-base-100 px-4 py-4 text-sm font-semibold leading-6" style={`color:${getStatusColor(row.status)};`}>
+                                <td
+                                  class="border border-base-300 px-4 py-4 text-sm font-semibold leading-6"
+                                  style={`color:${getStatusColor(row.status)};`}
+                                >
                                   {row.status}
                                 </td>
 
-                                <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-700">
+                                <td class={tdMutedClass}>
                                   {row.assumes}
                                 </td>
 
-                                <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-700">
+                                <td class={tdMutedClass}>
                                   {row.cannotMeasure}
                                 </td>
 
-                                <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-950">
+                                <td class={tdStrongClass}>
                                   {c.href ? (
                                     <a href={c.href} class="inline-flex no-underline">
                                       <span
@@ -329,7 +334,7 @@ const columnDefinitions = [
                                   )}
                                 </td>
 
-                                <td class="px-4 py-4 text-sm leading-6 text-base-700">
+                                <td class={tdMutedClass}>
                                   {row.notes}
                                 </td>
                               </tr>
@@ -358,49 +363,35 @@ const columnDefinitions = [
               </h2>
             </div>
 
-            <div class="overflow-x-auto rounded-3xl border border-base-200 bg-white shadow-sm">
-              <table class="min-w-[1120px] w-full border-collapse text-left">
-                <thead class="bg-base-950">
+            <div class={tableWrapClass}>
+              <table class={compactTableClass}>
+                <thead>
                   <tr>
-                    <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Jurisdiction
-                    </th>
-                    <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Bill
-                    </th>
-                    <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Focus
-                    </th>
-                    <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Status
-                    </th>
-                    <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Assumed
-                    </th>
-                    <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Failure Confirms
-                    </th>
-                    <th class="px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Legislative Outcome
-                    </th>
+                    <th class={thClass}>Jurisdiction</th>
+                    <th class={thClass}>Bill</th>
+                    <th class={thClass}>Focus</th>
+                    <th class={thClass}>Status</th>
+                    <th class={thClass}>Assumed</th>
+                    <th class={thClass}>Failure Confirms</th>
+                    <th class={thClass}>Legislative Outcome</th>
                   </tr>
                 </thead>
 
                 <tbody>
                   {
                     DID_NOT_PASS.map((row) => (
-                      <tr class="border-b border-base-200 odd:bg-base-50 even:bg-white">
-                        <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-950">
+                      <tr class="odd:bg-base-50 even:bg-white hover:bg-accent-50/50">
+                        <td class={tdStrongClass}>
                           {row.jurisdiction}
                         </td>
 
-                        <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-950">
+                        <td class={tdStrongClass}>
                           {row.url ? (
                             <a
                               href={row.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              class="font-semibold text-base-950 underline decoration-accent-400 underline-offset-4 transition-colors hover:text-accent-700"
+                              class="font-semibold text-base-950 underline decoration-accent-500 underline-offset-4 transition-colors hover:text-accent-700"
                             >
                               {row.bill}
                             </a>
@@ -409,7 +400,7 @@ const columnDefinitions = [
                           )}
                         </td>
 
-                        <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-950">
+                        <td class={tdStrongClass}>
                           <span
                             class="inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]"
                             style={focusStyle(row.focus)}
@@ -418,19 +409,22 @@ const columnDefinitions = [
                           </span>
                         </td>
 
-                        <td class="border-r border-base-100 px-4 py-4 text-sm font-semibold leading-6" style={`color:${getStatusColor(row.status)};`}>
+                        <td
+                          class="border border-base-300 px-4 py-4 text-sm font-semibold leading-6"
+                          style={`color:${getStatusColor(row.status)};`}
+                        >
                           {row.status}
                         </td>
 
-                        <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-700">
+                        <td class={tdMutedClass}>
                           {row.assumed}
                         </td>
 
-                        <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-700">
+                        <td class={tdMutedClass}>
                           {row.failureConfirms}
                         </td>
 
-                        <td class="px-4 py-4 text-sm leading-6 text-base-700">
+                        <td class={tdMutedClass}>
                           {row.notes}
                         </td>
                       </tr>
@@ -455,31 +449,17 @@ const columnDefinitions = [
               </h2>
             </div>
 
-            <div class="overflow-x-auto rounded-3xl border border-base-200 bg-white shadow-sm">
-              <table class="min-w-[1120px] w-full border-collapse text-left">
-                <thead class="bg-base-950">
+            <div class={tableWrapClass}>
+              <table class={compactTableClass}>
+                <thead>
                   <tr>
-                    <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Jurisdiction
-                    </th>
-                    <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Instrument
-                    </th>
-                    <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Focus
-                    </th>
-                    <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Status
-                    </th>
-                    <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Structural Role
-                    </th>
-                    <th class="border-r border-white/10 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Classification
-                    </th>
-                    <th class="px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                      Legislative Outcome
-                    </th>
+                    <th class={thClass}>Jurisdiction</th>
+                    <th class={thClass}>Instrument</th>
+                    <th class={thClass}>Focus</th>
+                    <th class={thClass}>Status</th>
+                    <th class={thClass}>Structural Role</th>
+                    <th class={thClass}>Classification</th>
+                    <th class={thClass}>Legislative Outcome</th>
                   </tr>
                 </thead>
 
@@ -489,18 +469,18 @@ const columnDefinitions = [
                       const c = classification(row.classification);
 
                       return (
-                        <tr class="border-b border-base-200 odd:bg-base-50 even:bg-white">
-                          <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-950">
+                        <tr class="odd:bg-base-50 even:bg-white hover:bg-accent-50/50">
+                          <td class={tdStrongClass}>
                             {row.jurisdiction}
                           </td>
 
-                          <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-950">
+                          <td class={tdStrongClass}>
                             {row.url ? (
                               <a
                                 href={row.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="font-semibold text-base-950 underline decoration-accent-400 underline-offset-4 transition-colors hover:text-accent-700"
+                                class="font-semibold text-base-950 underline decoration-accent-500 underline-offset-4 transition-colors hover:text-accent-700"
                               >
                                 {row.instrument}
                               </a>
@@ -509,7 +489,7 @@ const columnDefinitions = [
                             )}
                           </td>
 
-                          <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-950">
+                          <td class={tdStrongClass}>
                             <span
                               class="inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]"
                               style={focusStyle(row.focus)}
@@ -518,15 +498,18 @@ const columnDefinitions = [
                             </span>
                           </td>
 
-                          <td class="border-r border-base-100 px-4 py-4 text-sm font-semibold leading-6" style={`color:${getStatusColor(row.status)};`}>
+                          <td
+                            class="border border-base-300 px-4 py-4 text-sm font-semibold leading-6"
+                            style={`color:${getStatusColor(row.status)};`}
+                          >
                             {row.status}
                           </td>
 
-                          <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-700">
+                          <td class={tdMutedClass}>
                             {row.structuralRole}
                           </td>
 
-                          <td class="border-r border-base-100 px-4 py-4 text-sm leading-6 text-base-950">
+                          <td class={tdStrongClass}>
                             {c.href ? (
                               <a href={c.href} class="inline-flex no-underline">
                                 <span
@@ -546,7 +529,7 @@ const columnDefinitions = [
                             )}
                           </td>
 
-                          <td class="px-4 py-4 text-sm leading-6 text-base-700">
+                          <td class={tdMutedClass}>
                             {row.notes}
                           </td>
                         </tr>
