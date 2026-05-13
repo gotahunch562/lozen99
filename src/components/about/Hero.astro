@@ -3,35 +3,61 @@
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 ---
 
-<section class="relative w-full overflow-hidden bg-base-950 lg:h-dvh">
-  <div
-    aria-hidden="true"
-    class="absolute inset-0 bg-[url('/images/herobg.webp')] bg-cover bg-center"
-  >
-  </div>
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
 
-  <div
-    aria-hidden="true"
-    class="absolute inset-0 bg-base-950/58"
-  >
-  </div>
+  .lozen-hero-image {
+    background-image: url("/images/herobg.webp");
+    background-size: cover;
+    background-position: center;
+  }
 
-  <div
-    aria-hidden="true"
-    class="absolute inset-0 bg-gradient-to-b from-base-950/45 via-base-950/20 to-base-950/72"
-  >
+  .lozen-hero-blue-overlay {
+    background: rgba(12, 13, 55, 0.78);
+  }
+
+  .lozen-hero-depth-overlay {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(12, 13, 55, 0.72),
+        rgba(12, 13, 55, 0.46),
+        rgba(12, 13, 55, 0.88)
+      );
+  }
+</style>
+
+<section class="relative w-full overflow-hidden bg-[#0c0d37] lg:h-dvh lg:p-8">
+  <div class="absolute inset-0 overflow-hidden lg:m-4 lg:rounded-3xl">
+    <div
+      aria-hidden="true"
+      class="lozen-hero-image absolute inset-0 z-0"
+    >
+    </div>
+
+    <div
+      aria-hidden="true"
+      class="lozen-hero-blue-overlay absolute inset-0 z-10 pointer-events-none"
+    >
+    </div>
+
+    <div
+      aria-hidden="true"
+      class="lozen-hero-depth-overlay absolute inset-0 z-20 pointer-events-none"
+    >
+    </div>
   </div>
 
   <Wrapper
     variant="standard"
-    class="relative z-10 flex min-h-[44rem] items-center py-28 lg:h-full lg:min-h-0 lg:py-0"
+    class="relative z-30 flex h-full min-h-[44rem] items-center py-28 lg:min-h-0 lg:py-0"
   >
-    <div class="mx-auto max-w-6xl">
-      <h1 class="mx-auto max-w-5xl text-justify font-display text-[2.15rem] font-normal leading-[1.16] tracking-[-0.025em] text-white [text-align-last:center] sm:text-[2.45rem] lg:text-[2.65rem]">
+    <div class="mx-auto max-w-[88rem] text-center">
+      <h1 class="mx-auto max-w-7xl text-center text-[2.15rem] font-normal leading-[1.18] tracking-[-0.035em] text-white [font-family:'Tenor_Sans',sans-serif] [text-shadow:0_2px_18px_rgba(12,13,55,0.95)] sm:text-[2.35rem] lg:text-[2.625rem]">
         Working at the edge of what organizations can measure and what leaders are managing.
       </h1>
 
-      <p class="mx-auto mt-8 max-w-4xl text-justify font-display text-[1.15rem] font-normal leading-8 tracking-[-0.01em] text-base-100 [text-align-last:center] sm:text-[1.3rem] lg:text-[1.45rem] lg:leading-9">
+      <p class="mx-auto mt-8 max-w-7xl text-center text-[1rem] font-normal leading-8 tracking-[-0.01em] text-white [font-family:'Tenor_Sans',sans-serif] [text-shadow:0_1px_8px_rgba(12,13,55,0.85)] sm:text-[1.08rem] lg:text-[1.15rem] lg:leading-8">
         Lozen Advisory helps organizations and senior women leaders navigate the gap between visible performance records and the private constraints that shape retention, succession, benefits utilization, and leadership continuity.
       </p>
     </div>
