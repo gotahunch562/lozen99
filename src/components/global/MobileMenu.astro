@@ -13,22 +13,32 @@ const quickLinks = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
+
+const currentPath = Astro.url.pathname;
+
+const isActiveLink = (href: string) =>
+  currentPath === href || currentPath.startsWith(`${href}/`);
 ---
 
 <div
   id="mobile-menu"
-  class="absolute left-0 z-40 hidden w-full lg:hidden top-full"
+  class="absolute left-0 top-full z-40 hidden w-full lg:hidden"
 >
   <Wrapper variant="standard">
     <div
-      class="bg-white shadow-2xl outline-4 outline-base-500/5 outline-inset rounded-3xl"
+      class="max-h-[calc(100vh-6.5rem)] overflow-y-auto rounded-2xl border border-base-200 bg-white/95 shadow-2xl outline-4 outline-base-500/5 backdrop-blur-xl"
     >
-      <div class="space-y-4 p-6">
+      <div class="space-y-1 p-4 sm:p-6">
         {
           quickLinks.map((link) => (
             <a
               href={link.href}
-              class="block text-2xl font-medium text-base-900 hover:text-accent-600 transition-colors font-display uppercase"
+              class:list={[
+                "block rounded-xl px-4 py-3 font-sans text-base font-semibold transition-colors duration-200",
+                isActiveLink(link.href)
+                  ? "bg-base-900 text-white"
+                  : "text-base-900 hover:bg-base-50 hover:text-accent-700",
+              ]}
             >
               {link.label}
             </a>
@@ -36,7 +46,7 @@ const quickLinks = [
         }
       </div>
 
-      <div class="p-6 space-y-2 border-t border-base-200">
+      <div class="space-y-3 border-t border-base-200 p-4 sm:p-6">
         <Button
           isLink
           size="base"
@@ -72,40 +82,59 @@ const quickLinks = [
 
     let isMobileOpen = false;
 
-    mobileMenuButton.addEventListener("click", function (e) {
-      e.stopPropagation();
-      isMobileOpen = !isMobileOpen;
+    function openMenu() {
+      mobileMenu.classList.remove("hidden");
+
+      if (menuIconOpen) menuIconOpen.classList.add("hidden");
+      if (menuIconClose) menuIconClose.classList.remove("hidden");
+
+      isMobileOpen = true;
+      mobileMenuButton.setAttribute("aria-expanded", "true");
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add("hidden");
+
+      if (menuIconOpen) menuIconOpen.classList.remove("hidden");
+      if (menuIconClose) menuIconClose.classList.add("hidden");
+
+      isMobileOpen = false;
+      mobileMenuButton.setAttribute("aria-expanded", "false");
+    }
+
+    mobileMenuButton.addEventListener("click", function (event) {
+      event.stopPropagation();
 
       if (isMobileOpen) {
-        mobileMenu.classList.remove("hidden");
-        mobileMenu.style.display = "block";
-
-        if (menuIconOpen) menuIconOpen.classList.add("hidden");
-        if (menuIconClose) menuIconClose.classList.remove("hidden");
+        closeMenu();
       } else {
-        mobileMenu.classList.add("hidden");
-        mobileMenu.style.display = "";
-
-        if (menuIconOpen) menuIconOpen.classList.remove("hidden");
-        if (menuIconClose) menuIconClose.classList.add("hidden");
+        openMenu();
       }
-
-      mobileMenuButton.setAttribute("aria-expanded", String(isMobileOpen));
     });
 
-    var links = mobileMenu.querySelectorAll("a");
+    const links = mobileMenu.querySelectorAll("a");
 
-    for (var i = 0; i < links.length; i++) {
-      links[i].addEventListener("click", function () {
-        mobileMenu.classList.add("hidden");
-        mobileMenu.style.display = "";
-
-        if (menuIconOpen) menuIconOpen.classList.remove("hidden");
-        if (menuIconClose) menuIconClose.classList.add("hidden");
-
-        isMobileOpen = false;
-        mobileMenuButton.setAttribute("aria-expanded", "false");
-      });
+    for (let i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", closeMenu);
     }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && isMobileOpen) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      const target = event.target;
+
+      if (
+        isMobileOpen &&
+        target instanceof Node &&
+        !mobileMenu.contains(target) &&
+        !mobileMenuButton.contains(target)
+      ) {
+        closeMenu();
+      }
+    });
   })();
 </script>
