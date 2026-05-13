@@ -17,26 +17,30 @@ allPosts.sort((a, b) => {
 });
 ---
 
-<section class="bg-gradient-to-t from-base-200 to-white">
-  <Wrapper variant="standard" class="py-24 lg:py-32">
-    <div class="max-w-3xl mx-auto text-center">
+<section class="bg-gradient-to-t from-base-200 via-base-100 to-white">
+  <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-24">
+    <div class="mx-auto max-w-3xl text-center">
       <Text
         tag="span"
         variant="textSM"
-        class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+        class="inline-flex border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
       >
         insights
       </Text>
 
       <Text
-        tag="h1"
+        tag="h2"
         variant="displayXL"
-        class="mt-8 uppercase font-display text-base-900"
+        class="mt-5 font-display font-normal uppercase leading-[1.05] tracking-[-0.035em] text-base-950 sm:mt-6"
       >
         Menopause at Work
       </Text>
 
-      <Text tag="p" variant="textBase" class="mt-4 text-base-600 text-balance">
+      <Text
+        tag="p"
+        variant="textBase"
+        class="mx-auto mt-4 max-w-2xl font-sans leading-7 text-base-700 text-balance sm:text-lg sm:leading-8"
+      >
         Legislative analysis, Clinical reality, Workplace systems, & Self.
         <br />
         <span class="italic">
@@ -45,7 +49,7 @@ allPosts.sort((a, b) => {
       </Text>
     </div>
 
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+    <div class="mt-10 grid grid-cols-1 gap-5 sm:mt-12 md:grid-cols-2">
       {allPosts.slice(0, 2).map((post) => <BlogCard post={post} />)}
     </div>
 
@@ -54,7 +58,7 @@ allPosts.sort((a, b) => {
       href="/blog"
       variant="default"
       size="base"
-      class="mx-auto mt-12 w-fit"
+      class="mx-auto mt-10 w-fit sm:mt-12"
     >
       View all articles
     </Button>
