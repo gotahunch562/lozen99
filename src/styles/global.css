@@ -5,17 +5,18 @@
 
 @theme {
   /* Typography */
-  --font-display: "Playfair Display", serif;
+  --font-display: "Tenor Sans", sans-serif;
   --font-sans: "DM Sans", sans-serif;
 
   /*
     Lozen Advisory institutional navy system
 
     Direction:
-    - Base system moves away from teal-blue and into a true navy foundation.
-    - Hero navy is now aligned with --color-base-950.
+    - Base system uses a true navy foundation.
+    - Hero navy is aligned with --color-base-950.
     - Accent system remains yellow for CTA visibility and conversion contrast.
-    - This avoids the green/teal cast created by #001f2b while preserving a dark institutional look.
+    - Display typography is standardized globally through Tenor Sans.
+    - Body, navigation, buttons, forms, and long-form copy use DM Sans.
   */
 
   /* Accent: yellow conversion accent */
@@ -72,6 +73,54 @@
     0px 34px 24.1px 0px rgba(6, 23, 47, 0.13),
     0px 70px 49.6px 0px rgba(6, 23, 47, 0.16),
     0px 192px 136px 0px rgba(6, 23, 47, 0.23);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--color-base-50);
+    font-family: var(--font-sans);
+    color: var(--color-base-700);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    color: var(--color-base-900);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    text-underline-offset: 0.2em;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background: var(--color-accent-300);
+    color: var(--color-base-950);
+  }
 }
 
 /* Lozen long-form page/article system */
@@ -166,10 +215,10 @@
 .lozen-article__eyebrow {
   padding-left: 1rem;
   border-left: 1px solid var(--color-accent-500);
-  font-family: var(--font-display);
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-base-900);
 }
@@ -237,7 +286,7 @@
   margin-top: 2rem;
   font-family: var(--font-sans);
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-accent-700);
   transition: color 180ms ease;
 }
@@ -247,8 +296,18 @@
 }
 
 @media (max-width: 768px) {
+  .lozen-article__body {
+    max-width: none;
+  }
+
   .lozen-article__chapter-header {
     grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .lozen-article__chapter-number {
+    font-size: clamp(2.25rem, 16vw, 3.5rem);
   }
 
   .lozen-article__body p,
@@ -259,8 +318,26 @@
     line-height: 1.8;
   }
 
+  .lozen-article__body ul,
+  .lozen-article__body ol {
+    margin-left: 1rem;
+    padding-left: 0.75rem;
+  }
+
   .lozen-article__callout,
   .lozen-article__cta-card {
     padding: 1.5rem;
+    border-radius: 1.25rem;
+  }
+
+  .lozen-article__pullquote {
+    margin: 2.25rem 0;
+    padding-left: 1rem;
+    font-size: clamp(2rem, 13vw, 3.25rem);
+  }
+
+  .lozen-article__quote-band p,
+  .lozen-article__cta-card p {
+    font-size: clamp(1.875rem, 10vw, 3rem);
   }
 }
