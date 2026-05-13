@@ -22,49 +22,51 @@ const frameworkCards = [
 ];
 ---
 
-<section class="bg-base-950 text-white">
+<section class="bg-base-50">
   <Wrapper variant="standard" class="py-16 lg:py-24">
-    <div class="grid gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(320px,0.55fr)] lg:items-end">
-      <div>
-        <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-300">
-          Invisible Attrition℠
-        </p>
+    <div class="mx-auto max-w-6xl">
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(320px,0.55fr)] lg:items-end">
+        <div>
+          <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-600">
+            Invisible Attrition℠
+          </p>
 
-        <h2 class="mt-6 max-w-4xl font-display text-3xl font-medium uppercase leading-[1.05] tracking-tight text-white sm:text-4xl lg:text-5xl">
-          Risk analysis
-        </h2>
+          <h2 class="mt-6 max-w-4xl font-display text-3xl font-medium uppercase leading-[1.08] tracking-tight text-base-950 sm:text-4xl lg:text-5xl">
+            Frameworks and analysis for the risk your systems do not see.
+          </h2>
+        </div>
+
+        <p class="max-w-md text-base leading-7 text-base-700 sm:text-lg lg:pb-1">
+          These are the core architecture pages for understanding how disclosure-dependent systems fail before standard retention metrics detect loss.
+        </p>
       </div>
 
-      <p class="max-w-md text-base leading-7 text-base-200 sm:text-lg">
-        These are the core architecture pages for understanding how disclosure-dependent systems fail before standard retention metrics detect loss.
-      </p>
-    </div>
+      <div class="mt-12 grid gap-5 lg:grid-cols-2">
+        {
+          frameworkCards.map((card) => (
+            <a
+              href={card.href}
+              class="group block rounded-3xl border border-base-300 bg-white p-6 no-underline shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-400 hover:bg-base-100 hover:shadow-md sm:p-8"
+            >
+              <p class="text-xs font-medium uppercase tracking-[0.18em] text-accent-700">
+                {card.eyebrow}
+              </p>
 
-    <div class="mt-12 grid gap-5 lg:grid-cols-2">
-      {
-        frameworkCards.map((card) => (
-          <a
-            href={card.href}
-            class="group block rounded-3xl border border-white/10 bg-white/[0.04] p-6 no-underline shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-400 hover:bg-white/[0.08] hover:shadow-md sm:p-8"
-          >
-            <p class="text-xs font-medium uppercase tracking-[0.18em] text-accent-300">
-              {card.eyebrow}
-            </p>
+              <h3 class="mt-5 font-display text-2xl font-medium uppercase leading-tight tracking-tight text-base-950 sm:text-3xl">
+                {card.title}
+              </h3>
 
-            <h3 class="mt-5 font-display text-2xl font-medium uppercase leading-tight tracking-tight text-white sm:text-3xl">
-              {card.title}
-            </h3>
+              <p class="mt-5 max-w-2xl text-sm leading-7 text-base-700 sm:text-base">
+                {card.description}
+              </p>
 
-            <p class="mt-5 max-w-2xl text-sm leading-7 text-base-200 sm:text-base">
-              {card.description}
-            </p>
-
-            <span class="mt-8 inline-flex text-sm font-semibold text-accent-300 transition-transform duration-300 group-hover:translate-x-1">
-              {card.cta} →
-            </span>
-          </a>
-        ))
-      }
+              <span class="mt-8 inline-flex text-sm font-semibold text-accent-700 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-base-950">
+                {card.cta} →
+              </span>
+            </a>
+          ))
+        }
+      </div>
     </div>
   </Wrapper>
 </section>
