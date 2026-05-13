@@ -23,19 +23,29 @@ const trackerRows = [
 ---
 
 <section class="bg-gradient-to-b from-base-950 to-base-900 text-white">
-  <Wrapper variant="standard" class="py-16 lg:py-24">
-    <div class="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-2xl ring-1 ring-white/10">
-      <div class="grid gap-0 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.58fr)]">
-        <div class="p-8 sm:p-10 lg:p-14">
-          <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-300">
+  <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-24">
+    <div
+      class="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-2xl ring-1 ring-white/10 lg:rounded-3xl"
+    >
+      <div
+        class="grid gap-0 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.58fr)]"
+      >
+        <div class="p-6 sm:p-10 lg:p-14">
+          <p
+            class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-300"
+          >
             Policy & Governance Tool
           </p>
 
-          <h2 class="mt-8 max-w-3xl font-display text-3xl font-medium uppercase leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2
+            class="mt-6 max-w-3xl font-display text-3xl font-normal uppercase leading-[1.05] tracking-[-0.035em] text-white sm:mt-8 sm:text-4xl lg:text-5xl"
+          >
             Menopause legislation is accelerating.
           </h2>
 
-          <div class="mt-6 max-w-3xl space-y-5 text-base leading-8 text-base-200 sm:text-lg">
+          <div
+            class="mt-5 max-w-3xl space-y-5 font-sans text-base leading-7 text-base-200 sm:mt-6 sm:text-lg sm:leading-8"
+          >
             <p>
               The Menopause Legislation Tracker classifies each instrument by three things: the assumption it makes about how women will engage with formal systems, the activation condition that determines who the law reaches, and the population that condition structurally excludes.
             </p>
@@ -45,7 +55,7 @@ const trackerRows = [
             </p>
           </div>
 
-          <div class="mt-8">
+          <div class="mt-7 sm:mt-8">
             <Button
               isLink
               href="/menopause-legislation-tracker"
@@ -57,15 +67,23 @@ const trackerRows = [
           </div>
         </div>
 
-        <aside class="border-t border-white/10 bg-base-50 p-6 text-base-950 sm:p-8 lg:border-l lg:border-t-0 lg:p-10">
-          <div class="rounded-3xl border-2 border-base-500 bg-white shadow-lg ring-1 ring-base-950/10">
+        <aside
+          class="border-t border-white/10 bg-base-50 p-5 text-base-950 sm:p-8 lg:border-l lg:border-t-0 lg:p-10"
+        >
+          <div
+            class="overflow-hidden rounded-2xl border-2 border-base-500 bg-white shadow-lg ring-1 ring-base-950/10 lg:rounded-3xl"
+          >
             <div class="border-b border-base-400 bg-base-950 px-5 py-4">
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-white">
+              <p
+                class="font-sans text-xs font-semibold uppercase tracking-[0.16em] text-white"
+              >
                 Legislative Record
               </p>
             </div>
 
-            <div class="grid grid-cols-3 border-b border-base-400 bg-base-100 px-5 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-800">
+            <div
+              class="hidden grid-cols-3 border-b border-base-400 bg-base-100 px-5 py-3 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-800 sm:grid"
+            >
               <span>Jurisdiction</span>
               <span>Instrument</span>
               <span>Classification</span>
@@ -74,30 +92,47 @@ const trackerRows = [
             <div>
               {
                 trackerRows.map((row) => (
-                  <div class="grid grid-cols-3 gap-3 border-b border-base-300 px-5 py-4 text-sm last:border-b-0 odd:bg-white even:bg-base-100">
-                    <span class="font-semibold text-base-950">
-                      {row.jurisdiction}
-                    </span>
+                  <div class="grid gap-3 border-b border-base-300 px-5 py-4 font-sans text-sm last:border-b-0 odd:bg-white even:bg-base-100 sm:grid-cols-3 sm:items-center">
+                    <div>
+                      <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-500 sm:hidden">
+                        Jurisdiction
+                      </span>
+                      <span class="mt-1 block font-semibold text-base-950 sm:mt-0">
+                        {row.jurisdiction}
+                      </span>
+                    </div>
 
-                    <span class="text-base-700">
-                      {row.instrument}
-                    </span>
+                    <div>
+                      <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-500 sm:hidden">
+                        Instrument
+                      </span>
+                      <span class="mt-1 block text-base-700 sm:mt-0">
+                        {row.instrument}
+                      </span>
+                    </div>
 
-                    <span class="inline-flex w-fit rounded-full border border-accent-500 bg-accent-50 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-base-950">
-                      {row.classification}
-                    </span>
+                    <div>
+                      <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-500 sm:hidden">
+                        Classification
+                      </span>
+                      <span class="mt-2 inline-flex w-fit rounded-full border border-accent-500 bg-accent-50 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-base-950 sm:mt-0">
+                        {row.classification}
+                      </span>
+                    </div>
                   </div>
                 ))
               }
             </div>
           </div>
 
-          <div class="mt-5 rounded-3xl border border-base-300 bg-base-100 p-5">
-            <p class="text-xs font-medium uppercase tracking-[0.16em] text-base-600">
+          <div class="mt-4 rounded-2xl border border-base-300 bg-base-100 p-5 lg:mt-5 lg:rounded-3xl">
+            <p
+              class="font-sans text-xs font-semibold uppercase tracking-[0.16em] text-base-600"
+            >
               What the tracker measures
             </p>
 
-            <p class="mt-4 text-sm leading-6 text-base-800">
+            <p class="mt-4 font-sans text-sm leading-6 text-base-800">
               Policy assumption, governance blind spot, activation condition, legislative outcome, and Lozen classification.
             </p>
           </div>
