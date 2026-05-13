@@ -1,57 +1,62 @@
 ---
-// Fundations
-import Text from "@/components/fundations/elements/Text.astro";
-import Button from "@/components/fundations/elements/Button.astro";
+// Foundations
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-// Components
-import CustomerCard from "@/components/customers/CustomerCard.astro";
-// Content
-import { getCollection } from "astro:content";
 
-const allCustomers = await getCollection("customers");
-allCustomers.sort((a, b) => a.data.name.localeCompare(b.data.name));
+const proofCards = [
+  {
+    title: "Executive Analytics",
+    description:
+      "Lozen Advisory is built from experience with the decision systems executives use to evaluate performance, risk, and organizational movement.",
+  },
+  {
+    title: "Disclosure-Dependent Systems",
+    description:
+      "The work identifies where benefits data, HR records, utilization reports, and retention metrics depend on an initiating act before risk can be seen.",
+  },
+  {
+    title: "Policy & Workforce Risk",
+    description:
+      "The legislation tracker, executive reports, and Invisible Attrition℠ framework connect policy design to measurable leadership continuity risk.",
+  },
+];
 ---
 
-<section>
-  <Wrapper variant="standard" class="py-24 lg:py-32">
-    <div class="max-w-3xl mx-auto text-center">
-      <Text
-        tag="span"
-        variant="textSM"
-        class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-      >
-        Research & Press
-      </Text>
+<section class="bg-white">
+  <Wrapper variant="standard" class="py-16 lg:py-24">
+    <div class="mx-auto max-w-6xl">
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(320px,0.55fr)] lg:items-end">
+        <div>
+          <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-600">
+            Advisory Foundation
+          </p>
 
-      <Text
-        tag="h1"
-        variant="displayXL"
-        class="mt-8 uppercase font-display text-base-900"
-      >
-        In The News
-      </Text>
+          <h2 class="mt-6 max-w-4xl font-display text-3xl font-medium uppercase leading-[1.08] tracking-tight text-base-950 sm:text-4xl lg:text-5xl">
+            Built for the gap between what organizations measure and what leaders are managing.
+          </h2>
+        </div>
 
-      <Text tag="p" variant="textBase" class="mt-4 text-base-600 text-balance">
-        Curated research, legislation, and press coverage on menopause, workplace health, and the cost of non-disclosure.
-      </Text>
+        <p class="max-w-md text-base leading-7 text-base-700 sm:text-lg lg:pb-1">
+          Lozen Advisory examines the systems that record visible activity while missing the capacity loss, disclosure risk, and implementation burden that precede departure.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-5 md:grid-cols-3">
+        {
+          proofCards.map((card) => (
+            <article class="rounded-3xl border border-base-300 bg-base-50 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-400 hover:bg-white hover:shadow-md sm:p-8">
+              <div class="mb-6 h-10 w-px bg-accent-500"></div>
+
+              <h3 class="font-display text-xl font-medium uppercase leading-tight tracking-tight text-base-950">
+                {card.title}
+              </h3>
+
+              <p class="mt-5 text-sm leading-7 text-base-700">
+                {card.description}
+              </p>
+            </article>
+          ))
+        }
+      </div>
     </div>
-
-    <div class="space-y-8 mt-12">
-      {
-        allCustomers
-          .slice(0, 1)
-          .map((customer) => <CustomerCard customer={customer} />)
-      }
-    </div>
-
-    <Button
-      isLink
-      href="/customers"
-      variant="default"
-      size="base"
-      class="mx-auto mt-12 w-fit"
-    >
-      Research & Press
-    </Button>
   </Wrapper>
 </section>
