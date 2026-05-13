@@ -3,6 +3,7 @@
 import { Image } from "astro:assets";
 // Fundations
 import Text from "@/components/fundations/elements/Text.astro";
+
 // Content
 const { title, description, url, image, pubDate } = {
   url: "/blog/posts/" + Astro.props.post.id,
@@ -14,31 +15,48 @@ const { title, description, url, image, pubDate } = {
 ---
 
 <article
-  class="relative group overflow-hidden aspect-[4/3] rounded-3xl bg-base-900 outline-4 outline-base-500/10 shadow-2xl rounded-3xl"
+  class="group relative min-h-[30rem] overflow-hidden rounded-2xl border border-base-400 bg-base-950 shadow-2xl ring-1 ring-base-950/10 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:shadow-2xl lg:aspect-[4/3] lg:min-h-0 lg:rounded-3xl"
 >
   <a
     href={url}
     title={`Read more: ${title}`}
     aria-label={`Read blog post: ${title}`}
-    class="absolute inset-0 z-30"></a>
+    class="absolute inset-0 z-30"
+  >
+  </a>
+
   <Image
     src={image}
     alt={title}
     width={1000}
-    height={100}
-    class="absolute inset-0 object-cover size-full group-hover:scale-110 transition-transform duration-500"
+    height={750}
+    class="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
   />
+
   <div
     aria-hidden="true"
-    class="absolute inset-0 pointer-events-none bg-gradient-to-b from-base-900/80 via-base-900/70 to-base-900/90"
+    class="absolute inset-0 pointer-events-none bg-gradient-to-b from-base-950/88 via-base-950/72 to-base-950/96"
   >
   </div>
-  <div class="absolute inset-0 z-10 flex flex-col justify-start p-8">
+
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 pointer-events-none bg-gradient-to-r from-base-950/55 via-base-950/20 to-base-950/50"
+  >
+  </div>
+
+  <div
+    aria-hidden="true"
+    class="absolute inset-x-0 top-0 z-10 h-1 bg-accent-500"
+  >
+  </div>
+
+  <div class="absolute inset-0 z-10 flex flex-col justify-end p-5 sm:p-6 lg:p-8">
     <div class="relative">
       <Text
         tag="span"
         variant="textSM"
-        class="pl-4 font-medium text-white uppercase border-l font-display border-accent-500"
+        class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.16em] text-base-200"
       >
         {
           new Date(pubDate).toLocaleDateString("en-US", {
@@ -48,16 +66,28 @@ const { title, description, url, image, pubDate } = {
           })
         }
       </Text>
+
       <Text
         tag="h2"
         variant="displaySM"
-        class="mt-8 text-white uppercase font-display"
+        class="mt-6 font-display font-normal uppercase leading-tight tracking-[-0.02em] text-white sm:mt-8"
       >
         {title}
       </Text>
-      <Text tag="p" variant="textBase" class="mt-4 text-base-300 text-balance">
+
+      <Text
+        tag="p"
+        variant="textBase"
+        class="mt-4 max-w-2xl font-sans leading-7 text-base-200 text-balance"
+      >
         {description}
       </Text>
+
+      <span
+        class="mt-6 inline-flex font-sans text-sm font-semibold text-accent-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent-200"
+      >
+        Read article →
+      </span>
     </div>
   </div>
 </article>
