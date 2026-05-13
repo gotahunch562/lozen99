@@ -106,59 +106,87 @@ const columnDefinitions = [
 ];
 
 const tableWrapClass =
-  "overflow-x-auto rounded-3xl border-2 border-base-500 bg-white shadow-lg ring-1 ring-base-950/15";
+  "hidden overflow-x-auto rounded-3xl border-2 border-base-500 bg-white shadow-lg ring-1 ring-base-950/15 lg:block";
 
 const tableClass = "min-w-[1220px] w-full border-collapse text-left";
 const compactTableClass = "min-w-[1120px] w-full border-collapse text-left";
 
 const thClass =
-  "border border-base-600 bg-base-950 px-4 py-4 text-xs font-semibold uppercase tracking-[0.14em] text-white";
+  "border border-base-600 bg-base-950 px-4 py-4 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-white";
 
 const tdStrongClass =
-  "border border-base-400 px-4 py-4 text-sm leading-6 text-base-950";
+  "border border-base-400 px-4 py-4 font-sans text-sm leading-6 text-base-950";
 
 const tdMutedClass =
-  "border border-base-400 px-4 py-4 text-sm leading-6 text-base-700";
+  "border border-base-400 px-4 py-4 font-sans text-sm leading-6 text-base-700";
 
 const rowClass =
   "odd:bg-white even:bg-base-100 hover:bg-accent-50/70 transition-colors duration-200";
+
+const mobileCardClass =
+  "relative overflow-hidden rounded-2xl border border-base-400 bg-white p-5 shadow-lg ring-1 ring-base-950/5";
+
+const mobileLabelClass =
+  "font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-base-500";
+
+const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
 ---
 
 <BaseLayout title={title} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(reportSchema)} />
 
   <main class="bg-base-50">
-    <section class="border-b border-base-300 bg-gradient-to-t from-base-100 to-white">
-      <Wrapper variant="standard" class="py-20 lg:py-28">
-        <div class="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.55fr)] lg:items-end">
+    <section class="border-b border-base-300 bg-gradient-to-t from-base-200 via-base-100 to-white">
+      <Wrapper variant="standard" class="py-14 sm:py-20 lg:py-28">
+        <div
+          class="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.55fr)] lg:items-end lg:gap-12"
+        >
           <div class="max-w-5xl">
-            <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-700">
+            <p
+              class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-700"
+            >
               Legislative Governance Risk Index
             </p>
 
-            <h1 class="mt-8 max-w-5xl font-display text-4xl font-medium uppercase leading-[1.02] tracking-tight text-base-950 sm:text-5xl lg:text-6xl">
+            <h1
+              class="mt-6 max-w-5xl font-display text-4xl font-normal uppercase leading-[1.02] tracking-[-0.04em] text-base-950 sm:mt-8 sm:text-5xl lg:text-6xl"
+            >
               Menopause Legislation Tracker 2026
             </h1>
 
-            <p class="mt-7 max-w-3xl text-lg leading-8 text-base-700">
+            <p class="mt-6 max-w-3xl font-sans text-base leading-7 text-base-700 sm:mt-7 sm:text-lg sm:leading-8">
               A state-by-state classification of menopause policy instruments by the assumptions they require, the participation conditions they activate, and the women they cannot reach.
             </p>
 
-            <p class="mt-8 text-xs font-medium uppercase tracking-[0.18em] text-base-500">
+            <p
+              class="mt-7 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500 sm:mt-8"
+            >
               Last updated: April 30, 2026
             </p>
           </div>
 
-          <aside class="rounded-3xl border border-base-300 bg-white p-6 shadow-sm ring-1 ring-base-950/5">
-            <p class="text-xs font-medium uppercase tracking-[0.18em] text-base-500">
+          <aside
+            class="relative overflow-hidden rounded-2xl border border-base-400 bg-white p-5 shadow-lg ring-1 ring-base-950/5 sm:p-6 lg:rounded-3xl"
+          >
+            <div
+              aria-hidden="true"
+              class="absolute inset-x-0 top-0 h-1 bg-accent-500"
+            >
+            </div>
+
+            <p
+              class="font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500"
+            >
               Audit thesis
             </p>
 
-            <p class="mt-5 font-display text-2xl font-medium uppercase leading-tight tracking-tight text-base-950">
+            <p
+              class="mt-5 font-display text-2xl font-normal uppercase leading-tight tracking-[-0.025em] text-base-950"
+            >
               The legislation is visible. The nondisclosing population is not.
             </p>
 
-            <p class="mt-5 text-sm leading-6 text-base-700">
+            <p class="mt-5 font-sans text-sm leading-6 text-base-700">
               Each framework creates a formal system. Each system activates only after an initiating act.
             </p>
           </aside>
@@ -167,17 +195,23 @@ const rowClass =
     </section>
 
     <section class="bg-white">
-      <Wrapper variant="standard" class="py-14 lg:py-20">
+      <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
         <div class="mx-auto max-w-4xl">
-          <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-500">
+          <p
+            class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500"
+          >
             Executive Summary
           </p>
 
-          <h2 class="mt-6 font-display text-3xl font-medium uppercase leading-tight tracking-tight text-base-950 sm:text-4xl">
+          <h2
+            class="mt-5 font-display text-3xl font-normal uppercase leading-tight tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-4xl"
+          >
             The paradox of legislative benefit instruments
           </h2>
 
-          <div class="mt-8 grid gap-6 text-lg leading-9 text-base-700">
+          <div
+            class="mt-7 grid gap-5 font-sans text-base leading-8 text-base-700 sm:mt-8 sm:text-lg sm:leading-9"
+          >
             <p>
               This index audits the current legislative landscape of workplace menopause benefits. Our analysis finds a consistent structural condition: legislative instruments are designed to activate only upon disclosure or clinical participation. For the population that has decided not to disclose to protect professional standing, these benefits function not as support, but as a system the population cannot activate.
             </p>
@@ -199,24 +233,34 @@ const rowClass =
     </section>
 
     <section class="bg-base-100">
-      <Wrapper variant="standard" class="py-14 lg:py-20">
+      <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
         <div>
-          <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-500">
+          <p
+            class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500"
+          >
             Column Definitions
           </p>
 
-          <h2 class="mt-6 max-w-4xl font-display text-3xl font-medium uppercase leading-tight tracking-tight text-base-950 sm:text-4xl">
+          <h2
+            class="mt-5 max-w-4xl font-display text-3xl font-normal uppercase leading-tight tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-4xl"
+          >
             How the tracker reads the legislative record
           </h2>
 
-          <dl class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <dl class="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 lg:grid-cols-4">
             {
               columnDefinitions.map(([term, definition]) => (
-                <div class="rounded-3xl border border-base-300 bg-white p-5 shadow-sm">
-                  <dt class="text-xs font-semibold uppercase tracking-[0.16em] text-base-950">
+                <div class="relative overflow-hidden rounded-2xl border border-base-400 bg-white p-5 shadow-lg ring-1 ring-base-950/5 lg:rounded-3xl">
+                  <div
+                    aria-hidden="true"
+                    class="absolute inset-x-0 top-0 h-1 bg-accent-500"
+                  >
+                  </div>
+
+                  <dt class="font-sans text-xs font-semibold uppercase tracking-[0.16em] text-base-950">
                     {term}
                   </dt>
-                  <dd class="mt-4 text-sm leading-6 text-base-700">
+                  <dd class="mt-4 font-sans text-sm leading-6 text-base-700">
                     {definition}
                   </dd>
                 </div>
@@ -228,22 +272,22 @@ const rowClass =
     </section>
 
     <section class="bg-base-50">
-      <Wrapper variant="wide" class="py-14 lg:py-20">
-        <div class="grid gap-16">
+      <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
+        <div class="grid gap-14 lg:gap-16">
           {
             standardSections.map((section) => {
               const id = sectionId(section.title);
 
               return (
                 <section aria-labelledby={id}>
-                  <div class="mb-8">
-                    <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-500">
+                  <div class="mb-6 sm:mb-8">
+                    <p class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500">
                       Legislative Record
                     </p>
 
                     <h2
                       id={id}
-                      class="mt-6 font-display text-3xl font-medium uppercase leading-tight tracking-tight text-base-950 sm:text-4xl"
+                      class="mt-5 font-display text-3xl font-normal uppercase leading-tight tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-4xl"
                     >
                       {section.title}
                     </h2>
@@ -300,15 +344,13 @@ const rowClass =
                                 </td>
 
                                 <td
-                                  class="border border-base-400 px-4 py-4 text-sm font-semibold leading-6"
+                                  class="border border-base-400 px-4 py-4 font-sans text-sm font-semibold leading-6"
                                   style={`color:${getStatusColor(row.status)};`}
                                 >
                                   {row.status}
                                 </td>
 
-                                <td class={tdMutedClass}>
-                                  {row.assumes}
-                                </td>
+                                <td class={tdMutedClass}>{row.assumes}</td>
 
                                 <td class={tdMutedClass}>
                                   {row.cannotMeasure}
@@ -334,9 +376,7 @@ const rowClass =
                                   )}
                                 </td>
 
-                                <td class={tdMutedClass}>
-                                  {row.notes}
-                                </td>
+                                <td class={tdMutedClass}>{row.notes}</td>
                               </tr>
                             );
                           })
@@ -344,20 +384,133 @@ const rowClass =
                       </tbody>
                     </table>
                   </div>
+
+                  <div class="grid gap-4 lg:hidden">
+                    {
+                      section.rows.map((row) => {
+                        const c = classification(row.classification);
+
+                        return (
+                          <article class={mobileCardClass}>
+                            <div
+                              aria-hidden="true"
+                              class="absolute inset-x-0 top-0 h-1 bg-accent-500"
+                            >
+                            </div>
+
+                            <div class="grid gap-5">
+                              <div>
+                                <p class={mobileLabelClass}>Jurisdiction</p>
+                                <p class="mt-1 font-sans text-base font-semibold leading-6 text-base-950">
+                                  {row.jurisdiction}
+                                </p>
+                              </div>
+
+                              <div>
+                                <p class={mobileLabelClass}>Bill</p>
+                                <p class={mobileValueClass}>
+                                  {row.url ? (
+                                    <a
+                                      href={row.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      class="font-semibold text-base-950 underline decoration-accent-500 underline-offset-4"
+                                    >
+                                      {row.bill}
+                                    </a>
+                                  ) : (
+                                    row.bill
+                                  )}
+                                </p>
+                              </div>
+
+                              <div class="grid gap-4 sm:grid-cols-2">
+                                <div>
+                                  <p class={mobileLabelClass}>Focus</p>
+                                  <span
+                                    class="mt-2 inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
+                                    style={focusStyle(row.focus)}
+                                  >
+                                    {row.focus}
+                                  </span>
+                                </div>
+
+                                <div>
+                                  <p class={mobileLabelClass}>Status</p>
+                                  <p
+                                    class="mt-2 font-sans text-sm font-semibold leading-6"
+                                    style={`color:${getStatusColor(row.status)};`}
+                                  >
+                                    {row.status}
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div>
+                                <p class={mobileLabelClass}>Policy Assumption</p>
+                                <p class={mobileValueClass}>{row.assumes}</p>
+                              </div>
+
+                              <div>
+                                <p class={mobileLabelClass}>
+                                  Governance Blind Spot
+                                </p>
+                                <p class={mobileValueClass}>
+                                  {row.cannotMeasure}
+                                </p>
+                              </div>
+
+                              <div>
+                                <p class={mobileLabelClass}>Classification</p>
+                                <div class="mt-2">
+                                  {c.href ? (
+                                    <a href={c.href} class="inline-flex no-underline">
+                                      <span
+                                        class="inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
+                                        style={classificationStyle(row.classification)}
+                                      >
+                                        {row.classification}
+                                      </span>
+                                    </a>
+                                  ) : (
+                                    <span
+                                      class="inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
+                                      style={classificationStyle(row.classification)}
+                                    >
+                                      {row.classification}
+                                    </span>
+                                  )}
+                                </div>
+                              </div>
+
+                              <div>
+                                <p class={mobileLabelClass}>
+                                  Legislative Outcome
+                                </p>
+                                <p class={mobileValueClass}>{row.notes}</p>
+                              </div>
+                            </div>
+                          </article>
+                        );
+                      })
+                    }
+                  </div>
                 </section>
               );
             })
           }
 
           <section aria-labelledby="did-not-pass">
-            <div class="mb-8">
-              <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-500">
+            <div class="mb-6 sm:mb-8">
+              <p
+                class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500"
+              >
                 Legislative Record
               </p>
 
               <h2
                 id="did-not-pass"
-                class="mt-6 font-display text-3xl font-medium uppercase leading-tight tracking-tight text-base-950 sm:text-4xl"
+                class="mt-5 font-display text-3xl font-normal uppercase leading-tight tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-4xl"
               >
                 Did Not Pass
               </h2>
@@ -381,9 +534,7 @@ const rowClass =
                   {
                     DID_NOT_PASS.map((row) => (
                       <tr class={rowClass}>
-                        <td class={tdStrongClass}>
-                          {row.jurisdiction}
-                        </td>
+                        <td class={tdStrongClass}>{row.jurisdiction}</td>
 
                         <td class={tdStrongClass}>
                           {row.url ? (
@@ -410,40 +561,116 @@ const rowClass =
                         </td>
 
                         <td
-                          class="border border-base-400 px-4 py-4 text-sm font-semibold leading-6"
+                          class="border border-base-400 px-4 py-4 font-sans text-sm font-semibold leading-6"
                           style={`color:${getStatusColor(row.status)};`}
                         >
                           {row.status}
                         </td>
 
-                        <td class={tdMutedClass}>
-                          {row.assumed}
-                        </td>
+                        <td class={tdMutedClass}>{row.assumed}</td>
 
-                        <td class={tdMutedClass}>
-                          {row.failureConfirms}
-                        </td>
+                        <td class={tdMutedClass}>{row.failureConfirms}</td>
 
-                        <td class={tdMutedClass}>
-                          {row.notes}
-                        </td>
+                        <td class={tdMutedClass}>{row.notes}</td>
                       </tr>
                     ))
                   }
                 </tbody>
               </table>
             </div>
+
+            <div class="grid gap-4 lg:hidden">
+              {
+                DID_NOT_PASS.map((row) => (
+                  <article class={mobileCardClass}>
+                    <div
+                      aria-hidden="true"
+                      class="absolute inset-x-0 top-0 h-1 bg-accent-500"
+                    >
+                    </div>
+
+                    <div class="grid gap-5">
+                      <div>
+                        <p class={mobileLabelClass}>Jurisdiction</p>
+                        <p class="mt-1 font-sans text-base font-semibold leading-6 text-base-950">
+                          {row.jurisdiction}
+                        </p>
+                      </div>
+
+                      <div>
+                        <p class={mobileLabelClass}>Bill</p>
+                        <p class={mobileValueClass}>
+                          {row.url ? (
+                            <a
+                              href={row.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="font-semibold text-base-950 underline decoration-accent-500 underline-offset-4"
+                            >
+                              {row.bill}
+                            </a>
+                          ) : (
+                            row.bill
+                          )}
+                        </p>
+                      </div>
+
+                      <div class="grid gap-4 sm:grid-cols-2">
+                        <div>
+                          <p class={mobileLabelClass}>Focus</p>
+                          <span
+                            class="mt-2 inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
+                            style={focusStyle(row.focus)}
+                          >
+                            {row.focus}
+                          </span>
+                        </div>
+
+                        <div>
+                          <p class={mobileLabelClass}>Status</p>
+                          <p
+                            class="mt-2 font-sans text-sm font-semibold leading-6"
+                            style={`color:${getStatusColor(row.status)};`}
+                          >
+                            {row.status}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div>
+                        <p class={mobileLabelClass}>Assumed</p>
+                        <p class={mobileValueClass}>{row.assumed}</p>
+                      </div>
+
+                      <div>
+                        <p class={mobileLabelClass}>Failure Confirms</p>
+                        <p class={mobileValueClass}>
+                          {row.failureConfirms}
+                        </p>
+                      </div>
+
+                      <div>
+                        <p class={mobileLabelClass}>Legislative Outcome</p>
+                        <p class={mobileValueClass}>{row.notes}</p>
+                      </div>
+                    </div>
+                  </article>
+                ))
+              }
+            </div>
           </section>
 
           <section aria-labelledby="advisory-instruments">
-            <div class="mb-8">
-              <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-500">
+            <div class="mb-6 sm:mb-8">
+              <p
+                class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500"
+              >
                 Non-Legislative Instruments
               </p>
 
               <h2
                 id="advisory-instruments"
-                class="mt-6 font-display text-3xl font-medium uppercase leading-tight tracking-tight text-base-950 sm:text-4xl"
+                class="mt-5 font-display text-3xl font-normal uppercase leading-tight tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-4xl"
               >
                 Advisory / Non-Legislative Instruments
               </h2>
@@ -470,9 +697,7 @@ const rowClass =
 
                       return (
                         <tr class={rowClass}>
-                          <td class={tdStrongClass}>
-                            {row.jurisdiction}
-                          </td>
+                          <td class={tdStrongClass}>{row.jurisdiction}</td>
 
                           <td class={tdStrongClass}>
                             {row.url ? (
@@ -499,15 +724,13 @@ const rowClass =
                           </td>
 
                           <td
-                            class="border border-base-400 px-4 py-4 text-sm font-semibold leading-6"
+                            class="border border-base-400 px-4 py-4 font-sans text-sm font-semibold leading-6"
                             style={`color:${getStatusColor(row.status)};`}
                           >
                             {row.status}
                           </td>
 
-                          <td class={tdMutedClass}>
-                            {row.structuralRole}
-                          </td>
+                          <td class={tdMutedClass}>{row.structuralRole}</td>
 
                           <td class={tdStrongClass}>
                             {c.href ? (
@@ -529,9 +752,7 @@ const rowClass =
                             )}
                           </td>
 
-                          <td class={tdMutedClass}>
-                            {row.notes}
-                          </td>
+                          <td class={tdMutedClass}>{row.notes}</td>
                         </tr>
                       );
                     })
@@ -539,19 +760,125 @@ const rowClass =
                 </tbody>
               </table>
             </div>
+
+            <div class="grid gap-4 lg:hidden">
+              {
+                ADVISORY.map((row) => {
+                  const c = classification(row.classification);
+
+                  return (
+                    <article class={mobileCardClass}>
+                      <div
+                        aria-hidden="true"
+                        class="absolute inset-x-0 top-0 h-1 bg-accent-500"
+                      >
+                      </div>
+
+                      <div class="grid gap-5">
+                        <div>
+                          <p class={mobileLabelClass}>Jurisdiction</p>
+                          <p class="mt-1 font-sans text-base font-semibold leading-6 text-base-950">
+                            {row.jurisdiction}
+                          </p>
+                        </div>
+
+                        <div>
+                          <p class={mobileLabelClass}>Instrument</p>
+                          <p class={mobileValueClass}>
+                            {row.url ? (
+                              <a
+                                href={row.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="font-semibold text-base-950 underline decoration-accent-500 underline-offset-4"
+                              >
+                                {row.instrument}
+                              </a>
+                            ) : (
+                              row.instrument
+                            )}
+                          </p>
+                        </div>
+
+                        <div class="grid gap-4 sm:grid-cols-2">
+                          <div>
+                            <p class={mobileLabelClass}>Focus</p>
+                            <span
+                              class="mt-2 inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
+                              style={focusStyle(row.focus)}
+                            >
+                              {row.focus}
+                            </span>
+                          </div>
+
+                          <div>
+                            <p class={mobileLabelClass}>Status</p>
+                            <p
+                              class="mt-2 font-sans text-sm font-semibold leading-6"
+                              style={`color:${getStatusColor(row.status)};`}
+                            >
+                              {row.status}
+                            </p>
+                          </div>
+                        </div>
+
+                        <div>
+                          <p class={mobileLabelClass}>Structural Role</p>
+                          <p class={mobileValueClass}>
+                            {row.structuralRole}
+                          </p>
+                        </div>
+
+                        <div>
+                          <p class={mobileLabelClass}>Classification</p>
+                          <div class="mt-2">
+                            {c.href ? (
+                              <a href={c.href} class="inline-flex no-underline">
+                                <span
+                                  class="inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
+                                  style={classificationStyle(row.classification)}
+                                >
+                                  {row.classification}
+                                </span>
+                              </a>
+                            ) : (
+                              <span
+                                class="inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
+                                style={classificationStyle(row.classification)}
+                              >
+                                {row.classification}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+
+                        <div>
+                          <p class={mobileLabelClass}>Legislative Outcome</p>
+                          <p class={mobileValueClass}>{row.notes}</p>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })
+              }
+            </div>
           </section>
         </div>
       </Wrapper>
     </section>
 
     <section class="bg-white">
-      <Wrapper variant="standard" class="py-14 lg:py-20">
+      <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
         <div class="mx-auto max-w-4xl">
-          <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-500">
+          <p
+            class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500"
+          >
             Closing Analysis
           </p>
 
-          <div class="mt-8 grid gap-6 text-lg leading-9 text-base-700">
+          <div
+            class="mt-7 grid gap-5 font-sans text-base leading-8 text-base-700 sm:mt-8 sm:text-lg sm:leading-9"
+          >
             <p>
               The pattern across every entry in this table is consistent with the framework this site has developed across its policy series. Each law creates a formal system. Each formal system activates at the point of participation. The population that has already decided participation carries more professional risk than it returns is not reflected in the utilization data, the leave records, the accommodation requests, or the workforce study findings any of these laws will produce.
             </p>
