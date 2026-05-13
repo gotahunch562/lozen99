@@ -21,29 +21,36 @@ const quickLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-// Sets link color based on current path
 const currentPath = Astro.url.pathname;
+
+const isActiveLink = (href: string) =>
+  currentPath === href || currentPath.startsWith(`${href}/`);
 ---
 
 <header class="fixed top-0 z-50 w-full">
   <Wrapper variant="standard" class="py-2">
     <nav
-      class="flex items-center justify-between p-4 shadow-xl bg-base-900/60 outline-4 outline-base-500/5 backdrop-blur-xl rounded-xl"
+      class="flex items-center justify-between gap-4 rounded-xl bg-base-900/70 p-3 shadow-xl outline-4 outline-base-500/5 backdrop-blur-xl sm:p-4"
+      aria-label="Primary navigation"
     >
-      <a href="/" aria-label="Go to Lozen Advisory home page">
-        <Logo class="text-lg font-medium text-white uppercase font-display" />
+      <a
+        href="/"
+        class="min-w-0 shrink-0"
+        aria-label="Go to Lozen Advisory home page"
+      >
+        <Logo class="text-base font-normal text-white uppercase font-display sm:text-lg" />
       </a>
 
-      <div class="items-center hidden lg:flex gap-8">
+      <div class="hidden items-center gap-8 lg:flex">
         {
           quickLinks.map((link) => (
             <a
               href={link.href}
               class:list={[
                 "text-sm font-medium transition-colors duration-200",
-                currentPath.startsWith(link.href)
+                isActiveLink(link.href)
                   ? "text-accent-400"
-                  : "text-white hover:text-white",
+                  : "text-white/85 hover:text-white",
               ]}
             >
               {link.label}
@@ -52,10 +59,12 @@ const currentPath = Astro.url.pathname;
         }
       </div>
 
-      <div class="flex items-center gap-2">
-        <Button isLink size="xs" variant="accent" href="/book-appointment">
-          Request Briefing
-        </Button>
+      <div class="flex shrink-0 items-center gap-2">
+        <div class="hidden lg:block">
+          <Button isLink size="xs" variant="accent" href="/request-briefing">
+            Request Briefing
+          </Button>
+        </div>
 
         <Button
           iconOnly
@@ -65,6 +74,7 @@ const currentPath = Astro.url.pathname;
           type="button"
           class="lg:hidden"
           aria-label="Toggle menu"
+          aria-controls="mobile-menu"
           aria-expanded="false"
         >
           <Burger slot="icon" id="menu-icon-open" size="sm" />
