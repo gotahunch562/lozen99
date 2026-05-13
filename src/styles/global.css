@@ -8,7 +8,16 @@
   --font-display: "Playfair Display", serif;
   --font-sans: "DM Sans", sans-serif;
 
-  /* Accent */
+  /*
+    Lozen Advisory blue-system experiment
+
+    Direction:
+    - Base system moves from gray/black to institutional blue.
+    - Accent system stays yellow for CTA visibility and conversion contrast.
+    - This preserves the bright Request Briefing button instead of turning every CTA blue.
+  */
+
+  /* Accent: keep current yellow conversion accent */
   --color-accent-50: oklch(0.98 0.053 103.86);
   --color-accent-100: oklch(0.961 0.121 104.91);
   --color-accent-200: oklch(0.925 0.172 106.44);
@@ -21,38 +30,44 @@
   --color-accent-900: oklch(0.275 0.051 105.99);
   --color-accent-950: oklch(0.205 0.037 104.42);
 
-  /* Base */
-  --color-base-50: oklch(0.985 0.002 247.839);
-  --color-base-100: oklch(0.967 0.003 264.542);
-  --color-base-200: oklch(0.928 0.006 264.531);
-  --color-base-300: oklch(0.872 0.01 258.338);
-  --color-base-400: oklch(0.707 0.022 261.325);
-  --color-base-500: oklch(0.551 0.027 264.364);
-  --color-base-600: oklch(0.446 0.03 256.802);
-  --color-base-700: oklch(0.373 0.034 259.733);
-  --color-base-800: oklch(0.278 0.033 256.848);
-  --color-base-900: oklch(0.21 0.034 264.665);
-  --color-base-950: oklch(0.13 0.028 261.692);
+  /* Base: dark blue institutional foundation */
+  --color-base-50: #f7fbff;
+  --color-base-100: #e1f1fd;
+  --color-base-200: #d2deeb;
+  --color-base-300: #c8d9ed;
+  --color-base-400: #c1d8f0;
+  --color-base-500: #7f9ab5;
+  --color-base-600: #466171;
+  --color-base-700: #00415a;
+  --color-base-800: #003344;
+  --color-base-900: #002938;
+  --color-base-950: #001f2b;
 
-  /* Lozen blue tokens for later selective use */
-  --color-lozen-blue-300: #8ab6e8;
-  --color-lozen-blue-500: #5a9bd4;
-  --color-lozen-blue-700: #3b80b6;
+  /* Supplemental Lozen blue tokens for later selective use */
+  --color-lozen-blue-50: #f7fbff;
+  --color-lozen-blue-100: #e1f1fd;
+  --color-lozen-blue-200: #d2deeb;
+  --color-lozen-blue-300: #c8d9ed;
+  --color-lozen-blue-400: #c1d8f0;
+  --color-lozen-blue-500: #4663ac;
+  --color-lozen-blue-700: #00415a;
+  --color-lozen-blue-950: #001f2b;
 
-  /* Shadows */
-  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 8px 10px -6px rgba(0, 0, 0, 0.1);
-  --shadow-2xl: 0px 6.6px 4.7px 0px rgba(26, 43, 59, 0.07),
-    0px 16.7px 11.8px 0px rgba(26, 43, 59, 0.1),
-    0px 34px 24.1px 0px rgba(26, 43, 59, 0.13),
-    0px 70px 49.6px 0px rgba(26, 43, 59, 0.16),
-    0px 192px 136px 0px rgba(26, 43, 59, 0.23);
+  /* Shadows: blue-black shadow system */
+  --shadow: 0 1px 3px 0 rgba(0, 31, 43, 0.1),
+    0 1px 2px -1px rgba(0, 31, 43, 0.1);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 31, 43, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 31, 43, 0.11),
+    0 2px 4px -2px rgba(0, 31, 43, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 31, 43, 0.12),
+    0 4px 6px -4px rgba(0, 31, 43, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 31, 43, 0.14),
+    0 8px 10px -6px rgba(0, 31, 43, 0.1);
+  --shadow-2xl: 0px 6.6px 4.7px 0px rgba(0, 31, 43, 0.07),
+    0px 16.7px 11.8px 0px rgba(0, 31, 43, 0.1),
+    0px 34px 24.1px 0px rgba(0, 31, 43, 0.13),
+    0px 70px 49.6px 0px rgba(0, 31, 43, 0.16),
+    0px 192px 136px 0px rgba(0, 31, 43, 0.23);
 }
 
 /* Lozen long-form page/article system */
@@ -106,7 +121,7 @@
 }
 
 .lozen-article__body a {
-  color: var(--color-accent-600);
+  color: var(--color-accent-700);
   text-decoration: underline;
   text-underline-offset: 0.2em;
   transition: color 180ms ease;
@@ -134,7 +149,7 @@
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 0.9;
   color: var(--color-accent-500);
-  opacity: 0.65;
+  opacity: 0.75;
 }
 
 .lozen-article__rule {
@@ -174,7 +189,7 @@
 }
 
 .lozen-article__quote-band {
-  background: var(--color-base-900);
+  background: var(--color-base-950);
 }
 
 .lozen-article__quote-band p {
@@ -219,7 +234,7 @@
   font-family: var(--font-sans);
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--color-accent-600);
+  color: var(--color-accent-700);
   transition: color 180ms ease;
 }
 
