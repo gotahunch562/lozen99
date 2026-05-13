@@ -1,96 +1,105 @@
 ---
-// Fundations
-import Text from "@/components/fundations/elements/Text.astro";
+// Foundations
+import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-const features = [
+const trackerRows = [
   {
-    title: "Your benefits data shows low utilization.",
-    description:
-      "That is not the finding. It is the failure of the collection condition. The system was never entered, so the data required to measure need, risk, and cost was never created.",
-    icon: "collection-condition",
+    jurisdiction: "Virginia",
+    instrument: "SB258 / HB1173",
+    classification: "Dashboard Delay",
   },
   {
-    title: "You expanded benefits. Confidence still dropped.",
-    description:
-      "The gap between what you offer and what gets used is not a communications problem. It is a measurement problem with a cost your current reporting cannot isolate.",
-    icon: "measurement-gap",
+    jurisdiction: "Rhode Island",
+    instrument: "S0361",
+    classification: "Tacere",
   },
   {
-    title: "Market intelligence. Executive briefings. Ongoing advisory.",
-    description:
-      "Lozen Advisory works with leadership teams evaluating menopause benefits strategy, utilization gaps, and disclosure-dependent measurement risk.",
-    icon: "advisory",
-  },
-  {
-    title: "Your benefits architecture depends on a collection condition it cannot consistently produce.",
-    description:
-      "The cost appears elsewhere: attrition data, succession gaps, performance strain, and leadership-capacity loss. None of those records are labeled correctly.",
-    icon: "architecture",
+    jurisdiction: "Illinois",
+    instrument: "HB5284",
+    classification: "Tacere",
   },
 ];
 ---
 
-<section class="bg-gradient-to-t from-base-200 to-white">
-  <Wrapper variant="standard" class="py-20 lg:py-24">
-    <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-3">
-      <div>
-        <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-        >
-          How We Can Help
-        </Text>
+<section class="bg-gradient-to-b from-base-950 to-base-900 text-white">
+  <Wrapper variant="standard" class="py-16 lg:py-24">
+    <div class="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-2xl ring-1 ring-white/10">
+      <div class="grid gap-0 lg:grid-cols-[minmax(0,0.86fr)_minmax(340px,0.64fr)]">
+        <div class="p-8 sm:p-10 lg:p-14">
+          <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-300">
+            Policy & Governance Tool
+          </p>
 
-        <Text
-          tag="h2"
-          variant="displayMD"
-          class="mt-8 uppercase font-display text-base-900"
-        >
-          Why Lozen <br /> Advisory
-        </Text>
+          <h2 class="mt-8 max-w-4xl font-display text-3xl font-medium uppercase leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-5xl">
+            Menopause legislation is visible. The nondisclosing population is not.
+          </h2>
 
-        <Text
-          tag="p"
-          variant="textBase"
-          class="mt-4 text-base-600 text-balance"
-        >
-          Lozen Advisory brings research, data analysis, and risk expertise to one of the most undercounted problems in workforce strategy. Menopause at work is generating costs that standard benefits reporting was not designed to capture. We know where to look and what it means for your organization.
-        </Text>
-      </div>
+          <p class="mt-6 max-w-3xl text-base leading-8 text-base-200 sm:text-lg">
+            The Menopause Legislation Tracker classifies state and federal policy instruments by the assumptions they require, the systems they activate, and the women they cannot reach.
+          </p>
 
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2">
-        {
-          features.map((feature) => (
-            <div class="flex min-h-[280px] flex-col justify-between rounded-3xl bg-base-50 p-8 shadow-xl outline outline-1 outline-base-500/10 transition-transform duration-300 hover:-translate-y-1">
-              <div>
-                <Text
-                  tag="h3"
-                  variant="textBase"
-                  class="pl-4 text-lg font-medium leading-snug uppercase border-l-2 font-display text-base-900 border-accent-500"
-                >
-                  {feature.title}
-                </Text>
+          <p class="mt-5 max-w-3xl text-base leading-8 text-base-200 sm:text-lg">
+            This is not a bill list. It is a governance audit of disclosure-dependent policy design.
+          </p>
 
-                <Text
-                  tag="p"
-                  variant="textBase"
-                  class="mt-5 text-base-600 leading-7 text-balance"
-                >
-                  {feature.description}
-                </Text>
-              </div>
+          <div class="mt-8">
+            <Button
+              isLink
+              href="/menopause-legislation-tracker"
+              variant="accent"
+              size="xs"
+            >
+              View the Legislation Tracker
+            </Button>
+          </div>
+        </div>
 
-              <a
-                href="/contact"
-                class="mt-8 inline-flex text-sm font-medium text-accent-600 transition-colors hover:text-base-900"
-              >
-                Contact Lozen Advisory →
-              </a>
+        <aside class="border-t border-white/10 bg-base-50 p-6 text-base-950 sm:p-8 lg:border-l lg:border-t-0 lg:p-10">
+          <div class="rounded-3xl border-2 border-base-500 bg-white shadow-lg ring-1 ring-base-950/10">
+            <div class="border-b border-base-400 bg-base-950 px-5 py-4">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-white">
+                Legislative Record
+              </p>
             </div>
-          ))
-        }
+
+            <div class="grid grid-cols-3 border-b border-base-400 bg-base-100 px-5 py-3 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-800">
+              <span>Jurisdiction</span>
+              <span>Instrument</span>
+              <span>Classification</span>
+            </div>
+
+            <div>
+              {
+                trackerRows.map((row) => (
+                  <div class="grid grid-cols-3 gap-3 border-b border-base-300 px-5 py-4 text-sm last:border-b-0 odd:bg-white even:bg-base-100">
+                    <span class="font-semibold text-base-950">
+                      {row.jurisdiction}
+                    </span>
+
+                    <span class="text-base-700">
+                      {row.instrument}
+                    </span>
+
+                    <span class="inline-flex w-fit rounded-full border border-accent-500 bg-accent-50 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-base-950">
+                      {row.classification}
+                    </span>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+
+          <div class="mt-5 rounded-3xl border border-base-300 bg-base-100 p-5">
+            <p class="text-xs font-medium uppercase tracking-[0.16em] text-base-600">
+              What the tracker measures
+            </p>
+
+            <p class="mt-4 text-sm leading-6 text-base-800">
+              Policy assumption, governance blind spot, activation condition, legislative outcome, and Lozen classification.
+            </p>
+          </div>
+        </aside>
       </div>
     </div>
   </Wrapper>
