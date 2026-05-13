@@ -9,15 +9,16 @@
   --font-sans: "DM Sans", sans-serif;
 
   /*
-    Lozen Advisory blue-system experiment
+    Lozen Advisory institutional navy system
 
     Direction:
-    - Base system moves from gray/black to institutional blue.
-    - Accent system stays yellow for CTA visibility and conversion contrast.
-    - This preserves the bright Request Briefing button instead of turning every CTA blue.
+    - Base system moves away from teal-blue and into a true navy foundation.
+    - Hero navy is now aligned with --color-base-950.
+    - Accent system remains yellow for CTA visibility and conversion contrast.
+    - This avoids the green/teal cast created by #001f2b while preserving a dark institutional look.
   */
 
-  /* Accent: keep current yellow conversion accent */
+  /* Accent: yellow conversion accent */
   --color-accent-50: oklch(0.98 0.053 103.86);
   --color-accent-100: oklch(0.961 0.121 104.91);
   --color-accent-200: oklch(0.925 0.172 106.44);
@@ -30,44 +31,47 @@
   --color-accent-900: oklch(0.275 0.051 105.99);
   --color-accent-950: oklch(0.205 0.037 104.42);
 
-  /* Base: dark blue institutional foundation */
-  --color-base-50: #f7fbff;
-  --color-base-100: #e1f1fd;
-  --color-base-200: #d2deeb;
-  --color-base-300: #c8d9ed;
-  --color-base-400: #c1d8f0;
-  --color-base-500: #7f9ab5;
-  --color-base-600: #466171;
-  --color-base-700: #00415a;
-  --color-base-800: #003344;
-  --color-base-900: #002938;
-  --color-base-950: #001f2b;
+  /* Base: institutional navy foundation */
+  --color-base-50: #f7f9fc;
+  --color-base-100: #e9eef6;
+  --color-base-200: #d8e1ee;
+  --color-base-300: #bdcadb;
+  --color-base-400: #8fa2bb;
+  --color-base-500: #637b98;
+  --color-base-600: #425873;
+  --color-base-700: #263e5f;
+  --color-base-800: #14294a;
+  --color-base-900: #0b1f3d;
+  --color-base-950: #06172f;
 
-  /* Supplemental Lozen blue tokens for later selective use */
-  --color-lozen-blue-50: #f7fbff;
-  --color-lozen-blue-100: #e1f1fd;
-  --color-lozen-blue-200: #d2deeb;
-  --color-lozen-blue-300: #c8d9ed;
-  --color-lozen-blue-400: #c1d8f0;
+  /* Supplemental Lozen blue tokens for selective use */
+  --color-lozen-blue-50: #f7f9fc;
+  --color-lozen-blue-100: #e9eef6;
+  --color-lozen-blue-200: #d8e1ee;
+  --color-lozen-blue-300: #bdcadb;
+  --color-lozen-blue-400: #8fa2bb;
   --color-lozen-blue-500: #4663ac;
-  --color-lozen-blue-700: #00415a;
-  --color-lozen-blue-950: #001f2b;
+  --color-lozen-blue-600: #38528f;
+  --color-lozen-blue-700: #263e5f;
+  --color-lozen-blue-800: #14294a;
+  --color-lozen-blue-900: #0b1f3d;
+  --color-lozen-blue-950: #06172f;
 
-  /* Shadows: blue-black shadow system */
-  --shadow: 0 1px 3px 0 rgba(0, 31, 43, 0.1),
-    0 1px 2px -1px rgba(0, 31, 43, 0.1);
-  --shadow-sm: 0 1px 2px 0 rgba(0, 31, 43, 0.1);
-  --shadow-md: 0 4px 6px -1px rgba(0, 31, 43, 0.11),
-    0 2px 4px -2px rgba(0, 31, 43, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 31, 43, 0.12),
-    0 4px 6px -4px rgba(0, 31, 43, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 31, 43, 0.14),
-    0 8px 10px -6px rgba(0, 31, 43, 0.1);
-  --shadow-2xl: 0px 6.6px 4.7px 0px rgba(0, 31, 43, 0.07),
-    0px 16.7px 11.8px 0px rgba(0, 31, 43, 0.1),
-    0px 34px 24.1px 0px rgba(0, 31, 43, 0.13),
-    0px 70px 49.6px 0px rgba(0, 31, 43, 0.16),
-    0px 192px 136px 0px rgba(0, 31, 43, 0.23);
+  /* Shadows: navy-black shadow system */
+  --shadow: 0 1px 3px 0 rgba(6, 23, 47, 0.1),
+    0 1px 2px -1px rgba(6, 23, 47, 0.1);
+  --shadow-sm: 0 1px 2px 0 rgba(6, 23, 47, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(6, 23, 47, 0.11),
+    0 2px 4px -2px rgba(6, 23, 47, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(6, 23, 47, 0.12),
+    0 4px 6px -4px rgba(6, 23, 47, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(6, 23, 47, 0.14),
+    0 8px 10px -6px rgba(6, 23, 47, 0.1);
+  --shadow-2xl: 0px 6.6px 4.7px 0px rgba(6, 23, 47, 0.07),
+    0px 16.7px 11.8px 0px rgba(6, 23, 47, 0.1),
+    0px 34px 24.1px 0px rgba(6, 23, 47, 0.13),
+    0px 70px 49.6px 0px rgba(6, 23, 47, 0.16),
+    0px 192px 136px 0px rgba(6, 23, 47, 0.23);
 }
 
 /* Lozen long-form page/article system */
