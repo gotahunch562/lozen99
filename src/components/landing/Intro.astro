@@ -4,24 +4,28 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const introSections = [
   {
+    title: "Low Utilization Is Not a Communication Failure",
+    description:
+      "The collection condition was never met. The women this benefit was built for never entered the system. The data was never created because the condition was never triggered.",
+    href: "/contact",
+  },
+  {
     title: "You Are Measuring What Gets Reported",
     description:
-      "When a senior woman never files a claim, never flags a performance issue, and never requests an accommodation, your data shows no problem. The cost is running anyway.",
+      "When a woman never files a claim, never flags a performance issue, and never requests an accommodation, your data shows no problem. The cost does not stop because the data did.",
+    href: "/contact",
   },
   {
     title: "The Exit You Did Not See Coming",
     description:
-      "Senior women leave at higher rates due to menopause symptoms than any other group — yet they are the least likely to have used a single benefit you offered. That gap is not a communications problem.",
+      "Senior women are navigating menopause without using a single benefit you offered. The exit that follows will not be labeled correctly in your data either.",
+    href: "/contact",
   },
   {
-    title: "You Have a Moment Coming",
+    title: "Your Highest Performers Are Outside the Report",
     description:
-      "A review. A promotion decision. A presentation that will be remembered. You know exactly what is at stake and what you will not say. The MAPS Blueprint℠ is a 90-minute private session built around that moment, your role, and your constraints.",
-  },
-  {
-    title: "You Do Not Have to Explain It to Work on It",
-    description:
-      "The session does not require you to name what is happening. It requires only that you know what is coming and want to be ready for it. You leave with one clear position and exactly how to execute it.",
+      "AI is concentrating output in your most capable people. That group is also the least likely to file a claim, request an accommodation, or appear in a benefits report. Your best investment is running without a net, and your data does not show it.",
+    href: "/contact",
   },
 ];
 ---
@@ -36,7 +40,7 @@ const introSections = [
           </p>
 
           <h2 class="mt-6 max-w-5xl font-display text-3xl font-medium uppercase leading-[1.08] tracking-tight text-base-950 sm:text-4xl lg:text-5xl">
-            Low benefits utilization?
+            Your benefits data shows low utilization because your benefits package requires disclosure.
           </h2>
         </div>
 
@@ -48,7 +52,7 @@ const introSections = [
       <div class="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
         {
           introSections.map((section) => (
-            <article class="group flex min-h-[18rem] flex-col justify-end rounded-3xl border border-base-300 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-400 hover:bg-base-100 hover:shadow-md">
+            <article class="group flex min-h-[20rem] flex-col justify-between rounded-3xl border border-base-300 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-400 hover:bg-base-100 hover:shadow-md">
               <div>
                 <div class="mb-6 h-10 w-px bg-accent-500"></div>
 
@@ -60,6 +64,13 @@ const introSections = [
                   {section.description}
                 </p>
               </div>
+
+              <a
+                href={section.href}
+                class="mt-8 inline-flex text-sm font-semibold text-accent-700 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-base-950"
+              >
+                Contact Lozen Advisory →
+              </a>
             </article>
           ))
         }
