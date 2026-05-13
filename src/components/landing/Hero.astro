@@ -11,28 +11,26 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
   <div class="absolute inset-0 overflow-hidden lg:m-4 lg:rounded-3xl">
     <div
       aria-hidden="true"
-      class="absolute inset-0 bg-[url('/images/herobg.webp')] bg-cover bg-center"
+      class="absolute inset-0 z-0 bg-[url('/images/herobg.webp')] bg-cover bg-center"
     >
     </div>
 
     <div
       aria-hidden="true"
-      class="absolute inset-0 pointer-events-none"
-      style="background-color: rgba(0, 31, 43, 0.62);"
+      class="absolute inset-0 z-10 pointer-events-none bg-[#001f2b]/80"
     >
     </div>
 
     <div
       aria-hidden="true"
-      class="absolute inset-0 pointer-events-none"
-      style="background: linear-gradient(to bottom, rgba(0, 31, 43, 0.42), rgba(0, 41, 56, 0.24), rgba(0, 31, 43, 0.72));"
+      class="absolute inset-0 z-20 pointer-events-none bg-gradient-to-b from-[#001f2b]/50 via-transparent to-[#001f2b]/85"
     >
     </div>
   </div>
 
   <Wrapper
     variant="standard"
-    class="relative z-10 flex h-full min-h-[44rem] items-center py-28 lg:min-h-0 lg:py-0"
+    class="relative z-30 flex h-full min-h-[44rem] items-center py-28 lg:min-h-0 lg:py-0"
   >
     <div class="mx-auto max-w-[88rem] text-center">
       <h1 class="mx-auto max-w-7xl text-center text-[2.15rem] font-normal leading-[1.18] tracking-[-0.035em] text-white [font-family:'Tenor_Sans',sans-serif] [text-shadow:0_2px_18px_rgba(0,31,43,0.95)] sm:text-[2.35rem] lg:text-[2.625rem]">
