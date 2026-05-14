@@ -1,75 +1,361 @@
 ---
-// Assets
 import { Image } from "astro:assets";
-import carFront from "@/images/assets/carFront.jpg";
-// Fundations
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-// Compoennts
-import ServiceCard from "@/components/services/ServiceCard.astro";
-// Content
-import { getCollection } from "astro:content";
-const allServices = await getCollection("services");
+import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+import servicePlaceholder from "@/images/services/serviceplaceholder.webp";
+
+const title = "Services | Lozen Advisory";
+const description =
+  "Lozen Advisory helps organizations see the risks their current systems are not built to detect.";
+
+const services = [
+  {
+    title: "Market Intelligence",
+    href: "/services/market-intelligence",
+    description:
+      "Research and analysis on disclosure-dependent workforce risk, menopause-at-work benefits utilization, AI implementation burden, and the business consequences of undercounted need.",
+  },
+  {
+    title: "Executive Briefing",
+    href: "/services/executive-briefing",
+    description:
+      "A focused advisory session for leadership teams that need clarity before a hidden issue becomes a visible crisis.",
+  },
+  {
+    title: "Advisory Engagement",
+    href: "/services/advisory-engagement",
+    description:
+      "Ongoing counsel on non-disclosure infrastructure, benefits strategy, AI governance, retention risk, leadership continuity, and reputational exposure.",
+  },
+  {
+    title: "Crisis, Reputation, and Workforce Risk",
+    href: "/services/crisis-reputation-workforce-risk",
+    description:
+      "Support for organizations facing sensitive workforce issues where incomplete data, low utilization, leadership exits, or AI implementation burden may create operational or reputational consequences.",
+  },
+];
 ---
 
-<BaseLayout>
-  <section
-    class="relative lg:h-[calc(100vh-9rem)] w-full overflow-hidden lg:p-8 bg-white"
-  >
-    <div class="absolute inset-0 overflow-hidden lg:m-4 lg:rounded-3xl">
-      <Image
-        src={carFront}
-        alt="Car service background"
-        class="object-cover size-full"
-        width={1920}
-        height={1080}
-        class="object-cover object-center size-full"
-      />
-
-      <div
-        aria-hidden="true"
-        class="absolute inset-0 pointer-events-none bg-gradient-to-b from-base-900/70 via-base-900/50 to-base-900/90"
+<BaseLayout title={title} description={description}>
+  <main class="bg-white">
+    <section class="border-b border-base-200 bg-white">
+      <Wrapper
+        variant="standard"
+        class="pt-28 pb-10 sm:pt-32 sm:pb-12 lg:pt-36 lg:pb-14"
       >
-      </div>
-    </div>
-    <Wrapper
-      variant="standard"
-      class="relative z-10 flex flex-col justify-start h-full pt-32 pb-12"
-    >
-      <div class="max-w-xl">
-        <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium text-white uppercase border-l font-display border-accent-600"
-        >
-          Our Premium Services
-        </Text>
-        <Text
-          tag="h1"
-          variant="displayLG"
-          class="mt-8 text-white uppercase font-display text-balance"
-        >
-          Exceptional service for every vehicle
-        </Text>
-        <Text
-          tag="p"
-          variant="textBase"
-          class="mt-4 text-base-300 text-balance"
-        >
-          We offer a comprehensive range of automotive services designed to keep
-          your vehicle running at its best. From routine maintenance to complex
-          repairs, our expert team has you covered.
-        </Text>
-      </div>
-    </Wrapper>
-  </section>
+        <div class="mx-auto max-w-7xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
+          >
+            Services
+          </Text>
 
-  <section>
-    <Wrapper variant="standard" class="py-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {allServices.map((service) => <ServiceCard service={service} />)}
-      </div>
-    </Wrapper>
-  </section>
+          <Text
+            tag="h1"
+            variant="displayLG"
+            class="mt-8 max-w-4xl font-display font-normal uppercase leading-[1.02] tracking-[-0.04em] text-base-950"
+          >
+            What We Do
+          </Text>
+
+          <Text
+            tag="p"
+            variant="textLG"
+            class="mt-5 max-w-3xl font-sans leading-8 text-base-700"
+          >
+            Lozen Advisory helps organizations see the risks their current systems are not built to detect.
+          </Text>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-white">
+      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
+        <div
+          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.78fr)_minmax(420px,0.68fr)] lg:gap-20"
+        >
+          <div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+            >
+              Where visible systems stop short.
+            </Text>
+          </div>
+
+          <div class="max-w-2xl font-sans text-base leading-8 text-base-700 sm:text-lg sm:leading-9">
+            <p>
+              We work with leadership teams when benefits utilization is low, retention risk is unclear, succession exposure is underestimated, AI implementation burden is hidden, or a workforce issue is beginning to carry reputational, operational, or governance consequences.
+            </p>
+
+            <p class="mt-5">
+              The problem is rarely the absence of data. Most organizations already have dashboards, benefits reports, HR records, engagement surveys, productivity metrics, AI adoption data, and retention analysis. The problem is that those systems often measure only what becomes visible.
+            </p>
+
+            <p class="mt-5">
+              That creates false confidence.
+            </p>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-white">
+      <Wrapper variant="standard" class="pb-14 sm:pb-16 lg:pb-24">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-8 border-t border-base-200 pt-10 sm:mb-10">
+            <Text
+              tag="h2"
+              variant="displayXS"
+              class="font-display font-normal uppercase tracking-[-0.02em] text-base-950"
+            >
+              Services
+            </Text>
+          </div>
+
+          <div class="grid gap-x-12 gap-y-14 md:grid-cols-2">
+            {
+              services.map((service) => (
+                <article class="group">
+                  <a href={service.href} class="block no-underline">
+                    <div class="aspect-[16/9] overflow-hidden bg-base-100">
+                      <Image
+                        src={servicePlaceholder}
+                        alt=""
+                        class="size-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div class="pt-6">
+                      <div class="flex items-start justify-between gap-6">
+                        <Text
+                          tag="h3"
+                          variant="displayXS"
+                          class="font-display font-normal uppercase leading-tight tracking-[-0.015em] text-base-950 transition-colors duration-300 group-hover:text-accent-700"
+                        >
+                          {service.title}
+                        </Text>
+
+                        <span
+                          aria-hidden="true"
+                          class="mt-1 shrink-0 font-sans text-xl leading-none text-base-950 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-accent-700"
+                        >
+                          →
+                        </span>
+                      </div>
+
+                      <Text
+                        tag="p"
+                        variant="textBase"
+                        class="mt-4 max-w-xl font-sans leading-7 text-base-700"
+                      >
+                        {service.description}
+                      </Text>
+                    </div>
+                  </a>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="border-y border-base-200 bg-base-50">
+      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
+        <div
+          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.75fr)_minmax(360px,0.5fr)] lg:items-start lg:gap-20"
+        >
+          <div>
+            <Text
+              tag="span"
+              variant="textSM"
+              class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
+            >
+              Framework
+            </Text>
+
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="mt-5 max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+            >
+              Tacere: The Framework
+            </Text>
+
+            <div class="mt-6 max-w-3xl font-sans text-base leading-8 text-base-700 sm:text-lg sm:leading-9">
+              <p>
+                The employee who never files a claim, never requests an accommodation, and never flags a performance issue is not absent from your workforce.
+              </p>
+
+              <p class="mt-5">
+                They are present, performing, and keeping their own counsel.
+              </p>
+
+              <p class="mt-5">
+                Tacere names that practice and explains what it costs when organizations rely on systems that can only see employees after they disclose, request, or report.
+              </p>
+
+              <p class="mt-5">
+                Download the Tacere paper to understand the framework
+              </p>
+            </div>
+          </div>
+
+          <aside
+            id="tacere-download"
+            class="border-l border-accent-500 pl-6 lg:mt-2"
+          >
+            <Text
+              tag="h3"
+              variant="displayXS"
+              class="font-display font-normal uppercase leading-tight tracking-[-0.02em] text-base-950"
+            >
+              Download the Tacere Paper →
+            </Text>
+
+            <Text
+              tag="p"
+              variant="textBase"
+              class="mt-4 max-w-sm font-sans leading-7 text-base-700"
+            >
+              Enter your email to receive the download link.
+            </Text>
+
+            <div class="mt-6 rounded-xl border border-dashed border-base-300 bg-white p-5">
+              <Text
+                tag="p"
+                variant="textSM"
+                class="font-sans leading-6 text-base-500"
+              >
+                MailerLite embedded form goes here.
+              </Text>
+            </div>
+          </aside>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-white">
+      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
+        <div
+          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(420px,0.68fr)] lg:gap-20"
+        >
+          <div>
+            <Text
+              tag="span"
+              variant="textSM"
+              class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
+            >
+              Private Advisory
+            </Text>
+
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="mt-5 max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+            >
+              The MAPS Blueprint℠
+            </Text>
+          </div>
+
+          <div class="max-w-2xl font-sans text-base leading-8 text-base-700 sm:text-lg sm:leading-9">
+            <p>
+              The MAPS Blueprint℠ is the private advisory session for the woman executive.
+            </p>
+
+            <p class="mt-5">
+              It belongs on this page because Lozen Advisory works both sides of the same structural problem. Organizations need to understand the risk their systems cannot see. Women executives need to protect themselves inside those systems before a professional record is created.
+            </p>
+
+            <p class="mt-5">
+              The MAPS Blueprint℠ is for the woman approaching a visible professional moment: a review, a promotion decision, a leadership transition, a difficult performance cycle, a return from leave, or a situation where disclosure may create a record she cannot control.
+            </p>
+
+            <p class="mt-5">
+              She arrives with a situation. She leaves with a plan.
+            </p>
+
+            <div class="mt-8">
+              <Button isLink href="/booking" variant="default" size="sm">
+                Begin MAPS Blueprint℠ →
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="border-t border-base-200 bg-white">
+      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
+        <div
+          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(420px,0.68fr)] lg:gap-20"
+        >
+          <div>
+            <Text
+              tag="span"
+              variant="textSM"
+              class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
+            >
+              Why Clients Come
+            </Text>
+
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="mt-5 max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+            >
+              Clients come when they need clarity before the cost becomes visible.
+            </Text>
+          </div>
+
+          <div class="max-w-2xl font-sans text-base leading-8 text-base-700 sm:text-lg sm:leading-9">
+            <p>
+              Clients come to Lozen Advisory when the issue is no longer theoretical.
+            </p>
+
+            <p class="mt-5">
+              They may have invested in benefits and still see low utilization. They may be seeing senior women leave without clear warning. They may be rolling out AI and relying on the same high performers to make it work. They may be preparing for questions from executives, boards, employees, journalists, or external stakeholders. They may need to understand whether their current data can support the claims they are making.
+            </p>
+
+            <p class="mt-5">
+              In those moments, standard workforce language is not enough.
+            </p>
+
+            <p class="mt-5">
+              Lozen Advisory helps clients understand the structural issue, the business exposure, and the decision in front of them. The work is built for moments when leaders need clarity before a hidden problem becomes a visible crisis.
+            </p>
+
+            <p class="mt-8">
+              Menopause is the signal.
+            </p>
+
+            <p>
+              AI is the multiplier.
+            </p>
+
+            <p>
+              Retention is where the cost becomes visible.
+            </p>
+
+            <p>
+              Lozen Advisory works before that point.
+            </p>
+
+            <div class="mt-8">
+              <Button isLink href="/request-briefing" variant="accent" size="sm">
+                Request Briefing →
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+  </main>
 </BaseLayout>
