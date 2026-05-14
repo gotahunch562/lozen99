@@ -3,7 +3,18 @@
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-const footerLinks = [
+interface FooterLink {
+  label: string;
+  href: string;
+  external?: boolean;
+}
+
+interface FooterSection {
+  title: string;
+  links: FooterLink[];
+}
+
+const footerLinks: FooterSection[] = [
   {
     title: "Advisory",
     links: [
@@ -11,7 +22,7 @@ const footerLinks = [
         label: "Disclosure Infrastructure",
         href: "/disclosure-independence-infrastructure",
       },
-      { label: "Invisible Attrition", href: "/invisible-attrition" },
+      { label: "Invisible Attrition℠", href: "/invisible-attrition" },
       { label: "Retention Risk Analysis", href: "/retention-risk-analysis" },
       { label: "Retention Calculator", href: "/retention-calculator" },
       { label: "Request Briefing", href: "/request-briefing" },
@@ -28,10 +39,6 @@ const footerLinks = [
       {
         label: "Menopause Legislation Tracker",
         href: "/menopause-legislation-tracker",
-      },
-      {
-        label: "Menopause Policy & Laws Series",
-        href: "/blog/menopause-policy-laws-dependence-disclosure",
       },
     ],
   },
@@ -63,10 +70,23 @@ const footerLinks = [
       { label: "Why Lozen Advisory", href: "/why-lozen-advisory" },
       { label: "Women Lawyers", href: "/menopause-support-women-lawyers" },
       { label: "Events", href: "/events" },
-      { label: "Contact", href: "/contact" },
+      {
+        label: "AI Evaluation Training",
+        href: "https://www.executiveaiskills.com/",
+        external: true,
+      },
     ],
   },
 ];
+
+const utilityLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
+  { label: "About AI", href: "/about-ai" },
+  { label: "Tools & Resources", href: "/tools-resources" },
+];
+
+const year = new Date().getFullYear();
 ---
 
 <footer class="relative w-full overflow-hidden bg-base-950 lg:p-8">
@@ -96,10 +116,14 @@ const footerLinks = [
 
   <Wrapper
     variant="standard"
-    class="relative z-10 flex h-full flex-col justify-between gap-12 py-12 sm:py-16 lg:min-h-[34rem] lg:gap-32 lg:py-20"
+    class="relative z-10 flex h-full flex-col justify-between gap-12 py-12 sm:py-16 lg:min-h-[34rem] lg:gap-24 lg:py-20"
   >
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-6 lg:gap-12">
-      <div class="md:col-span-2">
+    <div
+      class="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,0.72fr)] lg:gap-10"
+    >
+      <div
+        class="rounded-[2rem] border border-white/10 bg-base-950/45 p-5 backdrop-blur-sm sm:p-6 lg:p-8"
+      >
         <a
           href="/"
           aria-label="Go to Lozen Advisory home page"
@@ -111,7 +135,7 @@ const footerLinks = [
         <Text
           tag="p"
           variant="textSM"
-          class="mt-6 max-w-sm font-sans leading-6 text-base-300 sm:mt-8"
+          class="mt-6 max-w-xl font-sans leading-6 text-base-300 sm:mt-8"
         >
           Disclosure-independent advisory for organizations measuring retention,
           succession, leadership risk, and performance loss where no disclosure
@@ -121,13 +145,48 @@ const footerLinks = [
         <div class="mt-7 sm:mt-8">
           <a
             href="/request-briefing"
-            class="inline-flex h-10 items-center justify-center rounded-lg bg-accent-500 px-4 py-2 font-sans text-xs font-semibold uppercase tracking-[0.08em] text-base-950 shadow-lg transition-colors hover:bg-accent-400"
+            class="inline-flex h-10 items-center justify-center rounded-lg bg-accent-500 px-4 py-2 font-sans text-xs font-semibold uppercase tracking-[0.08em] text-base-950 shadow-lg transition-colors hover:bg-accent-400 focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2 focus:ring-offset-base-950"
           >
             Request a Briefing
           </a>
         </div>
       </div>
 
+      <div
+        class="rounded-[2rem] border border-white/10 bg-base-950/70 p-5 shadow-2xl shadow-base-950/30 backdrop-blur-md sm:p-6 lg:p-8"
+      >
+        <Text
+          tag="p"
+          variant="textSM"
+          class="font-sans font-semibold uppercase tracking-[0.18em] text-accent-300"
+        >
+          Briefing List
+        </Text>
+
+        <Text
+          tag="h2"
+          variant="displayXS"
+          class="mt-4 font-display font-normal uppercase tracking-[-0.03em] text-white"
+        >
+          Receive Lozen Advisory updates.
+        </Text>
+
+        <Text
+          tag="p"
+          variant="textSM"
+          class="mt-4 max-w-md font-sans leading-6 text-base-300"
+        >
+          Analysis on disclosure-dependent data, retention risk, succession,
+          leadership continuity, and performance protection.
+        </Text>
+
+        <div class="mt-6 overflow-hidden rounded-2xl bg-white p-3 text-base-950">
+          <div class="ml-embedded" data-form="HVvUgr"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
       {
         footerLinks.map((section) => (
           <div>
@@ -140,16 +199,21 @@ const footerLinks = [
             </Text>
 
             <ul class="mt-4 space-y-2">
-              {section.links.map((item) => (
-                <li>
-                  <a
-                    href={item.href}
-                    class="inline-flex font-sans text-sm leading-5 text-base-300 transition-colors hover:text-accent-300"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
+              {
+                section.links.map((item) => (
+                  <li>
+                    <a
+                      href={item.href}
+                      target={item.external ? "_blank" : undefined}
+                      rel={item.external ? "noreferrer" : undefined}
+                      class="inline-flex font-sans text-sm leading-5 text-base-300 transition-colors hover:text-accent-300 focus:outline-none focus-visible:text-accent-300"
+                    >
+                      {item.label}
+                      {item.external && <span aria-hidden="true"> ↗</span>}
+                    </a>
+                  </li>
+                ))
+              }
             </ul>
           </div>
         ))
@@ -161,37 +225,20 @@ const footerLinks = [
         class="flex flex-col justify-between gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center"
       >
         <Text tag="p" variant="textSM" class="font-sans text-base-300">
-          &copy; {new Date().getFullYear()} Lozen Advisory LLC. All rights reserved.
+          &copy; {year} Lozen Advisory LLC. All rights reserved.
         </Text>
 
         <div class="flex flex-wrap gap-x-6 gap-y-3">
-          <a
-            href="/privacy-policy"
-            class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300"
-          >
-            Privacy Policy
-          </a>
-
-          <a
-            href="/terms-of-service"
-            class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300"
-          >
-            Terms of Service
-          </a>
-
-          <a
-            href="/about-ai"
-            class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300"
-          >
-            About AI
-          </a>
-
-          <a
-            href="/tools-resources"
-            class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300"
-          >
-            Tools & Resources
-          </a>
+          {
+            utilityLinks.map((item) => (
+              <a
+                href={item.href}
+                class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300 focus:outline-none focus-visible:text-accent-300"
+              >
+                {item.label}
+              </a>
+            ))
+          }
         </div>
       </div>
 
@@ -204,4 +251,12 @@ const footerLinks = [
       </div>
     </div>
   </Wrapper>
+
+  <script is:inline>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2164541');
+  </script>
 </footer>
