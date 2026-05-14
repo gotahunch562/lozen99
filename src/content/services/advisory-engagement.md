@@ -5,7 +5,7 @@ shortDescription: "Ongoing counsel on non-disclosure infrastructure, benefits st
 priceFrom: "Ongoing Counsel"
 duration: "Strategic engagement"
 image:
-  url: "/images/services/serviceplaceholder.webp"
+  url: "../../images/services/serviceplaceholder.webp"
   alt: "Strategic advisory meeting"
 ---
 
