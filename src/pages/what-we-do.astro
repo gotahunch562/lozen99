@@ -1,0 +1,335 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+import ServiceCard from "@/components/services/ServiceCard.astro";
+import { getCollection } from "astro:content";
+
+const title = "What We Do | Lozen Advisory";
+const description =
+  "Lozen Advisory helps organizations see the risks their current systems are not built to detect.";
+
+const allServices = await getCollection("services");
+
+const serviceOrder = [
+  "market-intelligence",
+  "executive-briefing",
+  "advisory-engagement",
+  "crisis-reputation-workforce-risk",
+];
+
+const serviceMap = new Map(allServices.map((service) => [service.id, service]));
+
+const organizationalServices = serviceOrder
+  .map((id) => serviceMap.get(id))
+  .filter(Boolean);
+
+const mapsService = serviceMap.get("maps-blueprint");
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="bg-white">
+    <section class="border-b border-base-200 bg-white">
+      <Wrapper
+        variant="standard"
+        class="pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-36 lg:pb-20"
+      >
+        <div class="mx-auto max-w-7xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-700"
+          >
+            Services
+          </Text>
+
+          <div class="mt-8 grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(360px,0.55fr)] lg:items-end">
+            <Text
+              tag="h1"
+              variant="displayLG"
+              class="max-w-4xl font-display font-normal uppercase leading-[1.02] tracking-[-0.04em] text-base-950"
+            >
+              What We Do
+            </Text>
+
+            <Text
+              tag="p"
+              variant="textLG"
+              class="max-w-2xl font-sans leading-8 text-base-700"
+            >
+              Lozen Advisory helps organizations see the risks their current systems are not built to detect.
+            </Text>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-white">
+      <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-20">
+        <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(420px,0.7fr)] lg:gap-16">
+          <div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+            >
+              Where visible systems stop short.
+            </Text>
+          </div>
+
+          <div class="grid gap-5 font-sans text-base leading-8 text-base-700 sm:text-lg sm:leading-9">
+            <p>
+              We work with leadership teams when benefits utilization is low, retention risk is unclear, succession exposure is underestimated, AI implementation burden is hidden, or a workforce issue is beginning to carry reputational, operational, or governance consequences.
+            </p>
+
+            <p>
+              The problem is rarely the absence of data. Most organizations already have dashboards, benefits reports, HR records, engagement surveys, productivity metrics, AI adoption data, and retention analysis. The problem is that those systems often measure only what becomes visible.
+            </p>
+
+            <p>
+              That creates false confidence.
+            </p>
+
+            <p>
+              A benefit report may show low utilization while senior women are avoiding the benefit because use creates professional risk. An AI dashboard may show productivity gains while the organization’s most trusted employees absorb the validation, correction, and implementation burden required to make those tools safe. A retention report may show stability until the person carrying the system leaves.
+            </p>
+
+            <p>
+              Lozen Advisory helps clients understand what their systems are missing before that gap becomes expensive, reputational, or operationally disruptive.
+            </p>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-base-50">
+      <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-10 sm:mb-12">
+            <Text
+              tag="span"
+              variant="textSM"
+              class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
+            >
+              Organizational Advisory
+            </Text>
+
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="mt-5 max-w-4xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+            >
+              Services
+            </Text>
+          </div>
+
+          <div class="grid gap-x-12 gap-y-12 md:grid-cols-2">
+            {organizationalServices.map((service) => <ServiceCard service={service} />)}
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-base-950 text-white">
+      <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-20">
+        <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.75fr)_minmax(360px,0.5fr)] lg:items-center lg:gap-16">
+          <div>
+            <Text
+              tag="span"
+              variant="textSM"
+              class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-300"
+            >
+              Tacere: The Framework
+            </Text>
+
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="mt-5 max-w-4xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-white"
+            >
+              Tacere: The Framework
+            </Text>
+
+            <div class="mt-6 grid max-w-3xl gap-5 font-sans text-base leading-8 text-base-200 sm:text-lg sm:leading-9">
+              <p>
+                The employee who never files a claim, never requests an accommodation, and never flags a performance issue is not absent from your workforce.
+              </p>
+
+              <p>
+                They are present, performing, and keeping their own counsel.
+              </p>
+
+              <p>
+                Tacere names that practice and explains what it costs when organizations rely on systems that can only see employees after they disclose, request, or report.
+              </p>
+
+              <p>
+                Download the Tacere paper to understand the framework
+              </p>
+            </div>
+          </div>
+
+          <div
+            id="tacere-download"
+            class="relative overflow-hidden rounded-2xl border border-white/15 bg-white p-6 text-base-950 shadow-2xl ring-1 ring-white/10 lg:rounded-3xl lg:p-8"
+          >
+            <div
+              aria-hidden="true"
+              class="absolute inset-x-0 top-0 h-1 bg-accent-500"
+            >
+            </div>
+
+            <Text
+              tag="h3"
+              variant="displayXS"
+              class="font-display font-normal uppercase leading-tight tracking-[-0.02em] text-base-950"
+            >
+              Download the Tacere Paper →
+            </Text>
+
+            <Text
+              tag="p"
+              variant="textBase"
+              class="mt-4 font-sans leading-7 text-base-700"
+            >
+              Enter your email to receive the download link.
+            </Text>
+
+            <div class="mt-6 rounded-xl border border-dashed border-base-300 bg-base-50 p-5">
+              <Text
+                tag="p"
+                variant="textSM"
+                class="font-sans leading-6 text-base-600"
+              >
+                MailerLite embedded form goes here.
+              </Text>
+            </div>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-white">
+      <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-20">
+        <div class="mx-auto max-w-7xl">
+          <div class="grid gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(360px,0.55fr)] lg:items-start lg:gap-16">
+            <div>
+              <Text
+                tag="span"
+                variant="textSM"
+                class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
+              >
+                Private Advisory
+              </Text>
+
+              <Text
+                tag="h2"
+                variant="displaySM"
+                class="mt-5 max-w-4xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+              >
+                The MAPS Blueprint℠
+              </Text>
+
+              <div class="mt-6 grid max-w-3xl gap-5 font-sans text-base leading-8 text-base-700 sm:text-lg sm:leading-9">
+                <p>
+                  The MAPS Blueprint℠ is the private advisory session for the woman executive.
+                </p>
+
+                <p>
+                  It belongs on this page because Lozen Advisory works both sides of the same structural problem. Organizations need to understand the risk their systems cannot see. Women executives need to protect themselves inside those systems before a professional record is created.
+                </p>
+
+                <p>
+                  The MAPS Blueprint℠ is for the woman approaching a visible professional moment: a review, a promotion decision, a leadership transition, a difficult performance cycle, a return from leave, or a situation where disclosure may create a record she cannot control.
+                </p>
+
+                <p>
+                  She arrives with a situation. She leaves with a plan.
+                </p>
+
+                <p>
+                  The session helps her understand what is being decided, who has influence over the outcome, what evidence matters, what record may be created, how that record may be interpreted, and what position she should take before the decision environment hardens around her.
+                </p>
+
+                <p>
+                  For organizations, MAPS Blueprint℠ reinforces the core Lozen Advisory thesis: the most important risk often exists before the system can see it.
+                </p>
+              </div>
+
+              <div class="mt-8">
+                <Button isLink href="/booking" variant="default" size="sm">
+                  Begin MAPS Blueprint℠ →
+                </Button>
+              </div>
+            </div>
+
+            {mapsService && <ServiceCard service={mapsService} />}
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-base-50">
+      <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-20">
+        <div class="mx-auto max-w-4xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
+          >
+            Why Clients Come to Lozen Advisory
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displaySM"
+            class="mt-5 max-w-4xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+          >
+            Clients come when the issue is no longer theoretical.
+          </Text>
+
+          <div class="mt-8 grid gap-5 font-sans text-base leading-8 text-base-700 sm:text-lg sm:leading-9">
+            <p>
+              Clients come to Lozen Advisory when the issue is no longer theoretical.
+            </p>
+
+            <p>
+              They may have invested in benefits and still see low utilization. They may be seeing senior women leave without clear warning. They may be rolling out AI and relying on the same high performers to make it work. They may be preparing for questions from executives, boards, employees, journalists, or external stakeholders. They may need to understand whether their current data can support the claims they are making.
+            </p>
+
+            <p>
+              In those moments, standard workforce language is not enough.
+            </p>
+
+            <p>
+              Lozen Advisory helps clients understand the structural issue, the business exposure, and the decision in front of them. The work is built for moments when leaders need clarity before a hidden problem becomes a visible crisis.
+            </p>
+
+            <p>
+              Menopause is the signal.
+            </p>
+
+            <p>
+              AI is the multiplier.
+            </p>
+
+            <p>
+              Retention is where the cost becomes visible.
+            </p>
+
+            <p>
+              Lozen Advisory works before that point.
+            </p>
+          </div>
+
+          <div class="mt-10">
+            <Button isLink href="/request-briefing" variant="accent" size="sm">
+              Request Briefing →
+            </Button>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+  </main>
+</BaseLayout>
