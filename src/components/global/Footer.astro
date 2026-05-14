@@ -5,44 +5,27 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const footerLinks = [
   {
-    title: "Advisory",
+    title: "Navigate",
     links: [
-      { label: "What We Do", href: "/what-we-do" },
-      { label: "MAPS Blueprint℠", href: "/booking" },
-      { label: "Request Briefing", href: "/request-briefing" },
+      { label: "Services", href: "/services" },
+      { label: "Research", href: "/blog" },
+      { label: "Events", href: "/events" },
+      { label: "About", href: "/about" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   {
-    title: "Frameworks",
+    title: "Resources",
     links: [
       { label: "Invisible Attrition℠", href: "/invisible-attrition" },
-      {
-        label: "Disclosure Infrastructure",
-        href: "/disclosure-independence-infrastructure",
-      },
-      { label: "Retention Risk Analysis", href: "/retention-risk-analysis" },
-    ],
-  },
-  {
-    title: "Research",
-    links: [
-      { label: "Blog", href: "/blog" },
-      {
-        label: "Executive Report Series",
-        href: "/architecture-of-invisible-attrition-series",
-      },
       {
         label: "Menopause Legislation Tracker",
         href: "/menopause-legislation-tracker",
       },
-    ],
-  },
-  {
-    title: "Lozen Advisory",
-    links: [
-      { label: "About", href: "/about" },
-      { label: "Women Lawyers", href: "/menopause-support-women-lawyers" },
-      { label: "Events", href: "/events" },
+      {
+        label: "Executive Report Series",
+        href: "/architecture-of-invisible-attrition-series",
+      },
       {
         label: "AI Evaluation Training",
         href: "https://www.executiveaiskills.com/",
@@ -52,10 +35,10 @@ const footerLinks = [
 ];
 ---
 
-<footer class="relative w-full overflow-hidden bg-base-950 lg:p-8">
+<footer class="relative w-full overflow-hidden bg-base-950 lg:p-6">
   <div class="absolute inset-0 overflow-hidden lg:m-4 lg:rounded-3xl">
     <video
-      class="size-full object-cover object-center opacity-50"
+      class="size-full object-cover object-center opacity-80"
       autoplay
       muted
       loop
@@ -66,23 +49,23 @@ const footerLinks = [
 
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-base-950/94 via-base-950/90 to-base-950/98"
+      class="pointer-events-none absolute inset-0 bg-base-950/62"
     >
     </div>
 
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute inset-0 bg-gradient-to-r from-base-950/95 via-base-950/72 to-base-950/92"
+      class="pointer-events-none absolute inset-0 bg-gradient-to-r from-base-950/80 via-base-950/42 to-base-950/68"
     >
     </div>
   </div>
 
   <Wrapper
     variant="standard"
-    class="relative z-10 flex h-full flex-col justify-between gap-8 py-10 sm:py-12 lg:min-h-[26rem] lg:gap-16 lg:py-14"
+    class="relative z-10 flex flex-col gap-10 py-10 sm:py-12 lg:min-h-[20rem] lg:py-12"
   >
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-6 lg:gap-12">
-      <div class="md:col-span-2">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,1fr)_minmax(280px,0.7fr)] lg:gap-16">
+      <div class="max-w-xl">
         <a
           href="/"
           aria-label="Go to Lozen Advisory home page"
@@ -93,94 +76,88 @@ const footerLinks = [
 
         <Text
           tag="p"
-          variant="textXS"
-          class="mt-8 max-w-sm font-sans leading-6 text-base-300"
+          variant="textSM"
+          class="mt-5 max-w-md font-sans leading-7 text-white/78"
         >
-          The question is not whether to disclose or never disclose. The question is what record disclosure will create, who can access it, how it may be interpreted, and what professional decision may follow once the information enters the system.
+          Disclosure-independent advisory for organizations measuring retention,
+          succession, leadership risk, and performance loss where no disclosure
+          event was created.
         </Text>
 
-        <div class="mt-6">
+        <div class="mt-6 flex flex-wrap gap-3">
           <a
             href="/request-briefing"
             class="inline-flex h-10 items-center justify-center rounded-lg bg-accent-500 px-4 py-2 font-sans text-xs font-semibold uppercase tracking-[0.08em] text-base-950 shadow-lg transition-colors hover:bg-accent-400"
           >
-           Join Our Email List
+            Request Briefing
+          </a>
+
+          <a
+            href="/services#tacere-download"
+            class="inline-flex h-10 items-center justify-center rounded-lg border border-white/25 bg-white/10 px-4 py-2 font-sans text-xs font-semibold uppercase tracking-[0.08em] text-white backdrop-blur transition-colors hover:bg-white/18"
+          >
+            Join Email List
           </a>
         </div>
       </div>
 
-      {
-        footerLinks.map((section) => (
-          <div>
-            <Text
-              tag="h3"
-              variant="textSM"
-              class="font-display font-medium uppercase text-white"
-            >
-              {section.title}
-            </Text>
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+        {
+          footerLinks.map((section) => (
+            <div>
+              <Text
+                tag="h3"
+                variant="textSM"
+                class="font-sans font-semibold uppercase tracking-[0.14em] text-white"
+              >
+                {section.title}
+              </Text>
 
-            <ul class="mt-2 space-y-1">
-              {section.links.map((item) => (
-                <li>
-                  <a
-                    href={item.href}
-                    class="flex font-sans text-xs leading-5 text-base-300 transition-colors hover:text-white"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
+              <ul class="mt-4 space-y-2">
+                {section.links.map((item) => (
+                  <li>
+                    <a
+                      href={item.href}
+                      class="inline-flex font-sans text-sm leading-5 text-white/72 transition-colors hover:text-accent-300"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
     </div>
 
-    <div>
-      <div
-        class="flex flex-col justify-between gap-4 border-t border-white/10 pt-6 md:flex-row md:items-center"
-      >
-        <Text tag="p" variant="textSM" class="font-sans text-base-300">
+    <div class="border-t border-white/12 pt-5">
+      <div class="flex flex-col justify-between gap-4 md:flex-row md:items-center">
+        <Text tag="p" variant="textSM" class="font-sans text-white/68">
           &copy; {new Date().getFullYear()} Lozen Advisory LLC. All rights reserved.
         </Text>
 
-        <div class="flex flex-wrap gap-x-6 gap-y-3">
+        <div class="flex flex-wrap gap-x-5 gap-y-2">
           <a
             href="/privacy-policy"
-            class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300"
+            class="font-sans text-xs text-white/68 transition-colors hover:text-accent-300"
           >
             Privacy Policy
           </a>
 
           <a
             href="/terms-of-service"
-            class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300"
+            class="font-sans text-xs text-white/68 transition-colors hover:text-accent-300"
           >
             Terms of Service
           </a>
 
           <a
             href="/about-ai"
-            class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300"
+            class="font-sans text-xs text-white/68 transition-colors hover:text-accent-300"
           >
             About AI
           </a>
-
-          <a
-            href="/tools-resources"
-            class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300"
-          >
-            Tools & Resources
-          </a>
-        </div>
-      </div>
-
-      <div class="mt-6 overflow-hidden border-t border-white/10 pt-6">
-        <div
-          class="font-display text-[clamp(2.75rem,12vw,10rem)] font-normal uppercase leading-none tracking-[-0.05em] text-white/10"
-        >
-          Lozen Advisory
         </div>
       </div>
     </div>
