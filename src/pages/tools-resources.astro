@@ -1,0 +1,128 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+const resources = [
+  {
+    label: "Conference Handout",
+    title: "Performance Protection",
+    description:
+      "The cognitive disruption of perimenopause lands specifically in verbal memory, verbal fluency, and attention: exactly the functions your practice depends on. This handout outlines five evidence-based strategies to protect your performance during the transition.",
+    meta: "8 pages · PDF · Free download",
+    cta: "Download PDF",
+    href: "/downloads/performance-protection-conference-handout.pdf",
+    download: true,
+  },
+  {
+    label: "Self-Assessment Tool",
+    title: "Symptom Literacy Checklist",
+    description:
+      "A print-and-fill checklist covering the 12 symptom categories of perimenopause. Rate severity, track patterns over time, identify your top priorities, and bring structured data to your next provider appointment.",
+    meta: "10 pages · PDF · Free download",
+    cta: "Download PDF",
+    href: "/downloads/symptom-literacy-checklist.pdf",
+    download: true,
+  },
+  {
+    label: "Personal Equity Tool",
+    title: "The Replacement Value Auditor℠",
+    description:
+      "You know what you produce. This is what it costs the firm to replace you. Replacement value is a standard workforce metric—benchmarked, documented, and used in leadership planning at the highest levels. This tool puts that data in your hands so you can audit your own economic leverage before you make your next move.",
+    meta: "Interactive tool · Free",
+    cta: "Open Calculator",
+    href: "/retention-calculator",
+    download: false,
+  },
+];
+---
+
+<BaseLayout>
+  <section class="bg-gradient-to-t from-base-200 to-white">
+    <Wrapper variant="standard" class="py-24 lg:py-32">
+      <div class="max-w-3xl">
+        <Text
+          tag="span"
+          variant="textSM"
+          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+        >
+          Tools &amp; Resources
+        </Text>
+
+        <Text
+          tag="h1"
+          variant="displayXL"
+          class="mt-8 uppercase font-display text-base-900"
+        >
+          Tools &amp; Resources
+        </Text>
+
+        <Text
+          tag="p"
+          variant="textBase"
+          class="mt-4 text-base-600 text-balance"
+        >
+          Practical frameworks and reference materials from Lozen Advisory, available for immediate download.
+        </Text>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section>
+    <Wrapper variant="standard" class="py-12 lg:py-20">
+      <div class="grid gap-6 lg:grid-cols-3">
+        {
+          resources.map((resource) => (
+            <article class="group flex h-full flex-col rounded-3xl border border-base-200 bg-white p-6 shadow-xl transition-all duration-500 hover:-translate-y-1 hover:border-accent-400 hover:shadow-2xl sm:p-8">
+              <div class="flex flex-1 flex-col">
+                <Text
+                  tag="span"
+                  variant="textSM"
+                  class="font-medium uppercase tracking-wide text-accent-600"
+                >
+                  {resource.label}
+                </Text>
+
+                <Text
+                  tag="h2"
+                  variant="displaySM"
+                  class="mt-5 font-display uppercase text-base-900"
+                >
+                  {resource.title}
+                </Text>
+
+                <Text tag="p" variant="textBase" class="mt-5 text-base-700">
+                  {resource.description}
+                </Text>
+
+                <Text
+                  tag="p"
+                  variant="textSM"
+                  class="mt-6 font-medium text-base-500"
+                >
+                  {resource.meta}
+                </Text>
+              </div>
+
+              <div class="mt-8">
+                <a
+                  href={resource.href}
+                  download={resource.download ? true : undefined}
+                  class="inline-flex h-11 items-center justify-center rounded-lg bg-accent-300 px-5 py-4 text-center text-sm font-medium text-base-900 transition-all duration-500 ease-in-out hover:bg-accent-400 focus:outline-2 focus:outline-offset-4 focus:outline-accent-400"
+                >
+                  {resource.cta}
+                </a>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+
+      <div class="mt-12 rounded-3xl bg-base-950 p-6 shadow-2xl outline-4 outline-base-500/10 sm:p-8">
+        <Text tag="p" variant="textBase" class="text-base-200">
+          The information in these documents is provided for educational purposes only. Lozen Advisory LLC is not a medical practice. Nothing here constitutes medical advice, diagnosis, or treatment. Consult a qualified healthcare provider before making any decisions about your health or treatment.
+        </Text>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>
