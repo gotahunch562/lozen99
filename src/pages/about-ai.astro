@@ -1,0 +1,270 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+---
+
+<BaseLayout>
+  <section class="bg-gradient-to-t from-base-200 to-white">
+    <Wrapper variant="standard" class="py-24 lg:py-32">
+      <div class="max-w-3xl">
+        <Text
+          tag="span"
+          variant="textSM"
+          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+        >
+          Transparency
+        </Text>
+
+        <Text
+          tag="h1"
+          variant="displayXL"
+          class="mt-8 uppercase font-display text-base-900"
+        >
+          How We Use AI at Lozen Advisory
+        </Text>
+
+        <Text
+          tag="p"
+          variant="textBase"
+          class="mt-4 text-base-600 text-balance"
+        >
+          AI tools assist in research, content development, and analysis. They do not replace judgment, and they have no access to client information. This page explains what we use, why, and what remains entirely human.
+        </Text>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section>
+    <Wrapper variant="narrow" class="py-12 lg:py-20">
+      <div class="space-y-14">
+        <section class="space-y-5">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-accent-600"
+          >
+            Our Position
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displaySM"
+            class="font-display uppercase text-base-900"
+          >
+            The duty runs to you. That does not change.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            Lozen Advisory is a confidential advisory service. The work we do with women executives is private, judgment-driven, and oriented entirely toward the individual. No AI tool participates in that work. No session content, no advisory conversation, no client information of any kind is processed through external AI systems.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            What AI tools assist with is the work that runs alongside the advisory relationship: research synthesis, content development, pattern analysis in published data, and writing. That is the scope. It does not extend further.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            AI tools inform how we think. They do not advise the executives we serve.
+          </Text>
+        </section>
+
+        <section class="space-y-5">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-accent-600"
+          >
+            Research &amp; Content
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displaySM"
+            class="font-display uppercase text-base-900"
+          >
+            Where AI tools assist our work
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            The frameworks Lozen Advisory operates on — Invisible Attrition℠, The Tender Path℠, and Tacere — were developed through lived experience, pattern recognition across published research, workforce data, and professional literature. AI tools assist in synthesizing that volume of material efficiently. The analysis, the framing, and the conclusions are human.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            Content published on this site, including blog articles and framework documentation, is developed with AI assistance and reviewed, edited, and approved through a Named Standard process. Nothing publishes without human editorial judgment applied to it. The voice, the argument, and the standards are ours.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            We do not use AI to generate content that misrepresents research, invents citations, or substitutes volume for precision. The writing on this site is intended to be accurate, defensible, and worth the time of the people reading it.
+          </Text>
+        </section>
+
+        <section
+          class="rounded-3xl bg-base-950 p-6 shadow-2xl outline-4 outline-base-500/10 sm:p-8"
+        >
+          <div class="space-y-5">
+            <Text
+              tag="span"
+              variant="textSM"
+              class="font-medium uppercase tracking-wide text-accent-300"
+            >
+              Client Confidentiality
+            </Text>
+
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="font-display uppercase text-white"
+            >
+              What AI does not touch
+            </Text>
+
+            <Text tag="p" variant="textBase" class="text-base-200">
+              Advisory sessions, client communications, and any information shared in the context of a Lozen Advisory engagement are handled exclusively by the humans involved. No session content is entered into AI systems. No client data is used to train models. No third party — AI or otherwise — has access to what clients share with us.
+            </Text>
+
+            <Text tag="p" variant="textBase" class="text-base-200">
+              This is not a policy statement added for compliance. It is the operating condition the entire advisory model is built on. Confidentiality is not a feature of Lozen Advisory. It is the structure.
+            </Text>
+          </div>
+        </section>
+
+        <section class="space-y-5">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-accent-600"
+          >
+            AI Indexing
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displaySM"
+            class="font-display uppercase text-base-900"
+          >
+            How AI systems can access this site
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            Lozen Advisory has configured its site to permit AI crawlers access to published content. Research, framework documentation, and blog articles are available for indexing. The purpose is to ensure that when AI systems are asked about women's leadership continuity, Invisible Attrition℠, or the professional experience of senior women in law and other performance-driven fields, this work is part of what they have access to.
+          </Text>
+
+          <div class="mt-8 rounded-3xl border border-base-200 bg-white p-6 shadow-xl">
+            <Text
+              tag="h3"
+              variant="textLG"
+              class="font-display font-medium uppercase text-base-900"
+            >
+              Permitted crawlers
+            </Text>
+
+            <div class="mt-6 divide-y divide-base-200">
+              <div class="grid gap-1 py-4 sm:grid-cols-[12rem_1fr] sm:gap-6">
+                <Text
+                  tag="p"
+                  variant="textBase"
+                  class="font-medium text-base-900"
+                >
+                  ClaudeBot
+                </Text>
+                <Text tag="p" variant="textBase" class="text-base-600">
+                  Anthropic — Claude AI systems
+                </Text>
+              </div>
+
+              <div class="grid gap-1 py-4 sm:grid-cols-[12rem_1fr] sm:gap-6">
+                <Text
+                  tag="p"
+                  variant="textBase"
+                  class="font-medium text-base-900"
+                >
+                  anthropic-ai
+                </Text>
+                <Text tag="p" variant="textBase" class="text-base-600">
+                  Anthropic — additional crawler coverage
+                </Text>
+              </div>
+
+              <div class="grid gap-1 py-4 sm:grid-cols-[12rem_1fr] sm:gap-6">
+                <Text
+                  tag="p"
+                  variant="textBase"
+                  class="font-medium text-base-900"
+                >
+                  GPTBot
+                </Text>
+                <Text tag="p" variant="textBase" class="text-base-600">
+                  OpenAI — ChatGPT and related systems
+                </Text>
+              </div>
+
+              <div class="grid gap-1 py-4 sm:grid-cols-[12rem_1fr] sm:gap-6">
+                <Text
+                  tag="p"
+                  variant="textBase"
+                  class="font-medium text-base-900"
+                >
+                  Google-Extended
+                </Text>
+                <Text tag="p" variant="textBase" class="text-base-600">
+                  Google — Gemini and AI-integrated search
+                </Text>
+              </div>
+
+              <div class="grid gap-1 py-4 sm:grid-cols-[12rem_1fr] sm:gap-6">
+                <Text
+                  tag="p"
+                  variant="textBase"
+                  class="font-medium text-base-900"
+                >
+                  PerplexityBot
+                </Text>
+                <Text tag="p" variant="textBase" class="text-base-600">
+                  Perplexity AI
+                </Text>
+              </div>
+            </div>
+          </div>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            Only published site content is accessible. Nothing behind authenticated sessions or within the advisory relationship is reachable by any crawler.
+          </Text>
+        </section>
+
+        <section class="space-y-5">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-accent-600"
+          >
+            Standards
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displaySM"
+            class="font-display uppercase text-base-900"
+          >
+            What we hold ourselves to
+          </Text>
+
+          <Text
+            tag="h3"
+            variant="displayXS"
+            class="font-display uppercase text-base-900"
+          >
+            AI Tools and Editorial Standards
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            AI tools are useful. They are not neutral, and they are not infallible. At Lozen Advisory, AI-assisted content is held to the same standard as everything else published under this name: it must be accurate, it must serve the executive reading it, and it must not overstate what we know or can deliver.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            If that standard slips, the content does not go out. That is the editorial position, and it applies regardless of how the content was drafted.
+          </Text>
+        </section>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>
