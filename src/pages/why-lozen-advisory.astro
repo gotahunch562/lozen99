@@ -1,0 +1,243 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+const title = "Why Lozen Advisory";
+
+const description =
+  "Lozen Advisory provides Disclosure-Independent Performance Protection℠ for women executives navigating perimenopause, menopause, visibility, leadership continuity, and professional risk without requiring workplace disclosure.";
+
+const sections = [
+  {
+    number: "01",
+    title: "The Convergence",
+    paragraphs: [
+      "Women in power, at the top of their field do not leave their careers to chance. They build strategy around what matters. They make deliberate decisions about positioning, visibility, and trajectory.",
+      "That standard does not change because the environment does not acknowledge everything you are navigating. It extends to include it.",
+    ],
+    quote: "When disclosure isn't an option, preparation is protection.",
+    closing:
+      "The women who sustain leadership through perimenopause and menopause do not do it by accident. They do it because they treated it the same way they treated every other professional challenge: with clarity, with a plan, and with the right resource in their corner.",
+  },
+  {
+    number: "02",
+    title: "The Gap",
+    paragraphs: [
+      "Most support structures address only one dimension of this.",
+    ],
+    supportItems: [
+      {
+        title: "Medicine",
+        body: "Treats the symptom.",
+      },
+      {
+        title: "Coaching",
+        body: "Targets the goal.",
+      },
+      {
+        title: "Therapy",
+        body: "Processes the emotion.",
+      },
+    ],
+    afterItems: [
+      "Organizational resources, where they exist, typically require formal disclosure to access.",
+      "In environments where perception carries consequence, disclosure is not always neutral. It can influence how capability is interpreted and how authority is perceived.",
+      "Over time many women adapt by managing what is visible and what remains private.",
+      "Tacere (tah-CHEH-reh) is the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk.",
+    ],
+  },
+  {
+    number: "03",
+    title: "The Premise",
+    paragraphs: [
+      "Lozen Advisory was built around a different premise. Disclosure-Independent Performance Protection℠ protects leadership capacity and professional continuity without requiring a woman to formally disclose that she is navigating perimenopause or menopause.",
+      "Most women begin with a MAPS Blueprint Session, a confidential advisory conversation that clarifies the terrain and helps identify decisions that protect both leadership capacity and long-term trajectory.",
+      "The Elevation Conversation is the step before that. Twenty-five minutes. Private. No intake form.",
+    ],
+  },
+];
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: title,
+  description,
+  url: "https://www.lozenadvisory.com/why-lozen-advisory",
+  publisher: {
+    "@type": "Organization",
+    name: "Lozen Advisory LLC",
+    url: "https://www.lozenadvisory.com",
+  },
+};
+---
+
+<BaseLayout>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(pageJsonLd)}
+  ></script>
+
+  <section class="overflow-hidden bg-gradient-to-t from-base-200 to-white">
+    <Wrapper variant="standard" class="py-24 lg:py-32">
+      <div class="max-w-4xl">
+        <Text
+          tag="span"
+          variant="textSM"
+          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+        >
+          Disclosure-Independent Performance Protection℠
+        </Text>
+
+        <Text
+          tag="h1"
+          variant="displayXL"
+          class="mt-8 uppercase font-display text-base-900"
+        >
+          Why Lozen Advisory
+        </Text>
+
+        <Text
+          tag="p"
+          variant="textSM"
+          class="mt-6 font-medium uppercase tracking-wide text-base-500"
+        >
+          Read
+        </Text>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section>
+    <Wrapper variant="standard" class="py-12 lg:py-24">
+      <div class="space-y-20">
+        {
+          sections.map((section) => (
+            <article class="grid gap-10 border-t border-base-200 pt-12 lg:grid-cols-[0.22fr_1fr] lg:gap-20">
+              <div>
+                <Text
+                  tag="p"
+                  variant="displaySM"
+                  class="font-display text-accent-600"
+                >
+                  {section.number}
+                </Text>
+              </div>
+
+              <div class="max-w-4xl">
+                <Text
+                  tag="h2"
+                  variant="displaySM"
+                  class="font-display uppercase text-base-900"
+                >
+                  {section.title}
+                </Text>
+
+                <div class="mt-8 space-y-6">
+                  {section.paragraphs?.map((paragraph) => (
+                    <Text tag="p" variant="textBase" class="text-base-700">
+                      {paragraph}
+                    </Text>
+                  ))}
+
+                  {section.quote && (
+                    <div class="rounded-3xl bg-base-950 p-6 shadow-2xl outline-4 outline-base-500/10 sm:p-8">
+                      <Text
+                        tag="blockquote"
+                        variant="displayXS"
+                        class="font-display text-white"
+                      >
+                        {section.quote}
+                      </Text>
+                    </div>
+                  )}
+
+                  {section.closing && (
+                    <Text tag="p" variant="textBase" class="text-base-700">
+                      {section.closing}
+                    </Text>
+                  )}
+
+                  {section.supportItems && (
+                    <div class="grid gap-4 md:grid-cols-3">
+                      {section.supportItems.map((item) => (
+                        <div class="rounded-3xl border border-base-200 bg-white p-6 shadow-xl">
+                          <Text
+                            tag="h3"
+                            variant="displayXS"
+                            class="font-display uppercase text-base-900"
+                          >
+                            {item.title}
+                          </Text>
+
+                          <Text
+                            tag="p"
+                            variant="textBase"
+                            class="mt-4 text-base-700"
+                          >
+                            {item.body}
+                          </Text>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {section.afterItems?.map((paragraph) => (
+                    <Text tag="p" variant="textBase" class="text-base-700">
+                      {paragraph}
+                    </Text>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </Wrapper>
+  </section>
+
+  <section class="bg-base-950">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="grid gap-12 lg:grid-cols-[0.42fr_1fr] lg:items-center lg:gap-20">
+        <div
+          class="min-h-[22rem] rounded-3xl border border-white/10 bg-[radial-gradient(circle_at_30%_20%,rgba(247,211,50,0.18),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] shadow-2xl outline-4 outline-base-500/10"
+          role="img"
+          aria-label="Warm textured fabric representing the tactile, personal nature of Lozen Advisory's confidential support."
+        >
+        </div>
+
+        <article class="max-w-3xl">
+          <Text
+            tag="h2"
+            variant="displaySM"
+            class="font-display uppercase text-white"
+          >
+            What is Lozen Advisory?
+          </Text>
+
+          <div class="mt-8 space-y-6">
+            <Text tag="p" variant="textBase" class="text-base-200">
+              The name is not accidental.
+            </Text>
+
+            <Text tag="p" variant="textBase" class="text-base-200">
+              Lozen was an Apache warrior and strategist known for two things. Protecting her people. And sensing what was coming before it arrived.
+            </Text>
+
+            <Text tag="p" variant="textBase" class="text-base-200">
+              That legacy is the practice. A confidential advisory relationship built for the executive who is carrying more than the calendar shows, navigating more than the org chart accounts for, and making decisions that deserve better information than she currently has.
+            </Text>
+
+            <Text
+              tag="p"
+              variant="displayXS"
+              class="font-display text-accent-300"
+            >
+              The work we do together is called The Tender Path℠.
+            </Text>
+          </div>
+        </article>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>
