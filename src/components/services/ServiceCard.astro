@@ -1,66 +1,98 @@
 ---
-// Assets
-import { Image } from "astro:assets";
 // Fundations
 import Text from "@/components/fundations/elements/Text.astro";
-const { title, description, url, price, duration, image } = {
-  url: "/services/" + Astro.props.service.id,
-  title: Astro.props.service.data.title,
-  description: Astro.props.service.data.shortDescription,
-  price: Astro.props.service.data.priceFrom,
-  duration: Astro.props.service.data.duration,
-  image: Astro.props.service.data.image,
+
+const service = Astro.props.service;
+
+const { title, description, url, eyebrow, duration, image } = {
+  url: "/services/" + service.id,
+  title: service.data.title,
+  description: service.data.shortDescription || service.data.description,
+  eyebrow: service.data.priceFrom,
+  duration: service.data.duration,
+  image: service.data.image,
 };
+
+const imageCandidate = image?.url ?? image?.src ?? image;
+const imageSrc =
+  typeof imageCandidate === "string"
+    ? imageCandidate
+    : imageCandidate?.src || "/images/services/serviceplaceholder.webp";
+
+const imageAlt =
+  image?.alt || `${title} service image`;
 ---
 
-<article
-  class="relative overflow-hidden group aspect-4/3 outline-4 outline-base-500/10 rounded-3xl"
->
+<article class="group">
   <a
     href={url}
     title={`View service: ${title}`}
     aria-label={`View service: ${title}`}
-    class="absolute inset-0 z-30"></a>
-  <Image
-    src={image.url}
-    alt={image.alt}
-    class="absolute inset-0 object-cover size-full group-hover:scale-110 transition-transform duration-500"
-  />
-  <div
-    aria-hidden="true"
-    class="absolute inset-0 pointer-events-none bg-gradient-to-t from-base-950 via-base-950/60 to-transparent"
+    class="block no-underline"
   >
-  </div>
+    <div
+      class="relative aspect-[4/3] overflow-hidden bg-base-100"
+    >
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        class="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+        loading="lazy"
+        decoding="async"
+      />
 
-  <div class="absolute inset-0 z-10 flex flex-col justify-end p-6">
-    <div class="relative">
-      <span
-        class="absolute -top-10 right-0 text-[110px] font-display font-bold text-white/5 select-none leading-none z-0 transition-colors duration-500 group-hover:text-white/15"
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-base-950/35 via-transparent to-transparent"
       >
-        {price}
-      </span>
+      </div>
+    </div>
+
+    <div class="pt-6">
       <Text
-        tag="h3"
-        variant="textLG"
-        class="pl-4 font-medium text-white uppercase border-l-2 font-display border-accent-500"
+        tag="span"
+        variant="textXS"
+        class="font-sans font-semibold uppercase tracking-[0.16em] text-accent-700"
       >
-        {title}
+        {eyebrow}
       </Text>
+
+      <div class="mt-3 flex items-start justify-between gap-4">
+        <Text
+          tag="h3"
+          variant="displayXS"
+          class="font-display font-normal uppercase leading-tight tracking-[-0.015em] text-base-950 transition-colors duration-300 group-hover:text-accent-700"
+        >
+          {title}
+        </Text>
+
+        <span
+          aria-hidden="true"
+          class="mt-1 shrink-0 font-sans text-xl leading-none text-base-950 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-accent-700"
+        >
+          →
+        </span>
+      </div>
+
       <Text
         tag="p"
         variant="textBase"
-        class="mt-2 text-base-300 text-balance line-clamp-2"
+        class="mt-4 max-w-xl font-sans leading-7 text-base-700"
       >
         {description}
       </Text>
-    </div>
 
-    <Text
-      tag="p"
-      variant="textXS"
-      class="pt-4 mt-4 font-medium text-white border-t border-white/10"
-    >
-      <span> {duration}</span>
-    </Text>
-  </div>
+      {
+        duration && (
+          <Text
+            tag="p"
+            variant="textXS"
+            class="mt-5 border-t border-base-200 pt-4 font-sans font-semibold uppercase tracking-[0.12em] text-base-500"
+          >
+            {duration}
+          </Text>
+        )
+      }
+    </div>
+  </a>
 </article>
