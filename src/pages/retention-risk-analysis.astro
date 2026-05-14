@@ -1,0 +1,353 @@
+---
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+const title = "Retention Risk Analysis";
+
+const description =
+  "Retention risk analysis for organizations evaluating attrition exposure, succession risk, and the workforce data their current systems do not capture.";
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: title,
+  description,
+  url: "https://www.lozenadvisory.com/retention-risk-analysis",
+  publisher: {
+    "@type": "Organization",
+    name: "Lozen Advisory",
+    url: "https://www.lozenadvisory.com",
+  },
+};
+
+const architectureLinks = [
+  {
+    number: "01",
+    title: "Visibility Tax℠",
+    href: "/voluntary-benefit-disclosure-gap",
+    description:
+      "Why benefits utilization data excludes the women who needed support but never entered the system.",
+  },
+  {
+    number: "02",
+    title: "Billable-Hour Visibility Tax",
+    href: "/billable-hour-visibility-tax",
+    description:
+      "How high-performance metrics can mask risk in women lawyers until the departure is already visible.",
+  },
+  {
+    number: "03",
+    title: "Succession Planning and the Retention Risk Data Gap",
+    href: "/succession-planning-retention-risk-data-gap",
+    description:
+      "Why succession systems can appear stable while critical leadership exposure is forming outside the record.",
+  },
+  {
+    number: "04",
+    title: "The Leadership Pipeline Is Draining From Both Ends",
+    href: "/leadership-pipeline-manager-engagement",
+    description:
+      "How declining manager engagement and Invisible Attrition℠ compound the same continuity risk.",
+  },
+];
+---
+
+<BaseLayout>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(pageJsonLd)}
+  ></script>
+
+  <section class="overflow-hidden bg-gradient-to-t from-base-200 to-white">
+    <Wrapper variant="standard" class="py-24 lg:py-32">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_28rem] lg:items-end">
+        <div class="max-w-4xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+          >
+            Workforce Risk
+          </Text>
+
+          <Text
+            tag="h1"
+            variant="displayXL"
+            class="mt-8 uppercase font-display text-base-900"
+          >
+            Retention Risk Analysis
+          </Text>
+
+          <Text
+            tag="p"
+            variant="textLG"
+            class="mt-6 max-w-3xl text-base-600 text-balance"
+          >
+            Retention risk analysis is usually built from the records an organization already has: performance data, engagement signals, HR cases, benefits utilization, survey responses, and recorded attrition patterns. Those inputs may be accurate. However, they only describe the people and conditions that entered the system.
+          </Text>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <Button
+              isLink
+              href="/request-briefing"
+              variant="default"
+              size="sm"
+              class="w-fit"
+            >
+              Request a Retention Risk Briefing
+            </Button>
+
+            <Button
+              isLink
+              href="/architecture-of-invisible-attrition-series"
+              variant="muted"
+              size="sm"
+              class="w-fit"
+            >
+              View the Executive Report Series
+            </Button>
+          </div>
+        </div>
+
+        <div class="rounded-3xl border border-base-200 bg-base-950 p-8 text-white shadow-2xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-[0.18em] text-accent-300"
+          >
+            Replacement Cost Exposure
+          </Text>
+
+          <Text
+            tag="p"
+            variant="displayMD"
+            class="mt-6 font-display uppercase text-white"
+          >
+            $426,000
+          </Text>
+
+          <Text tag="p" variant="textBase" class="mt-4 text-base-300">
+            At up to 213% of annual salary, a single $200,000 senior departure carries an estimated replacement cost of approximately $426,000.
+          </Text>
+
+          <Text tag="p" variant="textSM" class="mt-6 text-base-400">
+            But that calculation usually begins after the loss is already visible.
+          </Text>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section class="bg-white">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
+        <div>
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+          >
+            The Measurement Gap
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displayMD"
+            class="mt-8 uppercase font-display text-base-900"
+          >
+            The risk sits outside the record.
+          </Text>
+        </div>
+
+        <div class="space-y-6">
+          <Text tag="p" variant="textBase" class="text-base-600">
+            A workforce attrition risk assessment can only evaluate what has been measured. It cannot evaluate the population that never generated a signal, never filed a request, never used a benefit, never appeared in a case record, and never disclosed the constraint affecting performance capacity.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-600">
+            In performance-driven environments, that absence is often misread as stability. But absence of signal is not proof of absence of risk. It may simply mean the system was never activated.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-600">
+            Most employee attrition cost models calculate loss after departure. They estimate replacement cost, recruiting time, lost productivity, onboarding expense, client disruption, and institutional knowledge loss. Those costs matter. Also, they usually arrive after the organization has already lost the person.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-600">
+            Specifically, standard models often miss the erosion that occurred before the exit was recorded: reduced ambition, declining leadership availability, hidden strain, performance masking, missed succession readiness, or quiet withdrawal from future-facing roles.
+          </Text>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section class="bg-base-50">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="mx-auto max-w-4xl text-center">
+        <Text
+          tag="span"
+          variant="textSM"
+          class="font-medium uppercase tracking-[0.18em] text-base-500"
+        >
+          Invisible Attrition℠
+        </Text>
+
+        <Text
+          tag="h2"
+          variant="displayMD"
+          class="mt-6 uppercase font-display text-base-900"
+        >
+          The data is not necessarily wrong. It is structurally incomplete.
+        </Text>
+
+        <Text tag="p" variant="textBase" class="mt-6 text-base-600">
+          Lozen Advisory examines this problem through Invisible Attrition℠: the erosion of leadership capacity before traditional organizational systems detect risk. This matters for companies evaluating retention exposure, succession planning, benefits ROI, leadership pipeline health, and regrettable loss.
+        </Text>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div class="rounded-3xl border border-base-200 bg-white p-6 shadow-sm">
+          <Text
+            tag="h3"
+            variant="displayXS"
+            class="uppercase font-display text-base-900"
+          >
+            No case.
+          </Text>
+          <Text tag="p" variant="textSM" class="mt-4 text-base-600">
+            No HR escalation appears because no formal process was triggered.
+          </Text>
+        </div>
+
+        <div class="rounded-3xl border border-base-200 bg-white p-6 shadow-sm">
+          <Text
+            tag="h3"
+            variant="displayXS"
+            class="uppercase font-display text-base-900"
+          >
+            No claim.
+          </Text>
+          <Text tag="p" variant="textSM" class="mt-4 text-base-600">
+            No benefits signal appears because the platform was never entered.
+          </Text>
+        </div>
+
+        <div class="rounded-3xl border border-base-200 bg-white p-6 shadow-sm">
+          <Text
+            tag="h3"
+            variant="displayXS"
+            class="uppercase font-display text-base-900"
+          >
+            No warning.
+          </Text>
+          <Text tag="p" variant="textSM" class="mt-4 text-base-600">
+            The cost moves through performance, ambition, succession availability, and eventual exit.
+          </Text>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section class="bg-white">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+        <div>
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+          >
+            Executive Report Series
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displayMD"
+            class="mt-8 uppercase font-display text-base-900"
+          >
+            The Architecture of Invisible Attrition℠
+          </Text>
+
+          <Text tag="p" variant="textBase" class="mt-6 text-base-600">
+            This series examines how corporate retention systems collect, measure, and record workforce stability, and where those systems exclude the risk that never generated a record.
+          </Text>
+        </div>
+
+        <div class="grid gap-4">
+          {
+            architectureLinks.map((item) => (
+              <a
+                href={item.href}
+                class="group block rounded-3xl border border-base-200 bg-base-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent-400 hover:bg-accent-50 hover:shadow-sm"
+              >
+                <div class="flex gap-5">
+                  <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-accent-400 text-xs font-semibold text-base-900">
+                    {item.number}
+                  </span>
+
+                  <div>
+                    <Text
+                      tag="h3"
+                      variant="textLG"
+                      class="font-display font-medium uppercase text-base-900"
+                    >
+                      {item.title}
+                    </Text>
+
+                    <Text tag="p" variant="textSM" class="mt-2 text-base-600">
+                      {item.description}
+                    </Text>
+
+                    <span class="mt-4 inline-flex text-sm font-medium text-accent-700 transition-transform duration-300 group-hover:translate-x-1">
+                      Read analysis →
+                    </span>
+                  </div>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section class="bg-base-950">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+        <div class="max-w-3xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-[0.18em] text-accent-300"
+          >
+            Strategic Briefing
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displayMD"
+            class="mt-6 uppercase font-display text-white"
+          >
+            Organizations do not need more employee disclosure to evaluate this risk.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="mt-6 text-base-300">
+            They need a system-level analysis of where retention exposure exists outside their current measurement infrastructure. Lozen Advisory works with leadership teams to identify where workforce risk is forming before it appears as attrition, succession gaps, performance drift, or unexplained leadership loss.
+          </Text>
+        </div>
+
+        <Button
+          isLink
+          href="/request-briefing"
+          variant="accent"
+          size="sm"
+          class="w-fit"
+        >
+          Request a Retention Risk Briefing
+        </Button>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>
