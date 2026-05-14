@@ -1,23 +1,26 @@
 ---
-// Assets
-import Logo from "@/components/assets/Logo.astro";
-import BigLogo from "@/components/assets/BigLogo.astro";
 // Fundations
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-import Button from "@/components/fundations/elements/Button.astro";
 
 const footerLinks = [
   {
     title: "Advisory",
     links: [
       { label: "What We Do", href: "/what-we-do" },
+      { label: "MAPS Blueprint℠", href: "/booking" },
+      { label: "Request Briefing", href: "/request-briefing" },
+    ],
+  },
+  {
+    title: "Frameworks",
+    links: [
+      { label: "Invisible Attrition℠", href: "/invisible-attrition" },
       {
         label: "Disclosure Infrastructure",
         href: "/disclosure-independence-infrastructure",
       },
-      { label: "Invisible Attrition℠", href: "/invisible-attrition" },
-      { label: "Request Briefing", href: "/request-briefing" },
+      { label: "Retention Risk Analysis", href: "/retention-risk-analysis" },
     ],
   },
   {
@@ -32,37 +35,27 @@ const footerLinks = [
         label: "Menopause Legislation Tracker",
         href: "/menopause-legislation-tracker",
       },
+    ],
+  },
+  {
+    title: "Lozen Advisory",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Women Lawyers", href: "/menopause-support-women-lawyers" },
+      { label: "Events", href: "/events" },
       {
-        label: "Voluntary Benefit Disclosure Gap",
-        href: "/voluntary-benefit-disclosure-gap",
+        label: "AI Evaluation Training",
+        href: "https://www.executiveaiskills.com/",
       },
     ],
   },
 ];
-
-const utilityLinks = [
-  { label: "About", href: "/about" },
-  { label: "Why Lozen Advisory", href: "/why-lozen-advisory" },
-  { label: "Women Lawyers", href: "/menopause-support-women-lawyers" },
-  { label: "Events", href: "/events" },
-];
-
-const briefingLinks = [
-  { label: "Retention Risk Analysis", href: "/retention-risk-analysis" },
-  { label: "Retention Calculator", href: "/retention-calculator" },
-  { label: "MAPS Blueprint℠", href: "/booking" },
-  {
-    label: "AI Evaluation Training",
-    href: "https://www.executiveaiskills.com/",
-    external: true,
-  },
-];
 ---
 
-<footer class="relative w-full overflow-hidden lg:p-8">
+<footer class="relative w-full overflow-hidden bg-base-950 lg:p-8">
   <div class="absolute inset-0 overflow-hidden lg:m-4 lg:rounded-3xl">
     <video
-      class="object-cover object-center size-full"
+      class="size-full object-cover object-center opacity-50"
       autoplay
       muted
       loop
@@ -70,31 +63,51 @@ const briefingLinks = [
     >
       <source src="/videos/car3.mp4" type="video/mp4" />
     </video>
+
     <div
       aria-hidden="true"
-      class="absolute inset-0 pointer-events-none bg-base-950/90"
+      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-base-950/94 via-base-950/90 to-base-950/98"
+    >
+    </div>
+
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 bg-gradient-to-r from-base-950/95 via-base-950/72 to-base-950/92"
     >
     </div>
   </div>
 
   <Wrapper
     variant="standard"
-    class="relative z-10 flex flex-col justify-between h-full pt-24 pb-8 gap-8 lg:gap-44"
+    class="relative z-10 flex h-full flex-col justify-between gap-12 py-12 sm:py-16 lg:min-h-[34rem] lg:gap-32 lg:py-20"
   >
-    <div class="grid grid-cols-2 lg:grid-cols-5 gap-12">
-      <div class="col-span-2">
-        <a href="/" aria-label="Go to Lozen Advisory home page">
-          <Logo class="text-lg font-medium text-white uppercase font-display" />
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-6 lg:gap-12">
+      <div class="md:col-span-2">
+        <a
+          href="/"
+          aria-label="Go to Lozen Advisory home page"
+          class="font-display text-lg font-normal uppercase tracking-[-0.01em] text-white transition-colors hover:text-accent-300"
+        >
+          Lozen Advisory
         </a>
 
-        <Text tag="p" variant="textXS" class="max-w-sm mt-12 text-base-500">
+        <Text
+          tag="p"
+          variant="textSM"
+          class="mt-6 max-w-sm font-sans leading-6 text-base-300 sm:mt-8"
+        >
           Disclosure-independent advisory for organizations measuring retention,
           succession, leadership risk, and performance loss where no disclosure
           event was created.
         </Text>
 
-        <div class="max-w-sm mt-8 lozen-mailerlite">
-          <div class="ml-embedded" data-form="HVvUgr"></div>
+        <div class="mt-7 sm:mt-8">
+          <a
+            href="/request-briefing"
+            class="inline-flex h-10 items-center justify-center rounded-lg bg-accent-500 px-4 py-2 font-sans text-xs font-semibold uppercase tracking-[0.08em] text-base-950 shadow-lg transition-colors hover:bg-accent-400"
+          >
+            Request a Briefing
+          </a>
         </div>
       </div>
 
@@ -104,17 +117,17 @@ const briefingLinks = [
             <Text
               tag="h3"
               variant="textSM"
-              class="font-medium text-white uppercase font-display"
+              class="font-sans font-semibold uppercase tracking-[0.14em] text-white"
             >
               {section.title}
             </Text>
 
-            <ul class="mt-2 space-y-1">
+            <ul class="mt-4 space-y-2">
               {section.links.map((item) => (
                 <li>
                   <a
                     href={item.href}
-                    class="flex text-xs text-base-500 hover:text-white transition-colors"
+                    class="inline-flex font-sans text-sm leading-5 text-base-300 transition-colors hover:text-accent-300"
                   >
                     {item.label}
                   </a>
@@ -124,198 +137,54 @@ const briefingLinks = [
           </div>
         ))
       }
-
-      <div
-        class="grid grid-cols-2 lg:grid-cols-1 gap-8 col-span-2 lg:col-span-1"
-      >
-        <div>
-          <Text
-            tag="h4"
-            variant="textSM"
-            class="font-medium text-white uppercase font-display"
-          >
-            Company
-          </Text>
-
-          <ul class="mt-2 space-y-1">
-            {utilityLinks.map((item) => (
-              <li>
-                <a
-                  href={item.href}
-                  class="flex text-xs text-base-500 hover:text-white transition-colors"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <Text
-            tag="h4"
-            variant="textSM"
-            class="font-medium text-white uppercase font-display"
-          >
-            Briefing
-          </Text>
-
-          <ul class="mt-2 space-y-1">
-            {briefingLinks.map((item) => (
-              <li>
-                <a
-                  href={item.href}
-                  target={item.external ? "_blank" : undefined}
-                  rel={item.external ? "noreferrer" : undefined}
-                  class="flex text-xs text-base-500 hover:text-white transition-colors"
-                >
-                  {item.label}
-                  {item.external && <span aria-hidden="true"> ↗</span>}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
     </div>
 
     <div>
       <div
-        class="flex flex-col justify-between mt-auto md:flex-row lg:items-center gap-4"
+        class="flex flex-col justify-between gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center"
       >
-        <Text tag="p" variant="textSM" class="text-base-500">
+        <Text tag="p" variant="textSM" class="font-sans text-base-300">
           &copy; {new Date().getFullYear()} Lozen Advisory LLC. All rights reserved.
         </Text>
 
-        <div class="flex gap-6">
+        <div class="flex flex-wrap gap-x-6 gap-y-3">
           <a
             href="/privacy-policy"
-            class="text-xs text-base-500 hover:text-accent-500 transition-colors"
+            class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300"
           >
             Privacy Policy
           </a>
 
           <a
             href="/terms-of-service"
-            class="text-xs text-base-500 hover:text-accent-500 transition-colors"
+            class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300"
           >
-            Terms
+            Terms of Service
           </a>
 
           <a
             href="/about-ai"
-            class="text-xs text-base-500 hover:text-accent-500 transition-colors"
+            class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300"
           >
             About AI
+          </a>
+
+          <a
+            href="/tools-resources"
+            class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300"
+          >
+            Tools & Resources
           </a>
         </div>
       </div>
 
-      <BigLogo
-        class="pt-8 mt-2 border-t text-white/10 border-white/10 mix-blend-multiply"
-      />
+      <div class="mt-8 overflow-hidden border-t border-white/10 pt-8">
+        <div
+          class="font-display text-[clamp(2.75rem,14vw,13rem)] font-normal uppercase leading-none tracking-[-0.05em] text-white/10"
+        >
+          Lozen Advisory
+        </div>
+      </div>
     </div>
   </Wrapper>
-
-  <script is:inline>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2164541');
-  </script>
-
-  <style is:global>
-    .lozen-mailerlite .ml-form-embedContainer,
-    .lozen-mailerlite .ml-form-embedWrapper,
-    .lozen-mailerlite .ml-form-embedBody,
-    .lozen-mailerlite .ml-form-successBody {
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      border: 0 !important;
-      background: transparent !important;
-      box-shadow: none !important;
-    }
-
-    .lozen-mailerlite .ml-form-embedContent,
-    .lozen-mailerlite .ml-form-embedPermissions {
-      display: none !important;
-    }
-
-    .lozen-mailerlite form {
-      display: flex !important;
-      gap: 0.5rem !important;
-      align-items: center !important;
-      margin: 0 !important;
-    }
-
-    .lozen-mailerlite .ml-form-formContent {
-      flex: 1 1 auto !important;
-      margin: 0 !important;
-    }
-
-    .lozen-mailerlite .ml-form-fieldRow,
-    .lozen-mailerlite .ml-field-group {
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-
-    .lozen-mailerlite input[type="email"] {
-      width: 100% !important;
-      height: 2.5rem !important;
-      padding: 0.5rem 1rem !important;
-      border: 1px solid transparent !important;
-      border-radius: 0.5rem !important;
-      background: rgba(255, 255, 255, 0.05) !important;
-      color: #ffffff !important;
-      font-size: 0.75rem !important;
-      line-height: 1rem !important;
-      outline: none !important;
-      transition: border-color 150ms ease !important;
-    }
-
-    .lozen-mailerlite input[type="email"]::placeholder {
-      color: rgb(100 116 139) !important;
-    }
-
-    .lozen-mailerlite input[type="email"]:focus {
-      border-color: rgb(250 204 21) !important;
-    }
-
-    .lozen-mailerlite .ml-form-embedSubmit {
-      flex: 0 0 auto !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-
-    .lozen-mailerlite button {
-      height: 2.5rem !important;
-      min-height: 2.5rem !important;
-      border: 0 !important;
-      border-radius: 0.5rem !important;
-      background: rgb(250 204 21) !important;
-      color: rgb(2 6 23) !important;
-      font-size: 0.875rem !important;
-      font-weight: 700 !important;
-      padding: 0.5rem 1rem !important;
-      transition: background-color 150ms ease !important;
-    }
-
-    .lozen-mailerlite button:hover {
-      background: rgb(253 224 71) !important;
-    }
-
-    @media (max-width: 640px) {
-      .lozen-mailerlite form {
-        align-items: stretch !important;
-        flex-direction: column !important;
-      }
-
-      .lozen-mailerlite button {
-        width: 100% !important;
-      }
-    }
-  </style>
 </footer>
