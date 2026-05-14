@@ -135,9 +135,9 @@ const formattedDate = pubDate
   {
     clusters.length > 0 && (
       <section class="bg-base-950 text-white">
-        <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-20">
-          <div class="mx-auto max-w-5xl">
-            <div class="mb-8 sm:mb-10">
+        <Wrapper variant="standard" class="py-10 sm:py-12 lg:py-16">
+          <div class="mx-auto max-w-4xl">
+            <div class="mb-6 sm:mb-8">
               <Text
                 tag="span"
                 variant="textSM"
@@ -148,22 +148,22 @@ const formattedDate = pubDate
 
               <Text
                 tag="h2"
-                variant="displaySM"
-                class="mt-5 max-w-4xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-white sm:mt-6"
+                variant="displayXS"
+                class="mt-4 max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.025em] text-white"
               >
                 What the Framework Measures: Nine Dimensions of Invisible Attrition℠
               </Text>
 
               <Text
                 tag="p"
-                variant="textBase"
-                class="mt-4 max-w-2xl font-sans leading-7 text-base-300"
+                variant="textSM"
+                class="mt-3 max-w-2xl font-sans leading-6 text-base-300"
               >
                 Nine cluster articles expanding the Invisible Attrition℠ framework.
               </Text>
             </div>
 
-            <div class="grid gap-4">
+            <div class="grid gap-3">
               {clusters.map(
                 (
                   cluster: {
@@ -174,45 +174,45 @@ const formattedDate = pubDate
                   index: number,
                 ) => (
                   <details
-                    class="group overflow-hidden rounded-2xl border border-white/15 bg-white shadow-xl ring-1 ring-white/10 transition-all duration-300 open:border-accent-500 open:shadow-2xl lg:rounded-3xl"
+                    class="group overflow-hidden rounded-xl border border-white/12 bg-white shadow-md ring-1 ring-white/10 transition-all duration-300 open:border-accent-500 open:shadow-xl"
                     open={index === 0}
                   >
-                    <summary class="flex cursor-pointer list-none items-start gap-4 px-5 py-5 text-left sm:px-6 sm:py-6 [&::-webkit-details-marker]:hidden">
-                      <span class="mt-1 shrink-0 font-sans text-xs font-semibold tracking-[0.18em] text-accent-700">
+                    <summary class="flex cursor-pointer list-none items-center gap-3 px-4 py-3.5 text-left sm:px-5 sm:py-4 [&::-webkit-details-marker]:hidden">
+                      <span class="shrink-0 font-sans text-[0.68rem] font-semibold tracking-[0.16em] text-accent-700">
                         {String(index + 1).padStart(2, "0")}
                       </span>
 
-                      <span class="flex-1 font-display text-lg font-normal uppercase leading-snug tracking-[-0.015em] text-base-950 transition-colors duration-200 group-hover:text-accent-700 sm:text-xl">
+                      <span class="flex-1 font-display text-sm font-normal uppercase leading-snug tracking-[-0.005em] text-base-950 transition-colors duration-200 group-hover:text-accent-700 sm:text-base">
                         {cluster.title}
                       </span>
 
                       <span
-                        class="mt-0.5 shrink-0 font-sans text-xl font-light leading-none text-base-500 transition-colors duration-200 group-hover:text-accent-700 group-open:hidden"
+                        class="shrink-0 font-sans text-base font-light leading-none text-base-500 transition-colors duration-200 group-hover:text-accent-700 group-open:hidden"
                         aria-hidden="true"
                       >
                         +
                       </span>
 
                       <span
-                        class="mt-0.5 hidden shrink-0 font-sans text-xl font-light leading-none text-accent-700 group-open:inline"
+                        class="hidden shrink-0 font-sans text-base font-light leading-none text-accent-700 group-open:inline"
                         aria-hidden="true"
                       >
                         −
                       </span>
                     </summary>
 
-                    <div class="border-t border-base-200 px-5 pb-5 pt-5 sm:px-6 sm:pb-6">
+                    <div class="border-t border-base-200 px-4 pb-4 pt-4 sm:px-5">
                       <Text
                         tag="p"
-                        variant="textBase"
-                        class="max-w-3xl font-sans leading-7 text-base-700"
+                        variant="textSM"
+                        class="max-w-2xl font-sans leading-6 text-base-700"
                       >
                         {cluster.description}
                       </Text>
 
                       <a
                         href={cluster.slug}
-                        class="mt-5 inline-flex font-sans text-sm font-semibold text-accent-700 transition-all duration-300 hover:translate-x-1 hover:text-base-950"
+                        class="mt-4 inline-flex font-sans text-xs font-semibold uppercase tracking-[0.08em] text-accent-700 transition-all duration-300 hover:translate-x-1 hover:text-base-950"
                       >
                         Read article →
                       </a>
