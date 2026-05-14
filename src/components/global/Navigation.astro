@@ -12,12 +12,8 @@ import Close from "@/components/fundations/icons/Close.astro";
 import Burger from "@/components/fundations/icons/Burger.astro";
 
 const quickLinks = [
-  { href: "/services", label: "What We Do" },
-  { href: "/invisible-attrition", label: "Invisible Attrition" },
-  {
-    href: "/disclosure-independence-infrastructure",
-    label: "Disclosure Infrastructure",
-  },
+  { href: "/services", label: "Services" },
+  { href: "/events", label: "Events" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -27,15 +23,16 @@ const currentPath = Astro.url.pathname;
 const isActiveLink = (href: string) =>
   currentPath === href || currentPath.startsWith(`${href}/`);
 
-const isExploreActive =
+const isResearchActive =
   currentPath.startsWith("/blog") ||
+  currentPath.startsWith("/invisible-attrition") ||
+  currentPath.startsWith("/disclosure-independence-infrastructure") ||
   currentPath.startsWith("/architecture-of-invisible-attrition-series") ||
   currentPath.startsWith("/menopause-legislation-tracker") ||
   currentPath.startsWith("/voluntary-benefit-disclosure-gap") ||
   currentPath.startsWith("/billable-hour-visibility-tax") ||
   currentPath.startsWith("/succession-planning-retention-risk-data-gap") ||
-  currentPath.startsWith("/leadership-pipeline-manager-engagement") ||
-  currentPath.startsWith("/events");
+  currentPath.startsWith("/leadership-pipeline-manager-engagement");
 ---
 
 <header class="fixed top-0 z-50 w-full">
@@ -53,8 +50,35 @@ const isExploreActive =
       </a>
 
       <div class="hidden items-center gap-8 lg:flex">
+        <a
+          href="/services"
+          class:list={[
+            "text-sm font-medium transition-colors duration-200",
+            isActiveLink("/services")
+              ? "text-accent-400"
+              : "text-white/85 hover:text-white",
+          ]}
+        >
+          Services
+        </a>
+
+        <button
+          id="megamenu-trigger"
+          type="button"
+          class:list={[
+            "text-sm font-medium transition-colors duration-200",
+            isResearchActive
+              ? "text-accent-400"
+              : "text-white/85 hover:text-white",
+          ]}
+          aria-expanded="false"
+          aria-controls="megamenu"
+        >
+          Research
+        </button>
+
         {
-          quickLinks.map((link) => (
+          quickLinks.slice(1).map((link) => (
             <a
               href={link.href}
               class:list={[
@@ -68,21 +92,6 @@ const isExploreActive =
             </a>
           ))
         }
-
-        <button
-          id="megamenu-trigger"
-          type="button"
-          class:list={[
-            "text-sm font-medium transition-colors duration-200",
-            isExploreActive
-              ? "text-accent-400"
-              : "text-white/85 hover:text-white",
-          ]}
-          aria-expanded="false"
-          aria-controls="megamenu"
-        >
-          Explore +
-        </button>
       </div>
 
       <div class="flex shrink-0 items-center gap-2">
