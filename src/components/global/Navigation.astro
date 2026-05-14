@@ -27,14 +27,15 @@ const currentPath = Astro.url.pathname;
 const isActiveLink = (href: string) =>
   currentPath === href || currentPath.startsWith(`${href}/`);
 
-const isResearchActive =
+const isExploreActive =
   currentPath.startsWith("/blog") ||
   currentPath.startsWith("/architecture-of-invisible-attrition-series") ||
   currentPath.startsWith("/menopause-legislation-tracker") ||
   currentPath.startsWith("/voluntary-benefit-disclosure-gap") ||
   currentPath.startsWith("/billable-hour-visibility-tax") ||
   currentPath.startsWith("/succession-planning-retention-risk-data-gap") ||
-  currentPath.startsWith("/leadership-pipeline-manager-engagement");
+  currentPath.startsWith("/leadership-pipeline-manager-engagement") ||
+  currentPath.startsWith("/events");
 ---
 
 <header class="fixed top-0 z-50 w-full">
@@ -53,7 +54,7 @@ const isResearchActive =
 
       <div class="hidden items-center gap-8 lg:flex">
         {
-          quickLinks.slice(0, 3).map((link) => (
+          quickLinks.map((link) => (
             <a
               href={link.href}
               class:list={[
@@ -73,31 +74,15 @@ const isResearchActive =
           type="button"
           class:list={[
             "text-sm font-medium transition-colors duration-200",
-            isResearchActive
+            isExploreActive
               ? "text-accent-400"
               : "text-white/85 hover:text-white",
           ]}
           aria-expanded="false"
           aria-controls="megamenu"
         >
-          Research
+          Explore +
         </button>
-
-        {
-          quickLinks.slice(3).map((link) => (
-            <a
-              href={link.href}
-              class:list={[
-                "text-sm font-medium transition-colors duration-200",
-                isActiveLink(link.href)
-                  ? "text-accent-400"
-                  : "text-white/85 hover:text-white",
-              ]}
-            >
-              {link.label}
-            </a>
-          ))
-        }
       </div>
 
       <div class="flex shrink-0 items-center gap-2">
