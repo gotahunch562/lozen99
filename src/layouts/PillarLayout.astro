@@ -43,7 +43,10 @@ const formattedDate = pubDate
 <BaseLayout title={pageTitle} description={pageDescription}>
   <!-- Page header -->
   <section class="overflow-hidden border-b border-base-200 bg-white">
-    <Wrapper variant="standard" class="pt-28 pb-12 sm:pt-32 sm:pb-14 lg:pt-36 lg:pb-16">
+    <Wrapper
+      variant="standard"
+      class="pt-28 pb-12 sm:pt-32 sm:pb-14 lg:pt-36 lg:pb-16"
+    >
       <div class="mx-auto max-w-5xl">
         <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
           <Text
@@ -110,19 +113,29 @@ const formattedDate = pubDate
 
   <!-- Article body -->
   <section class="bg-white">
-    <Wrapper
-      variant="prose"
-      class="pillar-article py-10 sm:py-12 lg:py-16 prose-headings:font-display prose-headings:font-normal prose-headings:uppercase prose-headings:tracking-[-0.025em] prose-headings:text-base-950 prose-h2:mt-14 prose-h2:mb-6 prose-h2:text-2xl sm:prose-h2:text-3xl prose-p:font-sans prose-p:text-base-700 prose-p:leading-8 sm:prose-p:leading-9 prose-a:font-semibold prose-a:text-accent-700 prose-a:decoration-accent-500 prose-a:underline-offset-4 hover:prose-a:text-base-950"
-    >
-      <slot />
+    <Wrapper variant="standard" class="py-10 sm:py-12 lg:py-16">
+      <article
+        class="pillar-article prose prose-base mx-auto w-full max-w-5xl
+        prose-headings:font-display prose-headings:font-normal prose-headings:uppercase prose-headings:tracking-[-0.025em] prose-headings:text-base-950
+        prose-h2:mt-14 prose-h2:mb-6 prose-h2:text-2xl sm:prose-h2:text-3xl
+        prose-p:font-sans prose-p:text-base-700 prose-p:leading-8 sm:prose-p:leading-9
+        prose-a:font-semibold prose-a:text-accent-700 prose-a:decoration-accent-500 prose-a:underline-offset-4 hover:prose-a:text-base-950
+        prose-strong:text-base-950 prose-li:text-base-700 prose-li:leading-8"
+      >
+        <slot />
+      </article>
     </Wrapper>
   </section>
 
   <!-- Service mark footnote -->
   <section class="bg-white">
-    <Wrapper variant="narrow" class="pb-12 lg:pb-16">
-      <div class="border-t border-base-200 pt-6">
-        <Text tag="p" variant="textSM" class="font-sans italic leading-6 text-base-500">
+    <Wrapper variant="standard" class="pb-12 lg:pb-16">
+      <div class="mx-auto max-w-5xl border-t border-base-200 pt-6">
+        <Text
+          tag="p"
+          variant="textSM"
+          class="max-w-3xl font-sans italic leading-6 text-base-500"
+        >
           Invisible Attrition℠ is a service mark of Lozen Advisory LLC.
           The Invisible Attrition℠ framework was first published publicly on
           February 15, 2026 at lozenadvisory.com/invisible-attrition.
