@@ -1,20 +1,13 @@
 ---
 /**
  * PillarLayout.astro
- * Layout for pillar pages (e.g., /invisible-attrition).
- * Wraps inside BaseLayout. Uses project design system components only.
+ * src/layouts/PillarLayout.astro
  *
- * Frontmatter fields (set in the .md file):
- *   title          — <title> tag and og:title
- *   heading        — rendered as <h1>
- *   subtitle       — deck line below heading (optional)
- *   slug           — canonical path, e.g. /invisible-attrition
- *   metaDescription
- *   datePublished  — ISO date string, e.g. 2026-02-15
- *   dateModified   — ISO date string (optional)
- *   heroImage      — path relative to /public (optional)
- *   heroAlt        — required if heroImage is set
- *   clusters       — array of { slug, title, description }
+ * Frontmatter fields expected from the .md file:
+ *   heading, subtitle, pubDate, heroImage, heroAlt, clusters[]
+ *
+ * In Astro, markdown frontmatter is passed as Astro.props.frontmatter
+ * when the file uses the layout: field. All fields destructure from there.
  */
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
@@ -22,50 +15,24 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-export interface ClusterLink {
-  slug: string;
-  title: string;
-  description: string;
-}
-
-interface Props {
-  title: string;
-  heading: string;
-  subtitle?: string;
-  slug: string;
-  metaDescription: string;
-  datePublished: string;
-  dateModified?: string;
-  heroImage?: string;
-  heroAlt?: string;
-  clusters?: ClusterLink[];
-}
+const { frontmatter } = Astro.props;
 
 const {
   heading,
   subtitle,
-  datePublished,
+  pubDate,
   heroImage,
   heroAlt = "",
   clusters = [],
-} = Astro.props;
+} = frontmatter;
 
-const formattedDate = new Date(datePublished).toLocaleDateString("en-US", {
+const formattedDate = new Date(pubDate).toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
   day: "2-digit",
 });
 ---
 
-<!-- DEVELOPER NOTE — verify before merging:
-     1. PATH: layout files must be in src/layouts/. Pillar pages resolve
-        from src/pages/, so "../layouts/" is correct.
-     2. BaseLayout PROPS: title and metaDescription are passed below.
-        If your BaseLayout passes these to BaseHead, SEO metadata will be
-        page-specific. Confirm the prop names match your BaseLayout signature.
-     3. Wrapper variants: confirm variant="narrow" and variant="prose"
-        exist in your Wrapper.astro before first build.
--->
 <BaseLayout>
 
   <!-- ── Page header ── -->
@@ -80,7 +47,7 @@ const formattedDate = new Date(datePublished).toLocaleDateString("en-US", {
         >
           Framework · Pillar Article
         </Text>
-        <time datetime={datePublished} class="text-sm text-base-500">
+        <time datetime={pubDate} class="text-sm text-base-500">
           {formattedDate}
         </time>
       </div>
@@ -119,10 +86,7 @@ const formattedDate = new Date(datePublished).toLocaleDateString("en-US", {
     </Wrapper>
   )}
 
-  <!-- ── Article body ──
-       Markdown content renders here via <slot />.
-       Wrapper variant="prose" applies @tailwindcss/typography
-       plus the project's prose token overrides. -->
+  <!-- ── Article body ── -->
   <section>
     <Wrapper variant="prose" class="py-12">
       <slot />
@@ -167,7 +131,7 @@ const formattedDate = new Date(datePublished).toLocaleDateString("en-US", {
           class="divide-y divide-base-200 border-t border-base-200"
           role="list"
         >
-          {clusters.map((cluster, index) => (
+          {clusters.map((cluster: { slug: string; title: string; description: string }, index: number) => (
             <li data-accordion-item>
               <button
                 class="flex items-baseline gap-4 w-full py-5 text-left group"
