@@ -1,0 +1,227 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+
+const title = "Events | Lozen Advisory";
+const description =
+  "Speaking engagements, hosted briefings, conferences, panels, and appearances from Lozen Advisory.";
+
+const upcomingEvents = [
+  {
+    title: "Akilah Kamaria Presenting at 2026 LIWOCA CLE Conference",
+    eyebrow: "Conference",
+    displayDate: "2026",
+    location: "LIWOCA CLE Conference",
+    format: "Speaking Engagement",
+    description:
+      "Akilah Kamaria will present at the 2026 LIWOCA CLE Conference on leadership, disclosure, performance protection, and the professional records women create or avoid in high-stakes environments.",
+    href: "/events/akilah-kamaria-presenting-at-2026-liwoca-cle-conference",
+    cta: "View event",
+  },
+];
+
+const eventTopics = [
+  "Power, disclosure, and professional record creation",
+  "Invisible Attrition℠ and leadership capacity loss",
+  "AI implementation burden and the Power User Trap℠",
+  "Benefits utilization, retention data, and false confidence",
+  "Menopause as a workforce measurement signal",
+  "Performance protection for senior women leaders",
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="bg-white">
+    <section class="border-b border-base-200 bg-white">
+      <Wrapper
+        variant="standard"
+        class="pt-28 pb-12 sm:pt-32 sm:pb-14 lg:pt-36 lg:pb-16"
+      >
+        <div class="mx-auto max-w-7xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
+          >
+            Events
+          </Text>
+
+          <Text
+            tag="h1"
+            variant="displayLG"
+            class="mt-8 max-w-4xl font-display font-normal uppercase leading-[1.02] tracking-[-0.04em] text-base-950"
+          >
+            Speaking, Hosted Briefings, and Appearances
+          </Text>
+
+          <Text
+            tag="p"
+            variant="textLG"
+            class="mt-5 max-w-3xl font-sans leading-8 text-base-700"
+          >
+            Lozen Advisory participates in events where leadership, disclosure,
+            workforce risk, AI implementation burden, and performance protection
+            are being discussed before the cost becomes visible.
+          </Text>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-white">
+      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
+        <div
+          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(420px,0.68fr)] lg:gap-20"
+        >
+          <div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+            >
+              Upcoming Events
+            </Text>
+          </div>
+
+          <div class="grid gap-8">
+            {
+              upcomingEvents.map((event) => (
+                <article class="border-t border-base-200 pt-6">
+                  <div class="grid gap-4 sm:grid-cols-[9rem_minmax(0,1fr)] sm:gap-8">
+                    <div>
+                      <Text
+                        tag="p"
+                        variant="textXS"
+                        class="font-sans font-semibold uppercase tracking-[0.16em] text-accent-700"
+                      >
+                        {event.eyebrow}
+                      </Text>
+
+                      <Text
+                        tag="p"
+                        variant="textSM"
+                        class="mt-2 font-sans font-semibold leading-6 text-base-700"
+                      >
+                        {event.displayDate}
+                      </Text>
+                    </div>
+
+                    <div>
+                      <Text
+                        tag="h3"
+                        variant="displayXS"
+                        class="font-display font-normal uppercase leading-tight tracking-[-0.015em] text-base-950"
+                      >
+                        {event.title}
+                      </Text>
+
+                      <Text
+                        tag="p"
+                        variant="textSM"
+                        class="mt-3 font-sans font-semibold uppercase tracking-[0.1em] text-base-500"
+                      >
+                        {[event.location, event.format].filter(Boolean).join(" · ")}
+                      </Text>
+
+                      <Text
+                        tag="p"
+                        variant="textBase"
+                        class="mt-4 max-w-2xl font-sans leading-7 text-base-700"
+                      >
+                        {event.description}
+                      </Text>
+
+                      <a
+                        href={event.href}
+                        class="mt-5 inline-flex font-sans text-sm font-semibold text-accent-700 transition-all duration-300 hover:translate-x-1 hover:text-base-950"
+                      >
+                        {event.cta} →
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="border-y border-base-200 bg-base-50">
+      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
+        <div
+          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(420px,0.68fr)] lg:gap-20"
+        >
+          <div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+            >
+              Event Topics
+            </Text>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            {
+              eventTopics.map((topic) => (
+                <div class="border-t border-base-300 pt-4">
+                  <Text
+                    tag="p"
+                    variant="textBase"
+                    class="font-sans font-semibold leading-7 text-base-950"
+                  >
+                    {topic}
+                  </Text>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-white">
+      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
+        <div class="mx-auto max-w-4xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
+          >
+            Speaking and Hosted Sessions
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displaySM"
+            class="mt-5 max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+          >
+            Invite Lozen Advisory into the conversation before the issue becomes visible.
+          </Text>
+
+          <Text
+            tag="p"
+            variant="textBase"
+            class="mt-6 max-w-2xl font-sans leading-8 text-base-700 sm:text-lg sm:leading-9"
+          >
+            For speaking invitations, hosted briefings, panels, conferences, or
+            private leadership sessions, contact Lozen Advisory with the event
+            context, audience, timing, and topic.
+          </Text>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <Button isLink href="/contact" variant="accent" size="sm">
+              Contact Lozen Advisory →
+            </Button>
+
+            <Button isLink href="/request-briefing" variant="default" size="sm">
+              Request Briefing →
+            </Button>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+  </main>
+</BaseLayout>
