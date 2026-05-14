@@ -1,0 +1,316 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+const reserveSessionHref = "https://buy.stripe.com/dRm00l0hLgip9okc8dfjG06";
+
+const title = "MAPS Blueprint℠ | Request a Private Session";
+
+const description =
+  "The MAPS Blueprint℠ is a 90-minute private working session for women approaching a performance review, promotion decision, visibility moment, or consequential professional evaluation.";
+
+const situations = [
+  "You are approaching a performance review, promotion decision, or increased visibility",
+  "Something has changed and you are managing it privately",
+  "You cannot fully explain it at work",
+  "You need to decide how to move forward before you are evaluated",
+  "You may be preparing for something visible and consequential (a trial, a major presentation, a board meeting, a partner review)",
+  "Health challenges are starting to impact your performance",
+];
+
+const nextSteps = [
+  "A private intake form",
+  "A scheduling link to choose your date and time",
+];
+
+const sequence = [
+  "Reserve your session",
+  "Complete your intake (sent by email)",
+  "Choose your date and time",
+];
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "MAPS Blueprint℠",
+  description,
+  provider: {
+    "@type": "Organization",
+    name: "Lozen Advisory LLC",
+    url: "https://www.lozenadvisory.com",
+  },
+  areaServed: "United States",
+  offers: {
+    "@type": "Offer",
+    price: "997",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    url: "https://www.lozenadvisory.com/booking",
+  },
+};
+---
+
+<BaseLayout>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(pageJsonLd)}
+  ></script>
+
+  <section class="overflow-hidden bg-gradient-to-t from-base-200 to-white">
+    <Wrapper variant="standard" class="py-24 lg:py-32">
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,0.68fr)_minmax(20rem,0.32fr)] lg:items-end">
+        <div class="max-w-4xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+          >
+            MAPS Blueprint℠
+          </Text>
+
+          <Text
+            tag="h1"
+            variant="displayXL"
+            class="mt-8 uppercase font-display text-base-900"
+          >
+            Request a private session
+          </Text>
+
+          <Text
+            tag="p"
+            variant="textLG"
+            class="mt-6 max-w-3xl text-base-600 text-balance"
+          >
+            This is a 90-minute private working session.
+          </Text>
+        </div>
+
+        <aside class="rounded-3xl bg-base-950 p-6 shadow-2xl outline-4 outline-base-500/10 sm:p-8">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-accent-300"
+          >
+            Investment
+          </Text>
+
+          <Text
+            tag="p"
+            variant="displaySM"
+            class="mt-5 font-display text-white"
+          >
+            $997 · 90 minutes
+          </Text>
+
+          <Text tag="p" variant="textSM" class="mt-4 text-base-200">
+            Paid in full at the time of booking.
+          </Text>
+
+          <div class="mt-8">
+            <Button
+              isLink
+              href={reserveSessionHref}
+              variant="accent"
+              size="sm"
+              class="w-fit"
+            >
+              Request a private session
+            </Button>
+          </div>
+        </aside>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section>
+    <Wrapper variant="standard" class="py-12 lg:py-24">
+      <div class="grid gap-12 lg:grid-cols-[0.32fr_1fr] lg:gap-20">
+        <div>
+          <Text
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-accent-600"
+          >
+            Before You Continue
+          </Text>
+        </div>
+
+        <div class="max-w-4xl">
+          <Text
+            tag="h2"
+            variant="displaySM"
+            class="font-display uppercase text-base-900"
+          >
+            It is designed for a specific situation:
+          </Text>
+
+          <div class="mt-8 grid gap-4 md:grid-cols-2">
+            {
+              situations.map((item) => (
+                <div class="rounded-3xl border border-base-200 bg-white p-5 shadow-xl">
+                  <Text tag="p" variant="textBase" class="text-base-700">
+                    {item}
+                  </Text>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class="mt-8 rounded-3xl border border-accent-300 bg-accent-100/60 p-6 sm:p-8">
+            <Text
+              tag="p"
+              variant="textLG"
+              class="font-display text-base-900"
+            >
+              If that is not your situation, this is not the right entry point.
+            </Text>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section class="bg-base-950">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="grid gap-12 lg:grid-cols-[0.32fr_1fr] lg:gap-20">
+        <div>
+          <Text
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-accent-300"
+          >
+            What Happens Next
+          </Text>
+        </div>
+
+        <div class="max-w-4xl">
+          <Text
+            tag="h2"
+            variant="displaySM"
+            class="font-display uppercase text-white"
+          >
+            You reserve your session.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="mt-5 text-base-200">
+            Within minutes, you receive an email with your next steps:
+          </Text>
+
+          <div class="mt-8 grid gap-4 md:grid-cols-2">
+            {
+              nextSteps.map((item) => (
+                <div class="rounded-3xl border border-white/10 bg-base-900 p-6">
+                  <Text
+                    tag="p"
+                    variant="textBase"
+                    class="text-base-100"
+                  >
+                    {item}
+                  </Text>
+                </div>
+              ))
+            }
+          </div>
+
+          <Text tag="p" variant="textBase" class="mt-8 text-base-200">
+            Your session details and access link follow once your time is confirmed.
+          </Text>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section>
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="grid gap-12 lg:grid-cols-[0.32fr_1fr] lg:gap-20">
+        <div>
+          <Text
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-accent-600"
+          >
+            How This Works
+          </Text>
+        </div>
+
+        <div class="max-w-4xl">
+          <div class="grid gap-4 md:grid-cols-3">
+            {
+              sequence.map((item, index) => (
+                <article class="rounded-3xl border border-base-200 bg-white p-6 shadow-xl">
+                  <Text
+                    tag="p"
+                    variant="displayXS"
+                    class="font-display text-accent-600"
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </Text>
+
+                  <Text
+                    tag="h3"
+                    variant="displayXS"
+                    class="mt-5 font-display uppercase text-base-900"
+                  >
+                    {item}
+                  </Text>
+                </article>
+              ))
+            }
+          </div>
+
+          <div class="mt-8 space-y-3">
+            <Text tag="p" variant="textBase" class="text-base-700">
+              That is the full sequence.
+            </Text>
+
+            <Text tag="p" variant="textBase" class="text-base-700">
+              Nothing complicated.
+            </Text>
+
+            <Text tag="p" variant="textBase" class="text-base-700">
+              Nothing that requires you to explain more than you are ready to.
+            </Text>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section class="bg-base-950">
+    <Wrapper variant="narrow" class="py-16 text-center lg:py-24">
+      <Text
+        tag="span"
+        variant="textSM"
+        class="font-medium uppercase tracking-wide text-accent-300"
+      >
+        Investment
+      </Text>
+
+      <Text
+        tag="h2"
+        variant="displayLG"
+        class="mt-6 uppercase font-display text-white"
+      >
+        $997 · 90 minutes
+      </Text>
+
+      <Text tag="p" variant="textBase" class="mt-5 text-base-200">
+        Paid in full at the time of booking.
+      </Text>
+
+      <div class="mt-10 flex justify-center">
+        <Button
+          isLink
+          href={reserveSessionHref}
+          variant="accent"
+          size="md"
+          class="w-fit"
+        >
+          Request a private session
+        </Button>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>
