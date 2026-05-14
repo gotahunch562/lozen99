@@ -1,0 +1,223 @@
+---
+/**
+ * ClusterLayout.astro
+ * Layout for cluster articles (e.g., /invisible-attrition/exit-data-failure).
+ * Wraps inside BaseLayout. Uses project design system components only.
+ *
+ * Frontmatter fields (set in the .md file):
+ *   title           — <title> tag
+ *   heading         — rendered as <h1>
+ *   subtitle        — deck line (optional)
+ *   slug            — canonical path
+ *   metaDescription
+ *   datePublished   — ISO date string
+ *   dateModified    — ISO date string (optional)
+ *   clusterNumber   — integer, e.g. 1
+ *   pillarSlug      — e.g. /invisible-attrition
+ *   pillarTitle     — e.g. "Invisible Attrition℠"
+ *   prevCluster     — { slug, title } or omit if first
+ *   nextCluster     — { slug, title } or omit if last
+ */
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+interface ClusterNav {
+  slug: string;
+  title: string;
+}
+
+interface Props {
+  title: string;
+  heading: string;
+  subtitle?: string;
+  slug: string;
+  metaDescription: string;
+  datePublished: string;
+  dateModified?: string;
+  clusterNumber: number;
+  pillarSlug: string;
+  pillarTitle: string;
+  prevCluster?: ClusterNav;
+  nextCluster?: ClusterNav;
+}
+
+const {
+  heading,
+  subtitle,
+  datePublished,
+  clusterNumber,
+  pillarSlug,
+  pillarTitle,
+  prevCluster,
+  nextCluster,
+} = Astro.props;
+
+const formattedDate = new Date(datePublished).toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "2-digit",
+});
+
+const clusterLabel = String(clusterNumber).padStart(2, "0");
+---
+
+<!-- DEVELOPER NOTE — verify before merging:
+     1. PATH: cluster pages resolve from src/pages/invisible-attrition/,
+        so "../../layouts/" is correct for src/layouts/.
+     2. BaseLayout PROPS: title and metaDescription are passed below.
+        If your BaseLayout passes these to BaseHead, SEO metadata will be
+        page-specific. Confirm the prop names match your BaseLayout signature.
+     3. Wrapper variants: confirm variant="narrow" and variant="prose"
+        exist in your Wrapper.astro before first build.
+-->
+<BaseLayout title={title} metaDescription={metaDescription}>
+
+  <!-- ── Breadcrumb ── -->
+  <Wrapper variant="narrow" class="pt-8">
+    <a
+      href={pillarSlug}
+      class="text-sm text-base-500 hover:text-accent-600 transition-colors duration-200 font-medium"
+    >
+      ← {pillarTitle}
+    </a>
+  </Wrapper>
+
+  <!-- ── Page header ── -->
+  <section class="bg-gradient-to-t from-base-200 to-white overflow-hidden">
+    <Wrapper variant="narrow" class="pt-10 lg:pt-16 pb-12">
+
+      <div class="flex items-center gap-4 mb-8">
+        <Text
+          tag="span"
+          variant="textSM"
+          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+        >
+          Cluster {clusterLabel} · {pillarTitle}
+        </Text>
+        <time datetime={datePublished} class="text-sm text-base-500">
+          {formattedDate}
+        </time>
+      </div>
+
+      <Text
+        tag="h1"
+        variant="displayMD"
+        class="font-display text-base-900 uppercase"
+      >
+        {heading}
+      </Text>
+
+      {subtitle && (
+        <Text
+          tag="p"
+          variant="textLG"
+          class="mt-4 text-base-600 max-w-2xl"
+        >
+          {subtitle}
+        </Text>
+      )}
+
+    </Wrapper>
+  </section>
+
+  <!-- ── Article body ── -->
+  <section>
+    <Wrapper variant="prose" class="py-12">
+      <slot />
+    </Wrapper>
+  </section>
+
+  <!-- ── Cluster pagination ── -->
+  <Wrapper variant="narrow" class="py-10 border-t border-base-200">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-start">
+
+      <!-- Prev -->
+      <div>
+        {prevCluster?.slug ? (
+          <a
+            href={prevCluster.slug}
+            class="group flex flex-col gap-1 text-left no-underline"
+          >
+            <span class="text-xs font-semibold uppercase tracking-widest text-base-400">
+              ← Previous
+            </span>
+            <span class="font-display text-base-900 text-sm group-hover:text-accent-600 transition-colors duration-200 leading-snug">
+              {prevCluster.title}
+            </span>
+          </a>
+        ) : <span />}
+      </div>
+
+      <!-- Back to pillar -->
+      <div class="flex justify-center items-start">
+        <a
+          href={pillarSlug}
+          class="text-sm font-medium text-base-500 hover:text-accent-600 transition-colors duration-200 text-center"
+        >
+          Back to {pillarTitle}
+        </a>
+      </div>
+
+      <!-- Next -->
+      <div class="flex justify-end">
+        {nextCluster?.slug ? (
+          <a
+            href={nextCluster.slug}
+            class="group flex flex-col gap-1 text-right no-underline"
+          >
+            <span class="text-xs font-semibold uppercase tracking-widest text-base-400">
+              Next →
+            </span>
+            <span class="font-display text-base-900 text-sm group-hover:text-accent-600 transition-colors duration-200 leading-snug">
+              {nextCluster.title}
+            </span>
+          </a>
+        ) : <span />}
+      </div>
+
+    </div>
+  </Wrapper>
+
+  <!-- ── Briefing CTA ── -->
+  <section class="bg-base-200">
+    <Wrapper variant="narrow" class="py-12 lg:py-16">
+      <div class="border-l-2 border-accent-500 pl-6">
+        <Text
+          tag="span"
+          variant="textSM"
+          class="font-medium uppercase text-base-500 font-display tracking-wide"
+        >
+          Strategic Briefing
+        </Text>
+        <Text
+          tag="h2"
+          variant="textLG"
+          class="font-display text-base-900 uppercase mt-2"
+        >
+          Invisible Attrition℠ Retention Risk Audit
+        </Text>
+        <Text
+          tag="p"
+          variant="textBase"
+          class="text-base-500 mt-3 max-w-xl"
+        >
+          A strategic consultation to identify why clean performance records
+          and engagement scores can mask compounding leadership continuity risk.
+        </Text>
+        <Button
+          isLink
+          href="/request-briefing"
+          variant="default"
+          size="sm"
+          class="mt-6 w-fit"
+        >
+          Request Briefing →
+        </Button>
+      </div>
+    </Wrapper>
+  </section>
+
+</BaseLayout>
