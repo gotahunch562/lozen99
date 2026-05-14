@@ -5,7 +5,7 @@ shortDescription: "Research and analysis on disclosure-dependent workforce risk,
 priceFrom: "Research & Analysis"
 duration: "Organizational advisory"
 image:
-  url: "/images/services/serviceplaceholder.webp"
+  url: "../../images/services/serviceplaceholder.webp"
   alt: "Professional advisory conversation"
 ---
 
