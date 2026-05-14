@@ -1,22 +1,14 @@
 ---
 /**
  * ClusterLayout.astro
- * Layout for cluster articles (e.g., /invisible-attrition/exit-data-failure).
- * Wraps inside BaseLayout. Uses project design system components only.
+ * src/layouts/ClusterLayout.astro
  *
- * Frontmatter fields (set in the .md file):
- *   title           — <title> tag
- *   heading         — rendered as <h1>
- *   subtitle        — deck line (optional)
- *   slug            — canonical path
- *   metaDescription
- *   datePublished   — ISO date string
- *   dateModified    — ISO date string (optional)
- *   clusterNumber   — integer, e.g. 1
- *   pillarSlug      — e.g. /invisible-attrition
- *   pillarTitle     — e.g. "Invisible Attrition℠"
- *   prevCluster     — { slug, title } or omit if first
- *   nextCluster     — { slug, title } or omit if last
+ * Frontmatter fields expected from the .md file:
+ *   heading, subtitle, pubDate, clusterNumber,
+ *   pillarSlug, pillarTitle, prevCluster, nextCluster
+ *
+ * In Astro, markdown frontmatter is passed as Astro.props.frontmatter
+ * when the file uses the layout: field. All fields destructure from there.
  */
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
@@ -24,38 +16,20 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-interface ClusterNav {
-  slug: string;
-  title: string;
-}
-
-interface Props {
-  title: string;
-  heading: string;
-  subtitle?: string;
-  slug: string;
-  metaDescription: string;
-  datePublished: string;
-  dateModified?: string;
-  clusterNumber: number;
-  pillarSlug: string;
-  pillarTitle: string;
-  prevCluster?: ClusterNav;
-  nextCluster?: ClusterNav;
-}
+const { frontmatter } = Astro.props;
 
 const {
   heading,
   subtitle,
-  datePublished,
+  pubDate,
   clusterNumber,
   pillarSlug,
   pillarTitle,
   prevCluster,
   nextCluster,
-} = Astro.props;
+} = frontmatter;
 
-const formattedDate = new Date(datePublished).toLocaleDateString("en-US", {
+const formattedDate = new Date(pubDate).toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
   day: "2-digit",
@@ -64,15 +38,6 @@ const formattedDate = new Date(datePublished).toLocaleDateString("en-US", {
 const clusterLabel = String(clusterNumber).padStart(2, "0");
 ---
 
-<!-- DEVELOPER NOTE — verify before merging:
-     1. PATH: cluster pages resolve from src/pages/invisible-attrition/,
-        so "../../layouts/" is correct for src/layouts/.
-     2. BaseLayout PROPS: title and metaDescription are passed below.
-        If your BaseLayout passes these to BaseHead, SEO metadata will be
-        page-specific. Confirm the prop names match your BaseLayout signature.
-     3. Wrapper variants: confirm variant="narrow" and variant="prose"
-        exist in your Wrapper.astro before first build.
--->
 <BaseLayout>
 
   <!-- ── Breadcrumb ── -->
@@ -97,7 +62,7 @@ const clusterLabel = String(clusterNumber).padStart(2, "0");
         >
           Cluster {clusterLabel} · {pillarTitle}
         </Text>
-        <time datetime={datePublished} class="text-sm text-base-500">
+        <time datetime={pubDate} class="text-sm text-base-500">
           {formattedDate}
         </time>
       </div>
@@ -134,7 +99,6 @@ const clusterLabel = String(clusterNumber).padStart(2, "0");
   <Wrapper variant="narrow" class="py-10 border-t border-base-200">
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-start">
 
-      <!-- Prev -->
       <div>
         {prevCluster?.slug ? (
           <a
@@ -151,7 +115,6 @@ const clusterLabel = String(clusterNumber).padStart(2, "0");
         ) : <span />}
       </div>
 
-      <!-- Back to pillar -->
       <div class="flex justify-center items-start">
         <a
           href={pillarSlug}
@@ -161,7 +124,6 @@ const clusterLabel = String(clusterNumber).padStart(2, "0");
         </a>
       </div>
 
-      <!-- Next -->
       <div class="flex justify-end">
         {nextCluster?.slug ? (
           <a
