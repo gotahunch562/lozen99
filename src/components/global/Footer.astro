@@ -3,28 +3,17 @@
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-interface FooterLink {
-  label: string;
-  href: string;
-  external?: boolean;
-}
-
-interface FooterSection {
-  title: string;
-  links: FooterLink[];
-}
-
-const footerLinks: FooterSection[] = [
+const footerLinks = [
   {
     title: "Advisory",
     links: [
+      { label: "What We Do", href: "/what-we-do" },
       {
         label: "Disclosure Infrastructure",
         href: "/disclosure-independence-infrastructure",
       },
       { label: "Invisible Attrition℠", href: "/invisible-attrition" },
       { label: "Retention Risk Analysis", href: "/retention-risk-analysis" },
-      { label: "Retention Calculator", href: "/retention-calculator" },
       { label: "Request Briefing", href: "/request-briefing" },
     ],
   },
@@ -33,48 +22,27 @@ const footerLinks: FooterSection[] = [
     links: [
       { label: "Blog", href: "/blog" },
       {
-        label: "Architecture of Invisible Attrition Series",
+        label: "Executive Report Series",
         href: "/architecture-of-invisible-attrition-series",
       },
       {
         label: "Menopause Legislation Tracker",
         href: "/menopause-legislation-tracker",
       },
-    ],
-  },
-  {
-    title: "Executive Reports",
-    links: [
       {
         label: "Voluntary Benefit Disclosure Gap",
         href: "/voluntary-benefit-disclosure-gap",
       },
-      {
-        label: "Billable Hour Visibility Tax",
-        href: "/billable-hour-visibility-tax",
-      },
-      {
-        label: "Succession Planning and the Retention Risk Data Gap",
-        href: "/succession-planning-retention-risk-data-gap",
-      },
-      {
-        label: "Leadership Pipeline Manager Engagement",
-        href: "/leadership-pipeline-manager-engagement",
-      },
     ],
   },
   {
-    title: "Lozen Advisory",
+    title: "Company",
     links: [
       { label: "About", href: "/about" },
       { label: "Why Lozen Advisory", href: "/why-lozen-advisory" },
       { label: "Women Lawyers", href: "/menopause-support-women-lawyers" },
       { label: "Events", href: "/events" },
-      {
-        label: "AI Evaluation Training",
-        href: "https://www.executiveaiskills.com/",
-        external: true,
-      },
+      { label: "Contact", href: "/contact" },
     ],
   },
 ];
@@ -103,27 +71,23 @@ const year = new Date().getFullYear();
 
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-base-950/94 via-base-950/90 to-base-950/98"
+      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-base-950/94 via-base-950/88 to-base-950/98"
     >
     </div>
 
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute inset-0 bg-gradient-to-r from-base-950/95 via-base-950/72 to-base-950/92"
+      class="pointer-events-none absolute inset-0 bg-gradient-to-r from-base-950/96 via-base-950/74 to-base-950/92"
     >
     </div>
   </div>
 
   <Wrapper
     variant="standard"
-    class="relative z-10 flex h-full flex-col justify-between gap-12 py-12 sm:py-16 lg:min-h-[34rem] lg:gap-24 lg:py-20"
+    class="relative z-10 flex h-full flex-col justify-between gap-16 py-12 sm:py-16 lg:min-h-[34rem] lg:gap-32 lg:py-20"
   >
-    <div
-      class="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,0.72fr)] lg:gap-10"
-    >
-      <div
-        class="rounded-[2rem] border border-white/10 bg-base-950/45 p-5 backdrop-blur-sm sm:p-6 lg:p-8"
-      >
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-12">
+      <div class="lg:col-span-4">
         <a
           href="/"
           aria-label="Go to Lozen Advisory home page"
@@ -135,61 +99,23 @@ const year = new Date().getFullYear();
         <Text
           tag="p"
           variant="textSM"
-          class="mt-6 max-w-xl font-sans leading-6 text-base-300 sm:mt-8"
+          class="mt-12 max-w-sm font-sans leading-6 text-base-300"
         >
           Disclosure-independent advisory for organizations measuring retention,
           succession, leadership risk, and performance loss where no disclosure
           event was created.
         </Text>
 
-        <div class="mt-7 sm:mt-8">
-          <a
-            href="/request-briefing"
-            class="inline-flex h-10 items-center justify-center rounded-lg bg-accent-500 px-4 py-2 font-sans text-xs font-semibold uppercase tracking-[0.08em] text-base-950 shadow-lg transition-colors hover:bg-accent-400 focus:outline-none focus:ring-2 focus:ring-accent-300 focus:ring-offset-2 focus:ring-offset-base-950"
-          >
-            Request a Briefing
-          </a>
+        <div class="mt-8 max-w-md">
+          <div class="lozen-mailerlite">
+            <div class="ml-embedded" data-form="HVvUgr"></div>
+          </div>
         </div>
       </div>
 
-      <div
-        class="rounded-[2rem] border border-white/10 bg-base-950/70 p-5 shadow-2xl shadow-base-950/30 backdrop-blur-md sm:p-6 lg:p-8"
-      >
-        <Text
-          tag="p"
-          variant="textSM"
-          class="font-sans font-semibold uppercase tracking-[0.18em] text-accent-300"
-        >
-          Briefing List
-        </Text>
-
-        <Text
-          tag="h2"
-          variant="displayXS"
-          class="mt-4 font-display font-normal uppercase tracking-[-0.03em] text-white"
-        >
-          Receive Lozen Advisory updates.
-        </Text>
-
-        <Text
-          tag="p"
-          variant="textSM"
-          class="mt-4 max-w-md font-sans leading-6 text-base-300"
-        >
-          Analysis on disclosure-dependent data, retention risk, succession,
-          leadership continuity, and performance protection.
-        </Text>
-
-        <div class="mt-6 overflow-hidden rounded-2xl bg-white p-3 text-base-950">
-          <div class="ml-embedded" data-form="HVvUgr"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-12">
       {
         footerLinks.map((section) => (
-          <div>
+          <div class="lg:col-span-2">
             <Text
               tag="h3"
               variant="textSM"
@@ -199,25 +125,61 @@ const year = new Date().getFullYear();
             </Text>
 
             <ul class="mt-4 space-y-2">
-              {
-                section.links.map((item) => (
-                  <li>
-                    <a
-                      href={item.href}
-                      target={item.external ? "_blank" : undefined}
-                      rel={item.external ? "noreferrer" : undefined}
-                      class="inline-flex font-sans text-sm leading-5 text-base-300 transition-colors hover:text-accent-300 focus:outline-none focus-visible:text-accent-300"
-                    >
-                      {item.label}
-                      {item.external && <span aria-hidden="true"> ↗</span>}
-                    </a>
-                  </li>
-                ))
-              }
+              {section.links.map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                    class="inline-flex font-sans text-sm leading-5 text-base-300 transition-colors hover:text-accent-300 focus:outline-none focus-visible:text-accent-300"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         ))
       }
+
+      <div class="lg:col-span-2">
+        <Text
+          tag="h3"
+          variant="textSM"
+          class="font-sans font-semibold uppercase tracking-[0.14em] text-white"
+        >
+          Briefing
+        </Text>
+
+        <ul class="mt-4 space-y-2">
+          <li>
+            <a
+              href="/request-briefing"
+              class="inline-flex font-sans text-sm leading-5 text-base-300 transition-colors hover:text-accent-300 focus:outline-none focus-visible:text-accent-300"
+            >
+              Request Briefing
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="/booking"
+              class="inline-flex font-sans text-sm leading-5 text-base-300 transition-colors hover:text-accent-300 focus:outline-none focus-visible:text-accent-300"
+            >
+              MAPS Blueprint℠
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.executiveaiskills.com/"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex font-sans text-sm leading-5 text-base-300 transition-colors hover:text-accent-300 focus:outline-none focus-visible:text-accent-300"
+            >
+              AI Evaluation Training ↗
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <div>
@@ -259,4 +221,92 @@ const year = new Date().getFullYear();
     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2164541');
   </script>
+
+  <style is:global>
+    .lozen-mailerlite .ml-form-embedContainer,
+    .lozen-mailerlite .ml-form-embedWrapper,
+    .lozen-mailerlite .ml-form-embedBody,
+    .lozen-mailerlite .ml-form-successBody {
+      max-width: 100% !important;
+      width: 100% !important;
+      background: transparent !important;
+      border: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .lozen-mailerlite .ml-form-embedContent,
+    .lozen-mailerlite .ml-form-embedPermissions {
+      display: none !important;
+    }
+
+    .lozen-mailerlite form {
+      display: flex !important;
+      align-items: center !important;
+      gap: 1rem !important;
+    }
+
+    .lozen-mailerlite .ml-form-formContent {
+      flex: 1 1 auto !important;
+      margin: 0 !important;
+    }
+
+    .lozen-mailerlite .ml-form-fieldRow,
+    .lozen-mailerlite .ml-field-group {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .lozen-mailerlite input[type="email"] {
+      min-height: 2.75rem !important;
+      border: 0 !important;
+      border-radius: 0.5rem !important;
+      background: rgba(255, 255, 255, 0.08) !important;
+      color: #ffffff !important;
+      font-family: inherit !important;
+      font-size: 0.875rem !important;
+      padding: 0 1rem !important;
+      outline: none !important;
+    }
+
+    .lozen-mailerlite input[type="email"]::placeholder {
+      color: rgba(255, 255, 255, 0.45) !important;
+    }
+
+    .lozen-mailerlite .ml-form-embedSubmit {
+      flex: 0 0 auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .lozen-mailerlite button {
+      min-height: 2.75rem !important;
+      border: 0 !important;
+      border-radius: 0.5rem !important;
+      background: rgb(250 204 21) !important;
+      color: rgb(2 6 23) !important;
+      font-family: inherit !important;
+      font-size: 0.875rem !important;
+      font-weight: 700 !important;
+      padding: 0 1.25rem !important;
+      transition: background-color 180ms ease !important;
+    }
+
+    .lozen-mailerlite button:hover {
+      background: rgb(253 224 71) !important;
+    }
+
+    @media (max-width: 640px) {
+      .lozen-mailerlite form {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.75rem !important;
+      }
+
+      .lozen-mailerlite button {
+        width: 100% !important;
+      }
+    }
+  </style>
 </footer>
