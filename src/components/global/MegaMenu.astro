@@ -3,189 +3,254 @@
 import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
 const megaMenuSections = [
   {
     title: "Services",
-    description: "Explore our professional services",
+    description: "Advisory paths and engagement options.",
     links: [
       {
         href: "/services",
-        label: "All Services",
-        description: "Browse our complete service catalog",
+        label: "What We Do",
+        description: "How Lozen Advisory works with organizations and senior women leaders.",
       },
       {
-        href: "/service-packages",
-        label: "Service Packages",
-        description: "Bundled services for better value",
+        href: "/services/market-intelligence",
+        label: "Market Intelligence",
+        description: "Research and analysis on disclosure-dependent workforce risk.",
       },
       {
-        href: "/pricing",
-        label: "Pricing",
-        description: "Transparent pricing for all services",
+        href: "/services/executive-briefing",
+        label: "Executive Briefing",
+        description: "A focused advisory session for leadership teams that need clarity quickly.",
+      },
+      {
+        href: "/services/advisory-engagement",
+        label: "Advisory Engagement",
+        description: "Ongoing counsel on non-disclosure infrastructure and leadership continuity.",
+      },
+      {
+        href: "/services/crisis-reputation-workforce-risk",
+        label: "Crisis, Reputation, and Workforce Risk",
+        description: "Support for sensitive workforce issues before they become visible crises.",
       },
     ],
   },
   {
-    title: "Resources",
-    description: "Help and information",
+    title: "Frameworks & Research",
+    description: "Core concepts, reports, and analysis.",
     links: [
       {
-        href: "/help-center",
-        label: "Help Center",
-        description: "Find answers to common questions",
+        href: "/invisible-attrition",
+        label: "Invisible Attrition℠",
+        description: "The framework for leadership capacity erosion before metrics detect risk.",
       },
-      { href: "/faq", label: "FAQ", description: "Frequently asked questions" },
-      { href: "/blog", label: "Blog", description: "Latest news and articles" },
+      {
+        href: "/disclosure-independence-infrastructure",
+        label: "Disclosure Infrastructure",
+        description: "Why systems dependent on disclosure cannot fully measure risk.",
+      },
+      {
+        href: "/architecture-of-invisible-attrition-series",
+        label: "Executive Report Series",
+        description: "The Architecture of Invisible Attrition℠ report collection.",
+      },
+      {
+        href: "/menopause-legislation-tracker",
+        label: "Menopause Legislation Tracker",
+        description: "A governance audit of disclosure-dependent policy design.",
+      },
+      {
+        href: "/blog",
+        label: "Research Archive",
+        description: "Articles, legislative analysis, and framework development.",
+      },
     ],
   },
   {
     title: "Company",
-    description: "Learn more about us",
+    description: "Firm information and contact paths.",
     links: [
       {
         href: "/about",
-        label: "About Us",
-        description: "Our story and mission",
+        label: "About",
+        description: "The founder and advisory thesis behind Lozen Advisory.",
       },
       {
-        href: "/team",
-        label: "Our Team",
-        description: "Meet the people behind Copperlane",
+        href: "/events",
+        label: "Events",
+        description: "Speaking engagements and public appearances.",
       },
       {
-        href: "/customers",
-        label: "Customers",
-        description: "Success stories and testimonials",
+        href: "/contact",
+        label: "Contact",
+        description: "Contact Lozen Advisory directly.",
       },
-      { href: "/jobs", label: "Careers", description: "Join our growing team" },
+      {
+        href: "/request-briefing",
+        label: "Request Briefing",
+        description: "Start a B2B briefing request.",
+      },
+      {
+        href: "/services#tacere-download",
+        label: "Tacere Paper",
+        description: "Download the framework paper on employees who remain uncounted.",
+      },
     ],
   },
 ];
 ---
 
-<!-- Mega Menu (Desktop) -->
-<div
-  id="megamenu"
-  class="absolute inset-x-0 z-40 hidden top-full"
->
+<div id="megamenu" class="absolute inset-x-0 top-full z-40 hidden">
   <Wrapper variant="standard" class="py-2">
     <div
-      class="overflow-hidden bg-white shadow-2xl outline-4 outline-base-500/5 outline-inset rounded-3xl max-h-none"
+      class="overflow-hidden rounded-2xl border border-base-200 bg-white shadow-2xl outline-4 outline-base-500/5 lg:rounded-3xl"
     >
       <div class="grid grid-cols-3 divide-x divide-base-200">
         {
           megaMenuSections.map((section) => (
             <div>
-              <div class="px-6 py-4">
+              <div class="px-6 py-5">
                 <Text
                   tag="h3"
-                  variant="textLG"
-                  class="uppercase  font-display text-base-900"
+                  variant="textBase"
+                  class="font-sans font-semibold uppercase tracking-[0.14em] text-base-950"
                 >
                   {section.title}
                 </Text>
-                <Text tag="p" variant="textXS" class="mt-2 text-base-600">
+
+                <Text
+                  tag="p"
+                  variant="textSM"
+                  class="mt-2 font-sans leading-6 text-base-600"
+                >
                   {section.description}
                 </Text>
               </div>
-              <ul class="p-6 border-t space-y-4 border-base-200">
-                {section.links.map((link) => (
-                  <li>
-                    <a href={link.href} class="block group rounded-xl ">
-                      <Text
-                        tag="h4"
-                        variant="textSM"
-                        class="block font-medium uppercase text-base-900 group-hover:text-accent-600 font-display"
+
+              <ul class="space-y-1 border-t border-base-200 p-4">
+                {
+                  section.links.map((link) => (
+                    <li>
+                      <a
+                        href={link.href}
+                        class="group block rounded-xl px-3 py-3 no-underline transition-colors duration-200 hover:bg-base-50"
                       >
-                        {link.label}
-                      </Text>
-                      <Text
-                        tag="p"
-                        variant="textSM"
-                        class="block mt-0.5 text-base-500"
-                      >
-                        {link.description}
-                      </Text>
-                    </a>
-                  </li>
-                ))}
+                        <Text
+                          tag="h4"
+                          variant="textSM"
+                          class="font-sans font-semibold uppercase tracking-[0.08em] text-base-950 transition-colors duration-200 group-hover:text-accent-700"
+                        >
+                          {link.label}
+                        </Text>
+
+                        <Text
+                          tag="p"
+                          variant="textSM"
+                          class="mt-1 font-sans leading-5 text-base-600"
+                        >
+                          {link.description}
+                        </Text>
+                      </a>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
           ))
         }
       </div>
-      <!-- Featured Section -->
-      <div class="px-8 py-4 border-t border-base-200">
-        <div
-          class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6"
-        >
+
+      <div class="border-t border-base-200 bg-base-50 px-6 py-5">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <Text
               tag="h3"
               variant="textBase"
-              class="font-medium uppercase text-base-900 font-display"
-              >Ready to get started?</Text
+              class="font-sans font-semibold uppercase tracking-[0.12em] text-base-950"
             >
-            <Text tag="p" variant="textSM" class="mt-1 text-base-600">
-              Book an appointment or contact us today.
+              Need clarity before the issue becomes visible?
+            </Text>
+
+            <Text
+              tag="p"
+              variant="textSM"
+              class="mt-1 font-sans leading-6 text-base-600"
+            >
+              Request a briefing on disclosure-dependent workforce risk.
             </Text>
           </div>
-          <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
-            <Button isLink size="xs" variant="accent" href="/book-appointment">
-              Book an Appointment</Button
-            >
-            <Button isLink size="xs" variant="muted" href="/contact">
-              Contact us</Button
-            >
+
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <Button isLink size="xs" variant="accent" href="/request-briefing">
+              Request Briefing
+            </Button>
+
+            <Button isLink size="xs" variant="muted" href="/services">
+              What We Do
+            </Button>
           </div>
         </div>
       </div>
     </div>
   </Wrapper>
 </div>
+
 <script is:inline>
   const initMegaMenu = () => {
     const megamenuTrigger = document.getElementById("megamenu-trigger");
     const megamenu = document.getElementById("megamenu");
+
     if (!megamenuTrigger || !megamenu) return;
+
     let isMegaOpen = false;
-    megamenuTrigger.addEventListener("click", () => {
-      isMegaOpen = !isMegaOpen;
+
+    function openMegaMenu() {
+      megamenu.classList.remove("hidden");
+      megamenuTrigger.setAttribute("aria-expanded", "true");
+      isMegaOpen = true;
+    }
+
+    function closeMegaMenu() {
+      megamenu.classList.add("hidden");
+      megamenuTrigger.setAttribute("aria-expanded", "false");
+      isMegaOpen = false;
+    }
+
+    megamenuTrigger.addEventListener("click", (event) => {
+      event.stopPropagation();
+
       if (isMegaOpen) {
-        megamenu.classList.remove("hidden");
+        closeMegaMenu();
       } else {
-        megamenu.classList.add("hidden");
+        openMegaMenu();
       }
-      megamenuTrigger.setAttribute("aria-expanded", String(isMegaOpen));
     });
-    document.addEventListener("click", (e) => {
-      const target = e.target;
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+
       if (
         isMegaOpen &&
-        target instanceof HTMLElement &&
+        target instanceof Node &&
         !megamenu.contains(target) &&
         !megamenuTrigger.contains(target)
       ) {
-        megamenu.classList.add("hidden");
-        megamenuTrigger.setAttribute("aria-expanded", "false");
-        isMegaOpen = false;
+        closeMegaMenu();
       }
     });
+
     megamenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        megamenu.classList.add("hidden");
-        megamenuTrigger.setAttribute("aria-expanded", "false");
-        isMegaOpen = false;
-      });
+      link.addEventListener("click", closeMegaMenu);
     });
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && isMegaOpen) {
-        megamenu.classList.add("hidden");
-        megamenuTrigger.setAttribute("aria-expanded", "false");
-        isMegaOpen = false;
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && isMegaOpen) {
+        closeMegaMenu();
       }
     });
   };
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initMegaMenu, { once: true });
   } else {
