@@ -6,29 +6,25 @@ import Button from "@/components/fundations/elements/Button.astro";
 
 const title = "Events | Lozen Advisory";
 const description =
-  "Speaking engagements, hosted briefings, conferences, panels, and appearances from Lozen Advisory.";
+  "Speaking engagements, hosted sessions, conferences, and appearances from Lozen Advisory.";
 
-const upcomingEvents = [
+const events = [
   {
-    title: "Akilah Kamaria Presenting at 2026 LIWOCA CLE Conference",
-    eyebrow: "Conference",
+    title: "Akilah E. Kamaria at the 21st Annual LIWOCA CLE Leadership Conference",
+    eyebrow: "Speaking Engagement",
     displayDate: "2026",
-    location: "LIWOCA CLE Conference",
-    format: "Speaking Engagement",
+    context: "21st Annual LIWOCA CLE Leadership Conference",
     description:
-      "Akilah Kamaria will present at the 2026 LIWOCA CLE Conference on leadership, disclosure, performance protection, and the professional records women create or avoid in high-stakes environments.",
+      'Lozen Advisory founder Akilah E. Kamaria served as the sole presenter for the "Navigating Health Conditions Without Workplace Disclosure" Bold Breakout sessions at the 21st Annual LIWOCA CLE Leadership Conference.',
     href: "/events/akilah-kamaria-presenting-at-2026-liwoca-cle-conference",
     cta: "View event",
   },
 ];
 
-const eventTopics = [
-  "Power, disclosure, and professional record creation",
-  "Invisible Attrition℠ and leadership capacity loss",
-  "AI implementation burden and the Power User Trap℠",
-  "Benefits utilization, retention data, and false confidence",
-  "Menopause as a workforce measurement signal",
-  "Performance protection for senior women leaders",
+const speakingTopics = [
+  "What Women Protect When They Do Not Disclose",
+  "Power Requires Privacy",
+  "Leadership, disclosure, workforce risk, AI implementation burden, and performance protection",
 ];
 ---
 
@@ -53,7 +49,7 @@ const eventTopics = [
             variant="displayLG"
             class="mt-8 max-w-4xl font-display font-normal uppercase leading-[1.02] tracking-[-0.04em] text-base-950"
           >
-            Speaking, Hosted Briefings, and Appearances
+            Speaking, Sessions, and Appearances
           </Text>
 
           <Text
@@ -61,9 +57,7 @@ const eventTopics = [
             variant="textLG"
             class="mt-5 max-w-3xl font-sans leading-8 text-base-700"
           >
-            Lozen Advisory participates in events where leadership, disclosure,
-            workforce risk, AI implementation burden, and performance protection
-            are being discussed before the cost becomes visible.
+            Lozen Advisory participates in events concerning leadership, disclosure, workforce risk, AI implementation burden, and performance protection.
           </Text>
         </div>
       </Wrapper>
@@ -80,13 +74,79 @@ const eventTopics = [
               variant="displaySM"
               class="max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
             >
-              Upcoming Events
+              Speaking Focus
+            </Text>
+          </div>
+
+          <div class="max-w-2xl font-sans text-base leading-8 text-base-700 sm:text-lg sm:leading-9">
+            <p>
+              Akilah K. speaks to ambitious women who have already built power, reputation, and authority, and who now face a different problem: how to protect what they have amassed in systems that still require visibility before support, recognition, or risk can be recorded.
+            </p>
+
+            <p class="mt-5">
+              Her work examines disclosure as a power decision, not a personal confession. Through Lozen Advisory, she helps women understand the professional cost of visibility, the limits of institutional support, and the private strategy required to protect performance, reputation, and career trajectory when no formal infrastructure exists for the ambition they are carrying.
+            </p>
+
+            <p class="mt-5">
+              She speaks to women lawyers and other women in high profile careers.
+            </p>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="border-y border-base-200 bg-base-50">
+      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
+        <div
+          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(420px,0.68fr)] lg:gap-20"
+        >
+          <div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+            >
+              Topics
+            </Text>
+          </div>
+
+          <div class="grid gap-5">
+            {
+              speakingTopics.map((topic) => (
+                <div class="border-t border-base-300 pt-4">
+                  <Text
+                    tag="p"
+                    variant="textBase"
+                    class="font-sans font-semibold leading-7 text-base-950"
+                  >
+                    {topic}
+                  </Text>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-white">
+      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
+        <div
+          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(420px,0.68fr)] lg:gap-20"
+        >
+          <div>
+            <Text
+              tag="h2"
+              variant="displaySM"
+              class="max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
+            >
+              Event Record
             </Text>
           </div>
 
           <div class="grid gap-8">
             {
-              upcomingEvents.map((event) => (
+              events.map((event) => (
                 <article class="border-t border-base-200 pt-6">
                   <div class="grid gap-4 sm:grid-cols-[9rem_minmax(0,1fr)] sm:gap-8">
                     <div>
@@ -121,7 +181,7 @@ const eventTopics = [
                         variant="textSM"
                         class="mt-3 font-sans font-semibold uppercase tracking-[0.1em] text-base-500"
                       >
-                        {[event.location, event.format].filter(Boolean).join(" · ")}
+                        {event.context}
                       </Text>
 
                       <Text
@@ -148,41 +208,7 @@ const eventTopics = [
       </Wrapper>
     </section>
 
-    <section class="border-y border-base-200 bg-base-50">
-      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
-        <div
-          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(420px,0.68fr)] lg:gap-20"
-        >
-          <div>
-            <Text
-              tag="h2"
-              variant="displaySM"
-              class="max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
-            >
-              Event Topics
-            </Text>
-          </div>
-
-          <div class="grid gap-5 sm:grid-cols-2">
-            {
-              eventTopics.map((topic) => (
-                <div class="border-t border-base-300 pt-4">
-                  <Text
-                    tag="p"
-                    variant="textBase"
-                    class="font-sans font-semibold leading-7 text-base-950"
-                  >
-                    {topic}
-                  </Text>
-                </div>
-              ))
-            }
-          </div>
-        </div>
-      </Wrapper>
-    </section>
-
-    <section class="bg-white">
+    <section class="border-t border-base-200 bg-white">
       <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
         <div class="mx-auto max-w-4xl">
           <Text
@@ -198,7 +224,7 @@ const eventTopics = [
             variant="displaySM"
             class="mt-5 max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
           >
-            Invite Lozen Advisory into the conversation before the issue becomes visible.
+            Invite Lozen Advisory into the room before the issue becomes visible.
           </Text>
 
           <Text
@@ -206,9 +232,9 @@ const eventTopics = [
             variant="textBase"
             class="mt-6 max-w-2xl font-sans leading-8 text-base-700 sm:text-lg sm:leading-9"
           >
-            For speaking invitations, hosted briefings, panels, conferences, or
-            private leadership sessions, contact Lozen Advisory with the event
-            context, audience, timing, and topic.
+            For speaking invitations, hosted sessions, conferences, panels, or
+            private leadership conversations, contact Lozen Advisory with the
+            event context, audience, timing, and topic.
           </Text>
 
           <div class="mt-8 flex flex-wrap gap-3">
