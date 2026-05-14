@@ -1,7 +1,11 @@
 ---
+// Assets
+import Logo from "@/components/assets/Logo.astro";
+import BigLogo from "@/components/assets/BigLogo.astro";
 // Fundations
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import Button from "@/components/fundations/elements/Button.astro";
 
 const footerLinks = [
   {
@@ -13,7 +17,6 @@ const footerLinks = [
         href: "/disclosure-independence-infrastructure",
       },
       { label: "Invisible Attrition℠", href: "/invisible-attrition" },
-      { label: "Retention Risk Analysis", href: "/retention-risk-analysis" },
       { label: "Request Briefing", href: "/request-briefing" },
     ],
   },
@@ -35,32 +38,31 @@ const footerLinks = [
       },
     ],
   },
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "/about" },
-      { label: "Why Lozen Advisory", href: "/why-lozen-advisory" },
-      { label: "Women Lawyers", href: "/menopause-support-women-lawyers" },
-      { label: "Events", href: "/events" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
 ];
 
 const utilityLinks = [
-  { label: "Privacy Policy", href: "/privacy-policy" },
-  { label: "Terms of Service", href: "/terms-of-service" },
-  { label: "About AI", href: "/about-ai" },
-  { label: "Tools & Resources", href: "/tools-resources" },
+  { label: "About", href: "/about" },
+  { label: "Why Lozen Advisory", href: "/why-lozen-advisory" },
+  { label: "Women Lawyers", href: "/menopause-support-women-lawyers" },
+  { label: "Events", href: "/events" },
 ];
 
-const year = new Date().getFullYear();
+const briefingLinks = [
+  { label: "Retention Risk Analysis", href: "/retention-risk-analysis" },
+  { label: "Retention Calculator", href: "/retention-calculator" },
+  { label: "MAPS Blueprint℠", href: "/booking" },
+  {
+    label: "AI Evaluation Training",
+    href: "https://www.executiveaiskills.com/",
+    external: true,
+  },
+];
 ---
 
-<footer class="relative w-full overflow-hidden bg-base-950 lg:p-8">
+<footer class="relative w-full overflow-hidden lg:p-8">
   <div class="absolute inset-0 overflow-hidden lg:m-4 lg:rounded-3xl">
     <video
-      class="size-full object-cover object-center opacity-50"
+      class="object-cover object-center size-full"
       autoplay
       muted
       loop
@@ -68,68 +70,51 @@ const year = new Date().getFullYear();
     >
       <source src="/videos/car3.mp4" type="video/mp4" />
     </video>
-
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-base-950/94 via-base-950/88 to-base-950/98"
-    >
-    </div>
-
-    <div
-      aria-hidden="true"
-      class="pointer-events-none absolute inset-0 bg-gradient-to-r from-base-950/96 via-base-950/74 to-base-950/92"
+      class="absolute inset-0 pointer-events-none bg-base-950/90"
     >
     </div>
   </div>
 
   <Wrapper
     variant="standard"
-    class="relative z-10 flex h-full flex-col justify-between gap-16 py-12 sm:py-16 lg:min-h-[34rem] lg:gap-32 lg:py-20"
+    class="relative z-10 flex flex-col justify-between h-full pt-24 pb-8 gap-8 lg:gap-44"
   >
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-12 lg:gap-12">
-      <div class="lg:col-span-4">
-        <a
-          href="/"
-          aria-label="Go to Lozen Advisory home page"
-          class="font-display text-lg font-normal uppercase tracking-[-0.01em] text-white transition-colors hover:text-accent-300"
-        >
-          Lozen Advisory
+    <div class="grid grid-cols-2 lg:grid-cols-5 gap-12">
+      <div class="col-span-2">
+        <a href="/" aria-label="Go to Lozen Advisory home page">
+          <Logo class="text-lg font-medium text-white uppercase font-display" />
         </a>
 
-        <Text
-          tag="p"
-          variant="textSM"
-          class="mt-12 max-w-sm font-sans leading-6 text-base-300"
-        >
+        <Text tag="p" variant="textXS" class="max-w-sm mt-12 text-base-500">
           Disclosure-independent advisory for organizations measuring retention,
           succession, leadership risk, and performance loss where no disclosure
           event was created.
         </Text>
 
-        <div class="mt-8 max-w-md">
-          <div class="lozen-mailerlite">
-            <div class="ml-embedded" data-form="HVvUgr"></div>
-          </div>
+        <div class="max-w-sm mt-8 lozen-mailerlite">
+          <div class="ml-embedded" data-form="HVvUgr"></div>
         </div>
       </div>
 
       {
         footerLinks.map((section) => (
-          <div class="lg:col-span-2">
+          <div>
             <Text
               tag="h3"
               variant="textSM"
-              class="font-sans font-semibold uppercase tracking-[0.14em] text-white"
+              class="font-medium text-white uppercase font-display"
             >
               {section.title}
             </Text>
 
-            <ul class="mt-4 space-y-2">
+            <ul class="mt-2 space-y-1">
               {section.links.map((item) => (
                 <li>
                   <a
                     href={item.href}
-                    class="inline-flex font-sans text-sm leading-5 text-base-300 transition-colors hover:text-accent-300 focus:outline-none focus-visible:text-accent-300"
+                    class="flex text-xs text-base-500 hover:text-white transition-colors"
                   >
                     {item.label}
                   </a>
@@ -140,77 +125,95 @@ const year = new Date().getFullYear();
         ))
       }
 
-      <div class="lg:col-span-2">
-        <Text
-          tag="h3"
-          variant="textSM"
-          class="font-sans font-semibold uppercase tracking-[0.14em] text-white"
-        >
-          Briefing
-        </Text>
+      <div
+        class="grid grid-cols-2 lg:grid-cols-1 gap-8 col-span-2 lg:col-span-1"
+      >
+        <div>
+          <Text
+            tag="h4"
+            variant="textSM"
+            class="font-medium text-white uppercase font-display"
+          >
+            Company
+          </Text>
 
-        <ul class="mt-4 space-y-2">
-          <li>
-            <a
-              href="/request-briefing"
-              class="inline-flex font-sans text-sm leading-5 text-base-300 transition-colors hover:text-accent-300 focus:outline-none focus-visible:text-accent-300"
-            >
-              Request Briefing
-            </a>
-          </li>
+          <ul class="mt-2 space-y-1">
+            {utilityLinks.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  class="flex text-xs text-base-500 hover:text-white transition-colors"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-          <li>
-            <a
-              href="/booking"
-              class="inline-flex font-sans text-sm leading-5 text-base-300 transition-colors hover:text-accent-300 focus:outline-none focus-visible:text-accent-300"
-            >
-              MAPS Blueprint℠
-            </a>
-          </li>
+        <div>
+          <Text
+            tag="h4"
+            variant="textSM"
+            class="font-medium text-white uppercase font-display"
+          >
+            Briefing
+          </Text>
 
-          <li>
-            <a
-              href="https://www.executiveaiskills.com/"
-              target="_blank"
-              rel="noreferrer"
-              class="inline-flex font-sans text-sm leading-5 text-base-300 transition-colors hover:text-accent-300 focus:outline-none focus-visible:text-accent-300"
-            >
-              AI Evaluation Training ↗
-            </a>
-          </li>
-        </ul>
+          <ul class="mt-2 space-y-1">
+            {briefingLinks.map((item) => (
+              <li>
+                <a
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noreferrer" : undefined}
+                  class="flex text-xs text-base-500 hover:text-white transition-colors"
+                >
+                  {item.label}
+                  {item.external && <span aria-hidden="true"> ↗</span>}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
 
     <div>
       <div
-        class="flex flex-col justify-between gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center"
+        class="flex flex-col justify-between mt-auto md:flex-row lg:items-center gap-4"
       >
-        <Text tag="p" variant="textSM" class="font-sans text-base-300">
-          &copy; {year} Lozen Advisory LLC. All rights reserved.
+        <Text tag="p" variant="textSM" class="text-base-500">
+          &copy; {new Date().getFullYear()} Lozen Advisory LLC. All rights reserved.
         </Text>
 
-        <div class="flex flex-wrap gap-x-6 gap-y-3">
-          {
-            utilityLinks.map((item) => (
-              <a
-                href={item.href}
-                class="font-sans text-xs text-base-300 transition-colors hover:text-accent-300 focus:outline-none focus-visible:text-accent-300"
-              >
-                {item.label}
-              </a>
-            ))
-          }
+        <div class="flex gap-6">
+          <a
+            href="/privacy-policy"
+            class="text-xs text-base-500 hover:text-accent-500 transition-colors"
+          >
+            Privacy Policy
+          </a>
+
+          <a
+            href="/terms-of-service"
+            class="text-xs text-base-500 hover:text-accent-500 transition-colors"
+          >
+            Terms
+          </a>
+
+          <a
+            href="/about-ai"
+            class="text-xs text-base-500 hover:text-accent-500 transition-colors"
+          >
+            About AI
+          </a>
         </div>
       </div>
 
-      <div class="mt-8 overflow-hidden border-t border-white/10 pt-8">
-        <div
-          class="font-display text-[clamp(2.75rem,14vw,13rem)] font-normal uppercase leading-none tracking-[-0.05em] text-white/10"
-        >
-          Lozen Advisory
-        </div>
-      </div>
+      <BigLogo
+        class="pt-8 mt-2 border-t text-white/10 border-white/10 mix-blend-multiply"
+      />
     </div>
   </Wrapper>
 
@@ -227,12 +230,12 @@ const year = new Date().getFullYear();
     .lozen-mailerlite .ml-form-embedWrapper,
     .lozen-mailerlite .ml-form-embedBody,
     .lozen-mailerlite .ml-form-successBody {
-      max-width: 100% !important;
       width: 100% !important;
-      background: transparent !important;
-      border: 0 !important;
-      padding: 0 !important;
+      max-width: 100% !important;
       margin: 0 !important;
+      padding: 0 !important;
+      border: 0 !important;
+      background: transparent !important;
       box-shadow: none !important;
     }
 
@@ -243,8 +246,9 @@ const year = new Date().getFullYear();
 
     .lozen-mailerlite form {
       display: flex !important;
+      gap: 0.5rem !important;
       align-items: center !important;
-      gap: 1rem !important;
+      margin: 0 !important;
     }
 
     .lozen-mailerlite .ml-form-formContent {
@@ -259,19 +263,25 @@ const year = new Date().getFullYear();
     }
 
     .lozen-mailerlite input[type="email"] {
-      min-height: 2.75rem !important;
-      border: 0 !important;
+      width: 100% !important;
+      height: 2.5rem !important;
+      padding: 0.5rem 1rem !important;
+      border: 1px solid transparent !important;
       border-radius: 0.5rem !important;
-      background: rgba(255, 255, 255, 0.08) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
       color: #ffffff !important;
-      font-family: inherit !important;
-      font-size: 0.875rem !important;
-      padding: 0 1rem !important;
+      font-size: 0.75rem !important;
+      line-height: 1rem !important;
       outline: none !important;
+      transition: border-color 150ms ease !important;
     }
 
     .lozen-mailerlite input[type="email"]::placeholder {
-      color: rgba(255, 255, 255, 0.45) !important;
+      color: rgb(100 116 139) !important;
+    }
+
+    .lozen-mailerlite input[type="email"]:focus {
+      border-color: rgb(250 204 21) !important;
     }
 
     .lozen-mailerlite .ml-form-embedSubmit {
@@ -281,16 +291,16 @@ const year = new Date().getFullYear();
     }
 
     .lozen-mailerlite button {
-      min-height: 2.75rem !important;
+      height: 2.5rem !important;
+      min-height: 2.5rem !important;
       border: 0 !important;
       border-radius: 0.5rem !important;
       background: rgb(250 204 21) !important;
       color: rgb(2 6 23) !important;
-      font-family: inherit !important;
       font-size: 0.875rem !important;
       font-weight: 700 !important;
-      padding: 0 1.25rem !important;
-      transition: background-color 180ms ease !important;
+      padding: 0.5rem 1rem !important;
+      transition: background-color 150ms ease !important;
     }
 
     .lozen-mailerlite button:hover {
@@ -299,9 +309,8 @@ const year = new Date().getFullYear();
 
     @media (max-width: 640px) {
       .lozen-mailerlite form {
-        flex-direction: column !important;
         align-items: stretch !important;
-        gap: 0.75rem !important;
+        flex-direction: column !important;
       }
 
       .lozen-mailerlite button {
