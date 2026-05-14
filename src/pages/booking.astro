@@ -1,12 +1,9 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
-import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const reserveSessionHref = "https://buy.stripe.com/dRm00l0hLgip9okc8dfjG06";
-
-const title = "MAPS Blueprint℠ | Request a Private Session";
 
 const description =
   "The MAPS Blueprint℠ is a 90-minute private working session for women approaching a performance review, promotion decision, visibility moment, or consequential professional evaluation.";
@@ -58,22 +55,28 @@ const pageJsonLd = {
     set:html={JSON.stringify(pageJsonLd)}
   ></script>
 
-  <section class="overflow-hidden bg-gradient-to-t from-base-200 to-white">
-    <Wrapper variant="standard" class="py-24 lg:py-32">
-      <div class="grid gap-12 lg:grid-cols-[minmax(0,0.68fr)_minmax(20rem,0.32fr)] lg:items-end">
+  <section class="relative overflow-hidden bg-base-950">
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(247,211,50,0.16),transparent_34%),radial-gradient(circle_at_86%_12%,rgba(148,163,184,0.15),transparent_30%)]"
+    >
+    </div>
+
+    <Wrapper variant="standard" class="relative z-10 py-24 lg:py-32">
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,0.64fr)_minmax(18rem,0.36fr)] lg:items-end">
         <div class="max-w-4xl">
           <Text
             tag="span"
             variant="textSM"
-            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+            class="pl-4 font-medium uppercase tracking-wide border-l text-accent-300 font-display border-accent-500"
           >
             MAPS Blueprint℠
           </Text>
 
           <Text
             tag="h1"
-            variant="displayXL"
-            class="mt-8 uppercase font-display text-base-900"
+            variant="display2XL"
+            class="mt-8 uppercase font-display text-white"
           >
             Request a private session
           </Text>
@@ -81,13 +84,13 @@ const pageJsonLd = {
           <Text
             tag="p"
             variant="textLG"
-            class="mt-6 max-w-3xl text-base-600 text-balance"
+            class="mt-6 max-w-2xl text-base-200"
           >
             This is a 90-minute private working session.
           </Text>
         </div>
 
-        <aside class="rounded-3xl bg-base-950 p-6 shadow-2xl outline-4 outline-base-500/10 sm:p-8">
+        <aside class="border-l border-white/10 pl-6 lg:pl-8">
           <Text
             tag="span"
             variant="textSM"
@@ -104,30 +107,27 @@ const pageJsonLd = {
             $997 · 90 minutes
           </Text>
 
-          <Text tag="p" variant="textSM" class="mt-4 text-base-200">
+          <Text tag="p" variant="textSM" class="mt-4 text-base-300">
             Paid in full at the time of booking.
           </Text>
 
           <div class="mt-8">
-            <Button
-              isLink
+            <a
               href={reserveSessionHref}
-              variant="accent"
-              size="sm"
-              class="w-fit"
+              class="inline-flex h-11 items-center justify-center rounded-lg bg-accent-300 px-5 py-4 text-center text-sm font-medium uppercase tracking-wide text-base-950 transition-all duration-500 ease-in-out hover:bg-accent-400 focus:outline-2 focus:outline-offset-4 focus:outline-accent-400"
             >
-              Request a private session
-            </Button>
+              Request a private session →
+            </a>
           </div>
         </aside>
       </div>
     </Wrapper>
   </section>
 
-  <section>
-    <Wrapper variant="standard" class="py-12 lg:py-24">
-      <div class="grid gap-12 lg:grid-cols-[0.32fr_1fr] lg:gap-20">
-        <div>
+  <section class="bg-white">
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="grid gap-12 lg:grid-cols-[0.34fr_1fr] lg:gap-20">
+        <aside>
           <Text
             tag="span"
             variant="textSM"
@@ -135,9 +135,9 @@ const pageJsonLd = {
           >
             Before You Continue
           </Text>
-        </div>
+        </aside>
 
-        <div class="max-w-4xl">
+        <article class="max-w-4xl">
           <Text
             tag="h2"
             variant="displaySM"
@@ -146,19 +146,19 @@ const pageJsonLd = {
             It is designed for a specific situation:
           </Text>
 
-          <div class="mt-8 grid gap-4 md:grid-cols-2">
+          <ul class="mt-8 divide-y divide-base-200 border-y border-base-200">
             {
               situations.map((item) => (
-                <div class="rounded-3xl border border-base-200 bg-white p-5 shadow-xl">
+                <li class="py-5">
                   <Text tag="p" variant="textBase" class="text-base-700">
                     {item}
                   </Text>
-                </div>
+                </li>
               ))
             }
-          </div>
+          </ul>
 
-          <div class="mt-8 rounded-3xl border border-accent-300 bg-accent-100/60 p-6 sm:p-8">
+          <div class="mt-8 border-l border-accent-500 pl-6">
             <Text
               tag="p"
               variant="textLG"
@@ -167,65 +167,67 @@ const pageJsonLd = {
               If that is not your situation, this is not the right entry point.
             </Text>
           </div>
-        </div>
+        </article>
       </div>
     </Wrapper>
   </section>
 
-  <section class="bg-base-950">
+  <section class="bg-base-100">
     <Wrapper variant="standard" class="py-16 lg:py-24">
-      <div class="grid gap-12 lg:grid-cols-[0.32fr_1fr] lg:gap-20">
-        <div>
+      <div class="grid gap-12 lg:grid-cols-[0.34fr_1fr] lg:gap-20">
+        <aside>
           <Text
             tag="span"
             variant="textSM"
-            class="font-medium uppercase tracking-wide text-accent-300"
+            class="font-medium uppercase tracking-wide text-accent-600"
           >
             What Happens Next
           </Text>
-        </div>
+        </aside>
 
-        <div class="max-w-4xl">
+        <article class="max-w-4xl">
           <Text
             tag="h2"
             variant="displaySM"
-            class="font-display uppercase text-white"
+            class="font-display uppercase text-base-900"
           >
             You reserve your session.
           </Text>
 
-          <Text tag="p" variant="textBase" class="mt-5 text-base-200">
+          <Text tag="p" variant="textBase" class="mt-6 text-base-700">
             Within minutes, you receive an email with your next steps:
           </Text>
 
-          <div class="mt-8 grid gap-4 md:grid-cols-2">
+          <ul class="mt-8 space-y-4">
             {
               nextSteps.map((item) => (
-                <div class="rounded-3xl border border-white/10 bg-base-900 p-6">
-                  <Text
-                    tag="p"
-                    variant="textBase"
-                    class="text-base-100"
+                <li class="flex gap-4">
+                  <span
+                    aria-hidden="true"
+                    class="mt-3 h-px w-8 shrink-0 bg-accent-500"
                   >
+                  </span>
+
+                  <Text tag="p" variant="textBase" class="text-base-700">
                     {item}
                   </Text>
-                </div>
+                </li>
               ))
             }
-          </div>
+          </ul>
 
-          <Text tag="p" variant="textBase" class="mt-8 text-base-200">
+          <Text tag="p" variant="textBase" class="mt-8 text-base-700">
             Your session details and access link follow once your time is confirmed.
           </Text>
-        </div>
+        </article>
       </div>
     </Wrapper>
   </section>
 
-  <section>
+  <section class="bg-white">
     <Wrapper variant="standard" class="py-16 lg:py-24">
-      <div class="grid gap-12 lg:grid-cols-[0.32fr_1fr] lg:gap-20">
-        <div>
+      <div class="grid gap-12 lg:grid-cols-[0.34fr_1fr] lg:gap-20">
+        <aside>
           <Text
             tag="span"
             variant="textSM"
@@ -233,13 +235,13 @@ const pageJsonLd = {
           >
             How This Works
           </Text>
-        </div>
+        </aside>
 
-        <div class="max-w-4xl">
-          <div class="grid gap-4 md:grid-cols-3">
+        <article class="max-w-4xl">
+          <ol class="divide-y divide-base-200 border-y border-base-200">
             {
               sequence.map((item, index) => (
-                <article class="rounded-3xl border border-base-200 bg-white p-6 shadow-xl">
+                <li class="grid gap-3 py-6 sm:grid-cols-[4rem_1fr] sm:gap-8">
                   <Text
                     tag="p"
                     variant="displayXS"
@@ -249,18 +251,18 @@ const pageJsonLd = {
                   </Text>
 
                   <Text
-                    tag="h3"
+                    tag="p"
                     variant="displayXS"
-                    class="mt-5 font-display uppercase text-base-900"
+                    class="font-display text-base-900"
                   >
                     {item}
                   </Text>
-                </article>
+                </li>
               ))
             }
-          </div>
+          </ol>
 
-          <div class="mt-8 space-y-3">
+          <div class="mt-8 space-y-4">
             <Text tag="p" variant="textBase" class="text-base-700">
               That is the full sequence.
             </Text>
@@ -273,43 +275,44 @@ const pageJsonLd = {
               Nothing that requires you to explain more than you are ready to.
             </Text>
           </div>
-        </div>
+        </article>
       </div>
     </Wrapper>
   </section>
 
   <section class="bg-base-950">
-    <Wrapper variant="narrow" class="py-16 text-center lg:py-24">
-      <Text
-        tag="span"
-        variant="textSM"
-        class="font-medium uppercase tracking-wide text-accent-300"
-      >
-        Investment
-      </Text>
+    <Wrapper variant="standard" class="py-16 lg:py-24">
+      <div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+        <div class="max-w-3xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-accent-300"
+          >
+            Investment
+          </Text>
 
-      <Text
-        tag="h2"
-        variant="displayLG"
-        class="mt-6 uppercase font-display text-white"
-      >
-        $997 · 90 minutes
-      </Text>
+          <Text
+            tag="h2"
+            variant="displayLG"
+            class="mt-6 uppercase font-display text-white"
+          >
+            $997 · 90 minutes
+          </Text>
 
-      <Text tag="p" variant="textBase" class="mt-5 text-base-200">
-        Paid in full at the time of booking.
-      </Text>
+          <Text tag="p" variant="textBase" class="mt-5 text-base-200">
+            Paid in full at the time of booking.
+          </Text>
+        </div>
 
-      <div class="mt-10 flex justify-center">
-        <Button
-          isLink
-          href={reserveSessionHref}
-          variant="accent"
-          size="md"
-          class="w-fit"
-        >
-          Request a private session
-        </Button>
+        <div>
+          <a
+            href={reserveSessionHref}
+            class="inline-flex h-12 items-center justify-center rounded-lg bg-accent-300 px-6 py-4 text-center text-sm font-medium uppercase tracking-wide text-base-950 transition-all duration-500 ease-in-out hover:bg-accent-400 focus:outline-2 focus:outline-offset-4 focus:outline-accent-400"
+          >
+            Request a private session →
+          </a>
+        </div>
       </div>
     </Wrapper>
   </section>
