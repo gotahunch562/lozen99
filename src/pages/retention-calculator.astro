@@ -1,0 +1,1006 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+const title = "The Replacement Value Auditor℠";
+
+const description =
+  "You know what you produce. This is what it costs to replace you. Replacement value is a standard workforce metric — benchmarked, documented, and used in workforce planning at every senior level. This tool puts that number in your hands, so you can know your worth.";
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: title,
+  description,
+  url: "https://www.lozenadvisory.com/retention-calculator",
+  applicationCategory: "BusinessApplication",
+  publisher: {
+    "@type": "Organization",
+    name: "Lozen Advisory",
+    url: "https://www.lozenadvisory.com",
+  },
+};
+
+const levels = [
+  { id: "director", label: "Director" },
+  { id: "vp", label: "VP" },
+  { id: "svp", label: "SVP / MD" },
+  { id: "csuite", label: "C-Suite" },
+  { id: "partner", label: "Partner / Principal" },
+];
+
+const ageRanges = [
+  { id: "35", label: "35–39" },
+  { id: "40", label: "40–44" },
+  { id: "45", label: "45–49" },
+  { id: "50", label: "50–54" },
+  { id: "55", label: "55–58" },
+  { id: "59", label: "59+" },
+];
+
+const pipelineRows = [
+  { id: "entry", label: "Entry Level", value: "49%", width: "49%" },
+  { id: "manager", label: "Manager", value: "40%", width: "40%" },
+  { id: "director", label: "Sr. Manager / Director", value: "39%", width: "39%" },
+  { id: "vp", label: "VP", value: "34%", width: "34%" },
+  { id: "svp", label: "SVP / C-Suite / Partner", value: "29%", width: "29%" },
+];
+---
+
+<BaseLayout>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(pageJsonLd)}
+  ></script>
+
+  <style is:global>
+    .lozen-calculator input[type="range"] {
+      width: 100%;
+      height: 0.25rem;
+      cursor: pointer;
+      appearance: none;
+      border-radius: 9999px;
+      background: rgba(216, 225, 238, 0.65);
+      outline: none;
+    }
+
+    .lozen-calculator input[type="range"]::-webkit-slider-thumb {
+      width: 1.25rem;
+      height: 1.25rem;
+      appearance: none;
+      border-radius: 9999px;
+      border: 3px solid var(--color-base-950);
+      background: var(--color-accent-300);
+      box-shadow: 0 0 0 1px rgba(247, 211, 50, 0.55);
+      transition:
+        transform 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    .lozen-calculator input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.18);
+      box-shadow: 0 0 0 4px rgba(247, 211, 50, 0.22);
+    }
+
+    .lozen-calculator input[type="range"]::-moz-range-thumb {
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 9999px;
+      border: 3px solid var(--color-base-950);
+      background: var(--color-accent-300);
+      box-shadow: 0 0 0 1px rgba(247, 211, 50, 0.55);
+      transition:
+        transform 180ms ease,
+        box-shadow 180ms ease;
+    }
+
+    .lozen-calculator input[type="range"]::-moz-range-thumb:hover {
+      transform: scale(1.18);
+      box-shadow: 0 0 0 4px rgba(247, 211, 50, 0.22);
+    }
+  </style>
+
+  <div class="lozen-calculator bg-base-950 text-white">
+    <section class="relative isolate overflow-hidden bg-base-950">
+      <div
+        aria-hidden="true"
+        class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,rgba(247,211,50,0.16),transparent_45%),radial-gradient(ellipse_at_bottom_left,rgba(66,88,115,0.38),transparent_45%)]"
+      >
+      </div>
+
+      <Wrapper variant="standard" class="py-24 lg:py-32">
+        <div class="max-w-5xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase tracking-wide border-l text-accent-300 font-display border-accent-500"
+          >
+            Women: Knowing Your Worth
+          </Text>
+
+          <Text
+            tag="h1"
+            variant="display2XL"
+            class="mt-8 uppercase font-display text-white"
+          >
+            You know what you produce. This is what it costs to replace you.
+          </Text>
+
+          <Text
+            tag="p"
+            variant="textLG"
+            class="mt-6 max-w-3xl text-base-200"
+          >
+            Replacement value is a standard workforce metric. It is benchmarked, documented, and used in workforce planning at every senior level. This tool puts that number in your hands, so you can know your worth.
+          </Text>
+
+          <div class="mt-12 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/10 md:grid-cols-3">
+            <article class="bg-base-900/80 p-6 sm:p-8">
+              <Text
+                tag="p"
+                variant="displaySM"
+                class="font-display text-accent-300"
+              >
+                213%
+              </Text>
+              <Text tag="p" variant="textSM" class="mt-3 text-base-200">
+                Conservative SHRM replacement cost floor for senior executives.
+              </Text>
+            </article>
+
+            <article class="bg-base-900/80 p-6 sm:p-8">
+              <Text
+                tag="p"
+                variant="displaySM"
+                class="font-display text-accent-300"
+              >
+                29%
+              </Text>
+              <Text tag="p" variant="textSM" class="mt-3 text-base-200">
+                Women in the C-suite — up from 17% in 2015. They entered the pipeline at 49%. The broken rung is at manager level: for every 100 men promoted, only 81 women are.
+              </Text>
+            </article>
+
+            <article class="bg-base-900/80 p-6 sm:p-8">
+              <Text
+                tag="p"
+                variant="displaySM"
+                class="font-display text-accent-300"
+              >
+                43%
+              </Text>
+              <Text tag="p" variant="textSM" class="mt-3 text-base-200">
+                Senior women in leadership who report burnout, versus 31% of men at the same level. Most are managing it privately. McKinsey &amp; LeanIn 2024.
+              </Text>
+            </article>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-base-950">
+      <Wrapper variant="standard" class="py-16 lg:py-24">
+        <div class="max-w-3xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase tracking-wide border-l text-accent-300 font-display border-accent-500"
+          >
+            Your worth
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displayLG"
+            class="mt-6 uppercase font-display text-white"
+          >
+            What does it cost to replace you?
+          </Text>
+
+          <Text tag="p" variant="textBase" class="mt-5 text-base-200">
+            Enter your information. The calculation uses SHRM's documented replacement cost methodology, the same published framework used to quantify senior leadership value across industries. No data is stored.
+          </Text>
+        </div>
+
+        <div class="mt-12 rounded-3xl border border-white/10 bg-base-900 p-5 shadow-2xl sm:p-8 lg:p-10">
+          <div class="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:gap-14">
+            <div>
+              <Text
+                tag="p"
+                variant="textXS"
+                class="border-b border-white/10 pb-4 font-medium uppercase tracking-[0.24em] text-base-100"
+              >
+                Your Information
+              </Text>
+
+              <div class="mt-8 space-y-10">
+                <div>
+                  <Text
+                    tag="p"
+                    variant="textXS"
+                    class="mb-4 pl-3 font-medium uppercase tracking-[0.2em] border-l border-accent-400 text-accent-300"
+                  >
+                    Your current base salary
+                  </Text>
+
+                  <div class="mb-4 flex items-baseline justify-between gap-6">
+                    <Text tag="p" variant="textSM" class="text-base-100">
+                      Annual base compensation
+                    </Text>
+                    <Text
+                      tag="p"
+                      variant="displayXS"
+                      id="val-sal"
+                      class="font-display text-accent-300"
+                    >
+                      $250,000
+                    </Text>
+                  </div>
+
+                  <input
+                    type="range"
+                    id="sl-sal"
+                    min="75000"
+                    max="600000"
+                    step="5000"
+                    value="250000"
+                    aria-label="Annual base compensation"
+                  />
+
+                  <Text tag="p" variant="textXS" class="mt-3 text-base-300">
+                    Slide to your approximate base salary. Does not include bonus, equity, or benefits.
+                  </Text>
+                </div>
+
+                <div>
+                  <Text
+                    tag="p"
+                    variant="textXS"
+                    class="mb-4 pl-3 font-medium uppercase tracking-[0.2em] border-l border-accent-400 text-accent-300"
+                  >
+                    Your level
+                  </Text>
+
+                  <div class="flex flex-wrap gap-2" data-button-group="level">
+                    {
+                      levels.map((level) => (
+                        <button
+                          type="button"
+                          id={`lvl-${level.id}`}
+                          data-level={level.id}
+                          class:list={[
+                            "rounded-lg border px-4 py-2 text-sm transition-all duration-200",
+                            level.id === "svp"
+                              ? "border-accent-300 bg-accent-300 text-base-950"
+                              : "border-white/15 bg-transparent text-base-200 hover:border-accent-300 hover:text-white",
+                          ]}
+                        >
+                          {level.label}
+                        </button>
+                      ))
+                    }
+                  </div>
+                </div>
+
+                <div>
+                  <Text
+                    tag="p"
+                    variant="textXS"
+                    class="mb-4 pl-3 font-medium uppercase tracking-[0.2em] border-l border-accent-400 text-accent-300"
+                  >
+                    Tenure at current organization
+                  </Text>
+
+                  <div class="mb-4 flex items-baseline justify-between gap-6">
+                    <Text tag="p" variant="textSM" class="text-base-100">
+                      Years in this role or organization
+                    </Text>
+                    <Text
+                      tag="p"
+                      variant="displayXS"
+                      id="val-tenure"
+                      class="font-display text-accent-300"
+                    >
+                      8 years
+                    </Text>
+                  </div>
+
+                  <input
+                    type="range"
+                    id="sl-tenure"
+                    min="1"
+                    max="30"
+                    step="1"
+                    value="8"
+                    aria-label="Years in this role or organization"
+                  />
+
+                  <Text tag="p" variant="textXS" class="mt-3 text-base-300">
+                    Tenure determines institutional knowledge premium: relationships, systems, history that cannot be hired from the outside.
+                  </Text>
+                </div>
+
+                <div>
+                  <Text
+                    tag="p"
+                    variant="textXS"
+                    class="mb-4 pl-3 font-medium uppercase tracking-[0.2em] border-l border-accent-400 text-accent-300"
+                  >
+                    Your age range
+                  </Text>
+
+                  <div class="flex flex-wrap gap-2" data-button-group="age">
+                    {
+                      ageRanges.map((age) => (
+                        <button
+                          type="button"
+                          id={`age-${age.id}`}
+                          data-age={age.id}
+                          class:list={[
+                            "rounded-lg border px-4 py-2 text-sm transition-all duration-200",
+                            age.id === "45"
+                              ? "border-accent-300 bg-accent-300 text-base-950"
+                              : "border-white/15 bg-transparent text-base-200 hover:border-accent-300 hover:text-white",
+                          ]}
+                        >
+                          {age.label}
+                        </button>
+                      ))
+                    }
+                  </div>
+
+                  <Text
+                    tag="p"
+                    variant="textXS"
+                    id="window-note"
+                    class="mt-3 text-base-300"
+                  >
+                    You are inside the perimenopause transition window (40–58). This is when the pipeline collapse is steepest and when a woman is most likely managing privately what she has decided not to name at work.
+                  </Text>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <Text
+                tag="p"
+                variant="textXS"
+                class="border-b border-white/10 pb-4 font-medium uppercase tracking-[0.24em] text-base-100"
+              >
+                Your Worth
+              </Text>
+
+              <div class="mt-8 rounded-3xl border border-white/10 bg-base-800 p-6 sm:p-8">
+                <Text
+                  tag="p"
+                  variant="textXS"
+                  class="font-medium uppercase tracking-[0.24em] text-accent-300"
+                >
+                  Replacement value estimate
+                </Text>
+
+                <div class="mt-8 border-b border-white/10 pb-8">
+                  <Text tag="p" variant="textSM" class="text-base-100">
+                    What it costs to replace you
+                  </Text>
+                  <div
+                    id="out-erv"
+                    class="mt-3 font-display text-4xl leading-none tracking-[-0.03em] text-accent-300 sm:text-5xl"
+                  >
+                    $532,500
+                  </div>
+                  <Text tag="p" variant="textXS" class="mt-4 text-base-300">
+                    Your salary × 2.13. SHRM documents replacement cost at 200–400% of annual salary for senior executives. 213% is the conservative floor.
+                  </Text>
+                </div>
+
+                <div class="mt-8 space-y-7">
+                  <div>
+                    <div class="mb-3 flex items-baseline justify-between gap-4">
+                      <Text tag="p" variant="textSM" class="text-base-100">
+                        Institutional knowledge premium
+                      </Text>
+                      <Text
+                        tag="p"
+                        variant="displayXS"
+                        id="out-tenure"
+                        class="font-display text-white"
+                      >
+                        $160,000
+                      </Text>
+                    </div>
+                    <div class="h-1 rounded-full bg-white/10">
+                      <div
+                        id="bar-tenure"
+                        class="h-1 rounded-full bg-accent-300 transition-all duration-500"
+                        style="width: 40%;"
+                      >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="mb-3 flex items-baseline justify-between gap-4">
+                      <Text tag="p" variant="textSM" class="text-base-100">
+                        Total organizational investment in you
+                      </Text>
+                      <Text
+                        tag="p"
+                        variant="displayXS"
+                        id="out-total"
+                        class="font-display text-white"
+                      >
+                        $692,500
+                      </Text>
+                    </div>
+                    <div class="h-1 rounded-full bg-white/10">
+                      <div
+                        id="bar-total"
+                        class="h-1 rounded-full bg-accent-300 transition-all duration-500"
+                        style="width: 65%;"
+                      >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="mb-3 flex items-baseline justify-between gap-4">
+                      <Text tag="p" variant="textSM" class="text-base-100">
+                        SHRM full-range replacement cost
+                      </Text>
+                      <Text
+                        tag="p"
+                        variant="displayXS"
+                        id="out-high"
+                        class="font-display text-white"
+                      >
+                        $1,000,000
+                      </Text>
+                    </div>
+                    <div class="h-1 rounded-full bg-white/10">
+                      <div
+                        id="bar-high"
+                        class="h-1 rounded-full bg-accent-300 transition-all duration-500"
+                        style="width: 85%;"
+                      >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                id="window-status"
+                class="mt-4 rounded-2xl border border-accent-300/30 bg-accent-300/10 p-5"
+              >
+                <Text
+                  tag="p"
+                  variant="textXS"
+                  class="font-medium uppercase tracking-[0.2em] text-accent-300"
+                >
+                  Transition Window Status
+                </Text>
+                <Text
+                  tag="p"
+                  variant="textSM"
+                  id="window-text"
+                  class="mt-3 text-base-100"
+                >
+                  Inside the window. You are inside the perimenopause transition window (40–58). This is when the pipeline collapse is steepest and when a woman is most likely managing privately what she has decided not to name at work. When women at this stage leave, the departure is recorded as personal, family, or unspecified. The calculation behind it is not.
+                </Text>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="border-y border-white/10 bg-base-900">
+      <Wrapper variant="narrow" class="py-16 lg:py-20">
+        <Text
+          tag="blockquote"
+          variant="displaySM"
+          class="text-center font-display text-accent-300"
+        >
+          “The Broken Rung”: Only 54% of companies are currently focused on women’s career advancement, making your individual worth even more critical to quantify.
+        </Text>
+        <Text
+          tag="p"
+          variant="textXS"
+          class="mt-6 text-center font-medium uppercase tracking-[0.24em] text-base-300"
+        >
+          McKinsey &amp; LeanIn, Women in the Workplace 2024
+        </Text>
+      </Wrapper>
+    </section>
+
+    <section class="bg-base-950">
+      <Wrapper variant="standard" class="py-16 lg:py-24">
+        <div class="max-w-3xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase tracking-wide border-l text-accent-300 font-display border-accent-500"
+          >
+            The pipeline
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displayLG"
+            class="mt-6 uppercase font-display text-white"
+          >
+            Where you are in the exit pattern.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="mt-5 text-base-200">
+            McKinsey and LeanIn 2024 Women in the Workplace data. You entered at 49%. By the C-suite that number is 29%. The women who are no longer in that pipeline did not stay. They made a calculation. Which tier are you in when that calculation gets made?
+          </Text>
+        </div>
+
+        <div class="mt-12 max-w-4xl space-y-5">
+          {
+            pipelineRows.map((row) => (
+              <div
+                id={`pipe-${row.id}`}
+                class="grid items-center gap-3 sm:grid-cols-[13rem_1fr_3rem]"
+              >
+                <Text
+                  tag="p"
+                  variant="textSM"
+                  id={`lbl-${row.id}`}
+                  class:list={[
+                    "text-base-300",
+                    row.id === "svp" ? "font-medium text-white" : "",
+                  ]}
+                >
+                  {row.label}
+                </Text>
+
+                <div class="relative h-3 rounded-full bg-white/10">
+                  <div
+                    id={`fill-${row.id}`}
+                    class="h-3 rounded-full bg-accent-300 transition-all duration-500"
+                    style={`width: ${row.width};`}
+                  >
+                  </div>
+
+                  {
+                    ["director", "vp", "svp"].includes(row.id) && (
+                      <div
+                        id={`you-${row.id}`}
+                        class:list={[
+                          "absolute -top-7 hidden -translate-x-1/2 whitespace-nowrap text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-accent-300",
+                          row.id === "svp" ? "block" : "",
+                        ]}
+                        style={`left: ${row.width};`}
+                      >
+                        You are here
+                      </div>
+                    )
+                  }
+                </div>
+
+                <Text
+                  tag="p"
+                  variant="textSM"
+                  id={`pct-${row.id}`}
+                  class:list={[
+                    "text-right font-display text-base-300",
+                    row.id === "svp" ? "text-white" : "",
+                  ]}
+                >
+                  {row.value}
+                </Text>
+              </div>
+            ))
+          }
+
+          <Text tag="p" variant="textXS" class="pt-4 text-base-300">
+            Source: McKinsey and LeanIn, Women in the Workplace 2024. The Invisible Attrition℠ transition window (ages 40–58) spans the senior manager through C-suite stages where the steepest departures occur.
+          </Text>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-base-900">
+      <Wrapper variant="standard" class="py-16 lg:py-24">
+        <div class="max-w-3xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase tracking-wide border-l text-accent-300 font-display border-accent-500"
+          >
+            What this means
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displayLG"
+            class="mt-6 uppercase font-display text-white"
+          >
+            Knowing this number is not a decision. It is a position.
+          </Text>
+        </div>
+
+        <div class="mt-12 grid gap-4 lg:grid-cols-3">
+          <article class="rounded-3xl border border-white/10 bg-base-950 p-6 sm:p-8">
+            <Text
+              tag="p"
+              variant="displayXS"
+              class="font-display text-accent-300"
+            >
+              01
+            </Text>
+            <Text
+              tag="h3"
+              variant="displayXS"
+              class="mt-5 font-display text-white"
+            >
+              You are already in the data
+            </Text>
+            <Text tag="p" variant="textSM" class="mt-4 text-base-200">
+              Replacement value is calculated and benchmarked at every senior level. This number exists whether you have seen it or not. Knowing it changes what you are working with.
+            </Text>
+          </article>
+
+          <article class="rounded-3xl border border-white/10 bg-base-950 p-6 sm:p-8">
+            <Text
+              tag="p"
+              variant="displayXS"
+              class="font-display text-accent-300"
+            >
+              02
+            </Text>
+            <Text
+              tag="h3"
+              variant="displayXS"
+              class="mt-5 font-display text-white"
+            >
+              The exit reads as voluntary
+            </Text>
+            <Text tag="p" variant="textSM" class="mt-4 text-base-200">
+              When women at this level leave, the departure is recorded as personal, family, or unspecified. The calculation behind that exit is far longer and more deliberate than the code assigned to it. Invisible Attrition℠ is the pattern of exits that look like choice and were, in fact, the end of a much longer calculation.
+            </Text>
+          </article>
+
+          <article class="rounded-3xl border border-white/10 bg-base-950 p-6 sm:p-8">
+            <Text
+              tag="p"
+              variant="displayXS"
+              class="font-display text-accent-300"
+            >
+              03
+            </Text>
+            <Text
+              tag="h3"
+              variant="displayXS"
+              class="mt-5 font-display text-white"
+            >
+              Private management is not the same as doing this alone
+            </Text>
+            <Text tag="p" variant="textSM" class="mt-4 text-base-200">
+              There is a difference between strategic containment and self-erasure. Tacere — the practice of strategic non-disclosure — practiced with the right support, protects continuity without requiring unnecessary exposure. The question is not whether you are strong enough to disclose. It is whether you have what you need to contain.
+            </Text>
+          </article>
+        </div>
+      </Wrapper>
+    </section>
+
+    <section class="bg-base-950">
+      <Wrapper variant="narrow" class="py-16 text-center lg:py-24">
+        <Text
+          tag="h2"
+          variant="displayLG"
+          class="uppercase font-display text-white"
+        >
+          Private strategies for women who are not waiting for the system to catch up.
+        </Text>
+
+        <Text tag="p" variant="textBase" class="mt-6 text-base-200">
+          Lozen Advisory is a confidential advisory layer. It does not operate as a wellness program, does not require internal disclosure, and does not depend on institutional accommodation. The MAPS Blueprint is where to start.
+        </Text>
+
+        <div class="mt-10 flex justify-center">
+          <Button
+            isLink
+            href="/booking"
+            variant="accent"
+            size="md"
+            class="w-fit"
+          >
+            Access the MAPS Blueprint
+          </Button>
+        </div>
+
+        <Text tag="p" variant="textXS" class="mt-5 text-base-400">
+          No forms. No organizational disclosure required. The work focuses on protecting your performance and your options.
+        </Text>
+      </Wrapper>
+    </section>
+
+    <section class="border-t border-white/10 bg-base-950">
+      <Wrapper
+        variant="standard"
+        class="flex flex-col gap-4 py-8 md:flex-row md:items-center md:justify-between"
+      >
+        <Text tag="p" variant="textSM" class="font-display text-base-300">
+          Lozen Advisory LLC
+        </Text>
+
+        <Text tag="p" variant="textXS" class="max-w-2xl text-base-400 md:text-right">
+          Invisible Attrition℠ is a service mark of Lozen Advisory LLC. This tool uses SHRM-documented replacement cost methodology for illustrative purposes. No data entered here is stored or transmitted. Not financial, legal, or medical advice.
+        </Text>
+      </Wrapper>
+    </section>
+  </div>
+
+  <script is:inline>
+    (() => {
+      let currentLevel = "svp";
+      let currentAge = "45";
+
+      const levelMap = {
+        director: { pipe: "director", label: "Sr. Manager / Director" },
+        vp: { pipe: "vp", label: "VP" },
+        svp: { pipe: "svp", label: "SVP / MD" },
+        csuite: { pipe: "svp", label: "C-Suite" },
+        partner: { pipe: "svp", label: "Partner / Principal" },
+      };
+
+      const ageConfig = {
+        "35": {
+          inWindow: false,
+          note:
+            "You are approaching the transition window. Perimenopause onset is documented as early as age 40 by NAMS. This is the period before the pattern fully registers.",
+        },
+        "40": {
+          inWindow: true,
+          note:
+            "You are inside the perimenopause transition window (40–58). This is when the pipeline is steepest and when departures are most likely to be described as personal timing or unspecified.",
+        },
+        "45": {
+          inWindow: true,
+          note:
+            "You are inside the perimenopause transition window (40–58). This is when the pipeline collapse is steepest and when a woman is most likely managing privately what she has decided not to name at work.",
+        },
+        "50": {
+          inWindow: true,
+          note:
+            "You are inside the transition window. Research documents that the underlying recalibration is underway long before any decision becomes visible.",
+        },
+        "55": {
+          inWindow: true,
+          note:
+            "You are in the later stage of the transition window. Departures at this stage are most often described as lifestyle choices. The calculations behind them are not.",
+        },
+        "59": {
+          inWindow: false,
+          note:
+            "You are past the primary transition window. The replacement value calculation and institutional knowledge premium apply regardless of age range.",
+        },
+      };
+
+      const activeButtonClasses = [
+        "border-accent-300",
+        "bg-accent-300",
+        "text-base-950",
+      ];
+
+      const inactiveButtonClasses = [
+        "border-white/15",
+        "bg-transparent",
+        "text-base-200",
+      ];
+
+      const formatCurrency = (value) =>
+        "$" + Math.round(value).toLocaleString("en-US");
+
+      const getElement = (id) => document.getElementById(id);
+
+      const setButtonState = (button, isActive) => {
+        if (!button) return;
+
+        button.classList.remove(...activeButtonClasses, ...inactiveButtonClasses);
+
+        if (isActive) {
+          button.classList.add(...activeButtonClasses);
+        } else {
+          button.classList.add(...inactiveButtonClasses);
+        }
+      };
+
+      const updateAgeContext = () => {
+        const config = ageConfig[currentAge];
+        const windowNote = getElement("window-note");
+        const windowStatus = getElement("window-status");
+        const windowText = getElement("window-text");
+
+        if (!config || !windowNote || !windowStatus || !windowText) return;
+
+        windowNote.textContent = config.note;
+
+        if (config.inWindow) {
+          windowStatus.classList.remove("border-white/10", "bg-base-900");
+          windowStatus.classList.add("border-accent-300/30", "bg-accent-300/10");
+          windowText.textContent =
+            "Inside the window. " +
+            config.note +
+            " When women at this stage leave, the departure is recorded as personal, family, or unspecified. The calculation behind it is not.";
+        } else {
+          windowStatus.classList.remove(
+            "border-accent-300/30",
+            "bg-accent-300/10",
+          );
+          windowStatus.classList.add("border-white/10", "bg-base-900");
+          windowText.textContent = "Outside the primary window. " + config.note;
+        }
+      };
+
+      const updatePipeline = () => {
+        const targetPipe = levelMap[currentLevel]?.pipe || "svp";
+        const trackedPipes = ["director", "vp", "svp"];
+
+        trackedPipes.forEach((pipe) => {
+          const marker = getElement(`you-${pipe}`);
+          const label = getElement(`lbl-${pipe}`);
+          const percent = getElement(`pct-${pipe}`);
+          const fill = getElement(`fill-${pipe}`);
+
+          if (marker) {
+            if (pipe === targetPipe) {
+              marker.classList.remove("hidden");
+              marker.classList.add("block");
+              if (fill?.style?.width) {
+                marker.style.left = fill.style.width;
+              }
+            } else {
+              marker.classList.remove("block");
+              marker.classList.add("hidden");
+            }
+          }
+
+          if (label) {
+            label.classList.toggle("text-white", pipe === targetPipe);
+            label.classList.toggle("font-medium", pipe === targetPipe);
+            label.classList.toggle("text-base-300", pipe !== targetPipe);
+          }
+
+          if (percent) {
+            percent.classList.toggle("text-white", pipe === targetPipe);
+            percent.classList.toggle("text-base-300", pipe !== targetPipe);
+          }
+        });
+      };
+
+      const updateCalculator = () => {
+        const salaryInput = getElement("sl-sal");
+        const tenureInput = getElement("sl-tenure");
+
+        if (!salaryInput || !tenureInput) return;
+
+        const salary = Number.parseFloat(salaryInput.value);
+        const tenure = Number.parseFloat(tenureInput.value);
+
+        const salaryValue = getElement("val-sal");
+        const tenureValue = getElement("val-tenure");
+
+        if (salaryValue) salaryValue.textContent = formatCurrency(salary);
+        if (tenureValue) {
+          tenureValue.textContent =
+            tenure + (tenure === 1 ? " year" : " years");
+        }
+
+        const estimatedReplacementValue = salary * 2.13;
+        const tenurePercent = Math.min(tenure * 0.08, 0.8);
+        const tenurePremium = salary * tenurePercent;
+        const totalInvestment = estimatedReplacementValue + tenurePremium;
+        const highReplacementValue = salary * 4.0;
+
+        const outputEstimatedReplacementValue = getElement("out-erv");
+        const outputTenure = getElement("out-tenure");
+        const outputTotal = getElement("out-total");
+        const outputHigh = getElement("out-high");
+
+        if (outputEstimatedReplacementValue) {
+          outputEstimatedReplacementValue.textContent = formatCurrency(
+            estimatedReplacementValue,
+          );
+        }
+
+        if (outputTenure) {
+          outputTenure.textContent = formatCurrency(tenurePremium);
+        }
+
+        if (outputTotal) {
+          outputTotal.textContent = formatCurrency(totalInvestment);
+        }
+
+        if (outputHigh) {
+          outputHigh.textContent = formatCurrency(highReplacementValue);
+        }
+
+        const maxValue = highReplacementValue * 1.1;
+        const tenureBar = getElement("bar-tenure");
+        const totalBar = getElement("bar-total");
+        const highBar = getElement("bar-high");
+
+        if (tenureBar) {
+          tenureBar.style.width =
+            Math.min((tenurePremium / maxValue) * 100, 100) + "%";
+        }
+
+        if (totalBar) {
+          totalBar.style.width =
+            Math.min((totalInvestment / maxValue) * 100, 100) + "%";
+        }
+
+        if (highBar) {
+          highBar.style.width =
+            Math.min((highReplacementValue / maxValue) * 100, 95) + "%";
+        }
+
+        updatePipeline();
+      };
+
+      const bindEvents = () => {
+        document.querySelectorAll("[data-level]").forEach((button) => {
+          button.addEventListener("click", () => {
+            const selectedLevel = button.getAttribute("data-level");
+            if (!selectedLevel) return;
+
+            currentLevel = selectedLevel;
+
+            document.querySelectorAll("[data-level]").forEach((levelButton) => {
+              setButtonState(
+                levelButton,
+                levelButton.getAttribute("data-level") === selectedLevel,
+              );
+            });
+
+            updatePipeline();
+          });
+        });
+
+        document.querySelectorAll("[data-age]").forEach((button) => {
+          button.addEventListener("click", () => {
+            const selectedAge = button.getAttribute("data-age");
+            if (!selectedAge) return;
+
+            currentAge = selectedAge;
+
+            document.querySelectorAll("[data-age]").forEach((ageButton) => {
+              setButtonState(
+                ageButton,
+                ageButton.getAttribute("data-age") === selectedAge,
+              );
+            });
+
+            updateAgeContext();
+            updateCalculator();
+          });
+        });
+
+        const salaryInput = getElement("sl-sal");
+        const tenureInput = getElement("sl-tenure");
+
+        salaryInput?.addEventListener("input", updateCalculator);
+        tenureInput?.addEventListener("input", updateCalculator);
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", () => {
+          bindEvents();
+          updateAgeContext();
+          updateCalculator();
+        });
+      } else {
+        bindEvents();
+        updateAgeContext();
+        updateCalculator();
+      }
+    })();
+  </script>
+</BaseLayout>
