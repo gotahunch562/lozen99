@@ -5,7 +5,7 @@ shortDescription: "A focused advisory session for leadership teams that need cla
 priceFrom: "Leadership Session"
 duration: "Focused advisory"
 image:
-  url: "/images/services/serviceplaceholder.webp"
+  url: "../../images/services/serviceplaceholder.webp"
   alt: "Executive advisory discussion"
 ---
 
