@@ -4,7 +4,7 @@
  * src/layouts/PillarLayout.astro
  *
  * Frontmatter fields expected from the .md file:
- *   heading, subtitle, pubDate, heroImage, heroAlt, clusters[]
+ *   title, heading, subtitle, metaDescription, pubDate, heroImage, heroAlt, clusters[]
  *
  * In Astro, markdown frontmatter is passed as Astro.props.frontmatter
  * when the file uses the layout: field. All fields destructure from there.
@@ -18,227 +18,266 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 const { frontmatter } = Astro.props;
 
 const {
+  title,
   heading,
   subtitle,
+  metaDescription,
   pubDate,
   heroImage,
   heroAlt = "",
   clusters = [],
 } = frontmatter;
 
-const formattedDate = new Date(pubDate).toLocaleDateString("en-US", {
-  year: "numeric",
-  month: "long",
-  day: "2-digit",
-});
+const pageTitle = title || heading || "Lozen Advisory";
+const pageDescription = metaDescription || subtitle || "";
+
+const formattedDate = pubDate
+  ? new Date(pubDate).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "2-digit",
+    })
+  : "";
 ---
 
-<BaseLayout>
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Page header -->
+  <section class="overflow-hidden border-b border-base-200 bg-white">
+    <Wrapper variant="standard" class="pt-28 pb-12 sm:pt-32 sm:pb-14 lg:pt-36 lg:pb-16">
+      <div class="mx-auto max-w-5xl">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-700"
+          >
+            Framework · Pillar Article
+          </Text>
 
-  <!-- ── Page header ── -->
-  <section class="bg-gradient-to-t from-base-200 to-white overflow-hidden">
-    <Wrapper variant="narrow" class="pt-24 lg:pt-32 pb-12">
+          {
+            pubDate && (
+              <time
+                datetime={pubDate}
+                class="font-sans text-sm font-medium text-base-500"
+              >
+                {formattedDate}
+              </time>
+            )
+          }
+        </div>
 
-      <div class="flex items-center gap-4 mb-8">
         <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+          tag="h1"
+          variant="displayLG"
+          class="mt-7 max-w-4xl font-display font-normal uppercase leading-[1.02] tracking-[-0.04em] text-base-950 sm:mt-8"
         >
-          Framework · Pillar Article
+          {heading}
         </Text>
-        <time datetime={pubDate} class="text-sm text-base-500">
-          {formattedDate}
-        </time>
+
+        {
+          subtitle && (
+            <Text
+              tag="p"
+              variant="textLG"
+              class="mt-5 max-w-3xl font-sans leading-8 text-base-700"
+            >
+              {subtitle}
+            </Text>
+          )
+        }
       </div>
-
-      <Text
-        tag="h1"
-        variant="displayMD"
-        class="font-display text-base-900 uppercase"
-      >
-        {heading}
-      </Text>
-
-      {subtitle && (
-        <Text
-          tag="p"
-          variant="textLG"
-          class="mt-4 text-base-600 max-w-2xl"
-        >
-          {subtitle}
-        </Text>
-      )}
-
     </Wrapper>
   </section>
 
-  <!-- ── Optional hero image ── -->
-  {heroImage && (
-    <Wrapper variant="narrow" class="pb-8">
-      <img
-        src={heroImage}
-        alt={heroAlt}
-        class="w-full rounded-2xl object-cover aspect-[4/2] shadow-2xl outline-4 outline-base-500/10"
-        loading="eager"
-        decoding="async"
-      />
-    </Wrapper>
-  )}
+  <!-- Optional hero image -->
+  {
+    heroImage && (
+      <section class="bg-white">
+        <Wrapper variant="standard" class="py-8">
+          <div class="mx-auto max-w-5xl">
+            <img
+              src={heroImage}
+              alt={heroAlt}
+              class="aspect-[16/7] w-full rounded-2xl object-cover shadow-2xl ring-1 ring-base-950/10 lg:rounded-3xl"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </Wrapper>
+      </section>
+    )
+  }
 
-  <!-- ── Article body ── -->
-  <section>
-    <Wrapper variant="prose" class="py-12">
+  <!-- Article body -->
+  <section class="bg-white">
+    <Wrapper
+      variant="prose"
+      class="pillar-article py-10 sm:py-12 lg:py-16 prose-headings:font-display prose-headings:font-normal prose-headings:uppercase prose-headings:tracking-[-0.025em] prose-headings:text-base-950 prose-h2:mt-14 prose-h2:mb-6 prose-h2:text-2xl sm:prose-h2:text-3xl prose-p:font-sans prose-p:text-base-700 prose-p:leading-8 sm:prose-p:leading-9 prose-a:font-semibold prose-a:text-accent-700 prose-a:decoration-accent-500 prose-a:underline-offset-4 hover:prose-a:text-base-950"
+    >
       <slot />
     </Wrapper>
   </section>
 
-  <!-- ── Service mark footnote ── -->
-  <Wrapper variant="narrow" class="pb-8">
-    <Text tag="p" variant="textSM" class="italic text-base-500">
-      Invisible Attrition℠ is a service mark of Lozen Advisory LLC.
-      The Invisible Attrition℠ framework was first published publicly on
-      February 15, 2026 at lozenadvisory.com/invisible-attrition.
-    </Text>
-  </Wrapper>
-
-  <!-- ── Cluster accordion ── -->
-  {clusters.length > 0 && (
-    <section class="bg-gradient-to-b from-white to-base-200">
-      <Wrapper variant="narrow" class="py-12 lg:py-16">
-
-        <div class="mb-8">
-          <Text
-            tag="span"
-            variant="textSM"
-            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-          >
-            Pillar Cluster
-          </Text>
-          <Text
-            tag="h2"
-            variant="displayXS"
-            class="font-display text-base-900 uppercase mt-4"
-          >
-            What the Framework Measures: Nine Dimensions of Invisible Attrition℠
-          </Text>
-          <Text tag="p" variant="textBase" class="text-base-500 mt-2">
-            Nine cluster articles expanding the Invisible Attrition℠ framework.
-          </Text>
-        </div>
-
-        <ol
-          class="divide-y divide-base-200 border-t border-base-200"
-          role="list"
-        >
-          {clusters.map((cluster: { slug: string; title: string; description: string }, index: number) => (
-            <li data-accordion-item>
-              <button
-                class="flex items-baseline gap-4 w-full py-5 text-left group"
-                aria-expanded="false"
-                aria-controls={`cluster-panel-${index}`}
-                id={`cluster-trigger-${index}`}
-                data-accordion-trigger
-              >
-                <span class="text-xs font-semibold tracking-widest text-base-400 w-6 shrink-0">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span class="flex-1 font-display text-base-900 text-base group-hover:text-accent-600 transition-colors duration-200">
-                  {cluster.title}
-                </span>
-                <span
-                  class="shrink-0 text-base-400 text-lg font-light w-5 text-right"
-                  aria-hidden="true"
-                  data-accordion-icon
-                >
-                  +
-                </span>
-              </button>
-
-              <div
-                id={`cluster-panel-${index}`}
-                role="region"
-                aria-labelledby={`cluster-trigger-${index}`}
-                class="pb-5 pl-10"
-                hidden
-              >
-                <Text
-                  tag="p"
-                  variant="textBase"
-                  class="text-base-500 max-w-2xl mb-4"
-                >
-                  {cluster.description}
-                </Text>
-                <Button
-                  isLink
-                  href={cluster.slug}
-                  variant="muted"
-                  size="xs"
-                  class="w-fit"
-                >
-                  Read article →
-                </Button>
-              </div>
-            </li>
-          ))}
-        </ol>
-
-      </Wrapper>
-    </section>
-  )}
-
-  <!-- ── Briefing CTA ── -->
-  <section class="bg-base-200">
-    <Wrapper variant="narrow" class="py-12 lg:py-16">
-      <div class="border-l-2 border-accent-500 pl-6">
-        <Text
-          tag="span"
-          variant="textSM"
-          class="font-medium uppercase text-base-500 font-display tracking-wide"
-        >
-          Strategic Briefing
+  <!-- Service mark footnote -->
+  <section class="bg-white">
+    <Wrapper variant="narrow" class="pb-12 lg:pb-16">
+      <div class="border-t border-base-200 pt-6">
+        <Text tag="p" variant="textSM" class="font-sans italic leading-6 text-base-500">
+          Invisible Attrition℠ is a service mark of Lozen Advisory LLC.
+          The Invisible Attrition℠ framework was first published publicly on
+          February 15, 2026 at lozenadvisory.com/invisible-attrition.
         </Text>
-        <Text
-          tag="h2"
-          variant="textLG"
-          class="font-display text-base-900 uppercase mt-2"
-        >
-          Invisible Attrition℠ Retention Risk Audit
-        </Text>
-        <Text
-          tag="p"
-          variant="textBase"
-          class="text-base-500 mt-3 max-w-xl"
-        >
-          A strategic consultation to identify why clean performance records
-          and engagement scores can mask compounding leadership continuity risk.
-        </Text>
-        <Button
-          isLink
-          href="/request-briefing"
-          variant="default"
-          size="sm"
-          class="mt-6 w-fit"
-        >
-          Request Briefing →
-        </Button>
       </div>
     </Wrapper>
   </section>
 
+  <!-- Cluster index -->
+  {
+    clusters.length > 0 && (
+      <section class="bg-base-950 text-white">
+        <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-20">
+          <div class="mx-auto max-w-5xl">
+            <div class="mb-8 sm:mb-10">
+              <Text
+                tag="span"
+                variant="textSM"
+                class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-300"
+              >
+                Pillar Cluster
+              </Text>
+
+              <Text
+                tag="h2"
+                variant="displaySM"
+                class="mt-5 max-w-4xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-white sm:mt-6"
+              >
+                What the Framework Measures: Nine Dimensions of Invisible Attrition℠
+              </Text>
+
+              <Text
+                tag="p"
+                variant="textBase"
+                class="mt-4 max-w-2xl font-sans leading-7 text-base-300"
+              >
+                Nine cluster articles expanding the Invisible Attrition℠ framework.
+              </Text>
+            </div>
+
+            <div class="grid gap-4">
+              {clusters.map(
+                (
+                  cluster: {
+                    slug: string;
+                    title: string;
+                    description: string;
+                  },
+                  index: number,
+                ) => (
+                  <details
+                    class="group overflow-hidden rounded-2xl border border-white/15 bg-white shadow-xl ring-1 ring-white/10 transition-all duration-300 open:border-accent-500 open:shadow-2xl lg:rounded-3xl"
+                    open={index === 0}
+                  >
+                    <summary class="flex cursor-pointer list-none items-start gap-4 px-5 py-5 text-left sm:px-6 sm:py-6 [&::-webkit-details-marker]:hidden">
+                      <span class="mt-1 shrink-0 font-sans text-xs font-semibold tracking-[0.18em] text-accent-700">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+
+                      <span class="flex-1 font-display text-lg font-normal uppercase leading-snug tracking-[-0.015em] text-base-950 transition-colors duration-200 group-hover:text-accent-700 sm:text-xl">
+                        {cluster.title}
+                      </span>
+
+                      <span
+                        class="mt-0.5 shrink-0 font-sans text-xl font-light leading-none text-base-500 transition-colors duration-200 group-hover:text-accent-700 group-open:hidden"
+                        aria-hidden="true"
+                      >
+                        +
+                      </span>
+
+                      <span
+                        class="mt-0.5 hidden shrink-0 font-sans text-xl font-light leading-none text-accent-700 group-open:inline"
+                        aria-hidden="true"
+                      >
+                        −
+                      </span>
+                    </summary>
+
+                    <div class="border-t border-base-200 px-5 pb-5 pt-5 sm:px-6 sm:pb-6">
+                      <Text
+                        tag="p"
+                        variant="textBase"
+                        class="max-w-3xl font-sans leading-7 text-base-700"
+                      >
+                        {cluster.description}
+                      </Text>
+
+                      <a
+                        href={cluster.slug}
+                        class="mt-5 inline-flex font-sans text-sm font-semibold text-accent-700 transition-all duration-300 hover:translate-x-1 hover:text-base-950"
+                      >
+                        Read article →
+                      </a>
+                    </div>
+                  </details>
+                ),
+              )}
+            </div>
+          </div>
+        </Wrapper>
+      </section>
+    )
+  }
+
+  <!-- Briefing CTA -->
+  <section class="border-t border-base-200 bg-white">
+    <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-20">
+      <div class="mx-auto max-w-5xl">
+        <div
+          class="relative overflow-hidden rounded-2xl border border-base-800 bg-base-950 p-6 shadow-2xl ring-1 ring-base-950/20 sm:p-8 lg:rounded-3xl lg:p-10"
+        >
+          <div
+            aria-hidden="true"
+            class="absolute inset-x-0 top-0 h-1 bg-accent-500"
+          >
+          </div>
+
+          <div class="max-w-3xl">
+            <Text
+              tag="span"
+              variant="textSM"
+              class="font-sans font-semibold uppercase tracking-[0.18em] text-accent-300"
+            >
+              Strategic Briefing
+            </Text>
+
+            <Text
+              tag="h2"
+              variant="displayXS"
+              class="mt-4 font-display font-normal uppercase leading-tight tracking-[-0.02em] text-white"
+            >
+              Invisible Attrition℠ Retention Risk Audit
+            </Text>
+
+            <Text
+              tag="p"
+              variant="textBase"
+              class="mt-4 max-w-2xl font-sans leading-7 text-base-300"
+            >
+              A strategic consultation to identify why clean performance records
+              and engagement scores can mask compounding leadership continuity risk.
+            </Text>
+
+            <Button
+              isLink
+              href="/request-briefing"
+              variant="accent"
+              size="sm"
+              class="mt-7 w-fit"
+            >
+              Request Briefing →
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
 </BaseLayout>
-
-<script>
-  document.querySelectorAll("[data-accordion-trigger]").forEach((trigger) => {
-    trigger.addEventListener("click", () => {
-      const expanded = trigger.getAttribute("aria-expanded") === "true";
-      const panelId = trigger.getAttribute("aria-controls");
-      const panel = panelId ? document.getElementById(panelId) : null;
-      const icon = trigger.querySelector("[data-accordion-icon]");
-
-      trigger.setAttribute("aria-expanded", String(!expanded));
-      if (panel) panel.hidden = expanded;
-      if (icon) icon.textContent = expanded ? "+" : "−";
-    });
-  });
-</script>
