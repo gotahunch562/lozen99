@@ -1,0 +1,267 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+const heroImage = "/images/womenlawyerconference.avif";
+
+const title = "Lozen Advisory | Women Lawyers Conference";
+
+const description =
+  "For women lawyers from the conference navigating health conditions inside legal practice. Continue the conversation on performance, disclosure risk, and staying in your seat.";
+
+const cards = [
+  {
+    label: "MAPS Blueprint℠",
+    title: "Schedule a MAPS Blueprint℠",
+    body: "What is affecting your performance?\nLet's build a plan that protects your performance.\n$997",
+    href: "/booking",
+    cta: "Request a private session",
+  },
+  {
+    label: "Stay Connected",
+    title: "Stay Connected",
+    body: "Continue receiving Lozen Advisory updates for women lawyers navigating performance, disclosure risk, and professional continuity.",
+    href: "mailto:hello@lozenadvisory.com?subject=Stay%20Connected%20-%20Women%20Lawyers%20Conference",
+    cta: "Email Lozen Advisory",
+  },
+  {
+    label: "Question",
+    title: "Send Us a Question",
+    body: "Send a private question about what is on your mind after the conference conversation.",
+    href: "mailto:hello@lozenadvisory.com?subject=Question%20from%20Women%20Lawyers%20Conference",
+    cta: "Send a question",
+  },
+  {
+    label: "Professional Inquiry",
+    title: "Professional Inquiry",
+    body: "Media, speaking, or institutional collaboration.",
+    href: "mailto:hello@lozenadvisory.com?subject=Professional%20Inquiry",
+    cta: "Contact Lozen Advisory",
+  },
+];
+
+const faqs = [
+  {
+    question: "What is Lozen Advisory?",
+    answer:
+      "Lozen Advisory occupies its own category. We sit above wellness programs, adjacent to executive advisory, and parallel to private risk counsel. The distinction is where we work: at the level of internal experience, before anything becomes visible to the organization or measurable by its metrics. This is not coaching toward a goal the company set. It is direct, strategic guidance on the challenges that quietly erode the capacity of even the most accomplished executives. We bring industry-grounded perspective and specific solutions to the experiences that most advisory relationships are not structured to address.",
+  },
+  {
+    question: "What does disclosure-independent mean?",
+    answer:
+      "Disclosure-independent means the advisory relationship exists entirely outside your organization's visibility. Nothing you share with Lozen Advisory is reported, documented, or accessible to your employer. There is no intake form that routes to HR, no progress summary that surfaces in a benefits platform, no outcome tracked against a corporate wellness metric. Your employer may fund access. That is where the organization's involvement ends. The work itself, what you bring, what you decide, and what you do with it, belongs only to you. Duty runs exclusively to you as the individual. That structure is not incidental to what we do. It is the foundation.",
+  },
+  {
+    question: "Who is Lozen Advisory for?",
+    answer:
+      "Lozen Advisory serves women who are performing at the highest levels of their professional lives and managing challenges that standard advisory structures are not built to hold. Women who have spent careers becoming indispensable, who carry significant institutional knowledge and leadership responsibility, and who are navigating something internally that has no clean channel for resolution. Not a crisis. Not a performance problem anyone else can see. The kind of sustained internal pressure that accumulates quietly and, without the right support, costs far more than it should. If you are at the level where everything is expected to look fine, and you need a private space to think, decide, and protect what you have built, Lozen Advisory was designed for you.",
+  },
+  {
+    question: "What does perimenopause have to do with my career?",
+    answer:
+      "More than most advisory relationships are prepared to address. Perimenopause is the transition period that precedes menopause by anywhere from two to twelve years, and for many women it arrives precisely when their careers are at full force. The cognitive, physical, and hormonal shifts that characterize this phase, disrupted sleep, changes in memory and focus, mood variability, shifts in stress tolerance, do not announce themselves with a diagnosis. They accumulate. They are often misread, by the executive herself and by those around her, as something else entirely. Lozen Advisory was built to work at exactly this intersection: the period when a woman's biology is changing in ways that carry real professional consequence, and the standard structures around her have no framework for it.",
+  },
+  {
+    question: "Is perimenopause the only health experience Lozen Advisory addresses?",
+    answer:
+      "It is the primary one. Perimenopause is the organizing focus of the practice because it is among the most consequential and least-supported health experiences a woman will navigate at the height of her professional life. Yet the executives who come to Lozen Advisory often arrive carrying more than one thing. Chronic health conditions, shifts in physical capacity, and other experiences that affect sleep, cognition, energy, and stress response do not exist in isolation from a woman's professional life. Where a health experience is affecting performance and has no adequate channel within her organization, it belongs in this work. Perimenopause remains the center. The broader territory is the context it lives in.",
+  },
+  {
+    question: "Are there experiences available beyond the MAPS Blueprint℠ session?",
+    answer:
+      "Yes. Lozen clients have access to a private immersive engagement for those who have reached a point where clarity requires space, not just time. It is curated, it is luxurious, and it is built around what you specifically need. Accommodations, wellness, lab work if relevant, and the stillness and calm connection that restores what sustained performance demands.\n\nYou arrive. Everything else is arranged.\n\nThis is not publicly listed. If it speaks to you, mention it when you reach out.",
+  },
+];
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: title,
+  description,
+  url: "https://www.lozenadvisory.com/women-lawyers-conference",
+  publisher: {
+    "@type": "Organization",
+    name: "Lozen Advisory LLC",
+    url: "https://www.lozenadvisory.com",
+  },
+};
+---
+
+<BaseLayout>
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(pageJsonLd)}
+  ></script>
+
+  <section class="relative isolate min-h-[84svh] overflow-hidden bg-base-950">
+    <img
+      src={heroImage}
+      alt="Women lawyers conference"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 -z-20 h-full w-full object-cover object-center"
+      width="1200"
+      height="800"
+    />
+
+    <div
+      aria-hidden="true"
+      class="absolute inset-0 -z-10 bg-gradient-to-r from-base-950/35 via-base-950/55 to-base-950/92"
+    >
+    </div>
+
+    <Wrapper
+      variant="standard"
+      class="flex min-h-[84svh] flex-col justify-between py-8 lg:py-12"
+    >
+      <a
+        href="/"
+        class="font-display text-sm font-medium uppercase tracking-[0.22em] text-white/90 transition-colors hover:text-accent-300"
+      >
+        Lozen Advisory
+      </a>
+
+      <div class="ml-auto max-w-xl pb-10 lg:pb-20">
+        <Text
+          tag="h1"
+          variant="displayLG"
+          class="uppercase font-display text-white"
+        >
+          The Work You Do Happens In Rooms That Matter.
+        </Text>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section>
+    <Wrapper variant="standard" class="py-12 lg:py-20">
+      <div class="mx-auto grid max-w-4xl gap-5">
+        {
+          cards.map((card) => (
+            <a
+              href={card.href}
+              class="group block rounded-3xl border border-base-200 bg-white p-6 shadow-xl transition-all duration-500 hover:-translate-y-1 hover:border-accent-400 hover:shadow-2xl sm:p-8"
+            >
+              <Text
+                tag="span"
+                variant="textSM"
+                class="font-medium uppercase tracking-wide text-accent-600"
+              >
+                {card.label}
+              </Text>
+
+              <Text
+                tag="h2"
+                variant="displayXS"
+                class="mt-4 font-display uppercase text-base-900 transition-colors group-hover:text-accent-700"
+              >
+                {card.title}
+              </Text>
+
+              <div class="mt-4 space-y-1">
+                {card.body.split("\n").map((line) => (
+                  <Text tag="p" variant="textBase" class="text-base-700">
+                    {line}
+                  </Text>
+                ))}
+              </div>
+
+              <Text
+                tag="p"
+                variant="textSM"
+                class="mt-6 font-medium uppercase tracking-wide text-base-500 transition-colors group-hover:text-accent-700"
+              >
+                {card.cta} →
+              </Text>
+            </a>
+          ))
+        }
+      </div>
+    </Wrapper>
+  </section>
+
+  <section class="bg-base-100">
+    <Wrapper variant="narrow" class="py-16 lg:py-24">
+      <Text
+        tag="span"
+        variant="textSM"
+        class="font-medium uppercase tracking-wide text-accent-600"
+      >
+        Understanding the Practice
+      </Text>
+
+      <Text
+        tag="h2"
+        variant="displayLG"
+        class="mt-6 uppercase font-display text-base-900"
+      >
+        Frequently Asked Questions
+      </Text>
+
+      <div class="mt-12 divide-y divide-base-200 border-y border-base-200">
+        {
+          faqs.map((faq) => (
+            <details class="group py-7">
+              <summary class="flex cursor-pointer list-none items-start justify-between gap-6">
+                <Text
+                  tag="span"
+                  variant="textLG"
+                  class="font-display text-base-900 transition-colors group-open:text-accent-700"
+                >
+                  {faq.question}
+                </Text>
+
+                <span
+                  aria-hidden="true"
+                  class="mt-1 text-lg leading-none text-accent-600 transition-transform duration-300 group-open:rotate-45"
+                >
+                  +
+                </span>
+              </summary>
+
+              <div class="mt-5 max-w-3xl space-y-4">
+                {faq.answer.split("\n\n").map((paragraph) => (
+                  <Text tag="p" variant="textBase" class="text-base-700">
+                    {paragraph}
+                  </Text>
+                ))}
+              </div>
+            </details>
+          ))
+        }
+      </div>
+    </Wrapper>
+  </section>
+
+  <section class="border-t border-base-200">
+    <Wrapper variant="narrow" class="py-10 text-center">
+      <Text
+        tag="p"
+        variant="textSM"
+        class="font-display uppercase tracking-[0.2em] text-base-500"
+      >
+        Lozen Advisory
+      </Text>
+
+      <Text
+        tag="p"
+        variant="textXS"
+        class="mx-auto mt-3 max-w-2xl text-base-500"
+      >
+        Lozen Advisory is a professional advisory service and does not provide medical, clinical, or mental health advice.
+      </Text>
+
+      <div class="mt-5">
+        <a
+          href="/"
+          class="font-sans text-sm font-medium text-accent-700 transition-colors hover:text-base-900"
+        >
+          Visit lozenadvisory.com
+        </a>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>
