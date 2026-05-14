@@ -33,108 +33,82 @@ const pageJsonLd = {
     set:html={JSON.stringify(pageJsonLd)}
   ></script>
 
-  <section class="relative isolate overflow-hidden bg-base-950">
+  <section class="relative overflow-hidden bg-base-950">
     <div
       aria-hidden="true"
-      class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_20%,rgba(247,211,50,0.14),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.01))]"
+      class="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(250,204,21,0.13),transparent_30%),radial-gradient(circle_at_88%_18%,rgba(148,163,184,0.14),transparent_34%)]"
     >
     </div>
 
-    <Wrapper
-      variant="standard"
-      class="flex min-h-[78svh] flex-col justify-center py-24 lg:py-32"
-    >
-      <div class="max-w-4xl">
+    <Wrapper variant="standard" class="relative z-10 py-24 lg:py-32">
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,0.58fr)_minmax(22rem,0.42fr)] lg:items-end">
+        <div class="max-w-4xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase tracking-wide border-l text-accent-300 font-display border-accent-500"
+          >
+            For Women Lawyers
+          </Text>
+
+          <Text
+            tag="h1"
+            variant="display2XL"
+            class="mt-8 uppercase font-display text-white"
+          >
+            This conversation was built for one profession.
+          </Text>
+
+          <div class="mt-10 max-w-2xl space-y-5 border-l border-white/10 pl-6">
+            <Text tag="p" variant="textLG" class="font-display text-base-100">
+              You have spent years building something real inside a profession that does not slow down for anyone.
+            </Text>
+
+            <Text tag="p" variant="textBase" class="text-base-300">
+              You found this because you were looking for something specific.
+            </Text>
+
+            <Text tag="p" variant="textBase" class="text-base-300">
+              You are in the right place.
+            </Text>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-3xl border border-white/10 bg-base-900 shadow-2xl">
+          <img
+            src={featureImage}
+            alt="Professional woman in a law office setting, representing the confidential advisory Lozen provides for women lawyers navigating menopause in legal practice."
+            loading="eager"
+            class="aspect-[4/5] h-full w-full object-cover opacity-82"
+          />
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section class="bg-white">
+    <Wrapper variant="narrow" class="py-16 lg:py-24">
+      <div class="space-y-8">
         <Text
           tag="span"
           variant="textSM"
-          class="pl-4 font-medium uppercase tracking-wide border-l text-accent-300 font-display border-accent-500"
+          class="font-medium uppercase tracking-wide text-accent-600"
         >
-          For Women Lawyers
-        </Text>
-
-        <Text
-          tag="h1"
-          variant="display2XL"
-          class="mt-8 uppercase font-display text-white"
-        >
-          This conversation was built for one profession.
+          Menopause in Legal Practice: What You Are Managing
         </Text>
 
         <Text
           tag="p"
-          variant="textSM"
-          class="mt-8 font-medium uppercase tracking-wide text-base-300"
+          variant="displaySM"
+          class="font-display text-base-900"
         >
-          Read
+          You are still delivering. Still the person clients call when the matter is unstable. Still the one who knows where everything is.
+        </Text>
+
+        <Text tag="p" variant="textLG" class="text-base-700">
+          And you are navigating menopause inside an environment where that is not a conversation you can have.
         </Text>
       </div>
-    </Wrapper>
-  </section>
-
-  <section class="bg-base-100">
-    <Wrapper variant="narrow" class="py-16 lg:py-24">
-      <div class="space-y-6">
-        <Text tag="p" variant="textLG" class="font-display text-base-900">
-          You have spent years building something real inside a profession that does not slow down for anyone.
-        </Text>
-
-        <Text tag="p" variant="textLG" class="font-display text-base-900">
-          You found this because you were looking for something specific.
-        </Text>
-
-        <Text tag="p" variant="textLG" class="font-display text-base-900">
-          You are in the right place.
-        </Text>
-      </div>
-    </Wrapper>
-  </section>
-
-  <section>
-    <Wrapper variant="standard" class="py-16 lg:py-24">
-      <article class="grid gap-10 lg:grid-cols-[0.22fr_1fr] lg:gap-20">
-        <div>
-          <Text
-            tag="p"
-            variant="displaySM"
-            class="font-display text-accent-600"
-          >
-            01
-          </Text>
-        </div>
-
-        <div class="max-w-4xl">
-          <div class="border-l border-accent-500 pl-6">
-            <Text
-              tag="p"
-              variant="textSM"
-              class="font-medium uppercase tracking-wide text-accent-600"
-            >
-              Menopause in Legal Practice: What You Are Managing
-            </Text>
-          </div>
-
-          <div class="mt-10 grid gap-4">
-            <div class="rounded-3xl border border-base-200 bg-white p-6 shadow-xl">
-              <Text tag="p" variant="textLG" class="text-base-700">
-                You are still delivering. Still the person clients call when the matter is unstable.
-              </Text>
-            </div>
-
-            <div class="rounded-3xl border border-base-200 bg-white p-6 shadow-xl">
-              <Text tag="p" variant="textLG" class="text-base-700">
-                Still the one who knows where everything is.
-              </Text>
-            </div>
-
-            <div class="rounded-3xl border border-base-200 bg-white p-6 shadow-xl">
-              <Text tag="p" variant="textLG" class="text-base-700">
-                And you are navigating menopause inside an environment where that is not a conversation you can have.
-              </Text>
-            </div>
-          </div>
-        </div>
-      </article>
     </Wrapper>
   </section>
 
@@ -150,34 +124,22 @@ const pageJsonLd = {
     </Wrapper>
   </section>
 
-  <section>
+  <section class="bg-base-100">
     <Wrapper variant="standard" class="py-16 lg:py-24">
-      <article class="grid gap-10 lg:grid-cols-[0.22fr_1fr] lg:gap-20">
-        <div>
+      <div class="grid gap-12 lg:grid-cols-[0.32fr_1fr] lg:gap-20">
+        <aside>
           <Text
-            tag="p"
-            variant="displaySM"
-            class="font-display text-accent-600"
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-accent-600"
           >
-            02
+            Tacere
           </Text>
-        </div>
 
-        <div class="max-w-4xl">
-          <div class="border-l border-accent-500 pl-6">
+          <div class="mt-6 border-l border-accent-500 pl-6">
             <Text
               tag="p"
-              variant="textSM"
-              class="font-medium uppercase tracking-wide text-accent-600"
-            >
-              Tacere: Keeping Your Peace
-            </Text>
-          </div>
-
-          <div class="mt-10 rounded-3xl border border-base-200 bg-base-50 p-6 shadow-xl sm:p-8">
-            <Text
-              tag="h2"
-              variant="displayLG"
+              variant="displayMD"
               class="font-display italic text-base-900"
             >
               Tacere
@@ -194,43 +156,45 @@ const pageJsonLd = {
             <Text tag="p" variant="textSM" class="mt-2 italic text-base-500">
               From the Latin: to be silent, to withhold, to leave unmentioned.
             </Text>
-
-            <div class="my-8 h-px w-full bg-accent-300"></div>
-
-            <Text tag="p" variant="textLG" class="font-display text-base-900">
-              Not the silence of someone who has nothing to say. The silence of someone who has decided.
-            </Text>
           </div>
+        </aside>
 
-          <div class="mt-10 space-y-6">
-            <Text tag="p" variant="textBase" class="text-base-700">
-              For many women, this collision begins during the years when leadership responsibility and biological transition overlap. That pattern is examined in detail in{" "}
-              <a
-                href="/blog/women-lawyers-leadership-perimenopause"
-                class="text-accent-700 underline decoration-accent-300 underline-offset-4 transition-colors hover:text-base-900"
-              >
-                When Leadership and Biology Collide Quietly in Law Firms
-              </a>.
-            </Text>
+        <article class="max-w-3xl space-y-6">
+          <Text
+            tag="p"
+            variant="displayXS"
+            class="font-display text-base-900"
+          >
+            Not the silence of someone who has nothing to say. The silence of someone who has decided.
+          </Text>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              You know this word even if you have never seen it. You have been practicing it since the first day you walked into a room where someone questioned whether you belonged there. In the courtroom where a bailiff directed you to the gallery. In the partnership meeting where you calculated, in real time, what it would cost to say what you actually thought. In the room where a man with a weaker record than yours sat at a table you have not been invited to yet.
-            </Text>
+          <Text tag="p" variant="textBase" class="text-base-700">
+            For many women, this collision begins during the years when leadership responsibility and biological transition overlap. That pattern is examined in detail in{" "}
+            <a
+              href="/blog/women-lawyers-leadership-perimenopause"
+              class="text-accent-700 underline decoration-accent-300 underline-offset-4 transition-colors hover:text-base-900"
+            >
+              When Leadership and Biology Collide Quietly in Law Firms
+            </a>.
+          </Text>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              Tacere (tah-CHEH-reh) is the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk. Whether you are a senior associate building toward partner or a partner protecting what you have already earned, it is not hiding. It is not weakness. It is a calculation you have made with full awareness of the cost you are managing and full understanding of what visibility would risk.
-            </Text>
+          <Text tag="p" variant="textBase" class="text-base-700">
+            You know this word even if you have never seen it. You have been practicing it since the first day you walked into a room where someone questioned whether you belonged there. In the courtroom where a bailiff directed you to the gallery. In the partnership meeting where you calculated, in real time, what it would cost to say what you actually thought. In the room where a man with a weaker record than yours sat at a table you have not been invited to yet.
+          </Text>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              It accumulates without announcement. It does not appear in your billable hours, your performance review, or your bar record. When departure eventually comes, it is recorded as personal reasons.
-            </Text>
+          <Text tag="p" variant="textBase" class="text-base-700">
+            Tacere (tah-CHEH-reh) is the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk. Whether you are a senior associate building toward partner or a partner protecting what you have already earned, it is not hiding. It is not weakness. It is a calculation you have made with full awareness of the cost you are managing and full understanding of what visibility would risk.
+          </Text>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              It was not personal. You were practicing tacere until the cost became too high to manage alone.
-            </Text>
-          </div>
+          <Text tag="p" variant="textBase" class="text-base-700">
+            It accumulates without announcement. It does not appear in your billable hours, your performance review, or your bar record. When departure eventually comes, it is recorded as personal reasons.
+          </Text>
 
-          <div class="mt-10 rounded-3xl bg-base-950 p-6 shadow-2xl outline-4 outline-base-500/10 sm:p-8">
+          <Text tag="p" variant="textBase" class="text-base-700">
+            It was not personal. You were practicing tacere until the cost became too high to manage alone.
+          </Text>
+
+          <div class="my-10 rounded-3xl bg-base-950 p-6 shadow-2xl outline-4 outline-base-500/10 sm:p-8">
             <Text
               tag="p"
               variant="displayXS"
@@ -246,27 +210,25 @@ const pageJsonLd = {
             </Text>
           </div>
 
-          <div class="mt-10 space-y-6">
-            <Text tag="p" variant="textBase" class="text-base-700">
-              For a detailed examination of how this pattern operates inside law firm performance systems, read{" "}
-              <a
-                href="/blog/menopause-law-invisible-cost"
-                class="text-accent-700 underline decoration-accent-300 underline-offset-4 transition-colors hover:text-base-900"
-              >
-                Menopause in Law: Visible Performance vs Invisible Cost
-              </a>.
-            </Text>
-
-            <Text
-              tag="p"
-              variant="textLG"
-              class="font-display text-base-900"
+          <Text tag="p" variant="textBase" class="text-base-700">
+            For a detailed examination of how this pattern operates inside law firm performance systems, read{" "}
+            <a
+              href="/blog/menopause-law-invisible-cost"
+              class="text-accent-700 underline decoration-accent-300 underline-offset-4 transition-colors hover:text-base-900"
             >
-              You were never silent. You decided.
-            </Text>
-          </div>
-        </div>
-      </article>
+              Menopause in Law: Visible Performance vs Invisible Cost
+            </a>.
+          </Text>
+
+          <Text
+            tag="p"
+            variant="displayXS"
+            class="font-display text-base-900"
+          >
+            You were never silent. You decided.
+          </Text>
+        </article>
+      </div>
     </Wrapper>
   </section>
 
@@ -282,114 +244,91 @@ const pageJsonLd = {
     </Wrapper>
   </section>
 
-  <section>
+  <section class="bg-white">
     <Wrapper variant="standard" class="py-16 lg:py-24">
-      <div class="grid gap-12 lg:grid-cols-[0.42fr_1fr] lg:items-center lg:gap-20">
-        <div class="overflow-hidden rounded-3xl bg-base-900 shadow-2xl outline-4 outline-base-500/10">
-          <img
-            src={featureImage}
-            alt="Professional woman in a law office setting, representing the confidential advisory Lozen provides for women lawyers navigating menopause in legal practice."
-            loading="lazy"
-            class="aspect-[4/5] h-full w-full object-cover"
-          />
-        </div>
+      <div class="grid gap-12 lg:grid-cols-[0.36fr_1fr] lg:gap-20">
+        <aside>
+          <Text
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-accent-600"
+          >
+            Designed for Women Who Practice Law
+          </Text>
+        </aside>
 
-        <article class="max-w-3xl">
-          <div class="border-l border-accent-500 pl-6">
-            <Text
-              tag="span"
-              variant="textSM"
-              class="font-medium uppercase tracking-wide text-accent-600"
-            >
-              Designed for Women Who Practice Law
-            </Text>
-          </div>
-
+        <article class="max-w-3xl space-y-6">
           <Text
             tag="h2"
             variant="displaySM"
-            class="mt-8 font-display uppercase text-base-900"
+            class="font-display uppercase text-base-900"
           >
             This is not a wellness conversation.
           </Text>
 
-          <div class="mt-8 space-y-6">
-            <Text tag="p" variant="textBase" class="text-base-700">
-              It is a professional strategy session designed for the realities of legal practice during menopause. How authority is read. How trajectory is protected. How standing is maintained when you are managing more than the room knows.
-            </Text>
+          <Text tag="p" variant="textBase" class="text-base-700">
+            It is a professional strategy session designed for the realities of legal practice during menopause. How authority is read. How trajectory is protected. How standing is maintained when you are managing more than the room knows.
+          </Text>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              The work is confidential, disclosure-independent, and built around the decisions that protect what you have already earned.
-            </Text>
-          </div>
+          <Text tag="p" variant="textBase" class="text-base-700">
+            The work is confidential, disclosure-independent, and built around the decisions that protect what you have already earned.
+          </Text>
         </article>
       </div>
     </Wrapper>
   </section>
 
-  <section>
+  <section class="bg-base-100">
     <Wrapper variant="standard" class="py-16 lg:py-24">
-      <article class="grid gap-10 lg:grid-cols-[0.22fr_1fr] lg:gap-20">
-        <div>
+      <div class="grid gap-12 lg:grid-cols-[0.36fr_1fr] lg:gap-20">
+        <aside>
           <Text
-            tag="p"
-            variant="displaySM"
-            class="font-display text-accent-600"
+            tag="span"
+            variant="textSM"
+            class="font-medium uppercase tracking-wide text-accent-600"
           >
-            03
+            The Advisory Session
           </Text>
-        </div>
+        </aside>
 
-        <div class="max-w-4xl">
-          <div class="border-l border-accent-500 pl-6">
-            <Text
-              tag="p"
-              variant="textSM"
-              class="font-medium uppercase tracking-wide text-accent-600"
+        <article class="max-w-3xl space-y-6">
+          <Text
+            tag="h2"
+            variant="displaySM"
+            class="font-display italic text-base-900"
+          >
+            How do you protect what you have built?
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            This session is built around that question.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            It is grounded in the realities of legal practice during menopause, specifically in periods where you are performing at a high level while managing pressures you have not chosen to disclose.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            You do not have to share anything about your own situation to get value from this session.
+          </Text>
+
+          <Text tag="p" variant="textBase" class="text-base-700">
+            The profession is beginning to document the scale of this challenge. The{" "}
+            <a
+              href="/blog/aba-study-women-lawyers-mental-health"
+              class="text-accent-700 underline decoration-accent-300 underline-offset-4 transition-colors hover:text-base-900"
             >
-              The Advisory Session: Built for Women Lawyers
-            </Text>
-          </div>
+              ABA 2026 Study on why women attorneys still leave Big Law
+            </a>{" "}
+            will confirm what many women already know. What it cannot resolve is the calculation that shapes whether disclosure feels safe.
+          </Text>
 
-          <div class="mt-10 space-y-6">
-            <Text
-              tag="h2"
-              variant="displaySM"
-              class="font-display italic text-base-900"
-            >
-              How do you protect what you have built?
-            </Text>
+          <Text tag="p" variant="textBase" class="text-base-700">
+            The format is brief framing followed by guided discussion. You can engage or simply listen.
+          </Text>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              This session is built around that question.
-            </Text>
-
-            <Text tag="p" variant="textBase" class="text-base-700">
-              It is grounded in the realities of legal practice during menopause, specifically in periods where you are performing at a high level while managing pressures you have not chosen to disclose.
-            </Text>
-
-            <Text tag="p" variant="textBase" class="text-base-700">
-              You do not have to share anything about your own situation to get value from this session.
-            </Text>
-
-            <Text tag="p" variant="textBase" class="text-base-700">
-              The profession is beginning to document the scale of this challenge. The{" "}
-              <a
-                href="/blog/aba-study-women-lawyers-mental-health"
-                class="text-accent-700 underline decoration-accent-300 underline-offset-4 transition-colors hover:text-base-900"
-              >
-                ABA 2026 Study on why women attorneys still leave Big Law
-              </a>{" "}
-              will confirm what many women already know. What it cannot resolve is the calculation that shapes whether disclosure feels safe.
-            </Text>
-
-            <Text tag="p" variant="textBase" class="text-base-700">
-              The format is brief framing followed by guided discussion. You can engage or simply listen.
-            </Text>
-          </div>
-
-          <div class="mt-10 grid gap-4 md:grid-cols-3">
-            <article class="rounded-3xl border border-base-200 bg-white p-6 shadow-xl">
+          <div class="mt-10 grid gap-4 border-y border-base-200 py-8 md:grid-cols-3">
+            <div>
               <Text
                 tag="h3"
                 variant="displayXS"
@@ -397,12 +336,12 @@ const pageJsonLd = {
               >
                 45 Minutes
               </Text>
-              <Text tag="p" variant="textBase" class="mt-4 text-base-700">
+              <Text tag="p" variant="textBase" class="mt-3 text-base-700">
                 Focused, structured, purposeful.
               </Text>
-            </article>
+            </div>
 
-            <article class="rounded-3xl border border-base-200 bg-white p-6 shadow-xl">
+            <div>
               <Text
                 tag="h3"
                 variant="displayXS"
@@ -410,12 +349,12 @@ const pageJsonLd = {
               >
                 Private
               </Text>
-              <Text tag="p" variant="textBase" class="mt-4 text-base-700">
+              <Text tag="p" variant="textBase" class="mt-3 text-base-700">
                 No intake form. No record.
               </Text>
-            </article>
+            </div>
 
-            <article class="rounded-3xl border border-base-200 bg-white p-6 shadow-xl">
+            <div>
               <Text
                 tag="h3"
                 variant="displayXS"
@@ -423,22 +362,22 @@ const pageJsonLd = {
               >
                 By Invitation
               </Text>
-              <Text tag="p" variant="textBase" class="mt-4 text-base-700">
+              <Text tag="p" variant="textBase" class="mt-3 text-base-700">
                 Open to women lawyers only.
               </Text>
-            </article>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </Wrapper>
   </section>
 
-  <section class="bg-base-100">
+  <section class="bg-base-950">
     <Wrapper variant="narrow" class="py-16 text-center lg:py-24">
       <Text
         tag="span"
         variant="textSM"
-        class="font-medium uppercase tracking-wide text-accent-600"
+        class="font-medium uppercase tracking-wide text-accent-300"
       >
         Menopause support for women lawyers
       </Text>
@@ -446,32 +385,28 @@ const pageJsonLd = {
       <Text
         tag="h2"
         variant="displaySM"
-        class="mt-6 font-display italic text-base-900"
+        class="mt-6 font-display italic text-white"
       >
         Request an Invitation
       </Text>
 
-      <Text tag="p" variant="textBase" class="mt-5 text-base-700">
+      <Text tag="p" variant="textBase" class="mt-5 text-base-200">
         All requests are confidential. A limited number of sessions are offered.
       </Text>
 
       <div class="mt-10 flex justify-center">
         <a
           href={invitationHref}
-          class="inline-flex h-11 items-center justify-center rounded-lg bg-accent-300 px-5 py-4 text-center text-sm font-medium uppercase tracking-wide text-base-900 transition-all duration-500 ease-in-out hover:bg-accent-400 focus:outline-2 focus:outline-offset-4 focus:outline-accent-400"
+          class="inline-flex h-11 items-center justify-center rounded-lg bg-accent-300 px-5 py-4 text-center text-sm font-medium uppercase tracking-wide text-base-950 transition-all duration-500 ease-in-out hover:bg-accent-400 focus:outline-2 focus:outline-offset-4 focus:outline-accent-400"
         >
           Request an Invitation
         </a>
       </div>
-    </Wrapper>
-  </section>
 
-  <section class="bg-base-950">
-    <Wrapper variant="narrow" class="py-8 text-center">
       <Text
         tag="p"
         variant="textSM"
-        class="font-medium uppercase tracking-wide text-accent-300"
+        class="mt-8 font-medium uppercase tracking-wide text-accent-300"
       >
         This session is open to women lawyers only.
       </Text>
