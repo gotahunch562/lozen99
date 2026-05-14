@@ -6,6 +6,7 @@ import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 // Components
 import MobileMenu from "@/components/global/MobileMenu.astro";
+import MegaMenu from "@/components/global/MegaMenu.astro";
 // Icons
 import Close from "@/components/fundations/icons/Close.astro";
 import Burger from "@/components/fundations/icons/Burger.astro";
@@ -25,6 +26,15 @@ const currentPath = Astro.url.pathname;
 
 const isActiveLink = (href: string) =>
   currentPath === href || currentPath.startsWith(`${href}/`);
+
+const isResearchActive =
+  currentPath.startsWith("/blog") ||
+  currentPath.startsWith("/architecture-of-invisible-attrition-series") ||
+  currentPath.startsWith("/menopause-legislation-tracker") ||
+  currentPath.startsWith("/voluntary-benefit-disclosure-gap") ||
+  currentPath.startsWith("/billable-hour-visibility-tax") ||
+  currentPath.startsWith("/succession-planning-retention-risk-data-gap") ||
+  currentPath.startsWith("/leadership-pipeline-manager-engagement");
 ---
 
 <header class="fixed top-0 z-50 w-full">
@@ -43,7 +53,38 @@ const isActiveLink = (href: string) =>
 
       <div class="hidden items-center gap-8 lg:flex">
         {
-          quickLinks.map((link) => (
+          quickLinks.slice(0, 3).map((link) => (
+            <a
+              href={link.href}
+              class:list={[
+                "text-sm font-medium transition-colors duration-200",
+                isActiveLink(link.href)
+                  ? "text-accent-400"
+                  : "text-white/85 hover:text-white",
+              ]}
+            >
+              {link.label}
+            </a>
+          ))
+        }
+
+        <button
+          id="megamenu-trigger"
+          type="button"
+          class:list={[
+            "text-sm font-medium transition-colors duration-200",
+            isResearchActive
+              ? "text-accent-400"
+              : "text-white/85 hover:text-white",
+          ]}
+          aria-expanded="false"
+          aria-controls="megamenu"
+        >
+          Research
+        </button>
+
+        {
+          quickLinks.slice(3).map((link) => (
             <a
               href={link.href}
               class:list={[
@@ -84,5 +125,6 @@ const isActiveLink = (href: string) =>
     </nav>
   </Wrapper>
 
+  <MegaMenu />
   <MobileMenu />
 </header>
