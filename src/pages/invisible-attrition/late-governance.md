@@ -6,8 +6,8 @@ heading: "Late Governance: Why Retention Metrics Arrive After the Loss"
 subtitle: "Governance systems are designed to respond to events. Invisible Attrition℠ does not produce an event until exit."
 slug: "/invisible-attrition/late-governance"
 metaDescription: "Retention metrics detect departure, not the conditions producing it. Address the measurement architecture gap in leadership continuity."
-datePublished: "2026-02-15"
-dateModified: "2026-05-14"
+pubDate: "2026-02-15"
+
 
 clusterNumber: 7
 pillarSlug: "/invisible-attrition"

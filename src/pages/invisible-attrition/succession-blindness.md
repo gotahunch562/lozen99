@@ -6,8 +6,8 @@ heading: "Succession Planning and the Stable-Performance Blind Spot"
 subtitle: "Why replacement readiness is not the same as capacity stability, and what boards are not seeing."
 slug: "/invisible-attrition/succession-blindness"
 metaDescription: "Standard succession tools measure visibility. They fail to register the erosion occurring beneath the surface of continued delivery."
-datePublished: "2026-02-15"
-dateModified: "2026-05-14"
+pubDate: "2026-02-15"
+
 
 clusterNumber: 3
 pillarSlug: "/invisible-attrition"

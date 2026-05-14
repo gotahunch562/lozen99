@@ -6,8 +6,8 @@ heading: "Employee Exits and Non-Disclosure"
 subtitle: "The exits that look like personal timing are not random. They share a profile, a tenure window, and a classification pathway."
 slug: "/invisible-attrition/who-disappears"
 metaDescription: "Employees who deliver fully and exit without disclosing the cause are absent from your data. Identify what the organization sees versus what it cannot."
-datePublished: "2026-02-15"
-dateModified: "2026-05-14"
+pubDate: "2026-02-15"
+
 
 clusterNumber: 9
 pillarSlug: "/invisible-attrition"

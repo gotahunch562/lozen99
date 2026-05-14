@@ -6,8 +6,8 @@ heading: "Performer Masking: How Sustained Output Conceals Capacity Loss"
 subtitle: "Why the leaders organizations are least worried about are the ones most at risk."
 slug: "/invisible-attrition/performer-masking"
 metaDescription: "Top performers are the least likely to signal strain. Examine why critical talent exists outside the reach of standard support systems."
-datePublished: "2026-02-15"
-dateModified: "2026-05-14"
+pubDate: "2026-02-15"
+
 
 clusterNumber: 4
 pillarSlug: "/invisible-attrition"

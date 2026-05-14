@@ -6,8 +6,8 @@ heading: "Dashboard Delay: When Stable Metrics Are the Risk Signal"
 subtitle: "The gap between when capacity begins to erode and when any institutional instrument registers it."
 slug: "/invisible-attrition/dashboard-delay"
 metaDescription: "Stable dashboard readings are not evidence of stable capacity. Resolve the lag between performance data capture and actual trajectory."
-datePublished: "2026-02-15"
-dateModified: "2026-05-14"
+pubDate: "2026-02-15"
+
 
 clusterNumber: 5
 pillarSlug: "/invisible-attrition"

@@ -6,8 +6,8 @@ heading: "Exit Data Failure: What Voluntary Departure Records Omit"
 subtitle: "How departures get coded as personal reasons and what that classification cannot see."
 slug: "/invisible-attrition/exit-data-failure"
 metaDescription: "Exit interviews record what employees choose to say, not what drove the departure. Address the gap between coded exit reasons and organizational cost."
-datePublished: "2026-02-15"
-dateModified: "2026-05-14"
+pubDate: "2026-02-15"
+
 
 clusterNumber: 1
 pillarSlug: "/invisible-attrition"

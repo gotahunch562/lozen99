@@ -6,8 +6,8 @@ heading: "Tacere at the Organizational Level: Why Disclosure Does Not Occur"
 subtitle: "The organizational systems that make silence the rational choice for senior leaders."
 slug: "/invisible-attrition/structural-silence"
 metaDescription: "In high-pressure environments, transparency carries professional consequences. Understand why Tacere is a rational structural result."
-datePublished: "2026-02-15"
-dateModified: "2026-05-14"
+pubDate: "2026-02-15"
+
 
 clusterNumber: 2
 pillarSlug: "/invisible-attrition"
