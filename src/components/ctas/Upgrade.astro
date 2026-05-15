@@ -1,7 +1,7 @@
 ---
 // Foundations
-import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import MailerLiteSignup from "@/components/forms/MailerLiteSignup.astro";
 ---
 
 <section class="bg-gradient-to-b from-base-100 to-white">
@@ -37,15 +37,20 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
             The organization sees adoption. It does not see the concentration of oversight work. By the time the exit appears in retention data, the implementation capacity has already left.
           </p>
 
-          <div class="mt-7 sm:mt-8">
-            <Button
-              isLink
-              href="/power-user-trap-brief"
-              variant="accent"
-              size="xs"
-            >
+          <div class="mt-7 max-w-xl sm:mt-8">
+            <p class="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent-300">
               Download the Power User Trap℠ Brief
-            </Button>
+            </p>
+
+            <MailerLiteSignup
+              formId="power-user-brief-download"
+              group="poweruser"
+              theme="dark"
+              buttonLabel="Send the brief"
+              successMessage="Thank you. You can download the Power User Trap℠ brief here."
+              downloadHref="/download/Lozen_PowerUserTrap_Brief.pdf"
+              downloadLabel="Download the Power User Trap℠ brief"
+            />
           </div>
         </div>
 
