@@ -8,7 +8,9 @@ import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 // Sections
 import BlogCard from "@/components/blog/BlogCard.astro";
-const { frontmatter } = Astro.props;
+import LegalSeriesConnector from "@/components/series/LegalSeriesConnector.astro";
+const { frontmatter, currentSlug: suppliedCurrentSlug } = Astro.props;
+const currentSlug = suppliedCurrentSlug || "";
 
 // Get all posts and filter by tag
 import { getCollection } from "astro:content";
@@ -110,6 +112,7 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
           </div>
           <Wrapper variant="prose" class="mt-8">
             <slot />
+            <LegalSeriesConnector currentSlug={currentSlug} />
           </Wrapper>
         </div>
         <div>
