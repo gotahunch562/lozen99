@@ -7,16 +7,21 @@ const footerLinks = [
   {
     title: "Navigate",
     links: [
-      { label: "Services", href: "/services" },
+      { label: "What We Do", href: "/services" },
       { label: "Research", href: "/blog" },
       { label: "Events", href: "/events" },
-      { label: "About", href: "/about" },
+      { label: "News & Press", href: "/news-press" },
+      { label: "FAQ", href: "/faq" },
       { label: "Contact", href: "/contact" },
     ],
   },
   {
     title: "Resources",
     links: [
+      {
+        label: "Menopause Policy & Laws Series",
+        href: "/blog/menopause-policy-laws-dependence-disclosure",
+      },
       { label: "Invisible Attrition℠", href: "/invisible-attrition" },
       {
         label: "Menopause Legislation Tracker",
@@ -29,6 +34,7 @@ const footerLinks = [
       {
         label: "AI Evaluation Training",
         href: "https://www.executiveaiskills.com/",
+        external: true,
       },
     ],
   },
@@ -93,10 +99,10 @@ const footerLinks = [
           </a>
 
           <a
-            href="/services#tacere-download"
+            href="/services"
             class="inline-flex h-10 items-center justify-center rounded-lg border border-white/25 bg-white/10 px-4 py-2 font-sans text-xs font-semibold uppercase tracking-[0.08em] text-white backdrop-blur transition-colors hover:bg-white/18"
           >
-            Join Email List
+            What We Do
           </a>
         </div>
       </div>
@@ -118,6 +124,8 @@ const footerLinks = [
                   <li>
                     <a
                       href={item.href}
+                      target={item.external ? "_blank" : undefined}
+                      rel={item.external ? "noopener noreferrer" : undefined}
                       class="inline-flex font-sans text-sm leading-5 text-white/72 transition-colors hover:text-accent-300"
                     >
                       {item.label}
@@ -157,6 +165,13 @@ const footerLinks = [
             class="font-sans text-xs text-white/68 transition-colors hover:text-accent-300"
           >
             About AI
+          </a>
+
+          <a
+            href="/tools-resources"
+            class="font-sans text-xs text-white/68 transition-colors hover:text-accent-300"
+          >
+            Tools & Resources
           </a>
         </div>
       </div>

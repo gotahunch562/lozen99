@@ -15,14 +15,19 @@ const megaMenuSections = [
         description: "Articles, legislative analysis, and framework development.",
       },
       {
+        href: "/blog/menopause-policy-laws-dependence-disclosure",
+        label: "Menopause Policy & Laws Series",
+        description: "Original research on menopause policy, workplace law, and disclosure dependence.",
+      },
+      {
         href: "/menopause-legislation-tracker",
         label: "Menopause Legislation Tracker",
         description: "A governance audit of disclosure-dependent policy design.",
       },
       {
-        href: "/architecture-of-invisible-attrition-series",
-        label: "Executive Report Series",
-        description: "The Architecture of Invisible Attrition℠ report collection.",
+        href: "/news-press",
+        label: "News & Press",
+        description: "Press, media references, and Lozen Advisory updates.",
       },
       {
         href: "/voluntary-benefit-disclosure-gap",
@@ -41,6 +46,11 @@ const megaMenuSections = [
         description: "Leadership capacity erosion before metrics detect risk.",
       },
       {
+        href: "/architecture-of-invisible-attrition-series",
+        label: "Executive Report Series",
+        description: "The Architecture of Invisible Attrition℠ report series.",
+      },
+      {
         href: "/disclosure-independence-infrastructure",
         label: "Disclosure Infrastructure",
         description: "Why systems dependent on disclosure cannot fully measure risk.",
@@ -55,6 +65,11 @@ const megaMenuSections = [
         label: "Succession Planning Data Gap",
         description: "Succession exposure where stable performance masks leadership risk.",
       },
+      {
+        href: "/retention-risk-analysis",
+        label: "Retention Risk Analysis",
+        description: "A search-capture page for attrition risk and disclosure-dependent data gaps.",
+      },
     ],
   },
   {
@@ -63,7 +78,7 @@ const megaMenuSections = [
     links: [
       {
         href: "/services",
-        label: "Services",
+        label: "What We Do",
         description: "How Lozen Advisory works with organizations and women leaders.",
       },
       {
@@ -75,6 +90,17 @@ const megaMenuSections = [
         href: "/events",
         label: "Events",
         description: "Speaking engagements and public appearances.",
+      },
+      {
+        href: "/faq",
+        label: "FAQ",
+        description: "Common questions about Lozen Advisory, MAPS Blueprint℠, and briefing paths.",
+      },
+      {
+        href: "https://www.executiveaiskills.com/",
+        label: "AI Evaluation Training",
+        description: "External AI evaluation training resource.",
+        external: true,
       },
       {
         href: "/request-briefing",
@@ -119,6 +145,8 @@ const megaMenuSections = [
                     <li>
                       <a
                         href={link.href}
+                        target={link.external ? "_blank" : undefined}
+                        rel={link.external ? "noopener noreferrer" : undefined}
                         class="group block rounded-xl px-3 py-3 no-underline transition-colors duration-200 hover:bg-base-50"
                       >
                         <Text
@@ -172,7 +200,7 @@ const megaMenuSections = [
             </Button>
 
             <Button isLink size="xs" variant="muted" href="/services">
-              Services
+              What We Do
             </Button>
           </div>
         </div>

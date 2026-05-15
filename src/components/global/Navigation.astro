@@ -12,7 +12,7 @@ import Close from "@/components/fundations/icons/Close.astro";
 import Burger from "@/components/fundations/icons/Burger.astro";
 
 const quickLinks = [
-  { href: "/services", label: "Services" },
+  { href: "/services", label: "What We Do" },
   { href: "/events", label: "Events" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -32,7 +32,10 @@ const isResearchActive =
   currentPath.startsWith("/voluntary-benefit-disclosure-gap") ||
   currentPath.startsWith("/billable-hour-visibility-tax") ||
   currentPath.startsWith("/succession-planning-retention-risk-data-gap") ||
-  currentPath.startsWith("/leadership-pipeline-manager-engagement");
+  currentPath.startsWith("/leadership-pipeline-manager-engagement") ||
+  currentPath.startsWith("/retention-risk-analysis") ||
+  currentPath.startsWith("/news-press") ||
+  currentPath.startsWith("/faq");
 ---
 
 <header class="fixed top-0 z-50 w-full">
@@ -59,7 +62,7 @@ const isResearchActive =
               : "text-white/85 hover:text-white",
           ]}
         >
-          Services
+          What We Do
         </a>
 
         <button
