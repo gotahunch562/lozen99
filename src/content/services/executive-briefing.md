@@ -5,7 +5,7 @@ shortDescription: "A focused advisory session for leadership teams that need cla
 priceFrom: "Leadership Session"
 duration: "Focused advisory"
 image:
-  url: "../../images/services/serviceplaceholder.webp"
+  url: "../../images/services/executivebriefing.webp"
   alt: "Executive advisory discussion"
 metaDescription: "Executive briefings for leaders assessing disclosure-dependent workforce risk, invisible attrition, benefits utilization, and succession exposure."
 ---
