@@ -24,9 +24,13 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const currentSlug = String(entry.data.slug || entry.slug || entry.id || "")
+  .replace(/^\/?blog\//, "")
+  .replace(/^\/+/, "")
+  .replace(/\.mdx?$/, "");
 const { Content } = await render(entry);
 ---
 
-<BlogLayout frontmatter={entry.data}>
+<BlogLayout frontmatter={entry.data} currentSlug={currentSlug}>
   <Content />
 </BlogLayout>
