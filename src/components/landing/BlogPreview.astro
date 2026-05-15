@@ -1,6 +1,5 @@
 ---
 // Fundations
-import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 // Components
@@ -18,35 +17,29 @@ allPosts.sort((a, b) => {
 ---
 
 <section class="bg-gradient-to-t from-base-200 via-base-100 to-white">
-  <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-24">
+  <Wrapper variant="standard" class="py-14 sm:py-18 lg:py-24 xl:py-28">
     <div class="mx-auto max-w-3xl text-center">
-      <Text
-        tag="span"
-        variant="textSM"
-        class="inline-flex border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
+      <span
+        class="inline-flex border-l border-accent-500 pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-base-600"
       >
         insights
-      </Text>
+      </span>
 
-      <Text
-        tag="h2"
-        variant="displayXL"
-        class="mt-5 font-display font-normal uppercase leading-[1.05] tracking-[-0.035em] text-base-950 sm:mt-6"
+      <h2
+        class="mt-5 font-display text-[2.25rem] font-normal uppercase leading-[1.02] tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-[2.75rem] lg:text-[3.25rem]"
       >
         Menopause at Work
-      </Text>
+      </h2>
 
-      <Text
-        tag="p"
-        variant="textBase"
-        class="mx-auto mt-4 max-w-2xl font-sans leading-7 text-base-700 text-balance sm:text-lg sm:leading-8"
+      <p
+        class="mx-auto mt-4 max-w-2xl font-sans text-base leading-7 text-base-700 text-balance sm:text-[1.0625rem] sm:leading-8"
       >
         Legislative analysis, Clinical reality, Workplace systems, & Self.
         <br />
         <span class="italic">
           What do we write about? What matters to her.
         </span>
-      </Text>
+      </p>
     </div>
 
     <div class="mt-10 grid grid-cols-1 gap-5 sm:mt-12 md:grid-cols-2">

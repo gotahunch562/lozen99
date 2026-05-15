@@ -1,6 +1,5 @@
 ---
 // Fundations
-import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const steps = [
@@ -28,7 +27,7 @@ const steps = [
 ---
 
 <section class="bg-gradient-to-b from-base-200 via-base-100 to-white">
-  <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-24">
+  <Wrapper variant="standard" class="py-14 sm:py-18 lg:py-24 xl:py-28">
     <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-8">
       <div>
         <div
@@ -58,29 +57,23 @@ const steps = [
 
           <div class="relative z-10 flex min-h-[26rem] items-end p-6 sm:min-h-[30rem] sm:p-8 lg:h-full lg:p-10">
             <div class="max-w-xl">
-              <Text
-                tag="span"
-                variant="textSM"
-                class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-200"
+              <span
+                class="border-l border-accent-500 pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-base-200"
               >
                 Services
-              </Text>
+              </span>
 
-              <Text
-                tag="h2"
-                variant="displayMD"
-                class="mt-6 font-display font-normal uppercase leading-[1.05] tracking-[-0.035em] text-white sm:mt-8"
+              <h2
+                class="mt-6 font-display text-[2.25rem] font-normal uppercase leading-[1.02] tracking-[-0.035em] text-white sm:mt-8 sm:text-[2.75rem] lg:text-[3.25rem]"
               >
                 What We Do
-              </Text>
+              </h2>
 
-              <Text
-                tag="p"
-                variant="textBase"
-                class="mt-4 max-w-md font-sans leading-7 text-base-200 sm:text-lg sm:leading-8"
+              <p
+                class="mt-4 max-w-md font-sans text-base leading-7 text-base-200 sm:text-[1.0625rem] sm:leading-8"
               >
                 We help leaders understand the data clearly and act decisively with a focus on non-disclosure infrastructure design.
-              </Text>
+              </p>
             </div>
           </div>
         </div>
@@ -101,21 +94,13 @@ const steps = [
               </span>
 
               <div class="relative z-10 max-w-xl pr-10 sm:pr-16">
-                <Text
-                  tag="h3"
-                  variant="displayXS"
-                  class="border-l-2 border-accent-500 pl-4 font-display font-normal uppercase leading-tight tracking-[-0.015em] text-base-950"
-                >
+                <h3 class="border-l-2 border-accent-500 pl-4 font-display text-[1.35rem] font-normal uppercase leading-tight tracking-[-0.015em] text-base-950 sm:text-[1.45rem]">
                   {step.title}
-                </Text>
+                </h3>
 
-                <Text
-                  tag="p"
-                  variant="textBase"
-                  class="mt-4 font-sans leading-7 text-base-700"
-                >
+                <p class="mt-4 font-sans text-[0.9375rem] leading-7 text-base-700 sm:text-base">
                   {step.description}
-                </Text>
+                </p>
               </div>
             </article>
           ))
