@@ -2,6 +2,7 @@
 // Fundations
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import MailerLiteSignup from "@/components/forms/MailerLiteSignup.astro";
 
 const footerLinks = [
   {
@@ -90,20 +91,23 @@ const footerLinks = [
           event was created.
         </Text>
 
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a
-            href="/request-briefing"
-            class="inline-flex h-10 items-center justify-center rounded-lg bg-accent-500 px-4 py-2 font-sans text-xs font-semibold uppercase tracking-[0.08em] text-base-950 shadow-lg transition-colors hover:bg-accent-400"
+        <div class="mt-7 max-w-md">
+          <Text
+            tag="p"
+            variant="textSM"
+            class="mb-3 font-sans font-semibold uppercase tracking-[0.12em] text-white"
           >
-            Request Briefing
-          </a>
+            Join the email list
+          </Text>
 
-          <a
-            href="/services"
-            class="inline-flex h-10 items-center justify-center rounded-lg border border-white/25 bg-white/10 px-4 py-2 font-sans text-xs font-semibold uppercase tracking-[0.08em] text-white backdrop-blur transition-colors hover:bg-white/18"
-          >
-            What We Do
-          </a>
+          <MailerLiteSignup
+            formId="footer-mailerlite-signup"
+            group="footer"
+            theme="dark"
+            compact
+            buttonLabel="Subscribe"
+            successMessage="Thank you. You are subscribed."
+          />
         </div>
       </div>
 
