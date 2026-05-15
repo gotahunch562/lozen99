@@ -7,6 +7,7 @@ duration: "Strategic engagement"
 image:
   url: "../../images/services/serviceplaceholder.webp"
   alt: "Strategic advisory meeting"
+metaDescription: "Advisory engagement for organizations addressing disclosure-dependent workforce risk, leadership continuity, retention, and performance protection."
 ---
 
 The Advisory Engagement provides ongoing counsel for organizations facing deeper or more complex risk.

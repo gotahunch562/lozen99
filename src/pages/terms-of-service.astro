@@ -4,9 +4,13 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const effectiveDate = "May 13, 2026";
+const title = "Terms of Service | Lozen Advisory";
+
+const description = "Review Lozen Advisory’s terms of service for website use, advisory resources, briefings, communications, and related professional services.";
+
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <section class="bg-gradient-to-t from-base-200 to-white">
     <Wrapper variant="standard" class="py-24 lg:py-32">
       <div class="max-w-3xl">

@@ -7,6 +7,7 @@ duration: "Advisory support"
 image:
   url: "../../images/services/serviceplaceholder.webp"
   alt: "Workforce risk advisory discussion"
+metaDescription: "Strategic advisory for crisis, reputation, and workforce risk where disclosure dependence affects performance, retention, and leadership continuity."
 ---
 
 Disclosure-dependent systems create reputational risk because they can make an organization believe it has solved a problem it has only documented partially.

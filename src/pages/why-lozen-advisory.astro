@@ -3,10 +3,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-const title = "Why Lozen Advisory";
+const title = "Why Lozen | Confidential Support for Women Executives";
 
-const description =
-  "Lozen Advisory provides Disclosure-Independent Performance Protection℠ for women executives navigating perimenopause, menopause, visibility, leadership continuity, and professional risk without requiring workplace disclosure.";
+const description = "When disclosure isn't an option, preparation is protection. A premise for women sustaining leadership through perimenopause without visibility or formal support.";
 
 const sections = [
   {
@@ -72,7 +71,7 @@ const pageJsonLd = {
 };
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <script
     type="application/ld+json"
     set:html={JSON.stringify(pageJsonLd)}

@@ -1,33 +1,90 @@
 ---
 import { AstroSeo } from "@lexingtonthemes/seo";
 
-const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  ogType?: "website" | "article";
+}
 
-const title = "Institutional Risk & Executive Performance Continuity | Lozen Advisory";
+const {
+  title: pageTitle,
+  description: pageDescription,
+  canonical: pageCanonical,
+  ogImage,
+  ogImageAlt,
+  ogType,
+} = Astro.props;
+
+const site = Astro.site ?? new URL("https://www.lozenadvisory.com");
+
+const normalizePath = (pathname: string) => {
+  const cleanPath = pathname.replace(/\/+$/, "");
+  return cleanPath || "/";
+};
+
+const currentPath = normalizePath(Astro.url.pathname);
+
+const canonical = pageCanonical
+  ? new URL(pageCanonical, site).toString()
+  : new URL(currentPath, site).toString();
+
+const title =
+  pageTitle?.trim() ||
+  "Lozen Advisory | Invisible Attrition℠ & Leadership Advisory";
 
 const description =
-  "Strategic counsel addressing the disclosure-dependent measurement failure in leadership pipelines. Protect executive trajectory and institutional authority.";
+  pageDescription?.trim() ||
+  "Strategic advisory for leadership. We identify disclosure-dependence gaps impacting retention, AI governance, performance risk, and menopause utilization.";
+
+const imageSource = ogImage || "/images/herobg.webp";
+const imageUrl = /^https?:\/\//i.test(imageSource)
+  ? imageSource
+  : new URL(imageSource, site).toString();
+
+const lowerImageSource = imageSource.toLowerCase();
+
+const imageType = lowerImageSource.endsWith(".png")
+  ? "image/png"
+  : lowerImageSource.endsWith(".jpg") || lowerImageSource.endsWith(".jpeg")
+    ? "image/jpeg"
+    : "image/webp";
+
+const type =
+  ogType ||
+  (currentPath.startsWith("/blog/") ||
+  currentPath.startsWith("/invisible-attrition/") ||
+  currentPath.includes("legislation")
+    ? "article"
+    : "website");
+
+const noindex =
+  currentPath === "/blog/tags" || currentPath.startsWith("/blog/tags/");
 ---
 
 <AstroSeo
   title={title}
   description={description}
   canonical={canonical}
+  noindex={noindex}
   openGraph={{
     url: canonical,
     title,
     description,
     images: [
       {
-        url: "https://www.lozenadvisory.com/og-image.jpg",
+        url: imageUrl,
         width: 1200,
         height: 630,
-        alt: "Lozen Advisory",
-        type: "image/jpeg",
+        alt: ogImageAlt || "Lozen Advisory",
+        type: imageType,
       },
     ],
     site_name: "Lozen Advisory",
-    type: "website",
+    type,
     locale: "en_US",
   }}
   twitter={{

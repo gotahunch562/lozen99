@@ -25,6 +25,13 @@ const formattedPubDate = publishedDate.toLocaleDateString("en-US", {
   month: "long",
   day: "2-digit",
 });
+
+const seoDescription =
+  frontmatter.metaDescription || frontmatter.description || frontmatter.excerpt || "";
+
+const ogImage = frontmatter.image?.url?.src ?? frontmatter.image?.url;
+const ogImageAlt = frontmatter.image?.alt || frontmatter.title;
+
 const tags = (frontmatter.tags ?? []).map((tag) => {
   const raw = (tag ?? "").toString().trim();
   const slugSource = raw
@@ -40,7 +47,13 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
 });
 ---
 
-<BaseLayout>
+<BaseLayout
+  title={frontmatter.title}
+  description={seoDescription}
+  ogImage={ogImage}
+  ogImageAlt={ogImageAlt}
+  ogType="article"
+>
   <section class="bg-gradient-to-t from-base-200 to-white overflow-hidden">
     <Wrapper variant="standard" class="pt-24 lg:pt-32">
       <div class="max-w-3xl mx-auto text-center">

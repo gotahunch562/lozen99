@@ -4,9 +4,13 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+const title = "Contact Lozen Advisory | Strategic Briefings & Advisory Inquiries";
+
+const description = "Contact Lozen Advisory for strategic briefings, media requests, speaking inquiries, and advisory work on disclosure-dependent workforce risk.";
+
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <section class="bg-gradient-to-t from-base-200 to-white">
     <Wrapper variant="standard" class="py-24 lg:py-32">
       <div class="max-w-3xl">

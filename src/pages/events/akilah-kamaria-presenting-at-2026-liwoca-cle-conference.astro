@@ -4,11 +4,9 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-const title =
-  "Akilah E. Kamaria Presented at the 2026 LIWOCA CLE Leadership Conference";
+const title = "Akilah E. Kamaria Presenting at the 2026 LIWOCA CLE Conference | Lozen Advisory";
 
-const description =
-  "Lozen Advisory founder Akilah E. Kamaria presented Navigating Health Conditions Without Workplace Disclosure at the 2026 LIWOCA CLE Leadership Conference in Atlanta.";
+const description = "Akilah E. Kamaria presented on navigating health conditions without workplace disclosure at the LIWOCA CLE Leadership Conference in Atlanta.";
 
 const pageJsonLd = {
   "@context": "https://schema.org",
@@ -46,7 +44,7 @@ const pageJsonLd = {
 };
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <script
     type="application/ld+json"
     set:html={JSON.stringify(pageJsonLd)}

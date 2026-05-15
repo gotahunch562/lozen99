@@ -4,10 +4,9 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-const title = "The Replacement Value Auditor℠";
+const title = "Women Executive Replacement Cost Calculator";
 
-const description =
-  "You know what you produce. This is what it costs to replace you. Replacement value is a standard workforce metric — benchmarked, documented, and used in workforce planning at every senior level. This tool puts that number in your hands, so you can know your worth.";
+const description = "Calculate the cost of leadership loss and the the value of your economic worth";
 
 const pageJsonLd = {
   "@context": "https://schema.org",
@@ -49,7 +48,7 @@ const pipelineRows = [
 ];
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <script
     type="application/ld+json"
     set:html={JSON.stringify(pageJsonLd)}

@@ -5,8 +5,7 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const title = "For Women Lawyers | Lozen Advisory";
 
-const description =
-  "Menopause support for women lawyers. Understand Tacere and protect your legal career trajectory through perimenopause. Request an invitation.";
+const description = "Menopause support for women lawyers. Understand Tacere and protect your legal career trajectory through perimenopause. Request an invitation.";
 
 const invitationHref =
   "mailto:hello@lozenadvisory.com?subject=Session%20Invitation%20Request";
@@ -25,7 +24,7 @@ const pageJsonLd = {
 };
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <script
     type="application/ld+json"
     set:html={JSON.stringify(pageJsonLd)}

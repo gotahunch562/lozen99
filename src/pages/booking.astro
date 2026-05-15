@@ -5,8 +5,7 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const reserveSessionHref = "https://buy.stripe.com/dRm00l0hLgip9okc8dfjG06";
 
-const description =
-  "The MAPS Blueprint℠ is a 90-minute private working session for women approaching a performance review, promotion decision, visibility moment, or consequential professional evaluation.";
+const description = "A 90-minute private advisory session for women preparing for review, promotion, visibility, or another professional evaluation moment.";
 
 const situations = [
   "You are approaching a performance review, promotion decision, or increased visibility",
@@ -47,9 +46,11 @@ const pageJsonLd = {
     url: "https://www.lozenadvisory.com/booking",
   },
 };
+const title = "MAPS Blueprint℠ | Lozen Advisory";
+
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <script
     type="application/ld+json"
     set:html={JSON.stringify(pageJsonLd)}

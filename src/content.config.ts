@@ -25,6 +25,7 @@ const services = defineCollection({
       title: z.string(),
       shortDescription: z.string(),
       description: z.string(),
+      metaDescription: z.string().optional(),
       category: z.string().optional(),
       image: z
         .object({

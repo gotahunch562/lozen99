@@ -4,9 +4,13 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const effectiveDate = "May 13, 2026";
+const title = "Privacy Policy | Lozen Advisory";
+
+const description = "Read Lozen Advisory’s privacy policy, including how website information, communications, forms, and inquiry data are collected and protected.";
+
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <section class="bg-gradient-to-t from-base-200 to-white">
     <Wrapper variant="standard" class="py-24 lg:py-32">
       <div class="max-w-3xl">

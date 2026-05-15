@@ -7,6 +7,7 @@ duration: "Organizational advisory"
 image:
   url: "../../images/services/serviceplaceholder.webp"
   alt: "Professional advisory conversation"
+metaDescription: "Market intelligence on disclosure-dependent workforce risk, retention exposure, benefits utilization gaps, and leadership continuity signals."
 ---
 
 Lozen Advisory provides market intelligence for organizations that need to understand disclosure-dependent workforce risk, menopause-at-work benefits utilization, AI implementation burden, and the business consequences of undercounted need.

@@ -7,7 +7,7 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "When Disclosure Isn't an Option: The Infrastructure Women in Leadership Actually Need",
+    "When Disclosure Isn't an Option: The Infrastructure Women in Leadership Actually Need | Lozen Advisory",
   description:
     "Employee benefit systems fail when disclosure carries career risk. Disclosure Independence is the performance protection infrastructure women in leadership need.",
   url: "https://www.lozenadvisory.com/disclosure-independence-infrastructure",
@@ -25,9 +25,13 @@ const articleJsonLd = {
     url: "https://www.lozenadvisory.com",
   },
 };
+const title = "When Disclosure Isn't an Option: The Infrastructure Women in Leadership Actually Need | Lozen Advisory";
+
+const description = "Employee benefit systems fail when disclosure carries career risk. Disclosure Independence is the performance protection infrastructure women in leadership need.";
+
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description} ogType="article">
   <script
     type="application/ld+json"
     set:html={JSON.stringify(articleJsonLd)}

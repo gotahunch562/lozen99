@@ -4,10 +4,9 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-const title = "Your Blood Tests Are Normal. But You Don’t Feel Like Yourself.";
+const title = "The Tender Path℠ | Perimenopause Support for Executive Women";
 
-const description =
-  "Stop guessing and start navigating perimenopause with clarity. The MAPS Blueprint℠ is a 90-minute private session designed to help you understand your changing body and build a private strategy to reclaim yourself.";
+const description = "Normal blood tests but still not yourself? The Tender Path℠ helps executive women navigate perimenopause without workplace disclosure.";
 
 const pageJsonLd = {
   "@context": "https://schema.org",
@@ -23,7 +22,7 @@ const pageJsonLd = {
 };
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <script
     type="application/ld+json"
     set:html={JSON.stringify(pageJsonLd)}

@@ -5,10 +5,9 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-const title = "Retention Risk Analysis";
+const title = "Retention Risk Analysis: Quantifying the 213% Replacement Cost";
 
-const description =
-  "Retention risk analysis for organizations evaluating attrition exposure, succession risk, and the workforce data their current systems do not capture.";
+const description = "Identify the structural gaps in your attrition risk assessment models. Learn why traditional performance data misses high-risk senior talent and how to mitigate the 213% replacement cost through a Strategic Briefing on Invisible Attrition℠.";
 
 const pageJsonLd = {
   "@context": "https://schema.org",
@@ -55,7 +54,7 @@ const architectureLinks = [
 ];
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <script
     type="application/ld+json"
     set:html={JSON.stringify(pageJsonLd)}

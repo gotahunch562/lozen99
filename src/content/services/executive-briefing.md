@@ -7,6 +7,7 @@ duration: "Focused advisory"
 image:
   url: "../../images/services/serviceplaceholder.webp"
   alt: "Executive advisory discussion"
+metaDescription: "Executive briefings for leaders assessing disclosure-dependent workforce risk, invisible attrition, benefits utilization, and succession exposure."
 ---
 
 The Executive Briefing is a focused advisory session for leadership teams that need clarity quickly.

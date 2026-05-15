@@ -5,10 +5,9 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import founderImage from "@/images/team/akilahplaceholder.webp";
 
-const title = "Akilah E. Kamaria | Founder of Lozen Advisory";
+const title = "About Lozen Advisory | Founded to Support Women in Leadership";
 
-const description =
-  "Akilah E. Kamaria is a data analyst, entrepreneur, and United States Marine Corps veteran. She founded Lozen Advisory LLC, a confidential, disclosure-independent performance protection advisory for women executives.";
+const description = "Founded by data analyst Akilah E. Kamaria. Advising leadership on the structural blind spots, disclosure dependency, and risks inside corporate data.";
 
 const pageJsonLd = {
   "@context": "https://schema.org",
@@ -29,7 +28,7 @@ const pageJsonLd = {
 };
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <script
     type="application/ld+json"
     set:html={JSON.stringify(pageJsonLd)}

@@ -8,8 +8,7 @@ const heroImage = "/images/womenlawyerconference.avif";
 
 const title = "Lozen Advisory | Women Lawyers Conference";
 
-const description =
-  "For women lawyers from the conference navigating health conditions inside legal practice. Continue the conversation on performance, disclosure risk, and staying in your seat.";
+const description = "For women lawyers from the conference navigating health conditions inside legal practice. Continue the conversation on performance, disclosure risk, and staying in your seat.";
 
 const cards = [
   {
@@ -89,7 +88,7 @@ const pageJsonLd = {
 };
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <script
     type="application/ld+json"
     set:html={JSON.stringify(pageJsonLd)}

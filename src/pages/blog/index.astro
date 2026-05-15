@@ -135,9 +135,13 @@ const categoryLinks = categorySections.map(([category, posts]) => ({
   href: `#${slugify(category)}`,
   count: posts.length,
 }));
+const title = "Blog | Lozen Advisory";
+
+const description = "Articles for women navigating perimenopause, disclosure, performance pressure, leadership, career protection, and private decision-making at work.";
+
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <section class="bg-gradient-to-b from-base-200 via-white to-base-100">
     <Wrapper variant="standard" class="py-20 lg:py-28">
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">

@@ -18,7 +18,12 @@ const relatedServices = allServices
   .slice(0, 2);
 ---
 
-<BaseLayout ´>
+<BaseLayout
+  title={`${frontmatter.title} | Lozen Advisory`}
+  description={frontmatter.metaDescription || frontmatter.shortDescription || frontmatter.description}
+  ogImage={frontmatter.image?.url?.src ?? frontmatter.image?.url}
+  ogImageAlt={frontmatter.image?.alt || frontmatter.title}
+>
   <section
     class="relative lg:h-[calc(100vh-9rem)] w-full overflow-hidden lg:p-8 bg-white"
   >

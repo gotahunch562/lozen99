@@ -24,9 +24,20 @@ const {
   backLabel = "Back to Research",
   articleJsonLd,
 } = Astro.props;
+
+const articleDescription =
+  typeof articleJsonLd?.description === "string"
+    ? articleJsonLd.description
+    : description;
 ---
 
-<BaseLayout>
+<BaseLayout
+  title={title}
+  description={articleDescription}
+  ogImage={image}
+  ogImageAlt={imageAlt}
+  ogType="article"
+>
   {
     articleJsonLd && (
       <script
