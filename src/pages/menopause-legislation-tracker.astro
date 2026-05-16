@@ -8,11 +8,8 @@ import {
   ACTIVE,
   DID_NOT_PASS,
   ADVISORY,
-  CLASSIFICATION_COLORS,
-  FOCUS_COLORS,
   CLUSTER_LINKS,
   IA_LINK,
-  getStatusColor,
 } from "@/data/menopauseTracker";
 
 const title = "Menopause Legislation Tracker 2026";
@@ -41,31 +38,61 @@ const reportSchema = {
   },
 };
 
-const badgeFallback = {
-  bg: "#f3f4f6",
-  text: "#374151",
-  border: "#d1d5db",
+const focusClassByLabel: Record<string, string> = {
+  Workplace: "lozen-data-badge--focus-workplace",
+  Insurance: "lozen-data-badge--focus-insurance",
+  Education: "lozen-data-badge--focus-education",
+  Omnibus: "lozen-data-badge--focus-omnibus",
+  Advisory: "lozen-data-badge--focus-advisory",
+  "Military / Veteran": "lozen-data-badge--focus-military",
+  "Veteran Care": "lozen-data-badge--focus-military",
 };
 
-const focusStyle = (label: string) => {
-  const colors = FOCUS_COLORS[label] || badgeFallback;
-  return `background:${colors.bg};color:${colors.text};border:1px solid ${colors.border};`;
+const classificationClassByLabel: Record<string, string> = {
+  "Dashboard Delay": "lozen-data-badge--classification-dashboard-delay",
+  Tacere: "lozen-data-badge--classification-tacere",
+  "Invisible Attrition": "lozen-data-badge--classification-invisible-attrition",
+  "Outside Scope": "lozen-data-badge--classification-outside-scope",
+  "No Classification": "lozen-data-badge--classification-none",
 };
+
+const focusBadgeClass = (label: string) =>
+  `lozen-data-badge ${focusClassByLabel[label] || "lozen-data-badge--neutral"}`;
+
+const statusModifier = (status: string) => {
+  if (/enacted|signed|passed/i.test(status)) {
+    return "lozen-tracker-status--enacted";
+  }
+
+  if (/died|did not pass|failed|withdrawn/i.test(status)) {
+    return "lozen-tracker-status--failed";
+  }
+
+  if (/active|committee|pending|introduced/i.test(status)) {
+    return "lozen-tracker-status--active";
+  }
+
+  return "lozen-tracker-status--neutral";
+};
+
+const statusCellClass = (status: string) =>
+  `lozen-tracker-status-cell ${statusModifier(status)}`;
+
+const statusBadgeClass = (status: string) =>
+  `lozen-tracker-status-badge ${statusModifier(status)}`;
 
 const classification = (label: string) => {
-  const colors =
-    CLASSIFICATION_COLORS[label] || CLASSIFICATION_COLORS["No Classification"];
+  const badgeClass =
+    classificationClassByLabel[label] || "lozen-data-badge--classification-none";
   const href =
     CLUSTER_LINKS[label] ||
     (label === "Invisible Attrition" ? IA_LINK : undefined);
 
-  return { colors, href };
+  return { badgeClass, href };
 };
 
-const classificationStyle = (label: string) => {
-  const c = classification(label).colors;
-  return `background:${c.bg};color:${c.text};border:1px solid ${c.border};`;
-};
+const classificationBadgeClass = (label: string) =>
+  `lozen-data-badge ${classification(label).badgeClass}`;
 
 const sectionId = (value: string) =>
   value
@@ -105,31 +132,24 @@ const columnDefinitions = [
   ],
 ];
 
-const tableWrapClass =
-  "hidden overflow-x-auto rounded-3xl border-2 border-base-500 bg-white shadow-lg ring-1 ring-base-950/15 lg:block";
+const tableWrapClass = "lozen-tracker-table-wrap";
 
-const tableClass = "min-w-[1220px] w-full border-collapse text-left";
-const compactTableClass = "min-w-[1120px] w-full border-collapse text-left";
+const tableClass = "lozen-tracker-table";
+const compactTableClass = "lozen-tracker-table lozen-tracker-table--compact";
 
-const thClass =
-  "border border-base-600 bg-base-950 px-4 py-4 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-white";
+const thClass = "lozen-tracker-th";
 
-const tdStrongClass =
-  "border border-base-400 px-4 py-4 font-sans text-sm leading-6 text-base-950";
+const tdStrongClass = "lozen-tracker-td lozen-tracker-td--strong";
 
-const tdMutedClass =
-  "border border-base-400 px-4 py-4 font-sans text-sm leading-6 text-base-700";
+const tdMutedClass = "lozen-tracker-td";
 
-const rowClass =
-  "odd:bg-white even:bg-base-100 hover:bg-accent-50/70 transition-colors duration-200";
+const rowClass = "lozen-tracker-row";
 
-const mobileCardClass =
-  "relative overflow-hidden rounded-2xl border border-base-400 bg-white p-5 shadow-lg ring-1 ring-base-950/5";
+const mobileCardClass = "lozen-tracker-mobile-card";
 
-const mobileLabelClass =
-  "font-sans text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-base-500";
+const mobileLabelClass = "lozen-tracker-mobile-label";
 
-const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
+const mobileValueClass = "lozen-tracker-mobile-value";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -336,17 +356,13 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
 
                                 <td class={tdStrongClass}>
                                   <span
-                                    class="inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]"
-                                    style={focusStyle(row.focus)}
+                                    class={focusBadgeClass(row.focus)}
                                   >
                                     {row.focus}
                                   </span>
                                 </td>
 
-                                <td
-                                  class="border border-base-400 px-4 py-4 font-sans text-sm font-semibold leading-6"
-                                  style={`color:${getStatusColor(row.status)};`}
-                                >
+                                <td class={statusCellClass(row.status)}>
                                   {row.status}
                                 </td>
 
@@ -360,16 +376,14 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
                                   {c.href ? (
                                     <a href={c.href} class="inline-flex no-underline">
                                       <span
-                                        class="inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]"
-                                        style={classificationStyle(row.classification)}
+                                        class={classificationBadgeClass(row.classification)}
                                       >
                                         {row.classification}
                                       </span>
                                     </a>
                                   ) : (
                                     <span
-                                      class="inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]"
-                                      style={classificationStyle(row.classification)}
+                                      class={classificationBadgeClass(row.classification)}
                                     >
                                       {row.classification}
                                     </span>
@@ -428,8 +442,7 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
                                 <div>
                                   <p class={mobileLabelClass}>Focus</p>
                                   <span
-                                    class="mt-2 inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
-                                    style={focusStyle(row.focus)}
+                                    class={focusBadgeClass(row.focus)}
                                   >
                                     {row.focus}
                                   </span>
@@ -437,10 +450,7 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
 
                                 <div>
                                   <p class={mobileLabelClass}>Status</p>
-                                  <p
-                                    class="mt-2 font-sans text-sm font-semibold leading-6"
-                                    style={`color:${getStatusColor(row.status)};`}
-                                  >
+                                  <p class={statusBadgeClass(row.status)}>
                                     {row.status}
                                   </p>
                                 </div>
@@ -466,16 +476,14 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
                                   {c.href ? (
                                     <a href={c.href} class="inline-flex no-underline">
                                       <span
-                                        class="inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
-                                        style={classificationStyle(row.classification)}
+                                        class={classificationBadgeClass(row.classification)}
                                       >
                                         {row.classification}
                                       </span>
                                     </a>
                                   ) : (
                                     <span
-                                      class="inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
-                                      style={classificationStyle(row.classification)}
+                                      class={classificationBadgeClass(row.classification)}
                                     >
                                       {row.classification}
                                     </span>
@@ -553,17 +561,13 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
 
                         <td class={tdStrongClass}>
                           <span
-                            class="inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]"
-                            style={focusStyle(row.focus)}
+                            class={focusBadgeClass(row.focus)}
                           >
                             {row.focus}
                           </span>
                         </td>
 
-                        <td
-                          class="border border-base-400 px-4 py-4 font-sans text-sm font-semibold leading-6"
-                          style={`color:${getStatusColor(row.status)};`}
-                        >
+                        <td class={statusCellClass(row.status)}>
                           {row.status}
                         </td>
 
@@ -619,8 +623,7 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
                         <div>
                           <p class={mobileLabelClass}>Focus</p>
                           <span
-                            class="mt-2 inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
-                            style={focusStyle(row.focus)}
+                            class={focusBadgeClass(row.focus)}
                           >
                             {row.focus}
                           </span>
@@ -628,10 +631,7 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
 
                         <div>
                           <p class={mobileLabelClass}>Status</p>
-                          <p
-                            class="mt-2 font-sans text-sm font-semibold leading-6"
-                            style={`color:${getStatusColor(row.status)};`}
-                          >
+                          <p class={statusBadgeClass(row.status)}>
                             {row.status}
                           </p>
                         </div>
@@ -716,17 +716,13 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
 
                           <td class={tdStrongClass}>
                             <span
-                              class="inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]"
-                              style={focusStyle(row.focus)}
+                              class={focusBadgeClass(row.focus)}
                             >
                               {row.focus}
                             </span>
                           </td>
 
-                          <td
-                            class="border border-base-400 px-4 py-4 font-sans text-sm font-semibold leading-6"
-                            style={`color:${getStatusColor(row.status)};`}
-                          >
+                          <td class={statusCellClass(row.status)}>
                             {row.status}
                           </td>
 
@@ -736,16 +732,14 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
                             {c.href ? (
                               <a href={c.href} class="inline-flex no-underline">
                                 <span
-                                  class="inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]"
-                                  style={classificationStyle(row.classification)}
+                                  class={classificationBadgeClass(row.classification)}
                                 >
                                   {row.classification}
                                 </span>
                               </a>
                             ) : (
                               <span
-                                class="inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]"
-                                style={classificationStyle(row.classification)}
+                                class={classificationBadgeClass(row.classification)}
                               >
                                 {row.classification}
                               </span>
@@ -804,8 +798,7 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
                           <div>
                             <p class={mobileLabelClass}>Focus</p>
                             <span
-                              class="mt-2 inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
-                              style={focusStyle(row.focus)}
+                              class={focusBadgeClass(row.focus)}
                             >
                               {row.focus}
                             </span>
@@ -813,10 +806,7 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
 
                           <div>
                             <p class={mobileLabelClass}>Status</p>
-                            <p
-                              class="mt-2 font-sans text-sm font-semibold leading-6"
-                              style={`color:${getStatusColor(row.status)};`}
-                            >
+                            <p class={statusBadgeClass(row.status)}>
                               {row.status}
                             </p>
                           </div>
@@ -835,16 +825,14 @@ const mobileValueClass = "mt-1 font-sans text-sm leading-6 text-base-800";
                             {c.href ? (
                               <a href={c.href} class="inline-flex no-underline">
                                 <span
-                                  class="inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
-                                  style={classificationStyle(row.classification)}
+                                  class={classificationBadgeClass(row.classification)}
                                 >
                                   {row.classification}
                                 </span>
                               </a>
                             ) : (
                               <span
-                                class="inline-flex rounded-full px-3 py-1 font-sans text-xs font-semibold uppercase tracking-[0.08em]"
-                                style={classificationStyle(row.classification)}
+                                class={classificationBadgeClass(row.classification)}
                               >
                                 {row.classification}
                               </span>

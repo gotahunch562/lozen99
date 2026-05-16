@@ -279,30 +279,3 @@ export const ADVISORY: AdvisoryRow[] = [
   },
 ];
 
-
-/* ── Classification badge colors ── */
-export const CLASSIFICATION_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  "Dashboard Delay": { bg: "#dbeeff", text: "#0f4c8a", border: "#93c5fd" },
-  "Tacere": { bg: "#e0f2f0", text: "#1a5c54", border: "#7bbfb9" },
-  "Invisible Attrition": { bg: "#fff3cd", text: "#7a4500", border: "#fbbf24" },
-  "Outside Scope": { bg: "#e5e7eb", text: "#374151", border: "#9ca3af" },
-  "No Classification": { bg: "#f3f4f6", text: "#6b7280", border: "#d1d5db" },
-};
-
-
-export const FOCUS_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  "Workplace":        { bg: "#e8f5e9", text: "#1b5e20", border: "#a5d6a7" },
-  "Insurance":        { bg: "#e3f2fd", text: "#0d47a1", border: "#90caf9" },
-  "Education":        { bg: "#fff8e1", text: "#e65100", border: "#ffcc80" },
-  "Omnibus":          { bg: "#fce4ec", text: "#880e4f", border: "#f48fb1" },
-  "Advisory":         { bg: "#f3e5f5", text: "#4a148c", border: "#ce93d8" },
-  "Military / Veteran": { bg: "#e8eaf6", text: "#1a237e", border: "#9fa8da" },
-  "Veteran Care":     { bg: "#e8eaf6", text: "#1a237e", border: "#9fa8da" },
-};
-
-
-export const getStatusColor = (status: string): string => {
-  if (/enacted|signed|passed/i.test(status)) return "#15803d";
-  if (/died|did not pass|failed|withdrawn/i.test(status)) return "#b91c1c";
-  return "#1a1a1a";
-};

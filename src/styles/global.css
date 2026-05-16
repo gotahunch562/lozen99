@@ -341,3 +341,352 @@
     font-size: clamp(1.875rem, 10vw, 3rem);
   }
 }
+
+/* Lozen data product / tracker token system
+   Purpose: category/status color semantics for dense governance tables.
+   Keep these separate from brand CTA colors so the tracker can carry meaning
+   without hardcoding hex values in page templates or data files.
+*/
+:root {
+  --lozen-data-neutral-bg: #f3f4f6;
+  --lozen-data-neutral-text: #374151;
+  --lozen-data-neutral-border: #d1d5db;
+
+  --lozen-status-enacted-bg: #eaf7ee;
+  --lozen-status-enacted-text: #166534;
+  --lozen-status-enacted-border: #86efac;
+
+  --lozen-status-active-bg: #eff6ff;
+  --lozen-status-active-text: #1d4ed8;
+  --lozen-status-active-border: #93c5fd;
+
+  --lozen-status-failed-bg: #fef2f2;
+  --lozen-status-failed-text: #991b1b;
+  --lozen-status-failed-border: #fca5a5;
+
+  --lozen-status-neutral-bg: #f3f4f6;
+  --lozen-status-neutral-text: #374151;
+  --lozen-status-neutral-border: #d1d5db;
+
+  --lozen-focus-workplace-bg: #ecfdf3;
+  --lozen-focus-workplace-text: #166534;
+  --lozen-focus-workplace-border: #86efac;
+
+  --lozen-focus-insurance-bg: #eff6ff;
+  --lozen-focus-insurance-text: #1e40af;
+  --lozen-focus-insurance-border: #93c5fd;
+
+  --lozen-focus-education-bg: #fffbeb;
+  --lozen-focus-education-text: #92400e;
+  --lozen-focus-education-border: #fcd34d;
+
+  --lozen-focus-omnibus-bg: #fdf2f8;
+  --lozen-focus-omnibus-text: #9d174d;
+  --lozen-focus-omnibus-border: #f9a8d4;
+
+  --lozen-focus-advisory-bg: #f5f3ff;
+  --lozen-focus-advisory-text: #5b21b6;
+  --lozen-focus-advisory-border: #c4b5fd;
+
+  --lozen-focus-military-bg: #eef2ff;
+  --lozen-focus-military-text: #3730a3;
+  --lozen-focus-military-border: #a5b4fc;
+
+  --lozen-classification-dashboard-delay-bg: #e0f2fe;
+  --lozen-classification-dashboard-delay-text: #075985;
+  --lozen-classification-dashboard-delay-border: #7dd3fc;
+
+  --lozen-classification-tacere-bg: #e6f5f2;
+  --lozen-classification-tacere-text: #115e59;
+  --lozen-classification-tacere-border: #5eead4;
+
+  --lozen-classification-invisible-attrition-bg: #fef3c7;
+  --lozen-classification-invisible-attrition-text: #92400e;
+  --lozen-classification-invisible-attrition-border: #fbbf24;
+
+  --lozen-classification-outside-scope-bg: #f1f5f9;
+  --lozen-classification-outside-scope-text: #334155;
+  --lozen-classification-outside-scope-border: #cbd5e1;
+
+  --lozen-classification-none-bg: #f8fafc;
+  --lozen-classification-none-text: #64748b;
+  --lozen-classification-none-border: #e2e8f0;
+
+  --lozen-tracker-page-bg: var(--color-base-50);
+  --lozen-tracker-section-bg: #ffffff;
+  --lozen-tracker-muted-section-bg: var(--color-base-100);
+  --lozen-tracker-table-header-bg: var(--color-base-950);
+  --lozen-tracker-table-header-text: #ffffff;
+  --lozen-tracker-table-border: var(--color-base-300);
+  --lozen-tracker-table-border-strong: var(--color-base-500);
+  --lozen-tracker-row-bg: #ffffff;
+  --lozen-tracker-row-alt-bg: #f4f7fb;
+  --lozen-tracker-row-hover-bg: color-mix(in oklch, var(--color-accent-100) 55%, #ffffff);
+  --lozen-tracker-card-bg: #ffffff;
+  --lozen-tracker-card-border: var(--color-base-300);
+  --lozen-tracker-card-shadow: 0 14px 34px rgba(6, 23, 47, 0.08);
+}
+
+.lozen-data-badge {
+  --badge-bg: var(--lozen-data-neutral-bg);
+  --badge-text: var(--lozen-data-neutral-text);
+  --badge-border: var(--lozen-data-neutral-border);
+
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid var(--badge-border);
+  border-radius: 999px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.lozen-data-badge--neutral {
+  --badge-bg: var(--lozen-data-neutral-bg);
+  --badge-text: var(--lozen-data-neutral-text);
+  --badge-border: var(--lozen-data-neutral-border);
+}
+
+.lozen-data-badge--focus-workplace {
+  --badge-bg: var(--lozen-focus-workplace-bg);
+  --badge-text: var(--lozen-focus-workplace-text);
+  --badge-border: var(--lozen-focus-workplace-border);
+}
+
+.lozen-data-badge--focus-insurance {
+  --badge-bg: var(--lozen-focus-insurance-bg);
+  --badge-text: var(--lozen-focus-insurance-text);
+  --badge-border: var(--lozen-focus-insurance-border);
+}
+
+.lozen-data-badge--focus-education {
+  --badge-bg: var(--lozen-focus-education-bg);
+  --badge-text: var(--lozen-focus-education-text);
+  --badge-border: var(--lozen-focus-education-border);
+}
+
+.lozen-data-badge--focus-omnibus {
+  --badge-bg: var(--lozen-focus-omnibus-bg);
+  --badge-text: var(--lozen-focus-omnibus-text);
+  --badge-border: var(--lozen-focus-omnibus-border);
+}
+
+.lozen-data-badge--focus-advisory {
+  --badge-bg: var(--lozen-focus-advisory-bg);
+  --badge-text: var(--lozen-focus-advisory-text);
+  --badge-border: var(--lozen-focus-advisory-border);
+}
+
+.lozen-data-badge--focus-military {
+  --badge-bg: var(--lozen-focus-military-bg);
+  --badge-text: var(--lozen-focus-military-text);
+  --badge-border: var(--lozen-focus-military-border);
+}
+
+.lozen-data-badge--classification-dashboard-delay {
+  --badge-bg: var(--lozen-classification-dashboard-delay-bg);
+  --badge-text: var(--lozen-classification-dashboard-delay-text);
+  --badge-border: var(--lozen-classification-dashboard-delay-border);
+}
+
+.lozen-data-badge--classification-tacere {
+  --badge-bg: var(--lozen-classification-tacere-bg);
+  --badge-text: var(--lozen-classification-tacere-text);
+  --badge-border: var(--lozen-classification-tacere-border);
+}
+
+.lozen-data-badge--classification-invisible-attrition {
+  --badge-bg: var(--lozen-classification-invisible-attrition-bg);
+  --badge-text: var(--lozen-classification-invisible-attrition-text);
+  --badge-border: var(--lozen-classification-invisible-attrition-border);
+}
+
+.lozen-data-badge--classification-outside-scope {
+  --badge-bg: var(--lozen-classification-outside-scope-bg);
+  --badge-text: var(--lozen-classification-outside-scope-text);
+  --badge-border: var(--lozen-classification-outside-scope-border);
+}
+
+.lozen-data-badge--classification-none {
+  --badge-bg: var(--lozen-classification-none-bg);
+  --badge-text: var(--lozen-classification-none-text);
+  --badge-border: var(--lozen-classification-none-border);
+}
+
+.lozen-tracker-table-wrap {
+  display: none;
+  overflow-x: auto;
+  border: 2px solid var(--lozen-tracker-table-border-strong);
+  border-radius: 1.5rem;
+  background: var(--lozen-tracker-section-bg);
+  box-shadow: var(--lozen-tracker-card-shadow);
+  outline: 1px solid color-mix(in oklch, var(--color-base-950) 15%, transparent);
+}
+
+.lozen-tracker-table {
+  min-width: 1220px;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.lozen-tracker-table--compact {
+  min-width: 1120px;
+}
+
+.lozen-tracker-th {
+  border: 1px solid var(--lozen-tracker-table-border-strong);
+  background: var(--lozen-tracker-table-header-bg);
+  color: var(--lozen-tracker-table-header-text);
+  padding: 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.lozen-tracker-td,
+.lozen-tracker-status-cell {
+  border: 1px solid var(--lozen-tracker-table-border);
+  padding: 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  vertical-align: top;
+}
+
+.lozen-tracker-td {
+  color: var(--color-base-700);
+}
+
+.lozen-tracker-td--strong {
+  color: var(--color-base-950);
+  font-weight: 600;
+}
+
+.lozen-tracker-row {
+  background: var(--lozen-tracker-row-bg);
+  transition: background 180ms ease;
+}
+
+.lozen-tracker-row:nth-child(even) {
+  background: var(--lozen-tracker-row-alt-bg);
+}
+
+.lozen-tracker-row:hover {
+  background: var(--lozen-tracker-row-hover-bg);
+}
+
+.lozen-tracker-status-cell {
+  font-weight: 700;
+}
+
+.lozen-tracker-status-badge {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 0.5rem;
+  border: 1px solid var(--status-border);
+  border-radius: 999px;
+  background: var(--status-bg);
+  color: var(--status-text);
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.lozen-tracker-status--enacted {
+  --status-bg: var(--lozen-status-enacted-bg);
+  --status-text: var(--lozen-status-enacted-text);
+  --status-border: var(--lozen-status-enacted-border);
+
+  color: var(--status-text);
+  background: var(--status-bg);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-status--active {
+  --status-bg: var(--lozen-status-active-bg);
+  --status-text: var(--lozen-status-active-text);
+  --status-border: var(--lozen-status-active-border);
+
+  color: var(--status-text);
+  background: var(--status-bg);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-status--failed {
+  --status-bg: var(--lozen-status-failed-bg);
+  --status-text: var(--lozen-status-failed-text);
+  --status-border: var(--lozen-status-failed-border);
+
+  color: var(--status-text);
+  background: var(--status-bg);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-status--neutral {
+  --status-bg: var(--lozen-status-neutral-bg);
+  --status-text: var(--lozen-status-neutral-text);
+  --status-border: var(--lozen-status-neutral-border);
+
+  color: var(--status-text);
+  background: var(--status-bg);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-mobile-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--lozen-tracker-card-border);
+  border-radius: 1.25rem;
+  background: var(--lozen-tracker-card-bg);
+  padding: 1.25rem;
+  box-shadow: var(--lozen-tracker-card-shadow);
+  outline: 1px solid color-mix(in oklch, var(--color-base-950) 5%, transparent);
+}
+
+.lozen-tracker-mobile-label {
+  color: var(--color-base-500);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.lozen-tracker-mobile-value {
+  margin-top: 0.25rem;
+  color: var(--color-base-800);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+@media (min-width: 1024px) {
+  .lozen-tracker-table-wrap {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .lozen-data-badge {
+    font-size: 0.6875rem;
+    letter-spacing: 0.06em;
+  }
+
+  .lozen-tracker-mobile-card {
+    padding: 1.125rem;
+  }
+}
