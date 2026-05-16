@@ -344,87 +344,122 @@
 
 /* Lozen data product / tracker token system
    Purpose: category/status color semantics for dense governance tables.
-   Keep these separate from brand CTA colors so the tracker can carry meaning
-   without hardcoding hex values in page templates or data files.
+   This policy-data layer extends the brand palette without changing the
+   Lozen Advisory visual identity. Yellow remains a CTA/action accent;
+   tracker colors carry meaning for journalists, policy users, and research readers.
 */
 :root {
-  --lozen-data-neutral-bg: #f3f4f6;
-  --lozen-data-neutral-text: #374151;
-  --lozen-data-neutral-border: #d1d5db;
+  /* Policy-data palette: richer range for tracker states and categories */
+  --lozen-policy-teal-900: #005f73;
+  --lozen-policy-cyan-700: #0a9396;
+  --lozen-policy-aqua-300: #94d2bd;
+  --lozen-policy-wheat-200: #e9d8a6;
+  --lozen-policy-gold-500: #ee9b00;
+  --lozen-policy-caramel-600: #ca6702;
+  --lozen-policy-rust-700: #bb3e03;
+  --lozen-policy-iron-800: #ae2012;
+  --lozen-policy-red-900: #9b2226;
 
-  --lozen-status-enacted-bg: #eaf7ee;
-  --lozen-status-enacted-text: #166534;
-  --lozen-status-enacted-border: #86efac;
+  /* Soft policy tints derived from the policy-data palette */
+  --lozen-policy-teal-soft: #e2f3ed;
+  --lozen-policy-cyan-soft: #e0f2f3;
+  --lozen-policy-aqua-soft: #eef8f4;
+  --lozen-policy-wheat-soft: #fff7df;
+  --lozen-policy-gold-soft: #fff1d1;
+  --lozen-policy-caramel-soft: #fbedd8;
+  --lozen-policy-rust-soft: #f8eadb;
+  --lozen-policy-iron-soft: #f8e8e6;
+  --lozen-policy-red-soft: #f6e4e4;
 
-  --lozen-status-active-bg: #eff6ff;
-  --lozen-status-active-text: #1d4ed8;
-  --lozen-status-active-border: #93c5fd;
+  /* Neutral data fallback */
+  --lozen-data-neutral-bg: #eef2f6;
+  --lozen-data-neutral-text: var(--color-base-700);
+  --lozen-data-neutral-border: var(--color-base-300);
 
-  --lozen-status-failed-bg: #fef2f2;
-  --lozen-status-failed-text: #991b1b;
-  --lozen-status-failed-border: #fca5a5;
+  /* Status colors: no shared color family across major states */
+  --lozen-status-enacted-bg: var(--lozen-policy-teal-soft);
+  --lozen-status-enacted-text: var(--lozen-policy-teal-900);
+  --lozen-status-enacted-border: var(--lozen-policy-aqua-300);
 
-  --lozen-status-neutral-bg: #f3f4f6;
-  --lozen-status-neutral-text: #374151;
-  --lozen-status-neutral-border: #d1d5db;
+  --lozen-status-active-bg: var(--lozen-policy-cyan-soft);
+  --lozen-status-active-text: var(--lozen-policy-cyan-700);
+  --lozen-status-active-border: var(--lozen-policy-cyan-700);
 
-  --lozen-focus-workplace-bg: #ecfdf3;
-  --lozen-focus-workplace-text: #166534;
-  --lozen-focus-workplace-border: #86efac;
+  --lozen-status-advisory-bg: var(--lozen-policy-caramel-soft);
+  --lozen-status-advisory-text: var(--lozen-policy-caramel-600);
+  --lozen-status-advisory-border: var(--lozen-policy-gold-500);
 
-  --lozen-focus-insurance-bg: #eff6ff;
-  --lozen-focus-insurance-text: #1e40af;
-  --lozen-focus-insurance-border: #93c5fd;
+  --lozen-status-failed-bg: var(--lozen-policy-red-soft);
+  --lozen-status-failed-text: var(--lozen-policy-red-900);
+  --lozen-status-failed-border: var(--lozen-policy-iron-800);
 
-  --lozen-focus-education-bg: #fffbeb;
-  --lozen-focus-education-text: #92400e;
-  --lozen-focus-education-border: #fcd34d;
+  --lozen-status-neutral-bg: var(--lozen-data-neutral-bg);
+  --lozen-status-neutral-text: var(--lozen-data-neutral-text);
+  --lozen-status-neutral-border: var(--lozen-data-neutral-border);
 
-  --lozen-focus-omnibus-bg: #fdf2f8;
-  --lozen-focus-omnibus-text: #9d174d;
-  --lozen-focus-omnibus-border: #f9a8d4;
+  /* Focus colors: category recognition without decorative randomness */
+  --lozen-focus-workplace-bg: var(--lozen-policy-teal-soft);
+  --lozen-focus-workplace-text: var(--lozen-policy-teal-900);
+  --lozen-focus-workplace-border: var(--lozen-policy-aqua-300);
 
-  --lozen-focus-advisory-bg: #f5f3ff;
-  --lozen-focus-advisory-text: #5b21b6;
-  --lozen-focus-advisory-border: #c4b5fd;
+  --lozen-focus-insurance-bg: var(--lozen-policy-cyan-soft);
+  --lozen-focus-insurance-text: var(--lozen-policy-cyan-700);
+  --lozen-focus-insurance-border: var(--lozen-policy-cyan-700);
 
-  --lozen-focus-military-bg: #eef2ff;
-  --lozen-focus-military-text: #3730a3;
-  --lozen-focus-military-border: #a5b4fc;
+  --lozen-focus-education-bg: var(--lozen-policy-wheat-soft);
+  --lozen-focus-education-text: #7a4d00;
+  --lozen-focus-education-border: var(--lozen-policy-gold-500);
 
-  --lozen-classification-dashboard-delay-bg: #e0f2fe;
-  --lozen-classification-dashboard-delay-text: #075985;
-  --lozen-classification-dashboard-delay-border: #7dd3fc;
+  --lozen-focus-omnibus-bg: var(--lozen-policy-caramel-soft);
+  --lozen-focus-omnibus-text: var(--lozen-policy-caramel-600);
+  --lozen-focus-omnibus-border: var(--lozen-policy-caramel-600);
 
-  --lozen-classification-tacere-bg: #e6f5f2;
-  --lozen-classification-tacere-text: #115e59;
-  --lozen-classification-tacere-border: #5eead4;
+  --lozen-focus-advisory-bg: var(--lozen-policy-rust-soft);
+  --lozen-focus-advisory-text: var(--lozen-policy-rust-700);
+  --lozen-focus-advisory-border: var(--lozen-policy-rust-700);
 
-  --lozen-classification-invisible-attrition-bg: #fef3c7;
-  --lozen-classification-invisible-attrition-text: #92400e;
-  --lozen-classification-invisible-attrition-border: #fbbf24;
+  --lozen-focus-military-bg: var(--lozen-policy-iron-soft);
+  --lozen-focus-military-text: var(--lozen-policy-iron-800);
+  --lozen-focus-military-border: var(--lozen-policy-iron-800);
 
-  --lozen-classification-outside-scope-bg: #f1f5f9;
-  --lozen-classification-outside-scope-text: #334155;
-  --lozen-classification-outside-scope-border: #cbd5e1;
+  /* Classification colors: distinct semantic signals */
+  --lozen-classification-dashboard-delay-bg: var(--lozen-policy-cyan-soft);
+  --lozen-classification-dashboard-delay-text: var(--lozen-policy-cyan-700);
+  --lozen-classification-dashboard-delay-border: var(--lozen-policy-cyan-700);
 
-  --lozen-classification-none-bg: #f8fafc;
-  --lozen-classification-none-text: #64748b;
-  --lozen-classification-none-border: #e2e8f0;
+  --lozen-classification-tacere-bg: var(--lozen-policy-teal-soft);
+  --lozen-classification-tacere-text: var(--lozen-policy-teal-900);
+  --lozen-classification-tacere-border: var(--lozen-policy-aqua-300);
 
+  --lozen-classification-invisible-attrition-bg: var(--lozen-policy-gold-soft);
+  --lozen-classification-invisible-attrition-text: var(--lozen-policy-caramel-600);
+  --lozen-classification-invisible-attrition-border: var(--lozen-policy-gold-500);
+
+  --lozen-classification-outside-scope-bg: var(--lozen-policy-red-soft);
+  --lozen-classification-outside-scope-text: var(--lozen-policy-red-900);
+  --lozen-classification-outside-scope-border: var(--lozen-policy-iron-800);
+
+  --lozen-classification-none-bg: var(--lozen-data-neutral-bg);
+  --lozen-classification-none-text: var(--color-base-600);
+  --lozen-classification-none-border: var(--color-base-300);
+
+  /* Tracker interface surfaces */
   --lozen-tracker-page-bg: var(--color-base-50);
   --lozen-tracker-section-bg: #ffffff;
-  --lozen-tracker-muted-section-bg: var(--color-base-100);
+  --lozen-tracker-muted-section-bg: #eef4f6;
   --lozen-tracker-table-header-bg: var(--color-base-950);
   --lozen-tracker-table-header-text: #ffffff;
-  --lozen-tracker-table-border: var(--color-base-300);
-  --lozen-tracker-table-border-strong: var(--color-base-500);
+  --lozen-tracker-table-border: #b9c8d6;
+  --lozen-tracker-table-border-strong: #6f879e;
   --lozen-tracker-row-bg: #ffffff;
-  --lozen-tracker-row-alt-bg: #f4f7fb;
-  --lozen-tracker-row-hover-bg: color-mix(in oklch, var(--color-accent-100) 55%, #ffffff);
+  --lozen-tracker-row-alt-bg: #f3f7f9;
+  --lozen-tracker-row-hover-bg: #e8f4f2;
+  --lozen-tracker-row-hover-accent: var(--lozen-policy-teal-900);
+  --lozen-tracker-sticky-bg: #fbfdff;
+  --lozen-tracker-sticky-alt-bg: #f1f6fb;
   --lozen-tracker-card-bg: #ffffff;
-  --lozen-tracker-card-border: var(--color-base-300);
-  --lozen-tracker-card-shadow: 0 14px 34px rgba(6, 23, 47, 0.08);
+  --lozen-tracker-card-border: #aebed0;
+  --lozen-tracker-card-shadow: 0 16px 42px rgba(6, 23, 47, 0.11);
 }
 
 .lozen-data-badge {
@@ -439,13 +474,14 @@
   border-radius: 999px;
   background: var(--badge-bg);
   color: var(--badge-text);
-  padding: 0.25rem 0.75rem;
+  padding: 0.28rem 0.78rem;
   font-family: var(--font-sans);
   font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.4;
+  font-weight: 800;
+  letter-spacing: 0.095em;
+  line-height: 1.35;
   text-transform: uppercase;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.58);
 }
 
 .lozen-data-badge--neutral {
@@ -527,13 +563,14 @@
   border-radius: 1.5rem;
   background: var(--lozen-tracker-section-bg);
   box-shadow: var(--lozen-tracker-card-shadow);
-  outline: 1px solid color-mix(in oklch, var(--color-base-950) 15%, transparent);
+  outline: 1px solid color-mix(in oklch, var(--color-base-950) 12%, transparent);
 }
 
 .lozen-tracker-table {
   min-width: 1220px;
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   text-align: left;
 }
 
@@ -542,25 +579,30 @@
 }
 
 .lozen-tracker-th {
-  border: 1px solid var(--lozen-tracker-table-border-strong);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  border-right: 1px solid color-mix(in oklch, var(--color-base-500) 58%, transparent);
+  border-bottom: 1px solid var(--lozen-tracker-table-border-strong);
   background: var(--lozen-tracker-table-header-bg);
   color: var(--lozen-tracker-table-header-text);
-  padding: 1rem;
+  padding: 1.05rem 1rem;
   font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  line-height: 1.4;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.35;
   text-transform: uppercase;
 }
 
 .lozen-tracker-td,
 .lozen-tracker-status-cell {
-  border: 1px solid var(--lozen-tracker-table-border);
-  padding: 1rem;
+  border-right: 1px solid var(--lozen-tracker-table-border);
+  border-bottom: 1px solid var(--lozen-tracker-table-border);
+  padding: 1.15rem 1rem;
   font-family: var(--font-sans);
-  font-size: 0.9375rem;
-  line-height: 1.65;
+  font-size: 0.96rem;
+  line-height: 1.7;
   vertical-align: top;
 }
 
@@ -570,12 +612,15 @@
 
 .lozen-tracker-td--strong {
   color: var(--color-base-950);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .lozen-tracker-row {
+  position: relative;
   background: var(--lozen-tracker-row-bg);
-  transition: background 180ms ease;
+  transition:
+    background 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .lozen-tracker-row:nth-child(even) {
@@ -584,13 +629,24 @@
 
 .lozen-tracker-row:hover {
   background: var(--lozen-tracker-row-hover-bg);
+  box-shadow: inset 4px 0 0 var(--lozen-tracker-row-hover-accent);
+}
+
+.lozen-tracker-row:hover .lozen-tracker-td,
+.lozen-tracker-row:hover .lozen-tracker-status-cell {
+  background: transparent;
 }
 
 .lozen-tracker-status-cell {
+  color: var(--status-text, var(--color-base-700));
   font-weight: 700;
 }
 
 .lozen-tracker-status-badge {
+  --status-bg: var(--lozen-status-neutral-bg);
+  --status-text: var(--lozen-status-neutral-text);
+  --status-border: var(--lozen-status-neutral-border);
+
   display: inline-flex;
   width: fit-content;
   margin-top: 0.5rem;
@@ -598,11 +654,12 @@
   border-radius: 999px;
   background: var(--status-bg);
   color: var(--status-text);
-  padding: 0.25rem 0.75rem;
+  padding: 0.28rem 0.78rem;
   font-family: var(--font-sans);
   font-size: 0.8125rem;
-  font-weight: 700;
-  line-height: 1.4;
+  font-weight: 800;
+  line-height: 1.35;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.58);
 }
 
 .lozen-tracker-status--enacted {
@@ -619,6 +676,16 @@
   --status-bg: var(--lozen-status-active-bg);
   --status-text: var(--lozen-status-active-text);
   --status-border: var(--lozen-status-active-border);
+
+  color: var(--status-text);
+  background: var(--status-bg);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-status--advisory {
+  --status-bg: var(--lozen-status-advisory-bg);
+  --status-text: var(--lozen-status-advisory-text);
+  --status-border: var(--lozen-status-advisory-border);
 
   color: var(--status-text);
   background: var(--status-bg);
@@ -656,11 +723,20 @@
   outline: 1px solid color-mix(in oklch, var(--color-base-950) 5%, transparent);
 }
 
+.lozen-tracker-mobile-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--lozen-policy-teal-900);
+  opacity: 0.85;
+}
+
 .lozen-tracker-mobile-label {
   color: var(--color-base-500);
   font-family: var(--font-sans);
   font-size: 0.68rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.14em;
   line-height: 1.4;
   text-transform: uppercase;
@@ -678,6 +754,31 @@
   .lozen-tracker-table-wrap {
     display: block;
   }
+
+  .lozen-tracker-table .lozen-tracker-th:first-child,
+  .lozen-tracker-table .lozen-tracker-row > :first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+  }
+
+  .lozen-tracker-table .lozen-tracker-th:first-child {
+    z-index: 4;
+    background: var(--lozen-tracker-table-header-bg);
+  }
+
+  .lozen-tracker-table .lozen-tracker-row > :first-child {
+    background: var(--lozen-tracker-sticky-bg);
+    box-shadow: 1px 0 0 var(--lozen-tracker-table-border);
+  }
+
+  .lozen-tracker-table .lozen-tracker-row:nth-child(even) > :first-child {
+    background: var(--lozen-tracker-sticky-alt-bg);
+  }
+
+  .lozen-tracker-table .lozen-tracker-row:hover > :first-child {
+    background: var(--lozen-tracker-row-hover-bg);
+  }
 }
 
 @media (max-width: 640px) {
@@ -691,342 +792,3 @@
   }
 }
 
-/* Tracker visual system refinement
-   Purpose: make the legislation tracker read as a polished data product while keeping
-   all color meaning inside the global token layer. */
-:root {
-  --lozen-tracker-page-bg: #f3f6fb;
-  --lozen-tracker-hero-bg:
-    radial-gradient(circle at 12% 12%, rgba(216, 225, 238, 0.86), transparent 34%),
-    linear-gradient(135deg, #f7f9fc 0%, #edf3f8 46%, #f9fbfd 100%);
-  --lozen-tracker-section-bg: #ffffff;
-  --lozen-tracker-muted-section-bg: #eef3f9;
-  --lozen-tracker-panel-bg: rgba(255, 255, 255, 0.88);
-  --lozen-tracker-panel-border: #b9c7da;
-  --lozen-tracker-panel-shadow: 0 24px 60px rgba(6, 23, 47, 0.12);
-
-  --lozen-tracker-table-header-bg: #071a34;
-  --lozen-tracker-table-header-text: #ffffff;
-  --lozen-tracker-table-border: #bdcadb;
-  --lozen-tracker-table-border-strong: #7d91ad;
-  --lozen-tracker-row-bg: #ffffff;
-  --lozen-tracker-row-alt-bg: #f8fafd;
-  --lozen-tracker-row-hover-bg: #eef5fb;
-  --lozen-tracker-row-hover-border: #d8cc3f;
-  --lozen-tracker-sticky-bg: #fbfdff;
-  --lozen-tracker-sticky-alt-bg: #f1f6fb;
-  --lozen-tracker-table-shadow: 0 24px 70px rgba(6, 23, 47, 0.14);
-
-  --lozen-status-enacted-bg: #e7f6ec;
-  --lozen-status-enacted-text: #0f5f2b;
-  --lozen-status-enacted-border: #6dc98f;
-  --lozen-status-active-bg: #e9f1ff;
-  --lozen-status-active-text: #1746a2;
-  --lozen-status-active-border: #6d9df2;
-  --lozen-status-failed-bg: #fff0ef;
-  --lozen-status-failed-text: #9a1c1c;
-  --lozen-status-failed-border: #ed8f8f;
-  --lozen-status-neutral-bg: #f2f5f8;
-  --lozen-status-neutral-text: #334155;
-  --lozen-status-neutral-border: #b8c4d3;
-
-  --lozen-focus-workplace-bg: #e7f7ef;
-  --lozen-focus-workplace-text: #105f38;
-  --lozen-focus-workplace-border: #62c78f;
-  --lozen-focus-insurance-bg: #e9f2ff;
-  --lozen-focus-insurance-text: #194c9b;
-  --lozen-focus-insurance-border: #7aa7ed;
-  --lozen-focus-education-bg: #fff5d6;
-  --lozen-focus-education-text: #7c4a03;
-  --lozen-focus-education-border: #e1ae37;
-  --lozen-focus-omnibus-bg: #fcebf5;
-  --lozen-focus-omnibus-text: #8c1d54;
-  --lozen-focus-omnibus-border: #e186b5;
-  --lozen-focus-advisory-bg: #f0eefe;
-  --lozen-focus-advisory-text: #5631a3;
-  --lozen-focus-advisory-border: #a997e8;
-  --lozen-focus-military-bg: #eeefff;
-  --lozen-focus-military-text: #3730a3;
-  --lozen-focus-military-border: #9ea8f2;
-
-  --lozen-classification-dashboard-delay-bg: #e4f5fb;
-  --lozen-classification-dashboard-delay-text: #075985;
-  --lozen-classification-dashboard-delay-border: #69bde3;
-  --lozen-classification-tacere-bg: #e5f6f2;
-  --lozen-classification-tacere-text: #0f665d;
-  --lozen-classification-tacere-border: #65cdbd;
-  --lozen-classification-invisible-attrition-bg: #fff0c2;
-  --lozen-classification-invisible-attrition-text: #8b4a02;
-  --lozen-classification-invisible-attrition-border: #dfa31b;
-  --lozen-classification-outside-scope-bg: #eef2f7;
-  --lozen-classification-outside-scope-text: #334155;
-  --lozen-classification-outside-scope-border: #aebccd;
-  --lozen-classification-none-bg: #f8fafc;
-  --lozen-classification-none-text: #64748b;
-  --lozen-classification-none-border: #cbd5e1;
-}
-
-.lozen-tracker-page {
-  background: var(--lozen-tracker-page-bg);
-  color: var(--color-base-800);
-}
-
-.lozen-tracker-hero {
-  border-bottom: 1px solid var(--lozen-tracker-panel-border);
-  background: var(--lozen-tracker-hero-bg);
-}
-
-.lozen-tracker-section {
-  background: var(--lozen-tracker-section-bg);
-}
-
-.lozen-tracker-section--muted {
-  background:
-    linear-gradient(180deg, rgba(247, 249, 252, 0), rgba(216, 225, 238, 0.42)),
-    var(--lozen-tracker-muted-section-bg);
-}
-
-.lozen-tracker-section--data {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(239, 244, 250, 0.9)),
-    var(--lozen-tracker-page-bg);
-}
-
-.lozen-tracker-insight-card,
-.lozen-tracker-definition-card {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--lozen-tracker-panel-border);
-  border-radius: 1.5rem;
-  background: var(--lozen-tracker-panel-bg);
-  box-shadow: 0 18px 44px rgba(6, 23, 47, 0.1);
-}
-
-.lozen-tracker-insight-card::before,
-.lozen-tracker-definition-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 0.25rem;
-  background: linear-gradient(180deg, var(--color-accent-500), rgba(216, 204, 63, 0.16));
-}
-
-.lozen-tracker-stat {
-  display: inline-grid;
-  min-width: 7rem;
-  gap: 0.1rem;
-  border: 1px solid var(--lozen-tracker-panel-border);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.76);
-  padding: 0.55rem 0.9rem;
-  box-shadow: 0 10px 25px rgba(6, 23, 47, 0.06);
-}
-
-.lozen-tracker-stat strong {
-  color: var(--color-base-950);
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1;
-}
-
-.lozen-tracker-stat span {
-  color: var(--color-base-600);
-  font-family: var(--font-sans);
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.11em;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.lozen-tracker-table-wrap {
-  border: 1px solid var(--lozen-tracker-table-border-strong);
-  border-radius: 1.25rem;
-  background: var(--lozen-tracker-section-bg);
-  box-shadow: var(--lozen-tracker-table-shadow);
-  outline: 1px solid rgba(255, 255, 255, 0.76);
-}
-
-.lozen-tracker-table {
-  min-width: 1380px;
-  border-collapse: separate;
-  border-spacing: 0;
-  background: var(--lozen-tracker-section-bg);
-}
-
-.lozen-tracker-table--compact {
-  min-width: 1200px;
-}
-
-.lozen-tracker-th {
-  position: sticky;
-  top: 0;
-  z-index: 3;
-  border-top: 0;
-  border-right: 1px solid rgba(255, 255, 255, 0.13);
-  border-bottom: 1px solid var(--lozen-tracker-table-border-strong);
-  border-left: 0;
-  background: linear-gradient(180deg, #071a34 0%, #06172f 100%);
-  padding: 1.1rem 1.05rem;
-  font-size: 0.73rem;
-  letter-spacing: 0.16em;
-}
-
-.lozen-tracker-th:first-child {
-  position: sticky;
-  left: 0;
-  z-index: 5;
-  border-top-left-radius: 1.15rem;
-}
-
-.lozen-tracker-th:last-child {
-  border-top-right-radius: 1.15rem;
-}
-
-.lozen-tracker-td,
-.lozen-tracker-status-cell {
-  border-top: 0;
-  border-right: 1px solid var(--lozen-tracker-table-border);
-  border-bottom: 1px solid var(--lozen-tracker-table-border);
-  border-left: 0;
-  padding: 1.15rem 1.05rem;
-  font-size: 1rem;
-  line-height: 1.72;
-}
-
-.lozen-tracker-row:nth-child(even) {
-  background: var(--lozen-tracker-row-alt-bg);
-}
-
-.lozen-tracker-row:hover,
-.lozen-tracker-row:focus-within {
-  background: var(--lozen-tracker-row-hover-bg);
-}
-
-.lozen-tracker-row:hover > :first-child,
-.lozen-tracker-row:focus-within > :first-child {
-  box-shadow:
-    inset 0.28rem 0 0 var(--lozen-tracker-row-hover-border),
-    12px 0 24px rgba(6, 23, 47, 0.08);
-}
-
-.lozen-tracker-row > :first-child {
-  position: sticky;
-  left: 0;
-  z-index: 2;
-  background: var(--lozen-tracker-sticky-bg);
-  box-shadow: 10px 0 22px rgba(6, 23, 47, 0.05);
-}
-
-.lozen-tracker-row:nth-child(even) > :first-child {
-  background: var(--lozen-tracker-sticky-alt-bg);
-}
-
-.lozen-tracker-row:hover > *,
-.lozen-tracker-row:focus-within > * {
-  background: var(--lozen-tracker-row-hover-bg);
-}
-
-.lozen-tracker-status-cell {
-  color: var(--status-text, var(--color-base-700));
-  background: transparent;
-  font-weight: 700;
-}
-
-.lozen-tracker-status-cell.lozen-tracker-status--enacted,
-.lozen-tracker-status-cell.lozen-tracker-status--active,
-.lozen-tracker-status-cell.lozen-tracker-status--failed,
-.lozen-tracker-status-cell.lozen-tracker-status--neutral {
-  background: transparent;
-  border-color: var(--lozen-tracker-table-border);
-}
-
-.lozen-tracker-status-badge {
-  margin-top: 0;
-  box-shadow: 0 8px 18px rgba(6, 23, 47, 0.06);
-}
-
-.lozen-tracker-status-badge.lozen-tracker-status--enacted,
-.lozen-tracker-status-badge.lozen-tracker-status--active,
-.lozen-tracker-status-badge.lozen-tracker-status--failed,
-.lozen-tracker-status-badge.lozen-tracker-status--neutral {
-  background: var(--status-bg);
-  color: var(--status-text);
-  border-color: var(--status-border);
-}
-
-.lozen-data-badge {
-  min-height: 2rem;
-  box-shadow: 0 8px 18px rgba(6, 23, 47, 0.045);
-}
-
-.lozen-data-badge:hover,
-.lozen-data-badge:focus-visible {
-  filter: saturate(1.08) contrast(1.02);
-}
-
-.lozen-tracker-mobile-card {
-  border-color: var(--lozen-tracker-panel-border);
-  border-radius: 1.5rem;
-  background: var(--lozen-tracker-section-bg);
-  box-shadow: var(--lozen-tracker-panel-shadow);
-}
-
-.lozen-tracker-mobile-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 0.25rem;
-  background: linear-gradient(180deg, var(--color-accent-500), rgba(216, 204, 63, 0.16));
-}
-
-.lozen-tracker-mobile-label {
-  color: var(--color-base-600);
-}
-
-.lozen-tracker-mobile-value {
-  color: var(--color-base-800);
-  font-size: 1rem;
-}
-
-.lozen-tracker-section h2[id] {
-  scroll-margin-top: 8rem;
-}
-
-.lozen-tracker-th:nth-child(1),
-.lozen-tracker-row > :nth-child(1) {
-  width: 9.5rem;
-  min-width: 9.5rem;
-}
-
-.lozen-tracker-th:nth-child(2),
-.lozen-tracker-row > :nth-child(2) {
-  width: 13.5rem;
-  min-width: 13.5rem;
-}
-
-.lozen-tracker-th:nth-child(3),
-.lozen-tracker-row > :nth-child(3),
-.lozen-tracker-th:nth-child(4),
-.lozen-tracker-row > :nth-child(4),
-.lozen-tracker-th:nth-child(7),
-.lozen-tracker-row > :nth-child(7) {
-  width: 11rem;
-  min-width: 11rem;
-}
-
-.lozen-tracker-th:nth-child(5),
-.lozen-tracker-row > :nth-child(5),
-.lozen-tracker-th:nth-child(6),
-.lozen-tracker-row > :nth-child(6),
-.lozen-tracker-th:nth-child(8),
-.lozen-tracker-row > :nth-child(8) {
-  width: 18rem;
-  min-width: 18rem;
-}
-
-.lozen-tracker-td,
-.lozen-tracker-status-cell {
-  overflow-wrap: break-word;
-}
