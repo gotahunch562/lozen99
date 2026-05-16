@@ -331,7 +331,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
                     </h2>
                   </div>
 
-                  <div class={tableWrapClass(section.theme)}>
+                  <div class={tableWrapClass(section.theme)} tabindex="0" role="region" aria-label={`${section.title} legislation table`}>
                     <table class={tableClass}>
                       <thead>
                         <tr>
@@ -544,7 +544,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
               </h2>
             </div>
 
-            <div class={tableWrapClass("failed")}>
+            <div class={tableWrapClass("failed")} tabindex="0" role="region" aria-label="Did Not Pass legislation table">
               <table class={compactTableClass}>
                 <thead>
                   <tr>
@@ -698,7 +698,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
               </h2>
             </div>
 
-            <div class={tableWrapClass("advisory")}>
+            <div class={tableWrapClass("advisory")} tabindex="0" role="region" aria-label="Advisory and non-legislative instruments table">
               <table class={compactTableClass}>
                 <thead>
                   <tr>
