@@ -191,7 +191,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
               Last updated: April 30, 2026
             </p>
 
-            <div class="mt-8 flex flex-wrap gap-3" aria-label="Tracker record counts">
+            <div class="lozen-tracker-stat-grid" aria-label="Tracker record counts">
               {
                 trackerStats.map((stat) => (
                   <div class="lozen-tracker-stat">
@@ -285,7 +285,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
             How the tracker reads the legislative record
           </h2>
 
-          <dl class="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 lg:grid-cols-4">
+          <dl class="lozen-tracker-definition-grid">
             {
               columnDefinitions.map(([term, definition]) => (
                 <div class="lozen-tracker-definition-card p-5 lg:rounded-3xl">
@@ -419,7 +419,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
                     </table>
                   </div>
 
-                  <div class="grid gap-4 lg:hidden">
+                  <div class="lozen-tracker-mobile-grid">
                     {
                       section.rows.map((row) => {
                         const c = classification(row.classification);
@@ -605,7 +605,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
               </table>
             </div>
 
-            <div class="grid gap-4 lg:hidden">
+            <div class="lozen-tracker-mobile-grid">
               {
                 DID_NOT_PASS.map((row) => (
                   <article class={mobileCardClass}>
@@ -779,7 +779,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
               </table>
             </div>
 
-            <div class="grid gap-4 lg:hidden">
+            <div class="lozen-tracker-mobile-grid">
               {
                 ADVISORY.map((row) => {
                   const c = classification(row.classification);
