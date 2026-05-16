@@ -2655,3 +2655,193 @@ a .lozen-tracker-status-badge:focus-visible {
   --badge-text: var(--lozen-policy-red-900);
   --badge-border: var(--lozen-policy-red-900);
 }
+
+/* Tracker full policy-palette application
+   Final color-only layer. Keeps accepted header, methodology band, grid, scroll, and table sizing.
+   Purpose: make Focus, Status, and Classification visually distinct by using the full policy palette. */
+:root {
+  --lozen-policy-teal-950: #004653;
+  --lozen-policy-teal-900: #005f73;
+  --lozen-policy-cyan-700: #0a9396;
+  --lozen-policy-aqua-300: #94d2bd;
+  --lozen-policy-wheat-200: #e9d8a6;
+  --lozen-policy-gold-500: #ee9b00;
+  --lozen-policy-caramel-600: #ca6702;
+  --lozen-policy-rust-700: #bb3e03;
+  --lozen-policy-iron-800: #ae2012;
+  --lozen-policy-red-900: #9b2226;
+}
+
+/* Base data chips get the same dimensional behavior, but color comes from each semantic class. */
+.lozen-data-badge {
+  border-width: 2px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border-color: var(--badge-border);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.48),
+    0 2px 0 color-mix(in oklch, var(--badge-border) 62%, rgba(6, 23, 47, 0.18)),
+    0 10px 18px rgba(6, 23, 47, 0.13);
+}
+
+/* Focus chips: each focus receives a separate palette color.
+   These are intentionally stronger than the prior pale chips so the tracker reads as a data asset. */
+.lozen-data-badge--focus-workplace {
+  --badge-bg: linear-gradient(180deg, #087286 0%, var(--lozen-policy-teal-900) 58%, var(--lozen-policy-teal-950) 100%);
+  --badge-text: #ffffff;
+  --badge-border: var(--lozen-policy-aqua-300);
+}
+
+.lozen-data-badge--focus-insurance {
+  --badge-bg: linear-gradient(180deg, #18aaad 0%, var(--lozen-policy-cyan-700) 58%, #067174 100%);
+  --badge-text: #ffffff;
+  --badge-border: #b9ebe0;
+}
+
+.lozen-data-badge--focus-education {
+  --badge-bg: linear-gradient(180deg, #f4e5bb 0%, var(--lozen-policy-wheat-200) 58%, #cdb36a 100%);
+  --badge-text: #4f3300;
+  --badge-border: #c5a555;
+}
+
+.lozen-data-badge--focus-omnibus {
+  --badge-bg: linear-gradient(180deg, #ffb72a 0%, var(--lozen-policy-gold-500) 58%, #be7600 100%);
+  --badge-text: #06172f;
+  --badge-border: var(--lozen-policy-caramel-600);
+}
+
+.lozen-data-badge--focus-advisory {
+  --badge-bg: linear-gradient(180deg, #e28118 0%, var(--lozen-policy-caramel-600) 58%, #8c4200 100%);
+  --badge-text: #ffffff;
+  --badge-border: #f2bb74;
+}
+
+.lozen-data-badge--focus-military {
+  --badge-bg: linear-gradient(180deg, #d94d11 0%, var(--lozen-policy-rust-700) 58%, #7b2503 100%);
+  --badge-text: #ffffff;
+  --badge-border: #f0a176;
+}
+
+.lozen-data-badge--focus-veteran-care {
+  --badge-bg: linear-gradient(180deg, #c72c1b 0%, var(--lozen-policy-iron-800) 58%, #711107 100%);
+  --badge-text: #ffffff;
+  --badge-border: #e08a80;
+}
+
+/* Status badges keep action-state meaning and use the remaining darker sequence.
+   This prevents focus chips and status chips from collapsing into the same teal/cyan family. */
+.lozen-tracker-status--enacted {
+  --status-bg: var(--lozen-policy-teal-900);
+  --status-text: #ffffff;
+  --status-border: var(--lozen-policy-aqua-300);
+  background: linear-gradient(180deg, #087286 0%, var(--lozen-policy-teal-900) 55%, var(--lozen-policy-teal-950) 100%);
+  color: var(--status-text);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-status--signed {
+  --status-bg: var(--lozen-policy-cyan-700);
+  --status-text: #ffffff;
+  --status-border: #b9ebe0;
+  background: linear-gradient(180deg, #18aaad 0%, var(--lozen-policy-cyan-700) 55%, #067174 100%);
+  color: var(--status-text);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-status--passed {
+  --status-bg: var(--lozen-policy-aqua-300);
+  --status-text: var(--lozen-policy-teal-950);
+  --status-border: var(--lozen-policy-teal-900);
+  background: linear-gradient(180deg, #c7ecdf 0%, var(--lozen-policy-aqua-300) 58%, #6fb29e 100%);
+  color: var(--status-text);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-status--calendar {
+  --status-bg: var(--lozen-policy-wheat-200);
+  --status-text: #4f3300;
+  --status-border: #c5a555;
+  background: linear-gradient(180deg, #f4e5bb 0%, var(--lozen-policy-wheat-200) 58%, #cdb36a 100%);
+  color: var(--status-text);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-status--committee {
+  --status-bg: var(--lozen-policy-gold-500);
+  --status-text: #06172f;
+  --status-border: var(--lozen-policy-caramel-600);
+  background: linear-gradient(180deg, #ffb72a 0%, var(--lozen-policy-gold-500) 58%, #be7600 100%);
+  color: var(--status-text);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-status--returned {
+  --status-bg: var(--lozen-policy-caramel-600);
+  --status-text: #ffffff;
+  --status-border: #f2bb74;
+  background: linear-gradient(180deg, #e28118 0%, var(--lozen-policy-caramel-600) 58%, #8c4200 100%);
+  color: var(--status-text);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-status--introduced {
+  --status-bg: var(--lozen-policy-rust-700);
+  --status-text: #ffffff;
+  --status-border: #f0a176;
+  background: linear-gradient(180deg, #d94d11 0%, var(--lozen-policy-rust-700) 58%, #7b2503 100%);
+  color: var(--status-text);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-status--study {
+  --status-bg: var(--lozen-policy-iron-800);
+  --status-text: #ffffff;
+  --status-border: #e08a80;
+  background: linear-gradient(180deg, #c72c1b 0%, var(--lozen-policy-iron-800) 58%, #711107 100%);
+  color: var(--status-text);
+  border-color: var(--status-border);
+}
+
+.lozen-tracker-status--died,
+.lozen-tracker-status--failed {
+  --status-bg: var(--lozen-policy-red-900);
+  --status-text: #ffffff;
+  --status-border: #d57b80;
+  background: linear-gradient(180deg, #b92a2d 0%, var(--lozen-policy-red-900) 58%, #641216 100%);
+  color: var(--status-text);
+  border-color: var(--status-border);
+}
+
+/* Classification chips are concept markers. They are intentionally darker-outline cards,
+   not identical to either focus or status badges. */
+.lozen-data-badge--classification-dashboard-delay {
+  --badge-bg: linear-gradient(180deg, #d7f0f1 0%, #b6e0e2 100%);
+  --badge-text: var(--lozen-policy-teal-950);
+  --badge-border: var(--lozen-policy-cyan-700);
+}
+
+.lozen-data-badge--classification-tacere {
+  --badge-bg: linear-gradient(180deg, #d5efe8 0%, #b7dcd1 100%);
+  --badge-text: var(--lozen-policy-teal-950);
+  --badge-border: var(--lozen-policy-teal-900);
+}
+
+.lozen-data-badge--classification-invisible-attrition {
+  --badge-bg: linear-gradient(180deg, #ffe0a1 0%, #e8bd66 100%);
+  --badge-text: #653200;
+  --badge-border: var(--lozen-policy-caramel-600);
+}
+
+.lozen-data-badge--classification-outside-scope {
+  --badge-bg: linear-gradient(180deg, #efc0bc 0%, #db918b 100%);
+  --badge-text: var(--lozen-policy-red-900);
+  --badge-border: var(--lozen-policy-red-900);
+}
+
+.lozen-data-badge--classification-none,
+.lozen-data-badge--neutral {
+  --badge-bg: linear-gradient(180deg, #eef2f6 0%, #d5dee9 100%);
+  --badge-text: var(--color-base-700);
+  --badge-border: var(--color-base-400);
+}
+
