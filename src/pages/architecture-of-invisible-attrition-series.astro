@@ -1,8 +1,5 @@
 ---
-import AuthorityPage from "@/components/authority/AuthorityPage.astro";
-import AuthorityRail from "@/components/authority/AuthorityRail.astro";
-import AuthoritySeries from "@/components/authority/AuthoritySeries.astro";
-import AuthorityRelated from "@/components/authority/AuthorityRelated.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const title = "The Architecture of Invisible Attrition — Executive Report Series";
 
@@ -11,6 +8,11 @@ const seoTitle =
 
 const metaDescription =
   "A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure.";
+
+const image = "/images/unrecorded-talent-infrastructure-gap.webp";
+
+const imageAlt =
+  "A diagnostic visualization of corporate retention infrastructure and the data gaps that remain outside formal reporting systems.";
 
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -29,22 +31,74 @@ const articleJsonLd = {
   url: "https://www.lozenadvisory.com/architecture-of-invisible-attrition-series",
 };
 
-const railItems = [
+const reports = [
+  {
+    number: "01",
+    title:
+      "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most",
+    href: "/voluntary-benefit-disclosure-gap",
+    publishLabel: "Published: April 27, 2026",
+    focus: "Voluntary benefit architecture",
+    body: [
+      "Every voluntary benefit program in this category shares one design feature: the woman has to initiate access before protection activates. Maven Clinic is among the most recognized names in the space. Its own data documents that 44% of millennials and 34% of Gen X women experiencing menopause have avoided discussing symptoms at work. Those are the women the benefit was purchased to reach. They are also the women least likely to log in.",
+      "Enrollment numbers do not reflect coverage. They reflect willingness to be visible.",
+    ],
+    cta: "Read Report One: Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most →",
+  },
+  {
+    number: "02",
+    title:
+      "Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers",
+    href: "/billable-hour-visibility-tax",
+    publishLabel: "Published: April 28, 2026",
+    focus: "Performance management systems and professional services",
+    body: [
+      "The ABA mental health study documents attorney wellbeing at scale. What it cannot document is the population it never reached: the women who read the findings, recognized themselves, and kept working. A billable-hour system records output. It does not record the cost of producing it. In a data-driven firm, silence is recorded as stability.",
+    ],
+    cta: "Read Report Two →",
+  },
+  {
+    number: "03",
+    title: "Succession Planning and the Retention Risk Data Gap",
+    href: "/succession-planning-retention-risk-data-gap",
+    publishLabel: "Publishing: May 2026",
+    focus: "Attrition data and succession planning",
+    body: [
+      "The Bank of America and National Menopause Foundation research identified a 73-point gap between what HR believes it knows and what employees have disclosed. That gap is not a communication failure. It is the operating condition of every succession plan built on that data. Organizations are making retention decisions against a dataset that reflects only the women who were willing to disclose.",
+    ],
+    cta: "Read Report Three →",
+  },
+  {
+    number: "04",
+    title: "The Leadership Pipeline Is Draining From Both Ends",
+    href: "/leadership-pipeline-manager-engagement",
+    publishLabel: "Publishing: May 2026",
+    focus: "Leadership pipeline and manager engagement",
+    body: [
+      "The Gallup 2026 State of the Global Workplace report confirmed that manager engagement dropped nine points between 2022 and 2025. The pipeline is thinning from disengagement above. Invisible Attrition℠ is draining it from below. Both losses are occurring in the gap between what the organization can measure and what its existing data sources were never built to count. The succession plan inherits both gaps simultaneously.",
+    ],
+    cta: "Read Report Four →",
+  },
+];
+
+const contextItems = [
   {
     label: "Series Type",
     value: "Executive report series",
   },
   {
     label: "Series Scope",
-    value: "Voluntary benefits, performance management systems, attrition data, and leadership pipeline design",
+    value:
+      "Voluntary benefits, performance management systems, attrition data, and leadership pipeline design",
   },
   {
     label: "Core Condition",
-    value: "Each system depends on an initiating act the organization does not control.",
+    value:
+      "Each system depends on an initiating act the organization does not control.",
   },
 ];
 
-const railLinks = [
+const frameworkLinks = [
   {
     label: "Invisible Attrition℠ Framework",
     href: "/invisible-attrition",
@@ -58,200 +112,522 @@ const railLinks = [
     href: "/retention-risk-analysis",
   },
 ];
-
-const seriesItems = [
-  {
-    number: "01",
-    title: "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most",
-    href: "/voluntary-benefit-disclosure-gap",
-    status: "available",
-  },
-  {
-    number: "02",
-    title: "Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers",
-    href: "/billable-hour-visibility-tax",
-    status: "available",
-  },
-  {
-    number: "03",
-    title: "Succession Planning and the Retention Risk Data Gap",
-    href: "/succession-planning-retention-risk-data-gap",
-    status: "available",
-  },
-  {
-    number: "04",
-    title: "The Leadership Pipeline Is Draining From Both Ends",
-    href: "/leadership-pipeline-manager-engagement",
-    status: "available",
-  },
-];
-
-const relatedItems = [
-  {
-    eyebrow: "Framework",
-    title: "Invisible Attrition℠",
-    href: "/invisible-attrition",
-    description:
-      "The analytical foundation for the series and the framework for leadership capacity erosion prior to organizational detection.",
-  },
-  {
-    eyebrow: "B2B Entry Point",
-    title: "Retention Risk Analysis",
-    href: "/retention-risk-analysis",
-    description:
-      "A search-capture page connecting replacement cost, workforce attrition risk assessment, and the limits of standard retention analysis.",
-  },
-];
 ---
 
-<AuthorityPage
-  eyebrow="Executive Report Series"
+<BaseLayout
   title={title}
   description={metaDescription}
-  image="/images/unrecorded-talent-infrastructure-gap.webp"
-  imageAlt="A diagnostic visualization of corporate retention infrastructure and the data gaps that remain outside formal reporting systems."
-  dateLabel="May 2026"
-  backHref="/blog"
-  backLabel="Back to Research"
-  articleJsonLd={articleJsonLd}
+  ogImage={image}
+  ogImageAlt={imageAlt}
+  ogType="article"
 >
-  <AuthorityRail
-    slot="rail"
-    title="Series Context"
-    items={railItems}
-    links={railLinks}
-    cta={{
-      label: "Strategic Briefing",
-      title: "Invisible Attrition℠ Retention Risk Audit",
-      description:
-        "A strategic consultation to identify why clean performance records and engagement scores can mask compounding leadership continuity risk.",
-      href: "/book-appointment",
-    }}
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(articleJsonLd)}
   />
 
-  <div class="authority-article-body">
-    <p>
-      Lozen Advisory has released a four-part audit of corporate retention infrastructure.
-    </p>
+  <main class="series-hub">
+    <section class="series-hero">
+      <div class="series-hero__inner">
+        <div class="series-hero__copy">
+          <a href="/blog" class="series-back">← Back to Research</a>
 
-    <p>
-      The audit examines a single structural condition across voluntary benefits, performance management systems, attrition data, and leadership pipeline design: each depends on an initiating act the organization does not control. The system requires her to move first. The population most likely to move is not the population most at risk of exit.
-    </p>
+          <div class="series-kicker">
+            <span>Executive Report Series</span>
+            <span>May 2026</span>
+          </div>
 
-    <p>
-      The result is a consistent pattern across all four layers of the retention architecture. The organization can only access the population that enters the system. It can only measure the population that produces variance inside it. It can only record the population that generated data in the first place. And when that population begins to thin, the pipeline gap compounds before the succession plan registers it.
-    </p>
+          <h1>{title}</h1>
 
-    <p>
-      That constraint is not a failure of execution. It is a property of the system design.
-    </p>
+          <p class="series-description">
+            {metaDescription}
+          </p>
+        </div>
 
-    <p>
-      Each report isolates one layer of that design. Together, they form a single audit of what corporate retention systems are built to capture and what they systematically exclude.
-    </p>
+        <figure class="series-hero__figure">
+          <img src={image} alt={imageAlt} loading="eager" decoding="async" />
+        </figure>
+      </div>
+    </section>
 
-    <h2>Report One: Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most</h2>
+    <section class="series-main">
+      <div class="series-content">
+        <div class="series-intro">
+          <p>
+            Lozen Advisory has released a four-part audit of corporate retention infrastructure.
+          </p>
 
-    <p>
-      <strong>Published:</strong> April 27, 2026<br />
-      <strong>Focus:</strong> Voluntary benefit architecture
-    </p>
+          <p>
+            The audit examines a single structural condition across voluntary benefits, performance management systems, attrition data, and leadership pipeline design: each depends on an initiating act the organization does not control. The system requires her to move first. The population most likely to move is not the population most at risk of exit.
+          </p>
 
-    <p>
-      Every voluntary benefit program in this category shares one design feature: the woman has to initiate access before protection activates. Maven Clinic is among the most recognized names in the space. Its own data documents that 44% of millennials and 34% of Gen X women experiencing menopause have avoided discussing symptoms at work. Those are the women the benefit was purchased to reach. They are also the women least likely to log in.
-    </p>
+          <p>
+            The result is a consistent pattern across all four layers of the retention architecture. The organization can only access the population that enters the system. It can only measure the population that produces variance inside it. It can only record the population that generated data in the first place. And when that population begins to thin, the pipeline gap compounds before the succession plan registers it.
+          </p>
 
-    <p>
-      Enrollment numbers do not reflect coverage. They reflect willingness to be visible.
-    </p>
+          <p>
+            That constraint is not a failure of execution. It is a property of the system design.
+          </p>
 
-    <p>
-      <a href="https://www.lozenadvisory.com/voluntary-benefit-disclosure-gap">Read Report One: Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most →</a>
-    </p>
+          <p>
+            Each report isolates one layer of that design. Together, they form a single audit of what corporate retention systems are built to capture and what they systematically exclude.
+          </p>
+        </div>
 
-    <h2>Report Two: Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers</h2>
+        <section class="report-list" aria-label="Executive report series">
+          {
+            reports.map((report) => (
+              <article class="report-card">
+                <div class="report-card__number">{report.number}</div>
 
-    <p>
-      <strong>Published:</strong> April 28, 2026<br />
-      <strong>Focus:</strong> Performance management systems and professional services
-    </p>
+                <div class="report-card__body">
+                  <h2>{report.title}</h2>
 
-    <p>
-      The ABA mental health study documents attorney wellbeing at scale. What it cannot document is the population it never reached: the women who read the findings, recognized themselves, and kept working. A billable-hour system records output. It does not record the cost of producing it. In a data-driven firm, silence is recorded as stability.
-    </p>
+                  <p class="report-card__meta">
+                    <strong>{report.publishLabel}</strong>
+                    <span>{report.focus}</span>
+                  </p>
 
-    <p>
-      <a href="https://www.lozenadvisory.com/billable-hour-visibility-tax">Read Report Two →</a>
-    </p>
+                  {report.body.map((paragraph) => (
+                    <p>{paragraph}</p>
+                  ))}
 
-    <h2>Report Three: Succession Planning and the Retention Risk Data Gap</h2>
+                  <a href={report.href}>{report.cta}</a>
+                </div>
+              </article>
+            ))
+          }
+        </section>
 
-    <p>
-      <strong>Publishing:</strong> May 2026<br />
-      <strong>Focus:</strong> Attrition data and succession planning
-    </p>
+        <section class="structural-argument">
+          <h2>The Structural Argument</h2>
 
-    <p>
-      The Bank of America and National Menopause Foundation research identified a 73-point gap between what HR believes it knows and what employees have disclosed. That gap is not a communication failure. It is the operating condition of every succession plan built on that data. Organizations are making retention decisions against a dataset that reflects only the women who were willing to disclose.
-    </p>
+          <p>
+            Across all four reports, the same condition operates. The system requires her to move first. The women least likely to move are the women operating in performance-driven environments where disclosure carries professional risk. They appear in utilization reports as non-participants. They appear in performance reviews as stable. They appear in attrition data as standard separations. They appear in succession plans as losses the organization had no analytical reason to anticipate.
+          </p>
 
-    <p>
-      <a href="https://www.lozenadvisory.com/succession-planning-retention-risk-data-gap">Read Report Three →</a>
-    </p>
+          <p>
+            The data is accurate. It is structurally incomplete.
+          </p>
 
-    <h2>Report Four: The Leadership Pipeline Is Draining From Both Ends</h2>
+          <p>
+            The data was never created because she never entered the system, and the decisions built on that data reflect a workforce the organization has never fully seen.
+          </p>
 
-    <p>
-      <strong>Publishing:</strong> May 2026<br />
-      <strong>Focus:</strong> Leadership pipeline and manager engagement
-    </p>
+          <p>
+            The <a href="/invisible-attrition">Invisible Attrition℠ framework</a> is the analytical foundation for this series. The published SSRN paper is available at <a href="http://ssrn.com/abstract=6397780">http://ssrn.com/abstract=6397780</a>.
+          </p>
+        </section>
 
-    <p>
-      The Gallup 2026 State of the Global Workplace report confirmed that manager engagement dropped nine points between 2022 and 2025. The pipeline is thinning from disengagement above. Invisible Attrition℠ is draining it from below. Both losses are occurring in the gap between what the organization can measure and what its existing data sources were never built to count. The succession plan inherits both gaps simultaneously.
-    </p>
+        <section class="series-cta">
+          <a href="/request-briefing">
+            Schedule an Invisible Attrition℠ Retention Risk Audit →
+          </a>
 
-    <p>
-      <a href="https://www.lozenadvisory.com/leadership-pipeline-manager-engagement">Read Report Four →</a>
-    </p>
+          <p>
+            A strategic consultation to identify why clean performance records and engagement scores can mask compounding leadership continuity risk.
+          </p>
+        </section>
+      </div>
 
-    <h2>The Structural Argument</h2>
+      <aside class="series-rail" aria-label="Series context">
+        <div class="series-rail__card">
+          <h2>Series Context</h2>
 
-    <p>
-      Across all four reports, the same condition operates. The system requires her to move first. The women least likely to move are the women operating in performance-driven environments where disclosure carries professional risk. They appear in utilization reports as non-participants. They appear in performance reviews as stable. They appear in attrition data as standard separations. They appear in succession plans as losses the organization had no analytical reason to anticipate.
-    </p>
+          <dl>
+            {
+              contextItems.map((item) => (
+                <div>
+                  <dt>{item.label}</dt>
+                  <dd>{item.value}</dd>
+                </div>
+              ))
+            }
+          </dl>
+        </div>
 
-    <p>
-      The data is accurate. It is structurally incomplete.
-    </p>
+        <div class="series-rail__card">
+          <h2>Related Architecture</h2>
 
-    <p>
-      The data was never created because she never entered the system, and the decisions built on that data reflect a workforce the organization has never fully seen.
-    </p>
+          <nav aria-label="Related architecture links">
+            {
+              frameworkLinks.map((link) => (
+                <a href={link.href}>{link.label}</a>
+              ))
+            }
+          </nav>
+        </div>
+      </aside>
+    </section>
+  </main>
+</BaseLayout>
 
-    <p>
-      The <a href="https://www.lozenadvisory.com/invisible-attrition">Invisible Attrition℠ framework</a> is the analytical foundation for this series. The published SSRN paper is available at <a href="http://ssrn.com/abstract=6397780">http://ssrn.com/abstract=6397780</a>.
-    </p>
+<style>
+  .series-hub {
+    background: var(--color-base-50);
+    color: var(--color-base-950);
+  }
 
-    <div class="mt-12 rounded-3xl border border-accent-400 bg-accent-50 p-6 shadow-sm transition-all duration-300 hover:border-accent-600 hover:bg-accent-100 sm:p-8">
-      <a
-        href="https://www.lozenadvisory.com/request-briefing"
-        class="inline-flex text-base font-semibold text-base-950 no-underline"
-      >
-        Schedule an Invisible Attrition℠ Retention Risk Audit →
-      </a>
-      <p class="mt-4 text-sm leading-6 text-base-700">
-        A strategic consultation to identify why clean performance records and engagement scores can mask compounding leadership continuity risk.
-      </p>
-    </div>
-  </div>
+  .series-hero {
+    border-bottom: 1px solid var(--color-base-200);
+    background:
+      linear-gradient(135deg, rgba(6, 23, 47, 0.04), rgba(245, 239, 224, 0.54)),
+      var(--color-base-50);
+  }
 
-  <div class="authority-bottom-stack">
-    <AuthoritySeries
-      title="The Architecture of Invisible Attrition℠ — Executive Report Series"
-      description="A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure."
-      items={seriesItems}
-    />
+  .series-hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    width: min(100%, 80rem);
+    margin-inline: auto;
+    padding: 2rem 2rem 3rem;
+  }
 
-    <AuthorityRelated items={relatedItems} />
-  </div>
-</AuthorityPage>
+  .series-back {
+    display: inline-flex;
+    color: var(--color-base-600);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 220ms ease;
+  }
+
+  .series-back:hover,
+  .series-back:focus-visible {
+    color: var(--color-accent-700);
+  }
+
+  .series-kicker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+    margin-top: 2rem;
+    color: var(--color-base-600);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .series-kicker span:first-child {
+    border-left: 1px solid var(--color-accent-500);
+    padding-left: 1rem;
+    color: var(--color-base-800);
+  }
+
+  .series-hero h1 {
+    max-width: 48rem;
+    margin: 1.35rem 0 0;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: clamp(2.15rem, 5vw, 4.15rem);
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+  }
+
+  .series-description {
+    max-width: 44rem;
+    margin: 1.25rem 0 0;
+    color: var(--color-base-700);
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.7;
+  }
+
+  .series-hero__figure {
+    align-self: start;
+    overflow: hidden;
+    margin: 0;
+    border: 1px solid var(--color-base-200);
+    border-radius: 1.5rem;
+    background: var(--color-base-100);
+    box-shadow: 0 18px 45px rgba(6, 23, 47, 0.08);
+  }
+
+  .series-hero__figure img {
+    display: block;
+    width: 100%;
+    height: clamp(13rem, 24vw, 19rem);
+    object-fit: cover;
+  }
+
+  .series-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    width: min(100%, 80rem);
+    margin-inline: auto;
+    padding: 3rem 2rem 4rem;
+  }
+
+  .series-content {
+    max-width: 52rem;
+  }
+
+  .series-intro {
+    padding-bottom: 2.25rem;
+    border-bottom: 1px solid var(--color-base-200);
+  }
+
+  .series-intro p,
+  .report-card p,
+  .structural-argument p,
+  .series-cta p,
+  .series-rail dd {
+    color: var(--color-base-700);
+    font-size: 1rem;
+    line-height: 1.78;
+  }
+
+  .series-intro p,
+  .report-card p,
+  .structural-argument p {
+    margin: 1.1rem 0 0;
+  }
+
+  .series-intro p:first-child,
+  .report-card p:first-of-type,
+  .structural-argument p:first-of-type {
+    margin-top: 0;
+  }
+
+  .report-list {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .report-card {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1rem;
+    border: 1px solid var(--color-base-200);
+    border-radius: 1.5rem;
+    background: #ffffff;
+    padding: 1.35rem;
+    box-shadow: 0 14px 34px rgba(6, 23, 47, 0.06);
+  }
+
+  .report-card__number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.35rem;
+    height: 2.35rem;
+    border: 1px solid var(--color-accent-400);
+    border-radius: 999px;
+    color: var(--color-base-800);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .report-card h2 {
+    margin: 0;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+    text-transform: none;
+  }
+
+  .report-card__meta {
+    display: grid;
+    gap: 0.25rem;
+    margin-top: 0.85rem !important;
+    color: var(--color-base-600) !important;
+    font-size: 0.875rem !important;
+    line-height: 1.55 !important;
+  }
+
+  .report-card__meta strong {
+    color: var(--color-base-850, var(--color-base-800));
+    font-weight: 700;
+  }
+
+  .report-card a,
+  .structural-argument a {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: var(--color-accent-700);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-accent-400);
+    transition:
+      color 220ms ease,
+      border-color 220ms ease;
+  }
+
+  .report-card a:hover,
+  .report-card a:focus-visible,
+  .structural-argument a:hover,
+  .structural-argument a:focus-visible {
+    color: var(--color-base-950);
+    border-color: var(--color-base-950);
+  }
+
+  .structural-argument {
+    margin-top: 2.5rem;
+    padding-top: 2.25rem;
+    border-top: 1px solid var(--color-base-200);
+  }
+
+  .structural-argument h2 {
+    margin: 0 0 1rem;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.6vw, 2.15rem);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+
+  .series-cta {
+    margin-top: 2.5rem;
+    border: 1px solid var(--color-accent-400);
+    border-radius: 1.5rem;
+    background: var(--color-accent-50);
+    padding: 1.5rem;
+    box-shadow: 0 14px 34px rgba(6, 23, 47, 0.07);
+  }
+
+  .series-cta a {
+    color: var(--color-base-950);
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .series-cta a:hover,
+  .series-cta a:focus-visible {
+    color: var(--color-accent-800);
+  }
+
+  .series-cta p {
+    margin: 0.85rem 0 0;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
+  .series-rail {
+    display: grid;
+    align-self: start;
+    gap: 1rem;
+  }
+
+  .series-rail__card {
+    border: 1px solid var(--color-base-200);
+    border-radius: 1.5rem;
+    background: #ffffff;
+    padding: 1.35rem;
+    box-shadow: 0 14px 34px rgba(6, 23, 47, 0.06);
+  }
+
+  .series-rail h2 {
+    margin: 0;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  .series-rail dl {
+    display: grid;
+    gap: 1rem;
+    margin: 1.25rem 0 0;
+  }
+
+  .series-rail dt {
+    color: var(--color-base-500);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  .series-rail dd {
+    margin: 0.35rem 0 0;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  .series-rail nav {
+    display: grid;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .series-rail nav a {
+    color: var(--color-accent-700);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .series-rail nav a:hover,
+  .series-rail nav a:focus-visible {
+    color: var(--color-base-950);
+  }
+
+  @media (min-width: 900px) {
+    .series-hero__inner {
+      grid-template-columns: minmax(0, 1fr) minmax(20rem, 28rem);
+      align-items: end;
+      padding-top: 3rem;
+      padding-bottom: 3.25rem;
+    }
+
+    .series-main {
+      grid-template-columns: minmax(0, 1fr) 20rem;
+      gap: 3.5rem;
+      padding-top: 3.5rem;
+    }
+
+    .series-rail {
+      position: sticky;
+      top: 7rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .series-hero__inner,
+    .series-main {
+      padding-inline: 1.25rem;
+    }
+
+    .series-hero__inner {
+      padding-top: 1.5rem;
+    }
+
+    .series-hero h1 {
+      font-size: clamp(2rem, 11vw, 3.1rem);
+    }
+
+    .series-hero__figure img {
+      height: 12.5rem;
+    }
+
+    .report-card {
+      grid-template-columns: minmax(0, 1fr);
+      padding: 1.25rem;
+    }
+
+    .report-card__number {
+      width: 2.15rem;
+      height: 2.15rem;
+    }
+
+    .series-intro p,
+    .report-card p,
+    .structural-argument p {
+      font-size: 1rem;
+      line-height: 1.72;
+    }
+  }
+</style>
