@@ -52,7 +52,7 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
 
   <article class="executive-report">
     <header class="executive-report__hero">
-      <div class="executive-report__shell">
+      <div class="executive-report__shell executive-report__hero-shell">
         <a href="/blog" class="executive-report__back">← Back to Research</a>
 
         <div class="executive-report__meta" aria-label="Report metadata">
@@ -77,7 +77,9 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
 
     <div class="executive-report__shell executive-report__layout">
       <div class="executive-report__body">
-        <slot />
+        <div class="executive-report__content">
+          <slot />
+        </div>
 
         <section class="executive-report__cta" aria-label="Strategic briefing">
           <a href="/request-briefing">{ctaTitle}</a>
@@ -113,15 +115,16 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
       var(--color-base-50);
   }
 
-  .executive-report__hero .executive-report__shell {
+  .executive-report__hero-shell {
     padding-top: 2rem;
-    padding-bottom: 2.8rem;
+    padding-bottom: 2.65rem;
   }
 
   .executive-report__back {
     display: inline-flex;
     color: var(--color-base-600);
-    font-size: 0.9rem;
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
     font-weight: 650;
     text-decoration: none;
     transition: color 180ms ease;
@@ -138,8 +141,9 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
     gap: 0.65rem 1rem;
     margin-top: 1.65rem;
     color: var(--color-base-600);
-    font-size: 0.76rem;
-    font-weight: 750;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
@@ -147,15 +151,15 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
   .executive-report__meta span:first-child {
     border-left: 1px solid var(--color-accent-500);
     padding-left: 1rem;
-    color: var(--color-base-800);
+    color: var(--color-base-900);
   }
 
   .executive-report h1 {
-    max-width: 65rem;
+    max-width: 62rem;
     margin: 1.15rem 0 0;
-    color: var(--color-base-950);
+    color: var(--color-base-900);
     font-family: var(--font-display);
-    font-size: clamp(2rem, 3.3vw, 3.25rem);
+    font-size: clamp(2rem, 3.15vw, 3.15rem);
     font-weight: 500;
     line-height: 1.08;
     letter-spacing: -0.035em;
@@ -164,23 +168,25 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
 
   .executive-report__deck {
     max-width: 52rem;
-    margin: 1.1rem 0 0;
-    color: var(--color-base-700);
-    font-size: clamp(1.05rem, 1.25vw, 1.18rem);
-    line-height: 1.62;
+    margin: 1rem 0 0;
+    color: var(--color-base-600);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.68;
   }
 
   .executive-report__series-nav {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem 1.35rem;
-    margin-top: 1.55rem;
+    margin-top: 1.5rem;
   }
 
   .executive-report__series-nav a {
     color: var(--color-accent-700);
-    font-size: 0.97rem;
-    font-weight: 750;
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 700;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition:
@@ -195,67 +201,86 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
   }
 
   .executive-report__layout {
-    padding-top: 3.1rem;
-    padding-bottom: 4.6rem;
+    padding-top: 3rem;
+    padding-bottom: 4.5rem;
   }
 
   .executive-report__body {
-    max-width: 58rem;
+    width: min(100%, 60rem);
+    margin-inline: auto;
   }
 
-  .executive-report__body p {
-    margin: 1.25rem 0 0;
-    color: var(--color-base-700);
-    font-size: clamp(1.1rem, 1.25vw, 1.18rem);
-    line-height: 1.78;
+  :global(.executive-report__content) {
+    color: var(--color-base-600);
   }
 
-  .executive-report__body p:first-child {
+  :global(.executive-report__content p) {
+    margin: 0 0 1.5rem;
+    color: var(--color-base-600);
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    line-height: 1.9;
+  }
+
+  :global(.executive-report__content h2) {
+    margin: 3rem 0 1.15rem;
+    color: var(--color-base-900);
+    font-family: var(--font-display);
+    font-size: clamp(1.65rem, 2.15vw, 2.15rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+  }
+
+  :global(.executive-report__content h2 + p) {
     margin-top: 0;
   }
 
-  .executive-report__body a {
+  :global(.executive-report__content a) {
     color: var(--color-accent-700);
     font-weight: 700;
+    text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 0.2em;
     transition: color 180ms ease;
   }
 
-  .executive-report__body a:hover,
-  .executive-report__body a:focus-visible {
-    color: var(--color-base-950);
+  :global(.executive-report__content a:hover),
+  :global(.executive-report__content a:focus-visible) {
+    color: var(--color-base-900);
   }
 
-  .executive-report__body h2 {
-    max-width: 50rem;
-    margin: 3rem 0 1.05rem;
-    color: var(--color-base-950);
-    font-family: var(--font-display);
-    font-size: clamp(1.7rem, 2.35vw, 2.35rem);
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: -0.028em;
-    text-transform: uppercase;
+  :global(.executive-report__content strong) {
+    color: var(--color-base-900);
+    font-weight: 700;
   }
 
-  .executive-report__body .section-number {
-    display: inline-flex;
-    margin-top: 2.65rem;
-    color: var(--color-accent-700);
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+  :global(.executive-report__content ul),
+  :global(.executive-report__content ol) {
+    margin: 1.5rem 0 1.5rem 1.5rem;
+    padding-left: 1rem;
+    color: var(--color-base-600);
+    font-family: var(--font-sans);
+    font-size: 1.125rem;
+    line-height: 1.85;
   }
 
-  .executive-report__body .section-number + h2 {
-    margin-top: 0.55rem;
+  :global(.executive-report__content ul) {
+    list-style: disc;
+  }
+
+  :global(.executive-report__content ol) {
+    list-style: decimal;
+  }
+
+  :global(.executive-report__content li) {
+    margin-bottom: 0.75rem;
+    padding-left: 0.25rem;
   }
 
   .executive-report__cta {
-    max-width: 54rem;
-    margin-top: 3.25rem;
+    margin-top: 3rem;
     border-top: 1px solid var(--color-accent-500);
     border-bottom: 1px solid var(--color-base-200);
     padding: 1.45rem 0 1.55rem;
@@ -264,7 +289,8 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
   .executive-report__cta a {
     display: inline-flex;
     color: var(--color-base-950);
-    font-size: 1.08rem;
+    font-family: var(--font-sans);
+    font-size: 1rem;
     font-weight: 800;
     text-decoration: none;
   }
@@ -275,9 +301,10 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
   }
 
   .executive-report__cta p {
-    max-width: 42rem;
-    margin-top: 0.75rem;
+    max-width: 44rem;
+    margin: 0.75rem 0 0;
     color: var(--color-base-600);
+    font-family: var(--font-sans);
     font-size: 1rem;
     line-height: 1.65;
   }
@@ -285,8 +312,7 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
   .executive-report__footer-nav {
     display: grid;
     gap: 0.85rem;
-    max-width: 54rem;
-    margin-top: 2.1rem;
+    margin-top: 2rem;
     padding-top: 1.55rem;
     border-top: 1px solid var(--color-base-200);
   }
@@ -294,8 +320,9 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
   .executive-report__footer-nav a {
     width: fit-content;
     color: var(--color-accent-700);
-    font-size: 0.98rem;
-    font-weight: 750;
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    font-weight: 700;
     text-decoration: none;
     border-bottom: 1px solid transparent;
   }
@@ -311,9 +338,9 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
       padding-inline: 1.25rem;
     }
 
-    .executive-report__hero .executive-report__shell {
+    .executive-report__hero-shell {
       padding-top: 1.5rem;
-      padding-bottom: 2.45rem;
+      padding-bottom: 2.35rem;
     }
 
     .executive-report__meta {
@@ -324,12 +351,12 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
 
     .executive-report h1 {
       font-size: clamp(1.9rem, 8.8vw, 2.65rem);
-      line-height: 1.09;
+      line-height: 1.1;
     }
 
     .executive-report__deck {
       font-size: 1rem;
-      line-height: 1.58;
+      line-height: 1.6;
     }
 
     .executive-report__layout {
@@ -338,23 +365,20 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
     }
 
     .executive-report__body {
-      max-width: none;
+      width: 100%;
     }
 
-    .executive-report__body p {
-      font-size: 1.0625rem;
-      line-height: 1.72;
+    :global(.executive-report__content p),
+    :global(.executive-report__content ul),
+    :global(.executive-report__content ol) {
+      font-size: 1rem;
+      line-height: 1.8;
     }
 
-    .executive-report__body h2 {
-      margin-top: 2.45rem;
+    :global(.executive-report__content h2) {
+      margin-top: 2.55rem;
       font-size: clamp(1.45rem, 7vw, 2rem);
       letter-spacing: -0.022em;
-    }
-
-    .executive-report__cta a,
-    .executive-report__footer-nav a {
-      font-size: 1rem;
     }
   }
 </style>
