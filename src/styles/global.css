@@ -2424,3 +2424,234 @@ a .lozen-tracker-status-badge:focus-visible {
   }
 }
 
+
+
+/* Tracker color differentiation pass
+   Keeps the accepted tracker header, methodology band, grid, and scroll behavior.
+   This final layer expands status/focus/classification color use so the table uses
+   the full policy palette instead of reusing the same teal/cyan treatment everywhere. */
+:root {
+  --lozen-policy-teal-950: #004653;
+  --lozen-policy-teal-900: #005f73;
+  --lozen-policy-cyan-700: #0a9396;
+  --lozen-policy-aqua-300: #94d2bd;
+  --lozen-policy-wheat-200: #e9d8a6;
+  --lozen-policy-gold-500: #ee9b00;
+  --lozen-policy-caramel-600: #ca6702;
+  --lozen-policy-rust-700: #bb3e03;
+  --lozen-policy-iron-800: #ae2012;
+  --lozen-policy-red-900: #9b2226;
+
+  --lozen-policy-aqua-soft: #d5efe8;
+  --lozen-policy-cyan-soft: #d7f0f1;
+  --lozen-policy-wheat-soft: #fff2c8;
+  --lozen-policy-gold-soft: #ffe4a6;
+  --lozen-policy-caramel-soft: #f8ddbd;
+  --lozen-policy-rust-soft: #f7d4c8;
+  --lozen-policy-iron-soft: #f5cfca;
+  --lozen-policy-red-soft: #f4d4d4;
+
+  --lozen-status-enacted-bg: var(--lozen-policy-teal-900);
+  --lozen-status-enacted-text: #ffffff;
+  --lozen-status-enacted-border: var(--lozen-policy-aqua-300);
+
+  --lozen-status-signed-bg: var(--lozen-policy-cyan-700);
+  --lozen-status-signed-text: #ffffff;
+  --lozen-status-signed-border: var(--lozen-policy-aqua-300);
+
+  --lozen-status-passed-bg: var(--lozen-policy-aqua-300);
+  --lozen-status-passed-text: var(--lozen-policy-teal-950);
+  --lozen-status-passed-border: var(--lozen-policy-teal-900);
+
+  --lozen-status-calendar-bg: var(--lozen-policy-wheat-200);
+  --lozen-status-calendar-text: #5f3b00;
+  --lozen-status-calendar-border: var(--lozen-policy-gold-500);
+
+  --lozen-status-committee-bg: var(--lozen-policy-gold-500);
+  --lozen-status-committee-text: #06172f;
+  --lozen-status-committee-border: var(--lozen-policy-caramel-600);
+
+  --lozen-status-returned-bg: var(--lozen-policy-caramel-600);
+  --lozen-status-returned-text: #ffffff;
+  --lozen-status-returned-border: var(--lozen-policy-gold-500);
+
+  --lozen-status-introduced-bg: var(--lozen-policy-rust-700);
+  --lozen-status-introduced-text: #ffffff;
+  --lozen-status-introduced-border: var(--lozen-policy-rust-700);
+
+  --lozen-status-study-bg: var(--lozen-policy-iron-800);
+  --lozen-status-study-text: #ffffff;
+  --lozen-status-study-border: var(--lozen-policy-iron-800);
+
+  --lozen-status-died-bg: var(--lozen-policy-iron-800);
+  --lozen-status-died-text: #ffffff;
+  --lozen-status-died-border: var(--lozen-policy-red-900);
+
+  --lozen-status-failed-bg: var(--lozen-policy-red-900);
+  --lozen-status-failed-text: #ffffff;
+  --lozen-status-failed-border: var(--lozen-policy-iron-800);
+}
+
+.lozen-tracker-status-badge {
+  text-shadow: none;
+  white-space: normal;
+}
+
+.lozen-tracker-status--enacted {
+  --status-bg: var(--lozen-status-enacted-bg);
+  --status-text: var(--lozen-status-enacted-text);
+  --status-border: var(--lozen-status-enacted-border);
+  background: linear-gradient(180deg, #087286 0%, var(--lozen-policy-teal-900) 54%, var(--lozen-policy-teal-950) 100%);
+  border-color: var(--status-border);
+  color: var(--status-text);
+}
+
+.lozen-tracker-status--signed {
+  --status-bg: var(--lozen-status-signed-bg);
+  --status-text: var(--lozen-status-signed-text);
+  --status-border: var(--lozen-status-signed-border);
+  background: linear-gradient(180deg, #19aaad 0%, var(--lozen-policy-cyan-700) 54%, #066b6d 100%);
+  border-color: var(--status-border);
+  color: var(--status-text);
+}
+
+.lozen-tracker-status--passed {
+  --status-bg: var(--lozen-status-passed-bg);
+  --status-text: var(--lozen-status-passed-text);
+  --status-border: var(--lozen-status-passed-border);
+  background: linear-gradient(180deg, #b8e3d5 0%, var(--lozen-policy-aqua-300) 58%, #76b9a4 100%);
+  border-color: var(--status-border);
+  color: var(--status-text);
+}
+
+.lozen-tracker-status--calendar {
+  --status-bg: var(--lozen-status-calendar-bg);
+  --status-text: var(--lozen-status-calendar-text);
+  --status-border: var(--lozen-status-calendar-border);
+  background: linear-gradient(180deg, #f5e6bd 0%, var(--lozen-policy-wheat-200) 58%, #d6bd76 100%);
+  border-color: var(--status-border);
+  color: var(--status-text);
+}
+
+.lozen-tracker-status--committee {
+  --status-bg: var(--lozen-status-committee-bg);
+  --status-text: var(--lozen-status-committee-text);
+  --status-border: var(--lozen-status-committee-border);
+  background: linear-gradient(180deg, #ffb526 0%, var(--lozen-policy-gold-500) 55%, #be7600 100%);
+  border-color: var(--status-border);
+  color: var(--status-text);
+}
+
+.lozen-tracker-status--returned {
+  --status-bg: var(--lozen-status-returned-bg);
+  --status-text: var(--lozen-status-returned-text);
+  --status-border: var(--lozen-status-returned-border);
+  background: linear-gradient(180deg, #e08014 0%, var(--lozen-policy-caramel-600) 55%, #8f4300 100%);
+  border-color: var(--status-border);
+  color: var(--status-text);
+}
+
+.lozen-tracker-status--introduced {
+  --status-bg: var(--lozen-status-introduced-bg);
+  --status-text: var(--lozen-status-introduced-text);
+  --status-border: var(--lozen-status-introduced-border);
+  background: linear-gradient(180deg, #d94d11 0%, var(--lozen-policy-rust-700) 55%, #7a2300 100%);
+  border-color: var(--status-border);
+  color: var(--status-text);
+}
+
+.lozen-tracker-status--study {
+  --status-bg: var(--lozen-status-study-bg);
+  --status-text: var(--lozen-status-study-text);
+  --status-border: var(--lozen-status-study-border);
+  background: linear-gradient(180deg, #c42c1b 0%, var(--lozen-policy-iron-800) 56%, #711006 100%);
+  border-color: var(--status-border);
+  color: var(--status-text);
+}
+
+.lozen-tracker-status--died {
+  --status-bg: var(--lozen-status-died-bg);
+  --status-text: var(--lozen-status-died-text);
+  --status-border: var(--lozen-status-died-border);
+  background: linear-gradient(180deg, var(--lozen-policy-iron-800) 0%, #85180c 58%, #5f0f08 100%);
+  border-color: var(--status-border);
+  color: var(--status-text);
+}
+
+.lozen-tracker-status--failed {
+  --status-bg: var(--lozen-status-failed-bg);
+  --status-text: var(--lozen-status-failed-text);
+  --status-border: var(--lozen-status-failed-border);
+  background: linear-gradient(180deg, #b92a2d 0%, var(--lozen-policy-red-900) 58%, #641216 100%);
+  border-color: var(--status-border);
+  color: var(--status-text);
+}
+
+/* Focus badges use the full policy palette as category identifiers.
+   They remain lighter than status badges, but no longer share the same teal/cyan treatment. */
+.lozen-data-badge--focus-workplace {
+  --badge-bg: #d3ece5;
+  --badge-text: var(--lozen-policy-teal-950);
+  --badge-border: var(--lozen-policy-teal-900);
+}
+
+.lozen-data-badge--focus-insurance {
+  --badge-bg: #d3eff0;
+  --badge-text: #056b6d;
+  --badge-border: var(--lozen-policy-cyan-700);
+}
+
+.lozen-data-badge--focus-education {
+  --badge-bg: #f3e1a9;
+  --badge-text: #5f3b00;
+  --badge-border: var(--lozen-policy-wheat-200);
+}
+
+.lozen-data-badge--focus-omnibus {
+  --badge-bg: #ffd98d;
+  --badge-text: #654000;
+  --badge-border: var(--lozen-policy-gold-500);
+}
+
+.lozen-data-badge--focus-advisory {
+  --badge-bg: #f1d5b9;
+  --badge-text: #733400;
+  --badge-border: var(--lozen-policy-caramel-600);
+}
+
+.lozen-data-badge--focus-military {
+  --badge-bg: #f2d0c5;
+  --badge-text: var(--lozen-policy-rust-700);
+  --badge-border: var(--lozen-policy-rust-700);
+}
+
+.lozen-data-badge--focus-veteran-care {
+  --badge-bg: #edcbc8;
+  --badge-text: var(--lozen-policy-iron-800);
+  --badge-border: var(--lozen-policy-iron-800);
+}
+
+/* Classification keeps its conceptual mapping separate from status/focus. */
+.lozen-data-badge--classification-dashboard-delay {
+  --badge-bg: #cfeaed;
+  --badge-text: var(--lozen-policy-teal-950);
+  --badge-border: var(--lozen-policy-cyan-700);
+}
+
+.lozen-data-badge--classification-tacere {
+  --badge-bg: #cce8df;
+  --badge-text: var(--lozen-policy-teal-950);
+  --badge-border: var(--lozen-policy-teal-900);
+}
+
+.lozen-data-badge--classification-invisible-attrition {
+  --badge-bg: #f0d393;
+  --badge-text: #743600;
+  --badge-border: var(--lozen-policy-caramel-600);
+}
+
+.lozen-data-badge--classification-outside-scope {
+  --badge-bg: #eabdb9;
+  --badge-text: var(--lozen-policy-red-900);
+  --badge-border: var(--lozen-policy-red-900);
+}

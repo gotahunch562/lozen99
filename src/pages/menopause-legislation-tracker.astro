@@ -45,7 +45,7 @@ const focusClassByLabel: Record<string, string> = {
   Omnibus: "lozen-data-badge--focus-omnibus",
   Advisory: "lozen-data-badge--focus-advisory",
   "Military / Veteran": "lozen-data-badge--focus-military",
-  "Veteran Care": "lozen-data-badge--focus-military",
+  "Veteran Care": "lozen-data-badge--focus-veteran-care",
 };
 
 const classificationClassByLabel: Record<string, string> = {
@@ -60,15 +60,47 @@ const focusBadgeClass = (label: string) =>
   `lozen-data-badge ${focusClassByLabel[label] || "lozen-data-badge--neutral"}`;
 
 const statusModifier = (status: string) => {
-  if (/died|did not pass|failed|withdrawn/i.test(status)) {
+  if (/died/i.test(status)) {
+    return "lozen-tracker-status--died";
+  }
+
+  if (/did not pass|failed|withdrawn/i.test(status)) {
     return "lozen-tracker-status--failed";
   }
 
-  if (/enacted|signed/i.test(status)) {
+  if (/returned|substitute/i.test(status)) {
+    return "lozen-tracker-status--returned";
+  }
+
+  if (/signed/i.test(status)) {
+    return "lozen-tracker-status--signed";
+  }
+
+  if (/enacted/i.test(status)) {
     return "lozen-tracker-status--enacted";
   }
 
-  if (/active|calendar|committee|house|senate|pending|introduced|passed|returned|substitute|study/i.test(status)) {
+  if (/passed/i.test(status)) {
+    return "lozen-tracker-status--passed";
+  }
+
+  if (/calendar/i.test(status)) {
+    return "lozen-tracker-status--calendar";
+  }
+
+  if (/committee/i.test(status)) {
+    return "lozen-tracker-status--committee";
+  }
+
+  if (/introduced|pending/i.test(status)) {
+    return "lozen-tracker-status--introduced";
+  }
+
+  if (/study|research/i.test(status)) {
+    return "lozen-tracker-status--study";
+  }
+
+  if (/active|house|senate/i.test(status)) {
     return "lozen-tracker-status--active";
   }
 
