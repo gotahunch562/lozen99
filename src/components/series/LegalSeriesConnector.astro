@@ -8,8 +8,6 @@ interface SeriesItem {
 
 const { currentSlug } = Astro.props as { currentSlug?: string };
 
-const seriesIndexHref = "/blog/menopause-policy-laws-dependence-disclosure";
-
 const seriesItems: SeriesItem[] = [
   {
     number: "1.",
@@ -96,13 +94,6 @@ const isSeriesArticle = seriesItems.some((item) => item.slug === normalizedCurre
         <p class="mt-4 text-base leading-7 text-base-600">
           This article is part of a nine-part series examining how existing menopause workplace frameworks, legislation, and workforce studies are bounded by the same disclosure condition they are designed to address.
         </p>
-
-        <a
-          href={seriesIndexHref}
-          class="mt-5 inline-flex font-display text-sm uppercase tracking-[0.12em] text-base-900 underline decoration-accent-500 underline-offset-4 transition-colors hover:text-accent-700"
-        >
-          View the full series index
-        </a>
 
         <ol class="mt-7 space-y-3">
           {seriesItems.map((item) => {

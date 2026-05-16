@@ -9,8 +9,6 @@ import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("posts");
 
-const SERIES_INDEX_SLUG = "menopause-policy-laws-dependence-disclosure";
-
 const getData = (post: any) => post.data as any;
 
 const normalizeSlug = (value: string) =>
@@ -91,7 +89,7 @@ const livePosts = allPosts
   .filter((post) => getData(post).draft !== true)
   .sort((a, b) => getSortDate(b) - getSortDate(a));
 
-const articlePosts = livePosts.filter((post) => getSlug(post) !== SERIES_INDEX_SLUG);
+const articlePosts = livePosts;
 
 const featuredPost = articlePosts.find((post) => getData(post).isFeatured) || articlePosts[0];
 
@@ -253,50 +251,7 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
     </section>
   )}
 
-  <section>
-    <Wrapper variant="standard" class="py-8 lg:py-14">
-      <div class="rounded-sm border border-accent-500/40 bg-base-100 p-8 lg:p-10">
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
-          <div class="max-w-4xl">
-            <Text
-              tag="span"
-              variant="textSM"
-              class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-            >
-              Series Index
-            </Text>
-
-            <Text
-              tag="h2"
-              variant="displayLG"
-              class="mt-8 font-display text-base-900"
-            >
-              Menopause at Work: Policy, Laws and the Dependence on Disclosure
-            </Text>
-
-            <Text
-              tag="p"
-              variant="textBase"
-              class="mt-4 text-base-600 text-balance"
-            >
-              A nine-part series examining how workplace frameworks, legislation,
-              and research are structurally dependent on disclosure, and what
-              remains unaccounted for when disclosure does not occur.
-            </Text>
-          </div>
-
-          <a
-            href="/blog/menopause-policy-laws-dependence-disclosure"
-            class="inline-flex whitespace-nowrap text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
-          >
-            Read the series →
-          </a>
-        </div>
-      </div>
-    </Wrapper>
-  </section>
-
-  {latestPosts.length > 0 && (
+    {latestPosts.length > 0 && (
     <section>
       <Wrapper variant="standard" class="py-10 lg:py-16">
         <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
