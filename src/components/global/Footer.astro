@@ -9,30 +9,48 @@ const footerLinks = [
     title: "Navigate",
     links: [
       { label: "What We Do", href: "/services" },
-      { label: "Research", href: "/blog" },
-      { label: "Events", href: "/events" },
+      { label: "Blog", href: "/blog" },
       { label: "News & Press", href: "/news-press" },
-      { label: "FAQ", href: "/faq" },
+      { label: "Tools & Downloads", href: "/tools-resources" },
+      { label: "Why Lozen Advisory", href: "/why-lozen-advisory" },
+      { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
+      { label: "Request Briefing", href: "/request-briefing" },
     ],
   },
   {
-    title: "Resources",
+    title: "Frameworks",
     links: [
       { label: "Invisible Attrition℠", href: "/invisible-attrition" },
       {
-        label: "Menopause Legislation Tracker",
-        href: "/menopause-legislation-tracker",
-      },
-      {
         label: "Executive Report Series",
         href: "/architecture-of-invisible-attrition-series",
+      },
+      {
+        label: "Disclosure Infrastructure",
+        href: "/disclosure-independence-infrastructure",
+      },
+      { label: "Retention Risk Analysis", href: "/retention-risk-analysis" },
+      {
+        label: "Menopause Legislation Tracker",
+        href: "/menopause-legislation-tracker",
       },
       {
         label: "AI Evaluation Training",
         href: "https://www.executiveaiskills.com/",
         external: true,
       },
+    ],
+  },
+  {
+    title: "Access",
+    links: [
+      { label: "MAPS Blueprint℠", href: "/booking" },
+      { label: "Retention Calculator", href: "/retention-calculator" },
+      { label: "Events", href: "/events" },
+      { label: "FAQ", href: "/faq" },
+      { label: "For Women Lawyers", href: "/menopause-support-women-lawyers" },
+      { label: "Normal Blood Tests", href: "/normal-blood-tests-feel-off" },
     ],
   },
 ];
@@ -67,7 +85,7 @@ const footerLinks = [
     variant="standard"
     class="relative z-10 flex flex-col gap-10 py-10 sm:py-12 lg:min-h-[20rem] lg:py-12"
   >
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,1fr)_minmax(280px,0.7fr)] lg:gap-16">
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
       <div class="max-w-xl">
         <a
           href="/"
@@ -107,7 +125,7 @@ const footerLinks = [
         </div>
       </div>
 
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
         {
           footerLinks.map((section) => (
             <div>

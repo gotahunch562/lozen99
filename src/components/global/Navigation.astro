@@ -11,9 +11,11 @@ import MegaMenu from "@/components/global/MegaMenu.astro";
 import Close from "@/components/fundations/icons/Close.astro";
 import Burger from "@/components/fundations/icons/Burger.astro";
 
-const quickLinks = [
+const primaryLinks = [
   { href: "/services", label: "What We Do" },
-  { href: "/events", label: "Events" },
+  { href: "/blog", label: "Blog" },
+  { href: "/news-press", label: "News & Press" },
+  { href: "/tools-resources", label: "Tools" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -23,19 +25,26 @@ const currentPath = Astro.url.pathname;
 const isActiveLink = (href: string) =>
   currentPath === href || currentPath.startsWith(`${href}/`);
 
-const isResearchActive =
-  currentPath.startsWith("/blog") ||
-  currentPath.startsWith("/invisible-attrition") ||
-  currentPath.startsWith("/disclosure-independence-infrastructure") ||
-  currentPath.startsWith("/architecture-of-invisible-attrition-series") ||
-  currentPath.startsWith("/menopause-legislation-tracker") ||
-  currentPath.startsWith("/voluntary-benefit-disclosure-gap") ||
-  currentPath.startsWith("/billable-hour-visibility-tax") ||
-  currentPath.startsWith("/succession-planning-retention-risk-data-gap") ||
-  currentPath.startsWith("/leadership-pipeline-manager-engagement") ||
-  currentPath.startsWith("/retention-risk-analysis") ||
-  currentPath.startsWith("/news-press") ||
-  currentPath.startsWith("/faq");
+const morePaths = [
+  "/invisible-attrition",
+  "/architecture-of-invisible-attrition-series",
+  "/disclosure-independence-infrastructure",
+  "/retention-risk-analysis",
+  "/voluntary-benefit-disclosure-gap",
+  "/billable-hour-visibility-tax",
+  "/succession-planning-retention-risk-data-gap",
+  "/leadership-pipeline-manager-engagement",
+  "/menopause-legislation-tracker",
+  "/why-lozen-advisory",
+  "/events",
+  "/faq",
+  "/booking",
+  "/menopause-support-women-lawyers",
+  "/retention-calculator",
+  "/normal-blood-tests-feel-off",
+];
+
+const isMoreActive = morePaths.some((path) => isActiveLink(path));
 ---
 
 <header class="fixed top-0 z-50 w-full">
@@ -52,38 +61,9 @@ const isResearchActive =
         <Logo class="text-base font-normal text-white uppercase font-display sm:text-lg" />
       </a>
 
-      <div class="hidden items-center gap-8 lg:flex">
-        <a
-          href="/services"
-          class:list={[
-            "text-sm font-medium transition-colors duration-200",
-            isActiveLink("/services")
-              ? "text-accent-400"
-              : "text-white/85 hover:text-white",
-          ]}
-        >
-          What We Do
-        </a>
-
-        <button
-          id="megamenu-trigger"
-          type="button"
-          class:list={[
-            "inline-flex items-center gap-1 text-sm font-medium transition-colors duration-200",
-            isResearchActive
-              ? "text-accent-400"
-              : "text-white/85 hover:text-white",
-          ]}
-          aria-expanded="false"
-          aria-controls="megamenu"
-          aria-label="Open research menu"
-        >
-          <span>Research</span>
-          <span aria-hidden="true">+</span>
-        </button>
-
+      <div class="hidden items-center gap-5 xl:gap-7 lg:flex">
         {
-          quickLinks.slice(1).map((link) => (
+          primaryLinks.map((link) => (
             <a
               href={link.href}
               class:list={[
@@ -97,6 +77,23 @@ const isResearchActive =
             </a>
           ))
         }
+
+        <button
+          id="megamenu-trigger"
+          type="button"
+          class:list={[
+            "inline-flex items-center gap-1 text-sm font-medium transition-colors duration-200",
+            isMoreActive
+              ? "text-accent-400"
+              : "text-white/85 hover:text-white",
+          ]}
+          aria-expanded="false"
+          aria-controls="megamenu"
+          aria-label="Open secondary navigation menu"
+        >
+          <span>More</span>
+          <span aria-hidden="true">+</span>
+        </button>
       </div>
 
       <div class="flex shrink-0 items-center gap-2">

@@ -6,34 +6,8 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const megaMenuSections = [
   {
-    title: "Research",
-    description: "Articles, frameworks, and current analysis.",
-    links: [
-      {
-        href: "/blog",
-        label: "Research Archive",
-        description: "Articles, legislative analysis, and framework development.",
-      },
-      {
-        href: "/menopause-legislation-tracker",
-        label: "Menopause Legislation Tracker",
-        description: "A governance audit of disclosure-dependent policy design.",
-      },
-      {
-        href: "/news-press",
-        label: "News & Press",
-        description: "Press, media references, and Lozen Advisory updates.",
-      },
-      {
-        href: "/voluntary-benefit-disclosure-gap",
-        label: "Voluntary Benefit Disclosure Gap",
-        description: "Analysis of utilization data and the disclosure-dependent measurement gap.",
-      },
-    ],
-  },
-  {
     title: "Frameworks",
-    description: "Core Lozen Advisory concepts.",
+    description: "Core Lozen Advisory architecture.",
     links: [
       {
         href: "/invisible-attrition",
@@ -43,43 +17,55 @@ const megaMenuSections = [
       {
         href: "/architecture-of-invisible-attrition-series",
         label: "Executive Report Series",
-        description: "The Architecture of Invisible Attrition℠ report series.",
+        description: "A four-part audit of corporate retention systems.",
       },
       {
         href: "/disclosure-independence-infrastructure",
         label: "Disclosure Infrastructure",
-        description: "Why systems dependent on disclosure cannot fully measure risk.",
-      },
-      {
-        href: "/billable-hour-visibility-tax",
-        label: "Billable Hour Visibility Tax",
-        description: "How billable-hour systems miss capacity strain before loss is visible.",
-      },
-      {
-        href: "/succession-planning-retention-risk-data-gap",
-        label: "Succession Planning Data Gap",
-        description: "Succession exposure where stable performance masks leadership risk.",
+        description: "Why disclosure-dependent systems cannot fully measure risk.",
       },
       {
         href: "/retention-risk-analysis",
         label: "Retention Risk Analysis",
-        description: "A search-capture page for attrition risk and disclosure-dependent data gaps.",
+        description: "Search-capture entry point for attrition and retention risk.",
+      },
+    ],
+  },
+  {
+    title: "Research",
+    description: "Focused research destinations.",
+    links: [
+      {
+        href: "/menopause-legislation-tracker",
+        label: "Menopause Legislation Tracker",
+        description: "A governance audit of disclosure-dependent policy design.",
+      },
+      {
+        href: "/voluntary-benefit-disclosure-gap",
+        label: "Voluntary Benefit Disclosure Gap",
+        description: "Analysis of utilization data and disclosure-dependent measurement.",
+      },
+      {
+        href: "/billable-hour-visibility-tax",
+        label: "Billable Hour Visibility Tax",
+        description: "How output systems miss capacity strain before loss is visible.",
+      },
+      {
+        href: "https://www.executiveaiskills.com/",
+        label: "AI Evaluation Training",
+        description: "External AI evaluation training resource.",
+        external: true,
       },
     ],
   },
   {
     title: "Access",
-    description: "Paths into Lozen Advisory.",
+    description: "Secondary paths into the site.",
     links: [
       {
-        href: "/services",
-        label: "What We Do",
-        description: "How Lozen Advisory works with organizations and women leaders.",
-      },
-      {
-        href: "/services#tacere-download",
-        label: "Tacere Paper",
-        description: "Download the framework paper on employees who remain uncounted.",
+        href: "/why-lozen-advisory",
+        label: "Why Lozen Advisory",
+        description: "The firm’s positioning, method, and advisory frame.",
       },
       {
         href: "/events",
@@ -89,18 +75,22 @@ const megaMenuSections = [
       {
         href: "/faq",
         label: "FAQ",
-        description: "Common questions about Lozen Advisory, MAPS Blueprint℠, and briefing paths.",
+        description: "Common questions about Lozen Advisory and advisory paths.",
       },
       {
-        href: "https://www.executiveaiskills.com/",
-        label: "AI Evaluation Training",
-        description: "External AI evaluation training resource.",
-        external: true,
+        href: "/booking",
+        label: "MAPS Blueprint℠",
+        description: "Private 90-minute advisory session for an upcoming evaluation moment.",
       },
       {
-        href: "/request-briefing",
-        label: "Request Briefing",
-        description: "Start a B2B briefing request.",
+        href: "/menopause-support-women-lawyers",
+        label: "For Women Lawyers",
+        description: "Private performance protection for women in law.",
+      },
+      {
+        href: "/retention-calculator",
+        label: "Retention Calculator",
+        description: "Estimate the replacement cost of leadership capacity loss.",
       },
     ],
   },
@@ -194,8 +184,8 @@ const megaMenuSections = [
               Request Briefing
             </Button>
 
-            <Button isLink size="xs" variant="muted" href="/services">
-              What We Do
+            <Button isLink size="xs" variant="muted" href="/tools-resources">
+              Tools & Downloads
             </Button>
           </div>
         </div>

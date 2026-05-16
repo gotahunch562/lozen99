@@ -3,14 +3,37 @@
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-const quickLinks = [
+const primaryLinks = [
   { href: "/services", label: "What We Do" },
-  { href: "/blog", label: "Research" },
-  { href: "/events", label: "Events" },
+  { href: "/blog", label: "Blog" },
   { href: "/news-press", label: "News & Press" },
-  { href: "/faq", label: "FAQ" },
+  { href: "/tools-resources", label: "Tools & Downloads" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+];
+
+const secondarySections = [
+  {
+    title: "Frameworks",
+    links: [
+      { href: "/invisible-attrition", label: "Invisible Attrition℠" },
+      { href: "/architecture-of-invisible-attrition-series", label: "Executive Report Series" },
+      { href: "/disclosure-independence-infrastructure", label: "Disclosure Infrastructure" },
+      { href: "/retention-risk-analysis", label: "Retention Risk Analysis" },
+    ],
+  },
+  {
+    title: "Access",
+    links: [
+      { href: "/why-lozen-advisory", label: "Why Lozen Advisory" },
+      { href: "/events", label: "Events" },
+      { href: "/faq", label: "FAQ" },
+      { href: "/booking", label: "MAPS Blueprint℠" },
+      { href: "/menopause-support-women-lawyers", label: "For Women Lawyers" },
+      { href: "/retention-calculator", label: "Retention Calculator" },
+      { href: "/menopause-legislation-tracker", label: "Menopause Legislation Tracker" },
+    ],
+  },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -29,7 +52,7 @@ const isActiveLink = (href: string) =>
     >
       <div class="space-y-1 p-4 sm:p-6">
         {
-          quickLinks.map((link) => (
+          primaryLinks.map((link) => (
             <a
               href={link.href}
               class:list={[
@@ -41,6 +64,34 @@ const isActiveLink = (href: string) =>
             >
               {link.label}
             </a>
+          ))
+        }
+      </div>
+
+      <div class="grid gap-5 border-t border-base-200 px-4 py-5 sm:px-6">
+        {
+          secondarySections.map((section) => (
+            <div>
+              <p class="font-sans text-xs font-bold uppercase tracking-[0.14em] text-base-500">
+                {section.title}
+              </p>
+
+              <div class="mt-2 grid gap-1">
+                {section.links.map((link) => (
+                  <a
+                    href={link.href}
+                    class:list={[
+                      "block rounded-xl px-4 py-2.5 font-sans text-sm font-semibold transition-colors duration-200",
+                      isActiveLink(link.href)
+                        ? "bg-base-900 text-white"
+                        : "text-base-800 hover:bg-base-50 hover:text-accent-700",
+                    ]}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
           ))
         }
       </div>
