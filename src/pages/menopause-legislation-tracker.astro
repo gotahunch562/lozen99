@@ -106,6 +106,14 @@ const standardSections = [
   { title: "Active / In Committee", rows: ACTIVE },
 ];
 
+const trackerStats = [
+  { label: "Federal", value: FEDERAL.length },
+  { label: "Enacted", value: ENACTED.length },
+  { label: "Active", value: ACTIVE.length },
+  { label: "Did Not Pass", value: DID_NOT_PASS.length },
+  { label: "Advisory", value: ADVISORY.length },
+];
+
 const columnDefinitions = [
   ["State / Level", "Jurisdiction."],
   ["Bill", "Bill number and short title."],
@@ -155,8 +163,8 @@ const mobileValueClass = "lozen-tracker-mobile-value";
 <BaseLayout title={title} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(reportSchema)} />
 
-  <main class="bg-base-50">
-    <section class="border-b border-base-300 bg-gradient-to-t from-base-200 via-base-100 to-white">
+  <main class="lozen-tracker-page">
+    <section class="lozen-tracker-hero">
       <Wrapper variant="standard" class="py-14 sm:py-20 lg:py-28">
         <div
           class="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.55fr)] lg:items-end lg:gap-12"
@@ -183,10 +191,21 @@ const mobileValueClass = "lozen-tracker-mobile-value";
             >
               Last updated: April 30, 2026
             </p>
+
+            <div class="mt-8 flex flex-wrap gap-3" aria-label="Tracker record counts">
+              {
+                trackerStats.map((stat) => (
+                  <div class="lozen-tracker-stat">
+                    <strong>{stat.value}</strong>
+                    <span>{stat.label}</span>
+                  </div>
+                ))
+              }
+            </div>
           </div>
 
           <aside
-            class="relative overflow-hidden rounded-2xl border border-base-400 bg-white p-5 shadow-lg ring-1 ring-base-950/5 sm:p-6 lg:rounded-3xl"
+            class="lozen-tracker-insight-card p-5 sm:p-6 lg:rounded-3xl"
           >
             <div
               aria-hidden="true"
@@ -214,7 +233,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
       </Wrapper>
     </section>
 
-    <section class="bg-white">
+    <section class="lozen-tracker-section">
       <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
         <div class="mx-auto max-w-4xl">
           <p
@@ -252,7 +271,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
       </Wrapper>
     </section>
 
-    <section class="bg-base-100">
+    <section class="lozen-tracker-section lozen-tracker-section--muted">
       <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
         <div>
           <p
@@ -270,7 +289,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
           <dl class="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 lg:grid-cols-4">
             {
               columnDefinitions.map(([term, definition]) => (
-                <div class="relative overflow-hidden rounded-2xl border border-base-400 bg-white p-5 shadow-lg ring-1 ring-base-950/5 lg:rounded-3xl">
+                <div class="lozen-tracker-definition-card p-5 lg:rounded-3xl">
                   <div
                     aria-hidden="true"
                     class="absolute inset-x-0 top-0 h-1 bg-accent-500"
@@ -291,7 +310,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
       </Wrapper>
     </section>
 
-    <section class="bg-base-50">
+    <section class="lozen-tracker-section lozen-tracker-section--data">
       <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
         <div class="grid gap-14 lg:gap-16">
           {
@@ -855,7 +874,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
       </Wrapper>
     </section>
 
-    <section class="bg-white">
+    <section class="lozen-tracker-section">
       <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
         <div class="mx-auto max-w-4xl">
           <p
