@@ -60,23 +60,22 @@ const focusBadgeClass = (label: string) =>
   `lozen-data-badge ${focusClassByLabel[label] || "lozen-data-badge--neutral"}`;
 
 const statusModifier = (status: string) => {
-  if (/enacted|signed|passed/i.test(status)) {
-    return "lozen-tracker-status--enacted";
-  }
-
   if (/died|did not pass|failed|withdrawn/i.test(status)) {
     return "lozen-tracker-status--failed";
   }
 
-  if (/active|committee|pending|introduced|calendar|senate|house|returned|substitute|study mandate/i.test(status)) {
+  if (/enacted|signed/i.test(status)) {
+    return "lozen-tracker-status--enacted";
+  }
+
+  if (/active|calendar|committee|house|senate|pending|introduced|passed|returned|substitute|study/i.test(status)) {
     return "lozen-tracker-status--active";
   }
 
   return "lozen-tracker-status--neutral";
 };
 
-const statusCellClass = (status: string) =>
-  `lozen-tracker-status-cell ${statusModifier(status)}`;
+const statusCellClass = (_status: string) => "lozen-tracker-status-cell";
 
 const statusBadgeClass = (status: string) =>
   `lozen-tracker-status-badge ${statusModifier(status)}`;
@@ -101,9 +100,9 @@ const sectionId = (value: string) =>
     .replace(/(^-|-$)/g, "");
 
 const standardSections = [
-  { title: "Federal", rows: FEDERAL },
-  { title: "Enacted / Passed", rows: ENACTED },
-  { title: "Active / In Committee", rows: ACTIVE },
+  { title: "Federal", rows: FEDERAL, theme: "federal" },
+  { title: "Enacted / Passed", rows: ENACTED, theme: "enacted" },
+  { title: "Active / In Committee", rows: ACTIVE, theme: "active" },
 ];
 
 const trackerStats = [
@@ -140,19 +139,7 @@ const columnDefinitions = [
   ],
 ];
 
-const tableWrapClass = "lozen-tracker-table-wrap";
-
-const tableThemeClass = (title: string) => {
-  const id = sectionId(title);
-
-  if (id.includes("federal")) return "lozen-tracker-table-wrap--federal";
-  if (id.includes("enacted")) return "lozen-tracker-table-wrap--enacted";
-  if (id.includes("active")) return "lozen-tracker-table-wrap--active";
-  if (id.includes("did-not-pass")) return "lozen-tracker-table-wrap--failed";
-  if (id.includes("advisory")) return "lozen-tracker-table-wrap--advisory";
-
-  return "";
-};
+const tableWrapClass = (theme = "default") => `lozen-tracker-table-wrap lozen-tracker-table-wrap--${theme}`;
 
 const tableClass = "lozen-tracker-table";
 const compactTableClass = "lozen-tracker-table lozen-tracker-table--compact";
@@ -344,7 +331,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
                     </h2>
                   </div>
 
-                  <div class={`${tableWrapClass} ${tableThemeClass(section.title)}`}>
+                  <div class={tableWrapClass(section.theme)}>
                     <table class={tableClass}>
                       <thead>
                         <tr>
@@ -557,7 +544,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
               </h2>
             </div>
 
-            <div class={`${tableWrapClass} ${tableThemeClass("Did Not Pass")}`}>
+            <div class={tableWrapClass("failed")}>
               <table class={compactTableClass}>
                 <thead>
                   <tr>
@@ -711,7 +698,7 @@ const mobileValueClass = "lozen-tracker-mobile-value";
               </h2>
             </div>
 
-            <div class={`${tableWrapClass} ${tableThemeClass("Advisory / Non-Legislative Instruments")}`}>
+            <div class={tableWrapClass("advisory")}>
               <table class={compactTableClass}>
                 <thead>
                   <tr>
