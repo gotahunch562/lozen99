@@ -1682,6 +1682,151 @@ a .lozen-tracker-status-badge:focus-visible {
   }
 }
 
+
+/* Tracker header visual asset pass
+   Purpose: make the legislation tracker read as a policy data product while preserving the
+   main Lozen Advisory navy/yellow brand system. This targets only the tracker header. */
+.lozen-tracker-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-bottom: 1px solid color-mix(in oklch, var(--lozen-policy-aqua-300) 35%, var(--color-base-950));
+  background:
+    radial-gradient(circle at 13% 14%, rgba(148, 210, 189, 0.26) 0%, rgba(148, 210, 189, 0.12) 23%, transparent 42%),
+    radial-gradient(circle at 82% 18%, rgba(238, 155, 0, 0.19) 0%, rgba(238, 155, 0, 0.08) 24%, transparent 44%),
+    linear-gradient(135deg, #06172f 0%, #005f73 48%, #0b1f3d 100%);
+  color: #ffffff;
+}
+
+.lozen-tracker-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 4.5rem 4.5rem;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.18));
+}
+
+.lozen-tracker-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  z-index: -1;
+  height: 7rem;
+  background: linear-gradient(180deg, transparent, rgba(6, 23, 47, 0.36));
+}
+
+.lozen-tracker-hero h1 {
+  color: #ffffff;
+  max-width: 48rem;
+  font-size: clamp(3.1rem, 7vw, 6.2rem);
+  letter-spacing: -0.055em;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.18);
+}
+
+.lozen-tracker-hero p {
+  color: color-mix(in oklch, var(--color-base-100) 88%, #ffffff);
+}
+
+.lozen-tracker-hero .border-accent-500 {
+  border-color: var(--lozen-policy-gold-500);
+}
+
+.lozen-tracker-hero .text-base-700,
+.lozen-tracker-hero .text-base-500 {
+  color: color-mix(in oklch, var(--color-base-100) 84%, var(--lozen-policy-wheat-200));
+}
+
+.lozen-tracker-hero .lozen-tracker-stat-grid {
+  width: min(100%, 58rem);
+  gap: 1rem;
+}
+
+.lozen-tracker-hero .lozen-tracker-stat {
+  border: 1px solid rgba(148, 210, 189, 0.42);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.075)),
+    linear-gradient(135deg, rgba(0, 95, 115, 0.34), rgba(6, 23, 47, 0.24));
+  color: #ffffff;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 2px 0 rgba(0, 0, 0, 0.18),
+    0 18px 38px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(10px);
+}
+
+.lozen-tracker-hero .lozen-tracker-stat::before {
+  width: 0.34rem;
+  background: linear-gradient(180deg, var(--lozen-policy-aqua-300), var(--lozen-policy-cyan-700));
+}
+
+.lozen-tracker-hero .lozen-tracker-stat:nth-child(2)::before {
+  background: linear-gradient(180deg, var(--lozen-policy-aqua-300), var(--lozen-policy-teal-900));
+}
+
+.lozen-tracker-hero .lozen-tracker-stat:nth-child(3)::before {
+  background: linear-gradient(180deg, var(--lozen-policy-cyan-700), var(--lozen-policy-aqua-300));
+}
+
+.lozen-tracker-hero .lozen-tracker-stat:nth-child(4)::before {
+  background: linear-gradient(180deg, var(--lozen-policy-red-900), var(--lozen-policy-iron-800));
+}
+
+.lozen-tracker-hero .lozen-tracker-stat:nth-child(5)::before {
+  background: linear-gradient(180deg, var(--lozen-policy-gold-500), var(--lozen-policy-caramel-600));
+}
+
+.lozen-tracker-hero .lozen-tracker-stat strong {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+.lozen-tracker-hero .lozen-tracker-stat span {
+  color: color-mix(in oklch, var(--lozen-policy-wheat-200) 75%, #ffffff);
+}
+
+.lozen-tracker-hero .lozen-tracker-insight-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(148, 210, 189, 0.38);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.075)),
+    linear-gradient(145deg, rgba(0, 95, 115, 0.30), rgba(6, 23, 47, 0.38));
+  color: #ffffff;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.24),
+    0 2px 0 rgba(0, 0, 0, 0.22),
+    0 28px 72px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(12px);
+}
+
+.lozen-tracker-hero .lozen-tracker-insight-card > [aria-hidden="true"] {
+  background: linear-gradient(90deg, var(--lozen-policy-gold-500), var(--lozen-policy-aqua-300), var(--lozen-policy-cyan-700));
+}
+
+.lozen-tracker-hero .lozen-tracker-insight-card .font-display {
+  color: #ffffff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
+}
+
+.lozen-tracker-hero .lozen-tracker-insight-card p {
+  color: color-mix(in oklch, var(--color-base-100) 88%, #ffffff);
+}
+
+@media (max-width: 768px) {
+  .lozen-tracker-hero h1 {
+    font-size: clamp(2.6rem, 13vw, 4.4rem);
+  }
+
+  .lozen-tracker-hero .lozen-tracker-stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
 /* Tracker methodology band: column definitions section
    Purpose: visually connect the section below the tracker hero to the policy-data palette
    without altering tracker content or the wider site palette. */
