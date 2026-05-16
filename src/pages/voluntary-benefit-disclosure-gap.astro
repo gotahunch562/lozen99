@@ -1,8 +1,5 @@
 ---
-import AuthorityPage from "@/components/authority/AuthorityPage.astro";
-import AuthorityRail from "@/components/authority/AuthorityRail.astro";
-import AuthoritySeries from "@/components/authority/AuthoritySeries.astro";
-import AuthorityRelated from "@/components/authority/AuthorityRelated.astro";
+import ExecutiveReportArticle from "@/components/authority/ExecutiveReportArticle.astro";
 
 const title = "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most";
 
@@ -28,106 +25,21 @@ const articleJsonLd = {
   url: "https://www.lozenadvisory.com/voluntary-benefit-disclosure-gap",
 };
 
-const railItems = [
-  {
-    label: "Authority Page",
-    value: "Voluntary benefit disclosure gap",
-  },
-  {
-    label: "Framework",
-    value: "Visibility Tax℠ and Invisible Attrition℠",
-  },
-  {
-    label: "Primary Buyer Question",
-    value: "Why utilization data cannot measure the population that never entered the system.",
-  },
-];
-
-const railLinks = [
-  {
-    label: "Architecture of Invisible Attrition℠ Series",
-    href: "/architecture-of-invisible-attrition-series",
-  },
-  {
-    label: "Disclosure Infrastructure",
-    href: "/disclosure-independence-infrastructure",
-  },
-  {
-    label: "Invisible Attrition℠ Framework",
-    href: "/invisible-attrition",
-  },
-];
-
-const seriesItems = [
-  {
-    number: "01",
-    title: "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most",
-    status: "current",
-  },
-  {
-    number: "02",
-    title: "Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers",
-    href: "/billable-hour-visibility-tax",
-    status: "available",
-  },
-  {
-    number: "03",
-    title: "Succession Planning and the Retention Risk Data Gap",
-    href: "/succession-planning-retention-risk-data-gap",
-    status: "available",
-  },
-  {
-    number: "04",
-    title: "The Leadership Pipeline Is Draining From Both Ends",
-    href: "/leadership-pipeline-manager-engagement",
-    status: "available",
-  },
-];
-
-const relatedItems = [
-  {
-    eyebrow: "Series Hub",
-    title: "The Architecture of Invisible Attrition — Executive Report Series",
-    href: "/architecture-of-invisible-attrition-series",
-    description:
-      "A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure.",
-  },
-  {
-    eyebrow: "Retention Risk",
-    title: "Retention Risk Analysis",
-    href: "/retention-risk-analysis",
-    description:
-      "A search-capture page connecting replacement cost, workforce attrition risk assessment, and the limits of standard retention analysis.",
-  },
-];
+const nextReport = { href: "/billable-hour-visibility-tax", label: "Report Two" };
 ---
 
-<AuthorityPage
-  eyebrow="Research & Policy"
+<ExecutiveReportArticle
   title={title}
-  description="The Architecture of Invisible Attrition℠ — Executive Report Series"
-  image="/images/unrecorded-talent-infrastructure-gap.webp"
-  imageAlt="A diagnostic visualization of corporate data gaps where a woman in the shadowed background remains invisible to the organization's tracking systems because she has not met the disclosure-based collection condition required for support."
-  dateLabel="April 27, 2026"
-  backHref="/blog"
-  backLabel="Back to Research"
+  metaDescription={metaDescription}
   articleJsonLd={articleJsonLd}
+  dateLabel="April 27, 2026"
+  reportNumber="01"
+  ogImage="/images/unrecorded-talent-infrastructure-gap.webp"
+  ogImageAlt="A diagnostic visualization of corporate data gaps where a woman in the shadowed background remains invisible to the organization's tracking systems because she has not met the disclosure-based collection condition required for support."
+  nextReport={nextReport}
+  ctaTitle="Schedule a Non-Disclosure Infrastructure Briefing →"
+  ctaDescription="A strategic consultation to identify why high-performance metrics mask retention risk and how to address the disclosure gap."
 >
-  <AuthorityRail
-    slot="rail"
-    title="Page Context"
-    items={railItems}
-    links={railLinks}
-    cta={{
-      label: "Strategic Briefing",
-      title: "Non-Disclosure Infrastructure",
-      description:
-        "A strategic consultation to identify why high-performance metrics mask retention risk and how to address the disclosure gap.",
-      href: "/request-briefing",
-    }}
-  />
-
-  <div class="authority-article-body">
     <p>
       Every voluntary employee benefit program designed to support women managing health conditions at work shares one architectural feature. The woman has to do something first: raise her hand, be visible accessing the benefit. That pattern is examined in <a href="/blog/menopause-workplace-visibility-constraint">Menopause Workplace Frameworks: A Visibility Constraint</a>, where support systems depend on a condition many women have already decided not to meet.
     </p>
@@ -224,15 +136,5 @@ const relatedItems = [
     <p>
       None of that appears in utilization data. None of it was ever captured by the system.
     </p>
-  </div>
 
-  <div class="authority-bottom-stack">
-    <AuthoritySeries
-      title="The Architecture of Invisible Attrition℠ — Executive Report Series"
-      description="A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure."
-      items={seriesItems}
-    />
-
-    <AuthorityRelated items={relatedItems} />
-  </div>
-</AuthorityPage>
+</ExecutiveReportArticle>

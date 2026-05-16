@@ -1,8 +1,5 @@
 ---
-import AuthorityPage from "@/components/authority/AuthorityPage.astro";
-import AuthorityRail from "@/components/authority/AuthorityRail.astro";
-import AuthoritySeries from "@/components/authority/AuthoritySeries.astro";
-import AuthorityRelated from "@/components/authority/AuthorityRelated.astro";
+import ExecutiveReportArticle from "@/components/authority/ExecutiveReportArticle.astro";
 
 const title = "Succession Planning and the Retention Risk Data Gap";
 
@@ -26,106 +23,24 @@ const articleJsonLd = {
   url: "https://www.lozenadvisory.com/succession-planning-retention-risk-data-gap",
 };
 
-const railItems = [
-  {
-    label: "Authority Page",
-    value: "Succession planning and retention risk data",
-  },
-  {
-    label: "Framework",
-    value: "Invisible Attrition℠ and succession exposure",
-  },
-  {
-    label: "Primary Buyer Question",
-    value: "What succession plans inherit when workforce data cannot count risk until disclosure occurs.",
-  },
-];
+const previousReport = { href: "/billable-hour-visibility-tax", label: "Report Two" };
 
-const railLinks = [
-  {
-    label: "Architecture of Invisible Attrition℠ Series",
-    href: "/architecture-of-invisible-attrition-series",
-  },
-  {
-    label: "Report Two",
-    href: "/billable-hour-visibility-tax",
-  },
-  {
-    label: "Report Four",
-    href: "/leadership-pipeline-manager-engagement",
-  },
-];
-
-const seriesItems = [
-  {
-    number: "01",
-    title: "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most",
-    href: "/voluntary-benefit-disclosure-gap",
-    status: "available",
-  },
-  {
-    number: "02",
-    title: "Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers",
-    href: "/billable-hour-visibility-tax",
-    status: "available",
-  },
-  {
-    number: "03",
-    title: "Succession Planning and the Retention Risk Data Gap",
-    status: "current",
-  },
-  {
-    number: "04",
-    title: "The Leadership Pipeline Is Draining From Both Ends",
-    href: "/leadership-pipeline-manager-engagement",
-    status: "available",
-  },
-];
-
-const relatedItems = [
-  {
-    eyebrow: "Next Report",
-    title: "The Leadership Pipeline Is Draining From Both Ends",
-    href: "/leadership-pipeline-manager-engagement",
-    description:
-      "Gallup's 2026 data shows manager engagement at a nine-year low. This analysis examines why that collapse and Invisible Attrition℠ are compounding the same succession gap.",
-  },
-  {
-    eyebrow: "Series Hub",
-    title: "The Architecture of Invisible Attrition — Executive Report Series",
-    href: "/architecture-of-invisible-attrition-series",
-    description:
-      "A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure.",
-  },
-];
+const nextReport = { href: "/leadership-pipeline-manager-engagement", label: "Report Four" };
 ---
 
-<AuthorityPage
-  eyebrow="Research & Policy"
+<ExecutiveReportArticle
   title={title}
-  description="The Architecture of Invisible Attrition℠ — Executive Report Series"
-  image="/images/unrecorded-talent-infrastructure-gap.webp"
-  imageAlt="A diagnostic visualization of corporate data gaps where succession risk remains outside the organization's formal reporting systems."
-  dateLabel="May 2026"
-  backHref="/blog"
-  backLabel="Back to Research"
+  metaDescription={metaDescription}
   articleJsonLd={articleJsonLd}
+  dateLabel="May 2026"
+  reportNumber="03"
+  ogImage="/images/unrecorded-talent-infrastructure-gap.webp"
+  ogImageAlt="A diagnostic visualization of succession planning and retention risk data gaps."
+  previousReport={previousReport}
+  nextReport={nextReport}
+  ctaTitle="Schedule an Invisible Attrition℠ Retention Risk Audit →"
+  ctaDescription="A strategic consultation to identify why clean performance records and succession datasets can mask compounding leadership continuity risk."
 >
-  <AuthorityRail
-    slot="rail"
-    title="Page Context"
-    items={railItems}
-    links={railLinks}
-    cta={{
-      label: "Strategic Briefing",
-      title: "Invisible Attrition℠ Retention Risk Audit",
-      description:
-        "A strategic consultation to identify why clean performance records can mask leadership attrition risk and where disclosure-dependent systems fail to capture exposure.",
-      href: "/request-briefing",
-    }}
-  />
-
-  <div class="authority-article-body">
     <p>
       The Bank of America and National Menopause Foundation research produced one number with direct implications for succession planning. Seventy-six percent of HR benefit managers say they discuss menopause regularly or sometimes. Three percent of peri- and post-menopausal employees said they had talked to HR.
     </p>
@@ -218,26 +133,4 @@ const relatedItems = [
       The <a href="https://www.lozenadvisory.com/invisible-attrition">Invisible Attrition℠ framework</a> is the analytical foundation for this work. The <a href="https://www.lozenadvisory.com/retention-calculator">Retention Calculator</a> produces the same number regardless of who runs it. A woman uses it to see the value the organization has placed at risk. An organizational buyer uses it to estimate the replacement cost of the critical talent the organization may lose.
     </p>
 
-    <div class="mt-12 rounded-3xl border border-accent-400 bg-accent-50 p-6 shadow-sm transition-all duration-300 hover:border-accent-600 hover:bg-accent-100 sm:p-8">
-      <a
-        href="https://www.lozenadvisory.com/request-briefing"
-        class="inline-flex text-base font-semibold text-base-950 no-underline"
-      >
-        Schedule an Invisible Attrition℠ Retention Risk Audit →
-      </a>
-      <p class="mt-4 text-sm leading-6 text-base-700">
-        A strategic consultation to identify why clean performance records can mask leadership attrition risk and where disclosure-dependent systems fail to capture exposure.
-      </p>
-    </div>
-  </div>
-
-  <div class="authority-bottom-stack">
-    <AuthoritySeries
-      title="The Architecture of Invisible Attrition℠ — Executive Report Series"
-      description="A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure."
-      items={seriesItems}
-    />
-
-    <AuthorityRelated items={relatedItems} />
-  </div>
-</AuthorityPage>
+</ExecutiveReportArticle>
