@@ -1,15 +1,18 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
+import NarrativePage from "@/components/authority/NarrativePage.astro";
 
 const title = "The Architecture of Invisible Attrition — Executive Report Series";
 
 const seoTitle =
-  "The Architecture of Invisible Attrition: Why Corporate Retention Systems Miss the Women Most at Risk";
+  "The Architecture of Invisible Attrition: Why Corporate Retention Systems Miss the Employees Most at Risk";
 
 const metaDescription =
-  "A four-part audit of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure.";
+  "A four-part analysis of corporate retention systems examining the structural flaws that compound leadership pipeline risk and succession exposure.";
 
-const image = "/images/unrecorded-talent-infrastructure-gap.webp";
+const canonical =
+  "https://www.lozenadvisory.com/architecture-of-invisible-attrition-series";
+
+const image = "/images/authority/architecture-of-invisible-attrition-series.webp";
 
 const imageAlt =
   "A diagnostic visualization of corporate retention infrastructure and the data gaps that remain outside formal reporting systems.";
@@ -28,7 +31,8 @@ const articleJsonLd = {
     name: "Lozen Advisory",
     url: "https://www.lozenadvisory.com",
   },
-  url: "https://www.lozenadvisory.com/architecture-of-invisible-attrition-series",
+  url: canonical,
+  image: `https://www.lozenadvisory.com${image}`,
 };
 
 const reports = [
@@ -114,520 +118,330 @@ const frameworkLinks = [
 ];
 ---
 
-<BaseLayout
+<NarrativePage
   title={title}
+  seoTitle={seoTitle}
   description={metaDescription}
-  ogImage={image}
-  ogImageAlt={imageAlt}
-  ogType="article"
+  metaDescription={metaDescription}
+  canonical={canonical}
+  eyebrow="Invisible Attrition℠"
+  typeLabel="Executive Report Series"
+  dateLabel="May 2026"
+  backHref="/blog"
+  backLabel="Back to Research"
+  heroImage={image}
+  heroImageAlt={imageAlt}
+  articleJsonLd={articleJsonLd}
 >
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify(articleJsonLd)}
-  />
+  <p>
+    Lozen Advisory has released a four-part audit of corporate retention infrastructure.
+  </p>
 
-  <main class="series-hub">
-    <section class="series-hero">
-      <div class="series-hero__inner">
-        <div class="series-hero__copy">
-          <a href="/blog" class="series-back">← Back to Research</a>
+  <p>
+    The audit examines a single structural condition across voluntary benefits, performance management systems, attrition data, and leadership pipeline design: each depends on an initiating act the organization does not control. The system requires her to move first. The population most likely to move is not the population most at risk of exit.
+  </p>
 
-          <div class="series-kicker">
-            <span>Executive Report Series</span>
-            <span>May 2026</span>
+  <p>
+    The result is a consistent pattern across all four layers of the retention architecture. The organization can only access the population that enters the system. It can only measure the population that produces variance inside it. It can only record the population that generated data in the first place. And when that population begins to thin, the pipeline gap compounds before the succession plan registers it.
+  </p>
+
+  <p>
+    That constraint is not a failure of execution. It is a property of the system design.
+  </p>
+
+  <p>
+    Each report isolates one layer of that design. Together, they form a single audit of what corporate retention systems are built to capture and what they systematically exclude.
+  </p>
+
+  <section class="series-report-index" aria-label="Executive report series">
+    {
+      reports.map((report) => (
+        <article class="series-report">
+          <div class="series-report__number">{report.number}</div>
+
+          <div class="series-report__body">
+            <h2>{report.title}</h2>
+
+            <p class="series-report__meta">
+              <strong>{report.publishLabel}</strong>
+              <span>{report.focus}</span>
+            </p>
+
+            {report.body.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+
+            <a href={report.href}>{report.cta}</a>
           </div>
+        </article>
+      ))
+    }
+  </section>
 
-          <h1>{title}</h1>
+  <section class="series-argument">
+    <h2>The Structural Argument</h2>
 
-          <p class="series-description">
-            {metaDescription}
-          </p>
-        </div>
+    <p>
+      Across all four reports, the same condition operates. The system requires her to move first. The women least likely to move are the women operating in performance-driven environments where disclosure carries professional risk. They appear in utilization reports as non-participants. They appear in performance reviews as stable. They appear in attrition data as standard separations. They appear in succession plans as losses the organization had no analytical reason to anticipate.
+    </p>
 
-        <figure class="series-hero__figure">
-          <img src={image} alt={imageAlt} loading="eager" decoding="async" />
-        </figure>
-      </div>
+    <p>
+      The data is accurate. It is structurally incomplete.
+    </p>
+
+    <p>
+      The data was never created because she never entered the system, and the decisions built on that data reflect a workforce the organization has never fully seen.
+    </p>
+
+    <p>
+      The <a href="/invisible-attrition">Invisible Attrition℠ framework</a> is the analytical foundation for this series. The published SSRN paper is available at <a href="http://ssrn.com/abstract=6397780">http://ssrn.com/abstract=6397780</a>.
+    </p>
+  </section>
+
+  <section class="series-cta">
+    <a href="/request-briefing">
+      Schedule an Invisible Attrition℠ Retention Risk Audit →
+    </a>
+
+    <p>
+      A strategic consultation to identify why clean performance records and engagement scores can mask compounding leadership continuity risk.
+    </p>
+  </section>
+
+  <div slot="rail" class="series-rail-custom">
+    <section class="series-rail-panel">
+      <h2>Series Context</h2>
+
+      <dl>
+        {
+          contextItems.map((item) => (
+            <div>
+              <dt>{item.label}</dt>
+              <dd>{item.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
     </section>
 
-    <section class="series-main">
-      <div class="series-content">
-        <div class="series-intro">
-          <p>
-            Lozen Advisory has released a four-part audit of corporate retention infrastructure.
-          </p>
+    <section class="series-rail-panel">
+      <h2>Related Architecture</h2>
 
-          <p>
-            The audit examines a single structural condition across voluntary benefits, performance management systems, attrition data, and leadership pipeline design: each depends on an initiating act the organization does not control. The system requires her to move first. The population most likely to move is not the population most at risk of exit.
-          </p>
-
-          <p>
-            The result is a consistent pattern across all four layers of the retention architecture. The organization can only access the population that enters the system. It can only measure the population that produces variance inside it. It can only record the population that generated data in the first place. And when that population begins to thin, the pipeline gap compounds before the succession plan registers it.
-          </p>
-
-          <p>
-            That constraint is not a failure of execution. It is a property of the system design.
-          </p>
-
-          <p>
-            Each report isolates one layer of that design. Together, they form a single audit of what corporate retention systems are built to capture and what they systematically exclude.
-          </p>
-        </div>
-
-        <section class="report-list" aria-label="Executive report series">
-          {
-            reports.map((report) => (
-              <article class="report-card">
-                <div class="report-card__number">{report.number}</div>
-
-                <div class="report-card__body">
-                  <h2>{report.title}</h2>
-
-                  <p class="report-card__meta">
-                    <strong>{report.publishLabel}</strong>
-                    <span>{report.focus}</span>
-                  </p>
-
-                  {report.body.map((paragraph) => (
-                    <p>{paragraph}</p>
-                  ))}
-
-                  <a href={report.href}>{report.cta}</a>
-                </div>
-              </article>
-            ))
-          }
-        </section>
-
-        <section class="structural-argument">
-          <h2>The Structural Argument</h2>
-
-          <p>
-            Across all four reports, the same condition operates. The system requires her to move first. The women least likely to move are the women operating in performance-driven environments where disclosure carries professional risk. They appear in utilization reports as non-participants. They appear in performance reviews as stable. They appear in attrition data as standard separations. They appear in succession plans as losses the organization had no analytical reason to anticipate.
-          </p>
-
-          <p>
-            The data is accurate. It is structurally incomplete.
-          </p>
-
-          <p>
-            The data was never created because she never entered the system, and the decisions built on that data reflect a workforce the organization has never fully seen.
-          </p>
-
-          <p>
-            The <a href="/invisible-attrition">Invisible Attrition℠ framework</a> is the analytical foundation for this series. The published SSRN paper is available at <a href="http://ssrn.com/abstract=6397780">http://ssrn.com/abstract=6397780</a>.
-          </p>
-        </section>
-
-        <section class="series-cta">
-          <a href="/request-briefing">
-            Schedule an Invisible Attrition℠ Retention Risk Audit →
-          </a>
-
-          <p>
-            A strategic consultation to identify why clean performance records and engagement scores can mask compounding leadership continuity risk.
-          </p>
-        </section>
-      </div>
-
-      <aside class="series-rail" aria-label="Series context">
-        <div class="series-rail__card">
-          <h2>Series Context</h2>
-
-          <dl>
-            {
-              contextItems.map((item) => (
-                <div>
-                  <dt>{item.label}</dt>
-                  <dd>{item.value}</dd>
-                </div>
-              ))
-            }
-          </dl>
-        </div>
-
-        <div class="series-rail__card">
-          <h2>Related Architecture</h2>
-
-          <nav aria-label="Related architecture links">
-            {
-              frameworkLinks.map((link) => (
-                <a href={link.href}>{link.label}</a>
-              ))
-            }
-          </nav>
-        </div>
-      </aside>
+      <nav aria-label="Related architecture links">
+        {
+          frameworkLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))
+        }
+      </nav>
     </section>
-  </main>
-</BaseLayout>
+  </div>
+</NarrativePage>
 
 <style>
-  .series-hub {
-    background: var(--color-base-50);
-    color: var(--color-base-950);
+  .series-report-index {
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-base-300);
   }
 
-  .series-hero {
-    border-bottom: 1px solid var(--color-base-200);
-    background:
-      linear-gradient(135deg, rgba(6, 23, 47, 0.04), rgba(245, 239, 224, 0.54)),
-      var(--color-base-50);
-  }
-
-  .series-hero__inner {
+  .series-report {
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2rem;
-    width: min(100%, 80rem);
-    margin-inline: auto;
-    padding: 2rem 2rem 3rem;
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    gap: 1.25rem;
+    border-bottom: 1px solid var(--color-base-300);
+    padding: 1.65rem 0;
   }
 
-  .series-back {
-    display: inline-flex;
-    color: var(--color-base-600);
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 220ms ease;
-  }
-
-  .series-back:hover,
-  .series-back:focus-visible {
-    color: var(--color-accent-700);
-  }
-
-  .series-kicker {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem 1rem;
-    margin-top: 2rem;
-    color: var(--color-base-600);
+  .series-report__number {
+    color: var(--color-base-500);
+    font-family: var(--font-sans);
     font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
+    font-weight: 850;
+    letter-spacing: 0.16em;
+    line-height: 1.35;
     text-transform: uppercase;
   }
 
-  .series-kicker span:first-child {
-    border-left: 1px solid var(--color-accent-500);
-    padding-left: 1rem;
-    color: var(--color-base-800);
-  }
-
-  .series-hero h1 {
-    max-width: 48rem;
-    margin: 1.35rem 0 0;
+  .series-report__body h2 {
+    margin: 0;
     color: var(--color-base-950);
     font-family: var(--font-display);
-    font-size: clamp(2.15rem, 5vw, 4.15rem);
+    font-size: clamp(1.35rem, 2.4vw, 2.05rem);
     font-weight: 500;
-    line-height: 1.02;
-    letter-spacing: -0.045em;
-    text-transform: uppercase;
+    letter-spacing: -0.035em;
+    line-height: 1.12;
+    text-wrap: balance;
   }
 
-  .series-description {
-    max-width: 44rem;
-    margin: 1.25rem 0 0;
-    color: var(--color-base-700);
-    font-size: clamp(1rem, 1.5vw, 1.125rem);
-    line-height: 1.7;
-  }
-
-  .series-hero__figure {
-    align-self: start;
-    overflow: hidden;
-    margin: 0;
-    border: 1px solid var(--color-base-200);
-    border-radius: 1.5rem;
-    background: var(--color-base-100);
-    box-shadow: 0 18px 45px rgba(6, 23, 47, 0.08);
-  }
-
-  .series-hero__figure img {
-    display: block;
-    width: 100%;
-    height: clamp(13rem, 24vw, 19rem);
-    object-fit: cover;
-  }
-
-  .series-main {
+  .series-report__body .series-report__meta {
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2rem;
-    width: min(100%, 80rem);
-    margin-inline: auto;
-    padding: 3rem 2rem 4rem;
+    gap: 0.2rem;
+    margin: 0.85rem 0 1rem;
+    color: var(--color-base-600);
+    font-size: 0.92rem;
+    line-height: 1.5;
   }
 
-  .series-content {
-    max-width: 52rem;
+  .series-report__meta strong {
+    color: var(--color-base-900);
+    font-weight: 800;
   }
 
-  .series-intro {
-    padding-bottom: 2.25rem;
-    border-bottom: 1px solid var(--color-base-200);
+  .series-report__meta span {
+    display: block;
   }
 
-  .series-intro p,
-  .report-card p,
-  .structural-argument p,
-  .series-cta p,
-  .series-rail dd {
-    color: var(--color-base-700);
-    font-size: 1rem;
+  .series-report__body p {
+    margin-bottom: 1rem;
+    font-size: 1.02rem;
     line-height: 1.78;
   }
 
-  .series-intro p,
-  .report-card p,
-  .structural-argument p {
-    margin: 1.1rem 0 0;
-  }
-
-  .series-intro p:first-child,
-  .report-card p:first-of-type,
-  .structural-argument p:first-of-type {
-    margin-top: 0;
-  }
-
-  .report-list {
-    display: grid;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-
-  .report-card {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 1rem;
-    border: 1px solid var(--color-base-200);
-    border-radius: 1.5rem;
-    background: #ffffff;
-    padding: 1.35rem;
-    box-shadow: 0 14px 34px rgba(6, 23, 47, 0.06);
-  }
-
-  .report-card__number {
+  .series-report__body a {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.35rem;
-    height: 2.35rem;
-    border: 1px solid var(--color-accent-400);
-    border-radius: 999px;
-    color: var(--color-base-800);
-    font-size: 0.75rem;
-    font-weight: 700;
-  }
-
-  .report-card h2 {
-    margin: 0;
-    color: var(--color-base-950);
-    font-family: var(--font-display);
-    font-size: clamp(1.2rem, 2vw, 1.55rem);
-    font-weight: 500;
-    line-height: 1.18;
-    letter-spacing: -0.025em;
-    text-transform: none;
-  }
-
-  .report-card__meta {
-    display: grid;
-    gap: 0.25rem;
-    margin-top: 0.85rem !important;
-    color: var(--color-base-600) !important;
-    font-size: 0.875rem !important;
-    line-height: 1.55 !important;
-  }
-
-  .report-card__meta strong {
-    color: var(--color-base-850, var(--color-base-800));
-    font-weight: 700;
-  }
-
-  .report-card a,
-  .structural-argument a {
-    display: inline-flex;
-    margin-top: 1rem;
+    margin-top: 0.25rem;
     color: var(--color-accent-700);
-    font-weight: 700;
+    font-family: var(--font-sans);
+    font-size: 0.94rem;
+    font-weight: 850;
     text-decoration: none;
-    border-bottom: 1px solid var(--color-accent-400);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-accent-700) 42%, transparent);
     transition:
-      color 220ms ease,
-      border-color 220ms ease;
+      color 180ms ease,
+      border-color 180ms ease;
   }
 
-  .report-card a:hover,
-  .report-card a:focus-visible,
-  .structural-argument a:hover,
-  .structural-argument a:focus-visible {
+  .series-report__body a:hover,
+  .series-report__body a:focus-visible {
     color: var(--color-base-950);
     border-color: var(--color-base-950);
   }
 
-  .structural-argument {
-    margin-top: 2.5rem;
-    padding-top: 2.25rem;
-    border-top: 1px solid var(--color-base-200);
-  }
-
-  .structural-argument h2 {
-    margin: 0 0 1rem;
-    color: var(--color-base-950);
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem, 2.6vw, 2.15rem);
-    font-weight: 500;
-    line-height: 1.12;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
+  .series-argument {
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-base-300);
+    padding-top: 2.5rem;
   }
 
   .series-cta {
-    margin-top: 2.5rem;
-    border: 1px solid var(--color-accent-400);
+    margin-top: 3rem;
+    border: 1px solid var(--color-base-800);
     border-radius: 1.5rem;
-    background: var(--color-accent-50);
-    padding: 1.5rem;
-    box-shadow: 0 14px 34px rgba(6, 23, 47, 0.07);
+    background: var(--color-base-950);
+    padding: clamp(1.5rem, 4vw, 2.35rem);
+    color: white;
+    box-shadow: var(--shadow-xl);
   }
 
   .series-cta a {
-    color: var(--color-base-950);
-    font-weight: 800;
+    color: white;
+    font-family: var(--font-display);
+    font-size: clamp(1.45rem, 2.6vw, 2.2rem);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 1.08;
     text-decoration: none;
   }
 
   .series-cta a:hover,
   .series-cta a:focus-visible {
-    color: var(--color-accent-800);
+    color: var(--color-accent-300);
   }
 
   .series-cta p {
-    margin: 0.85rem 0 0;
-    font-size: 0.9375rem;
-    line-height: 1.65;
+    max-width: 42rem;
+    margin: 1rem 0 0;
+    color: var(--color-base-200);
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
-  .series-rail {
+  .series-rail-custom {
     display: grid;
-    align-self: start;
-    gap: 1rem;
+    gap: 1.75rem;
   }
 
-  .series-rail__card {
-    border: 1px solid var(--color-base-200);
-    border-radius: 1.5rem;
-    background: #ffffff;
-    padding: 1.35rem;
-    box-shadow: 0 14px 34px rgba(6, 23, 47, 0.06);
+  .series-rail-panel {
+    border-top: 1px solid var(--color-base-300);
+    padding-top: 1.25rem;
   }
 
-  .series-rail h2 {
+  .series-rail-panel h2 {
     margin: 0;
-    color: var(--color-base-950);
-    font-family: var(--font-display);
-    font-size: 1.15rem;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
+    color: var(--color-base-900);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 850;
+    letter-spacing: 0.16em;
+    line-height: 1.35;
     text-transform: uppercase;
   }
 
-  .series-rail dl {
+  .series-rail-panel dl {
     display: grid;
     gap: 1rem;
-    margin: 1.25rem 0 0;
+    margin: 1.1rem 0 0;
   }
 
-  .series-rail dt {
+  .series-rail-panel dt {
     color: var(--color-base-500);
+    font-family: var(--font-sans);
     font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.13em;
+    font-weight: 850;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
   }
 
-  .series-rail dd {
+  .series-rail-panel dd {
     margin: 0.35rem 0 0;
-    font-size: 0.9375rem;
+    color: var(--color-base-800);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
     line-height: 1.6;
   }
 
-  .series-rail nav {
+  .series-rail-panel nav {
     display: grid;
-    gap: 0.75rem;
-    margin-top: 1.25rem;
+    gap: 0;
+    margin-top: 1.1rem;
+    border-top: 1px solid var(--color-base-200);
   }
 
-  .series-rail nav a {
-    color: var(--color-accent-700);
-    font-size: 0.9375rem;
-    font-weight: 700;
+  .series-rail-panel nav a {
+    border-bottom: 1px solid var(--color-base-200);
+    padding: 0.8rem 0;
+    color: var(--color-base-900);
+    font-family: var(--font-sans);
+    font-size: 0.94rem;
+    font-weight: 800;
+    line-height: 1.35;
     text-decoration: none;
+    transition: color 180ms ease;
   }
 
-  .series-rail nav a:hover,
-  .series-rail nav a:focus-visible {
-    color: var(--color-base-950);
-  }
-
-  @media (min-width: 900px) {
-    .series-hero__inner {
-      grid-template-columns: minmax(0, 1fr) minmax(20rem, 28rem);
-      align-items: end;
-      padding-top: 3rem;
-      padding-bottom: 3.25rem;
-    }
-
-    .series-main {
-      grid-template-columns: minmax(0, 1fr) 20rem;
-      gap: 3.5rem;
-      padding-top: 3.5rem;
-    }
-
-    .series-rail {
-      position: sticky;
-      top: 7rem;
-    }
+  .series-rail-panel nav a:hover,
+  .series-rail-panel nav a:focus-visible {
+    color: var(--color-accent-700);
   }
 
   @media (max-width: 640px) {
-    .series-hero__inner,
-    .series-main {
-      padding-inline: 1.25rem;
-    }
-
-    .series-hero__inner {
-      padding-top: 1.5rem;
-    }
-
-    .series-hero h1 {
-      font-size: clamp(2rem, 11vw, 3.1rem);
-    }
-
-    .series-hero__figure img {
-      height: 12.5rem;
-    }
-
-    .report-card {
+    .series-report {
       grid-template-columns: minmax(0, 1fr);
-      padding: 1.25rem;
+      gap: 0.75rem;
+      padding: 1.45rem 0;
     }
 
-    .report-card__number {
-      width: 2.15rem;
-      height: 2.15rem;
+    .series-report__number {
+      color: var(--color-accent-700);
     }
 
-    .series-intro p,
-    .report-card p,
-    .structural-argument p {
+    .series-report__body p {
       font-size: 1rem;
-      line-height: 1.72;
+      line-height: 1.75;
+    }
+
+    .series-cta {
+      border-radius: 1.1rem;
     }
   }
 </style>
