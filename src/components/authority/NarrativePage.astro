@@ -495,17 +495,11 @@ const contentShellClass = hasRailContent
   }
 
   .narrative-page__content-shell--with-rail {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(16rem, 20rem);
-    gap: clamp(3rem, 5vw, 5rem);
-    align-items: start;
+    display: block;
   }
 
   .narrative-page__article-column {
-    width: min(100%, 58rem);
-  }
-
-  .narrative-page__content-shell:not(.narrative-page__content-shell--with-rail) .narrative-page__article-column {
+    width: min(100%, var(--lozen-article-content-width));
     margin-inline: auto;
   }
 
@@ -653,8 +647,11 @@ const contentShellClass = hasRailContent
   }
 
   .narrative-page__rail {
-    position: sticky;
-    top: 6.5rem;
+    position: static;
+    width: min(100%, var(--lozen-article-content-width));
+    margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+    border-top: 1px solid var(--color-base-300);
+    padding-top: 1.75rem;
   }
 
   .narrative-page__rail-stack,
@@ -952,16 +949,8 @@ const contentShellClass = hasRailContent
 
     .narrative-page__article-column {
       width: 100%;
-      max-width: 58rem;
+      max-width: var(--lozen-article-content-width);
       margin-inline: auto;
-    }
-
-    .narrative-page__rail {
-      position: static;
-      width: min(100%, 58rem);
-      margin-inline: auto;
-      border-top: 1px solid var(--color-base-300);
-      padding-top: 2rem;
     }
   }
 

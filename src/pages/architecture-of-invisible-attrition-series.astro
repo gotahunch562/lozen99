@@ -198,18 +198,8 @@ const frameworkLinks = [
     </p>
   </section>
 
-  <section class="series-cta">
-    <a href="/request-briefing">
-      Schedule an Invisible Attrition℠ Retention Risk Audit →
-    </a>
-
-    <p>
-      A strategic consultation to identify why clean performance records and engagement scores can mask compounding leadership continuity risk.
-    </p>
-  </section>
-
-  <div slot="rail" class="series-rail-custom">
-    <section class="series-rail-panel">
+  <section class="series-context" aria-label="Series context">
+    <section class="series-context__panel">
       <h2>Series Context</h2>
 
       <dl>
@@ -224,7 +214,7 @@ const frameworkLinks = [
       </dl>
     </section>
 
-    <section class="series-rail-panel">
+    <section class="series-context__panel">
       <h2>Related Architecture</h2>
 
       <nav aria-label="Related architecture links">
@@ -235,21 +225,48 @@ const frameworkLinks = [
         }
       </nav>
     </section>
-  </div>
+  </section>
+
+  <section class="series-cta">
+    <a href="/request-briefing">
+      Schedule an Invisible Attrition℠ Retention Risk Audit →
+    </a>
+
+    <p>
+      A strategic consultation to identify why clean performance records and engagement scores can mask compounding leadership continuity risk.
+    </p>
+  </section>
 </NarrativePage>
 
 <style>
   .series-report-index {
+    display: grid;
+    gap: 1rem;
     margin-top: 3rem;
     border-top: 1px solid var(--color-base-300);
+    padding-top: 1.25rem;
   }
 
   .series-report {
     display: grid;
     grid-template-columns: 3.25rem minmax(0, 1fr);
     gap: 1.25rem;
-    border-bottom: 1px solid var(--color-base-300);
-    padding: 1.65rem 0;
+    border: 1px solid var(--color-base-200);
+    border-radius: 1.15rem;
+    background: #ffffff;
+    padding: clamp(1.2rem, 2.5vw, 1.65rem);
+    box-shadow: var(--shadow-sm);
+    transition:
+      border-color 180ms ease,
+      box-shadow 180ms ease,
+      transform 180ms ease;
+  }
+
+  .series-report:hover,
+  .series-report:focus-within {
+    border-color: var(--color-base-500);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
   }
 
   .series-report__number {
@@ -266,10 +283,10 @@ const frameworkLinks = [
     margin: 0;
     color: var(--color-base-950);
     font-family: var(--font-display);
-    font-size: clamp(1.35rem, 2.4vw, 2.05rem);
-    font-weight: 500;
-    letter-spacing: -0.035em;
-    line-height: 1.12;
+    font-size: var(--lozen-card-title-size);
+    font-weight: var(--lozen-card-title-weight);
+    letter-spacing: var(--lozen-card-title-letter-spacing);
+    line-height: var(--lozen-card-title-line-height);
     text-wrap: balance;
   }
 
@@ -293,19 +310,19 @@ const frameworkLinks = [
 
   .series-report__body p {
     margin-bottom: 1rem;
-    font-size: 1.02rem;
-    line-height: 1.78;
+    font-size: var(--lozen-body-copy-size);
+    line-height: var(--lozen-body-copy-line-height);
   }
 
   .series-report__body a {
     display: inline-flex;
     margin-top: 0.25rem;
-    color: var(--color-accent-700);
+    color: var(--color-base-800);
     font-family: var(--font-sans);
-    font-size: 0.94rem;
-    font-weight: 850;
+    font-size: var(--lozen-body-copy-small-size);
+    font-weight: 800;
     text-decoration: none;
-    border-bottom: 1px solid color-mix(in srgb, var(--color-accent-700) 42%, transparent);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-base-600) 42%, transparent);
     transition:
       color 180ms ease,
       border-color 180ms ease;
@@ -356,72 +373,77 @@ const frameworkLinks = [
     line-height: 1.7;
   }
 
-  .series-rail-custom {
+  .series-context {
     display: grid;
-    gap: 1.75rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 3rem;
   }
 
-  .series-rail-panel {
-    border-top: 1px solid var(--color-base-300);
-    padding-top: 1.25rem;
+  .series-context__panel {
+    border: 1px solid var(--color-base-200);
+    border-radius: 1.15rem;
+    background: #ffffff;
+    padding: clamp(1.15rem, 2.5vw, 1.5rem);
+    box-shadow: var(--shadow-sm);
   }
 
-  .series-rail-panel h2 {
+  .series-context__panel h2 {
     margin: 0;
     color: var(--color-base-900);
     font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 850;
-    letter-spacing: 0.16em;
+    font-size: var(--lozen-meta-label-size);
+    font-weight: var(--lozen-meta-label-weight);
+    letter-spacing: var(--lozen-meta-label-letter-spacing);
     line-height: 1.35;
     text-transform: uppercase;
   }
 
-  .series-rail-panel dl {
+  .series-context__panel dl {
     display: grid;
     gap: 1rem;
     margin: 1.1rem 0 0;
   }
 
-  .series-rail-panel dt {
+  .series-context__panel dt {
     color: var(--color-base-500);
     font-family: var(--font-sans);
-    font-size: 0.72rem;
-    font-weight: 850;
-    letter-spacing: 0.14em;
+    font-size: var(--lozen-meta-label-size);
+    font-weight: var(--lozen-meta-label-weight);
+    letter-spacing: var(--lozen-meta-label-letter-spacing);
     text-transform: uppercase;
   }
 
-  .series-rail-panel dd {
+  .series-context__panel dd {
     margin: 0.35rem 0 0;
     color: var(--color-base-800);
     font-family: var(--font-sans);
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: var(--lozen-body-copy-small-size);
+    line-height: var(--lozen-body-copy-small-line-height);
   }
 
-  .series-rail-panel nav {
+  .series-context__panel nav {
     display: grid;
     gap: 0;
     margin-top: 1.1rem;
     border-top: 1px solid var(--color-base-200);
   }
 
-  .series-rail-panel nav a {
+  .series-context__panel nav a {
     border-bottom: 1px solid var(--color-base-200);
     padding: 0.8rem 0;
     color: var(--color-base-900);
     font-family: var(--font-sans);
-    font-size: 0.94rem;
-    font-weight: 800;
+    font-size: var(--lozen-body-copy-small-size);
+    font-weight: 700;
     line-height: 1.35;
     text-decoration: none;
     transition: color 180ms ease;
   }
 
-  .series-rail-panel nav a:hover,
-  .series-rail-panel nav a:focus-visible {
-    color: var(--color-accent-700);
+  .series-context__panel nav a:hover,
+  .series-context__panel nav a:focus-visible {
+    color: var(--color-base-700);
   }
 
   @media (max-width: 640px) {
@@ -431,13 +453,13 @@ const frameworkLinks = [
       padding: 1.45rem 0;
     }
 
-    .series-report__number {
-      color: var(--color-accent-700);
+    .series-report__body p {
+      font-size: var(--lozen-body-copy-size);
+      line-height: var(--lozen-body-copy-line-height);
     }
 
-    .series-report__body p {
-      font-size: 1rem;
-      line-height: 1.75;
+    .series-context {
+      grid-template-columns: 1fr;
     }
 
     .series-cta {
