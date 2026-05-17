@@ -1,4 +1,3 @@
-
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
@@ -47,141 +46,138 @@ const articleJsonLd = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)}></script>
 
-  <article class="pr-page">
+  <article>
 
     <!-- Masthead -->
-    <div class="pr-page__masthead">
-      <Wrapper variant="standard" class="pr-page__masthead-inner">
-        <a class="pr-page__breadcrumb" href="/news-press">News &amp; Press</a>
-
-        <div class="pr-page__status-row">
-          <span class="pr-page__label pr-page__label--accent">For Immediate Release</span>
-          <span class="pr-page__label">{publishedDate}</span>
+    <div class="masthead">
+      <Wrapper variant="standard">
+        <div class="masthead-inner">
+          <a class="breadcrumb" href="/news-press">News &amp; Press</a>
+          <div class="status-row">
+            <span class="label accent">For Immediate Release</span>
+            <span class="label">{publishedDate}</span>
+          </div>
+          <p class="type-label accent">Press Release</p>
+          <h1 class="headline">{title}</h1>
+          <p class="dek"><em>{description}</em></p>
+          <nav class="share-bar" aria-label="Share this press release">
+            <span class="label">Share</span>
+            {shareLinks.map((link) => (
+              <a
+                href={link.href}
+                target={link.label === "Email" ? undefined : "_blank"}
+                rel={link.label === "Email" ? undefined : "noopener noreferrer"}
+                class="share-pill"
+              >{link.label}</a>
+            ))}
+          </nav>
         </div>
-
-        <p class="pr-page__type">Press Release</p>
-        <h1 class="pr-page__title">{title}</h1>
-        <p class="pr-page__dek"><em>{description}</em></p>
-
-        <nav class="pr-page__share" aria-label="Share this press release">
-          <span class="pr-page__label">Share</span>
-          {shareLinks.map((link) => (
-            <a
-              href={link.href}
-              target={link.label === "Email" ? undefined : "_blank"}
-              rel={link.label === "Email" ? undefined : "noopener noreferrer"}
-              class="pr-page__share-link"
-            >{link.label}</a>
-          ))}
-        </nav>
       </Wrapper>
     </div>
 
     <!-- Hero image -->
-    <Wrapper variant="standard" class="pr-page__figure-wrap">
-      <figure class="pr-page__figure">
-        <img
-          src={image}
-          alt="Navy silhouette of a professional woman raising one hand."
-          loading="eager"
-          decoding="async"
-        />
-      </figure>
+    <Wrapper variant="standard">
+      <div class="figure-wrap">
+        <figure class="hero-figure">
+          <img
+            src={image}
+            alt="Navy silhouette of a professional woman raising one hand."
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+      </div>
     </Wrapper>
 
     <!-- Body + Rail -->
-    <Wrapper variant="standard" class="pr-page__body-wrap">
+    <Wrapper variant="standard">
+      <div class="content-grid">
 
-      <main class="pr-page__main">
-        <p class="pr-page__dateline"><strong>{publishedDate}</strong> — PwC has now named menopause as a defining opportunity in women's health. That recognition matters, it confirms that the market is no longer niche. Menopause is projected to be a $15B–$25B market by 2030.</p>
+        <main class="body-main">
+          <p class="dateline"><strong>{publishedDate}</strong> — PwC has now named menopause as a defining opportunity in women's health. That recognition matters, it confirms that the market is no longer niche. Menopause is projected to be a $15B–$25B market by 2030.</p>
 
-        <p>Yet market expansion does not answer <a href="https://www.lozenadvisory.com/blog/menopause-at-work-unquantified-data-gap">the measurement question</a>. Lozen Advisory LLC today issued a market correction: the menopause-at-work market has treated awareness as adoption, access as reach, and utilization as proof of need. The data is exposing the failure.</p>
+          <p>Yet market expansion does not answer <a href="https://www.lozenadvisory.com/blog/menopause-at-work-unquantified-data-gap">the measurement question</a>. Lozen Advisory LLC today issued a market correction: the menopause-at-work market has treated awareness as adoption, access as reach, and utilization as proof of need. The data is exposing the failure.</p>
 
-        <blockquote class="pr-page__quote">"The menopause-at-work market is over-indexed on access and underdeveloped on measurement," said Akilah E. Kamaria, founder of Lozen Advisory LLC. "Employers can add benefits, expand education, publish guidance and build a company 'Menopause Hub', and still have no reliable view of the women who they are attempting to serve."</blockquote>
+          <blockquote>"The menopause-at-work market is over-indexed on access and underdeveloped on measurement," said Akilah E. Kamaria, founder of Lozen Advisory LLC. "Employers can add benefits, expand education, publish guidance and build a company 'Menopause Hub', and still have no reliable view of the women who they are attempting to serve."</blockquote>
 
-        <p>Approximately <a href="https://www.pwc.com/us/en/industries/health-industries/library/unlocking-the-menopause-market.html">$1.7 billion has been deployed</a> into menopause and midlife women's health platforms between 2020 and 2025, with funding events growing at roughly 15% annually, according to PwC. Employers have added benefits. Certification bodies have expanded. Government commissions have convened. Celebrity campaigns and medical influencers have moved menopause into the public conversation. Yet the central failure remains.</p>
+          <p>Approximately <a href="https://www.pwc.com/us/en/industries/health-industries/library/unlocking-the-menopause-market.html">$1.7 billion has been deployed</a> into menopause and midlife women's health platforms between 2020 and 2025, with funding events growing at roughly 15% annually, according to PwC. Employers have added benefits. Certification bodies have expanded. Government commissions have convened. Celebrity campaigns and medical influencers have moved menopause into the public conversation. Yet the central failure remains.</p>
 
-        <p>Women still do not understand the transition. Women still feel unprepared for the disruption. Women still are not using treatment. Women are dissatisfied with the available options. And, even as employers add more benefits, employee confidence that those benefits support them is falling.</p>
+          <p>Women still do not understand the transition. Women still feel unprepared for the disruption. Women still are not using treatment. Women are dissatisfied with the available options. And, even as employers add more benefits, employee confidence that those benefits support them is falling.</p>
 
-        <p><a href="https://hellobonafide.com/pages/state-of-menopause-2025">Bonafide's fifth annual <em>State of Menopause</em> report</a> delivers the five-year verdict: more products, more visibility, more market activity, and women still no closer to comprehension, treatment use, confidence, or trust. The report found that 59% of women ages 40 to 49 never knew about perimenopause until symptoms began, 71% feel unprepared for how disruptive symptoms are, 69% are not using any treatment for their symptoms, and 48% of women ages 40 to 49 report symptoms have negatively impacted their ambition.</p>
+          <p><a href="https://hellobonafide.com/pages/state-of-menopause-2025">Bonafide's fifth annual <em>State of Menopause</em> report</a> delivers the five-year verdict: more products, more visibility, more market activity, and women still no closer to comprehension, treatment use, confidence, or trust. The report found that 59% of women ages 40 to 49 never knew about perimenopause until symptoms began, 71% feel unprepared for how disruptive symptoms are, 69% are not using any treatment for their symptoms, and 48% of women ages 40 to 49 report symptoms have negatively impacted their ambition.</p>
 
-        <p>That is not a market solving the problem. That is a market producing awareness without producing adoption.</p>
+          <p>That is not a market solving the problem. That is a market producing awareness without producing adoption.</p>
 
-        <p>Maven Clinic titled its 2026 State of Women's and Family Health Benefits report <a href="https://info.mavenclinic.com/hubfs/Whitepapers/2026%20Maven%20State%20of%20Womens%20and%20Family%20Health%20Benefits%20Report.pdf"><em>More Benefits, Less Confidence</em></a>. The data behind that title is the market's admission. Employers increased women's and family health benefits by 39% year over year. Employee confidence that those benefits support them very well declined across every category.</p>
+          <p>Maven Clinic titled its 2026 State of Women's and Family Health Benefits report <a href="https://info.mavenclinic.com/hubfs/Whitepapers/2026%20Maven%20State%20of%20Womens%20and%20Family%20Health%20Benefits%20Report.pdf"><em>More Benefits, Less Confidence</em></a>. The data behind that title is the market's admission. Employers increased women's and family health benefits by 39% year over year. Employee confidence that those benefits support them very well declined across every category.</p>
 
-        <p>The Michigan Women's Commission spent two years gathering one of the most substantial state-level menopause datasets in the country. Thousands of women. Thirteen community conversations. A statewide tour. The <a href="https://www.lozenadvisory.com/blog/michigan-menopause-memorandum">Menopause Memorandum</a> released in March 2026 with recommendations to educate employees, train supervisors, and expand benefits. Yet not one recommendation addressed the woman who said no — the woman who would not use the support because using it required visibility she could not afford. The data saw her, but the recommendations did not.</p>
+          <p>The Michigan Women's Commission spent two years gathering one of the most substantial state-level menopause datasets in the country. Thousands of women. Thirteen community conversations. A statewide tour. The <a href="https://www.lozenadvisory.com/blog/michigan-menopause-memorandum">Menopause Memorandum</a> released in March 2026 with recommendations to educate employees, train supervisors, and expand benefits. Yet not one recommendation addressed the woman who said no — the woman who would not use the support because using it required visibility she could not afford. The data saw her, but the recommendations did not.</p>
 
-        <p>Lozen Advisory says the reason is structural. The menopause-at-work market has treated awareness as the pathway to adoption. The assumption is simple: once women know what is happening, they will seek support; once employers offer support, women will use it; once women use it, utilization data will show whether the benefit works.</p>
+          <p>Lozen Advisory says the reason is structural. The menopause-at-work market has treated awareness as the pathway to adoption. The assumption is simple: once women know what is happening, they will seek support; once employers offer support, women will use it; once women use it, utilization data will show whether the benefit works.</p>
 
-        <blockquote class="pr-page__quote">That assumption fails at the point of professional risk. "The market has confused awareness with adoption," Kamaria said. "A woman can understand the perimenopause transition, recognize the symptoms, and still decline to enter a system that records her private constraint. That type of non-disclosure is not ignorance, that is a rational calculation inside a professional environment where visibility carries cost."</blockquote>
+          <blockquote>That assumption fails at the point of professional risk. "The market has confused awareness with adoption," Kamaria said. "A woman can understand the perimenopause transition, recognize the symptoms, and still decline to enter a system that records her private constraint. That type of non-disclosure is not ignorance, that is a rational calculation inside a professional environment where visibility carries cost."</blockquote>
 
-        <p>Kamaria spent her career as a data analyst working inside the decision systems organizations rely on to interpret performance, risk, and operational reality. Lozen Advisory's market correction comes from that background: when a system only measures what enters the record, the absence of data is not neutral. It may be the signal.</p>
+          <p>Kamaria spent her career as a data analyst working inside the decision systems organizations rely on to interpret performance, risk, and operational reality. Lozen Advisory's market correction comes from that background: when a system only measures what enters the record, the absence of data is not neutral. It may be the signal.</p>
 
-        <blockquote class="pr-page__quote">"The absence of utilization is not the absence of need," Kamaria said. "It may be evidence that the system cannot reach the women it claims to support."</blockquote>
+          <blockquote>"The absence of utilization is not the absence of need," Kamaria said. "It may be evidence that the system cannot reach the women it claims to support."</blockquote>
 
-        <p>That is the structural failure. The market has been asking and advising employers to offer menopause support. The salient question is whether that support can be used, measured, and trusted by women who will not disclose. The menopause-at-work benefit market is not failing because women didn't understand the services. It is failing because the infrastructure was built around the raised hand.</p>
+          <p>That is the structural failure. The market has been asking and advising employers to offer menopause support. The salient question is whether that support can be used, measured, and trusted by women who will not disclose. The menopause-at-work benefit market is not failing because women didn't understand the services. It is failing because the infrastructure was built around the raised hand.</p>
 
-        <blockquote class="pr-page__quote">"The menopause-at-work market is built for the woman who raises her hand," Kamaria said. "The woman with the most to lose professionally was never going to raise hers."</blockquote>
+          <blockquote>"The menopause-at-work market is built for the woman who raises her hand," Kamaria said. "The woman with the most to lose professionally was never going to raise hers."</blockquote>
 
-        <p>The market built visibility.</p>
-        <p>It did not build reach.</p>
+          <p>The market built visibility.</p>
+          <p>It did not build reach.</p>
 
-        <footer class="pr-page__footer">
-          <p class="pr-page__label pr-page__label--accent">Media Contact</p>
-          <p>For media inquiries, contact <a href={`mailto:${mediaEmail}`}>{mediaEmail}</a>.</p>
-        </footer>
-      </main>
+          <footer class="body-footer">
+            <p class="label accent">Media Contact</p>
+            <p>For media inquiries, contact <a href={`mailto:${mediaEmail}`}>{mediaEmail}</a>.</p>
+          </footer>
+        </main>
 
-      <!-- Sticky rail -->
-      <aside class="pr-page__rail">
-        <div class="pr-page__rail-block">
-          <p class="pr-page__label">Release Date</p>
-          <strong>{publishedDate}</strong>
-        </div>
-        <div class="pr-page__rail-block">
-          <p class="pr-page__label">Category</p>
-          <strong>Market Correction</strong>
-        </div>
-        <div class="pr-page__rail-block">
-          <p class="pr-page__label">Media Contact</p>
-          <a href={`mailto:${mediaEmail}`}>{mediaEmail}</a>
-        </div>
-        <nav class="pr-page__rail-share" aria-label="Share">
-          <p class="pr-page__label">Share</p>
-          {shareLinks.map((link) => (
-            <a
-              href={link.href}
-              target={link.label === "Email" ? undefined : "_blank"}
-              rel={link.label === "Email" ? undefined : "noopener noreferrer"}
-              class="pr-page__share-link pr-page__share-link--rail"
-            >{link.label}</a>
-          ))}
-        </nav>
-      </aside>
+        <!-- Sticky rail -->
+        <aside class="rail">
+          <div class="rail-block">
+            <p class="label">Release Date</p>
+            <strong>{publishedDate}</strong>
+          </div>
+          <div class="rail-block">
+            <p class="label">Category</p>
+            <strong>Market Correction</strong>
+          </div>
+          <div class="rail-block">
+            <p class="label">Media Contact</p>
+            <a href={`mailto:${mediaEmail}`}>{mediaEmail}</a>
+          </div>
+          <div class="rail-share">
+            <p class="label">Share</p>
+            {shareLinks.map((link) => (
+              <a
+                href={link.href}
+                target={link.label === "Email" ? undefined : "_blank"}
+                rel={link.label === "Email" ? undefined : "noopener noreferrer"}
+                class="share-pill share-pill--rail"
+              >{link.label}</a>
+            ))}
+          </div>
+        </aside>
 
+      </div>
     </Wrapper>
   </article>
 </BaseLayout>
 
 <style>
-  /* ── Page shell ── */
-  .pr-page {
-    background: var(--color-base-50);
-    color: var(--color-base-800);
-  }
-
-  /* ── Masthead ── */
-  .pr-page__masthead {
+  /* Masthead */
+  .masthead {
     background: white;
     border-bottom: 1px solid var(--color-base-200);
     padding: clamp(8rem, 12vw, 10rem) 0 clamp(3rem, 5vw, 4.5rem);
   }
 
-  .pr-page__masthead-inner {
-    max-width: 72rem;
+  .masthead-inner {
+    max-width: 62rem;
   }
 
-  .pr-page__breadcrumb {
+  .breadcrumb {
     display: inline-flex;
     color: var(--color-base-500);
     font-family: var(--font-sans);
@@ -193,18 +189,19 @@ const articleJsonLd = {
     transition: color 160ms ease;
   }
 
-  .pr-page__breadcrumb:hover {
+  .breadcrumb:hover {
     color: var(--color-accent-700);
   }
 
-  .pr-page__status-row {
+  .status-row {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem 1rem;
     margin-top: 2rem;
   }
 
-  .pr-page__label {
+  .label {
+    display: block;
     margin: 0;
     font-family: var(--font-sans);
     font-size: 0.72rem;
@@ -215,22 +212,21 @@ const articleJsonLd = {
     color: var(--color-base-500);
   }
 
-  .pr-page__label--accent {
+  .accent {
     color: var(--color-accent-700);
   }
 
-  .pr-page__type {
+  .type-label {
     margin: 2.5rem 0 0;
     font-family: var(--font-sans);
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.13em;
     text-transform: uppercase;
-    color: var(--color-accent-700);
   }
 
-  .pr-page__title {
-    max-width: 62rem;
+  .headline {
+    max-width: 60rem;
     margin: 0.85rem 0 0;
     font-family: var(--font-display);
     font-size: clamp(2.6rem, 5.2vw, 5.25rem);
@@ -240,7 +236,7 @@ const articleJsonLd = {
     color: var(--color-base-950);
   }
 
-  .pr-page__dek {
+  .dek {
     max-width: 48rem;
     margin: 1.25rem 0 0;
     font-family: var(--font-sans);
@@ -249,8 +245,8 @@ const articleJsonLd = {
     color: var(--color-base-600);
   }
 
-  /* ── Share buttons ── */
-  .pr-page__share {
+  /* Share bar */
+  .share-bar {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -258,7 +254,7 @@ const articleJsonLd = {
     margin-top: 1.75rem;
   }
 
-  .pr-page__share-link {
+  .share-pill {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -277,18 +273,18 @@ const articleJsonLd = {
     transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
   }
 
-  .pr-page__share-link:hover {
+  .share-pill:hover {
     background: var(--color-accent-100);
     border-color: var(--color-accent-400);
     transform: translateY(-1px);
   }
 
-  /* ── Figure ── */
-  .pr-page__figure-wrap {
+  /* Figure */
+  .figure-wrap {
     padding-top: 2.5rem;
   }
 
-  .pr-page__figure {
+  .hero-figure {
     margin: 0;
     overflow: hidden;
     border-radius: 1rem;
@@ -296,7 +292,7 @@ const articleJsonLd = {
     box-shadow: var(--shadow-xl);
   }
 
-  .pr-page__figure img {
+  .hero-figure img {
     display: block;
     width: 100%;
     height: clamp(14rem, 30vw, 22rem);
@@ -304,8 +300,8 @@ const articleJsonLd = {
     object-position: center 43%;
   }
 
-  /* ── Body + Rail grid ── */
-  .pr-page__body-wrap {
+  /* Content grid */
+  .content-grid {
     display: grid;
     grid-template-columns: minmax(0, 44rem) minmax(14rem, 17rem);
     gap: clamp(2.5rem, 6vw, 5rem);
@@ -314,12 +310,12 @@ const articleJsonLd = {
     padding-bottom: clamp(4rem, 8vw, 7rem);
   }
 
-  /* ── Main body ── */
-  .pr-page__main {
+  /* Body */
+  .body-main {
     max-width: 44rem;
   }
 
-  .pr-page__dateline {
+  .dateline {
     margin-top: 0;
     font-family: var(--font-sans);
     font-size: clamp(1.05rem, 1.5vw, 1.18rem);
@@ -328,7 +324,7 @@ const articleJsonLd = {
     color: var(--color-base-900);
   }
 
-  .pr-page__main p {
+  .body-main p {
     margin: 1.25rem 0 0;
     font-family: var(--font-sans);
     font-size: 1rem;
@@ -336,7 +332,7 @@ const articleJsonLd = {
     color: var(--color-base-700);
   }
 
-  .pr-page__main a {
+  .body-main a {
     color: var(--color-accent-700);
     font-weight: 600;
     text-decoration: underline;
@@ -344,11 +340,11 @@ const articleJsonLd = {
     transition: color 160ms ease;
   }
 
-  .pr-page__main a:hover {
+  .body-main a:hover {
     color: var(--color-accent-900);
   }
 
-  .pr-page__quote {
+  .body-main blockquote {
     margin: 2rem 0 0;
     border-left: 3px solid var(--color-accent-500);
     padding-left: clamp(1rem, 2vw, 1.35rem);
@@ -360,37 +356,35 @@ const articleJsonLd = {
     color: var(--color-base-900);
   }
 
-  .pr-page__footer {
+  .body-footer {
     margin-top: 3.5rem;
     border-top: 1px solid var(--color-base-200);
     padding-top: 1.5rem;
   }
 
-  .pr-page__footer p:last-child {
+  .body-footer p:last-child {
     margin-top: 0.5rem;
     font-family: var(--font-sans);
     font-size: 0.95rem;
     color: var(--color-base-600);
   }
 
-  /* ── Sticky rail ── */
-  .pr-page__rail {
+  /* Rail */
+  .rail {
     position: sticky;
     top: 6rem;
     border-top: 1px solid var(--color-base-200);
     padding-top: 1.25rem;
-    display: grid;
-    gap: 0;
   }
 
-  .pr-page__rail-block {
+  .rail-block {
     border-bottom: 1px solid var(--color-base-200);
     padding-bottom: 1.1rem;
     margin-bottom: 1.1rem;
   }
 
-  .pr-page__rail-block strong,
-  .pr-page__rail-block a {
+  .rail-block strong,
+  .rail-block a {
     display: block;
     margin-top: 0.3rem;
     font-family: var(--font-sans);
@@ -401,41 +395,43 @@ const articleJsonLd = {
     text-decoration: none;
   }
 
-  .pr-page__rail-block a:hover {
+  .rail-block a:hover {
     color: var(--color-accent-700);
   }
 
-  .pr-page__rail-share {
+  .rail-share {
     display: grid;
     gap: 0.4rem;
   }
 
-  .pr-page__share-link--rail {
+  .share-pill--rail {
     border-radius: 0.4rem;
     justify-content: flex-start;
     background: white;
   }
 
-  /* ── Responsive ── */
+  /* Responsive */
   @media (max-width: 980px) {
-    .pr-page__body-wrap {
+    .content-grid {
       grid-template-columns: minmax(0, 1fr);
     }
 
-    .pr-page__rail {
+    .rail {
       position: static;
+      display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
       border-bottom: 1px solid var(--color-base-200);
       padding-bottom: 1.25rem;
     }
 
-    .pr-page__rail-block {
+    .rail-block {
       border-bottom: 0;
       padding-bottom: 0;
       margin-bottom: 0;
     }
 
-    .pr-page__rail-share {
+    .rail-share {
       grid-column: 1 / -1;
       grid-template-columns: repeat(4, auto);
       justify-content: start;
@@ -443,19 +439,19 @@ const articleJsonLd = {
   }
 
   @media (max-width: 640px) {
-    .pr-page__masthead {
+    .masthead {
       padding-top: 6.5rem;
     }
 
-    .pr-page__rail {
+    .rail {
       grid-template-columns: minmax(0, 1fr);
     }
 
-    .pr-page__rail-share {
+    .rail-share {
       grid-template-columns: repeat(2, auto);
     }
 
-    .pr-page__figure img {
+    .hero-figure img {
       height: clamp(12rem, 55vw, 16rem);
     }
   }
