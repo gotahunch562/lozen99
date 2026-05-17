@@ -278,10 +278,10 @@ const contentShellClass = hasRailContent
 
   .narrative-page__hero {
     overflow: hidden;
-    border-bottom: 1px solid color-mix(in oklch, var(--color-accent-500) 34%, var(--color-base-950));
+    border-bottom: 1px solid color-mix(in oklch, var(--color-base-500) 28%, var(--color-base-950));
     background:
-      radial-gradient(circle at 20% 18%, rgba(232, 230, 60, 0.1), transparent 30%),
-      linear-gradient(135deg, var(--color-base-950) 0%, var(--color-base-900) 52%, #020a17 100%);
+      radial-gradient(circle at 18% 18%, rgba(189, 202, 219, 0.12), transparent 32%),
+      linear-gradient(135deg, var(--color-base-950) 0%, var(--color-base-900) 56%, #020a17 100%);
     color: white;
   }
 
@@ -363,7 +363,7 @@ const contentShellClass = hasRailContent
 
   .narrative-page__back:hover,
   .narrative-page__back:focus-visible {
-    color: var(--color-accent-300);
+    color: var(--color-base-100);
   }
 
   .narrative-page__meta {
@@ -380,7 +380,7 @@ const contentShellClass = hasRailContent
   }
 
   .narrative-page__meta span:first-child {
-    border-left: 1px solid var(--color-accent-500);
+    border-left: 1px solid color-mix(in oklch, var(--color-base-300) 62%, transparent);
     padding-left: 1rem;
     color: white;
   }
@@ -520,10 +520,10 @@ const contentShellClass = hasRailContent
   }
 
   .narrative-page__body :global(a) {
-    color: var(--color-accent-700);
+    color: var(--color-base-800);
     font-weight: 700;
     text-decoration: underline;
-    text-decoration-color: color-mix(in srgb, var(--color-accent-700) 48%, transparent);
+    text-decoration-color: color-mix(in srgb, var(--color-base-600) 42%, transparent);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.22em;
     transition:
@@ -572,7 +572,7 @@ const contentShellClass = hasRailContent
   .narrative-page__body :global(blockquote),
   .narrative-page__body :global(.narrative-pullquote) {
     margin: 2.75rem 0;
-    border-left: 2px solid var(--color-accent-500);
+    border-left: 2px solid var(--color-base-500);
     padding-left: 1.35rem;
     color: var(--color-base-950);
     font-family: var(--font-display);
@@ -594,7 +594,7 @@ const contentShellClass = hasRailContent
   .narrative-page__body :global(.narrative-callout) {
     margin: 2.5rem 0;
     border: 1px solid var(--color-base-200);
-    border-left: 3px solid var(--color-accent-500);
+    border-left: 3px solid var(--color-base-500);
     border-radius: 1.25rem;
     background: white;
     padding: 1.5rem;
@@ -683,14 +683,14 @@ const contentShellClass = hasRailContent
 
   .narrative-page__rail-cta:hover,
   .narrative-page__rail-cta:focus-visible {
-    border-color: var(--color-accent-500);
+    border-color: var(--color-base-500);
     box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
   }
 
   .narrative-page__rail-cta p {
     margin: 0 0 0.65rem;
-    color: var(--color-accent-700);
+    color: var(--color-base-600);
     font-family: var(--font-sans);
     font-size: 0.72rem;
     font-weight: 800;
@@ -720,7 +720,7 @@ const contentShellClass = hasRailContent
   .narrative-page__rail-cta em {
     display: inline-flex;
     margin-top: 0.85rem;
-    color: var(--color-accent-700);
+    color: var(--color-base-800);
     font-family: var(--font-sans);
     font-size: 0.86rem;
     font-style: normal;
@@ -743,7 +743,7 @@ const contentShellClass = hasRailContent
 
   .narrative-page__rail-section--links a:hover,
   .narrative-page__rail-section--links a:focus-visible {
-    color: var(--color-accent-700);
+    color: var(--color-base-700);
   }
 
   .narrative-page__rail-section--links span {
@@ -806,7 +806,7 @@ const contentShellClass = hasRailContent
 
   .narrative-page__related-link:hover,
   .narrative-page__related-link:focus-visible {
-    color: var(--color-accent-700);
+    color: var(--color-base-700);
   }
 
   .narrative-page__related-link span {
@@ -836,7 +836,7 @@ const contentShellClass = hasRailContent
 
   .narrative-page__bottom-cta p {
     margin: 0;
-    color: var(--color-accent-300);
+    color: var(--color-base-200);
     font-family: var(--font-sans);
     font-size: 0.75rem;
     font-weight: 800;
