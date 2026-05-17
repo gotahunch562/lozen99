@@ -1,18 +1,26 @@
 ---
-title: "Disclosure Day and the Workplace Meaning of Disclosure"
+title: Disclosure Day and the Workplace Meaning of Disclosure
 slug: disclosure-day-workplace-disclosure-record-creation
 pubDate: 2026-05-16
 datePublished: 2026-05-16
 dateModified: 2026-05-16
 category: Disclosure Independence
-excerpt: "Steven Spielberg's Disclosure Day gives the word disclosure a cultural moment. At work, however, disclosure is not only revelation. It is record creation."
-description: "Steven Spielberg's Disclosure Day gives the word disclosure a cultural moment. At work, disclosure is not only revelation. It is record creation."
-metaDescription: "Disclosure Day, Steven Spielberg's 2026 film, gives the word disclosure a cultural moment. At work, disclosure is not only revelation. It is record creation."
+excerpt: Steven Spielberg's Disclosure Day gives the word disclosure a cultural
+  moment. At work, however, disclosure is not only revelation. It is record
+  creation.
+description: Steven Spielberg's Disclosure Day gives the word disclosure a
+  cultural moment. At work, disclosure is not only revelation. It is record
+  creation.
+metaDescription: Disclosure Day, Steven Spielberg's 2026 film, gives the word
+  disclosure a cultural moment. At work, disclosure is not only revelation. It
+  is record creation.
 image:
   url: /src/images/blog/disclosuredaycommentary.webp
-  alt: "Abstract blue digital overlay across a woman's face, suggesting disclosure, visibility, and workplace record creation"
+  alt: Abstract blue digital overlay across a woman's face, suggesting disclosure,
+    visibility, and workplace record creation
 heroImage: /src/images/blog/disclosuredaycommentary.webp
-heroAlt: "Abstract blue digital overlay across a woman's face, suggesting disclosure, visibility, and workplace record creation"
+heroAlt: Abstract blue digital overlay across a woman's face, suggesting
+  disclosure, visibility, and workplace record creation
 tags:
   - Disclosure Day
   - Workplace Disclosure
@@ -21,7 +29,6 @@ tags:
 draft: false
 isFeatured: false
 ---
-
 Steven Spielberg's *Disclosure Day*, scheduled to premiere in theaters on June 12, 2026, gives the word disclosure a cultural moment. The plot has been intentionally kept from view, which makes the title carry more weight than it might otherwise. Before the audience knows what will be revealed, the word itself is already doing the work.
 
 Disclosure means something hidden is about to become known. A secret moves into the open. A private fact becomes visible. Something previously withheld enters the room, and once it does, the situation changes.
