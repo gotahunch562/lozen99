@@ -1,3 +1,4 @@
+
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
@@ -16,22 +17,10 @@ const mediaEmail = "media@lozenadvisory.com";
 const encodedUrl = encodeURIComponent(canonical);
 const encodedTitle = encodeURIComponent(title);
 const shareLinks = [
-  {
-    label: "LinkedIn",
-    href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
-  },
-  {
-    label: "X",
-    href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
-  },
-  {
-    label: "Facebook",
-    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-  },
-  {
-    label: "Email",
-    href: `mailto:?subject=${encodedTitle}&body=${encodedUrl}`,
-  },
+  { label: "LinkedIn", href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}` },
+  { label: "X", href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}` },
+  { label: "Facebook", href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}` },
+  { label: "Email", href: `mailto:?subject=${encodedTitle}&body=${encodedUrl}` },
 ];
 
 const articleJsonLd = {
@@ -42,16 +31,8 @@ const articleJsonLd = {
   datePublished: publishedDateIso,
   dateModified: publishedDateIso,
   image: [`https://www.lozenadvisory.com${image}`],
-  author: {
-    "@type": "Organization",
-    name: "Lozen Advisory LLC",
-    url: "https://www.lozenadvisory.com",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Lozen Advisory LLC",
-    url: "https://www.lozenadvisory.com",
-  },
+  author: { "@type": "Organization", name: "Lozen Advisory LLC", url: "https://www.lozenadvisory.com" },
+  publisher: { "@type": "Organization", name: "Lozen Advisory LLC", url: "https://www.lozenadvisory.com" },
   mainEntityOfPage: canonical,
 };
 ---
@@ -66,31 +47,39 @@ const articleJsonLd = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)}></script>
 
-  <article class="press-release-page">
-    <header class="press-release-page__masthead">
-      <Wrapper variant="standard" class="press-release-page__masthead-shell">
-        <a class="press-release-page__breadcrumb" href="/news-press">News &amp; Press</a>
+  <article class="pr-page">
 
-        <div class="press-release-page__status-row" aria-label="Press release status">
-          <span>For Immediate Release</span>
-          <span>{publishedDate}</span>
+    <!-- Masthead -->
+    <div class="pr-page__masthead">
+      <Wrapper variant="standard" class="pr-page__masthead-inner">
+        <a class="pr-page__breadcrumb" href="/news-press">News &amp; Press</a>
+
+        <div class="pr-page__status-row">
+          <span class="pr-page__label pr-page__label--accent">For Immediate Release</span>
+          <span class="pr-page__label">{publishedDate}</span>
         </div>
 
-        <p class="press-release-page__type">Press Release</p>
-        <h1>{title}</h1>
-        <p class="press-release-page__dek"><em>{description}</em></p>
+        <p class="pr-page__type">Press Release</p>
+        <h1 class="pr-page__title">{title}</h1>
+        <p class="pr-page__dek"><em>{description}</em></p>
 
-        <nav class="press-release-page__share press-release-page__share--masthead" aria-label="Share this press release">
-          <span>Share</span>
+        <nav class="pr-page__share" aria-label="Share this press release">
+          <span class="pr-page__label">Share</span>
           {shareLinks.map((link) => (
-            <a href={link.href} target={link.label === "Email" ? undefined : "_blank"} rel={link.label === "Email" ? undefined : "noopener noreferrer"}>{link.label}</a>
+            <a
+              href={link.href}
+              target={link.label === "Email" ? undefined : "_blank"}
+              rel={link.label === "Email" ? undefined : "noopener noreferrer"}
+              class="pr-page__share-link"
+            >{link.label}</a>
           ))}
         </nav>
       </Wrapper>
-    </header>
+    </div>
 
-    <Wrapper variant="standard" class="press-release-page__media-shell">
-      <figure class="press-release-page__figure">
+    <!-- Hero image -->
+    <Wrapper variant="standard" class="pr-page__figure-wrap">
+      <figure class="pr-page__figure">
         <img
           src={image}
           alt="Navy silhouette of a professional woman raising one hand."
@@ -100,13 +89,15 @@ const articleJsonLd = {
       </figure>
     </Wrapper>
 
-    <Wrapper variant="standard" class="press-release-page__content-shell">
-      <main class="press-release-page__main" aria-label="Press release body">
-        <p class="press-release-page__dateline"><strong>{publishedDate}</strong> — PwC has now named menopause as a defining opportunity in women's health. That recognition matters, it confirms that the market is no longer niche. Menopause is projected to be a $15B–$25B market by 2030.</p>
+    <!-- Body + Rail -->
+    <Wrapper variant="standard" class="pr-page__body-wrap">
+
+      <main class="pr-page__main">
+        <p class="pr-page__dateline"><strong>{publishedDate}</strong> — PwC has now named menopause as a defining opportunity in women's health. That recognition matters, it confirms that the market is no longer niche. Menopause is projected to be a $15B–$25B market by 2030.</p>
 
         <p>Yet market expansion does not answer <a href="https://www.lozenadvisory.com/blog/menopause-at-work-unquantified-data-gap">the measurement question</a>. Lozen Advisory LLC today issued a market correction: the menopause-at-work market has treated awareness as adoption, access as reach, and utilization as proof of need. The data is exposing the failure.</p>
 
-        <p class="press-release-page__quote">"The menopause-at-work market is over-indexed on access and underdeveloped on measurement," said Akilah E. Kamaria, founder of Lozen Advisory LLC. "Employers can add benefits, expand education, publish guidance and build a company 'Menopause Hub', and still have no reliable view of the women who they are attempting to serve.”</p>
+        <blockquote class="pr-page__quote">"The menopause-at-work market is over-indexed on access and underdeveloped on measurement," said Akilah E. Kamaria, founder of Lozen Advisory LLC. "Employers can add benefits, expand education, publish guidance and build a company 'Menopause Hub', and still have no reliable view of the women who they are attempting to serve."</blockquote>
 
         <p>Approximately <a href="https://www.pwc.com/us/en/industries/health-industries/library/unlocking-the-menopause-market.html">$1.7 billion has been deployed</a> into menopause and midlife women's health platforms between 2020 and 2025, with funding events growing at roughly 15% annually, according to PwC. Employers have added benefits. Certification bodies have expanded. Government commissions have convened. Celebrity campaigns and medical influencers have moved menopause into the public conversation. Yet the central failure remains.</p>
 
@@ -116,379 +107,356 @@ const articleJsonLd = {
 
         <p>That is not a market solving the problem. That is a market producing awareness without producing adoption.</p>
 
-        <p>Maven Clinic titled its 2026 State of Women's and Family Health Benefits report <a href="https://info.mavenclinic.com/hubfs/Whitepapers/2026%20Maven%20State%20of%20Womens%20and%20Family%20Health%20Benefits%20Report.pdf"><em>More Benefits, Less Confidence</em>.</a> The data behind that title is the market's admission. Employers increased women's and family health benefits by 39% year over year. Employee confidence that those benefits support them very well declined across every category.</p>
+        <p>Maven Clinic titled its 2026 State of Women's and Family Health Benefits report <a href="https://info.mavenclinic.com/hubfs/Whitepapers/2026%20Maven%20State%20of%20Womens%20and%20Family%20Health%20Benefits%20Report.pdf"><em>More Benefits, Less Confidence</em></a>. The data behind that title is the market's admission. Employers increased women's and family health benefits by 39% year over year. Employee confidence that those benefits support them very well declined across every category.</p>
 
         <p>The Michigan Women's Commission spent two years gathering one of the most substantial state-level menopause datasets in the country. Thousands of women. Thirteen community conversations. A statewide tour. The <a href="https://www.lozenadvisory.com/blog/michigan-menopause-memorandum">Menopause Memorandum</a> released in March 2026 with recommendations to educate employees, train supervisors, and expand benefits. Yet not one recommendation addressed the woman who said no — the woman who would not use the support because using it required visibility she could not afford. The data saw her, but the recommendations did not.</p>
 
         <p>Lozen Advisory says the reason is structural. The menopause-at-work market has treated awareness as the pathway to adoption. The assumption is simple: once women know what is happening, they will seek support; once employers offer support, women will use it; once women use it, utilization data will show whether the benefit works.</p>
 
-        <p class="press-release-page__quote">That assumption fails at the point of professional risk. "The market has confused awareness with adoption," Kamaria said. "A woman can understand the perimenopause transition, recognize the symptoms, and still decline to enter a system that records her private constraint. That type of non-disclosure is not ignorance, that is a rational calculation inside a professional environment where visibility carries cost."</p>
+        <blockquote class="pr-page__quote">That assumption fails at the point of professional risk. "The market has confused awareness with adoption," Kamaria said. "A woman can understand the perimenopause transition, recognize the symptoms, and still decline to enter a system that records her private constraint. That type of non-disclosure is not ignorance, that is a rational calculation inside a professional environment where visibility carries cost."</blockquote>
 
         <p>Kamaria spent her career as a data analyst working inside the decision systems organizations rely on to interpret performance, risk, and operational reality. Lozen Advisory's market correction comes from that background: when a system only measures what enters the record, the absence of data is not neutral. It may be the signal.</p>
 
-        <p class="press-release-page__quote">"The absence of utilization is not the absence of need," Kamaria said. "It may be evidence that the system cannot reach the women it claims to support."</p>
+        <blockquote class="pr-page__quote">"The absence of utilization is not the absence of need," Kamaria said. "It may be evidence that the system cannot reach the women it claims to support."</blockquote>
 
-        <p>That is the structural failure. The market has been asking and advising employers to offer menopause support. The salient question is whether that support can be used, measured, and trusted by women who will not disclose. The menopause-at-work benefit market is not failing because women didn’t understand the services. It is failing because the infrastructure was built around the raised hand.</p>
+        <p>That is the structural failure. The market has been asking and advising employers to offer menopause support. The salient question is whether that support can be used, measured, and trusted by women who will not disclose. The menopause-at-work benefit market is not failing because women didn't understand the services. It is failing because the infrastructure was built around the raised hand.</p>
 
-        <p class="press-release-page__quote">"The menopause-at-work market is built for the woman who raises her hand," Kamaria said. "The woman with the most to lose professionally was never going to raise hers."</p>
+        <blockquote class="pr-page__quote">"The menopause-at-work market is built for the woman who raises her hand," Kamaria said. "The woman with the most to lose professionally was never going to raise hers."</blockquote>
 
         <p>The market built visibility.</p>
-
         <p>It did not build reach.</p>
 
-        <footer class="press-release-page__footer">
-          <p class="press-release-page__footer-label">Media Contact</p>
-          <p>For media inquiries, contact our communications team at <a href={`mailto:${mediaEmail}`}>{mediaEmail}</a>.</p>
+        <footer class="pr-page__footer">
+          <p class="pr-page__label pr-page__label--accent">Media Contact</p>
+          <p>For media inquiries, contact <a href={`mailto:${mediaEmail}`}>{mediaEmail}</a>.</p>
         </footer>
       </main>
 
-      <aside class="press-release-page__rail" aria-label="Press release details">
-        <div class="press-release-page__rail-block">
-          <p>Release Date</p>
+      <!-- Sticky rail -->
+      <aside class="pr-page__rail">
+        <div class="pr-page__rail-block">
+          <p class="pr-page__label">Release Date</p>
           <strong>{publishedDate}</strong>
         </div>
-
-        <div class="press-release-page__rail-block">
-          <p>Category</p>
+        <div class="pr-page__rail-block">
+          <p class="pr-page__label">Category</p>
           <strong>Market Correction</strong>
         </div>
-
-        <div class="press-release-page__rail-block">
-          <p>Media Contact</p>
+        <div class="pr-page__rail-block">
+          <p class="pr-page__label">Media Contact</p>
           <a href={`mailto:${mediaEmail}`}>{mediaEmail}</a>
         </div>
-
-        <nav class="press-release-page__share press-release-page__share--rail" aria-label="Share this press release">
-          <span>Share</span>
+        <nav class="pr-page__rail-share" aria-label="Share">
+          <p class="pr-page__label">Share</p>
           {shareLinks.map((link) => (
-            <a href={link.href} target={link.label === "Email" ? undefined : "_blank"} rel={link.label === "Email" ? undefined : "noopener noreferrer"}>{link.label}</a>
+            <a
+              href={link.href}
+              target={link.label === "Email" ? undefined : "_blank"}
+              rel={link.label === "Email" ? undefined : "noopener noreferrer"}
+              class="pr-page__share-link pr-page__share-link--rail"
+            >{link.label}</a>
           ))}
         </nav>
       </aside>
+
     </Wrapper>
   </article>
 </BaseLayout>
 
 <style>
-  .press-release-page {
+  /* ── Page shell ── */
+  .pr-page {
     background: var(--color-base-50);
     color: var(--color-base-800);
   }
 
-  .press-release-page__masthead {
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.96)),
-      var(--color-base-50);
+  /* ── Masthead ── */
+  .pr-page__masthead {
+    background: white;
     border-bottom: 1px solid var(--color-base-200);
-    padding: clamp(8.75rem, 12vw, 10.75rem) 0 clamp(3rem, 6vw, 4.75rem);
+    padding: clamp(8rem, 12vw, 10rem) 0 clamp(3rem, 5vw, 4.5rem);
   }
 
-  .press-release-page__masthead-shell {
-    max-width: 74rem;
+  .pr-page__masthead-inner {
+    max-width: 72rem;
   }
 
-  .press-release-page__breadcrumb {
+  .pr-page__breadcrumb {
     display: inline-flex;
-    color: var(--color-base-600);
+    color: var(--color-base-500);
     font-family: var(--font-sans);
-    font-size: 0.82rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    line-height: 1.2;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-decoration: none;
     text-transform: uppercase;
+    transition: color 160ms ease;
   }
 
-  .press-release-page__breadcrumb:hover,
-  .press-release-page__breadcrumb:focus-visible {
-    color: var(--color-accent-800);
+  .pr-page__breadcrumb:hover {
+    color: var(--color-accent-700);
   }
 
-  .press-release-page__status-row {
+  .pr-page__status-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.6rem 1rem;
-    margin-top: clamp(1.5rem, 3vw, 2.35rem);
+    gap: 0.5rem 1rem;
+    margin-top: 2rem;
   }
 
-  .press-release-page__status-row span,
-  .press-release-page__type,
-  .press-release-page__footer-label,
-  .press-release-page__rail-block p,
-  .press-release-page__share span {
+  .pr-page__label {
     margin: 0;
-    color: var(--color-base-600);
     font-family: var(--font-sans);
     font-size: 0.72rem;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 0.13em;
     line-height: 1.4;
     text-transform: uppercase;
+    color: var(--color-base-500);
   }
 
-  .press-release-page__status-row span:first-child {
-    color: var(--color-accent-800);
+  .pr-page__label--accent {
+    color: var(--color-accent-700);
   }
 
-  .press-release-page__type {
-    margin-top: clamp(2.4rem, 4vw, 3.2rem);
-    color: var(--color-accent-800);
-  }
-
-  .press-release-page h1 {
-    max-width: 66rem;
-    margin: 0.95rem 0 0;
-    color: var(--color-base-950);
-    font-family: var(--font-display);
-    font-size: clamp(3rem, 5.8vw, 5.85rem);
-    font-weight: 400;
-    letter-spacing: -0.055em;
-    line-height: 1.02;
-  }
-
-  .press-release-page__dek {
-    max-width: 50rem;
-    margin: clamp(1.15rem, 2.5vw, 1.75rem) 0 0;
-    color: var(--color-base-700);
+  .pr-page__type {
+    margin: 2.5rem 0 0;
     font-family: var(--font-sans);
-    font-size: clamp(1.05rem, 1.45vw, 1.25rem);
-    line-height: 1.7;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--color-accent-700);
   }
 
-  .press-release-page__share {
+  .pr-page__title {
+    max-width: 62rem;
+    margin: 0.85rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 5.2vw, 5.25rem);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 1.02;
+    color: var(--color-base-950);
+  }
+
+  .pr-page__dek {
+    max-width: 48rem;
+    margin: 1.25rem 0 0;
+    font-family: var(--font-sans);
+    font-size: clamp(1rem, 1.4vw, 1.18rem);
+    line-height: 1.7;
+    color: var(--color-base-600);
+  }
+
+  /* ── Share buttons ── */
+  .pr-page__share {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.55rem;
+    gap: 0.5rem;
     align-items: center;
+    margin-top: 1.75rem;
   }
 
-  .press-release-page__share--masthead {
-    margin-top: clamp(1.45rem, 3vw, 2.1rem);
-  }
-
-  .press-release-page__share a {
+  .pr-page__share-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.15rem;
-    border: 1px solid var(--color-base-250, var(--color-base-200));
+    min-height: 2rem;
+    border: 1px solid var(--color-base-200);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.66);
-    color: var(--color-base-950);
+    background: white;
+    color: var(--color-base-900);
     font-family: var(--font-sans);
-    font-size: 0.76rem;
-    font-weight: 800;
-    letter-spacing: 0.075em;
-    line-height: 1;
-    padding: 0.58rem 0.8rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.5rem 0.9rem;
     text-decoration: none;
     text-transform: uppercase;
-    transition:
-      background 160ms ease,
-      border-color 160ms ease,
-      color 160ms ease,
-      transform 160ms ease;
+    transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
   }
 
-  .press-release-page__share a:hover,
-  .press-release-page__share a:focus-visible {
-    border-color: var(--color-accent-500);
-    background: var(--color-accent-300);
+  .pr-page__share-link:hover {
+    background: var(--color-accent-100);
+    border-color: var(--color-accent-400);
     transform: translateY(-1px);
   }
 
-  .press-release-page__media-shell {
-    padding-top: clamp(2rem, 4vw, 3rem);
+  /* ── Figure ── */
+  .pr-page__figure-wrap {
+    padding-top: 2.5rem;
   }
 
-  .press-release-page__figure {
+  .pr-page__figure {
     margin: 0;
     overflow: hidden;
-    border: 1px solid var(--color-base-250, var(--color-base-200));
-    border-radius: 1.25rem;
-    background: #fff;
-    box-shadow: 0 20px 54px rgba(6, 23, 47, 0.08);
+    border-radius: 1rem;
+    border: 1px solid var(--color-base-200);
+    box-shadow: var(--shadow-xl);
   }
 
-  .press-release-page__figure img {
+  .pr-page__figure img {
     display: block;
     width: 100%;
-    height: clamp(14rem, 32vw, 22rem);
+    height: clamp(14rem, 30vw, 22rem);
     object-fit: cover;
     object-position: center 43%;
   }
 
-  .press-release-page__content-shell {
+  /* ── Body + Rail grid ── */
+  .pr-page__body-wrap {
     display: grid;
-    grid-template-columns: minmax(0, 46rem) minmax(15rem, 18rem);
+    grid-template-columns: minmax(0, 44rem) minmax(14rem, 17rem);
     gap: clamp(2.5rem, 6vw, 5rem);
     align-items: start;
-    padding-top: clamp(3rem, 6vw, 4.75rem);
-    padding-bottom: clamp(4.5rem, 8vw, 7rem);
+    padding-top: clamp(3rem, 5vw, 4.5rem);
+    padding-bottom: clamp(4rem, 8vw, 7rem);
   }
 
-  .press-release-page__main {
-    max-width: 46rem;
+  /* ── Main body ── */
+  .pr-page__main {
+    max-width: 44rem;
   }
 
-  .press-release-page__dateline {
-    margin-top: 0 !important;
-    color: var(--color-base-950) !important;
-    font-family: var(--font-sans) !important;
-    font-size: clamp(1.08rem, 1.55vw, 1.22rem) !important;
-    font-weight: 500;
-    letter-spacing: -0.012em;
-    line-height: 1.7 !important;
-  }
-
-  .press-release-page__main p {
-    margin: 1.28rem 0 0;
-    color: var(--color-base-750, var(--color-base-700));
+  .pr-page__dateline {
+    margin-top: 0;
     font-family: var(--font-sans);
-    font-size: 1.02rem;
-    line-height: 1.78;
+    font-size: clamp(1.05rem, 1.5vw, 1.18rem);
+    font-weight: 500;
+    line-height: 1.72;
+    color: var(--color-base-900);
   }
 
-  .press-release-page__main a {
-    color: var(--color-accent-800);
-    font-weight: 750;
-    text-decoration: none;
-    border-bottom: 1px solid color-mix(in srgb, var(--color-accent-700) 44%, transparent);
-    transition:
-      color 160ms ease,
-      border-color 160ms ease;
+  .pr-page__main p {
+    margin: 1.25rem 0 0;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-base-700);
   }
 
-  .press-release-page__main a:hover,
-  .press-release-page__main a:focus-visible {
+  .pr-page__main a {
+    color: var(--color-accent-700);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 160ms ease;
+  }
+
+  .pr-page__main a:hover {
     color: var(--color-accent-900);
-    border-bottom-color: var(--color-accent-800);
   }
 
-  .press-release-page__quote {
-    margin: 2rem 0 0 !important;
+  .pr-page__quote {
+    margin: 2rem 0 0;
     border-left: 3px solid var(--color-accent-500);
     padding-left: clamp(1rem, 2vw, 1.35rem);
-    color: var(--color-base-900) !important;
-    font-family: var(--font-display) !important;
-    font-size: clamp(1.3rem, 2vw, 1.62rem) !important;
-    letter-spacing: -0.035em;
-    line-height: 1.32 !important;
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.35;
+    color: var(--color-base-900);
   }
 
-  .press-release-page__footer {
-    margin-top: clamp(3rem, 6vw, 4rem);
-    border-top: 1px solid var(--color-base-250, var(--color-base-200));
-    padding-top: 1.4rem;
+  .pr-page__footer {
+    margin-top: 3.5rem;
+    border-top: 1px solid var(--color-base-200);
+    padding-top: 1.5rem;
   }
 
-  .press-release-page__footer p:last-child {
-    margin-top: 0.55rem;
-  }
-
-  .press-release-page__footer-label {
-    color: var(--color-accent-800) !important;
-  }
-
-  .press-release-page__rail {
-    position: sticky;
-    top: 7.5rem;
-    display: grid;
-    gap: 1.1rem;
-    border-top: 1px solid var(--color-base-250, var(--color-base-200));
-    padding-top: 1.1rem;
-  }
-
-  .press-release-page__rail-block {
-    border-bottom: 1px solid var(--color-base-250, var(--color-base-200));
-    padding-bottom: 1.1rem;
-  }
-
-  .press-release-page__rail-block strong,
-  .press-release-page__rail-block a {
-    display: block;
-    margin-top: 0.34rem;
-    color: var(--color-base-950);
+  .pr-page__footer p:last-child {
+    margin-top: 0.5rem;
     font-family: var(--font-sans);
-    font-size: 0.98rem;
-    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--color-base-600);
+  }
+
+  /* ── Sticky rail ── */
+  .pr-page__rail {
+    position: sticky;
+    top: 6rem;
+    border-top: 1px solid var(--color-base-200);
+    padding-top: 1.25rem;
+    display: grid;
+    gap: 0;
+  }
+
+  .pr-page__rail-block {
+    border-bottom: 1px solid var(--color-base-200);
+    padding-bottom: 1.1rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .pr-page__rail-block strong,
+  .pr-page__rail-block a {
+    display: block;
+    margin-top: 0.3rem;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
     line-height: 1.45;
+    color: var(--color-base-900);
     text-decoration: none;
   }
 
-  .press-release-page__rail-block a:hover,
-  .press-release-page__rail-block a:focus-visible {
-    color: var(--color-accent-800);
+  .pr-page__rail-block a:hover {
+    color: var(--color-accent-700);
   }
 
-  .press-release-page__share--rail {
+  .pr-page__rail-share {
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    align-items: stretch;
+    gap: 0.4rem;
   }
 
-  .press-release-page__share--rail span {
-    margin-bottom: 0.15rem;
-  }
-
-  .press-release-page__share--rail a {
+  .pr-page__share-link--rail {
+    border-radius: 0.4rem;
     justify-content: flex-start;
-    background: #fff;
+    background: white;
   }
 
+  /* ── Responsive ── */
   @media (max-width: 980px) {
-    .press-release-page__content-shell {
+    .pr-page__body-wrap {
       grid-template-columns: minmax(0, 1fr);
     }
 
-    .press-release-page__rail {
+    .pr-page__rail {
       position: static;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      border-top: 1px solid var(--color-base-250, var(--color-base-200));
-      border-bottom: 1px solid var(--color-base-250, var(--color-base-200));
-      padding-bottom: 1.1rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-bottom: 1px solid var(--color-base-200);
+      padding-bottom: 1.25rem;
     }
 
-    .press-release-page__rail-block {
+    .pr-page__rail-block {
       border-bottom: 0;
       padding-bottom: 0;
+      margin-bottom: 0;
     }
 
-    .press-release-page__share--rail {
+    .pr-page__rail-share {
       grid-column: 1 / -1;
-      display: flex;
+      grid-template-columns: repeat(4, auto);
+      justify-content: start;
     }
   }
 
-  @media (max-width: 720px) {
-    .press-release-page__masthead {
-      padding-top: 7.25rem;
+  @media (max-width: 640px) {
+    .pr-page__masthead {
+      padding-top: 6.5rem;
     }
 
-    .press-release-page h1 {
-      font-size: clamp(2.55rem, 13vw, 4rem);
-      letter-spacing: -0.052em;
-    }
-
-    .press-release-page__figure {
-      border-radius: 1rem;
-    }
-
-    .press-release-page__figure img {
-      height: clamp(12.5rem, 58vw, 18rem);
-    }
-
-    .press-release-page__rail {
+    .pr-page__rail {
       grid-template-columns: minmax(0, 1fr);
     }
 
-    .press-release-page__share--rail {
-      display: grid;
+    .pr-page__rail-share {
+      grid-template-columns: repeat(2, auto);
     }
 
-    .press-release-page__main p {
-      font-size: 1rem;
-      line-height: 1.72;
+    .pr-page__figure img {
+      height: clamp(12rem, 55vw, 16rem);
     }
   }
 </style>
