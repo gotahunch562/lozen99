@@ -27,7 +27,8 @@ const megaMenuSections = [
       {
         href: "/retention-risk-analysis",
         label: "Retention Risk Analysis",
-        description: "Search-capture entry point for attrition and retention risk.",
+        description:
+          "Article about evaluation and likelihood of losing valuable employees.",
       },
     ],
   },
@@ -39,6 +40,11 @@ const megaMenuSections = [
         href: "/menopause-legislation-tracker",
         label: "Menopause Legislation Tracker",
         description: "A governance audit of disclosure-dependent policy design.",
+      },
+      {
+        href: "/retention-calculator",
+        label: "Retention Calculator",
+        description: "Estimate the replacement cost of leadership capacity loss.",
       },
       {
         href: "https://www.executiveaiskills.com/",
@@ -70,17 +76,13 @@ const megaMenuSections = [
       {
         href: "/booking",
         label: "MAPS Blueprint℠",
-        description: "Private 90-minute advisory session for an upcoming evaluation moment.",
+        description:
+          "Private 90-minute advisory session for an upcoming evaluation moment.",
       },
       {
         href: "/menopause-support-women-lawyers",
         label: "For Women Lawyers",
         description: "Private performance protection for women in law.",
-      },
-      {
-        href: "/retention-calculator",
-        label: "Retention Calculator",
-        description: "Estimate the replacement cost of leadership capacity loss.",
       },
     ],
   },
@@ -88,19 +90,19 @@ const megaMenuSections = [
 ---
 
 <div id="megamenu" class="absolute inset-x-0 top-full z-40 hidden">
-  <Wrapper variant="standard" class="py-2">
+  <Wrapper variant="standard" class="py-1">
     <div
-      class="overflow-hidden rounded-2xl border border-base-200 bg-white shadow-2xl outline-4 outline-base-500/5 lg:rounded-3xl"
+      class="max-h-[calc(100vh-7.25rem)] overflow-y-auto rounded-2xl border border-base-200 bg-white shadow-2xl outline-4 outline-base-500/5 lg:rounded-3xl"
     >
       <div class="grid grid-cols-3 divide-x divide-base-200">
         {
           megaMenuSections.map((section) => (
             <div>
-              <div class="px-6 py-5">
+              <div class="border-b border-[#dfe7ee] bg-[#06172f] px-5 py-3.5">
                 <Text
                   tag="h3"
-                  variant="textBase"
-                  class="font-sans font-semibold uppercase tracking-[0.14em] text-base-950"
+                  variant="textSM"
+                  class="font-sans text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-white"
                 >
                   {section.title}
                 </Text>
@@ -108,13 +110,13 @@ const megaMenuSections = [
                 <Text
                   tag="p"
                   variant="textSM"
-                  class="mt-2 font-sans leading-6 text-base-600"
+                  class="mt-1.5 font-sans text-[0.82rem] leading-5 text-white/70"
                 >
                   {section.description}
                 </Text>
               </div>
 
-              <ul class="space-y-1 border-t border-base-200 p-4">
+              <ul class="space-y-0.5 p-3">
                 {
                   section.links.map((link) => (
                     <li>
@@ -122,12 +124,12 @@ const megaMenuSections = [
                         href={link.href}
                         target={link.external ? "_blank" : undefined}
                         rel={link.external ? "noopener noreferrer" : undefined}
-                        class="group block rounded-xl px-3 py-3 no-underline transition-colors duration-200 hover:bg-base-50"
+                        class="group block rounded-xl px-3 py-2 no-underline transition-colors duration-200 hover:bg-base-50 focus-visible:bg-base-50"
                       >
                         <Text
                           tag="h4"
                           variant="textSM"
-                          class="font-sans font-semibold uppercase tracking-[0.08em] text-base-950 transition-colors duration-200 group-hover:text-accent-700"
+                          class="font-sans text-[0.73rem] font-semibold uppercase tracking-[0.09em] text-base-950 transition-colors duration-200 group-hover:text-accent-700"
                         >
                           {link.label}
                         </Text>
@@ -135,7 +137,7 @@ const megaMenuSections = [
                         <Text
                           tag="p"
                           variant="textSM"
-                          class="mt-1 font-sans leading-5 text-base-600"
+                          class="mt-1 font-sans text-[0.9rem] leading-5 text-base-600"
                         >
                           {link.description}
                         </Text>
@@ -149,21 +151,21 @@ const megaMenuSections = [
         }
       </div>
 
-      <div class="border-t border-base-200 bg-base-50 px-6 py-5">
-        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div class="border-t border-base-200 bg-base-50 px-5 py-3.5">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <Text
               tag="h3"
-              variant="textBase"
-              class="font-sans font-semibold uppercase tracking-[0.12em] text-base-950"
+              variant="textSM"
+              class="font-sans text-[0.82rem] font-semibold uppercase tracking-[0.14em] text-base-950"
             >
-              Need clarity before the issue becomes visible?
+              Discover how we can help?
             </Text>
 
             <Text
               tag="p"
               variant="textSM"
-              class="mt-1 font-sans leading-6 text-base-600"
+              class="mt-1 font-sans text-[0.9rem] leading-5 text-base-600"
             >
               Request a briefing on disclosure-dependent workforce risk.
             </Text>
