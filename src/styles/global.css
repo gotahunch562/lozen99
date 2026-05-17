@@ -58,6 +58,24 @@
   --color-lozen-blue-900: #0b1f3d;
   --color-lozen-blue-950: #06172f;
 
+
+  /*
+    Shared internal-page hero typography system
+
+    This standard mirrors the Blog displayXL scale so internal pages do not
+    drift into oversized, one-off hero treatments. Homepage remains separate.
+  */
+  --lozen-page-hero-eyebrow-size: 0.75rem;
+  --lozen-page-hero-eyebrow-weight: 700;
+  --lozen-page-hero-eyebrow-letter-spacing: 0.16em;
+  --lozen-page-hero-title-size: clamp(2.15rem, 4.2vw, 3.75rem);
+  --lozen-page-hero-title-weight: 400;
+  --lozen-page-hero-title-letter-spacing: -0.03em;
+  --lozen-page-hero-title-line-height: 1;
+  --lozen-page-hero-deck-size: clamp(1rem, 1.25vw, 1.125rem);
+  --lozen-page-hero-deck-line-height: 1.75;
+  --lozen-page-hero-text-width: 58rem;
+
   /* Shadows: navy-black shadow system */
   --shadow: 0 1px 3px 0 rgba(6, 23, 47, 0.1),
     0 1px 2px -1px rgba(6, 23, 47, 0.1);

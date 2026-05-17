@@ -278,8 +278,17 @@ const contentShellClass = hasRailContent
 
   .narrative-page__hero {
     overflow: hidden;
-    border-bottom: 1px solid color-mix(in oklch, var(--color-base-500) 28%, var(--color-base-950));
-    background: linear-gradient(135deg, var(--color-base-950) 0%, var(--color-base-900) 56%, #020a17 100%);
+    border-bottom: 1px solid var(--color-base-200);
+  }
+
+  .narrative-page__hero--text-only {
+    background: linear-gradient(180deg, var(--color-base-100) 0%, #ffffff 72%, var(--color-base-50) 100%);
+    color: var(--color-base-950);
+  }
+
+  .narrative-page__hero--split {
+    border-bottom-color: color-mix(in oklch, var(--color-base-500) 28%, var(--color-base-950));
+    background: linear-gradient(135deg, var(--color-base-950) 0%, var(--color-base-900) 58%, #020a17 100%);
     color: white;
   }
 
@@ -301,13 +310,13 @@ const contentShellClass = hasRailContent
     grid-template-columns: none;
     min-height: 0 !important;
     height: auto;
-    padding-top: clamp(4.75rem, 6.4vw, 5.85rem);
-    padding-bottom: clamp(2.1rem, 3.35vw, 2.85rem);
+    padding-top: clamp(6.75rem, 9vw, 7.75rem);
+    padding-bottom: clamp(3rem, 5vw, 4.5rem);
     align-items: start;
   }
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only-article {
-    width: min(100%, 58rem);
+    width: min(100%, var(--lozen-page-hero-text-width));
   }
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only-wide {
@@ -315,8 +324,8 @@ const contentShellClass = hasRailContent
   }
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only-compact {
-    padding-top: clamp(4.35rem, 5.4vw, 5.1rem);
-    padding-bottom: clamp(1.65rem, 2.75vw, 2.25rem);
+    padding-top: clamp(6rem, 8vw, 6.8rem);
+    padding-bottom: clamp(2.35rem, 4vw, 3.2rem);
   }
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only .narrative-page__hero-copy {
@@ -324,8 +333,7 @@ const contentShellClass = hasRailContent
   }
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only h1 {
-    max-width: 58rem;
-    font-size: clamp(2.3rem, 4.05vw, 4.35rem);
+    max-width: var(--lozen-page-hero-text-width);
   }
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only .narrative-page__deck {
@@ -341,7 +349,7 @@ const contentShellClass = hasRailContent
   }
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only-compact h1 {
-    font-size: clamp(2.25rem, 3.75vw, 4rem);
+    font-size: var(--lozen-page-hero-title-size);
   }
 
   .narrative-page__hero-copy {
@@ -351,7 +359,7 @@ const contentShellClass = hasRailContent
   .narrative-page__back {
     display: inline-flex;
     margin-bottom: 1.75rem;
-    color: color-mix(in oklch, var(--color-base-100) 76%, white);
+    color: var(--color-base-700);
     font-family: var(--font-sans);
     font-size: 0.875rem;
     font-weight: 700;
@@ -359,8 +367,17 @@ const contentShellClass = hasRailContent
     transition: color 180ms ease;
   }
 
+  .narrative-page__hero--split .narrative-page__back {
+    color: color-mix(in oklch, var(--color-base-100) 76%, white);
+  }
+
   .narrative-page__back:hover,
   .narrative-page__back:focus-visible {
+    color: var(--color-base-950);
+  }
+
+  .narrative-page__hero--split .narrative-page__back:hover,
+  .narrative-page__hero--split .narrative-page__back:focus-visible {
     color: var(--color-base-100);
   }
 
@@ -368,40 +385,57 @@ const contentShellClass = hasRailContent
     display: flex;
     flex-wrap: wrap;
     gap: 0.65rem 1rem;
-    color: color-mix(in oklch, var(--color-base-100) 78%, white);
+    color: var(--color-base-600);
     font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
+    font-size: var(--lozen-page-hero-eyebrow-size);
+    font-weight: var(--lozen-page-hero-eyebrow-weight);
+    letter-spacing: var(--lozen-page-hero-eyebrow-letter-spacing);
     line-height: 1.4;
     text-transform: uppercase;
   }
 
+  .narrative-page__hero--split .narrative-page__meta {
+    color: color-mix(in oklch, var(--color-base-100) 78%, white);
+  }
+
   .narrative-page__meta span:first-child {
-    border-left: 1px solid color-mix(in oklch, var(--color-base-300) 62%, transparent);
+    border-left: 1px solid var(--color-base-500);
     padding-left: 1rem;
+    color: var(--color-base-900);
+  }
+
+  .narrative-page__hero--split .narrative-page__meta span:first-child {
+    border-left-color: color-mix(in oklch, var(--color-base-300) 62%, transparent);
     color: white;
   }
 
   .narrative-page h1 {
     max-width: 62rem;
     margin: 1.2rem 0 0;
-    color: white;
+    color: var(--color-base-950);
     font-family: var(--font-display);
-    font-size: clamp(2.4rem, 4.4vw, 4.85rem);
-    font-weight: 500;
-    letter-spacing: -0.047em;
-    line-height: 1.02;
+    font-size: var(--lozen-page-hero-title-size);
+    font-weight: var(--lozen-page-hero-title-weight);
+    letter-spacing: var(--lozen-page-hero-title-letter-spacing);
+    line-height: var(--lozen-page-hero-title-line-height);
     text-wrap: balance;
+  }
+
+  .narrative-page__hero--split h1 {
+    color: white;
   }
 
   .narrative-page__deck {
     max-width: 45rem;
     margin: 1.35rem 0 0;
-    color: color-mix(in oklch, var(--color-base-100) 90%, white);
+    color: var(--color-base-600);
     font-family: var(--font-sans);
-    font-size: clamp(1.0625rem, 1.45vw, 1.25rem);
-    line-height: 1.72;
+    font-size: var(--lozen-page-hero-deck-size);
+    line-height: var(--lozen-page-hero-deck-line-height);
+  }
+
+  .narrative-page__hero--split .narrative-page__deck {
+    color: color-mix(in oklch, var(--color-base-100) 90%, white);
   }
 
   .narrative-page__hero-figure {
@@ -894,7 +928,7 @@ const contentShellClass = hasRailContent
     }
 
     .narrative-page h1 {
-      font-size: clamp(2.3rem, 5vw, 4.1rem);
+      font-size: var(--lozen-page-hero-title-size);
     }
   }
 
@@ -953,8 +987,8 @@ const contentShellClass = hasRailContent
     }
 
     .narrative-page h1 {
-      font-size: clamp(2.05rem, 10vw, 3.05rem);
-      letter-spacing: -0.045em;
+      font-size: clamp(2rem, 9.5vw, 3rem);
+      letter-spacing: var(--lozen-page-hero-title-letter-spacing);
       line-height: 1.04;
     }
 
