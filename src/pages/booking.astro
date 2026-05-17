@@ -164,25 +164,25 @@ const pageJsonLd = {
   }
 
   .maps-booking h1 {
-    max-width: 10.5ch;
-    margin: clamp(1.15rem, 2.4vw, 1.8rem) 0 0;
+    max-width: var(--lozen-page-hero-text-width);
+    margin: clamp(1rem, 2vw, 1.45rem) 0 0;
     color: #ffffff;
     font-family: var(--font-display);
-    font-size: clamp(3.75rem, 6.8vw, 6.25rem);
-    font-weight: 500;
-    letter-spacing: -0.055em;
-    line-height: 0.96;
+    font-size: var(--lozen-page-hero-title-size);
+    font-weight: var(--lozen-page-hero-title-weight);
+    letter-spacing: var(--lozen-page-hero-title-letter-spacing);
+    line-height: var(--lozen-page-hero-title-line-height);
   }
 
   .maps-booking__deck {
-    max-width: 36rem;
-    margin: clamp(1.2rem, 2.4vw, 1.75rem) 0 0;
-    color: color-mix(in oklch, var(--color-base-100) 82%, #ffffff);
-    font-family: var(--font-display);
-    font-size: clamp(1.35rem, 2.25vw, 2rem);
-    font-weight: 500;
-    letter-spacing: -0.04em;
-    line-height: 1.16;
+    max-width: 42rem;
+    margin: clamp(1rem, 2vw, 1.35rem) 0 0;
+    color: color-mix(in oklch, var(--color-base-100) 84%, #ffffff);
+    font-family: var(--font-sans);
+    font-size: var(--lozen-page-hero-deck-size);
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: var(--lozen-page-hero-deck-line-height);
   }
 
   .maps-booking__reserve-card {
@@ -211,9 +211,9 @@ const pageJsonLd = {
   .maps-booking__reserve-card strong {
     color: #ffffff;
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 3.6rem);
-    font-weight: 500;
-    letter-spacing: -0.055em;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: var(--lozen-page-hero-title-weight);
+    letter-spacing: var(--lozen-page-hero-title-letter-spacing);
     line-height: 1;
   }
 
@@ -307,17 +307,17 @@ const pageJsonLd = {
     margin: 0;
     color: var(--color-base-750, var(--color-base-700));
     font-family: var(--font-sans);
-    font-size: clamp(1.02rem, 1.45vw, 1.15rem);
-    line-height: 1.78;
+    font-size: var(--lozen-body-copy-large-size);
+    line-height: var(--lozen-body-copy-large-line-height);
   }
 
   .maps-booking__lead p:first-child {
     color: var(--color-base-950);
-    font-family: var(--font-display);
-    font-size: clamp(1.35rem, 2.1vw, 1.85rem);
+    font-family: var(--font-sans);
+    font-size: var(--lozen-body-copy-large-size);
     font-weight: 500;
-    letter-spacing: -0.035em;
-    line-height: 1.28;
+    letter-spacing: normal;
+    line-height: var(--lozen-body-copy-large-line-height);
   }
 
   .maps-booking__situation-block {
@@ -362,10 +362,10 @@ const pageJsonLd = {
     margin: 0;
     color: var(--color-base-950);
     font-family: var(--font-display);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 500;
-    letter-spacing: -0.055em;
-    line-height: 1;
+    font-size: var(--lozen-section-title-size);
+    font-weight: var(--lozen-section-title-weight);
+    letter-spacing: var(--lozen-section-title-letter-spacing);
+    line-height: var(--lozen-section-title-line-height);
   }
 
   .maps-booking__final-cta span {
@@ -407,8 +407,8 @@ const pageJsonLd = {
 
   @media (max-width: 640px) {
     .maps-booking h1 {
-      font-size: clamp(3rem, 16vw, 4.2rem);
-      line-height: 0.98;
+      font-size: var(--lozen-page-hero-title-size);
+      line-height: var(--lozen-page-hero-title-line-height);
     }
 
     .maps-booking__hero-shell,

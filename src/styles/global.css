@@ -119,10 +119,10 @@
   --lozen-meta-label-size: 0.75rem;
   --lozen-meta-label-weight: 700;
   --lozen-meta-label-letter-spacing: 0.14em;
-  --lozen-pullquote-size: clamp(1.55rem, 2.8vw, 2.45rem);
+  --lozen-pullquote-size: clamp(1.2rem, 1.85vw, 1.8rem);
   --lozen-pullquote-weight: 400;
-  --lozen-pullquote-letter-spacing: -0.03em;
-  --lozen-pullquote-line-height: 1.12;
+  --lozen-pullquote-letter-spacing: -0.018em;
+  --lozen-pullquote-line-height: 1.24;
 
   /* Shadows: navy-black shadow system */
   --shadow: 0 1px 3px 0 rgba(6, 23, 47, 0.1),
