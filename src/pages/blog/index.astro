@@ -26,7 +26,7 @@ const getPostHref = (post: any) => `/blog/${getSlug(post)}`;
 
 const getDateValue = (post: any) => {
   const data = getData(post);
-  return data.dateModified || data.datePublished || data.pubDate || "";
+  return data.datePublished || data.pubDate || data.dateModified || "";
 };
 
 const getPublishedDate = (post: any) => {
@@ -58,7 +58,7 @@ const getImageAlt = (post: any) => {
 
 const getCategory = (post: any) => {
   const data = getData(post);
-  return data.category || data.tags?.[0] || "Articles";
+  return data.category || "Articles";
 };
 
 const getExcerpt = (post: any) => {
@@ -97,46 +97,64 @@ const latestPosts = articlePosts
   .filter((post) => !featuredPost || post.id !== featuredPost.id)
   .slice(0, 4);
 
-const postsByCategory = articlePosts.reduce((groups: Record<string, any[]>, post) => {
-  const category = getCategory(post);
-
-  if (!groups[category]) {
-    groups[category] = [];
-  }
-
-  groups[category].push(post);
-  return groups;
-}, {});
-
-const preferredCategoryOrder = [
+const curatedBlogCategories = [
   "Legislative Analysis",
   "Research & Policy",
   "Legal Profession",
   "Performance & Career",
   "The Tender Path",
-  "Series Hub",
 ];
 
-const categorySections = Object.entries(postsByCategory).sort(([a], [b]) => {
-  const aIndex = preferredCategoryOrder.indexOf(a);
-  const bIndex = preferredCategoryOrder.indexOf(b);
+const categoryCounts = articlePosts.reduce((groups: Record<string, number>, post) => {
+  const category = getCategory(post);
 
-  if (aIndex === -1 && bIndex === -1) return a.localeCompare(b);
-  if (aIndex === -1) return 1;
-  if (bIndex === -1) return -1;
+  if (!curatedBlogCategories.includes(category)) {
+    return groups;
+  }
 
-  return aIndex - bIndex;
-});
+  groups[category] = (groups[category] || 0) + 1;
+  return groups;
+}, {});
 
-const categoryLinks = categorySections.map(([category, posts]) => ({
-  category,
-  href: `#${slugify(category)}`,
-  count: posts.length,
-}));
+const categoryLinks = curatedBlogCategories
+  .map((category) => ({
+    category,
+    href: `/blog/tags/${slugify(category)}`,
+    count: categoryCounts[category] || 0,
+  }))
+  .filter((item) => item.count > 0);
+
+const executiveReports = [
+  {
+    eyebrow: "Series Hub",
+    title: "The Architecture of Invisible Attrition — Executive Report Series",
+    href: "/architecture-of-invisible-attrition-series",
+  },
+  {
+    eyebrow: "Report 01",
+    title: "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most",
+    href: "/voluntary-benefit-disclosure-gap",
+  },
+  {
+    eyebrow: "Report 02",
+    title: "Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers",
+    href: "/billable-hour-visibility-tax",
+  },
+  {
+    eyebrow: "Report 03",
+    title: "Succession Planning and the Retention Risk Data Gap",
+    href: "/succession-planning-retention-risk-data-gap",
+  },
+  {
+    eyebrow: "Report 04",
+    title: "The Leadership Pipeline Is Draining From Both Ends",
+    href: "/leadership-pipeline-manager-drain",
+  },
+];
+
 const title = "Blog | Lozen Advisory";
 
 const description = "Articles for women navigating perimenopause, disclosure, performance pressure, leadership, career protection, and private decision-making at work.";
-
 ---
 
 <BaseLayout title={title} description={description}>
@@ -251,7 +269,57 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
     </section>
   )}
 
-    {latestPosts.length > 0 && (
+  <section>
+    <Wrapper variant="standard" class="py-10 lg:py-16">
+      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div class="max-w-3xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+          >
+            Executive Report Series
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displayLG"
+            class="mt-8 font-display text-base-900"
+          >
+            The Architecture of Invisible Attrition
+          </Text>
+        </div>
+
+        <a
+          href="/architecture-of-invisible-attrition-series"
+          class="inline-flex text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
+        >
+          View series →
+        </a>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-5">
+        {executiveReports.map((report) => (
+          <a
+            href={report.href}
+            class="group flex min-h-[13rem] flex-col justify-between rounded-sm border border-base-300 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-base-500 hover:shadow-md"
+          >
+            <span class="text-xs font-medium uppercase tracking-[0.16em] text-base-500 font-display">
+              {report.eyebrow}
+            </span>
+            <strong class="mt-5 block text-xl font-normal leading-snug text-base-900 font-display transition-colors group-hover:text-base-700">
+              {report.title}
+            </strong>
+            <span class="mt-6 inline-flex text-sm font-medium text-accent-600 group-hover:text-base-900">
+              Read →
+            </span>
+          </a>
+        ))}
+      </div>
+    </Wrapper>
+  </section>
+
+  {latestPosts.length > 0 && (
     <section>
       <Wrapper variant="standard" class="py-10 lg:py-16">
         <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -330,92 +398,4 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
       </Wrapper>
     </section>
   )}
-
-  <section>
-    <Wrapper variant="standard" class="py-10 lg:py-24">
-      <div class="max-w-3xl">
-        <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-        >
-          Browse by Category
-        </Text>
-      </div>
-
-      <div class="mt-12 space-y-20">
-        {
-          categorySections.map(([category, posts]) => (
-            <section id={slugify(category)} class="scroll-mt-28">
-              <div class="mb-8 flex flex-col gap-3 border-b border-base-300 pb-5 md:flex-row md:items-end md:justify-between">
-                <Text
-                  tag="h2"
-                  variant="displayLG"
-                  class="font-display text-base-900"
-                >
-                  {category}
-                </Text>
-
-                <p class="text-sm text-base-500">
-                  {posts.length} {posts.length === 1 ? "article" : "articles"}
-                </p>
-              </div>
-
-              <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-                {posts.map((post) => {
-                  const publishedDate = getPublishedDate(post);
-
-                  return (
-                    <article class="group overflow-hidden rounded-sm border border-base-300 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1">
-                      {getImageSrc(post) && (
-                        <a href={getPostHref(post)} class="block overflow-hidden">
-                          <img
-                            src={getImageSrc(post)}
-                            alt={getImageAlt(post)}
-                            class="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                            loading="lazy"
-                          />
-                        </a>
-                      )}
-
-                      <div class="p-8">
-                        <div class="text-xs font-medium uppercase tracking-[0.16em] text-accent-600 font-display">
-                          {publishedDate && (
-                            <time datetime={String(publishedDate)}>
-                              {formatDate(publishedDate)}
-                            </time>
-                          )}
-                        </div>
-
-                        <h3 class="mt-5 text-2xl leading-tight font-display text-base-900 lg:text-3xl">
-                          <a href={getPostHref(post)} class="transition-colors hover:text-accent-600">
-                            {getData(post).title}
-                          </a>
-                        </h3>
-
-                        {getExcerpt(post) && (
-                          <p class="mt-5 line-clamp-4 text-base leading-8 text-base-600">
-                            {getExcerpt(post)}
-                          </p>
-                        )}
-
-                        <div class="mt-7">
-                          <a
-                            href={getPostHref(post)}
-                            class="inline-flex text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
-                          >
-                            Read article →
-                          </a>
-                        </div>
-                      </div>
-                    </article>
-                  );
-                })}
-              </div>
-            </section>
-          ))
-        }
-      </div>
-    </Wrapper>
-  </section>
 </BaseLayout>
