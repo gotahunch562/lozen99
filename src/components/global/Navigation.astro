@@ -159,12 +159,13 @@ const isMoreActive = morePaths.some((path) => isActivePath(path));
     align-items: center;
     justify-content: center;
     border: 1px solid transparent;
-    border-radius: 999px;
-    padding: 0.78rem 1rem;
-    color: rgba(255, 255, 255, 0.86);
+    border-radius: 0.75rem;
+    padding: 0.78rem 0.98rem;
+    color: rgba(255, 255, 255, 0.84);
     font-family: var(--font-sans);
-    font-size: 0.96rem;
-    font-weight: 650;
+    font-size: 0.91rem;
+    font-weight: 520;
+    letter-spacing: 0.018em;
     line-height: 1;
     text-decoration: none;
     transition:
@@ -177,33 +178,33 @@ const isMoreActive = morePaths.some((path) => isActivePath(path));
 
   .lozen-primary-nav__link:hover,
   .lozen-primary-nav__link:focus-visible {
-    border-color: rgba(255, 255, 255, 0.14);
-    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.11);
+    background-color: rgba(255, 255, 255, 0.055);
     color: #ffffff;
     transform: translateY(-1px);
   }
 
   .lozen-primary-nav__link:focus-visible {
-    outline: 2px solid var(--color-accent-400);
+    outline: 2px solid color-mix(in srgb, var(--color-accent-300) 72%, white);
     outline-offset: 3px;
   }
 
   .lozen-primary-nav__link--active {
-    border-color: color-mix(in srgb, var(--color-accent-400) 38%, transparent);
-    background-color: color-mix(in srgb, var(--color-accent-400) 15%, transparent);
-    color: var(--color-accent-300);
+    border-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.035);
+    color: #ffffff;
   }
 
   .lozen-primary-nav__link--active::after {
     content: "";
     position: absolute;
-    right: 1rem;
-    bottom: 0.42rem;
-    left: 1rem;
-    height: 2px;
+    right: 0.9rem;
+    bottom: 0.46rem;
+    left: 0.9rem;
+    height: 1px;
     border-radius: 999px;
-    background: var(--color-accent-300);
-    opacity: 0.95;
+    background: color-mix(in srgb, var(--color-accent-300) 72%, white);
+    opacity: 0.8;
   }
 
   .lozen-primary-nav__link--button {
@@ -220,9 +221,10 @@ const isMoreActive = morePaths.some((path) => isActivePath(path));
 
   @media (min-width: 1280px) and (max-width: 1365px) {
     .lozen-primary-nav__link {
-      padding-right: 0.82rem;
-      padding-left: 0.82rem;
-      font-size: 0.92rem;
+      padding-right: 0.78rem;
+      padding-left: 0.78rem;
+      font-size: 0.88rem;
+      letter-spacing: 0.012em;
     }
   }
 </style>
