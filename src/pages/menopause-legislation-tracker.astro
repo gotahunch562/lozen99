@@ -172,49 +172,6 @@ const columnDefinitions = [
 ];
 
 
-const colorKeyGroups = [
-  {
-    title: "Focus",
-    description: "Primary policy domain. Each focus category uses an exclusive color.",
-    items: [
-      { label: "Workplace", className: "lozen-data-badge--focus-workplace", hex: "#1A2E1A", text: "White", contrast: "14.49:1" },
-      { label: "Insurance", className: "lozen-data-badge--focus-insurance", hex: "#A8DADC", text: "Navy", contrast: "11.72:1" },
-      { label: "Education", className: "lozen-data-badge--focus-education", hex: "#FFD166", text: "Navy", contrast: "12.43:1" },
-      { label: "Omnibus", className: "lozen-data-badge--focus-omnibus", hex: "#9B5DE5", text: "Ink", contrast: "4.83:1" },
-      { label: "Advisory", className: "lozen-data-badge--focus-advisory", hex: "#D4A373", text: "Navy", contrast: "7.93:1" },
-      { label: "Military / Veteran", className: "lozen-data-badge--focus-military", hex: "#606C38", text: "White", contrast: "5.68:1" },
-      { label: "Veteran Care", className: "lozen-data-badge--focus-veteran-care", hex: "#F15BB5", text: "Navy", contrast: "5.89:1" },
-    ],
-  },
-  {
-    title: "Status",
-    description: "Legislative movement or procedural posture. Status badges use the strongest treatment.",
-    items: [
-      { label: "Enacted", className: "lozen-tracker-status--enacted", hex: "#52B788", text: "Navy", contrast: "7.25:1" },
-      { label: "Signed", className: "lozen-tracker-status--signed", hex: "#4A4E69", text: "White", contrast: "8.12:1" },
-      { label: "Passed", className: "lozen-tracker-status--passed", hex: "#E6F2FF", text: "Navy", contrast: "15.80:1" },
-      { label: "On Calendar", className: "lozen-tracker-status--calendar", hex: "#FFB703", text: "Navy", contrast: "10.27:1" },
-      { label: "In Committee", className: "lozen-tracker-status--committee", hex: "#F77F00", text: "Navy", contrast: "6.82:1" },
-      { label: "Returned / Substitute", className: "lozen-tracker-status--returned", hex: "#E63946", text: "Ink", contrast: "4.78:1" },
-      { label: "Introduced / Pending", className: "lozen-tracker-status--introduced", hex: "#22223B", text: "White", contrast: "15.44:1" },
-      { label: "Active / House / Senate", className: "lozen-tracker-status--active", hex: "#708090", text: "Ink", contrast: "4.92:1" },
-      { label: "Study / Research", className: "lozen-tracker-status--study", hex: "#E2ECE9", text: "Navy", contrast: "14.86:1" },
-      { label: "Failed / Died", className: "lozen-tracker-status--failed", hex: "#370617", text: "White", contrast: "17.49:1" },
-    ],
-  },
-  {
-    title: "Classification",
-    description: "Lozen's analytical classification. These colors are reserved for interpretation, not procedure.",
-    items: [
-      { label: "Dashboard Delay", className: "lozen-data-badge--classification-dashboard-delay", hex: "#48CAE4", text: "Navy", contrast: "9.26:1" },
-      { label: "Tacere", className: "lozen-data-badge--classification-tacere", hex: "#DDA0DD", text: "Navy", contrast: "8.66:1" },
-      { label: "Invisible Attrition", className: "lozen-data-badge--classification-invisible-attrition", hex: "#FFF1C2", text: "Navy", contrast: "15.89:1" },
-      { label: "Outside Scope", className: "lozen-data-badge--classification-outside-scope", hex: "#03071E", text: "White", contrast: "19.94:1" },
-      { label: "No Classification", className: "lozen-data-badge--classification-none", hex: "#E6F4EA", text: "Navy", contrast: "15.79:1" },
-    ],
-  },
-];
-
 const tableWrapClass = (theme = "default") => `lozen-tracker-table-wrap lozen-tracker-table-wrap--${theme}`;
 
 const tableClass = "lozen-tracker-table";
@@ -385,59 +342,6 @@ const mobileValueClass = "lozen-tracker-mobile-value";
       </Wrapper>
     </section>
 
-
-    <section class="lozen-tracker-section lozen-tracker-section--color-key">
-      <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
-        <div>
-          <p
-            class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500"
-          >
-            Tracker Color Governance
-          </p>
-
-          <h2
-            class="mt-5 max-w-4xl font-display text-3xl font-normal uppercase leading-tight tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-4xl"
-          >
-            Color key for focus, status, and classification
-          </h2>
-
-          <p class="mt-5 max-w-3xl font-sans text-base leading-7 text-base-700">
-            Each visible tracker item receives an exclusive color assignment within its semantic group. The color key prevents dual-use confusion across the grid and documents the contrast treatment used for each badge.
-          </p>
-
-          <div class="lozen-tracker-color-key-grid">
-            {
-              colorKeyGroups.map((group) => (
-                <section class="lozen-tracker-color-key-card" aria-labelledby={`color-key-${sectionId(group.title)}`}>
-                  <div class="lozen-tracker-color-key-card__header">
-                    <h3 id={`color-key-${sectionId(group.title)}`}>{group.title}</h3>
-                    <p>{group.description}</p>
-                  </div>
-
-                  <div class="lozen-tracker-color-key-list">
-                    {
-                      group.items.map((item) => (
-                        <div class="lozen-tracker-color-key-item">
-                          <span class={`lozen-color-key-chip ${group.title === "Status" ? "lozen-tracker-status-badge" : "lozen-data-badge"} ${item.className}`}>
-                            {item.label}
-                          </span>
-
-                          <div class="lozen-tracker-color-key-meta">
-                            <span>{item.hex}</span>
-                            <span>{item.text}</span>
-                            <span>{item.contrast}</span>
-                          </div>
-                        </div>
-                      ))
-                    }
-                  </div>
-                </section>
-              ))
-            }
-          </div>
-        </div>
-      </Wrapper>
-    </section>
 
     <section class="lozen-tracker-section lozen-tracker-section--data">
       <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
