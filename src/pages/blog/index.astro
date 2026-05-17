@@ -143,6 +143,10 @@ const executiveReports = [
   },
 ];
 
+
+const seriesHub = executiveReports[0];
+const reportItems = executiveReports.slice(1);
+
 const title = "Blog | Lozen Advisory";
 
 const description =
@@ -372,7 +376,7 @@ const description =
             variant="displayLG"
             class="mt-6 font-display text-base-900"
           >
-            You might also like...
+            Older research remains available.
           </Text>
         </div>
 
@@ -386,48 +390,80 @@ const description =
     </Wrapper>
   </section>
 
-  <section>
-    <Wrapper variant="standard" class="pb-16 lg:pb-24">
-      <div class="max-w-3xl">
-        <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-        >
-          Executive Report Series
-        </Text>
+  <section class="border-y border-base-200 bg-gradient-to-b from-white via-base-100 to-white">
+    <Wrapper variant="standard" class="py-14 lg:py-20">
+      <div class="rounded-2xl border border-base-300 bg-white/85 p-6 shadow-sm lg:p-8">
+        <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div class="max-w-3xl">
+            <Text
+              tag="span"
+              variant="textSM"
+              class="pl-4 font-medium uppercase border-l text-base-900 font-sans border-base-400"
+            >
+              Executive Report Series
+            </Text>
 
-        <Text
-          tag="h2"
-          variant="displayLG"
-          class="mt-8 font-display text-base-900"
-        >
-          The Architecture of Invisible Attrition℠
-        </Text>
-      </div>
+            <Text
+              tag="h2"
+              variant="displayLG"
+              class="mt-6 font-display text-base-900"
+            >
+              The Architecture of Invisible Attrition℠
+            </Text>
+          </div>
 
-      <div class="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-5">
-        {executiveReports.map((item) => (
-          <a
-            href={item.href}
-            class="group flex min-h-full flex-col justify-between rounded-sm border border-base-300 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-base-500 hover:shadow-md"
-          >
-            <div>
-              <p class="text-xs font-medium uppercase tracking-[0.14em] text-base-500">
-                {item.label}
-              </p>
-              <h3 class="mt-4 lozen-type-card-title-small text-base-900 transition-colors group-hover:text-base-700">
-                {item.title}
-              </h3>
-              <p class="mt-4 lozen-type-body-small text-base-600">
-                {item.description}
-              </p>
-            </div>
-            <span class="mt-6 inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em]">
-              Read →
-            </span>
-          </a>
-        ))}
+          <p class="lozen-type-body text-base-600 lg:max-w-xl lg:justify-self-end">
+            A curated series on workforce risks that emerge before conventional attrition data can see them.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-5 lg:grid-cols-[0.95fr_2.05fr]">
+          {seriesHub && (
+            <a
+              href={seriesHub.href}
+              class="group flex min-h-full flex-col justify-between rounded-xl border border-base-800 bg-base-950 p-6 text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-base-500 lg:p-7"
+            >
+              <div>
+                <p class="text-xs font-medium uppercase tracking-[0.14em] text-base-200">
+                  {seriesHub.label}
+                </p>
+                <h3 class="mt-5 lozen-type-section-title text-white transition-colors group-hover:text-base-100">
+                  {seriesHub.title}
+                </h3>
+                <p class="mt-5 lozen-type-body text-base-200">
+                  {seriesHub.description}
+                </p>
+              </div>
+              <span class="mt-8 inline-flex text-sm font-medium text-white underline decoration-base-400 underline-offset-[0.24em]">
+                Read series →
+              </span>
+            </a>
+          )}
+
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+            {reportItems.map((item) => (
+              <a
+                href={item.href}
+                class="group flex min-h-full flex-col justify-between rounded-xl border border-base-300 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-base-500 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-base-500"
+              >
+                <div>
+                  <p class="text-xs font-medium uppercase tracking-[0.14em] text-base-500">
+                    {item.label}
+                  </p>
+                  <h3 class="mt-4 lozen-type-card-title-small text-base-900 transition-colors group-hover:text-base-700">
+                    {item.title}
+                  </h3>
+                  <p class="mt-4 lozen-type-body-small text-base-600">
+                    {item.description}
+                  </p>
+                </div>
+                <span class="mt-6 inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em]">
+                  Read →
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </Wrapper>
   </section>
