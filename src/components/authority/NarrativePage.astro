@@ -15,7 +15,6 @@ interface NarrativeLink {
 interface NarrativeCta {
   label?: string;
   title: string;
-  seoTitle?: string;
   description?: string;
   href: string;
   linkLabel?: string;
@@ -303,10 +302,10 @@ const contentShellClass = hasRailContent
     margin: 1.15rem 0 0;
     color: var(--color-base-950);
     font-family: var(--font-display);
-    font-size: clamp(2.35rem, 5.4vw, 5.85rem);
+    font-size: clamp(2.15rem, 3.9vw, 4.4rem);
     font-weight: 500;
-    letter-spacing: -0.055em;
-    line-height: 0.96;
+    letter-spacing: -0.045em;
+    line-height: 1.03;
     text-wrap: balance;
   }
 
@@ -805,9 +804,9 @@ const contentShellClass = hasRailContent
     }
 
     .narrative-page h1 {
-      font-size: clamp(2.25rem, 14vw, 3.6rem);
-      letter-spacing: -0.05em;
-      line-height: 0.98;
+      font-size: clamp(2rem, 10vw, 3rem);
+      letter-spacing: -0.045em;
+      line-height: 1.04;
     }
 
     .narrative-page__deck,
