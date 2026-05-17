@@ -1,20 +1,26 @@
 ---
-import { Image } from "astro:assets";
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Text from "@/components/fundations/elements/Text.astro";
-import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-import founderImage from "@/images/team/akilahplaceholder.webp";
+import NarrativePage from "@/components/authority/NarrativePage.astro";
 
-const title = "About Lozen Advisory | Founded to Support Women in Leadership";
+const title = "Akilah E. Kamaria";
 
-const description = "Founded by data analyst Akilah E. Kamaria. Advising leadership on the structural blind spots, disclosure dependency, and risks inside corporate data.";
+const seoTitle = "About Lozen Advisory | Founded to Support Women in Leadership";
+
+const description = "Data analyst. Entrepreneur. United States Marine Corps veteran.";
+
+const metaDescription =
+  "Founded by data analyst Akilah E. Kamaria. Advising leadership on the structural blind spots, disclosure dependency, and risks inside corporate data.";
+
+const canonical = "https://www.lozenadvisory.com/about";
+
+const heroImage = "/images/authority/about-akilah-kamaria.webp";
 
 const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  name: title,
-  description,
-  url: "https://www.lozenadvisory.com/about",
+  name: seoTitle,
+  description: metaDescription,
+  url: canonical,
+  image: `https://www.lozenadvisory.com${heroImage}`,
   mainEntity: {
     "@type": "Person",
     name: "Akilah E. Kamaria",
@@ -28,240 +34,83 @@ const pageJsonLd = {
 };
 ---
 
-<BaseLayout title={title} description={description}>
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify(pageJsonLd)}
-  ></script>
+<NarrativePage
+  title={title}
+  seoTitle={seoTitle}
+  description={description}
+  metaDescription={metaDescription}
+  canonical={canonical}
+  eyebrow="Founder"
+  typeLabel="Lozen Advisory"
+  heroImage={heroImage}
+  heroImageAlt="Akilah E. Kamaria, founder of Lozen Advisory LLC."
+  heroImagePosition="center center"
+  articleJsonLd={pageJsonLd}
+>
+  <blockquote>
+    We invest millions of dollars building programs to get women into the pipeline, but built nothing to keep them there once they finally reach the top.
+  </blockquote>
 
-  <section class="overflow-hidden bg-gradient-to-t from-base-200 to-white">
-    <Wrapper variant="standard" class="py-24 lg:py-32">
-      <div class="grid gap-12 lg:grid-cols-[1fr_0.72fr] lg:items-end">
-        <div class="max-w-4xl">
-          <Text
-            tag="span"
-            variant="textSM"
-            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-          >
-            Founder
-          </Text>
+  <p><strong>— Akilah E. Kamaria</strong></p>
 
-          <Text
-            tag="h1"
-            variant="display2XL"
-            class="mt-8 uppercase font-display text-base-900"
-          >
-            Akilah E. Kamaria
-          </Text>
+  <h2>Background</h2>
 
-          <Text
-            tag="p"
-            variant="textLG"
-            class="mt-6 max-w-2xl text-base-600 text-balance"
-          >
-            Data analyst. Entrepreneur. United States Marine Corps veteran.
-          </Text>
+  <h3>
+    She turned data into decisions that moved billions of dollars, at scale, inside some of the most demanding institutions in the world.
+  </h3>
 
-          <div class="mt-10 max-w-3xl border-l border-accent-500 pl-6">
-            <Text
-              tag="blockquote"
-              variant="displayXS"
-              class="font-display text-base-900"
-            >
-              We invest millions of dollars building programs to get women into the pipeline, but built nothing to keep them there once they finally reach the top.
-            </Text>
+  <p>
+    Akilah E. Kamaria built a career doing what most people only aspire to. She turned data into decisions that moved billions of dollars, at scale, inside some of the most demanding institutions in the world. That work required more than precision. It required the ability to see past what numbers confirm and press into what they obscure. That is where the real answers have always lived.
+  </p>
 
-            <Text
-              tag="p"
-              variant="textSM"
-              class="mt-5 font-medium uppercase tracking-wide text-base-500"
-            >
-              — Akilah E. Kamaria
-            </Text>
-          </div>
-        </div>
+  <p>
+    Alongside that career, she contributed to landmark research on race and gender discrimination at the American Bar Foundation, published in The American Economic Review, and was acknowledged for foundational work on cybersecurity information sharing at the ISAO Standards Organization.
+  </p>
 
-        <div class="relative">
-          <div class="overflow-hidden rounded-3xl bg-base-900 shadow-2xl outline-4 outline-base-500/10">
-            <Image
-              src={founderImage}
-              alt="Akilah E. Kamaria, founder of Lozen Advisory LLC."
-              class="aspect-[4/5] h-full w-full object-cover"
-              loading="eager"
-            />
-          </div>
-        </div>
-      </div>
-    </Wrapper>
-  </section>
+  <p>
+    When she saw a problem, she built something to solve it. In 2005, she founded Hemancipation, a Beverly Hills-based concierge service for men in transition, featured in Newsweek, with events that raised funds for Semper Fi and America's Fund.
+  </p>
 
-  <section>
-    <Wrapper variant="standard" class="py-12 lg:py-24">
-      <div class="grid gap-12 lg:grid-cols-[0.28fr_1fr] lg:gap-20">
-        <div>
-          <Text
-            tag="span"
-            variant="textSM"
-            class="font-medium uppercase tracking-wide text-accent-600"
-          >
-            Background
-          </Text>
-        </div>
+  <p>
+    She has since built something larger.
+  </p>
 
-        <article class="max-w-3xl space-y-6">
-          <Text
-            tag="h2"
-            variant="displaySM"
-            class="font-display uppercase text-base-900"
-          >
-            She turned data into decisions that moved billions of dollars, at scale, inside some of the most demanding institutions in the world.
-          </Text>
+  <h2>Founded 2025</h2>
 
-          <Text tag="p" variant="textBase" class="text-base-700">
-            Akilah E. Kamaria built a career doing what most people only aspire to. She turned data into decisions that moved billions of dollars, at scale, inside some of the most demanding institutions in the world. That work required more than precision. It required the ability to see past what numbers confirm and press into what they obscure. That is where the real answers have always lived.
-          </Text>
+  <div class="narrative-callout">
+    <h3>Lozen Advisory LLC</h3>
 
-          <Text tag="p" variant="textBase" class="text-base-700">
-            Alongside that career, she contributed to landmark research on race and gender discrimination at the American Bar Foundation, published in The American Economic Review, and was acknowledged for foundational work on cybersecurity information sharing at the ISAO Standards Organization.
-          </Text>
+    <p>
+      We are a confidential, disclosure-independent performance protection advisory for women executives practicing Tacere (tah-CHEH-reh): the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk.
+    </p>
+  </div>
 
-          <Text tag="p" variant="textBase" class="text-base-700">
-            When she saw a problem, she built something to solve it. In 2005, she founded Hemancipation, a Beverly Hills-based concierge service for men in transition, featured in Newsweek, with events that raised funds for Semper Fi and America's Fund.
-          </Text>
+  <div class="narrative-callout">
+    <h3>The Peri Nation</h3>
 
-          <Text tag="p" variant="textBase" class="text-base-700">
-            She has since built something larger.
-          </Text>
-        </article>
-      </div>
-    </Wrapper>
-  </section>
+    <p>
+      A pioneering community platform supporting Black women and women of color navigating perimenopause and menopause. Providing education, community, and expert support.
+    </p>
+  </div>
 
-  <section class="bg-base-950">
-    <Wrapper variant="standard" class="py-16 lg:py-24">
-      <div class="grid gap-8 lg:grid-cols-[0.28fr_1fr] lg:gap-20">
-        <div>
-          <Text
-            tag="span"
-            variant="textSM"
-            class="font-medium uppercase tracking-wide text-accent-300"
-          >
-            Founded 2025
-          </Text>
-        </div>
+  <h2>Speaking</h2>
 
-        <div class="grid gap-6 lg:grid-cols-2">
-          <article class="rounded-3xl border border-white/10 bg-base-900 p-6 shadow-2xl sm:p-8">
-            <Text
-              tag="h2"
-              variant="displaySM"
-              class="font-display uppercase text-white"
-            >
-              Lozen Advisory LLC
-            </Text>
+  <p>
+    Her engagements span cybersecurity and data protection, wealth management for high net worth families, and the professional navigation of health transitions without workplace disclosure. She speaks to audiences that expect precision.
+  </p>
 
-            <Text tag="p" variant="textBase" class="mt-5 text-base-200">
-              We are a confidential, disclosure-independent performance protection advisory for women executives practicing Tacere (tah-CHEH-reh): the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk.
-            </Text>
-          </article>
+  <div class="narrative-callout">
+    <p><strong>Leadership Institute for Women of Color Attorneys (LIWOCA) CLE Conference</strong></p>
+    <p>March 2026</p>
+    <hr />
+    <p><strong>AdvaMed Cybersecurity Summit</strong></p>
+    <hr />
+    <p><strong>Family Wealth Alliance</strong></p>
+  </div>
 
-          <article class="rounded-3xl border border-white/10 bg-base-900 p-6 shadow-2xl sm:p-8">
-            <Text
-              tag="h2"
-              variant="displaySM"
-              class="font-display uppercase text-white"
-            >
-              The Peri Nation
-            </Text>
+  <blockquote>
+    When disclosure isn't an option, preparation is protection.
+  </blockquote>
 
-            <Text tag="p" variant="textBase" class="mt-5 text-base-200">
-              A pioneering community platform supporting Black women and women of color navigating perimenopause and menopause. Providing education, community, and expert support.
-            </Text>
-          </article>
-        </div>
-      </div>
-    </Wrapper>
-  </section>
-
-  <section>
-    <Wrapper variant="standard" class="py-16 lg:py-24">
-      <div class="grid gap-12 lg:grid-cols-[0.28fr_1fr] lg:gap-20">
-        <div>
-          <Text
-            tag="span"
-            variant="textSM"
-            class="font-medium uppercase tracking-wide text-accent-600"
-          >
-            Speaking
-          </Text>
-        </div>
-
-        <div class="max-w-4xl">
-          <Text tag="p" variant="textBase" class="max-w-3xl text-base-700">
-            Her engagements span cybersecurity and data protection, wealth management for high net worth families, and the professional navigation of health transitions without workplace disclosure. She speaks to audiences that expect precision.
-          </Text>
-
-          <div class="mt-10 divide-y divide-base-200 rounded-3xl border border-base-200 bg-white shadow-xl">
-            <div class="grid gap-2 p-6 sm:grid-cols-[1fr_auto] sm:items-center sm:p-8">
-              <Text
-                tag="p"
-                variant="textBase"
-                class="font-medium text-base-900"
-              >
-                Leadership Institute for Women of Color Attorneys (LIWOCA) CLE Conference
-              </Text>
-
-              <Text
-                tag="p"
-                variant="textSM"
-                class="font-medium uppercase tracking-wide text-base-500"
-              >
-                March 2026
-              </Text>
-            </div>
-
-            <div class="p-6 sm:p-8">
-              <Text
-                tag="p"
-                variant="textBase"
-                class="font-medium text-base-900"
-              >
-                AdvaMed Cybersecurity Summit
-              </Text>
-            </div>
-
-            <div class="p-6 sm:p-8">
-              <Text
-                tag="p"
-                variant="textBase"
-                class="font-medium text-base-900"
-              >
-                Family Wealth Alliance
-              </Text>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Wrapper>
-  </section>
-
-  <section class="bg-base-950">
-    <Wrapper variant="narrow" class="py-16 text-center lg:py-24">
-      <Text
-        tag="blockquote"
-        variant="displayMD"
-        class="font-display text-white"
-      >
-        When disclosure isn't an option, preparation is protection.
-      </Text>
-
-      <Text
-        tag="p"
-        variant="textSM"
-        class="mt-6 font-medium uppercase tracking-wide text-accent-300"
-      >
-        — Akilah E. Kamaria
-      </Text>
-    </Wrapper>
-  </section>
-</BaseLayout>
+  <p><strong>— Akilah E. Kamaria</strong></p>
+</NarrativePage>
