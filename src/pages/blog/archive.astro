@@ -1,0 +1,253 @@
+---
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+// Content
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("posts");
+
+const getData = (post: any) => post.data as any;
+
+const normalizeSlug = (value: string) =>
+  String(value || "")
+    .replace(/^\/?blog\//, "")
+    .replace(/^\/+/, "")
+    .replace(/\.mdx?$/, "");
+
+const getSlug = (post: any) => {
+  const data = getData(post);
+  return normalizeSlug(data.slug || post.slug || post.id);
+};
+
+const getPostHref = (post: any) => `/blog/${getSlug(post)}`;
+
+const getPublishedDate = (post: any) => {
+  const data = getData(post);
+  return data.datePublished || data.pubDate || data.dateModified || "";
+};
+
+const getSortDate = (post: any) => {
+  const dateValue = getPublishedDate(post);
+  return dateValue ? new Date(dateValue).getTime() : 0;
+};
+
+const getImageSrc = (post: any) => {
+  const data = getData(post);
+  const imageUrl = data.image?.url;
+
+  if (imageUrl?.src) return imageUrl.src;
+  if (typeof imageUrl === "string") return imageUrl;
+  if (data.heroImage?.src) return data.heroImage.src;
+  if (typeof data.heroImage === "string") return data.heroImage;
+
+  return "";
+};
+
+const getImageAlt = (post: any) => {
+  const data = getData(post);
+  return data.image?.alt || data.heroAlt || data.title || "";
+};
+
+const getCategory = (post: any) => {
+  const data = getData(post);
+  return data.category || data.tags?.[0] || "Articles";
+};
+
+const getExcerpt = (post: any) => {
+  const data = getData(post);
+  return data.excerpt || data.metaDescription || data.description || "";
+};
+
+const formatDate = (dateValue: string | Date) => {
+  if (!dateValue) return "";
+
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(new Date(dateValue));
+};
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+const livePosts = allPosts
+  .filter((post) => getData(post).draft !== true)
+  .sort((a, b) => getSortDate(b) - getSortDate(a));
+
+const curatedCategories = [
+  "Legislative Analysis",
+  "Research & Policy",
+  "Legal Profession",
+  "Performance & Career",
+  "The Tender Path",
+  "Disclosure Independence",
+];
+
+const postsByCategory = curatedCategories
+  .map((category) => ({
+    category,
+    id: slugify(category),
+    posts: livePosts.filter((post) => getCategory(post) === category),
+  }))
+  .filter((section) => section.posts.length > 0);
+
+const uncategorizedPosts = livePosts.filter(
+  (post) => !curatedCategories.includes(getCategory(post)),
+);
+
+if (uncategorizedPosts.length > 0) {
+  postsByCategory.push({
+    category: "Other Articles",
+    id: "other-articles",
+    posts: uncategorizedPosts,
+  });
+}
+
+const title = "Research Archive | Lozen Advisory";
+const description =
+  "Complete archive of Lozen Advisory research, analysis, policy commentary, and performance-protection articles.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="bg-gradient-to-b from-base-200 via-white to-base-100">
+    <Wrapper variant="standard" class="py-20 lg:py-28">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+        <div>
+          <a
+            href="/blog"
+            class="inline-flex text-sm font-medium text-base-700 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-950"
+          >
+            ← Back to Research & Analysis
+          </a>
+
+          <Text
+            tag="span"
+            variant="textSM"
+            class="mt-8 block pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+          >
+            Complete Archive
+          </Text>
+
+          <Text
+            tag="h1"
+            variant="displayXL"
+            class="mt-8 font-display text-base-900"
+          >
+            All Research Articles
+          </Text>
+
+          <Text
+            tag="p"
+            variant="textBase"
+            class="mt-6 max-w-2xl text-base-600 text-balance"
+          >
+            Browse the complete archive of Lozen Advisory articles, organized by research area and sorted by publication date.
+          </Text>
+        </div>
+
+        <nav
+          class="rounded-sm border border-base-300 bg-white p-5 shadow-sm"
+          aria-label="Archive categories"
+        >
+          <p class="mb-4 text-xs font-medium uppercase tracking-[0.16em] text-base-600 font-sans">
+            Jump to category
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            {postsByCategory.map((section) => (
+              <a
+                href={`#${section.id}`}
+                class="rounded-full border border-base-300 px-4 py-2 text-sm text-base-700 transition-colors hover:border-base-500 hover:text-base-950 focus-visible:border-base-500 focus-visible:text-base-950"
+              >
+                {section.category}
+                <span class="ml-1 text-base-500">({section.posts.length})</span>
+              </a>
+            ))}
+          </div>
+        </nav>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section>
+    <Wrapper variant="standard" class="py-12 lg:py-20">
+      <div class="space-y-16">
+        {postsByCategory.map((section) => (
+          <section id={section.id} class="scroll-mt-28">
+            <div class="mb-8 flex flex-col gap-3 border-b border-base-300 pb-5 md:flex-row md:items-end md:justify-between">
+              <Text
+                tag="h2"
+                variant="displayLG"
+                class="font-display text-base-900"
+              >
+                {section.category}
+              </Text>
+
+              <p class="text-sm text-base-500">
+                {section.posts.length} {section.posts.length === 1 ? "article" : "articles"}
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+              {section.posts.map((post) => {
+                const publishedDate = getPublishedDate(post);
+
+                return (
+                  <article class="group grid grid-cols-1 overflow-hidden rounded-sm border border-base-300 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-base-400 hover:shadow-md sm:grid-cols-[12rem_minmax(0,1fr)]">
+                    {getImageSrc(post) && (
+                      <a href={getPostHref(post)} class="block overflow-hidden bg-base-100">
+                        <img
+                          src={getImageSrc(post)}
+                          alt={getImageAlt(post)}
+                          class="aspect-[16/10] h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] sm:aspect-auto"
+                          loading="lazy"
+                        />
+                      </a>
+                    )}
+
+                    <div class="p-6">
+                      <div class="flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-base-600 font-sans">
+                        {publishedDate && (
+                          <time datetime={String(publishedDate)}>
+                            {formatDate(publishedDate)}
+                          </time>
+                        )}
+                      </div>
+
+                      <h3 class="mt-4 lozen-type-card-title-small text-base-900">
+                        <a href={getPostHref(post)} class="transition-colors hover:text-base-700">
+                          {getData(post).title}
+                        </a>
+                      </h3>
+
+                      {getExcerpt(post) && (
+                        <p class="mt-4 line-clamp-3 lozen-type-body-small text-base-600">
+                          {getExcerpt(post)}
+                        </p>
+                      )}
+
+                      <a
+                        href={getPostHref(post)}
+                        class="mt-5 inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
+                      >
+                        Read article →
+                      </a>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        ))}
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

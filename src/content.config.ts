@@ -7,13 +7,23 @@ const posts = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string(),
+      slug: z.string().optional(),
       pubDate: z.coerce.date(),
+      datePublished: z.coerce.date().optional(),
+      dateModified: z.coerce.date().optional(),
+      category: z.string().optional(),
       description: z.string(),
+      excerpt: z.string().optional(),
+      metaDescription: z.string().optional(),
       image: z.object({
         url: image(),
         alt: z.string(),
       }),
+      heroImage: image().optional(),
+      heroAlt: z.string().optional(),
       tags: z.array(z.string()),
+      spineDestination: z.string().optional(),
+      draft: z.boolean().optional().default(false),
       isFeatured: z.boolean().optional().default(false),
     }),
 });

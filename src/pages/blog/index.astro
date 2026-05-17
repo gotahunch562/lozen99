@@ -24,18 +24,13 @@ const getSlug = (post: any) => {
 
 const getPostHref = (post: any) => `/blog/${getSlug(post)}`;
 
-const getDateValue = (post: any) => {
-  const data = getData(post);
-  return data.datePublished || data.pubDate || data.dateModified || "";
-};
-
 const getPublishedDate = (post: any) => {
   const data = getData(post);
   return data.datePublished || data.pubDate || data.dateModified || "";
 };
 
 const getSortDate = (post: any) => {
-  const dateValue = getDateValue(post);
+  const dateValue = getPublishedDate(post);
   return dateValue ? new Date(dateValue).getTime() : 0;
 };
 
@@ -58,7 +53,7 @@ const getImageAlt = (post: any) => {
 
 const getCategory = (post: any) => {
   const data = getData(post);
-  return data.category || "Articles";
+  return data.category || data.tags?.[0] || "Articles";
 };
 
 const getExcerpt = (post: any) => {
@@ -83,78 +78,75 @@ const slugify = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 
-// Use all non-draft posts. Do not require data.slug because the template schema
-// may strip custom frontmatter fields; post.id is the stable fallback.
 const livePosts = allPosts
   .filter((post) => getData(post).draft !== true)
   .sort((a, b) => getSortDate(b) - getSortDate(a));
 
-const articlePosts = livePosts;
+const featuredPost = livePosts.find((post) => getData(post).isFeatured) || livePosts[0];
 
-const featuredPost = articlePosts.find((post) => getData(post).isFeatured) || articlePosts[0];
-
-const latestPosts = articlePosts
+const latestPosts = livePosts
   .filter((post) => !featuredPost || post.id !== featuredPost.id)
   .slice(0, 4);
 
-const curatedBlogCategories = [
+const curatedCategories = [
   "Legislative Analysis",
   "Research & Policy",
   "Legal Profession",
   "Performance & Career",
   "The Tender Path",
+  "Disclosure Independence",
 ];
 
-const categoryCounts = articlePosts.reduce((groups: Record<string, number>, post) => {
-  const category = getCategory(post);
-
-  if (!curatedBlogCategories.includes(category)) {
-    return groups;
-  }
-
-  groups[category] = (groups[category] || 0) + 1;
-  return groups;
-}, {});
-
-const categoryLinks = curatedBlogCategories
+const categoryLinks = curatedCategories
   .map((category) => ({
     category,
-    href: `/blog/tags/${slugify(category)}`,
-    count: categoryCounts[category] || 0,
+    href: `/blog/archive#${slugify(category)}`,
+    count: livePosts.filter((post) => getCategory(post) === category).length,
   }))
   .filter((item) => item.count > 0);
 
 const executiveReports = [
   {
-    eyebrow: "Series Hub",
-    title: "The Architecture of Invisible Attrition — Executive Report Series",
+    label: "Series Hub",
+    title: "The Architecture of Invisible Attrition℠",
+    description:
+      "A five-part executive report series on the workforce risks that emerge before conventional attrition data can see them.",
     href: "/architecture-of-invisible-attrition-series",
   },
   {
-    eyebrow: "Report 01",
-    title: "Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most",
+    label: "Report 01",
+    title: "Voluntary Benefits and the Disclosure Gap",
+    description:
+      "Why benefit availability does not equal measurable reach when utilization depends on disclosure.",
     href: "/voluntary-benefit-disclosure-gap",
   },
   {
-    eyebrow: "Report 02",
-    title: "Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers",
+    label: "Report 02",
+    title: "The Billable Hour Visibility Tax",
+    description:
+      "How performance systems can miss the cost of managing private constraints inside visible work.",
     href: "/billable-hour-visibility-tax",
   },
   {
-    eyebrow: "Report 03",
+    label: "Report 03",
     title: "Succession Planning and the Retention Risk Data Gap",
+    description:
+      "Why leadership continuity models can fail before a departure becomes visible.",
     href: "/succession-planning-retention-risk-data-gap",
   },
   {
-    eyebrow: "Report 04",
-    title: "The Leadership Pipeline Is Draining From Both Ends",
+    label: "Report 04",
+    title: "Leadership Pipeline Manager Drain",
+    description:
+      "A report on managerial capacity erosion before succession systems register risk.",
     href: "/leadership-pipeline-manager-drain",
   },
 ];
 
 const title = "Blog | Lozen Advisory";
 
-const description = "Articles for women navigating perimenopause, disclosure, performance pressure, leadership, career protection, and private decision-making at work.";
+const description =
+  "Articles for women navigating perimenopause, disclosure, performance pressure, leadership, career protection, and private decision-making at work.";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -189,28 +181,35 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
           </Text>
         </div>
 
-        {categoryLinks.length > 0 && (
-          <nav
-            class="rounded-sm border border-base-300 bg-white p-5 shadow-sm"
-            aria-label="Blog categories"
-          >
-            <p class="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent-600 font-display">
-              Explore the research
-            </p>
+        <nav
+          class="rounded-sm border border-base-300 bg-white p-5 shadow-sm"
+          aria-label="Blog archive navigation"
+        >
+          <p class="mb-4 text-xs font-medium uppercase tracking-[0.16em] text-base-600 font-sans">
+            Explore the research
+          </p>
 
+          {categoryLinks.length > 0 && (
             <div class="flex flex-wrap gap-2">
               {categoryLinks.map((item) => (
                 <a
                   href={item.href}
-                  class="rounded-full border border-base-300 px-4 py-2 text-sm text-base-700 transition-colors hover:border-accent-500 hover:text-base-900"
+                  class="rounded-full border border-base-300 px-4 py-2 text-sm text-base-700 transition-colors hover:border-base-500 hover:text-base-950 focus-visible:border-base-500 focus-visible:text-base-950"
                 >
                   {item.category}
                   <span class="ml-1 text-base-500">({item.count})</span>
                 </a>
               ))}
             </div>
-          </nav>
-        )}
+          )}
+
+          <a
+            href="/blog/archive"
+            class="mt-5 inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
+          >
+            View all research articles →
+          </a>
+        </nav>
       </div>
     </Wrapper>
   </section>
@@ -231,7 +230,7 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
           )}
 
           <div class="flex flex-col justify-center p-8 lg:p-12">
-            <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-wide text-accent-600 font-display">
+            <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-base-600 font-sans">
               <span>{getCategory(featuredPost)}</span>
               {getPublishedDate(featuredPost) && (
                 <>
@@ -243,14 +242,14 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
               )}
             </div>
 
-            <h2 class="mt-5 text-3xl leading-tight font-display text-base-900 lg:text-5xl">
-              <a href={getPostHref(featuredPost)} class="transition-colors hover:text-accent-600">
+            <h2 class="mt-5 lozen-type-section-title text-base-900">
+              <a href={getPostHref(featuredPost)} class="transition-colors hover:text-base-700">
                 {getData(featuredPost).title}
               </a>
             </h2>
 
             {getExcerpt(featuredPost) && (
-              <p class="mt-6 text-base leading-8 text-base-600">
+              <p class="mt-6 lozen-type-body text-base-600">
                 {getExcerpt(featuredPost)}
               </p>
             )}
@@ -258,7 +257,7 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
             <div class="mt-8">
               <a
                 href={getPostHref(featuredPost)}
-                class="inline-flex text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
+                class="inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
               >
                 Read article →
               </a>
@@ -268,56 +267,6 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
       </Wrapper>
     </section>
   )}
-
-  <section>
-    <Wrapper variant="standard" class="py-10 lg:py-16">
-      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-        <div class="max-w-3xl">
-          <Text
-            tag="span"
-            variant="textSM"
-            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-          >
-            Executive Report Series
-          </Text>
-
-          <Text
-            tag="h2"
-            variant="displayLG"
-            class="mt-8 font-display text-base-900"
-          >
-            The Architecture of Invisible Attrition
-          </Text>
-        </div>
-
-        <a
-          href="/architecture-of-invisible-attrition-series"
-          class="inline-flex text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
-        >
-          View series →
-        </a>
-      </div>
-
-      <div class="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-5">
-        {executiveReports.map((report) => (
-          <a
-            href={report.href}
-            class="group flex min-h-[13rem] flex-col justify-between rounded-sm border border-base-300 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-base-500 hover:shadow-md"
-          >
-            <span class="text-xs font-medium uppercase tracking-[0.16em] text-base-500 font-display">
-              {report.eyebrow}
-            </span>
-            <strong class="mt-5 block text-xl font-normal leading-snug text-base-900 font-display transition-colors group-hover:text-base-700">
-              {report.title}
-            </strong>
-            <span class="mt-6 inline-flex text-sm font-medium text-accent-600 group-hover:text-base-900">
-              Read →
-            </span>
-          </a>
-        ))}
-      </div>
-    </Wrapper>
-  </section>
 
   {latestPosts.length > 0 && (
     <section>
@@ -340,6 +289,13 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
               Recent Analysis
             </Text>
           </div>
+
+          <a
+            href="/blog/archive"
+            class="inline-flex w-fit text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
+          >
+            View all research articles →
+          </a>
         </div>
 
         <div class="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -360,7 +316,7 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
                 )}
 
                 <div class="p-8">
-                  <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-[0.16em] text-accent-600 font-display">
+                  <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-base-600 font-sans">
                     <span>{getCategory(post)}</span>
                     {publishedDate && <span aria-hidden="true">·</span>}
                     {publishedDate && (
@@ -370,14 +326,14 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
                     )}
                   </div>
 
-                  <h3 class="mt-5 text-2xl leading-tight font-display text-base-900 lg:text-3xl">
-                    <a href={getPostHref(post)} class="transition-colors hover:text-accent-600">
+                  <h3 class="mt-5 lozen-type-card-title text-base-900">
+                    <a href={getPostHref(post)} class="transition-colors hover:text-base-700">
                       {getData(post).title}
                     </a>
                   </h3>
 
                   {getExcerpt(post) && (
-                    <p class="mt-5 line-clamp-4 text-base leading-8 text-base-600">
+                    <p class="mt-5 line-clamp-4 lozen-type-body text-base-600">
                       {getExcerpt(post)}
                     </p>
                   )}
@@ -385,7 +341,7 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
                   <div class="mt-7">
                     <a
                       href={getPostHref(post)}
-                      class="inline-flex text-sm font-medium text-accent-600 hover:text-base-900 transition-colors"
+                      class="inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
                     >
                       Read article →
                     </a>
@@ -398,4 +354,81 @@ const description = "Articles for women navigating perimenopause, disclosure, pe
       </Wrapper>
     </section>
   )}
+
+  <section>
+    <Wrapper variant="standard" class="py-10 lg:py-20">
+      <div class="flex flex-col gap-5 border-y border-base-300 py-8 lg:flex-row lg:items-center lg:justify-between">
+        <div class="max-w-2xl">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+          >
+            Complete Archive
+          </Text>
+
+          <Text
+            tag="h2"
+            variant="displayLG"
+            class="mt-6 font-display text-base-900"
+          >
+            Older research remains available.
+          </Text>
+        </div>
+
+        <a
+          href="/blog/archive"
+          class="inline-flex w-fit rounded-full border border-base-400 px-5 py-3 text-sm font-medium text-base-900 transition-colors hover:border-base-700 hover:bg-base-900 hover:text-white"
+        >
+          View all research articles →
+        </a>
+      </div>
+    </Wrapper>
+  </section>
+
+  <section>
+    <Wrapper variant="standard" class="pb-16 lg:pb-24">
+      <div class="max-w-3xl">
+        <Text
+          tag="span"
+          variant="textSM"
+          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+        >
+          Executive Report Series
+        </Text>
+
+        <Text
+          tag="h2"
+          variant="displayLG"
+          class="mt-8 font-display text-base-900"
+        >
+          The Architecture of Invisible Attrition℠
+        </Text>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-5">
+        {executiveReports.map((item) => (
+          <a
+            href={item.href}
+            class="group flex min-h-full flex-col justify-between rounded-sm border border-base-300 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-base-500 hover:shadow-md"
+          >
+            <div>
+              <p class="text-xs font-medium uppercase tracking-[0.14em] text-base-500">
+                {item.label}
+              </p>
+              <h3 class="mt-4 lozen-type-card-title-small text-base-900 transition-colors group-hover:text-base-700">
+                {item.title}
+              </h3>
+              <p class="mt-4 lozen-type-body-small text-base-600">
+                {item.description}
+              </p>
+            </div>
+            <span class="mt-6 inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em]">
+              Read →
+            </span>
+          </a>
+        ))}
+      </div>
+    </Wrapper>
+  </section>
 </BaseLayout>
