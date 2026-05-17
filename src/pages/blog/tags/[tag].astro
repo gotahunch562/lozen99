@@ -7,22 +7,57 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import BlogBigCard from "@/components/blog/BlogBigCard.astro";
 // Content
 import { getCollection } from "astro:content";
+
+const normalizeTag = (tag: string) => {
+  const raw = (tag ?? "").toString().trim();
+  const slugSource = raw
+    .toLowerCase()
+    .replace(/^#+/, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  const slug = encodeURIComponent(slugSource || "tag");
+  const label =
+    raw.replace(/^#+/, "").replace(/[-_]+/g, " ").replace(/\s+/g, " ").trim() ||
+    "Tag";
+  return { label, slug };
+};
+
 export async function getStaticPaths() {
+  const normalizeTagPath = (tag: string) => {
+    const raw = (tag ?? "").toString().trim();
+    const slugSource = raw
+      .toLowerCase()
+      .replace(/^#+/, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    const slug = encodeURIComponent(slugSource || "tag");
+    const label =
+      raw.replace(/^#+/, "").replace(/[-_]+/g, " ").replace(/\s+/g, " ").trim() ||
+      "Tag";
+    return { label, slug };
+  };
+
   const allPosts = await getCollection("posts");
-  const uniqueTags = [
-    ...new Set(allPosts.map((post) => post.data.tags).flat()),
-  ];
-  return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post) =>
-      post.data.tags.includes(tag)
-    );
-    return {
-      params: { tag },
-      props: { posts: filteredPosts },
-    };
-  });
+  const tagMap = new Map();
+
+  for (const post of allPosts) {
+    const tags = post.data.tags ?? [];
+    for (const tag of tags) {
+      const { label, slug } = normalizeTagPath(tag);
+      if (!tagMap.has(slug)) {
+        tagMap.set(slug, { label, slug, posts: [] });
+      }
+      tagMap.get(slug).posts.push(post);
+    }
+  }
+
+  return Array.from(tagMap.values()).map((tag) => ({
+    params: { tag: tag.slug },
+    props: { label: tag.label, posts: tag.posts },
+  }));
 }
-const { tag } = Astro.params;
+
+const { label } = Astro.props;
 const { posts } = Astro.props;
 ---
 
@@ -43,7 +78,7 @@ const { posts } = Astro.props;
           class="mt-8 uppercase font-display text-base-900"
         >
           blog posts tagged with
-          {tag}</Text
+          {label}</Text
         >
       </div>
     </Wrapper>

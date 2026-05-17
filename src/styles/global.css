@@ -453,8 +453,8 @@
   --lozen-tracker-table-border-strong: #6f879e;
   --lozen-tracker-row-bg: #ffffff;
   --lozen-tracker-row-alt-bg: #f3f7f9;
-  --lozen-tracker-row-hover-bg: #e8f4f2;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-teal-900);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
   --lozen-tracker-sticky-bg: #fbfdff;
   --lozen-tracker-sticky-alt-bg: #f1f6fb;
   --lozen-tracker-card-bg: #ffffff;
@@ -818,8 +818,8 @@
   --lozen-tracker-table-border-strong: #4f6b84;
   --lozen-tracker-row-bg: #ffffff;
   --lozen-tracker-row-alt-bg: #f4f7fa;
-  --lozen-tracker-row-hover-bg: #edf5f8;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-cyan-700);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
   --lozen-tracker-sticky-bg: #ffffff;
   --lozen-tracker-sticky-alt-bg: #f4f7fa;
 
@@ -916,28 +916,28 @@
 }
 
 .lozen-tracker-table-wrap--federal {
-  --lozen-tracker-row-hover-bg: #e6f3f4;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-cyan-700);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
 }
 
 .lozen-tracker-table-wrap--enacted {
-  --lozen-tracker-row-hover-bg: #e4f1ec;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-teal-900);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
 }
 
 .lozen-tracker-table-wrap--active {
-  --lozen-tracker-row-hover-bg: #e7f4f5;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-cyan-700);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
 }
 
 .lozen-tracker-table-wrap--failed {
-  --lozen-tracker-row-hover-bg: #f7e5e2;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-red-900);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
 }
 
 .lozen-tracker-table-wrap--advisory {
-  --lozen-tracker-row-hover-bg: #f7e8d6;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-caramel-600);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
 }
 
 .lozen-tracker-table {
@@ -1383,8 +1383,8 @@ a .lozen-tracker-status-badge:focus-visible {
   --lozen-tracker-table-border-strong: #385a74;
   --lozen-tracker-row-bg: #ffffff;
   --lozen-tracker-row-alt-bg: #f3f7fa;
-  --lozen-tracker-row-hover-bg: #e6f1f3;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-cyan-700);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
   --lozen-tracker-sticky-bg: #ffffff;
   --lozen-tracker-sticky-alt-bg: #f3f7fa;
 
@@ -1488,28 +1488,28 @@ a .lozen-tracker-status-badge:focus-visible {
 }
 
 .lozen-tracker-table-wrap--federal {
-  --lozen-tracker-row-hover-bg: #e5f2f3;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-cyan-700);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
 }
 
 .lozen-tracker-table-wrap--enacted {
-  --lozen-tracker-row-hover-bg: #e1eee9;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-teal-900);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
 }
 
 .lozen-tracker-table-wrap--active {
-  --lozen-tracker-row-hover-bg: #e5f2f3;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-cyan-700);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
 }
 
 .lozen-tracker-table-wrap--failed {
-  --lozen-tracker-row-hover-bg: #f2dfdc;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-red-900);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
 }
 
 .lozen-tracker-table-wrap--advisory {
-  --lozen-tracker-row-hover-bg: #f2e2d0;
-  --lozen-tracker-row-hover-accent: var(--lozen-policy-caramel-600);
+  --lozen-tracker-row-hover-bg: #c8f1f8;
+  --lozen-tracker-row-hover-accent: #005F73;
 }
 
 .lozen-tracker-table {

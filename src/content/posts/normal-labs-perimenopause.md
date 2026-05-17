@@ -114,3 +114,6 @@ Not where you were five years ago. Now.
 The Tender Path was built for women who need a private strategy for navigating perimenopause at exactly this moment. No group sessions. No employer involvement. No explanations required. The MAPS Blueprint is where to start.
 
 Just a path back to yourself.
+
+For the private advisory path connected to this issue, see [Your Blood Tests Are Normal. But You Don’t Feel Like Yourself.](/normal-blood-tests-feel-off)
+

@@ -9,7 +9,8 @@ const releases = [
     category: "Market Analysis",
     headline: "The Menopause Benefit Market Built the Wrong Thing. The Data Now Exposes It.",
     description: "Lozen Advisory issues a market correction on menopause-at-work benefit utilization. Five years of data confirm the infrastructure was built around the wrong activation condition.",
-    href: "/news-press/market-correction",
+    href: undefined,
+    statusLabel: "Full release coming soon",
   },
 ];
 ---
@@ -50,7 +51,7 @@ const releases = [
             class="mt-6 max-w-2xl font-sans leading-8 text-base-300"
           >
             Press releases and media materials from Lozen Advisory.
-            For media inquiries contact media@lozenadvisory.com.
+            For media inquiries contact hello@lozenadvisory.com.
           </Text>
         </div>
       </Wrapper>
@@ -98,13 +99,19 @@ const releases = [
                     {release.description}
                   </Text>
 
-                  <a
-                    href={release.href}
-                    class="mt-6 inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-[0.1em] text-accent-700 transition-colors hover:text-accent-900"
-                  >
-                    Read the full release
-                    <span aria-hidden="true">→</span>
-                  </a>
+                  {release.href ? (
+                    <a
+                      href={release.href}
+                      class="mt-6 inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-[0.1em] text-accent-700 transition-colors hover:text-accent-900"
+                    >
+                      Read the full release
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  ) : (
+                    <span class="mt-6 inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-[0.1em] text-base-500">
+                      {release.statusLabel}
+                    </span>
+                  )}
                 </div>
 
               </div>
