@@ -52,19 +52,19 @@ const articleJsonLd = {
   <section class="relative overflow-hidden bg-base-950 pt-32 pb-20 text-white lg:pt-40 lg:pb-28">
     <div
       aria-hidden="true"
-      class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(250,204,21,0.12),transparent_28%),radial-gradient(circle_at_80%_10%,rgba(255,255,255,0.08),transparent_24%)]"
+      class="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.055),transparent_42%)]"
     ></div>
     <Wrapper variant="standard" class="relative z-10">
       <div class="max-w-4xl">
         <a
           href="/news-press"
-          class="inline-flex font-sans text-xs font-semibold uppercase tracking-[0.18em] text-accent-300 transition-colors hover:text-accent-200"
+          class="inline-flex font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-200 transition-colors hover:text-white"
         >
           ← News &amp; Press
         </a>
 
         <div class="mt-8 flex flex-wrap items-center gap-2">
-          <Text tag="span" variant="textXS" class="font-sans font-semibold uppercase tracking-[0.18em] text-accent-300">
+          <Text tag="span" variant="textXS" class="font-sans font-semibold uppercase tracking-[0.18em] text-base-200">
             For Immediate Release
           </Text>
           <span class="text-base-600">·</span>
@@ -72,7 +72,7 @@ const articleJsonLd = {
             {publishedDate}
           </Text>
           <span class="text-base-600">·</span>
-          <Text tag="span" variant="textXS" class="font-sans font-semibold uppercase tracking-[0.18em] text-accent-300">
+          <Text tag="span" variant="textXS" class="font-sans font-semibold uppercase tracking-[0.18em] text-base-200">
             Press Release
           </Text>
         </div>
@@ -98,7 +98,7 @@ const articleJsonLd = {
               href={link.href}
               target={link.label === "Email" ? undefined : "_blank"}
               rel={link.label === "Email" ? undefined : "noopener noreferrer"}
-              class="inline-flex items-center justify-center rounded-full border border-base-700 bg-base-900 px-4 py-1.5 font-sans text-xs font-bold uppercase tracking-[0.08em] text-base-200 transition-colors hover:border-accent-400 hover:bg-accent-900 hover:text-accent-200"
+              class="inline-flex items-center justify-center rounded-full border border-base-700 bg-base-900 px-4 py-1.5 font-sans text-xs font-bold uppercase tracking-[0.08em] text-base-200 transition-colors hover:border-base-400 hover:bg-base-800 hover:text-white"
             >{link.label}</a>
           ))}
         </nav>
@@ -196,7 +196,7 @@ const articleJsonLd = {
                 </Text>
                 <a
                   href={`mailto:${mediaEmail}`}
-                  class="mt-2 block font-sans text-sm text-accent-700 underline underline-offset-4 transition-colors hover:text-accent-900"
+                  class="mt-2 block font-sans text-sm text-base-800 underline underline-offset-4 transition-colors hover:text-base-950"
                 >
                   {mediaEmail}
                 </a>
@@ -211,7 +211,7 @@ const articleJsonLd = {
                       href={link.href}
                       target={link.label === "Email" ? undefined : "_blank"}
                       rel={link.label === "Email" ? undefined : "noopener noreferrer"}
-                      class="inline-flex items-center rounded-lg border border-base-200 bg-base-50 px-4 py-2 font-sans text-xs font-bold uppercase tracking-[0.08em] text-base-700 transition-colors hover:border-accent-400 hover:bg-accent-50 hover:text-accent-700"
+                      class="inline-flex items-center rounded-lg border border-base-200 bg-base-50 px-4 py-2 font-sans text-xs font-bold uppercase tracking-[0.08em] text-base-700 transition-colors hover:border-base-400 hover:bg-base-100 hover:text-base-950"
                     >{link.label}</a>
                   ))}
                 </div>

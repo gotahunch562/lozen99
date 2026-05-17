@@ -121,13 +121,7 @@ const pageJsonLd = {
   }
 
   .maps-booking__hero {
-    background:
-      radial-gradient(
-        circle at 76% 16%,
-        color-mix(in oklch, var(--color-accent-500) 18%, transparent) 0%,
-        transparent 34%
-      ),
-      linear-gradient(135deg, var(--color-base-950) 0%, var(--color-base-900) 58%, var(--color-base-800) 100%);
+    background: linear-gradient(135deg, var(--color-base-950) 0%, var(--color-base-900) 58%, var(--color-base-800) 100%);
     color: #ffffff;
   }
 
@@ -166,7 +160,7 @@ const pageJsonLd = {
 
   .maps-booking__type {
     margin-top: 0.55rem;
-    color: var(--color-accent-300);
+    color: color-mix(in oklch, var(--color-base-100) 82%, #ffffff);
   }
 
   .maps-booking h1 {
@@ -195,7 +189,7 @@ const pageJsonLd = {
     display: grid;
     gap: 0.85rem;
     align-self: end;
-    border: 1px solid color-mix(in oklch, var(--color-accent-300) 42%, rgba(255, 255, 255, 0.28));
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 1.35rem;
     background: color-mix(in oklch, var(--color-base-900) 76%, rgba(255, 255, 255, 0.12));
     padding: clamp(1.25rem, 2.2vw, 1.6rem);
@@ -233,7 +227,7 @@ const pageJsonLd = {
   }
 
   .maps-booking__reserve-card span {
-    color: var(--color-accent-300);
+    color: color-mix(in oklch, var(--color-base-100) 82%, #ffffff);
     font-size: 0.9rem;
     font-weight: 800;
     letter-spacing: 0.08em;
@@ -328,8 +322,8 @@ const pageJsonLd = {
 
   .maps-booking__situation-block {
     margin-top: clamp(2rem, 4vw, 3rem);
-    border-left: 3px solid var(--color-accent-500);
-    background: color-mix(in oklch, var(--color-accent-50) 48%, #ffffff);
+    border-left: 3px solid var(--color-base-500);
+    background: #ffffff;
     padding: clamp(1.25rem, 2.5vw, 1.75rem) clamp(1.25rem, 3vw, 2rem);
   }
 
