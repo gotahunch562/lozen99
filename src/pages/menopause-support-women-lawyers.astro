@@ -1,11 +1,18 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Text from "@/components/fundations/elements/Text.astro";
-import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import NarrativePage from "@/components/authority/NarrativePage.astro";
 
-const title = "For Women Lawyers | Lozen Advisory";
+const title = "This conversation was built for one profession.";
 
-const description = "Menopause support for women lawyers. Understand Tacere and protect your legal career trajectory through perimenopause. Request an invitation.";
+const seoTitle = "For Women Lawyers | Lozen Advisory";
+
+const description =
+  "You have spent years building something real inside a profession that does not slow down for anyone. You found this because you were looking for something specific. You are in the right place.";
+
+const metaDescription =
+  "Menopause support for women lawyers. Understand Tacere and protect your legal career trajectory through perimenopause. Request an invitation.";
+
+const canonical =
+  "https://www.lozenadvisory.com/menopause-support-women-lawyers";
 
 const invitationHref =
   "mailto:hello@lozenadvisory.com?subject=Session%20Invitation%20Request";
@@ -14,8 +21,8 @@ const pageJsonLd = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline: "For Women Lawyers",
-  description,
-  url: "https://www.lozenadvisory.com/menopause-support-women-lawyers",
+  description: metaDescription,
+  url: canonical,
   publisher: {
     "@type": "Organization",
     name: "Lozen Advisory",
@@ -24,311 +31,145 @@ const pageJsonLd = {
 };
 ---
 
-<BaseLayout title={title} description={description}>
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify(pageJsonLd)}
-  ></script>
+<NarrativePage
+  title={title}
+  seoTitle={seoTitle}
+  description={description}
+  metaDescription={metaDescription}
+  canonical={canonical}
+  eyebrow="For Women Lawyers"
+  typeLabel="Menopause in Legal Practice"
+  articleJsonLd={pageJsonLd}
+  bottomCta={{
+    label: "Menopause support for women lawyers",
+    title: "Request an Invitation",
+    description:
+      "All requests are confidential. A limited number of sessions are offered. This session is open to women lawyers only.",
+    href: invitationHref,
+    linkLabel: "Request an Invitation",
+  }}
+>
+  <h2>Menopause in Legal Practice</h2>
 
-  <section class="bg-gradient-to-t from-base-200 to-white">
-    <Wrapper variant="standard" class="py-24 lg:py-32">
-      <div class="max-w-4xl">
-        <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium uppercase tracking-wide border-l text-base-900 font-display border-accent-500"
-        >
-          For Women Lawyers
-        </Text>
+  <p>
+    You are still delivering. Still the person clients call when the matter is unstable.
+  </p>
 
-        <Text
-          tag="h1"
-          variant="displayXL"
-          class="mt-8 max-w-4xl uppercase font-display text-base-900"
-        >
-          This conversation was built for one profession.
-        </Text>
+  <p>
+    Still the one who knows where everything is.
+  </p>
 
-        <div class="mt-10 max-w-2xl space-y-5 border-l border-base-300 pl-6">
-          <Text tag="p" variant="textLG" class="font-display text-base-900">
-            You have spent years building something real inside a profession that does not slow down for anyone.
-          </Text>
+  <p>
+    And you are navigating menopause inside an environment where that is not a conversation you can have.
+  </p>
 
-          <Text tag="p" variant="textBase" class="text-base-700">
-            You found this because you were looking for something specific.
-          </Text>
+  <h2>Tacere</h2>
 
-          <Text tag="p" variant="textBase" class="text-base-700">
-            You are in the right place.
-          </Text>
-        </div>
-      </div>
-    </Wrapper>
-  </section>
+  <p><strong>Tacere</strong></p>
 
-  <main class="bg-white">
-    <Wrapper variant="narrow" class="py-16 lg:py-24">
-      <article class="space-y-20">
-        <section class="space-y-7">
-          <Text
-            tag="span"
-            variant="textSM"
-            class="font-medium uppercase tracking-wide text-accent-600"
-          >
-            Menopause in Legal Practice
-          </Text>
+  <p><strong>/tah-cher-reh/</strong></p>
 
-          <div class="space-y-5">
-            <Text tag="p" variant="textLG" class="font-display text-base-900">
-              You are still delivering. Still the person clients call when the matter is unstable.
-            </Text>
+  <p><em>From the Latin: to be silent, to withhold, to leave unmentioned.</em></p>
 
-            <Text tag="p" variant="textLG" class="font-display text-base-900">
-              Still the one who knows where everything is.
-            </Text>
+  <blockquote>
+    <p>
+      Not the silence of someone who has nothing to say. The silence of someone who has decided.
+    </p>
+  </blockquote>
 
-            <Text tag="p" variant="textLG" class="font-display text-base-900">
-              And you are navigating menopause inside an environment where that is not a conversation you can have.
-            </Text>
-          </div>
-        </section>
+  <p>
+    For many women, this collision begins during the years when leadership responsibility and biological transition overlap. That pattern is examined in detail in <a href="/blog/women-lawyers-leadership-perimenopause">When Leadership and Biology Collide Quietly in Law Firms</a>.
+  </p>
 
-        <section class="space-y-8 border-t border-base-200 pt-14">
-          <div>
-            <Text
-              tag="span"
-              variant="textSM"
-              class="font-medium uppercase tracking-wide text-accent-600"
-            >
-              Tacere
-            </Text>
+  <p>
+    You know this word even if you have never seen it. You have been practicing it since the first day you walked into a room where someone questioned whether you belonged there. In the courtroom where a bailiff directed you to the gallery. In the partnership meeting where you calculated, in real time, what it would cost to say what you actually thought. In the room where a man with a weaker record than yours sat at a table you have not been invited to yet.
+  </p>
 
-            <div class="mt-6">
-              <Text
-                tag="h2"
-                variant="displayMD"
-                class="font-display italic text-base-900"
-              >
-                Tacere
-              </Text>
+  <p>
+    Tacere (tah-CHEH-reh) is the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk. Whether you are a senior associate building toward partner or a partner protecting what you have already earned, it is not hiding. It is not weakness. It is a calculation you have made with full awareness of the cost you are managing and full understanding of what visibility would risk.
+  </p>
 
-              <Text
-                tag="p"
-                variant="textSM"
-                class="mt-3 font-medium uppercase tracking-wide text-base-500"
-              >
-                /tah-cher-reh/
-              </Text>
+  <p>
+    It accumulates without announcement. It does not appear in your billable hours, your performance review, or your bar record. When departure eventually comes, it is recorded as personal reasons.
+  </p>
 
-              <Text tag="p" variant="textSM" class="mt-2 italic text-base-500">
-                From the Latin: to be silent, to withhold, to leave unmentioned.
-              </Text>
-            </div>
-          </div>
+  <p>
+    It was not personal. You were practicing tacere until the cost became too high to manage alone.
+  </p>
 
-          <Text tag="p" variant="displayXS" class="font-display text-base-900">
-            Not the silence of someone who has nothing to say. The silence of someone who has decided.
-          </Text>
+  <blockquote>
+    <p>
+      <a href="/invisible-attrition">Invisible Attrition℠</a> is what the profession never sees coming. Tacere is why.
+    </p>
+  </blockquote>
 
-          <div class="space-y-6">
-            <Text tag="p" variant="textBase" class="text-base-700">
-              For many women, this collision begins during the years when leadership responsibility and biological transition overlap. That pattern is examined in detail in <a href="/blog/women-lawyers-leadership-perimenopause" class="text-accent-700 underline decoration-accent-300 underline-offset-4 transition-colors hover:text-base-900">When Leadership and Biology Collide Quietly in Law Firms</a>.
-            </Text>
+  <p>
+    For a detailed examination of how this pattern operates inside law firm performance systems, read <a href="/blog/menopause-law-invisible-cost">Menopause in Law: Visible Performance vs Invisible Cost</a>.
+  </p>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              You know this word even if you have never seen it. You have been practicing it since the first day you walked into a room where someone questioned whether you belonged there. In the courtroom where a bailiff directed you to the gallery. In the partnership meeting where you calculated, in real time, what it would cost to say what you actually thought. In the room where a man with a weaker record than yours sat at a table you have not been invited to yet.
-            </Text>
+  <blockquote>
+    <p>
+      You were never silent. You decided.
+    </p>
+  </blockquote>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              Tacere (tah-CHEH-reh) is the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk. Whether you are a senior associate building toward partner or a partner protecting what you have already earned, it is not hiding. It is not weakness. It is a calculation you have made with full awareness of the cost you are managing and full understanding of what visibility would risk.
-            </Text>
+  <h2>Designed for Women Who Practice Law</h2>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              It accumulates without announcement. It does not appear in your billable hours, your performance review, or your bar record. When departure eventually comes, it is recorded as personal reasons.
-            </Text>
+  <p><strong>This is not a wellness conversation.</strong></p>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              It was not personal. You were practicing tacere until the cost became too high to manage alone.
-            </Text>
-          </div>
+  <p>
+    It is a professional strategy session designed for the realities of legal practice during menopause. How authority is read. How trajectory is protected. How standing is maintained when you are managing more than the room knows.
+  </p>
 
-          <div class="border-l border-accent-500 pl-6">
-            <Text tag="p" variant="displayXS" class="font-display text-base-900">
-              <a
-                href="/invisible-attrition"
-                class="text-accent-700 transition-colors hover:text-base-900"
-              >
-                Invisible Attrition℠
-              </a>{" "}
-              is what the profession never sees coming. Tacere is why.
-            </Text>
-          </div>
+  <p>
+    The work is confidential, disclosure-independent, and built around the decisions that protect what you have already earned.
+  </p>
 
-          <div class="space-y-6">
-            <Text tag="p" variant="textBase" class="text-base-700">
-              For a detailed examination of how this pattern operates inside law firm performance systems, read <a href="/blog/menopause-law-invisible-cost" class="text-accent-700 underline decoration-accent-300 underline-offset-4 transition-colors hover:text-base-900">Menopause in Law: Visible Performance vs Invisible Cost</a>.
-            </Text>
+  <blockquote>
+    <p>
+      She is not managing a transition. She is protecting what she built.
+    </p>
+  </blockquote>
 
-            <Text tag="p" variant="displayXS" class="font-display text-base-900">
-              You were never silent. You decided.
-            </Text>
-          </div>
-        </section>
+  <h2>The Advisory Session</h2>
 
-        <section class="space-y-7 border-t border-base-200 pt-14">
-          <Text
-            tag="span"
-            variant="textSM"
-            class="font-medium uppercase tracking-wide text-accent-600"
-          >
-            Designed for Women Who Practice Law
-          </Text>
+  <p><strong>How do you protect what you have built?</strong></p>
 
-          <Text
-            tag="h2"
-            variant="displaySM"
-            class="font-display uppercase text-base-900"
-          >
-            This is not a wellness conversation.
-          </Text>
+  <p>
+    This session is built around that question.
+  </p>
 
-          <div class="space-y-6">
-            <Text tag="p" variant="textBase" class="text-base-700">
-              It is a professional strategy session designed for the realities of legal practice during menopause. How authority is read. How trajectory is protected. How standing is maintained when you are managing more than the room knows.
-            </Text>
+  <p>
+    It is grounded in the realities of legal practice during menopause, specifically in periods where you are performing at a high level while managing pressures you have not chosen to disclose.
+  </p>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              The work is confidential, disclosure-independent, and built around the decisions that protect what you have already earned.
-            </Text>
-          </div>
+  <p>
+    You do not have to share anything about your own situation to get value from this session.
+  </p>
 
-          <Text tag="p" variant="displayXS" class="font-display text-base-900">
-            She is not managing a transition. She is protecting what she built.
-          </Text>
-        </section>
+  <p>
+    The profession is beginning to document the scale of this challenge. The <a href="/blog/aba-study-women-lawyers-mental-health">ABA 2026 Study on why women attorneys still leave Big Law</a> will confirm what many women already know. What it cannot resolve is the calculation that shapes whether disclosure feels safe.
+  </p>
 
-        <section class="space-y-7 border-t border-base-200 pt-14">
-          <Text
-            tag="span"
-            variant="textSM"
-            class="font-medium uppercase tracking-wide text-accent-600"
-          >
-            The Advisory Session
-          </Text>
+  <p>
+    The format is brief framing followed by guided discussion. You can engage or simply listen.
+  </p>
 
-          <Text
-            tag="h2"
-            variant="displaySM"
-            class="font-display italic text-base-900"
-          >
-            How do you protect what you have built?
-          </Text>
+  <h3>45 Minutes</h3>
 
-          <div class="space-y-6">
-            <Text tag="p" variant="textBase" class="text-base-700">
-              This session is built around that question.
-            </Text>
+  <p>
+    Focused, structured, purposeful.
+  </p>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              It is grounded in the realities of legal practice during menopause, specifically in periods where you are performing at a high level while managing pressures you have not chosen to disclose.
-            </Text>
+  <h3>Private</h3>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              You do not have to share anything about your own situation to get value from this session.
-            </Text>
+  <p>
+    No intake form. No record.
+  </p>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              The profession is beginning to document the scale of this challenge. The <a href="/blog/aba-study-women-lawyers-mental-health" class="text-accent-700 underline decoration-accent-300 underline-offset-4 transition-colors hover:text-base-900">ABA 2026 Study on why women attorneys still leave Big Law</a> will confirm what many women already know. What it cannot resolve is the calculation that shapes whether disclosure feels safe.
-            </Text>
+  <h3>By Invitation</h3>
 
-            <Text tag="p" variant="textBase" class="text-base-700">
-              The format is brief framing followed by guided discussion. You can engage or simply listen.
-            </Text>
-          </div>
-
-          <div class="grid gap-6 border-y border-base-200 py-8 md:grid-cols-3">
-            <div>
-              <Text
-                tag="h3"
-                variant="textSM"
-                class="font-medium uppercase tracking-wide text-base-900"
-              >
-                45 Minutes
-              </Text>
-              <Text tag="p" variant="textBase" class="mt-3 text-base-700">
-                Focused, structured, purposeful.
-              </Text>
-            </div>
-
-            <div>
-              <Text
-                tag="h3"
-                variant="textSM"
-                class="font-medium uppercase tracking-wide text-base-900"
-              >
-                Private
-              </Text>
-              <Text tag="p" variant="textBase" class="mt-3 text-base-700">
-                No intake form. No record.
-              </Text>
-            </div>
-
-            <div>
-              <Text
-                tag="h3"
-                variant="textSM"
-                class="font-medium uppercase tracking-wide text-base-900"
-              >
-                By Invitation
-              </Text>
-              <Text tag="p" variant="textBase" class="mt-3 text-base-700">
-                Open to women lawyers only.
-              </Text>
-            </div>
-          </div>
-        </section>
-
-        <section class="border-t border-base-200 pt-14">
-          <div class="max-w-2xl">
-            <Text
-              tag="span"
-              variant="textSM"
-              class="font-medium uppercase tracking-wide text-accent-600"
-            >
-              Menopause support for women lawyers
-            </Text>
-
-            <Text
-              tag="h2"
-              variant="displaySM"
-              class="mt-6 font-display italic text-base-900"
-            >
-              Request an Invitation
-            </Text>
-
-            <Text tag="p" variant="textBase" class="mt-5 text-base-700">
-              All requests are confidential. A limited number of sessions are offered.
-            </Text>
-
-            <div class="mt-8">
-              <a
-                href={invitationHref}
-                class="inline-flex h-11 items-center justify-center rounded-lg bg-accent-300 px-5 py-4 text-center text-sm font-medium uppercase tracking-wide text-base-950 transition-all duration-500 ease-in-out hover:bg-accent-400 focus:outline-2 focus:outline-offset-4 focus:outline-accent-400"
-              >
-                Request an Invitation
-              </a>
-            </div>
-
-            <Text
-              tag="p"
-              variant="textSM"
-              class="mt-8 font-medium uppercase tracking-wide text-base-500"
-            >
-              This session is open to women lawyers only.
-            </Text>
-          </div>
-        </section>
-      </article>
-    </Wrapper>
-  </main>
-</BaseLayout>
+  <p>
+    Open to women lawyers only.
+  </p>
+</NarrativePage>
