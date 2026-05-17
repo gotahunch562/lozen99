@@ -1,15 +1,21 @@
 ---
-title: "Advisory Engagement"
-description: "Ongoing counsel on non-disclosure infrastructure, benefits strategy, AI governance, retention risk, leadership continuity, and reputational exposure."
-shortDescription: "Ongoing counsel on non-disclosure infrastructure, benefits strategy, AI governance, retention risk, leadership continuity, and reputational exposure."
-priceFrom: "Ongoing Counsel"
-duration: "Strategic engagement"
+title: Advisory Engagement
+shortDescription: Ongoing counsel on non-disclosure infrastructure, benefits
+  strategy, AI governance, retention risk, leadership continuity, and
+  reputational exposure.
+description: Ongoing counsel on non-disclosure infrastructure, benefits
+  strategy, AI governance, retention risk, leadership continuity, and
+  reputational exposure.
+metaDescription: Advisory engagement for organizations addressing
+  disclosure-dependent workforce risk, leadership continuity, retention, and
+  performance protection.
 image:
-  url: "../../images/services/client2.jpeg"
-  alt: "Strategic advisory meeting"
-metaDescription: "Advisory engagement for organizations addressing disclosure-dependent workforce risk, leadership continuity, retention, and performance protection."
+  url: ../../images/services/client2.jpeg
+  alt: Strategic advisory meeting
+priceFrom: Ongoing Counsel
+duration: Strategic engagement
+isFeatured: false
 ---
-
 The Advisory Engagement provides ongoing counsel for organizations facing deeper or more complex risk.
 
 This work is for clients who need more than a briefing. They may be evaluating benefits strategy, preparing for executive or board-level questions, responding to low utilization, assessing AI implementation risk, reviewing retention exposure, or trying to understand why current workforce data does not explain what leaders are seeing inside the business.
