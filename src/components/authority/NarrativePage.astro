@@ -90,7 +90,9 @@ const heroClass = hasHeroImage
   : "narrative-page__hero narrative-page__hero--text-only";
 const heroShellClass = hasHeroImage
   ? "narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--split"
-  : "narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--text-only";
+  : hasRailContent
+    ? "narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--text-only narrative-page__hero-shell--text-only-with-rail"
+    : "narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--text-only narrative-page__hero-shell--text-only-article";
 const contentShellClass = hasRailContent
   ? "narrative-page__content-shell narrative-page__content-shell--with-rail"
   : "narrative-page__content-shell";
@@ -289,20 +291,37 @@ const contentShellClass = hasRailContent
     grid-template-columns: none;
     min-height: 0 !important;
     height: auto;
-    padding-top: clamp(5.25rem, 7.5vw, 6.75rem);
-    padding-bottom: clamp(2.65rem, 4.25vw, 3.65rem);
+    padding-top: clamp(5rem, 7vw, 6.25rem);
+    padding-bottom: clamp(2.35rem, 3.75vw, 3.15rem);
     align-items: start;
   }
 
+  .narrative-page__hero-shell.narrative-page__hero-shell--text-only-article {
+    width: min(100%, 58rem);
+  }
+
+  .narrative-page__hero-shell.narrative-page__hero-shell--text-only-with-rail {
+    width: min(100%, 86rem);
+  }
+
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only .narrative-page__hero-copy {
-    width: min(100%, 70rem);
+    width: 100%;
   }
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only h1 {
-    max-width: 70rem;
+    max-width: 58rem;
+    font-size: clamp(2.35rem, 4.05vw, 4.45rem);
   }
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only .narrative-page__deck {
+    max-width: 50rem;
+  }
+
+  .narrative-page__hero-shell.narrative-page__hero-shell--text-only-with-rail h1 {
+    max-width: 62rem;
+  }
+
+  .narrative-page__hero-shell.narrative-page__hero-shell--text-only-with-rail .narrative-page__deck {
     max-width: 54rem;
   }
 
@@ -904,9 +923,10 @@ const contentShellClass = hasRailContent
     }
 
     .narrative-page__hero-shell.narrative-page__hero-shell--text-only {
+      width: min(100%, 58rem);
       min-height: 0 !important;
-      padding-top: clamp(5.25rem, 20vw, 6.5rem);
-      padding-bottom: clamp(2.35rem, 10vw, 3.25rem);
+      padding-top: clamp(5.1rem, 20vw, 6.25rem);
+      padding-bottom: clamp(2.15rem, 9vw, 2.85rem);
     }
 
     .narrative-page h1 {
