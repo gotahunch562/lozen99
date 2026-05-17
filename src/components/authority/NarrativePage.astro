@@ -87,7 +87,7 @@ const hasRelatedItems = relatedItems.length > 0;
 const hasHeroImage = Boolean(heroImage);
 const heroShellClass = hasHeroImage
   ? "narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--split"
-  : "narrative-page__shell narrative-page__hero-shell";
+  : "narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--text-only";
 const contentShellClass = hasRailContent
   ? "narrative-page__content-shell narrative-page__content-shell--with-rail"
   : "narrative-page__content-shell";
@@ -279,6 +279,25 @@ const contentShellClass = hasRailContent
     grid-template-columns: minmax(0, 0.96fr) minmax(21rem, 0.78fr);
     gap: clamp(2rem, 5vw, 4.75rem);
     align-items: center;
+  }
+
+  .narrative-page__hero-shell--text-only {
+    min-height: auto;
+    padding-top: clamp(6rem, 8vw, 7.5rem);
+    padding-bottom: clamp(4rem, 6.5vw, 5.75rem);
+    align-items: end;
+  }
+
+  .narrative-page__hero-shell--text-only .narrative-page__hero-copy {
+    width: min(100%, 70rem);
+  }
+
+  .narrative-page__hero-shell--text-only h1 {
+    max-width: 70rem;
+  }
+
+  .narrative-page__hero-shell--text-only .narrative-page__deck {
+    max-width: 54rem;
   }
 
   .narrative-page__hero-copy {
@@ -876,6 +895,10 @@ const contentShellClass = hasRailContent
       min-height: auto;
       padding-top: clamp(5.5rem, 20vw, 6.75rem);
       padding-bottom: clamp(2.5rem, 11vw, 3.5rem);
+    }
+
+    .narrative-page__hero-shell--text-only {
+      padding-bottom: clamp(3rem, 13vw, 4rem);
     }
 
     .narrative-page h1 {
