@@ -125,25 +125,7 @@ const pageJsonLd = {
 </NarrativePage>
 
 <style>
-  :global(.narrative-page__hero-shell) {
-    min-height: clamp(21rem, 31vw, 27rem);
-    padding-top: clamp(5.75rem, 8vw, 7rem);
-    padding-bottom: clamp(2.5rem, 5vw, 3.75rem);
-  }
-
-  :global(.narrative-page h1) {
-    max-width: 52rem;
-  }
-
-  :global(.narrative-page__deck) {
-    max-width: 42rem;
-  }
-
-  :global(.narrative-page__content-shell) {
-    padding-top: clamp(2.5rem, 4vw, 3.65rem);
-  }
-
-  .service-cards {
+.service-cards {
     position: relative;
     left: 50%;
     width: min(calc(100vw - 3rem), 78rem);
@@ -255,11 +237,6 @@ const pageJsonLd = {
   }
 
   @media (max-width: 760px) {
-    :global(.narrative-page__hero-shell) {
-      min-height: auto;
-      padding-top: clamp(5.5rem, 20vw, 6.75rem);
-      padding-bottom: clamp(2.4rem, 11vw, 3.25rem);
-    }
 
     .service-cards {
       left: auto;
