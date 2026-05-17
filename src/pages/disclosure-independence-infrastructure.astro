@@ -1,7 +1,9 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Text from "@/components/fundations/elements/Text.astro";
-import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import NarrativePage from "@/components/authority/NarrativePage.astro";
+
+const seoTitle = "When Disclosure Isn't an Option: The Infrastructure Women in Leadership Actually Need | Lozen Advisory";
+const pageTitle = "Disclosure Independence: The Infrastructure Women in Leadership Actually Need";
+const description = "Employee benefit systems fail when disclosure carries career risk. Disclosure Independence is the performance protection infrastructure women in leadership need.";
 
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -25,290 +27,149 @@ const articleJsonLd = {
     url: "https://www.lozenadvisory.com",
   },
 };
-const title = "When Disclosure Isn't an Option: The Infrastructure Women in Leadership Actually Need | Lozen Advisory";
-
-const description = "Employee benefit systems fail when disclosure carries career risk. Disclosure Independence is the performance protection infrastructure women in leadership need.";
-
 ---
 
-<BaseLayout title={title} description={description} ogType="article">
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify(articleJsonLd)}
-  />
+<NarrativePage
+  title={pageTitle}
+  seoTitle={seoTitle}
+  metaDescription={description}
+  canonical="https://www.lozenadvisory.com/disclosure-independence-infrastructure"
+  eyebrow="Ambition was never the problem"
+  articleJsonLd={articleJsonLd}
+  bottomCta={{
+    title: "She was never silent. She decided.",
+    href: "/booking",
+    linkLabel: "Begin Here →",
+  }}
+>
+  <p>
+    Employee benefit systems fail when disclosure carries career risk. That is the disclosure problem. Not the absence of ambition, not the absence of performance, not the absence of commitment. Women in senior roles, women building careers inside demanding and performance-driven environments, women who have spent years delivering at a level that would be unremarkable if they were men, have never lacked ambition.
+  </p>
 
-  <section class="overflow-hidden bg-gradient-to-t from-base-200 to-white">
-    <Wrapper variant="standard" class="py-24 lg:py-32">
-      <div class="max-w-4xl">
-        <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-        >
-          Ambition was never the problem
-        </Text>
+  <p>
+    What they have lacked is infrastructure that does not require them to surface what they are managing before protection activates. This is not theoretical. Women across industries and career levels are describing the same pattern in real time: performing past capacity, absorbing costs without record, staying until the health collapse forces the exit the organization never saw coming. Disclosure-dependent systems don't provide the infrastructure needed for women's ambition.
+  </p>
 
-        <Text
-          tag="h1"
-          variant="displayXL"
-          class="mt-8 font-display text-base-900 uppercase max-w-5xl"
-        >
-          Disclosure Independence:
-          <em class="block normal-case text-accent-600">
-            The Infrastructure Women in Leadership Actually Need
-          </em>
-        </Text>
-      </div>
-    </Wrapper>
-  </section>
+  <h2>When Disclosure Does Not Protect Women</h2>
 
-  <section class="bg-white">
-    <Wrapper variant="standard" class="py-14 lg:py-20">
-      <div class="mx-auto max-w-3xl space-y-6">
-        <p class="text-lg leading-9 text-base-600">
-          Employee benefit systems fail when disclosure carries career risk. That is the disclosure problem. Not the absence of ambition, not the absence of performance, not the absence of commitment. Women in senior roles, women building careers inside demanding and performance-driven environments, women who have spent years delivering at a level that would be unremarkable if they were men, have never lacked ambition.
-        </p>
+  <p>
+    The systems that exist were not built for women. They were built for organizations. Every one assumes the same initiating act: a woman who names her condition, submits a request, and generates a record.
+  </p>
 
-        <p class="text-lg leading-9 text-base-600">
-          What they have lacked is infrastructure that does not require them to surface what they are managing before protection activates. This is not theoretical. Women across industries and career levels are describing the same pattern in real time: performing past capacity, absorbing costs without record, staying until the health collapse forces the exit the organization never saw coming. Disclosure-dependent systems don't provide the infrastructure needed for women's ambition.
-        </p>
-      </div>
-    </Wrapper>
-  </section>
+  <ul>
+    <li>Accommodation frameworks activate when a request is filed</li>
+    <li>Clinical pathways open when a condition is named</li>
+    <li>Workplace protections apply when a disclosure is made</li>
+    <li>Benefit programs respond when a woman self-identifies</li>
+  </ul>
 
-  <section class="bg-base-100">
-    <Wrapper variant="standard" class="py-14 lg:py-20">
-      <div class="mx-auto max-w-3xl">
-        <div class="mb-8 grid grid-cols-[auto_1fr] gap-5">
-          <div class="font-display text-3xl leading-none text-accent-500/70 lg:text-4xl">
-            01
-          </div>
-          <div>
-            <div class="mb-4 h-px w-16 bg-accent-500"></div>
-            <h2 class="font-display text-2xl font-medium uppercase leading-tight tracking-tight text-base-900 lg:text-3xl">
-              When Disclosure Does Not Protect Women
-            </h2>
-          </div>
-        </div>
+  <p>
+    The support activates when the record exists. Without the record, the system has nothing to act on.
+  </p>
 
-        <div class="space-y-6 text-lg leading-9 text-base-600">
-          <p>
-            The systems that exist were not built for women. They were built for organizations. Every one assumes the same initiating act: a woman who names her condition, submits a request, and generates a record.
-          </p>
+  <p>
+    For the woman whose professional environment makes that record a liability, the system does not activate. She has ambition. She does not have infrastructure.
+  </p>
 
-          <ul class="ml-6 list-disc space-y-3">
-            <li>Accommodation frameworks activate when a request is filed</li>
-            <li>Clinical pathways open when a condition is named</li>
-            <li>Workplace protections apply when a disclosure is made</li>
-            <li>Benefit programs respond when a woman self-identifies</li>
-          </ul>
+  <p>
+    But even when women do disclose, the structure does not resolve. Staying is not the problem. The structure allows a leader to remain in her role while deferring the cost of caring for her health in order to protect her performance. The cost does not disappear. It compounds while her performance is sustained and her health deteriorates. This is not a failure of individual decision-making. It is a structural outcome. The system recognizes her presence and her output. However, it does not create or provide the conditions required to sustain both.
+  </p>
 
-          <p>
-            The support activates when the record exists. Without the record, the system has nothing to act on.
-          </p>
+  <p>
+    In early 2026, two senior women executives at a major technology company departed for health reasons within hours of each other. Both had publicly acknowledged they had deprioritized their own health for the role. They both had access to resources that represent the upper limit of what exists. The structure produced this outcome anyway. The record showed full performance until it showed departure, with nothing in between. That pattern, a record that reflects output while the conditions sustaining it erode, is the structural problem this work was built to solve.
+  </p>
 
-          <p>
-            For the woman whose professional environment makes that record a liability, the system does not activate. She has ambition. She does not have infrastructure.
-          </p>
+  <h2>The Disclosure Calculation Is Not Abstract</h2>
 
-          <p>
-            But even when women do disclose, the structure does not resolve. Staying is not the problem. The structure allows a leader to remain in her role while deferring the cost of caring for her health in order to protect her performance. The cost does not disappear. It compounds while her performance is sustained and her health deteriorates. This is not a failure of individual decision-making. It is a structural outcome. The system recognizes her presence and her output. However, it does not create or provide the conditions required to sustain both.
-          </p>
+  <p>
+    For many women, the calculation about disclosure is not theoretical. It is historical.
+  </p>
 
-          <p>
-            In early 2026, two senior women executives at a major technology company departed for health reasons within hours of each other. Both had publicly acknowledged they had deprioritized their own health for the role. They both had access to resources that represent the upper limit of what exists. The structure produced this outcome anyway. The record showed full performance until it showed departure, with nothing in between. That pattern, a record that reflects output while the conditions sustaining it erode, is the structural problem this work was built to solve.
-          </p>
-        </div>
-      </div>
-    </Wrapper>
-  </section>
+  <p>
+    Black women have never operated in environments where naming a health condition was a neutral act. The professional environment for Black women in senior roles in performance-driven, market-moving environments carries a specific and documented weight: a longer history of having competence questioned, authority undermined, and any sign of vulnerability used as confirmation of a narrative that was already running. The decision not to disclose is not made in the abstract. It is made inside that history, with full awareness of what the record will be used for and who will use it.
+  </p>
 
-  <section class="bg-white">
-    <Wrapper variant="standard" class="py-14 lg:py-20">
-      <div class="mx-auto max-w-3xl">
-        <div class="mb-8 grid grid-cols-[auto_1fr] gap-5">
-          <div class="font-display text-3xl leading-none text-accent-500/70 lg:text-4xl">
-            02
-          </div>
-          <div>
-            <div class="mb-4 h-px w-16 bg-accent-500"></div>
-            <h2 class="font-display text-2xl font-medium uppercase leading-tight tracking-tight text-base-900 lg:text-3xl">
-              The Disclosure Calculation Is Not Abstract
-            </h2>
-          </div>
-        </div>
+  <p>
+    That is not a menopause problem. It is a structural condition that menopause intersects. The disclosure-independent framework was not built as an accommodation for that reality. It was built because that reality confirmed what the governance analysis already showed: any framework that requires disclosure to function will fail the women for whom disclosure carries the highest cost.
+  </p>
 
-        <div class="space-y-6 text-lg leading-9 text-base-600">
-          <p>
-            For many women, the calculation about disclosure is not theoretical. It is historical.
-          </p>
+  <blockquote>
+    <p>
+      Any framework that requires disclosure to function will fail the women for whom disclosure carries the highest cost.
+    </p>
+  </blockquote>
 
-          <p>
-            Black women have never operated in environments where naming a health condition was a neutral act. The professional environment for Black women in senior roles in performance-driven, market-moving environments carries a specific and documented weight: a longer history of having competence questioned, authority undermined, and any sign of vulnerability used as confirmation of a narrative that was already running. The decision not to disclose is not made in the abstract. It is made inside that history, with full awareness of what the record will be used for and who will use it.
-          </p>
+  <h2>Silence and Disclosure at Work</h2>
 
-          <p>
-            That is not a menopause problem. It is a structural condition that menopause intersects. The disclosure-independent framework was not built as an accommodation for that reality. It was built because that reality confirmed what the governance analysis already showed: any framework that requires disclosure to function will fail the women for whom disclosure carries the highest cost.
-          </p>
-        </div>
-      </div>
-    </Wrapper>
-  </section>
+  <p>
+    There is a Latin word for the decision that precedes the record that never exists. Tacere. To be silent. To withhold. To leave unmentioned.
+  </p>
 
-  <section class="bg-base-900">
-    <Wrapper variant="standard" class="py-14 lg:py-20">
-      <p class="mx-auto max-w-4xl font-display text-2xl leading-tight text-white lg:text-4xl">
-        Any framework that requires disclosure to function will fail the women for whom disclosure carries the highest cost.
-      </p>
-    </Wrapper>
-  </section>
+  <p>
+    Not the silence of someone who has nothing to say. But the silence of someone who has decided.
+  </p>
 
-  <section class="bg-base-100">
-    <Wrapper variant="standard" class="py-14 lg:py-20">
-      <div class="mx-auto max-w-3xl">
-        <div class="mb-8 grid grid-cols-[auto_1fr] gap-5">
-          <div class="font-display text-3xl leading-none text-accent-500/70 lg:text-4xl">
-            03
-          </div>
-          <div>
-            <div class="mb-4 h-px w-16 bg-accent-500"></div>
-            <h2 class="font-display text-2xl font-medium uppercase leading-tight tracking-tight text-base-900 lg:text-3xl">
-              Silence and Disclosure at Work
-            </h2>
-          </div>
-        </div>
+  <div class="narrative-callout">
+    <p>
+      <strong>Tacere</strong>
+      <em> (tah-CHEH-reh)</em> is the sustained,
+      strategic practice of keeping one's own counsel by a
+      senior executive operating in a professional environment where
+      disclosure carries professional risk.
+    </p>
+  </div>
 
-        <div class="space-y-6 text-lg leading-9 text-base-600">
-          <p>
-            There is a Latin word for the decision that precedes the record that never exists. Tacere. To be silent. To withhold. To leave unmentioned.
-          </p>
+  <p>
+    It is not hiding. It is a calculation made with full awareness of what is being managed and full understanding of what visibility would risk. Women have been practicing it in professional environments long before perimenopause arrived. The menopause transition does not create the condition. It intensifies it during the years when leadership responsibility is highest and the cost of any perceived vulnerability is most consequential.
+  </p>
 
-          <p>
-            Not the silence of someone who has nothing to say. But the silence of someone who has decided.
-          </p>
-        </div>
+  <p>
+    The system measures what she surfaces. Tacere is the discipline that keeps the self intact while the role continues. Disclosure Independence is built to operate in its presence.
+  </p>
 
-        <div class="my-10 rounded-3xl border border-base-300 bg-white p-8 shadow-sm outline outline-1 outline-base-500/10">
-          <p class="text-lg leading-9 text-base-700">
-            <strong class="font-semibold text-base-900">Tacere</strong>
-            <em> (tah-CHEH-reh)</em> is the sustained,
-            strategic practice of keeping one's own counsel by a
-            senior executive operating in a professional environment where
-            disclosure carries professional risk.
-          </p>
-        </div>
+  <h2>Where Disclosure Independence Began</h2>
 
-        <div class="space-y-6 text-lg leading-9 text-base-600">
-          <p>
-            It is not hiding. It is a calculation made with full awareness of what is being managed and full understanding of what visibility would risk. Women have been practicing it in professional environments long before perimenopause arrived. The menopause transition does not create the condition. It intensifies it during the years when leadership responsibility is highest and the cost of any perceived vulnerability is most consequential.
-          </p>
+  <p>
+    The Peri Nation identified this before it had a policy context. The work of building frameworks for women navigating perimenopause and menopause ran immediately into the same wall: every intervention that required disclosure excluded the women who needed it most. That was not a design oversight. It was a structural condition. The clinical system, the organizational system, and the legal system all operate on the same logic: risk and need become visible when they are reported. What is not reported does not exist in the data, does not trigger review, and does not generate a record that anything needs to be addressed.
+  </p>
 
-          <p>
-            The system measures what she surfaces. Tacere is the discipline that keeps the self intact while the role continues. Disclosure Independence is built to operate in its presence.
-          </p>
-        </div>
-      </div>
-    </Wrapper>
-  </section>
+  <p>
+    For the woman who cannot disclose without consequence, the gap between what she is managing and what the organization sees is not a personal problem. It is a governance failure. The systems designed to detect and manage organizational risk cannot see the risk because it is disclosure-dependent. Leadership capacity erodes, performance continuity degrades, and when departure eventually comes it is recorded as personal reasons. The organization loses.
+  </p>
 
-  <section class="bg-white">
-    <Wrapper variant="standard" class="py-14 lg:py-20">
-      <div class="mx-auto max-w-3xl">
-        <div class="mb-8 grid grid-cols-[auto_1fr] gap-5">
-          <div class="font-display text-3xl leading-none text-accent-500/70 lg:text-4xl">
-            04
-          </div>
-          <div>
-            <div class="mb-4 h-px w-16 bg-accent-500"></div>
-            <h2 class="font-display text-2xl font-medium uppercase leading-tight tracking-tight text-base-900 lg:text-3xl">
-              Where Disclosure Independence Began
-            </h2>
-          </div>
-        </div>
+  <p>
+    That is the structural problem Disclosure Independence was built to solve. Not the symptom. The architecture.
+  </p>
 
-        <div class="space-y-6 text-lg leading-9 text-base-600">
-          <p>
-            The Peri Nation identified this before it had a policy context. The work of building frameworks for women navigating perimenopause and menopause ran immediately into the same wall: every intervention that required disclosure excluded the women who needed it most. That was not a design oversight. It was a structural condition. The clinical system, the organizational system, and the legal system all operate on the same logic: risk and need become visible when they are reported. What is not reported does not exist in the data, does not trigger review, and does not generate a record that anything needs to be addressed.
-          </p>
+  <p>
+    I built The Peri Nation and Lozen Advisory because of my daughter. Not in the way people expect, and not as a soft origin story meant to make the work more palatable. I built it because the cliff was already visible. An infinite number of women before her had fallen off the disclosure cliff, because there was no barrier to stop them.
+  </p>
 
-          <p>
-            For the woman who cannot disclose without consequence, the gap between what she is managing and what the organization sees is not a personal problem. It is a governance failure. The systems designed to detect and manage organizational risk cannot see the risk because it is disclosure-dependent. Leadership capacity erodes, performance continuity degrades, and when departure eventually comes it is recorded as personal reasons. The organization loses.
-          </p>
+  <h2>What Disclosure Independence Means</h2>
 
-          <p>
-            That is the structural problem Disclosure Independence was built to solve. Not the symptom. The architecture.
-          </p>
+  <p>
+    Disclosure Independence is not a privacy policy. It is not a confidentiality promise. It is a structural design principle.
+  </p>
 
-          <p>
-            I built The Peri Nation and Lozen Advisory because of my daughter. Not in the way people expect, and not as a soft origin story meant to make the work more palatable. I built it because the cliff was already visible. An infinite number of women before her had fallen off the disclosure cliff, because there was no barrier to stop them.
-          </p>
-        </div>
-      </div>
-    </Wrapper>
-  </section>
+  <p>
+    Disclosure Independence means the framework functions without requiring her to name a crisis or health condition she is managing. The work is built around two things: keeping her performance record intact and her professional standing protected, and treating her role, her compensation, and her trajectory as assets worth defending. Her employer sees the output. Lozen Advisory holds the rest.
+  </p>
 
-  <section class="bg-base-100">
-    <Wrapper variant="standard" class="py-14 lg:py-20">
-      <div class="mx-auto max-w-3xl">
-        <div class="mb-8 grid grid-cols-[auto_1fr] gap-5">
-          <div class="font-display text-3xl leading-none text-accent-500/70 lg:text-4xl">
-            05
-          </div>
-          <div>
-            <div class="mb-4 h-px w-16 bg-accent-500"></div>
-            <h2 class="font-display text-2xl font-medium uppercase leading-tight tracking-tight text-base-900 lg:text-3xl">
-              What Disclosure Independence Means
-            </h2>
-          </div>
-        </div>
+  <p>
+    This is the Lozen Advisory way because it was the only infrastructure that could reach the full population the work was built for. She is the woman who already knew the penalty of disclosure and did not take the day off. She is also the woman who disclosed and kept delivering while absorbing the cost, because naming a health condition does not eliminate the professional consequence. Each of them arrived at the same place: performing at full capacity while managing what the organization was designed to obscure.
+  </p>
 
-        <div class="space-y-6 text-lg leading-9 text-base-600">
-          <p>
-            Disclosure Independence is not a privacy policy. It is not a confidentiality promise. It is a structural design principle.
-          </p>
+  <blockquote>
+    <p>
+      All of those women are the same woman.
+    </p>
+  </blockquote>
 
-          <p>
-            Disclosure Independence means the framework functions without requiring her to name a crisis or health condition she is managing. The work is built around two things: keeping her performance record intact and her professional standing protected, and treating her role, her compensation, and her trajectory as assets worth defending. Her employer sees the output. Lozen Advisory holds the rest.
-          </p>
+  <p>
+    She has ambition. She needed infrastructure.
+  </p>
 
-          <p>
-            This is the Lozen Advisory way because it was the only infrastructure that could reach the full population the work was built for. She is the woman who already knew the penalty of disclosure and did not take the day off. She is also the woman who disclosed and kept delivering while absorbing the cost, because naming a health condition does not eliminate the professional consequence. Each of them arrived at the same place: performing at full capacity while managing what the organization was designed to obscure.
-          </p>
-        </div>
-
-        <div class="my-12 border-l-2 border-accent-500 pl-6">
-          <p class="font-display text-3xl leading-tight text-base-900 lg:text-4xl">
-            All of those women are the same woman.
-          </p>
-        </div>
-
-        <div class="space-y-6 text-lg leading-9 text-base-600">
-          <p>
-            She has ambition. She needed infrastructure.
-          </p>
-
-          <p>
-            Lozen Advisory Disclosure-Independent Performance Protection&#8480; was built for her.
-          </p>
-        </div>
-      </div>
-    </Wrapper>
-  </section>
-
-  <section class="bg-white">
-    <Wrapper variant="standard" class="py-14 lg:py-20">
-      <div class="mx-auto max-w-3xl rounded-3xl border border-base-300 bg-base-50 p-8 shadow-sm outline outline-1 outline-base-500/10 lg:p-10">
-        <p class="font-display text-2xl leading-tight text-base-900 lg:text-3xl">
-          <em>She was never silent. She decided.</em>
-        </p>
-
-        <a
-          href="/booking"
-          class="mt-8 inline-flex text-sm font-medium text-accent-600 transition-colors hover:text-base-900"
-        >
-          Begin Here →
-        </a>
-      </div>
-    </Wrapper>
-  </section>
-</BaseLayout>
+  <p>
+    Lozen Advisory Disclosure-Independent Performance Protection&#8480; was built for her.
+  </p>
+</NarrativePage>
