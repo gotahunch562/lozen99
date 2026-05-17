@@ -211,10 +211,13 @@ const pageJsonLd = {
 
 <style>
   .service-cards {
-    width: min(100vw - 2.5rem, 72rem);
+    position: relative;
+    left: 50%;
+    width: min(calc(100vw - 3rem), 78rem);
     margin: 3.25rem 0 3.75rem;
     padding-top: 2rem;
     border-top: 1px solid var(--color-base-300);
+    transform: translateX(-50%);
   }
 
   .service-cards__heading h2 {
@@ -352,9 +355,11 @@ const pageJsonLd = {
 
   @media (max-width: 760px) {
     .service-cards {
+      left: auto;
       width: 100%;
       margin-block: 2.75rem 3rem;
       padding-top: 1.5rem;
+      transform: none;
     }
 
     .service-cards__grid {
