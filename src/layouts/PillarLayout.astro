@@ -52,7 +52,7 @@ const formattedDate = pubDate
           <Text
             tag="span"
             variant="textSM"
-            class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-700"
+            class="lozen-type-eyebrow border-l border-base-300 pl-4 text-base-700"
           >
             Framework · Pillar Article
           </Text>
@@ -71,8 +71,8 @@ const formattedDate = pubDate
 
         <Text
           tag="h1"
-          variant="displayLG"
-          class="mt-7 max-w-4xl font-display font-normal uppercase leading-[1.02] tracking-[-0.04em] text-base-950 sm:mt-8"
+          variant="displayXL"
+          class="mt-7 max-w-4xl text-base-950 sm:mt-8"
         >
           {heading}
         </Text>
@@ -116,8 +116,8 @@ const formattedDate = pubDate
     <Wrapper variant="standard" class="py-10 sm:py-12 lg:py-16">
       <article
         class="pillar-article prose prose-base mx-auto w-full max-w-5xl
-        prose-headings:font-display prose-headings:font-normal prose-headings:uppercase prose-headings:tracking-[-0.025em] prose-headings:text-base-950
-        prose-h2:mt-14 prose-h2:mb-6 prose-h2:text-2xl sm:prose-h2:text-3xl
+        prose-headings:font-display prose-headings:font-normal prose-headings:text-base-950
+        prose-h2:mt-14 prose-h2:mb-6 prose-h2:text-[var(--lozen-section-title-size)] prose-h2:leading-[var(--lozen-section-title-line-height)]
         prose-p:font-sans prose-p:text-base-700 prose-p:leading-8 sm:prose-p:leading-9
         prose-a:font-semibold prose-a:text-accent-700 prose-a:decoration-accent-500 prose-a:underline-offset-4 hover:prose-a:text-base-950
         prose-strong:text-base-950 prose-li:text-base-700 prose-li:leading-8"
@@ -154,15 +154,15 @@ const formattedDate = pubDate
               <Text
                 tag="span"
                 variant="textSM"
-                class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-300"
+                class="lozen-type-eyebrow border-l border-base-300 pl-4 text-base-300"
               >
                 Pillar Cluster
               </Text>
 
               <Text
                 tag="h2"
-                variant="displayXS"
-                class="mt-4 max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.025em] text-white"
+                variant="displayLG"
+                class="mt-4 max-w-3xl text-white"
               >
                 What the Framework Measures: Nine Dimensions of Invisible Attrition℠
               </Text>
@@ -195,7 +195,7 @@ const formattedDate = pubDate
                         {String(index + 1).padStart(2, "0")}
                       </span>
 
-                      <span class="flex-1 font-display text-sm font-normal uppercase leading-snug tracking-[-0.005em] text-base-950 transition-colors duration-200 group-hover:text-accent-700 sm:text-base">
+                      <span class="flex-1 lozen-type-card-title-small text-base-950 transition-colors duration-200 group-hover:text-base-700">
                         {cluster.title}
                       </span>
 
@@ -225,7 +225,7 @@ const formattedDate = pubDate
 
                       <a
                         href={cluster.slug}
-                        class="mt-4 inline-flex font-sans text-xs font-semibold uppercase tracking-[0.08em] text-accent-700 transition-all duration-300 hover:translate-x-1 hover:text-base-950"
+                        class="mt-4 inline-flex font-sans text-sm font-semibold text-base-800 transition-all duration-300 hover:translate-x-1 hover:text-base-950"
                       >
                         Read article →
                       </a>
@@ -257,15 +257,15 @@ const formattedDate = pubDate
             <Text
               tag="span"
               variant="textSM"
-              class="font-sans font-semibold uppercase tracking-[0.18em] text-accent-300"
+              class="lozen-type-eyebrow text-base-300"
             >
               Strategic Briefing
             </Text>
 
             <Text
               tag="h2"
-              variant="displayXS"
-              class="mt-4 font-display font-normal uppercase leading-tight tracking-[-0.02em] text-white"
+              variant="displayLG"
+              class="mt-4 max-w-3xl text-white"
             >
               Invisible Attrition℠ Retention Risk Audit
             </Text>

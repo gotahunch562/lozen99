@@ -70,7 +70,7 @@ const clusterLabel = clusterNumber
           <Text
             tag="span"
             variant="textSM"
-            class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-700"
+            class="lozen-type-eyebrow border-l border-base-300 pl-4 text-base-700"
           >
             Cluster {clusterLabel} · {pillarTitle}
           </Text>
@@ -89,8 +89,8 @@ const clusterLabel = clusterNumber
 
         <Text
           tag="h1"
-          variant="displayLG"
-          class="mt-7 max-w-4xl font-display font-normal uppercase leading-[1.02] tracking-[-0.04em] text-base-950 sm:mt-8"
+          variant="displayXL"
+          class="mt-7 max-w-4xl text-base-950 sm:mt-8"
         >
           {heading}
         </Text>
@@ -114,7 +114,7 @@ const clusterLabel = clusterNumber
   <section class="bg-white">
     <Wrapper
       variant="prose"
-      class="cluster-article py-10 sm:py-12 lg:py-16 prose-headings:font-display prose-headings:font-normal prose-headings:uppercase prose-headings:tracking-[-0.025em] prose-headings:text-base-950 prose-h2:mt-14 prose-h2:mb-6 prose-h2:text-2xl sm:prose-h2:text-3xl prose-p:font-sans prose-p:text-base-700 prose-p:leading-8 sm:prose-p:leading-9 prose-a:font-semibold prose-a:text-accent-700 prose-a:decoration-accent-500 prose-a:underline-offset-4 hover:prose-a:text-base-950"
+      class="cluster-article py-10 sm:py-12 lg:py-16 prose-headings:font-display prose-headings:font-normal prose-headings:text-base-950 prose-h2:mt-14 prose-h2:mb-6 prose-h2:text-[var(--lozen-section-title-size)] prose-h2:leading-[var(--lozen-section-title-line-height)] prose-p:font-sans prose-p:text-base-700 prose-p:leading-8 sm:prose-p:leading-9 prose-a:font-semibold prose-a:text-base-800 prose-a:decoration-base-400 prose-a:underline-offset-4 hover:prose-a:text-base-950"
     >
       <slot />
     </Wrapper>
@@ -136,7 +136,7 @@ const clusterLabel = clusterNumber
                     ← Previous
                   </span>
 
-                  <span class="mt-4 font-display text-base font-normal uppercase leading-snug tracking-[-0.015em] text-base-950 transition-colors duration-200 group-hover:text-accent-700">
+                  <span class="mt-4 lozen-type-card-title-small text-base-950 transition-colors duration-200 group-hover:text-base-700">
                     {prevCluster.title}
                   </span>
                 </a>
@@ -153,11 +153,11 @@ const clusterLabel = clusterNumber
                   href={pillarSlug}
                   class="group flex h-full min-h-[8rem] flex-col items-center justify-center rounded-2xl border border-base-400 bg-white p-5 text-center no-underline shadow-lg ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:shadow-xl"
                 >
-                  <span class="font-sans text-xs font-semibold uppercase tracking-[0.18em] text-accent-700">
+                  <span class="lozen-type-eyebrow text-base-600">
                     Framework
                   </span>
 
-                  <span class="mt-4 font-display text-base font-normal uppercase leading-snug tracking-[-0.015em] text-base-950 transition-colors duration-200 group-hover:text-accent-700">
+                  <span class="mt-4 lozen-type-card-title-small text-base-950 transition-colors duration-200 group-hover:text-base-700">
                     Back to {pillarTitle}
                   </span>
                 </a>
@@ -176,7 +176,7 @@ const clusterLabel = clusterNumber
                     Next →
                   </span>
 
-                  <span class="mt-4 font-display text-base font-normal uppercase leading-snug tracking-[-0.015em] text-base-950 transition-colors duration-200 group-hover:text-accent-700">
+                  <span class="mt-4 lozen-type-card-title-small text-base-950 transition-colors duration-200 group-hover:text-base-700">
                     {nextCluster.title}
                   </span>
                 </a>
@@ -207,15 +207,15 @@ const clusterLabel = clusterNumber
             <Text
               tag="span"
               variant="textSM"
-              class="font-sans font-semibold uppercase tracking-[0.18em] text-accent-300"
+              class="lozen-type-eyebrow text-base-300"
             >
               Strategic Briefing
             </Text>
 
             <Text
               tag="h2"
-              variant="displayXS"
-              class="mt-4 font-display font-normal uppercase leading-tight tracking-[-0.02em] text-white"
+              variant="displayLG"
+              class="mt-4 max-w-3xl text-white"
             >
               Invisible Attrition℠ Retention Risk Audit
             </Text>

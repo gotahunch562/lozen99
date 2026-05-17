@@ -62,14 +62,14 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
         <Text
           tag="span"
           variant="textSM"
-          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+          class="lozen-type-eyebrow border-l border-base-300 pl-4 text-base-700"
         >
           {tags[0]?.label ?? "Insights"}
         </Text>
         <Text
           tag="h1"
           variant="displayMD"
-          class="mt-8 uppercase font-display text-base-900"
+          class="mt-8 text-base-900"
         >
           {frontmatter.title}
         </Text>
@@ -98,7 +98,7 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
             <Text
               tag="h2"
               variant="textLG"
-              class="text-base-900 font-bold uppercase tracking-wide"
+              class="font-display font-normal text-base-900"
             >
               In this article
             </Text>
@@ -124,7 +124,7 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
                 <Text
                   tag="h3"
                   variant="textLG"
-                  class="font-medium font-display text-base-900 uppercase"
+                  class="font-display font-normal text-base-900"
                 >
                   Published
                   <time class="ml-1" datetime={publishedDate.toISOString()}>
@@ -148,7 +148,7 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
                 <Text
                   tag="h3"
                   variant="textLG"
-                  class="font-medium font-display text-base-900 uppercase"
+                  class="font-display font-normal text-base-900"
                 >
                   Explore more topics
                 </Text>
@@ -180,7 +180,7 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
               <Text
                 tag="h2"
                 variant="displayXL"
-                class="font-display text-base-900 uppercase mt-8"
+                class="mt-8 text-base-900"
               >
                 Related articles
               </Text>
