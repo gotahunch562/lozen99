@@ -25,32 +25,28 @@ export interface Props {
   ariaLabel?: string;
 }
 
+/*
+  Typography variants map to the central Lozen type scale in global.css.
+  Keep the legacy variant names so existing pages do not break, but make the
+  visible sizes inherit one governed system. Homepage-specific display classes
+  are retained for deliberate exceptional use only.
+*/
 const textStyles = {
-  display6XL:
-    "font-display font-normal leading-[0.9] tracking-[-0.045em] text-5xl sm:text-7xl md:text-9xl lg:text-[11rem] xl:text-[12rem]",
-  display5XL:
-    "font-display font-normal leading-[0.9] tracking-[-0.045em] text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] xl:text-[10rem]",
-  display4XL:
-    "font-display font-normal leading-[0.92] tracking-[-0.04em] text-5xl sm:text-6xl md:text-8xl lg:text-9xl",
-  display3XL:
-    "font-display font-normal leading-[0.95] tracking-[-0.04em] text-4xl sm:text-5xl md:text-7xl lg:text-8xl",
-  display2XL:
-    "font-display font-normal leading-[0.98] tracking-[-0.035em] text-4xl sm:text-5xl md:text-6xl lg:text-7xl",
-  displayXL:
-    "font-display font-normal leading-none tracking-[-0.03em] text-3xl sm:text-4xl md:text-5xl lg:text-6xl",
-  displayLG:
-    "font-display font-normal leading-tight tracking-[-0.025em] text-3xl sm:text-3xl md:text-4xl lg:text-5xl",
-  displayMD:
-    "font-display font-normal leading-tight tracking-[-0.02em] text-2xl sm:text-2xl md:text-3xl lg:text-4xl",
-  displaySM:
-    "font-display font-normal leading-tight tracking-[-0.015em] text-xl sm:text-xl md:text-2xl lg:text-3xl",
-  displayXS:
-    "font-display font-normal leading-snug tracking-[-0.01em] text-lg sm:text-lg md:text-xl lg:text-2xl",
+  display6XL: "lozen-type-home-display",
+  display5XL: "lozen-type-home-display",
+  display4XL: "lozen-type-page-title",
+  display3XL: "lozen-type-page-title",
+  display2XL: "lozen-type-page-title",
+  displayXL: "lozen-type-page-title",
+  displayLG: "lozen-type-section-title",
+  displayMD: "lozen-type-article-title",
+  displaySM: "lozen-type-card-title",
+  displayXS: "lozen-type-card-title-small",
 
-  textXL: "font-sans text-lg leading-relaxed sm:text-xl md:text-2xl",
-  textLG: "font-sans text-base leading-relaxed sm:text-lg md:text-xl",
-  textBase: "font-sans text-base leading-relaxed",
-  textSM: "font-sans text-sm leading-relaxed",
+  textXL: "lozen-type-body-large",
+  textLG: "lozen-type-body-large",
+  textBase: "lozen-type-body",
+  textSM: "lozen-type-body-small",
   textXS: "font-sans text-xs leading-relaxed",
 } as const;
 

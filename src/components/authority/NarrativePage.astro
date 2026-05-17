@@ -361,7 +361,7 @@ const contentShellClass = hasRailContent
     margin-bottom: 1.75rem;
     color: var(--color-base-700);
     font-family: var(--font-sans);
-    font-size: 0.875rem;
+    font-size: var(--lozen-body-copy-small-size);
     font-weight: 700;
     text-decoration: none;
     transition: color 180ms ease;
@@ -521,18 +521,18 @@ const contentShellClass = hasRailContent
     margin: 0 0 1.45rem;
     color: var(--color-base-700);
     font-family: var(--font-sans);
-    font-size: 1.125rem;
-    line-height: 1.92;
+    font-size: var(--lozen-body-copy-large-size);
+    line-height: var(--lozen-body-copy-large-line-height);
   }
 
   .narrative-page__body :global(h2) {
     margin: 3.2rem 0 1.1rem;
     color: var(--color-base-950);
     font-family: var(--font-display);
-    font-size: clamp(1.85rem, 3vw, 2.75rem);
-    font-weight: 500;
-    letter-spacing: -0.04em;
-    line-height: 1.08;
+    font-size: var(--lozen-section-title-size);
+    font-weight: var(--lozen-section-title-weight);
+    letter-spacing: var(--lozen-section-title-letter-spacing);
+    line-height: var(--lozen-section-title-line-height);
     text-wrap: balance;
   }
 
@@ -540,10 +540,10 @@ const contentShellClass = hasRailContent
     margin: 2.25rem 0 0.85rem;
     color: var(--color-base-900);
     font-family: var(--font-display);
-    font-size: clamp(1.35rem, 2vw, 1.7rem);
-    font-weight: 500;
-    letter-spacing: -0.025em;
-    line-height: 1.2;
+    font-size: var(--lozen-subsection-title-size);
+    font-weight: var(--lozen-subsection-title-weight);
+    letter-spacing: var(--lozen-subsection-title-letter-spacing);
+    line-height: var(--lozen-subsection-title-line-height);
   }
 
   .narrative-page__body :global(h2 + p),
@@ -584,8 +584,8 @@ const contentShellClass = hasRailContent
     padding-left: 1rem;
     color: var(--color-base-700);
     font-family: var(--font-sans);
-    font-size: 1.125rem;
-    line-height: 1.85;
+    font-size: var(--lozen-body-copy-large-size);
+    line-height: var(--lozen-body-copy-large-line-height);
   }
 
   .narrative-page__body :global(ul) {
@@ -608,10 +608,10 @@ const contentShellClass = hasRailContent
     padding-left: 1.35rem;
     color: var(--color-base-950);
     font-family: var(--font-display);
-    font-size: clamp(1.75rem, 3.4vw, 3rem);
-    font-weight: 500;
-    letter-spacing: -0.045em;
-    line-height: 1.08;
+    font-size: var(--lozen-pullquote-size);
+    font-weight: var(--lozen-pullquote-weight);
+    letter-spacing: var(--lozen-pullquote-letter-spacing);
+    line-height: var(--lozen-pullquote-line-height);
   }
 
   .narrative-page__body :global(blockquote p),
@@ -670,9 +670,9 @@ const contentShellClass = hasRailContent
     margin: 0 0 1rem;
     color: var(--color-base-900);
     font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
+    font-size: var(--lozen-meta-label-size);
+    font-weight: var(--lozen-meta-label-weight);
+    letter-spacing: var(--lozen-meta-label-letter-spacing);
     text-transform: uppercase;
   }
 
@@ -685,9 +685,9 @@ const contentShellClass = hasRailContent
   .narrative-page__rail dt {
     color: var(--color-base-500);
     font-family: var(--font-sans);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.14em;
+    font-size: var(--lozen-meta-label-size);
+    font-weight: var(--lozen-meta-label-weight);
+    letter-spacing: var(--lozen-meta-label-letter-spacing);
     text-transform: uppercase;
   }
 
@@ -695,8 +695,8 @@ const contentShellClass = hasRailContent
     margin: 0.35rem 0 0;
     color: var(--color-base-800);
     font-family: var(--font-sans);
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: var(--lozen-body-copy-small-size);
+    line-height: var(--lozen-body-copy-small-line-height);
   }
 
   .narrative-page__rail-cta {
@@ -724,9 +724,9 @@ const contentShellClass = hasRailContent
     margin: 0 0 0.65rem;
     color: var(--color-base-600);
     font-family: var(--font-sans);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
+    font-size: var(--lozen-meta-label-size);
+    font-weight: var(--lozen-meta-label-weight);
+    letter-spacing: var(--lozen-meta-label-letter-spacing);
     text-transform: uppercase;
   }
 
@@ -734,10 +734,10 @@ const contentShellClass = hasRailContent
     display: block;
     color: var(--color-base-950);
     font-family: var(--font-display);
-    font-size: 1.35rem;
-    font-weight: 500;
-    letter-spacing: -0.03em;
-    line-height: 1.08;
+    font-size: var(--lozen-card-title-size);
+    font-weight: var(--lozen-card-title-weight);
+    letter-spacing: var(--lozen-card-title-letter-spacing);
+    line-height: var(--lozen-card-title-line-height);
   }
 
   .narrative-page__rail-cta span {
@@ -745,8 +745,8 @@ const contentShellClass = hasRailContent
     margin-top: 0.65rem;
     color: var(--color-base-700);
     font-family: var(--font-sans);
-    font-size: 0.9rem;
-    line-height: 1.58;
+    font-size: var(--lozen-body-copy-small-size);
+    line-height: var(--lozen-body-copy-small-line-height);
   }
 
   .narrative-page__rail-cta em {
@@ -754,7 +754,7 @@ const contentShellClass = hasRailContent
     margin-top: 0.85rem;
     color: var(--color-base-800);
     font-family: var(--font-sans);
-    font-size: 0.86rem;
+    font-size: var(--lozen-body-copy-small-size);
     font-style: normal;
     font-weight: 800;
   }
@@ -780,8 +780,8 @@ const contentShellClass = hasRailContent
 
   .narrative-page__rail-section--links span {
     display: block;
-    font-size: 0.92rem;
-    font-weight: 800;
+    font-size: var(--lozen-body-copy-small-size);
+    font-weight: 700;
     line-height: 1.35;
   }
 
@@ -789,9 +789,9 @@ const contentShellClass = hasRailContent
     display: block;
     margin-top: 0.25rem;
     color: var(--color-base-600);
-    font-size: 0.82rem;
+    font-size: var(--lozen-body-copy-small-size);
     font-weight: 500;
-    line-height: 1.5;
+    line-height: var(--lozen-body-copy-small-line-height);
   }
 
   .narrative-page__related {
@@ -804,9 +804,9 @@ const contentShellClass = hasRailContent
     margin: 0;
     color: var(--color-base-500);
     font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
+    font-size: var(--lozen-meta-label-size);
+    font-weight: var(--lozen-meta-label-weight);
+    letter-spacing: var(--lozen-meta-label-letter-spacing);
     text-transform: uppercase;
   }
 
@@ -814,10 +814,10 @@ const contentShellClass = hasRailContent
     margin: 0.65rem 0 1.25rem;
     color: var(--color-base-950);
     font-family: var(--font-display);
-    font-size: clamp(1.45rem, 2.4vw, 2rem);
-    font-weight: 500;
-    letter-spacing: -0.035em;
-    line-height: 1.12;
+    font-size: var(--lozen-subsection-title-size);
+    font-weight: var(--lozen-subsection-title-weight);
+    letter-spacing: var(--lozen-subsection-title-letter-spacing);
+    line-height: var(--lozen-subsection-title-line-height);
   }
 
   .narrative-page__related-list {
@@ -843,17 +843,17 @@ const contentShellClass = hasRailContent
 
   .narrative-page__related-link span {
     font-family: var(--font-sans);
-    font-size: 1rem;
-    font-weight: 800;
+    font-size: var(--lozen-body-copy-size);
+    font-weight: 700;
     line-height: 1.4;
   }
 
   .narrative-page__related-link small {
     color: var(--color-base-600);
     font-family: var(--font-sans);
-    font-size: 0.9rem;
+    font-size: var(--lozen-body-copy-small-size);
     font-weight: 500;
-    line-height: 1.55;
+    line-height: var(--lozen-body-copy-small-line-height);
   }
 
   .narrative-page__bottom-cta {
@@ -870,9 +870,9 @@ const contentShellClass = hasRailContent
     margin: 0;
     color: var(--color-base-200);
     font-family: var(--font-sans);
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
+    font-size: var(--lozen-meta-label-size);
+    font-weight: var(--lozen-meta-label-weight);
+    letter-spacing: var(--lozen-meta-label-letter-spacing);
     text-transform: uppercase;
   }
 
@@ -881,10 +881,10 @@ const contentShellClass = hasRailContent
     margin: 0.85rem 0 0;
     color: white;
     font-family: var(--font-display);
-    font-size: clamp(1.75rem, 3.5vw, 3rem);
-    font-weight: 500;
-    letter-spacing: -0.045em;
-    line-height: 1.04;
+    font-size: var(--lozen-section-title-size);
+    font-weight: var(--lozen-section-title-weight);
+    letter-spacing: var(--lozen-section-title-letter-spacing);
+    line-height: var(--lozen-section-title-line-height);
   }
 
   .narrative-page__bottom-cta div {
@@ -892,8 +892,8 @@ const contentShellClass = hasRailContent
     margin-top: 1rem;
     color: var(--color-base-200);
     font-family: var(--font-sans);
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: var(--lozen-body-copy-size);
+    line-height: var(--lozen-body-copy-line-height);
   }
 
   .narrative-page__bottom-cta a {
@@ -905,8 +905,8 @@ const contentShellClass = hasRailContent
     padding: 0.78rem 1.05rem;
     color: var(--color-base-950);
     font-family: var(--font-sans);
-    font-size: 0.92rem;
-    font-weight: 850;
+    font-size: var(--lozen-body-copy-small-size);
+    font-weight: 800;
     text-decoration: none;
     transition:
       background 180ms ease,
@@ -987,33 +987,33 @@ const contentShellClass = hasRailContent
     }
 
     .narrative-page h1 {
-      font-size: clamp(2rem, 9.5vw, 3rem);
+      font-size: var(--lozen-page-hero-title-size);
       letter-spacing: var(--lozen-page-hero-title-letter-spacing);
-      line-height: 1.04;
+      line-height: var(--lozen-page-hero-title-line-height);
     }
 
     .narrative-page__deck,
     .narrative-page__body :global(p),
     .narrative-page__body :global(ul),
     .narrative-page__body :global(ol) {
-      font-size: 1rem;
-      line-height: 1.82;
+      font-size: var(--lozen-body-copy-size);
+      line-height: var(--lozen-body-copy-line-height);
     }
 
     .narrative-page__body :global(h2) {
       margin-top: 2.65rem;
-      font-size: clamp(1.65rem, 8vw, 2.15rem);
+      font-size: var(--lozen-section-title-size);
     }
 
     .narrative-page__body :global(h3) {
-      font-size: 1.3rem;
+      font-size: var(--lozen-subsection-title-size);
     }
 
     .narrative-page__body :global(blockquote),
     .narrative-page__body :global(.narrative-pullquote) {
       margin: 2.25rem 0;
       padding-left: 1rem;
-      font-size: clamp(1.65rem, 10vw, 2.35rem);
+      font-size: var(--lozen-pullquote-size);
     }
 
     .narrative-page__hero-figure {

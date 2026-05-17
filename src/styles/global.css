@@ -60,21 +60,69 @@
 
 
   /*
-    Shared internal-page hero typography system
+    Lozen Advisory central typography system
 
-    This standard mirrors the Blog displayXL scale so internal pages do not
-    drift into oversized, one-off hero treatments. Homepage remains separate.
+    Only the homepage hero may use the oversized display scale. Internal
+    pages, article pages, cards, body copy, and utility labels should inherit
+    these tokens so page templates do not drift into competing font sizes.
   */
+
+  /* Homepage-only display scale: do not use for routine internal pages. */
+  --lozen-home-display-size: clamp(2.35rem, 5.2vw, 4.5rem);
+  --lozen-home-display-weight: 400;
+  --lozen-home-display-letter-spacing: -0.045em;
+  --lozen-home-display-line-height: 1.08;
+
+  /* Standard internal page hero scale, modeled on the accepted Blog hero. */
   --lozen-page-hero-eyebrow-size: 0.75rem;
   --lozen-page-hero-eyebrow-weight: 700;
   --lozen-page-hero-eyebrow-letter-spacing: 0.16em;
   --lozen-page-hero-title-size: clamp(2.15rem, 4.2vw, 3.75rem);
   --lozen-page-hero-title-weight: 400;
   --lozen-page-hero-title-letter-spacing: -0.03em;
-  --lozen-page-hero-title-line-height: 1;
+  --lozen-page-hero-title-line-height: 1.04;
   --lozen-page-hero-deck-size: clamp(1rem, 1.25vw, 1.125rem);
-  --lozen-page-hero-deck-line-height: 1.75;
+  --lozen-page-hero-deck-weight: 400;
+  --lozen-page-hero-deck-letter-spacing: -0.01em;
+  --lozen-page-hero-deck-line-height: 1.72;
   --lozen-page-hero-text-width: 58rem;
+
+  /* Article and press title scale for longer headlines. */
+  --lozen-article-hero-title-size: clamp(2rem, 3.4vw, 3.25rem);
+  --lozen-article-hero-title-weight: 400;
+  --lozen-article-hero-title-letter-spacing: -0.025em;
+  --lozen-article-hero-title-line-height: 1.06;
+
+  /* Section and content typography. */
+  --lozen-section-title-size: clamp(1.65rem, 2.6vw, 2.5rem);
+  --lozen-section-title-weight: 400;
+  --lozen-section-title-letter-spacing: -0.025em;
+  --lozen-section-title-line-height: 1.12;
+  --lozen-subsection-title-size: clamp(1.25rem, 1.8vw, 1.6rem);
+  --lozen-subsection-title-weight: 400;
+  --lozen-subsection-title-letter-spacing: -0.015em;
+  --lozen-subsection-title-line-height: 1.22;
+  --lozen-card-title-size: clamp(1.15rem, 1.55vw, 1.45rem);
+  --lozen-card-title-weight: 400;
+  --lozen-card-title-letter-spacing: -0.012em;
+  --lozen-card-title-line-height: 1.24;
+  --lozen-card-title-small-size: clamp(1rem, 1.2vw, 1.2rem);
+  --lozen-card-title-small-line-height: 1.28;
+
+  /* Body and utility text. */
+  --lozen-body-copy-size: 1rem;
+  --lozen-body-copy-line-height: 1.78;
+  --lozen-body-copy-large-size: 1.0625rem;
+  --lozen-body-copy-large-line-height: 1.86;
+  --lozen-body-copy-small-size: 0.925rem;
+  --lozen-body-copy-small-line-height: 1.62;
+  --lozen-meta-label-size: 0.75rem;
+  --lozen-meta-label-weight: 700;
+  --lozen-meta-label-letter-spacing: 0.14em;
+  --lozen-pullquote-size: clamp(1.55rem, 2.8vw, 2.45rem);
+  --lozen-pullquote-weight: 400;
+  --lozen-pullquote-letter-spacing: -0.03em;
+  --lozen-pullquote-line-height: 1.12;
 
   /* Shadows: navy-black shadow system */
   --shadow: 0 1px 3px 0 rgba(6, 23, 47, 0.1),
@@ -141,6 +189,108 @@
   }
 }
 
+
+/* Lozen centralized typography utilities
+   These classes make Text.astro and shared templates inherit one type scale. */
+.lozen-type-home-display {
+  font-family: var(--font-display);
+  font-size: var(--lozen-home-display-size);
+  font-weight: var(--lozen-home-display-weight);
+  letter-spacing: var(--lozen-home-display-letter-spacing);
+  line-height: var(--lozen-home-display-line-height);
+  text-wrap: balance;
+}
+
+.lozen-type-page-title {
+  font-family: var(--font-display);
+  font-size: var(--lozen-page-hero-title-size);
+  font-weight: var(--lozen-page-hero-title-weight);
+  letter-spacing: var(--lozen-page-hero-title-letter-spacing);
+  line-height: var(--lozen-page-hero-title-line-height);
+  text-wrap: balance;
+}
+
+.lozen-type-article-title {
+  font-family: var(--font-display);
+  font-size: var(--lozen-article-hero-title-size);
+  font-weight: var(--lozen-article-hero-title-weight);
+  letter-spacing: var(--lozen-article-hero-title-letter-spacing);
+  line-height: var(--lozen-article-hero-title-line-height);
+  text-wrap: balance;
+}
+
+.lozen-type-section-title {
+  font-family: var(--font-display);
+  font-size: var(--lozen-section-title-size);
+  font-weight: var(--lozen-section-title-weight);
+  letter-spacing: var(--lozen-section-title-letter-spacing);
+  line-height: var(--lozen-section-title-line-height);
+  text-wrap: balance;
+}
+
+.lozen-type-subsection-title {
+  font-family: var(--font-display);
+  font-size: var(--lozen-subsection-title-size);
+  font-weight: var(--lozen-subsection-title-weight);
+  letter-spacing: var(--lozen-subsection-title-letter-spacing);
+  line-height: var(--lozen-subsection-title-line-height);
+  text-wrap: balance;
+}
+
+.lozen-type-card-title {
+  font-family: var(--font-display);
+  font-size: var(--lozen-card-title-size);
+  font-weight: var(--lozen-card-title-weight);
+  letter-spacing: var(--lozen-card-title-letter-spacing);
+  line-height: var(--lozen-card-title-line-height);
+  text-wrap: balance;
+}
+
+.lozen-type-card-title-small {
+  font-family: var(--font-display);
+  font-size: var(--lozen-card-title-small-size);
+  font-weight: var(--lozen-card-title-weight);
+  letter-spacing: var(--lozen-card-title-letter-spacing);
+  line-height: var(--lozen-card-title-small-line-height);
+  text-wrap: balance;
+}
+
+.lozen-type-body-large {
+  font-family: var(--font-sans);
+  font-size: var(--lozen-body-copy-large-size);
+  line-height: var(--lozen-body-copy-large-line-height);
+}
+
+.lozen-type-body {
+  font-family: var(--font-sans);
+  font-size: var(--lozen-body-copy-size);
+  line-height: var(--lozen-body-copy-line-height);
+}
+
+.lozen-type-body-small {
+  font-family: var(--font-sans);
+  font-size: var(--lozen-body-copy-small-size);
+  line-height: var(--lozen-body-copy-small-line-height);
+}
+
+.lozen-type-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--lozen-meta-label-size);
+  font-weight: var(--lozen-meta-label-weight);
+  letter-spacing: var(--lozen-meta-label-letter-spacing);
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.lozen-type-pullquote {
+  font-family: var(--font-display);
+  font-size: var(--lozen-pullquote-size);
+  font-weight: var(--lozen-pullquote-weight);
+  letter-spacing: var(--lozen-pullquote-letter-spacing);
+  line-height: var(--lozen-pullquote-line-height);
+  text-wrap: balance;
+}
+
 /* Lozen long-form page/article system */
 .lozen-article {
   color: var(--color-base-600);
@@ -154,8 +304,8 @@
 .lozen-article__body p {
   margin-bottom: 1.5rem;
   font-family: var(--font-sans);
-  font-size: 1.125rem;
-  line-height: 1.9;
+  font-size: var(--lozen-body-copy-large-size);
+  line-height: var(--lozen-body-copy-large-line-height);
   color: var(--color-base-600);
 }
 
@@ -164,8 +314,8 @@
   margin: 1.5rem 0 1.5rem 1.5rem;
   padding-left: 1rem;
   font-family: var(--font-sans);
-  font-size: 1.125rem;
-  line-height: 1.85;
+  font-size: var(--lozen-body-copy-large-size);
+  line-height: var(--lozen-body-copy-large-line-height);
   color: var(--color-base-600);
 }
 
@@ -217,7 +367,7 @@
 
 .lozen-article__chapter-number {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: var(--lozen-page-hero-title-size);
   line-height: 0.9;
   color: var(--color-accent-500);
   opacity: 0.75;
@@ -234,9 +384,9 @@
   padding-left: 1rem;
   border-left: 1px solid var(--color-accent-500);
   font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-size: var(--lozen-meta-label-size);
+  font-weight: var(--lozen-meta-label-weight);
+  letter-spacing: var(--lozen-meta-label-letter-spacing);
   text-transform: uppercase;
   color: var(--color-base-900);
 }
@@ -254,8 +404,8 @@
 
 .lozen-article__callout p {
   margin: 0;
-  font-size: 1.125rem;
-  line-height: 1.85;
+  font-size: var(--lozen-body-copy-large-size);
+  line-height: var(--lozen-body-copy-large-line-height);
   color: var(--color-base-700);
 }
 
