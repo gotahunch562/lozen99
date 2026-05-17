@@ -85,6 +85,9 @@ const hasRailContent =
   hasRailSlot || railItems.length > 0 || railLinks.length > 0 || Boolean(railCta);
 const hasRelatedItems = relatedItems.length > 0;
 const hasHeroImage = Boolean(heroImage);
+const heroClass = hasHeroImage
+  ? "narrative-page__hero narrative-page__hero--split"
+  : "narrative-page__hero narrative-page__hero--text-only";
 const heroShellClass = hasHeroImage
   ? "narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--split"
   : "narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--text-only";
@@ -111,7 +114,7 @@ const contentShellClass = hasRailContent
   }
 
   <article class="narrative-page">
-    <header class="narrative-page__hero">
+    <header class={heroClass}>
       <div class={heroShellClass}>
         <div class="narrative-page__hero-copy">
           {backHref && <a href={backHref} class="narrative-page__back">← {backLabel}</a>}
@@ -270,22 +273,24 @@ const contentShellClass = hasRailContent
 
   .narrative-page__hero-shell {
     display: grid;
-    min-height: clamp(28rem, 46vw, 39rem);
     padding-top: clamp(6.25rem, 9vw, 8rem);
     padding-bottom: clamp(3rem, 6vw, 5rem);
   }
 
   .narrative-page__hero-shell--split {
     grid-template-columns: minmax(0, 0.96fr) minmax(21rem, 0.78fr);
+    min-height: clamp(28rem, 46vw, 39rem);
     gap: clamp(2rem, 5vw, 4.75rem);
     align-items: center;
   }
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only {
-    grid-template-columns: minmax(0, 1fr);
-    min-height: auto;
-    padding-top: clamp(6rem, 8vw, 7.5rem);
-    padding-bottom: clamp(3.5rem, 5.5vw, 4.75rem);
+    display: block;
+    grid-template-columns: none;
+    min-height: 0 !important;
+    height: auto;
+    padding-top: clamp(5.25rem, 7.5vw, 6.75rem);
+    padding-bottom: clamp(2.65rem, 4.25vw, 3.65rem);
     align-items: start;
   }
 
@@ -899,8 +904,9 @@ const contentShellClass = hasRailContent
     }
 
     .narrative-page__hero-shell.narrative-page__hero-shell--text-only {
-      padding-top: clamp(5.5rem, 20vw, 6.75rem);
-      padding-bottom: clamp(3rem, 13vw, 4rem);
+      min-height: 0 !important;
+      padding-top: clamp(5.25rem, 20vw, 6.5rem);
+      padding-bottom: clamp(2.35rem, 10vw, 3.25rem);
     }
 
     .narrative-page h1 {
