@@ -3,14 +3,16 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
+const mediaEmail = "media@lozenadvisory.com";
+
 const releases = [
   {
-    date: "May 2026",
-    category: "Market Analysis",
-    headline: "The Menopause Benefit Market Built the Wrong Thing. The Data Now Exposes It.",
-    description: "Lozen Advisory issues a market correction on menopause-at-work benefit utilization. Five years of data confirm the infrastructure was built around the wrong activation condition.",
-    href: undefined,
-    statusLabel: "Full release coming soon",
+    date: "May 19, 2026",
+    category: "Press Release",
+    headline: "The Menopause Benefit Market Built the Wrong Thing. The Data Is Exposing It.",
+    description:
+      "As PwC names menopause a defining women's health opportunity, Lozen Advisory issues a market correction on utilization failure and the false assumption that awareness equals adoption.",
+    href: "/menopause-market-correction",
   },
 ];
 ---
@@ -18,6 +20,7 @@ const releases = [
 <BaseLayout
   title="News & Press | Lozen Advisory"
   description="Press releases and media materials from Lozen Advisory LLC."
+  canonical="https://www.lozenadvisory.com/news-press"
 >
   <main class="bg-base-50">
 
@@ -51,7 +54,7 @@ const releases = [
             class="mt-6 max-w-2xl font-sans leading-8 text-base-300"
           >
             Press releases and media materials from Lozen Advisory.
-            For media inquiries contact hello@lozenadvisory.com.
+            For media inquiries contact <a href={`mailto:${mediaEmail}`} class="text-accent-300 underline decoration-accent-300/50 underline-offset-4 transition-colors hover:text-accent-200">{mediaEmail}</a>.
           </Text>
         </div>
       </Wrapper>
@@ -99,19 +102,13 @@ const releases = [
                     {release.description}
                   </Text>
 
-                  {release.href ? (
-                    <a
-                      href={release.href}
-                      class="mt-6 inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-[0.1em] text-accent-700 transition-colors hover:text-accent-900"
-                    >
-                      Read the full release
-                      <span aria-hidden="true">→</span>
-                    </a>
-                  ) : (
-                    <span class="mt-6 inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-[0.1em] text-base-500">
-                      {release.statusLabel}
-                    </span>
-                  )}
+                  <a
+                    href={release.href}
+                    class="mt-6 inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-[0.1em] text-accent-700 transition-colors hover:text-accent-900"
+                  >
+                    Read the full release
+                    <span aria-hidden="true">→</span>
+                  </a>
                 </div>
 
               </div>

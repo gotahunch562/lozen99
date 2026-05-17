@@ -1,0 +1,450 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+const title = "The Menopause Benefit Market Built the Wrong Thing. The Data Is Exposing It.";
+const description =
+  "As PwC names menopause a defining women's health opportunity, Lozen Advisory issues a market correction on utilization failure and the false assumption that awareness equals adoption.";
+const metaDescription =
+  "Lozen Advisory issues a market correction on menopause-at-work utilization failure and the false assumption that awareness equals adoption.";
+const canonical = "https://www.lozenadvisory.com/menopause-market-correction";
+const image = "/images/news/menopause-market-correction.jpg";
+const publishedDate = "May 19, 2026";
+const publishedDateIso = "2026-05-19";
+const mediaEmail = "media@lozenadvisory.com";
+
+const encodedUrl = encodeURIComponent(canonical);
+const encodedTitle = encodeURIComponent(title);
+const shareLinks = [
+  {
+    label: "LinkedIn",
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+  },
+  {
+    label: "X",
+    href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+  },
+  {
+    label: "Facebook",
+    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+  },
+  {
+    label: "Email",
+    href: `mailto:?subject=${encodedTitle}&body=${encodedUrl}`,
+  },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: title,
+  description,
+  datePublished: publishedDateIso,
+  dateModified: publishedDateIso,
+  image: [`https://www.lozenadvisory.com${image}`],
+  author: {
+    "@type": "Organization",
+    name: "Lozen Advisory LLC",
+    url: "https://www.lozenadvisory.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Lozen Advisory LLC",
+    url: "https://www.lozenadvisory.com",
+  },
+  mainEntityOfPage: canonical,
+};
+---
+
+<BaseLayout
+  title={`${title} | Lozen Advisory`}
+  description={metaDescription}
+  canonical={canonical}
+  ogImage={image}
+  ogImageAlt="Navy silhouette of a professional woman raising one hand."
+  ogType="article"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)}></script>
+
+  <article class="press-release-page">
+    <header class="press-release-page__hero">
+      <Wrapper variant="standard" class="press-release-page__hero-shell">
+        <div class="press-release-page__hero-copy">
+          <p class="press-release-page__label">For Immediate Release</p>
+          <p class="press-release-page__date">{publishedDate}</p>
+          <h1>{title}</h1>
+          <p class="press-release-page__dek">
+            <em>{description}</em>
+          </p>
+
+          <nav class="press-release-page__share press-release-page__share--hero" aria-label="Share this press release">
+            <span>Share</span>
+            {shareLinks.map((link) => (
+              <a href={link.href} target={link.label === "Email" ? undefined : "_blank"} rel={link.label === "Email" ? undefined : "noopener noreferrer"}>{link.label}</a>
+            ))}
+          </nav>
+        </div>
+
+        <figure class="press-release-page__figure">
+          <img
+            src={image}
+            alt="Navy silhouette of a professional woman raising one hand."
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+      </Wrapper>
+    </header>
+
+    <Wrapper variant="standard" class="press-release-page__content-shell">
+      <div class="press-release-page__main">
+        <p class="press-release-page__dateline"><strong>{publishedDate}</strong> — PwC has now named menopause as a defining opportunity in women's health. That recognition matters, it confirms that the market is no longer niche. Menopause is projected to be a $15B–$25B market by 2030.</p>
+
+        <p>Yet market expansion does not answer <a href="https://www.lozenadvisory.com/blog/menopause-at-work-unquantified-data-gap">the measurement question</a>. Lozen Advisory LLC today issued a market correction: the menopause-at-work market has treated awareness as adoption, access as reach, and utilization as proof of need. The data is exposing the failure.</p>
+
+        <p>"The menopause-at-work market is over-indexed on access and underdeveloped on measurement," said Akilah E. Kamaria, founder of Lozen Advisory LLC. "Employers can add benefits, expand education, publish guidance and build a company 'Menopause Hub', and still have no reliable view of the women who they are attempting to serve.”</p>
+
+        <p>Approximately <a href="https://www.pwc.com/us/en/industries/health-industries/library/unlocking-the-menopause-market.html">$1.7 billion has been deployed</a> into menopause and midlife women's health platforms between 2020 and 2025, with funding events growing at roughly 15% annually, according to PwC. Employers have added benefits. Certification bodies have expanded. Government commissions have convened. Celebrity campaigns and medical influencers have moved menopause into the public conversation. Yet the central failure remains.</p>
+
+        <p>Women still do not understand the transition. Women still feel unprepared for the disruption. Women still are not using treatment. Women are dissatisfied with the available options. And, even as employers add more benefits, employee confidence that those benefits support them is falling.</p>
+
+        <p><a href="https://hellobonafide.com/pages/state-of-menopause-2025">Bonafide's fifth annual <em>State of Menopause</em> report</a> delivers the five-year verdict: more products, more visibility, more market activity, and women still no closer to comprehension, treatment use, confidence, or trust. The report found that 59% of women ages 40 to 49 never knew about perimenopause until symptoms began, 71% feel unprepared for how disruptive symptoms are, 69% are not using any treatment for their symptoms, and 48% of women ages 40 to 49 report symptoms have negatively impacted their ambition.</p>
+
+        <p>That is not a market solving the problem. That is a market producing awareness without producing adoption.</p>
+
+        <p>Maven Clinic titled its 2026 State of Women's and Family Health Benefits report <a href="https://info.mavenclinic.com/hubfs/Whitepapers/2026%20Maven%20State%20of%20Womens%20and%20Family%20Health%20Benefits%20Report.pdf"><em>More Benefits, Less Confidence</em>.</a> The data behind that title is the market's admission. Employers increased women's and family health benefits by 39% year over year. Employee confidence that those benefits support them very well declined across every category.</p>
+
+        <p>The Michigan Women's Commission spent two years gathering one of the most substantial state-level menopause datasets in the country. Thousands of women. Thirteen community conversations. A statewide tour. The <a href="https://www.lozenadvisory.com/blog/michigan-menopause-memorandum">Menopause Memorandum</a> released in March 2026 with recommendations to educate employees, train supervisors, and expand benefits. Yet not one recommendation addressed the woman who said no — the woman who would not use the support because using it required visibility she could not afford. The data saw her, but the recommendations did not.</p>
+
+        <p>Lozen Advisory says the reason is structural. The menopause-at-work market has treated awareness as the pathway to adoption. The assumption is simple: once women know what is happening, they will seek support; once employers offer support, women will use it; once women use it, utilization data will show whether the benefit works.</p>
+
+        <p>That assumption fails at the point of professional risk. "The market has confused awareness with adoption," Kamaria said. "A woman can understand the perimenopause transition, recognize the symptoms, and still decline to enter a system that records her private constraint. That type of non-disclosure is not ignorance, that is a rational calculation inside a professional environment where visibility carries cost."</p>
+
+        <p>Kamaria spent her career as a data analyst working inside the decision systems organizations rely on to interpret performance, risk, and operational reality. Lozen Advisory's market correction comes from that background: when a system only measures what enters the record, the absence of data is not neutral. It may be the signal.</p>
+
+        <p>"The absence of utilization is not the absence of need," Kamaria said. "It may be evidence that the system cannot reach the women it claims to support."</p>
+
+        <p>That is the structural failure. The market has been asking and advising employers to offer menopause support. The salient question is whether that support can be used, measured, and trusted by women who will not disclose. The menopause-at-work benefit market is not failing because women didn’t understand the services. It is failing because the infrastructure was built around the raised hand.</p>
+
+        <p>"The menopause-at-work market is built for the woman who raises her hand," Kamaria said. "The woman with the most to lose professionally was never going to raise hers."</p>
+
+        <p>The market built visibility.</p>
+
+        <p>It did not build reach.</p>
+
+        <footer class="press-release-page__footer">
+          <div class="press-release-page__contact">
+            <p class="press-release-page__contact-label">Media Contact</p>
+            <p>For media inquiries, contact our communications team at <a href={`mailto:${mediaEmail}`}>{mediaEmail}</a>.</p>
+          </div>
+
+          <nav class="press-release-page__share" aria-label="Share this press release">
+            <span>Share this release</span>
+            {shareLinks.map((link) => (
+              <a href={link.href} target={link.label === "Email" ? undefined : "_blank"} rel={link.label === "Email" ? undefined : "noopener noreferrer"}>{link.label}</a>
+            ))}
+          </nav>
+        </footer>
+      </div>
+
+      <aside class="press-release-page__rail" aria-label="Press release details">
+        <div class="press-release-page__rail-card">
+          <p>Release Date</p>
+          <strong>{publishedDate}</strong>
+        </div>
+        <div class="press-release-page__rail-card">
+          <p>Category</p>
+          <strong>Market Correction</strong>
+        </div>
+        <div class="press-release-page__rail-card">
+          <p>Media Contact</p>
+          <a href={`mailto:${mediaEmail}`}>{mediaEmail}</a>
+        </div>
+      </aside>
+    </Wrapper>
+  </article>
+</BaseLayout>
+
+<style>
+  .press-release-page {
+    background: var(--color-base-50);
+    color: var(--color-base-800);
+  }
+
+  .press-release-page__hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 16% 24%, rgba(250, 204, 21, 0.13), transparent 28%),
+      linear-gradient(135deg, var(--color-base-950) 0%, #06172f 54%, #0a203d 100%);
+    color: #fff;
+    padding: clamp(7.25rem, 10vw, 9.5rem) 0 clamp(4.5rem, 7vw, 6.5rem);
+  }
+
+  .press-release-page__hero-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.78fr);
+    gap: clamp(2.5rem, 5vw, 5rem);
+    align-items: center;
+  }
+
+  .press-release-page__label,
+  .press-release-page__date,
+  .press-release-page__contact-label,
+  .press-release-page__rail-card p,
+  .press-release-page__share span {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .press-release-page__label {
+    color: var(--color-accent-300);
+  }
+
+  .press-release-page__date {
+    margin-top: 0.8rem;
+    color: rgba(255, 255, 255, 0.68);
+  }
+
+  .press-release-page h1 {
+    max-width: 52rem;
+    margin: clamp(1.5rem, 3vw, 2.2rem) 0 0;
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: clamp(3.1rem, 6vw, 6.6rem);
+    font-weight: 400;
+    letter-spacing: -0.055em;
+    line-height: 0.98;
+  }
+
+  .press-release-page__dek {
+    max-width: 44rem;
+    margin: clamp(1.25rem, 2.5vw, 2rem) 0 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-family: var(--font-sans);
+    font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+    line-height: 1.65;
+  }
+
+  .press-release-page__figure {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 1.15rem;
+    background: #fff;
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.24);
+  }
+
+  .press-release-page__figure img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1.46 / 1;
+    object-fit: cover;
+  }
+
+  .press-release-page__content-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 46rem) minmax(15rem, 20rem);
+    gap: clamp(2.5rem, 6vw, 5.5rem);
+    align-items: start;
+    padding-top: clamp(4rem, 7vw, 6rem);
+    padding-bottom: clamp(4.5rem, 8vw, 7rem);
+  }
+
+  .press-release-page__main {
+    max-width: 46rem;
+  }
+
+  .press-release-page__dateline {
+    color: var(--color-base-950) !important;
+    font-family: var(--font-display) !important;
+    font-size: clamp(1.35rem, 2vw, 1.75rem) !important;
+    letter-spacing: -0.025em;
+    line-height: 1.32 !important;
+  }
+
+  .press-release-page__main p {
+    margin: 1.35rem 0 0;
+    color: var(--color-base-750, var(--color-base-700));
+    font-family: var(--font-sans);
+    font-size: 1.04rem;
+    line-height: 1.82;
+  }
+
+  .press-release-page__main a {
+    color: var(--color-accent-700);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-accent-600) 42%, transparent);
+    transition:
+      color 160ms ease,
+      border-color 160ms ease;
+  }
+
+  .press-release-page__main a:hover,
+  .press-release-page__main a:focus-visible {
+    color: var(--color-accent-900);
+    border-bottom-color: var(--color-accent-700);
+  }
+
+  .press-release-page__share {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+  }
+
+  .press-release-page__share--hero {
+    margin-top: clamp(1.8rem, 3vw, 2.4rem);
+  }
+
+  .press-release-page__share span {
+    color: rgba(255, 255, 255, 0.58);
+  }
+
+  .press-release-page__footer .press-release-page__share span {
+    color: var(--color-base-500);
+  }
+
+  .press-release-page__share a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+    padding: 0.6rem 0.85rem;
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+      background 160ms ease,
+      border-color 160ms ease,
+      color 160ms ease;
+  }
+
+  .press-release-page__share--hero a:hover,
+  .press-release-page__share--hero a:focus-visible {
+    border-color: var(--color-accent-300);
+    background: var(--color-accent-300);
+    color: var(--color-base-950);
+  }
+
+  .press-release-page__footer {
+    margin-top: clamp(3rem, 6vw, 4.75rem);
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-base-250, var(--color-base-200));
+  }
+
+  .press-release-page__contact {
+    border: 1px solid var(--color-base-250, var(--color-base-200));
+    border-radius: 1rem;
+    background: #fff;
+    padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  }
+
+  .press-release-page__contact p {
+    margin-top: 0.65rem;
+  }
+
+  .press-release-page__contact-label {
+    color: var(--color-accent-700) !important;
+  }
+
+  .press-release-page__footer .press-release-page__share {
+    margin-top: 1.25rem;
+  }
+
+  .press-release-page__footer .press-release-page__share a {
+    border-color: var(--color-base-250, var(--color-base-200));
+    color: var(--color-base-950);
+  }
+
+  .press-release-page__footer .press-release-page__share a:hover,
+  .press-release-page__footer .press-release-page__share a:focus-visible {
+    border-color: var(--color-accent-500);
+    background: var(--color-accent-300);
+  }
+
+  .press-release-page__rail {
+    position: sticky;
+    top: 7.5rem;
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .press-release-page__rail-card {
+    border: 1px solid var(--color-base-250, var(--color-base-200));
+    border-radius: 1rem;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 18px 42px rgba(6, 23, 47, 0.06);
+  }
+
+  .press-release-page__rail-card p {
+    color: var(--color-base-500);
+  }
+
+  .press-release-page__rail-card strong,
+  .press-release-page__rail-card a {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--color-base-950);
+    font-family: var(--font-sans);
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.45;
+    text-decoration: none;
+  }
+
+  .press-release-page__rail-card a:hover,
+  .press-release-page__rail-card a:focus-visible {
+    color: var(--color-accent-800);
+  }
+
+  @media (max-width: 980px) {
+    .press-release-page__hero-shell,
+    .press-release-page__content-shell {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .press-release-page__figure {
+      max-width: 34rem;
+    }
+
+    .press-release-page__rail {
+      position: static;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      order: -1;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .press-release-page__hero {
+      padding-top: 6.75rem;
+    }
+
+    .press-release-page__rail {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .press-release-page h1 {
+      font-size: clamp(2.55rem, 14vw, 4.25rem);
+    }
+
+    .press-release-page__main p {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+  }
+</style>
