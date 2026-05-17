@@ -37,6 +37,8 @@ interface Props {
   heroImageAlt?: string;
   heroImageCaption?: string;
   heroImagePosition?: string;
+  textHeroLayout?: "article" | "wide";
+  textHeroSize?: "standard" | "compact";
   articleJsonLd?: Record<string, unknown>;
   railTitle?: string;
   railItems?: NarrativeRailItem[];
@@ -65,6 +67,8 @@ const {
   heroImageAlt = "",
   heroImageCaption,
   heroImagePosition = "center center",
+  textHeroLayout,
+  textHeroSize = "standard",
   articleJsonLd,
   railTitle = "Page Context",
   railItems = [],
@@ -88,11 +92,19 @@ const hasHeroImage = Boolean(heroImage);
 const heroClass = hasHeroImage
   ? "narrative-page__hero narrative-page__hero--split"
   : "narrative-page__hero narrative-page__hero--text-only";
+const resolvedTextHeroLayout = textHeroLayout ?? (hasRailContent ? "wide" : "article");
+const resolvedTextHeroSize = textHeroSize === "compact" ? "compact" : "standard";
+const textHeroLayoutClass =
+  resolvedTextHeroLayout === "wide"
+    ? "narrative-page__hero-shell--text-only-wide"
+    : "narrative-page__hero-shell--text-only-article";
+const textHeroSizeClass =
+  resolvedTextHeroSize === "compact"
+    ? "narrative-page__hero-shell--text-only-compact"
+    : "narrative-page__hero-shell--text-only-standard";
 const heroShellClass = hasHeroImage
   ? "narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--split"
-  : hasRailContent
-    ? "narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--text-only narrative-page__hero-shell--text-only-with-rail"
-    : "narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--text-only narrative-page__hero-shell--text-only-article";
+  : `narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--text-only ${textHeroLayoutClass} ${textHeroSizeClass}`;
 const contentShellClass = hasRailContent
   ? "narrative-page__content-shell narrative-page__content-shell--with-rail"
   : "narrative-page__content-shell";
@@ -291,8 +303,8 @@ const contentShellClass = hasRailContent
     grid-template-columns: none;
     min-height: 0 !important;
     height: auto;
-    padding-top: clamp(5rem, 7vw, 6.25rem);
-    padding-bottom: clamp(2.35rem, 3.75vw, 3.15rem);
+    padding-top: clamp(4.75rem, 6.4vw, 5.85rem);
+    padding-bottom: clamp(2.1rem, 3.35vw, 2.85rem);
     align-items: start;
   }
 
@@ -300,8 +312,13 @@ const contentShellClass = hasRailContent
     width: min(100%, 58rem);
   }
 
-  .narrative-page__hero-shell.narrative-page__hero-shell--text-only-with-rail {
+  .narrative-page__hero-shell.narrative-page__hero-shell--text-only-wide {
     width: min(100%, 86rem);
+  }
+
+  .narrative-page__hero-shell.narrative-page__hero-shell--text-only-compact {
+    padding-top: clamp(4.35rem, 5.4vw, 5.1rem);
+    padding-bottom: clamp(1.65rem, 2.75vw, 2.25rem);
   }
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only .narrative-page__hero-copy {
@@ -310,19 +327,23 @@ const contentShellClass = hasRailContent
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only h1 {
     max-width: 58rem;
-    font-size: clamp(2.35rem, 4.05vw, 4.45rem);
+    font-size: clamp(2.3rem, 4.05vw, 4.35rem);
   }
 
   .narrative-page__hero-shell.narrative-page__hero-shell--text-only .narrative-page__deck {
     max-width: 50rem;
   }
 
-  .narrative-page__hero-shell.narrative-page__hero-shell--text-only-with-rail h1 {
+  .narrative-page__hero-shell.narrative-page__hero-shell--text-only-wide h1 {
     max-width: 62rem;
   }
 
-  .narrative-page__hero-shell.narrative-page__hero-shell--text-only-with-rail .narrative-page__deck {
+  .narrative-page__hero-shell.narrative-page__hero-shell--text-only-wide .narrative-page__deck {
     max-width: 54rem;
+  }
+
+  .narrative-page__hero-shell.narrative-page__hero-shell--text-only-compact h1 {
+    font-size: clamp(2.25rem, 3.75vw, 4rem);
   }
 
   .narrative-page__hero-copy {
@@ -923,10 +944,14 @@ const contentShellClass = hasRailContent
     }
 
     .narrative-page__hero-shell.narrative-page__hero-shell--text-only {
-      width: min(100%, 58rem);
       min-height: 0 !important;
-      padding-top: clamp(5.1rem, 20vw, 6.25rem);
-      padding-bottom: clamp(2.15rem, 9vw, 2.85rem);
+      padding-top: clamp(5rem, 18vw, 6.15rem);
+      padding-bottom: clamp(2.15rem, 9vw, 3rem);
+    }
+
+    .narrative-page__hero-shell.narrative-page__hero-shell--text-only-compact {
+      padding-top: clamp(4.8rem, 17vw, 5.75rem);
+      padding-bottom: clamp(1.85rem, 8vw, 2.55rem);
     }
 
     .narrative-page h1 {
