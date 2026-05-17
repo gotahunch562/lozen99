@@ -11,21 +11,46 @@ import MegaMenu from "@/components/global/MegaMenu.astro";
 import Close from "@/components/fundations/icons/Close.astro";
 import Burger from "@/components/fundations/icons/Burger.astro";
 
-const primaryLinks = [
+type PrimaryLink = {
+  href: string;
+  label: string;
+  activePaths?: string[];
+};
+
+const primaryLinks: PrimaryLink[] = [
   { href: "/services", label: "What We Do" },
+  { href: "/booking", label: "MAPS Blueprint" },
   { href: "/blog", label: "Blog" },
-  { href: "/news-press", label: "News & Press" },
-  { href: "/tools-resources", label: "Tools" },
+  {
+    href: "/news-press",
+    label: "News & Press",
+    activePaths: ["/menopause-market-correction"],
+  },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
 
-const currentPath = Astro.url.pathname;
+const normalizePath = (path: string) =>
+  path.length > 1 ? path.replace(/\/+$/, "") : path;
 
-const isActiveLink = (href: string) =>
-  currentPath === href || currentPath.startsWith(`${href}/`);
+const currentPath = normalizePath(Astro.url.pathname);
+
+const isActivePath = (href: string) => {
+  const normalizedHref = normalizePath(href);
+  return (
+    currentPath === normalizedHref ||
+    currentPath.startsWith(`${normalizedHref}/`)
+  );
+};
+
+const isPrimaryActive = (link: PrimaryLink) =>
+  isActivePath(link.href) ||
+  Boolean(link.activePaths?.some((path) => isActivePath(path)));
 
 const morePaths = [
+  "/tools-resources",
+  "/retention-calculator",
+  "/download",
   "/invisible-attrition",
   "/architecture-of-invisible-attrition-series",
   "/disclosure-independence-infrastructure",
@@ -38,66 +63,67 @@ const morePaths = [
   "/why-lozen-advisory",
   "/events",
   "/faq",
-  "/booking",
   "/menopause-support-women-lawyers",
-  "/retention-calculator",
   "/normal-blood-tests-feel-off",
 ];
 
-const isMoreActive = morePaths.some((path) => isActiveLink(path));
+const isMoreActive = morePaths.some((path) => isActivePath(path));
 ---
 
 <header class="fixed top-0 z-50 w-full">
-  <Wrapper variant="standard" class="py-2">
+  <Wrapper variant="standard" class="py-2.5">
     <nav
-      class="flex items-center justify-between gap-4 rounded-xl bg-base-900/70 p-3 shadow-xl outline-4 outline-base-500/5 backdrop-blur-xl sm:p-4"
+      class="lozen-primary-nav flex items-center justify-between gap-3 rounded-2xl bg-base-900/78 p-3.5 shadow-xl outline-4 outline-base-500/5 backdrop-blur-xl sm:p-4"
       aria-label="Primary navigation"
     >
       <a
         href="/"
-        class="min-w-0 shrink-0"
+        class="lozen-primary-nav__brand min-w-0 shrink-0 rounded-full px-1 py-1 transition-opacity duration-200 hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent-400"
         aria-label="Go to Lozen Advisory home page"
+        aria-current={currentPath === "/" ? "page" : undefined}
       >
         <Logo class="text-base font-normal text-white uppercase font-display sm:text-lg" />
       </a>
 
-      <div class="hidden items-center gap-5 xl:gap-7 lg:flex">
+      <div class="hidden items-center justify-center gap-1 xl:flex">
         {
-          primaryLinks.map((link) => (
-            <a
-              href={link.href}
-              class:list={[
-                "text-sm font-medium transition-colors duration-200",
-                isActiveLink(link.href)
-                  ? "text-accent-400"
-                  : "text-white/85 hover:text-white",
-              ]}
-            >
-              {link.label}
-            </a>
-          ))
+          primaryLinks.map((link) => {
+            const active = isPrimaryActive(link);
+
+            return (
+              <a
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+                class:list={[
+                  "lozen-primary-nav__link",
+                  active && "lozen-primary-nav__link--active",
+                ]}
+              >
+                <span>{link.label}</span>
+              </a>
+            );
+          })
         }
 
         <button
           id="megamenu-trigger"
           type="button"
           class:list={[
-            "inline-flex items-center gap-1 text-sm font-medium transition-colors duration-200",
-            isMoreActive
-              ? "text-accent-400"
-              : "text-white/85 hover:text-white",
+            "lozen-primary-nav__link lozen-primary-nav__link--button",
+            isMoreActive && "lozen-primary-nav__link--active",
           ]}
           aria-expanded="false"
           aria-controls="megamenu"
           aria-label="Open secondary navigation menu"
+          aria-current={isMoreActive ? "page" : undefined}
         >
           <span>More</span>
-          <span aria-hidden="true">+</span>
+          <span class="lozen-primary-nav__plus" aria-hidden="true">+</span>
         </button>
       </div>
 
       <div class="flex shrink-0 items-center gap-2">
-        <div class="hidden lg:block">
+        <div class="hidden xl:block">
           <Button isLink size="xs" variant="accent" href="/request-briefing">
             Request Briefing
           </Button>
@@ -109,7 +135,7 @@ const isMoreActive = morePaths.some((path) => isActiveLink(path));
           variant="default"
           id="mobile-menu-button"
           type="button"
-          class="lg:hidden"
+          class="xl:hidden"
           aria-label="Toggle menu"
           aria-controls="mobile-menu"
           aria-expanded="false"
@@ -124,3 +150,79 @@ const isMoreActive = morePaths.some((path) => isActiveLink(path));
   <MegaMenu />
   <MobileMenu />
 </header>
+
+<style>
+  .lozen-primary-nav__link {
+    position: relative;
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 0.78rem 1rem;
+    color: rgba(255, 255, 255, 0.86);
+    font-family: var(--font-sans);
+    font-size: 0.96rem;
+    font-weight: 650;
+    line-height: 1;
+    text-decoration: none;
+    transition:
+      background-color 180ms ease,
+      border-color 180ms ease,
+      color 180ms ease,
+      transform 180ms ease;
+    white-space: nowrap;
+  }
+
+  .lozen-primary-nav__link:hover,
+  .lozen-primary-nav__link:focus-visible {
+    border-color: rgba(255, 255, 255, 0.14);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+
+  .lozen-primary-nav__link:focus-visible {
+    outline: 2px solid var(--color-accent-400);
+    outline-offset: 3px;
+  }
+
+  .lozen-primary-nav__link--active {
+    border-color: color-mix(in srgb, var(--color-accent-400) 38%, transparent);
+    background-color: color-mix(in srgb, var(--color-accent-400) 15%, transparent);
+    color: var(--color-accent-300);
+  }
+
+  .lozen-primary-nav__link--active::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    bottom: 0.42rem;
+    left: 1rem;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--color-accent-300);
+    opacity: 0.95;
+  }
+
+  .lozen-primary-nav__link--button {
+    cursor: pointer;
+  }
+
+  .lozen-primary-nav__plus {
+    display: inline-flex;
+    transform: translateY(-0.02em);
+    color: currentColor;
+    font-size: 1.05em;
+    line-height: 1;
+  }
+
+  @media (min-width: 1280px) and (max-width: 1365px) {
+    .lozen-primary-nav__link {
+      padding-right: 0.82rem;
+      padding-left: 0.82rem;
+      font-size: 0.92rem;
+    }
+  }
+</style>
