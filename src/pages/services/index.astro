@@ -1,15 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-import Text from "@/components/fundations/elements/Text.astro";
-import Button from "@/components/fundations/elements/Button.astro";
+import NarrativePage from "@/components/authority/NarrativePage.astro";
 import MailerLiteSignup from "@/components/forms/MailerLiteSignup.astro";
 import servicePlaceholder from "@/images/services/serviceplaceholder.webp";
 
-const title = "Services | Lozen Advisory";
+const title = "What We Do";
+
+const seoTitle = "Services | Lozen Advisory";
+
 const description =
   "Lozen Advisory helps organizations see the risks their current systems are not built to detect.";
+
+const canonical = "https://www.lozenadvisory.com/services";
 
 const services = [
   {
@@ -37,327 +39,336 @@ const services = [
       "Support for organizations facing sensitive workforce issues where incomplete data, low utilization, leadership exits, or AI implementation burden may create operational or reputational consequences.",
   },
 ];
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: seoTitle,
+  description,
+  url: canonical,
+  provider: {
+    "@type": "Organization",
+    name: "Lozen Advisory LLC",
+    url: "https://www.lozenadvisory.com",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Lozen Advisory Services",
+    itemListElement: services.map((service) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: service.title,
+        description: service.description,
+        url: `https://www.lozenadvisory.com${service.href}`,
+      },
+    })),
+  },
+};
 ---
 
-<BaseLayout title={title} description={description}>
-  <main class="bg-white">
-    <section class="border-b border-base-200 bg-white">
-      <Wrapper
-        variant="standard"
-        class="pt-28 pb-10 sm:pt-32 sm:pb-12 lg:pt-36 lg:pb-14"
-      >
-        <div class="mx-auto max-w-7xl">
-          <Text
-            tag="span"
-            variant="textSM"
-            class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
-          >
-            Services
-          </Text>
+<NarrativePage
+  title={title}
+  seoTitle={seoTitle}
+  description={description}
+  metaDescription={description}
+  canonical={canonical}
+  eyebrow="Services"
+  typeLabel="Advisory Architecture"
+  articleJsonLd={pageJsonLd}
+  bottomCta={{
+    label: "Why Clients Come",
+    title: "Lozen Advisory works before that point.",
+    description:
+      "Menopause is the signal. AI is the multiplier. Retention is where the cost becomes visible.",
+    href: "/request-briefing",
+    linkLabel: "Request Briefing →",
+  }}
+>
+  <h2>Where visible systems stop short.</h2>
 
-          <Text
-            tag="h1"
-            variant="displayLG"
-            class="mt-8 max-w-4xl font-display font-normal uppercase leading-[1.02] tracking-[-0.04em] text-base-950"
-          >
-            What We Do
-          </Text>
+  <p>
+    We work with leadership teams when benefits utilization is low, retention risk is unclear, succession exposure is underestimated, AI implementation burden is hidden, or a workforce issue is beginning to carry reputational, operational, or governance consequences.
+  </p>
 
-          <Text
-            tag="p"
-            variant="textLG"
-            class="mt-5 max-w-3xl font-sans leading-8 text-base-700"
-          >
-            Lozen Advisory helps organizations see the risks their current systems are not built to detect.
-          </Text>
-        </div>
-      </Wrapper>
-    </section>
+  <p>
+    The problem is rarely the absence of data. Most organizations already have dashboards, benefits reports, HR records, engagement surveys, productivity metrics, AI adoption data, and retention analysis. The problem is that those systems often measure only what becomes visible.
+  </p>
 
-    <section class="bg-white">
-      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
-        <div
-          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.78fr)_minmax(420px,0.68fr)] lg:gap-20"
-        >
-          <div>
-            <Text
-              tag="h2"
-              variant="displaySM"
-              class="max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
-            >
-              Where visible systems stop short.
-            </Text>
-          </div>
+  <p>
+    That creates false confidence.
+  </p>
 
-          <div class="max-w-2xl font-sans text-base leading-8 text-base-700 sm:text-lg sm:leading-9">
-            <p>
-              We work with leadership teams when benefits utilization is low, retention risk is unclear, succession exposure is underestimated, AI implementation burden is hidden, or a workforce issue is beginning to carry reputational, operational, or governance consequences.
-            </p>
+  <section class="service-cards" aria-label="Services">
+    <div class="service-cards__heading">
+      <h2>Services</h2>
+    </div>
 
-            <p class="mt-5">
-              The problem is rarely the absence of data. Most organizations already have dashboards, benefits reports, HR records, engagement surveys, productivity metrics, AI adoption data, and retention analysis. The problem is that those systems often measure only what becomes visible.
-            </p>
+    <div class="service-cards__grid">
+      {
+        services.map((service) => (
+          <article class="service-card">
+            <a href={service.href} class="service-card__link">
+              <div class="service-card__media" aria-hidden="true">
+                <Image
+                  src={servicePlaceholder}
+                  alt=""
+                  class="service-card__image"
+                  loading="lazy"
+                />
+              </div>
 
-            <p class="mt-5">
-              That creates false confidence.
-            </p>
-          </div>
-        </div>
-      </Wrapper>
-    </section>
+              <div class="service-card__content">
+                <div class="service-card__title-row">
+                  <h3>{service.title}</h3>
+                  <span aria-hidden="true">→</span>
+                </div>
 
-    <section class="bg-white">
-      <Wrapper variant="standard" class="pb-14 sm:pb-16 lg:pb-24">
-        <div class="mx-auto max-w-7xl">
-          <div class="mb-8 border-t border-base-200 pt-10 sm:mb-10">
-            <Text
-              tag="h2"
-              variant="displayXS"
-              class="font-display font-normal uppercase tracking-[-0.02em] text-base-950"
-            >
-              Services
-            </Text>
-          </div>
+                <p>{service.description}</p>
+              </div>
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
 
-          <div class="grid gap-x-12 gap-y-14 md:grid-cols-2">
-            {
-              services.map((service) => (
-                <article class="group">
-                  <a href={service.href} class="block no-underline">
-                    <div class="aspect-[16/9] overflow-hidden bg-base-100">
-                      <Image
-                        src={servicePlaceholder}
-                        alt=""
-                        class="size-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                        loading="lazy"
-                      />
-                    </div>
+  <h2>Tacere: The Framework</h2>
 
-                    <div class="pt-6">
-                      <div class="flex items-start justify-between gap-6">
-                        <Text
-                          tag="h3"
-                          variant="displayXS"
-                          class="font-display font-normal uppercase leading-tight tracking-[-0.015em] text-base-950 transition-colors duration-300 group-hover:text-accent-700"
-                        >
-                          {service.title}
-                        </Text>
+  <p>
+    The employee who never files a claim, never requests an accommodation, and never flags a performance issue is not absent from your workforce.
+  </p>
 
-                        <span
-                          aria-hidden="true"
-                          class="mt-1 shrink-0 font-sans text-xl leading-none text-base-950 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-accent-700"
-                        >
-                          →
-                        </span>
-                      </div>
+  <p>
+    They are present, performing, and keeping their own counsel.
+  </p>
 
-                      <Text
-                        tag="p"
-                        variant="textBase"
-                        class="mt-4 max-w-xl font-sans leading-7 text-base-700"
-                      >
-                        {service.description}
-                      </Text>
-                    </div>
-                  </a>
-                </article>
-              ))
-            }
-          </div>
-        </div>
-      </Wrapper>
-    </section>
+  <p>
+    Tacere names that practice and explains what it costs when organizations rely on systems that can only see employees after they disclose, request, or report.
+  </p>
 
-    <section class="border-y border-base-200 bg-base-50">
-      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
-        <div
-          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.75fr)_minmax(360px,0.5fr)] lg:items-start lg:gap-20"
-        >
-          <div>
-            <Text
-              tag="span"
-              variant="textSM"
-              class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
-            >
-              Framework
-            </Text>
+  <p>
+    Download the Tacere paper to understand the framework
+  </p>
 
-            <Text
-              tag="h2"
-              variant="displaySM"
-              class="mt-5 max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
-            >
-              Tacere: The Framework
-            </Text>
+  <section id="tacere-download" class="narrative-callout service-download" aria-label="Download the Tacere paper">
+    <h3>Download the Tacere Paper →</h3>
 
-            <div class="mt-6 max-w-3xl font-sans text-base leading-8 text-base-700 sm:text-lg sm:leading-9">
-              <p>
-                The employee who never files a claim, never requests an accommodation, and never flags a performance issue is not absent from your workforce.
-              </p>
+    <p>
+      Enter your email to receive the download link.
+    </p>
 
-              <p class="mt-5">
-                They are present, performing, and keeping their own counsel.
-              </p>
+    <MailerLiteSignup
+      formId="tacere-paper-download"
+      group="tacere"
+      buttonLabel="Send the paper"
+      successMessage="Thank you. You can download the Tacere brief here."
+      downloadHref="/download/Lozen_Tacere_Brief.pdf"
+      downloadLabel="Download the Tacere brief"
+    />
+  </section>
 
-              <p class="mt-5">
-                Tacere names that practice and explains what it costs when organizations rely on systems that can only see employees after they disclose, request, or report.
-              </p>
+  <h2>The MAPS Blueprint℠</h2>
 
-              <p class="mt-5">
-                Download the Tacere paper to understand the framework
-              </p>
-            </div>
-          </div>
+  <p>
+    The MAPS Blueprint℠ is the private advisory session for the woman executive.
+  </p>
 
-          <aside
-            id="tacere-download"
-            class="border-l border-accent-500 pl-6 lg:mt-2"
-          >
-            <Text
-              tag="h3"
-              variant="displayXS"
-              class="font-display font-normal uppercase leading-tight tracking-[-0.02em] text-base-950"
-            >
-              Download the Tacere Paper →
-            </Text>
+  <p>
+    It belongs on this page because Lozen Advisory works both sides of the same structural problem. Organizations need to understand the risk their systems cannot see. Women executives need to protect themselves inside those systems before a professional record is created.
+  </p>
 
-            <Text
-              tag="p"
-              variant="textBase"
-              class="mt-4 max-w-sm font-sans leading-7 text-base-700"
-            >
-              Enter your email to receive the download link.
-            </Text>
+  <p>
+    The MAPS Blueprint℠ is for the woman approaching a visible professional moment: a review, a promotion decision, a leadership transition, a difficult performance cycle, a return from leave, or a situation where disclosure may create a record she cannot control.
+  </p>
 
-            <div class="mt-6 rounded-xl border border-base-200 bg-white p-5 shadow-sm">
-              <MailerLiteSignup
-                formId="tacere-paper-download"
-                group="tacere"
-                buttonLabel="Send the paper"
-                successMessage="Thank you. You can download the Tacere brief here."
-                downloadHref="/download/Lozen_Tacere_Brief.pdf"
-                downloadLabel="Download the Tacere brief"
-              />
-            </div>
-          </aside>
-        </div>
-      </Wrapper>
-    </section>
+  <p>
+    She arrives with a situation. She leaves with a plan.
+  </p>
 
-    <section class="bg-white">
-      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
-        <div
-          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(420px,0.68fr)] lg:gap-20"
-        >
-          <div>
-            <Text
-              tag="span"
-              variant="textSM"
-              class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
-            >
-              Private Advisory
-            </Text>
+  <p>
+    <a class="service-action" href="/booking">Begin MAPS Blueprint℠ →</a>
+  </p>
 
-            <Text
-              tag="h2"
-              variant="displaySM"
-              class="mt-5 max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
-            >
-              The MAPS Blueprint℠
-            </Text>
-          </div>
+  <h2>Clients come when they need clarity before the cost becomes visible.</h2>
 
-          <div class="max-w-2xl font-sans text-base leading-8 text-base-700 sm:text-lg sm:leading-9">
-            <p>
-              The MAPS Blueprint℠ is the private advisory session for the woman executive.
-            </p>
+  <p>
+    Clients come to Lozen Advisory when the issue is no longer theoretical.
+  </p>
 
-            <p class="mt-5">
-              It belongs on this page because Lozen Advisory works both sides of the same structural problem. Organizations need to understand the risk their systems cannot see. Women executives need to protect themselves inside those systems before a professional record is created.
-            </p>
+  <p>
+    They may have invested in benefits and still see low utilization. They may be seeing senior women leave without clear warning. They may be rolling out AI and relying on the same high performers to make it work. They may be preparing for questions from executives, boards, employees, journalists, or external stakeholders. They may need to understand whether their current data can support the claims they are making.
+  </p>
 
-            <p class="mt-5">
-              The MAPS Blueprint℠ is for the woman approaching a visible professional moment: a review, a promotion decision, a leadership transition, a difficult performance cycle, a return from leave, or a situation where disclosure may create a record she cannot control.
-            </p>
+  <p>
+    In those moments, standard workforce language is not enough.
+  </p>
 
-            <p class="mt-5">
-              She arrives with a situation. She leaves with a plan.
-            </p>
+  <p>
+    Lozen Advisory helps clients understand the structural issue, the business exposure, and the decision in front of them. The work is built for moments when leaders need clarity before a hidden problem becomes a visible crisis.
+  </p>
+</NarrativePage>
 
-            <div class="mt-8">
-              <Button isLink href="/booking" variant="default" size="sm">
-                Begin MAPS Blueprint℠ →
-              </Button>
-            </div>
-          </div>
-        </div>
-      </Wrapper>
-    </section>
+<style>
+  .service-cards {
+    width: min(100vw - 2.5rem, 72rem);
+    margin: 3.25rem 0 3.75rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-base-300);
+  }
 
-    <section class="border-t border-base-200 bg-white">
-      <Wrapper variant="standard" class="py-14 sm:py-16 lg:py-20">
-        <div
-          class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(420px,0.68fr)] lg:gap-20"
-        >
-          <div>
-            <Text
-              tag="span"
-              variant="textSM"
-              class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.18em] text-base-600"
-            >
-              Why Clients Come
-            </Text>
+  .service-cards__heading h2 {
+    margin-top: 0 !important;
+  }
 
-            <Text
-              tag="h2"
-              variant="displaySM"
-              class="mt-5 max-w-3xl font-display font-normal uppercase leading-tight tracking-[-0.03em] text-base-950"
-            >
-              Clients come when they need clarity before the cost becomes visible.
-            </Text>
-          </div>
+  .service-cards__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    margin-top: 1.65rem;
+  }
 
-          <div class="max-w-2xl font-sans text-base leading-8 text-base-700 sm:text-lg sm:leading-9">
-            <p>
-              Clients come to Lozen Advisory when the issue is no longer theoretical.
-            </p>
+  .service-card {
+    margin: 0;
+  }
 
-            <p class="mt-5">
-              They may have invested in benefits and still see low utilization. They may be seeing senior women leave without clear warning. They may be rolling out AI and relying on the same high performers to make it work. They may be preparing for questions from executives, boards, employees, journalists, or external stakeholders. They may need to understand whether their current data can support the claims they are making.
-            </p>
+  .service-card__link {
+    display: block;
+    height: 100%;
+    color: inherit !important;
+    text-decoration: none !important;
+  }
 
-            <p class="mt-5">
-              In those moments, standard workforce language is not enough.
-            </p>
+  .service-card__media {
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--color-base-200);
+    border-radius: 1.1rem;
+    background: var(--color-base-100);
+    box-shadow: 0 18px 42px rgba(6, 23, 47, 0.08);
+  }
 
-            <p class="mt-5">
-              Lozen Advisory helps clients understand the structural issue, the business exposure, and the decision in front of them. The work is built for moments when leaders need clarity before a hidden problem becomes a visible crisis.
-            </p>
+  .service-card__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 520ms ease, filter 520ms ease;
+  }
 
-            <p class="mt-8">
-              Menopause is the signal.
-            </p>
+  .service-card__link:hover .service-card__image,
+  .service-card__link:focus-visible .service-card__image {
+    transform: scale(1.035);
+    filter: saturate(0.96) contrast(1.04);
+  }
 
-            <p>
-              AI is the multiplier.
-            </p>
+  .service-card__content {
+    padding-top: 1.25rem;
+  }
 
-            <p>
-              Retention is where the cost becomes visible.
-            </p>
+  .service-card__title-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
 
-            <p>
-              Lozen Advisory works before that point.
-            </p>
+  .service-card__title-row h3 {
+    margin: 0 !important;
+    color: var(--color-base-950) !important;
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2.2vw, 1.85rem) !important;
+    font-weight: 500;
+    letter-spacing: -0.035em;
+    line-height: 1.08 !important;
+    transition: color 220ms ease;
+  }
 
-            <div class="mt-8">
-              <Button isLink href="/request-briefing" variant="accent" size="sm">
-                Request Briefing →
-              </Button>
-            </div>
-          </div>
-        </div>
-      </Wrapper>
-    </section>
-  </main>
-</BaseLayout>
+  .service-card__title-row span {
+    flex: 0 0 auto;
+    color: var(--color-base-950);
+    font-family: var(--font-sans);
+    font-size: 1.35rem;
+    font-weight: 800;
+    line-height: 1;
+    transition:
+      color 220ms ease,
+      transform 220ms ease;
+  }
+
+  .service-card__link:hover .service-card__title-row h3,
+  .service-card__link:focus-visible .service-card__title-row h3,
+  .service-card__link:hover .service-card__title-row span,
+  .service-card__link:focus-visible .service-card__title-row span {
+    color: var(--color-accent-700) !important;
+  }
+
+  .service-card__link:hover .service-card__title-row span,
+  .service-card__link:focus-visible .service-card__title-row span {
+    transform: translateX(0.25rem);
+  }
+
+  .service-card__content p {
+    margin: 0.85rem 0 0 !important;
+    color: var(--color-base-700) !important;
+    font-family: var(--font-sans);
+    font-size: 1rem !important;
+    line-height: 1.72 !important;
+  }
+
+  .service-download {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .service-download h3 {
+    margin-top: 0 !important;
+  }
+
+  .service-action {
+    display: inline-flex;
+    border: 1px solid var(--color-base-950);
+    border-radius: 999px;
+    background: var(--color-base-950);
+    padding: 0.82rem 1.05rem;
+    color: white !important;
+    font-family: var(--font-sans);
+    font-size: 0.92rem;
+    font-weight: 850;
+    text-decoration: none !important;
+    transition:
+      background 180ms ease,
+      border-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .service-action:hover,
+  .service-action:focus-visible {
+    border-color: var(--color-accent-600);
+    background: var(--color-accent-600);
+    color: var(--color-base-950) !important;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 760px) {
+    .service-cards {
+      width: 100%;
+      margin-block: 2.75rem 3rem;
+      padding-top: 1.5rem;
+    }
+
+    .service-cards__grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    .service-card__media {
+      border-radius: 1rem;
+    }
+
+    .service-card__content p {
+      font-size: 0.97rem !important;
+      line-height: 1.65 !important;
+    }
+  }
+</style>
