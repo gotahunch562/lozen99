@@ -36,6 +36,7 @@ interface Props {
   heroImage?: string;
   heroImageAlt?: string;
   heroImageCaption?: string;
+  heroImagePosition?: string;
   articleJsonLd?: Record<string, unknown>;
   railTitle?: string;
   railItems?: NarrativeRailItem[];
@@ -63,6 +64,7 @@ const {
   heroImage,
   heroImageAlt = "",
   heroImageCaption,
+  heroImagePosition = "center center",
   articleJsonLd,
   railTitle = "Page Context",
   railItems = [],
@@ -82,6 +84,10 @@ const hasAfterContentSlot = Astro.slots.has("after-content");
 const hasRailContent =
   hasRailSlot || railItems.length > 0 || railLinks.length > 0 || Boolean(railCta);
 const hasRelatedItems = relatedItems.length > 0;
+const hasHeroImage = Boolean(heroImage);
+const heroShellClass = hasHeroImage
+  ? "narrative-page__shell narrative-page__hero-shell narrative-page__hero-shell--split"
+  : "narrative-page__shell narrative-page__hero-shell";
 const contentShellClass = hasRailContent
   ? "narrative-page__content-shell narrative-page__content-shell--with-rail"
   : "narrative-page__content-shell";
@@ -106,24 +112,26 @@ const contentShellClass = hasRailContent
 
   <article class="narrative-page">
     <header class="narrative-page__hero">
-      <div class="narrative-page__shell narrative-page__hero-shell">
-        {backHref && <a href={backHref} class="narrative-page__back">← {backLabel}</a>}
+      <div class={heroShellClass}>
+        <div class="narrative-page__hero-copy">
+          {backHref && <a href={backHref} class="narrative-page__back">← {backLabel}</a>}
 
-        <div class="narrative-page__meta" aria-label="Page metadata">
-          <span>{eyebrow}</span>
-          {typeLabel && <span>{typeLabel}</span>}
-          {dateLabel && <span>{dateLabel}</span>}
+          <div class="narrative-page__meta" aria-label="Page metadata">
+            <span>{eyebrow}</span>
+            {typeLabel && <span>{typeLabel}</span>}
+            {dateLabel && <span>{dateLabel}</span>}
+          </div>
+
+          <h1>{title}</h1>
+
+          {
+            description && (
+              <p class="narrative-page__deck">
+                {description}
+              </p>
+            )
+          }
         </div>
-
-        <h1>{title}</h1>
-
-        {
-          description && (
-            <p class="narrative-page__deck">
-              {description}
-            </p>
-          )
-        }
 
         {
           heroImage && (
@@ -133,6 +141,7 @@ const contentShellClass = hasRailContent
                 alt={heroImageAlt}
                 loading="eager"
                 decoding="async"
+                style={`object-position: ${heroImagePosition};`}
               />
               {
                 heroImageCaption && (
@@ -251,21 +260,35 @@ const contentShellClass = hasRailContent
   }
 
   .narrative-page__hero {
-    border-bottom: 1px solid var(--color-base-200);
+    overflow: hidden;
+    border-bottom: 1px solid color-mix(in oklch, var(--color-accent-500) 34%, var(--color-base-950));
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(247, 249, 252, 0.96)),
-      var(--color-base-50);
+      radial-gradient(circle at 20% 18%, rgba(232, 230, 60, 0.1), transparent 30%),
+      linear-gradient(135deg, var(--color-base-950) 0%, var(--color-base-900) 52%, #020a17 100%);
+    color: white;
   }
 
   .narrative-page__hero-shell {
-    padding-top: clamp(5.25rem, 8vw, 7rem);
-    padding-bottom: clamp(2.65rem, 5vw, 4.25rem);
+    display: grid;
+    min-height: clamp(28rem, 46vw, 39rem);
+    padding-top: clamp(6.25rem, 9vw, 8rem);
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .narrative-page__hero-shell--split {
+    grid-template-columns: minmax(0, 0.96fr) minmax(21rem, 0.78fr);
+    gap: clamp(2rem, 5vw, 4.75rem);
+    align-items: center;
+  }
+
+  .narrative-page__hero-copy {
+    width: min(100%, 56rem);
   }
 
   .narrative-page__back {
     display: inline-flex;
     margin-bottom: 1.75rem;
-    color: var(--color-base-600);
+    color: color-mix(in oklch, var(--color-base-100) 76%, white);
     font-family: var(--font-sans);
     font-size: 0.875rem;
     font-weight: 700;
@@ -275,14 +298,14 @@ const contentShellClass = hasRailContent
 
   .narrative-page__back:hover,
   .narrative-page__back:focus-visible {
-    color: var(--color-accent-700);
+    color: var(--color-accent-300);
   }
 
   .narrative-page__meta {
     display: flex;
     flex-wrap: wrap;
     gap: 0.65rem 1rem;
-    color: var(--color-base-500);
+    color: color-mix(in oklch, var(--color-base-100) 78%, white);
     font-family: var(--font-sans);
     font-size: 0.75rem;
     font-weight: 800;
@@ -294,58 +317,83 @@ const contentShellClass = hasRailContent
   .narrative-page__meta span:first-child {
     border-left: 1px solid var(--color-accent-500);
     padding-left: 1rem;
-    color: var(--color-base-900);
+    color: white;
   }
 
   .narrative-page h1 {
-    max-width: 68rem;
-    margin: 1.15rem 0 0;
-    color: var(--color-base-950);
+    max-width: 62rem;
+    margin: 1.2rem 0 0;
+    color: white;
     font-family: var(--font-display);
-    font-size: clamp(2.15rem, 3.9vw, 4.4rem);
+    font-size: clamp(2.4rem, 4.4vw, 4.85rem);
     font-weight: 500;
-    letter-spacing: -0.045em;
-    line-height: 1.03;
+    letter-spacing: -0.047em;
+    line-height: 1.02;
     text-wrap: balance;
   }
 
   .narrative-page__deck {
-    max-width: 48rem;
+    max-width: 45rem;
     margin: 1.35rem 0 0;
-    color: var(--color-base-700);
+    color: color-mix(in oklch, var(--color-base-100) 90%, white);
     font-family: var(--font-sans);
     font-size: clamp(1.0625rem, 1.45vw, 1.25rem);
     line-height: 1.72;
   }
 
   .narrative-page__hero-figure {
-    margin: clamp(2rem, 4vw, 3rem) 0 0;
+    position: relative;
+    align-self: stretch;
+    min-height: clamp(23rem, 36vw, 35rem);
+    margin: 0;
     overflow: hidden;
-    border: 1px solid var(--color-base-200);
-    border-radius: 1.5rem;
-    background: white;
-    box-shadow: var(--shadow-xl);
+    border: 1px solid color-mix(in oklch, var(--color-base-100) 18%, transparent);
+    border-radius: 1.35rem;
+    background: var(--color-base-950);
+    box-shadow:
+      0 28px 80px rgba(0, 0, 0, 0.36),
+      0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  }
+
+  .narrative-page__hero-figure::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(6, 23, 47, 0.02), rgba(6, 23, 47, 0.22)),
+      linear-gradient(90deg, rgba(6, 23, 47, 0.12), transparent 34%);
   }
 
   .narrative-page__hero-figure img {
     display: block;
     width: 100%;
-    height: clamp(18rem, 38vw, 32rem);
+    height: 100%;
+    min-height: inherit;
     object-fit: cover;
+    filter: saturate(0.92) contrast(1.05);
   }
 
   .narrative-page__hero-figure figcaption {
-    border-top: 1px solid var(--color-base-200);
-    padding: 0.85rem 1rem;
-    color: var(--color-base-500);
+    position: absolute;
+    right: 0.85rem;
+    bottom: 0.85rem;
+    z-index: 1;
+    max-width: calc(100% - 1.7rem);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    background: rgba(6, 23, 47, 0.72);
+    padding: 0.5rem 0.75rem;
+    color: color-mix(in oklch, var(--color-base-100) 86%, white);
     font-family: var(--font-sans);
-    font-size: 0.8125rem;
-    line-height: 1.55;
+    font-size: 0.75rem;
+    line-height: 1.35;
+    backdrop-filter: blur(10px);
   }
 
   .narrative-page__content-shell {
     display: block;
-    padding-top: clamp(2.75rem, 5vw, 4.5rem);
+    padding-top: clamp(3rem, 5vw, 4.75rem);
     padding-bottom: clamp(3.5rem, 7vw, 6rem);
   }
 
@@ -776,7 +824,28 @@ const contentShellClass = hasRailContent
     transform: translateY(-1px);
   }
 
+  @media (max-width: 1100px) {
+    .narrative-page__hero-shell--split {
+      grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.68fr);
+      gap: clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .narrative-page h1 {
+      font-size: clamp(2.3rem, 5vw, 4.1rem);
+    }
+  }
+
   @media (max-width: 980px) {
+    .narrative-page__hero-shell--split {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .narrative-page__hero-figure {
+      min-height: clamp(18rem, 54vw, 28rem);
+      width: min(100%, 42rem);
+    }
+
     .narrative-page__content-shell--with-rail {
       grid-template-columns: 1fr;
       gap: 3rem;
@@ -804,12 +873,13 @@ const contentShellClass = hasRailContent
     }
 
     .narrative-page__hero-shell {
-      padding-top: clamp(4.75rem, 18vw, 6.25rem);
-      padding-bottom: clamp(2.25rem, 10vw, 3.25rem);
+      min-height: auto;
+      padding-top: clamp(5.5rem, 20vw, 6.75rem);
+      padding-bottom: clamp(2.5rem, 11vw, 3.5rem);
     }
 
     .narrative-page h1 {
-      font-size: clamp(2rem, 10vw, 3rem);
+      font-size: clamp(2.05rem, 10vw, 3.05rem);
       letter-spacing: -0.045em;
       line-height: 1.04;
     }
@@ -839,11 +909,8 @@ const contentShellClass = hasRailContent
     }
 
     .narrative-page__hero-figure {
+      min-height: 18rem;
       border-radius: 1.1rem;
-    }
-
-    .narrative-page__hero-figure img {
-      height: 17rem;
     }
 
     .narrative-page__rail-cta,
