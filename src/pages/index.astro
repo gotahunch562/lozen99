@@ -4,13 +4,13 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import { createWebPageJsonLd } from "@/lib/seo/jsonLd";
 // Landing
 import Hero from "@/components/landing/Hero.astro";
-import Intro from "@/components/landing/Intro.astro";
-import ServicePreview from "@/components/landing/ServicePreview.astro";
-import Why from "@/components/landing/Why.astro";
-import Process from "@/components/landing/Process.astro";
-import CustomerPreview from "@/components/landing/CustomerPreview.astro";
-import Upgrade from "@/components/ctas/Upgrade.astro";
-import BlogPreview from "@/components/landing/BlogPreview.astro";
+import BenefitsUtilizationSection from "@/components/landing/BenefitsUtilizationSection.astro";
+import IntelligenceAnalysisSection from "@/components/landing/IntelligenceAnalysisSection.astro";
+import PolicyGovernanceTrackerSection from "@/components/landing/PolicyGovernanceTrackerSection.astro";
+import WhatWeDoSection from "@/components/landing/WhatWeDoSection.astro";
+import AdvisoryFoundationSection from "@/components/landing/AdvisoryFoundationSection.astro";
+import AiGovernanceRetentionSection from "@/components/landing/AiGovernanceRetentionSection.astro";
+import BlogPreviewSection from "@/components/landing/BlogPreviewSection.astro";
 
 const title = "Lozen Advisory | Menopause at Work & Leadership Advisory";
 const description =
@@ -32,11 +32,11 @@ const pageJsonLd = createWebPageJsonLd({
   jsonLd={pageJsonLd}
 >
   <Hero />
-  <Intro />
-  <Upgrade />
-  <ServicePreview />
-  <Why />
-  <Process />
-  <CustomerPreview />
-  <BlogPreview />
+  <BenefitsUtilizationSection />
+  <AiGovernanceRetentionSection />
+  <IntelligenceAnalysisSection />
+  <PolicyGovernanceTrackerSection />
+  <WhatWeDoSection />
+  <AdvisoryFoundationSection />
+  <BlogPreviewSection />
 </BaseLayout>
