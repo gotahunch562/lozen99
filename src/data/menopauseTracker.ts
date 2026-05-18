@@ -62,6 +62,17 @@ export const FEDERAL: LegislationRow[] = [
     notes: "S.1320 names servicewomen experiencing menopause as the population requiring research. The findings then require implementation before they reach the women named. The delay compounds across stages: vote, findings, implementation. The population absorbs the full gap.",
     url: "https://www.congress.gov/bill/119th-congress/senate-bill/1320",
   },
+  {
+    jurisdiction: "Federal",
+    bill: "S.4503 (Murray) — Advancing Menopause Care and Mid-Life Women's Health Act",
+    focus: "Omnibus / Research",
+    status: "Introduced May 12, 2026. Referred to Senate HELP Committee. 16 cosponsors. Bipartisan.",
+    assumes: "Federal investment across six mechanisms — NIH research grants, CDC public health research, public health promotion grants, national awareness program, provider training grants, and Centers of Excellence — totaling $275M over five years will address structural gaps in menopause care at scale",
+    cannotMeasure: "S.4503 names the population experiencing menopause as the reason for $275 million in federal investment. Every mechanism it funds produces findings, materials, training programs, and coordination structures. None produce clinical change at the individual level until they travel through the full implementation pipeline. The woman experiencing perimenopause today absorbs the gap between authorization, appropriation, grant award, research completion, dissemination, and clinical behavior change. The bill creates a public data dashboard drawing from surveillance and clinical records. The dashboard will see what those systems recorded.",
+    classification: "Dashboard Delay",
+    notes: "Four provisions are analytically significant. First, Section 2(d) mandates occupational health research on workplace stressors related to menopausal symptoms — the only federal bill in this tracker that names the workplace as a specific research domain. Second, the NIH dashboard requirement creates permanent federal data infrastructure, but draws from surveillance and clinical entry points. Third, the awareness program explicitly includes first responders as a target audience — no other bill in this tracker names emergency medical service providers. Fourth, this bill was introduced in the 118th Congress and did not advance. Reintroduction with 16 cosponsors does not resolve the prior session failure.",
+    url: "https://www.congress.gov/bill/119th-congress/senate-bill/4503",
+  },
 ];
 export const ENACTED: LegislationRow[] = [
   {
