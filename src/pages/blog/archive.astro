@@ -3,6 +3,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import { createCollectionPageJsonLd } from "@/lib/seo/jsonLd";
 
 // Content
 import { getCollection } from "astro:content";
@@ -114,9 +115,25 @@ if (uncategorizedPosts.length > 0) {
 const title = "Research Archive | Lozen Advisory";
 const description =
   "Complete archive of Lozen Advisory research, analysis, policy commentary, and performance-protection articles.";
+
+const collectionJsonLd = createCollectionPageJsonLd({
+  title,
+  description,
+  href: "/blog/archive",
+  items: livePosts.map((post) => ({
+    title: getData(post).title,
+    href: getPostHref(post),
+    description: getExcerpt(post),
+  })),
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: "Research & Analysis", href: "/blog" },
+    { name: "Resource Library", href: "/blog/archive" },
+  ],
+});
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} jsonLd={collectionJsonLd}>
   <section class="bg-gradient-to-b from-base-200 via-white to-base-100">
     <Wrapper variant="standard" class="py-20 lg:py-28">
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">

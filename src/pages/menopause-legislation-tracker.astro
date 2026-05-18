@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import { createDatasetJsonLd } from "@/lib/seo/jsonLd";
 
 import {
   FEDERAL,
@@ -16,28 +17,22 @@ const title = "Menopause Legislation Tracker 2026";
 const description =
   "A governance audit of state-by-state workplace menopause legislation. Each instrument is classified by its structural activation condition and the population its disclosure requirement does not reach.";
 
-const reportSchema = {
-  "@context": "https://schema.org",
-  "@type": "Report",
-  name: "Menopause Legislation Tracker 2026",
-  description:
-    "An institutional audit of state-by-state menopause policy. Lozen Advisory classifies legislative instruments by their structural assumptions and the specific populations they architecturally exclude.",
-  url: "https://www.lozenadvisory.com/menopause-legislation-tracker",
-  author: {
-    "@type": "Organization",
-    name: "Lozen Advisory",
-    url: "https://www.lozenadvisory.com",
-  },
+const trackerJsonLd = createDatasetJsonLd({
+  name: title,
+  description,
+  href: "/menopause-legislation-tracker",
   datePublished: "2026-04-15",
   dateModified: "2026-04-30",
-  keywords:
-    "menopause legislation, menopause workplace policy, menopause benefits, disclosure-dependent systems, Invisible Attrition, Tacere",
-  audience: {
-    "@type": "Audience",
-    audienceType: "Governance and Policy Leaders",
-  },
-};
-
+  creatorName: "Lozen Advisory LLC",
+  keywords: [
+    "menopause legislation",
+    "menopause workplace policy",
+    "menopause benefits",
+    "disclosure-dependent systems",
+    "Invisible Attrition",
+    "Tacere",
+  ],
+});
 const focusClassByLabel: Record<string, string> = {
   Workplace: "lozen-data-badge--focus-workplace",
   Insurance: "lozen-data-badge--focus-insurance",
@@ -192,8 +187,7 @@ const mobileLabelClass = "lozen-tracker-mobile-label";
 const mobileValueClass = "lozen-tracker-mobile-value";
 ---
 
-<BaseLayout title={title} description={description}>
-  <script type="application/ld+json" set:html={JSON.stringify(reportSchema)} />
+<BaseLayout title={title} description={description} jsonLd={trackerJsonLd}>
 
   <main class="lozen-tracker-page">
     <section class="lozen-tracker-hero">

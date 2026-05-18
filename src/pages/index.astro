@@ -1,6 +1,7 @@
 ---
 // Fundations
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { createWebPageJsonLd } from "@/lib/seo/jsonLd";
 // Landing
 import Hero from "@/components/landing/Hero.astro";
 import Intro from "@/components/landing/Intro.astro";
@@ -10,11 +11,25 @@ import Process from "@/components/landing/Process.astro";
 import CustomerPreview from "@/components/landing/CustomerPreview.astro";
 import Upgrade from "@/components/ctas/Upgrade.astro";
 import BlogPreview from "@/components/landing/BlogPreview.astro";
+
+const title = "Lozen Advisory | Menopause at Work & Leadership Advisory";
+const description =
+  "Governance advisory examining menopause at work. We isolate non-disclosure gaps that render predictive talent analytics and retention metrics blind.";
+const canonical = "https://www.lozenadvisory.com/";
+
+const pageJsonLd = createWebPageJsonLd({
+  title,
+  description,
+  href: canonical,
+  image: "/images/herobg.webp",
+});
 ---
 
 <BaseLayout
-  title="Lozen Advisory | Menopause at Work & Leadership Advisory"
-  description="Governance advisory examining menopause at work. We isolate non-disclosure gaps that render predictive talent analytics and retention metrics blind."
+  title={title}
+  description={description}
+  canonical={canonical}
+  jsonLd={pageJsonLd}
 >
   <Hero />
   <Intro />

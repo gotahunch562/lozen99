@@ -1,7 +1,8 @@
 ---
 import NarrativePage from "@/components/authority/NarrativePage.astro";
+import { createServiceJsonLd } from "@/lib/seo/jsonLd";
 
-const { frontmatter } = Astro.props;
+const { frontmatter, slug } = Astro.props;
 
 import { getCollection } from "astro:content";
 
@@ -16,17 +17,21 @@ const description =
   frontmatter.shortDescription ||
   frontmatter.description;
 
-const pageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
+const serviceSlug =
+  slug ||
+  frontmatter.slug ||
+  frontmatter.title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+const serviceHref = `/services/${serviceSlug}`;
+
+const pageJsonLd = createServiceJsonLd({
   name: frontmatter.title,
   description,
-  provider: {
-    "@type": "Organization",
-    name: "Lozen Advisory LLC",
-    url: "https://www.lozenadvisory.com",
-  },
-};
+  href: serviceHref,
+  serviceType: frontmatter.category || "Governance advisory",
+});
 ---
 
 <NarrativePage

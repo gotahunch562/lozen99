@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { JsonLdObject } from "@/lib/seo/jsonLd";
 
 interface ReportLink {
   href: string;
@@ -9,7 +10,7 @@ interface ReportLink {
 interface Props {
   title: string;
   metaDescription: string;
-  articleJsonLd: Record<string, unknown>;
+  articleJsonLd: JsonLdObject | JsonLdObject[];
   dateLabel: string;
   reportNumber: string;
   ogImage?: string;
@@ -44,12 +45,8 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
   ogImage={ogImage}
   ogImageAlt={ogImageAlt}
   ogType="article"
+  jsonLd={articleJsonLd}
 >
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify(articleJsonLd)}
-  />
-
   <article class="executive-report">
     <header class="executive-report__hero">
       <div class="executive-report__shell executive-report__hero-shell">

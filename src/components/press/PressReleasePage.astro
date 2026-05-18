@@ -2,6 +2,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import { createNewsArticleJsonLd } from "@/lib/seo/jsonLd";
 
 interface Props {
   title: string;
@@ -65,26 +66,21 @@ const releaseDetails = [
   { label: "Media Contact", value: mediaEmail, href: `mailto:${mediaEmail}` },
 ];
 
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  headline: title,
+const articleJsonLd = createNewsArticleJsonLd({
+  title,
   description,
+  href: canonical,
+  image,
   datePublished: publishedDateIso,
   dateModified: publishedDateIso,
-  ...(image ? { image: [`https://www.lozenadvisory.com${image}`] } : {}),
-  author: {
-    "@type": "Organization",
-    name: "Lozen Advisory LLC",
-    url: "https://www.lozenadvisory.com",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Lozen Advisory LLC",
-    url: "https://www.lozenadvisory.com",
-  },
-  mainEntityOfPage: canonical,
-};
+  section: category,
+  dateline: "Atlanta, GA",
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: "News & Press", href: "/news-press" },
+    { name: title, href: canonical },
+  ],
+});
 ---
 
 <BaseLayout
@@ -94,9 +90,8 @@ const articleJsonLd = {
   ogImage={image}
   ogImageAlt={imageAlt}
   ogType="article"
+  jsonLd={articleJsonLd}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)}></script>
-
   <article class="press-release-page">
     <header class="press-release-page__hero">
       <Wrapper variant="standard" class="relative z-10">

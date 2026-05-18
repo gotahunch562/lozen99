@@ -1,5 +1,6 @@
 ---
 import NarrativePage from "@/components/authority/NarrativePage.astro";
+import { createEventJsonLd } from "@/lib/seo/jsonLd";
 
 const title = "Akilah E. Kamaria Presenting at the 2026 LIWOCA CLE Conference";
 const seoTitle =
@@ -9,40 +10,25 @@ const description =
 const canonical =
   "https://www.lozenadvisory.com/events/akilah-kamaria-presenting-at-2026-liwoca-cle-conference";
 
-const pageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Event",
+const pageJsonLd = createEventJsonLd({
   name: "Navigating Health Conditions Without Workplace Disclosure",
   description,
+  href: canonical,
   startDate: "2026-03-26",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   eventStatus: "https://schema.org/EventCompleted",
   location: {
-    "@type": "Place",
     name: "Loews Atlanta Hotel",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Atlanta",
-      addressRegion: "GA",
-      addressCountry: "US",
-    },
-  },
-  performer: {
-    "@type": "Person",
-    name: "Akilah E. Kamaria",
+    address: "Atlanta, GA, US",
   },
   organizer: {
-    "@type": "Organization",
     name: "Leadership Institute for Women of Color Attorneys",
-    url: "https://www.liwoca.org/",
+    href: "https://www.liwoca.org/",
   },
-  publisher: {
-    "@type": "Organization",
-    name: "Lozen Advisory",
-    url: "https://www.lozenadvisory.com",
+  performer: {
+    name: "Akilah E. Kamaria",
   },
-  url: canonical,
-};
+});
 ---
 
 <NarrativePage

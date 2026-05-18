@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { JsonLdObject } from "@/lib/seo/jsonLd";
 
 interface NarrativeRailItem {
   label: string;
@@ -39,7 +40,7 @@ interface Props {
   heroImagePosition?: string;
   textHeroLayout?: "article" | "wide";
   textHeroSize?: "standard" | "compact";
-  articleJsonLd?: Record<string, unknown>;
+  articleJsonLd?: JsonLdObject | JsonLdObject[];
   railTitle?: string;
   railItems?: NarrativeRailItem[];
   railLinks?: NarrativeLink[];
@@ -117,16 +118,8 @@ const contentShellClass = hasRailContent
   ogImage={pageImage}
   ogImageAlt={pageImageAlt}
   ogType="article"
+  jsonLd={articleJsonLd}
 >
-  {
-    articleJsonLd && (
-      <script
-        type="application/ld+json"
-        set:html={JSON.stringify(articleJsonLd)}
-      ></script>
-    )
-  }
-
   <article class="narrative-page">
     <header class={heroClass}>
       <div class={heroShellClass}>

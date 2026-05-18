@@ -6,6 +6,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import { createArticleJsonLd } from "@/lib/seo/jsonLd";
 // Sections
 import BlogCard from "@/components/blog/BlogCard.astro";
 import LegalSeriesConnector from "@/components/series/LegalSeriesConnector.astro";
@@ -34,6 +35,26 @@ const seoDescription =
 const ogImage = frontmatter.image?.url?.src ?? frontmatter.image?.url;
 const ogImageAlt = frontmatter.image?.alt || frontmatter.title;
 
+const publishedDateIso = (frontmatter.datePublished || frontmatter.pubDate)?.toISOString?.() || new Date(frontmatter.datePublished || frontmatter.pubDate).toISOString();
+const modifiedDateIso = (frontmatter.dateModified || frontmatter.datePublished || frontmatter.pubDate)?.toISOString?.() || new Date(frontmatter.dateModified || frontmatter.datePublished || frontmatter.pubDate).toISOString();
+
+const articleJsonLd = createArticleJsonLd({
+  title: frontmatter.title,
+  description: seoDescription,
+  href: `/blog/${currentSlug}`,
+  image: ogImage,
+  datePublished: publishedDateIso,
+  dateModified: modifiedDateIso,
+  type: "BlogPosting",
+  section: frontmatter.category || frontmatter.tags?.[0],
+  keywords: frontmatter.tags,
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: "Research & Analysis", href: "/blog" },
+    { name: frontmatter.title, href: `/blog/${currentSlug}` },
+  ],
+});
+
 const tags = (frontmatter.tags ?? []).map((tag) => {
   const raw = (tag ?? "").toString().trim();
   const slugSource = raw
@@ -55,6 +76,7 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
   ogImage={ogImage}
   ogImageAlt={ogImageAlt}
   ogType="article"
+  jsonLd={articleJsonLd}
 >
   <section class="bg-gradient-to-t from-base-200 to-white overflow-hidden">
     <Wrapper variant="standard" class="pt-24 lg:pt-32">

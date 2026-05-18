@@ -1,5 +1,6 @@
 ---
 import NarrativePage from "@/components/authority/NarrativePage.astro";
+import { createArticleJsonLd, createCreativeWorkSeriesJsonLd } from "@/lib/seo/jsonLd";
 
 const title = "The Architecture of Invisible Attrition — Executive Report Series";
 
@@ -16,24 +17,6 @@ const image = "/images/authority/architecture-of-invisible-attrition-series.webp
 
 const imageAlt =
   "A diagnostic visualization of corporate retention infrastructure and the data gaps that remain outside formal reporting systems.";
-
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  headline: seoTitle,
-  description: metaDescription,
-  author: {
-    "@type": "Person",
-    name: "Akilah E. Kamaria",
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Lozen Advisory",
-    url: "https://www.lozenadvisory.com",
-  },
-  url: canonical,
-  image: `https://www.lozenadvisory.com${image}`,
-};
 
 const reports = [
   {
@@ -116,6 +99,33 @@ const frameworkLinks = [
     href: "/retention-risk-analysis",
   },
 ];
+
+
+const articleJsonLd = createArticleJsonLd({
+  title: seoTitle,
+  description: metaDescription,
+  href: canonical,
+  image,
+  type: "Report",
+  section: "Executive Report Series",
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: "Research & Analysis", href: "/blog" },
+    { name: "The Architecture of Invisible Attrition", href: canonical },
+  ],
+});
+
+const seriesJsonLd = createCreativeWorkSeriesJsonLd({
+  name: title,
+  description: metaDescription,
+  href: canonical,
+  items: reports.map((report, index) => ({
+    title: report.title,
+    href: report.href,
+    position: index + 1,
+    description: report.focus,
+  })),
+});
 ---
 
 <NarrativePage
@@ -131,7 +141,7 @@ const frameworkLinks = [
   backLabel="Back to Research"
   heroImage={image}
   heroImageAlt={imageAlt}
-  articleJsonLd={articleJsonLd}
+  articleJsonLd={[articleJsonLd, seriesJsonLd]}
 >
   <p>
     Lozen Advisory has released a four-part audit of corporate retention infrastructure.

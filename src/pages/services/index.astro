@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import NarrativePage from "@/components/authority/NarrativePage.astro";
 import servicePlaceholder from "@/images/services/serviceplaceholder.webp";
+import { createServiceJsonLd } from "@/lib/seo/jsonLd";
 
 const title = "What We Do";
 
@@ -39,31 +40,17 @@ const services = [
   },
 ];
 
-const pageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
+const pageJsonLd = createServiceJsonLd({
   name: seoTitle,
   description,
-  url: canonical,
-  provider: {
-    "@type": "Organization",
-    name: "Lozen Advisory LLC",
-    url: "https://www.lozenadvisory.com",
-  },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Lozen Advisory Services",
-    itemListElement: services.map((service) => ({
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: service.title,
-        description: service.description,
-        url: `https://www.lozenadvisory.com${service.href}`,
-      },
-    })),
-  },
-};
+  href: canonical,
+  serviceType: "Governance advisory",
+  offers: services.map((service) => ({
+    name: service.title,
+    description: service.description,
+    href: service.href,
+  })),
+});
 ---
 
 <NarrativePage

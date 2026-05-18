@@ -45,6 +45,14 @@ export interface NewsArticleJsonLdInput extends BasePageInput {
   dateline?: string;
 }
 
+export interface WebPageJsonLdInput {
+  title: string;
+  description?: string;
+  href: string;
+  image?: string;
+  breadcrumbs?: BreadcrumbItemInput[];
+}
+
 export interface CollectionPageJsonLdInput {
   title: string;
   description?: string;
@@ -54,6 +62,7 @@ export interface CollectionPageJsonLdInput {
     href: string;
     description?: string;
   }>;
+  breadcrumbs?: BreadcrumbItemInput[];
 }
 
 export interface CreativeWorkSeriesJsonLdInput {
@@ -297,31 +306,71 @@ export const createNewsArticleJsonLd = ({
     : article;
 };
 
+export const createWebPageJsonLd = ({
+  title,
+  description,
+  href,
+  image,
+  breadcrumbs,
+}: WebPageJsonLdInput): JsonLdObject | JsonLdObject[] => {
+  const page: JsonLdObject = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${absoluteUrl(href)}#webpage`,
+    name: title,
+    description,
+    url: absoluteUrl(href),
+    isPartOf: {
+      "@id": `${SITE_URL}/#website`,
+    },
+    about: {
+      "@id": `${SITE_URL}/#organization`,
+    },
+    primaryImageOfPage: image
+      ? {
+          "@type": "ImageObject",
+          url: absoluteUrl(image),
+        }
+      : undefined,
+  };
+
+  return breadcrumbs?.length
+    ? [page, createBreadcrumbJsonLd(breadcrumbs)]
+    : page;
+};
+
 export const createCollectionPageJsonLd = ({
   title,
   description,
   href,
   items = [],
-}: CollectionPageJsonLdInput): JsonLdObject => ({
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: title,
-  description,
-  url: absoluteUrl(href),
-  publisher: {
-    "@id": `${SITE_URL}/#organization`,
-  },
-  mainEntity: {
-    "@type": "ItemList",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      url: absoluteUrl(item.href),
-      name: item.title,
-      description: item.description,
-    })),
-  },
-});
+  breadcrumbs,
+}: CollectionPageJsonLdInput): JsonLdObject | JsonLdObject[] => {
+  const page: JsonLdObject = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: title,
+    description,
+    url: absoluteUrl(href),
+    publisher: {
+      "@id": `${SITE_URL}/#organization`,
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: items.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: absoluteUrl(item.href),
+        name: item.title,
+        description: item.description,
+      })),
+    },
+  };
+
+  return breadcrumbs?.length
+    ? [page, createBreadcrumbJsonLd(breadcrumbs)]
+    : page;
+};
 
 export const createServiceJsonLd = ({
   name,
@@ -453,13 +502,17 @@ export const createDatasetJsonLd = ({
   })),
 });
 
+const stripContext = (item: JsonLdObject): JsonLdObject => {
+  const { ["@context"]: _context, ...node } = item;
+  return node;
+};
+
 export const createJsonLdGraph = (
   items: Array<JsonLdObject | JsonLdObject[] | false | null | undefined>,
 ): JsonLdObject => ({
   "@context": "https://schema.org",
-  "@graph": compact(items.flat()),
+  "@graph": compact(items.flat()).map(stripContext),
 });
 
-export const serializeJsonLd = (
-  value: JsonLdObject | JsonLdObject[],
-): string => JSON.stringify(value).replace(/</g, "\\u003c");
+export const serializeJsonLd = (value: JsonLdObject | JsonLdObject[]): string =>
+  JSON.stringify(value).replace(/</g, "\\u003c");

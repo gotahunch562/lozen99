@@ -3,6 +3,7 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import { createCollectionPageJsonLd } from "@/lib/seo/jsonLd";
 
 // Content
 import { getCollection } from "astro:content";
@@ -151,9 +152,40 @@ const title = "Blog | Lozen Advisory";
 
 const description =
   "Articles for women navigating perimenopause, disclosure, performance pressure, leadership, career protection, and private decision-making at work.";
+
+const collectionJsonLd = createCollectionPageJsonLd({
+  title,
+  description,
+  href: "/blog",
+  items: [
+    ...(featuredPost
+      ? [
+          {
+            title: getData(featuredPost).title,
+            href: getPostHref(featuredPost),
+            description: getExcerpt(featuredPost),
+          },
+        ]
+      : []),
+    ...latestPosts.map((post) => ({
+      title: getData(post).title,
+      href: getPostHref(post),
+      description: getExcerpt(post),
+    })),
+    ...executiveReports.map((report) => ({
+      title: report.title,
+      href: report.href,
+      description: report.description,
+    })),
+  ],
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: "Research & Analysis", href: "/blog" },
+  ],
+});
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} jsonLd={collectionJsonLd}>
   <section class="bg-gradient-to-b from-base-200 via-white to-base-100">
     <Wrapper variant="standard" class="py-20 lg:py-28">
       <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">

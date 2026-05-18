@@ -1,5 +1,6 @@
 ---
 import NarrativePage from "@/components/authority/NarrativePage.astro";
+import { createCollectionPageJsonLd } from "@/lib/seo/jsonLd";
 
 const title = "Speaking, Sessions, and Appearances";
 const seoTitle = "Events | Lozen Advisory";
@@ -28,18 +29,20 @@ const speakingTopics = [
   "Leadership, disclosure, workforce risk, AI implementation burden, and performance protection",
 ];
 
-const pageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: seoTitle,
+const pageJsonLd = createCollectionPageJsonLd({
+  title: seoTitle,
   description: metaDescription,
-  url: canonical,
-  publisher: {
-    "@type": "Organization",
-    name: "Lozen Advisory",
-    url: "https://www.lozenadvisory.com",
-  },
-};
+  href: canonical,
+  items: events.map((event) => ({
+    title: event.title,
+    href: event.href,
+    description: event.description,
+  })),
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: "Events", href: "/events" },
+  ],
+});
 ---
 
 <NarrativePage

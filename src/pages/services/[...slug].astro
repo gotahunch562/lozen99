@@ -16,6 +16,6 @@ const { page } = Astro.props;
 const { Content } = await render(page);
 ---
 
-<ServicesLayout frontmatter={page.data}>
+<ServicesLayout frontmatter={page.data} slug={page.id}>
   <Content />
 </ServicesLayout>

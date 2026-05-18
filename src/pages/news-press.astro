@@ -2,25 +2,47 @@
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import { createCollectionPageJsonLd } from "@/lib/seo/jsonLd";
 
 const mediaEmail = "media@lozenadvisory.com";
 
 const releases = [
   {
     date: "May 19, 2026",
-    category: "Press Release",
-    headline: "The Menopause Benefit Market Built the Wrong Thing. The Data Is Exposing It.",
+    category: "Market Correction",
+    headline: "The Menopause-at-Work Market Followed the Playbook. The Playbook Was Wrong.",
     description:
       "As PwC names menopause a defining women's health opportunity, Lozen Advisory issues a market correction on utilization failure and the false assumption that awareness equals adoption.",
     href: "/menopause-market-correction",
   },
 ];
+
+
+const title = "News & Press | Lozen Advisory";
+const description = "Press releases and media materials from Lozen Advisory LLC.";
+const canonical = "https://www.lozenadvisory.com/news-press";
+
+const collectionJsonLd = createCollectionPageJsonLd({
+  title,
+  description,
+  href: canonical,
+  items: releases.map((release) => ({
+    title: release.headline,
+    href: release.href,
+    description: release.description,
+  })),
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: "News & Press", href: "/news-press" },
+  ],
+});
 ---
 
 <BaseLayout
-  title="News & Press | Lozen Advisory"
-  description="Press releases and media materials from Lozen Advisory LLC."
-  canonical="https://www.lozenadvisory.com/news-press"
+  title={title}
+  description={description}
+  canonical={canonical}
+  jsonLd={collectionJsonLd}
 >
   <main class="bg-base-50">
 
