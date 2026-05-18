@@ -4,18 +4,24 @@ import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import MailerLiteSignup from "@/components/forms/MailerLiteSignup.astro";
 
-const footerLinks = [
+const footerSections = [
   {
-    title: "Navigate",
+    title: "Company",
     links: [
       { label: "What We Do", href: "/services" },
-      { label: "Blog", href: "/blog" },
-      { label: "News & Press", href: "/news-press" },
-      { label: "Tools & Downloads", href: "/tools-resources" },
-      { label: "Why Lozen Advisory", href: "/why-lozen-advisory" },
+      { label: "MAPS Blueprint℠", href: "/booking" },
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
-      { label: "Request Briefing", href: "/request-briefing" },
+      { label: "FAQ", href: "/faq" },
+    ],
+  },
+  {
+    title: "Research",
+    links: [
+      { label: "Blog", href: "/blog" },
+      { label: "Resource Library", href: "/blog/archive" },
+      { label: "News & Press", href: "/news-press" },
+      { label: "Events", href: "/events" },
     ],
   },
   {
@@ -31,10 +37,17 @@ const footerLinks = [
         href: "/disclosure-independence-infrastructure",
       },
       { label: "Retention Risk Analysis", href: "/retention-risk-analysis" },
+    ],
+  },
+  {
+    title: "Tools",
+    links: [
+      { label: "Tools & Downloads", href: "/tools-resources" },
       {
         label: "Menopause Legislation Tracker",
         href: "/menopause-legislation-tracker",
       },
+      { label: "Retention Calculator", href: "/retention-calculator" },
       {
         label: "AI Evaluation Training",
         href: "https://www.executiveaiskills.com/",
@@ -42,17 +55,13 @@ const footerLinks = [
       },
     ],
   },
-  {
-    title: "Access",
-    links: [
-      { label: "MAPS Blueprint℠", href: "/booking" },
-      { label: "Retention Calculator", href: "/retention-calculator" },
-      { label: "Events", href: "/events" },
-      { label: "FAQ", href: "/faq" },
-      { label: "For Women Lawyers", href: "/menopause-support-women-lawyers" },
-      { label: "Normal Blood Tests", href: "/normal-blood-tests-feel-off" },
-    ],
-  },
+];
+
+const utilityLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Service", href: "/terms-of-service" },
+  { label: "About AI", href: "/about-ai" },
+  { label: "Request Briefing", href: "/request-briefing" },
 ];
 ---
 
@@ -70,27 +79,27 @@ const footerLinks = [
 
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute inset-0 bg-base-950/62"
+      class="pointer-events-none absolute inset-0 bg-base-950/68"
     >
     </div>
 
     <div
       aria-hidden="true"
-      class="pointer-events-none absolute inset-0 bg-gradient-to-r from-base-950/80 via-base-950/42 to-base-950/68"
+      class="pointer-events-none absolute inset-0 bg-gradient-to-r from-base-950/86 via-base-950/52 to-base-950/76"
     >
     </div>
   </div>
 
   <Wrapper
     variant="standard"
-    class="relative z-10 flex flex-col gap-10 py-10 sm:py-12 lg:min-h-[20rem] lg:py-12"
+    class="relative z-10 flex flex-col gap-8 py-10 sm:py-12 lg:min-h-[20rem] lg:py-12"
   >
-    <div class="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-14">
       <div class="max-w-xl">
         <a
           href="/"
           aria-label="Go to Lozen Advisory home page"
-          class="font-display text-lg font-normal uppercase tracking-[-0.01em] text-white transition-colors hover:text-accent-300"
+          class="font-display text-lg font-normal tracking-[-0.01em] text-white transition-colors hover:text-accent-300"
         >
           Lozen Advisory
         </a>
@@ -100,10 +109,10 @@ const footerLinks = [
           variant="textSM"
           class="mt-5 max-w-md font-sans leading-7 text-white/78"
         >
-          Disclosure-independent performance protection and decision integrity for senior leaders operating under high scrutiny.
+          Governance advisory examining disclosure-dependent data gaps across menopause at work, retention risk, succession exposure, and leadership continuity.
         </Text>
 
-        <div class="mt-7 max-w-md">
+        <div class="mt-6 max-w-md">
           <Text
             tag="p"
             variant="textSM"
@@ -123,9 +132,12 @@ const footerLinks = [
         </div>
       </div>
 
-      <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
+      <nav
+        aria-label="Footer navigation"
+        class="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4 lg:gap-x-8"
+      >
         {
-          footerLinks.map((section) => (
+          footerSections.map((section) => (
             <div>
               <Text
                 tag="h3"
@@ -135,7 +147,7 @@ const footerLinks = [
                 {section.title}
               </Text>
 
-              <ul class="mt-4 space-y-2">
+              <ul class="mt-4 space-y-2.5">
                 {section.links.map((item) => (
                   <li>
                     <a
@@ -152,7 +164,7 @@ const footerLinks = [
             </div>
           ))
         }
-      </div>
+      </nav>
     </div>
 
     <div class="border-t border-white/12 pt-5">
@@ -162,33 +174,16 @@ const footerLinks = [
         </Text>
 
         <div class="flex flex-wrap gap-x-5 gap-y-2">
-          <a
-            href="/privacy-policy"
-            class="font-sans text-xs text-white/68 transition-colors hover:text-accent-300"
-          >
-            Privacy Policy
-          </a>
-
-          <a
-            href="/terms-of-service"
-            class="font-sans text-xs text-white/68 transition-colors hover:text-accent-300"
-          >
-            Terms of Service
-          </a>
-
-          <a
-            href="/about-ai"
-            class="font-sans text-xs text-white/68 transition-colors hover:text-accent-300"
-          >
-            About AI
-          </a>
-
-          <a
-            href="/tools-resources"
-            class="font-sans text-xs text-white/68 transition-colors hover:text-accent-300"
-          >
-            Tools & Resources
-          </a>
+          {
+            utilityLinks.map((link) => (
+              <a
+                href={link.href}
+                class="font-sans text-xs text-white/68 transition-colors hover:text-accent-300"
+              >
+                {link.label}
+              </a>
+            ))
+          }
         </div>
       </div>
     </div>
