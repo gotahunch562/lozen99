@@ -77,7 +77,7 @@ export const POST: APIRoute = async ({ request }) => {
 
   const cleanGroupId = groupId.trim();
 
-  if (!/^\\d+$/.test(cleanGroupId)) {
+  if (!/^\d+$/.test(cleanGroupId)) {
     return jsonResponse(
       { message: "This signup form has an invalid MailerLite group ID." },
       500,
