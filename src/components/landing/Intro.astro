@@ -31,10 +31,10 @@ const introSections = [
 ---
 
 <section class="bg-gradient-to-t from-base-200 via-base-100 to-white">
-  <Wrapper variant="standard" class="py-14 sm:py-18 lg:py-24 xl:py-28">
+  <Wrapper variant="standard" class="py-14 sm:py-18 lg:py-20 xl:py-24">
     <div class="mx-auto max-w-6xl">
       <div
-        class="grid gap-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.55fr)] lg:items-end lg:gap-8"
+        class="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(320px,0.52fr)] lg:items-end lg:gap-8"
       >
         <div>
           <p
@@ -44,7 +44,7 @@ const introSections = [
           </p>
 
           <h2
-            class="mt-5 max-w-5xl font-display text-[2.25rem] font-normal uppercase leading-[1.02] tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-[2.75rem] lg:text-[3.25rem]"
+            class="mt-5 max-w-4xl font-display text-[2rem] font-normal leading-[1.06] tracking-[-0.03em] text-base-950 sm:mt-6 sm:text-[2.4rem] lg:text-[2.85rem]"
           >
             Low benefits utilization?
           </h2>
@@ -55,10 +55,10 @@ const introSections = [
         </p>
       </div>
 
-      <div class="mt-10 grid gap-5 sm:mt-12 sm:grid-cols-2 xl:grid-cols-4">
+      <div class="mt-9 grid gap-5 sm:mt-10 md:grid-cols-2 xl:gap-6">
         {
           introSections.map((section) => (
-            <article class="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-base-400 bg-white p-5 shadow-lg ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-base-50 hover:shadow-xl sm:min-h-[18rem] sm:p-6 lg:rounded-3xl xl:min-h-[20rem]">
+            <article class="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-base-400 bg-white p-6 shadow-lg ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-base-50 hover:shadow-xl sm:min-h-[16rem] lg:rounded-3xl lg:p-7 xl:min-h-[17rem]">
               <div
                 aria-hidden="true"
                 class="absolute inset-x-0 top-0 h-1 bg-accent-500"
@@ -66,14 +66,14 @@ const introSections = [
               </div>
 
               <div>
-                <div class="mb-5 h-8 w-px bg-accent-500 sm:mb-6 sm:h-10">
+                <div class="mb-5 h-8 w-px bg-accent-500 sm:mb-6 sm:h-9">
                 </div>
 
-                <h3 class="font-display text-[1.35rem] font-normal uppercase leading-tight tracking-[-0.015em] text-base-950 sm:text-[1.45rem]">
+                <h3 class="max-w-lg font-display text-[1.35rem] font-normal leading-[1.16] tracking-[-0.015em] text-base-950 sm:text-[1.48rem]">
                   {section.title}
                 </h3>
 
-                <p class="mt-4 font-sans text-[0.9375rem] leading-6 text-base-700 sm:mt-5 sm:text-base sm:leading-7">
+                <p class="mt-4 max-w-2xl font-sans text-base leading-7 text-base-700 sm:mt-5 sm:leading-8">
                   {section.description}
                 </p>
               </div>
