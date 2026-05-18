@@ -6,8 +6,8 @@ datePublished: *id001
 dateModified: 2026-05-05
 category: The Tender Path
 excerpt: From frozen shoulder to 3 a.m. heart palpitations, perimenopause symptoms go far beyond hot flashes. Explore the science of hormonal shifts and find your path back to yourself.
-description: ou feel exhausted, your joints ache, and your sleep is broken yet your labs are normal. Discover why standard tests miss perimenopause and what is actually happening to your body.
-metaDescription: ou feel exhausted, your joints ache, and your sleep is broken yet your labs are normal. Discover why standard tests miss perimenopause and what is actually happening to your body.
+description: "You feel exhausted, your joints ache, and your sleep is broken yet your labs are normal. Learn why standard tests can miss perimenopause."
+metaDescription: "You feel exhausted, your joints ache, and your sleep is broken yet your labs are normal. Learn why standard tests can miss perimenopause."
 image:
   url: /src/images/blog/body_changing.avif
   alt: woman in perimenopause standing still
