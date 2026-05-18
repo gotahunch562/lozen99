@@ -1,6 +1,5 @@
 ---
 // Fundations
-import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 // Components
@@ -17,35 +16,33 @@ allPosts.sort((a, b) => {
 });
 ---
 
-<section class="bg-gradient-to-t from-base-200 to-white">
-  <Wrapper variant="standard" class="py-24 lg:py-32">
-    <div class="max-w-3xl mx-auto text-center">
-      <Text
-        tag="span"
-        variant="textSM"
-        class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
+<section class="bg-gradient-to-t from-base-200 via-base-100 to-white">
+  <Wrapper variant="standard" class="py-14 sm:py-18 lg:py-24 xl:py-28">
+    <div class="mx-auto max-w-3xl text-center">
+      <span
+        class="inline-flex border-l border-accent-500 pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-base-600"
       >
         insights
-      </Text>
+      </span>
 
-      <Text
-        tag="h1"
-        variant="displayXL"
-        class="mt-8 uppercase font-display text-base-900"
+      <h2
+        class="mt-5 font-display text-[2.25rem] font-normal uppercase leading-[1.02] tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-[2.75rem] lg:text-[3.25rem]"
       >
         Menopause at Work
-      </Text>
+      </h2>
 
-      <Text tag="p" variant="textBase" class="mt-4 text-base-600 text-balance">
+      <p
+        class="mx-auto mt-4 max-w-2xl font-sans text-base leading-7 text-base-700 text-balance sm:text-[1.0625rem] sm:leading-8"
+      >
         Legislative analysis, Clinical reality, Workplace systems, & Self.
         <br />
         <span class="italic">
           What do we write about? What matters to her.
         </span>
-      </Text>
+      </p>
     </div>
 
-    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+    <div class="mt-10 grid grid-cols-1 gap-5 sm:mt-12 md:grid-cols-2">
       {allPosts.slice(0, 2).map((post) => <BlogCard post={post} />)}
     </div>
 
@@ -54,7 +51,7 @@ allPosts.sort((a, b) => {
       href="/blog"
       variant="default"
       size="base"
-      class="mx-auto mt-12 w-fit"
+      class="mx-auto mt-10 w-fit sm:mt-12"
     >
       View all articles
     </Button>
