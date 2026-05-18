@@ -4,102 +4,86 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import MailerLiteSignup from "@/components/forms/MailerLiteSignup.astro";
 ---
 
-<section class="bg-gradient-to-b from-base-100 to-white">
-  <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20 xl:py-24">
-    <div
-      class="overflow-hidden rounded-2xl border border-base-300 bg-base-950 shadow-2xl ring-1 ring-base-950/10 lg:rounded-3xl"
-    >
-      <div
-        class="grid gap-0 lg:grid-cols-[minmax(0,0.94fr)_minmax(320px,0.56fr)]"
-      >
-        <div class="p-6 sm:p-8 lg:p-12">
-          <p
-            class="border-l border-accent-500 pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-base-300"
-          >
-            AI Governance & Retention Risk
-          </p>
+<section class="lozen-home-section lozen-home-section--tight bg-white">
+  <Wrapper variant="standard" class="py-0">
+    <div class="lozen-home-container lozen-home-container--wide">
+      <div class="lozen-home-feature-panel lozen-home-feature-panel--navy">
+        <div
+          class="grid gap-0 lg:grid-cols-[minmax(0,0.98fr)_minmax(320px,0.52fr)]"
+        >
+          <div class="p-6 sm:p-8 lg:p-12 xl:p-14">
+            <p class="lozen-home-eyebrow">AI Governance & Retention Risk</p>
 
-          <h2
-            class="mt-6 max-w-3xl font-display text-[2.05rem] font-normal leading-[1.08] tracking-[-0.032em] text-white sm:mt-7 sm:text-[2.45rem] lg:text-[2.9rem]"
-          >
-            AI is increasing workload.
-          </h2>
+            <h2 class="lozen-home-title mt-5 text-white sm:mt-6">
+              AI is increasing workload.
+            </h2>
 
-          <p
-            class="mt-5 max-w-3xl font-sans text-base leading-7 text-base-200 sm:mt-6 sm:text-[1.0625rem] sm:leading-8"
-          >
-            The Power User Trap℠ begins when high performers become the informal validation layer for AI adoption. They learn the tools first, troubleshoot failures, verify outputs, train colleagues, and absorb the cognitive burden while standard productivity metrics show improvement.
-          </p>
+            <div class="mt-5 max-w-3xl sm:mt-6">
+              <p class="lozen-home-deck text-base-100">
+                The Power User Trap℠ begins when high performers become the informal validation layer for AI adoption. They learn the tools first, troubleshoot failures, verify outputs, train colleagues, and absorb the cognitive burden while standard productivity metrics show improvement.
+              </p>
 
-          <p
-            class="mt-5 max-w-3xl font-sans text-base leading-7 text-base-200 sm:text-[1.0625rem] sm:leading-8"
-          >
-            The organization sees adoption. It does not see the epistemic load and concentration of oversight work. By the time the exit appears in retention data, the institutional knowledge has already left.
-          </p>
+              <p class="lozen-home-deck mt-4 text-base-100">
+                The organization sees adoption. It does not see the epistemic load and concentration of oversight work. By the time the exit appears in retention data, the institutional knowledge has already left.
+              </p>
+            </div>
 
-          <div class="mt-7 max-w-xl sm:mt-8">
-            <p class="mb-3 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-accent-300">
-              Download the Power User Trap℠ Brief
+            <div class="mt-7 max-w-xl sm:mt-8">
+              <p class="lozen-home-card-meta text-accent-300">
+                Download the Power User Trap℠ Brief
+              </p>
+
+              <div class="mt-3">
+                <MailerLiteSignup
+                  formId="power-user-brief-download"
+                  group="poweruser"
+                  theme="dark"
+                  buttonLabel="Send the brief"
+                  successMessage="Thank you. You can download the Power User Trap℠ brief here."
+                  downloadHref="/download/Lozen_PowerUserTrap_Brief.pdf"
+                  downloadLabel="Download the Power User Trap℠ brief"
+                />
+              </div>
+            </div>
+          </div>
+
+          <aside
+            class="border-t border-white/10 bg-white/[0.035] p-6 sm:p-8 lg:border-l lg:border-t-0 lg:p-10"
+          >
+            <p class="lozen-home-card-meta text-accent-300">
+              What your data misses
             </p>
 
-            <MailerLiteSignup
-              formId="power-user-brief-download"
-              group="poweruser"
-              theme="dark"
-              buttonLabel="Send the brief"
-              successMessage="Thank you. You can download the Power User Trap℠ brief here."
-              downloadHref="/download/Lozen_PowerUserTrap_Brief.pdf"
-              downloadLabel="Download the Power User Trap℠ brief"
-            />
-          </div>
+            <div class="mt-5 grid gap-4 sm:mt-6">
+              <div class="lozen-home-card lozen-home-card--navy lozen-home-card--quiet">
+                <p class="lozen-home-card-title text-[1.05rem] text-white">
+                  Oversight burden
+                </p>
+                <p class="lozen-home-card-body mt-3">
+                  The work of checking, correcting, and validating AI output falls on the employees already trusted to exercise judgment. It is invisible to the organization because no system was designed to capture it.
+                </p>
+              </div>
+
+              <div class="lozen-home-card lozen-home-card--navy lozen-home-card--quiet">
+                <p class="lozen-home-card-title text-[1.05rem] text-white">
+                  Invisible implementation work
+                </p>
+                <p class="lozen-home-card-body mt-3">
+                  Training colleagues, troubleshooting tools, and maintaining workflow quality accumulate outside job descriptions, workload models, and compensation structures. The company sees productivity. It does not see the burden.
+                </p>
+              </div>
+
+              <div class="lozen-home-card lozen-home-card--navy">
+                <p class="lozen-home-card-title text-[1.05rem] text-white">
+                  Retention exposure
+                </p>
+                <p class="lozen-home-card-body mt-3">
+                  Productivity appears to rise while leadership capacity erodes. The risk becomes visible only after the person exits. Until then, the work is absorbed, uncompensated, and unrecorded.
+                </p>
+              </div>
+            </div>
+          </aside>
         </div>
-
-        <aside
-          class="border-t border-white/10 bg-white/[0.04] p-6 sm:p-8 lg:border-l lg:border-t-0 lg:p-10"
-        >
-          <p
-            class="font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-accent-300"
-          >
-            What your data misses
-          </p>
-
-          <div class="mt-5 grid gap-4 sm:mt-6">
-            <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-5">
-              <p
-                class="font-sans text-sm font-semibold uppercase tracking-[0.12em] text-white"
-              >
-                Oversight burden
-              </p>
-              <p class="mt-3 font-sans text-sm leading-6 text-base-300">
-                The work of checking, correcting, and validating AI output falls on the employees already trusted to exercise judgment. It is invisible to the organization because no system was designed to capture it.
-              </p>
-            </div>
-
-            <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4 sm:p-5">
-              <p
-                class="font-sans text-sm font-semibold uppercase tracking-[0.12em] text-white"
-              >
-                Invisible implementation work
-              </p>
-              <p class="mt-3 font-sans text-sm leading-6 text-base-300">
-                Training colleagues, troubleshooting tools, and maintaining workflow quality accumulate outside job descriptions, workload models, and compensation structures. The company sees productivity. It does not see the burden.
-              </p>
-            </div>
-
-            <div
-              class="rounded-2xl border border-accent-400/70 bg-accent-500/10 p-4 transition-colors duration-300 hover:border-accent-300 hover:bg-accent-500/15 sm:p-5"
-            >
-              <p
-                class="font-sans text-sm font-semibold uppercase tracking-[0.12em] text-white"
-              >
-                Retention exposure
-              </p>
-              <p class="mt-3 font-sans text-sm leading-6 text-base-200">
-                Productivity appears to rise while leadership capacity erodes. The risk becomes visible only after the person exits. Until then, the work is absorbed, uncompensated, and unrecorded. 
-              </p>
-            </div>
-          </div>
-        </aside>
       </div>
     </div>
   </Wrapper>

@@ -1,8 +1,6 @@
 ---
 // Assets
 import { Image } from "astro:assets";
-// Fundations
-import Text from "@/components/fundations/elements/Text.astro";
 
 const { post } = Astro.props;
 
@@ -26,7 +24,7 @@ const { title, description, url, image, pubDate } = {
 ---
 
 <article
-  class="group relative min-h-[30rem] overflow-hidden rounded-2xl border border-base-400 bg-base-950 shadow-2xl ring-1 ring-base-950/10 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:shadow-2xl lg:aspect-[4/3] lg:min-h-0 lg:rounded-3xl"
+  class="group relative min-h-[24rem] overflow-hidden rounded-2xl border border-base-400 bg-base-950 shadow-xl ring-1 ring-base-950/10 transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-500 hover:shadow-2xl sm:min-h-[25rem] lg:aspect-[16/10] lg:min-h-0 lg:rounded-3xl"
 >
   <a
     href={url}
@@ -46,29 +44,25 @@ const { title, description, url, image, pubDate } = {
 
   <div
     aria-hidden="true"
-    class="absolute inset-0 pointer-events-none bg-gradient-to-b from-base-950/88 via-base-950/72 to-base-950/96"
+    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-base-950/82 via-base-950/68 to-base-950/96"
   >
   </div>
 
   <div
     aria-hidden="true"
-    class="absolute inset-0 pointer-events-none bg-gradient-to-r from-base-950/55 via-base-950/20 to-base-950/50"
+    class="pointer-events-none absolute inset-0 bg-gradient-to-r from-base-950/62 via-base-950/25 to-base-950/42"
   >
   </div>
 
   <div
     aria-hidden="true"
-    class="absolute inset-x-0 top-0 z-10 h-1 bg-accent-500"
+    class="absolute inset-x-0 top-0 z-10 h-0.5 bg-accent-500"
   >
   </div>
 
-  <div class="absolute inset-0 z-10 flex flex-col justify-end p-5 sm:p-6 lg:p-8">
-    <div class="relative">
-      <Text
-        tag="span"
-        variant="textSM"
-        class="border-l border-accent-500 pl-4 font-sans font-semibold uppercase tracking-[0.16em] text-base-200"
-      >
+  <div class="absolute inset-0 z-10 flex flex-col justify-end p-5 sm:p-6 lg:p-7">
+    <div class="relative max-w-2xl">
+      <p class="lozen-home-card-meta border-l border-accent-500 pl-4 text-base-200">
         {
           new Date(pubDate).toLocaleDateString("en-US", {
             year: "numeric",
@@ -76,27 +70,17 @@ const { title, description, url, image, pubDate } = {
             day: "numeric",
           })
         }
-      </Text>
+      </p>
 
-      <Text
-        tag="h2"
-        variant="displaySM"
-        class="mt-6 font-display font-normal uppercase leading-tight tracking-[-0.02em] text-white sm:mt-8"
-      >
+      <h2 class="mt-5 font-display text-[1.35rem] font-normal leading-[1.16] tracking-[-0.018em] text-white sm:text-[1.5rem] lg:text-[1.6rem]">
         {title}
-      </Text>
+      </h2>
 
-      <Text
-        tag="p"
-        variant="textBase"
-        class="mt-4 max-w-2xl font-sans leading-7 text-base-200 text-balance"
-      >
+      <p class="mt-4 max-w-2xl font-sans text-[0.96rem] leading-7 text-base-200 text-pretty">
         {description}
-      </Text>
+      </p>
 
-      <span
-        class="mt-6 inline-flex font-sans text-sm font-semibold text-accent-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent-200"
-      >
+      <span class="mt-5 inline-flex font-sans text-sm font-semibold text-accent-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-accent-200">
         Read article →
       </span>
     </div>

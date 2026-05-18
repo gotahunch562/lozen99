@@ -30,57 +30,31 @@ const introSections = [
 ];
 ---
 
-<section class="bg-gradient-to-t from-base-200 via-base-100 to-white">
-  <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20 xl:py-24">
-    <div class="mx-auto max-w-6xl">
-      <div
-        class="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(320px,0.55fr)] lg:items-end lg:gap-8"
-      >
+<section class="lozen-home-section lozen-home-section--surface">
+  <Wrapper variant="standard" class="py-0">
+    <div class="lozen-home-container lozen-home-container--wide">
+      <div class="lozen-home-header lozen-home-header--split">
         <div>
-          <p
-            class="border-l border-accent-500 pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-base-600"
-          >
-            Disclosure-Dependent Data
-          </p>
+          <p class="lozen-home-eyebrow">Disclosure-Dependent Data</p>
 
-          <h2
-            class="mt-5 max-w-4xl font-display text-[2.05rem] font-normal leading-[1.08] tracking-[-0.032em] text-base-950 sm:mt-6 sm:text-[2.45rem] lg:text-[2.9rem]"
-          >
-            Low benefits utilization?
-          </h2>
+          <h2 class="lozen-home-title">Low benefits utilization?</h2>
         </div>
 
-        <p class="max-w-md font-sans text-base leading-7 text-base-700 sm:text-[1.0625rem] sm:leading-8 lg:pb-1">
+        <p class="lozen-home-deck lg:pb-1">
           For women executives, the cost of using them is too high.
         </p>
       </div>
 
-      <div class="mt-8 grid gap-5 sm:mt-10 lg:grid-cols-2">
+      <div class="lozen-home-grid lozen-home-grid--two">
         {
           introSections.map((section) => (
-            <article class="group relative overflow-hidden rounded-2xl border border-base-300 bg-white p-5 shadow-sm ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-base-50 hover:shadow-md sm:p-6 lg:rounded-3xl">
-              <div
-                aria-hidden="true"
-                class="absolute inset-x-0 top-0 h-0.5 bg-accent-500"
-              >
-              </div>
+            <article class="lozen-home-card lozen-home-card--large">
+              <h3 class="lozen-home-card-title">{section.title}</h3>
 
-              <div class="mb-4 h-7 w-px bg-accent-500 sm:mb-5 sm:h-8">
-              </div>
+              <p class="lozen-home-card-body">{section.description}</p>
 
-              <h3 class="font-display text-[1.25rem] font-normal leading-[1.2] tracking-[-0.015em] text-base-950 sm:text-[1.35rem]">
-                {section.title}
-              </h3>
-
-              <p class="mt-4 font-sans text-base leading-8 text-base-700">
-                {section.description}
-              </p>
-
-              <a
-                href={section.href}
-                class="mt-6 inline-flex font-sans text-sm font-semibold text-accent-700 transition-all duration-300 group-hover:translate-x-1 group-hover:text-base-950"
-              >
-                Contact Lozen Advisory →
+              <a href={section.href} class="lozen-home-card-link">
+                Contact Lozen Advisory <span aria-hidden="true">→</span>
               </a>
             </article>
           ))
