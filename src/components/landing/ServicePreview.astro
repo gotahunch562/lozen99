@@ -22,36 +22,52 @@ const frameworkCards = [
 ];
 ---
 
-<section class="lozen-home-section lozen-home-section--quiet">
-  <Wrapper variant="standard" class="py-0">
-    <div class="lozen-home-container lozen-home-container--wide">
-      <div class="lozen-home-header lozen-home-header--split">
+<section class="bg-base-50">
+  <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20 xl:py-24">
+    <div class="mx-auto max-w-6xl">
+      <div
+        class="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(320px,0.55fr)] lg:items-end lg:gap-8"
+      >
         <div>
-          <p class="lozen-home-eyebrow">Invisible Attrition℠</p>
+          <p
+            class="border-l border-accent-500 pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-base-600"
+          >
+            Invisible Attrition℠
+          </p>
 
-          <h2 class="lozen-home-title">Intelligence Analysis</h2>
+          <h2
+            class="mt-5 max-w-4xl font-display text-[2.05rem] font-normal leading-[1.08] tracking-[-0.032em] text-base-950 sm:mt-6 sm:text-[2.45rem] lg:text-[2.9rem]"
+          >
+            Intelligence Analysis
+          </h2>
         </div>
 
-        <p class="lozen-home-deck lg:pb-1">
+        <p class="max-w-md font-sans text-base leading-7 text-base-700 sm:text-[1.0625rem] sm:leading-8 lg:pb-1">
           Understand how disclosure-dependent systems fail before standard retention metrics detect risk.
         </p>
       </div>
 
-      <div class="lozen-home-grid lozen-home-grid--two">
+      <div class="mt-8 grid gap-5 sm:mt-10 lg:grid-cols-2">
         {
           frameworkCards.map((card) => (
             <a
               href={card.href}
-              class="lozen-home-card lozen-home-card--large block no-underline"
+              class="group block rounded-2xl border border-base-300 bg-white p-5 no-underline shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-base-50 hover:shadow-md sm:p-6 lg:rounded-3xl"
             >
-              <p class="lozen-home-card-meta">{card.eyebrow}</p>
+              <p class="font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-accent-700">
+                {card.eyebrow}
+              </p>
 
-              <h3 class="lozen-home-card-title">{card.title}</h3>
+              <h3 class="mt-4 font-display text-[1.35rem] font-normal leading-[1.18] tracking-[-0.018em] text-base-950 sm:text-[1.55rem]">
+                {card.title}
+              </h3>
 
-              <p class="lozen-home-card-body">{card.description}</p>
+              <p class="mt-4 max-w-2xl font-sans text-base leading-8 text-base-700">
+                {card.description}
+              </p>
 
-              <span class="lozen-home-card-link">
-                {card.cta} <span aria-hidden="true">→</span>
+              <span class="mt-6 inline-flex font-sans text-sm font-semibold text-accent-700 transition-all duration-300 group-hover:translate-x-1 group-hover:text-base-950">
+                {card.cta} →
               </span>
             </a>
           ))
