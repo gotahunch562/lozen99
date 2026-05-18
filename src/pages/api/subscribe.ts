@@ -75,6 +75,15 @@ export const POST: APIRoute = async ({ request }) => {
     );
   }
 
+  const numericGroupId = Number(groupId.trim());
+
+  if (!Number.isInteger(numericGroupId) || numericGroupId <= 0) {
+    return jsonResponse(
+      { message: "This signup form has an invalid MailerLite group ID." },
+      500,
+    );
+  }
+
   try {
     const mailerLiteResponse = await fetch(
       "https://connect.mailerlite.com/api/subscribers",
@@ -87,7 +96,7 @@ export const POST: APIRoute = async ({ request }) => {
         },
         body: JSON.stringify({
           email,
-          groups: [groupId],
+          groups: [numericGroupId],
         }),
       },
     );
