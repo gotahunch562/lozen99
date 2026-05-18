@@ -31,7 +31,7 @@ const steps = [
     <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-8">
       <div>
         <div
-          class="relative min-h-[26rem] overflow-hidden rounded-2xl border border-white/10 shadow-2xl ring-1 ring-base-950/10 sm:min-h-[30rem] lg:sticky lg:top-24 lg:h-[calc(100vh-9rem)] lg:rounded-3xl"
+          class="relative min-h-[26rem] overflow-hidden rounded-2xl border border-white/10 shadow-2xl ring-1 ring-base-950/10 sm:min-h-[30rem] lg:sticky lg:top-24 lg:h-full lg:min-h-[42rem] lg:rounded-3xl"
         >
           <video
             autoplay
@@ -79,7 +79,7 @@ const steps = [
         </div>
       </div>
 
-      <div class="grid gap-5">
+      <div class="grid gap-4 lg:gap-4">
         {
           steps.map((step, index) => (
             <article class="group relative overflow-hidden rounded-2xl border border-base-400 bg-white p-5 shadow-lg ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-base-50 hover:shadow-xl sm:p-6 lg:rounded-3xl">
