@@ -1,15 +1,21 @@
 ---
-title: "Crisis, Reputation, and Workforce Risk"
-description: "Support for organizations facing sensitive workforce issues where incomplete data, low utilization, leadership exits, or AI implementation burden may create operational or reputational consequences."
-shortDescription: "Support for organizations facing sensitive workforce issues where incomplete data, low utilization, leadership exits, or AI implementation burden may create operational or reputational consequences."
-priceFrom: "Sensitive Issue Support"
-duration: "Advisory support"
+title: Crisis, Reputation, and Workforce Risk
+shortDescription: Support for organizations facing sensitive workforce issues
+  where incomplete data, low utilization, leadership exits, or AI implementation
+  burden may create operational or reputational consequences.
+description: Support for organizations facing sensitive workforce issues where
+  incomplete data, low utilization, leadership exits, or AI implementation
+  burden may create operational or reputational consequences.
+metaDescription: Strategic advisory for crisis, reputation, and workforce risk
+  where disclosure dependence affects performance, retention, and leadership
+  continuity.
 image:
-  url: "/src/images/services/serviceplaceholder.webp"
-  alt: "Workforce risk advisory discussion"
-metaDescription: "Strategic advisory for crisis, reputation, and workforce risk where disclosure dependence affects performance, retention, and leadership continuity."
+  url: /src/images/services/Crisis, Reputation.webp
+  alt: Workforce risk advisory discussion
+priceFrom: Sensitive Issue Support
+duration: Advisory support
+isFeatured: false
 ---
-
 Disclosure-dependent systems create reputational risk because they can make an organization believe it has solved a problem it has only documented partially.
 
 An employer may say it offers menopause benefits, yet the women with the most to lose may never use them. A company may say AI is improving productivity, yet the productivity may depend on a small group of high performers absorbing hidden oversight work. A leadership team may say retention is stable, yet its most important people may be carrying strain that will not appear in the data until they leave.
