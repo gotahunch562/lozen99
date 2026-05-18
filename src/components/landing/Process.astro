@@ -26,12 +26,12 @@ const steps = [
 ];
 ---
 
-<section class="lozen-home-section lozen-home-section--surface">
-  <Wrapper variant="standard">
-    <div class="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-8 xl:gap-10">
+<section class="bg-gradient-to-b from-base-200 via-base-100 to-white">
+  <Wrapper variant="standard" class="py-14 sm:py-18 lg:py-24 xl:py-28">
+    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-8">
       <div>
         <div
-          class="lozen-home-media-panel min-h-[24rem] sm:min-h-[28rem] lg:sticky lg:top-24 lg:min-h-[34rem] xl:min-h-[36rem]"
+          class="relative min-h-[26rem] overflow-hidden rounded-2xl border border-white/10 shadow-2xl ring-1 ring-base-950/10 sm:min-h-[30rem] lg:sticky lg:top-24 lg:h-[calc(100vh-9rem)] lg:rounded-3xl"
         >
           <video
             autoplay
@@ -45,27 +45,33 @@ const steps = [
 
           <div
             aria-hidden="true"
-            class="absolute inset-0 pointer-events-none bg-gradient-to-b from-base-950/82 via-base-900/54 to-base-950/92"
+            class="absolute inset-0 pointer-events-none bg-gradient-to-b from-base-950/80 via-base-900/52 to-base-950/92"
           >
           </div>
 
           <div
             aria-hidden="true"
-            class="absolute inset-0 pointer-events-none bg-gradient-to-r from-base-950/70 via-base-950/24 to-base-950/38"
+            class="absolute inset-0 pointer-events-none bg-gradient-to-r from-base-950/65 via-base-950/20 to-base-950/45"
           >
           </div>
 
-          <div class="relative z-10 flex min-h-[24rem] items-end p-6 sm:min-h-[28rem] sm:p-8 lg:min-h-[34rem] lg:p-9 xl:min-h-[36rem]">
+          <div class="relative z-10 flex min-h-[26rem] items-end p-6 sm:min-h-[30rem] sm:p-8 lg:h-full lg:p-10">
             <div class="max-w-xl">
-              <span class="lozen-home-eyebrow text-base-200">
+              <span
+                class="border-l border-accent-500 pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-base-200"
+              >
                 Services
               </span>
 
-              <h2 class="lozen-home-title mt-5 text-white sm:mt-6">
+              <h2
+                class="mt-6 font-display text-[2.2rem] font-normal leading-[1.04] tracking-[-0.035em] text-white sm:mt-8 sm:text-[2.65rem] lg:text-[3rem]"
+              >
                 What We Do
               </h2>
 
-              <p class="lozen-home-deck mt-4 max-w-md text-base-200">
+              <p
+                class="mt-4 max-w-md font-sans text-base leading-7 text-base-200 sm:text-[1.0625rem] sm:leading-8"
+              >
                 We advise on the infrastructure questions that standard systems are not built to answer. The focus is disclosure-independent design: what the current architecture can reach, what it cannot, and what that gap is costing.
               </p>
             </div>
@@ -73,23 +79,26 @@ const steps = [
         </div>
       </div>
 
-      <div class="grid content-start gap-4 sm:gap-5">
+      <div class="grid gap-5">
         {
           steps.map((step, index) => (
-            <article class="lozen-home-card lozen-home-card--quiet flex min-h-0 items-start gap-4 sm:gap-5 lg:gap-6">
-              <span
+            <article class="group relative overflow-hidden rounded-2xl border border-base-400 bg-white p-5 shadow-lg ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-base-50 hover:shadow-xl sm:p-6 lg:rounded-3xl lg:p-7 xl:p-8">
+              <div
                 aria-hidden="true"
-                class="lozen-home-card-number lozen-home-card-number--small w-12 shrink-0 pt-1 text-right sm:w-16"
+                class="absolute inset-x-0 top-0 h-1 bg-accent-500"
               >
-                {String(index + 1).padStart(2, "0")}
+              </div>
+
+              <span class="absolute right-4 top-4 z-0 font-display text-6xl font-normal leading-none text-base-500/10 transition-colors duration-300 group-hover:text-accent-500/20 sm:right-6 sm:top-5 sm:text-7xl lg:text-8xl">
+                {index + 1}
               </span>
 
-              <div class="min-w-0 flex-1 border-l border-accent-500/70 pl-4 sm:pl-5">
-                <h3 class="lozen-home-card-title">
+              <div class="relative z-10 max-w-xl pr-10 sm:pr-16">
+                <h3 class="border-l-2 border-accent-500 pl-4 font-display text-[1.28rem] font-normal leading-tight tracking-[-0.015em] text-base-950 sm:text-[1.38rem]">
                   {step.title}
                 </h3>
 
-                <p class="lozen-home-card-body mt-3">
+                <p class="mt-4 font-sans text-[0.9375rem] leading-7 text-base-700 sm:text-base">
                   {step.description}
                 </p>
               </div>
