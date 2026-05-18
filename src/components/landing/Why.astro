@@ -22,115 +22,121 @@ const trackerRows = [
 ];
 ---
 
-<section class="lozen-home-section bg-gradient-to-b from-base-950 to-base-900 text-white">
-  <Wrapper variant="standard" class="py-0">
-    <div class="lozen-home-container lozen-home-container--wide">
+<section class="bg-gradient-to-b from-base-950 to-base-900 text-white">
+  <Wrapper variant="standard" class="py-14 sm:py-18 lg:py-24 xl:py-28">
+    <div
+      class="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-2xl ring-1 ring-white/10 lg:rounded-3xl"
+    >
       <div
-        class="overflow-hidden rounded-[clamp(1.5rem,3vw,2.25rem)] border border-white/10 bg-white/[0.04] shadow-2xl ring-1 ring-white/10"
+        class="grid gap-0 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.58fr)]"
       >
-        <div
-          class="grid gap-0 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.58fr)]"
-        >
-          <div class="p-6 sm:p-10 lg:p-14">
-            <p
-              class="font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-base-300"
-            >
-              Policy & Governance Tool
+        <div class="p-6 sm:p-10 lg:p-14">
+          <p
+            class="font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-base-300"
+          >
+            Policy & Governance Tool
+          </p>
+
+          <h2
+            class="mt-6 max-w-3xl font-display text-[2.25rem] font-normal uppercase leading-[1.02] tracking-[-0.035em] text-white sm:mt-8 sm:text-[2.75rem] lg:text-[3.25rem]"
+          >
+            Menopause legislation is accelerating.
+          </h2>
+
+          <div
+            class="mt-5 max-w-3xl space-y-5 font-sans text-base leading-7 text-base-200 sm:mt-6 sm:text-[1.0625rem] sm:leading-8"
+          >
+            <p>
+              The Menopause Legislation Tracker classifies each instrument by three things: the assumption it makes about how women will engage with formal systems, the activation condition that determines who the law reaches, and the population that condition structurally excludes.
             </p>
 
-            <h2 class="lozen-home-title mt-5 text-white sm:mt-6">
-              Menopause legislation is accelerating.
-            </h2>
+            <p>
+              Every framework in this tracker activates at the point of disclosure. This is a governance audit of disclosure-dependent policy design.
+            </p>
+          </div>
 
-            <div class="mt-5 max-w-3xl space-y-4 sm:mt-6">
-              <p class="lozen-home-deck text-base-100">
-                The Menopause Legislation Tracker classifies each instrument by three things: the assumption it makes about how women will engage with formal systems, the activation condition that determines who the law reaches, and the population that condition structurally excludes.
-              </p>
+          <div class="mt-7 sm:mt-8">
+            <Button
+              isLink
+              href="/menopause-legislation-tracker"
+              variant="accent"
+              size="xs"
+            >
+              View the Legislation Tracker
+            </Button>
+          </div>
+        </div>
 
-              <p class="lozen-home-deck text-base-100">
-                Every framework in this tracker activates at the point of disclosure. This is a governance audit of disclosure-dependent policy design.
+        <aside
+          class="border-t border-white/10 bg-base-50 p-5 text-base-950 sm:p-8 lg:border-l lg:border-t-0 lg:p-10"
+        >
+          <div
+            class="overflow-hidden rounded-2xl border-2 border-base-500 bg-white shadow-lg ring-1 ring-base-950/10 lg:rounded-3xl"
+          >
+            <div class="border-b border-base-400 bg-base-950 px-5 py-4">
+              <p
+                class="font-sans text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-white"
+              >
+                Legislative Record
               </p>
             </div>
 
-            <div class="mt-7 sm:mt-8">
-              <Button
-                isLink
-                href="/menopause-legislation-tracker"
-                variant="accent"
-                size="xs"
-              >
-                View the Legislation Tracker
-              </Button>
+            <div
+              class="hidden grid-cols-3 border-b border-base-400 bg-base-100 px-5 py-3 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-800 sm:grid"
+            >
+              <span>Jurisdiction</span>
+              <span>Instrument</span>
+              <span>Classification</span>
+            </div>
+
+            <div>
+              {
+                trackerRows.map((row) => (
+                  <div class="grid gap-3 border-b border-base-300 px-5 py-4 font-sans text-sm last:border-b-0 odd:bg-white even:bg-base-100 sm:grid-cols-3 sm:items-center">
+                    <div>
+                      <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-500 sm:hidden">
+                        Jurisdiction
+                      </span>
+                      <span class="mt-1 block font-semibold text-base-950 sm:mt-0">
+                        {row.jurisdiction}
+                      </span>
+                    </div>
+
+                    <div>
+                      <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-500 sm:hidden">
+                        Instrument
+                      </span>
+                      <span class="mt-1 block text-base-700 sm:mt-0">
+                        {row.instrument}
+                      </span>
+                    </div>
+
+                    <div>
+                      <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-500 sm:hidden">
+                        Classification
+                      </span>
+                      <span class="mt-2 inline-flex w-fit rounded-full border border-base-400 bg-base-50 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-base-950 sm:mt-0">
+                        {row.classification}
+                      </span>
+                    </div>
+                  </div>
+                ))
+              }
             </div>
           </div>
 
-          <aside
-            class="border-t border-white/10 bg-base-50 p-5 text-base-950 sm:p-8 lg:border-l lg:border-t-0 lg:p-10"
-          >
-            <div
-              class="overflow-hidden rounded-2xl border-2 border-base-500 bg-white shadow-lg ring-1 ring-base-950/10 lg:rounded-3xl"
+          <div class="mt-4 rounded-2xl border border-base-300 bg-base-100 p-5 lg:mt-5 lg:rounded-3xl">
+            <p
+              class="font-sans text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-base-600"
             >
-              <div class="border-b border-base-400 bg-base-950 px-5 py-4">
-                <p class="lozen-home-card-meta text-white">
-                  Legislative Record
-                </p>
-              </div>
+              What the tracker measures
+            </p>
 
-              <div
-                class="hidden grid-cols-3 border-b border-base-400 bg-base-100 px-5 py-3 font-sans text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-800 sm:grid"
-              >
-                <span>Jurisdiction</span>
-                <span>Instrument</span>
-                <span>Classification</span>
-              </div>
-
-              <div>
-                {
-                  trackerRows.map((row) => (
-                    <div class="grid gap-3 border-b border-base-300 px-5 py-4 font-sans text-sm last:border-b-0 odd:bg-white even:bg-base-100 sm:grid-cols-3 sm:items-center">
-                      <div>
-                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-500 sm:hidden">
-                          Jurisdiction
-                        </span>
-                        <span class="mt-1 block font-semibold text-base-950 sm:mt-0">
-                          {row.jurisdiction}
-                        </span>
-                      </div>
-
-                      <div>
-                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-500 sm:hidden">
-                          Instrument
-                        </span>
-                        <span class="mt-1 block text-base-700 sm:mt-0">
-                          {row.instrument}
-                        </span>
-                      </div>
-
-                      <div>
-                        <span class="block text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-base-500 sm:hidden">
-                          Classification
-                        </span>
-                        <span class="mt-2 inline-flex w-fit rounded-full border border-accent-500 bg-accent-50 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-base-950 sm:mt-0">
-                          {row.classification}
-                        </span>
-                      </div>
-                    </div>
-                  ))
-                }
-              </div>
-            </div>
-
-            <div class="mt-4 rounded-2xl border border-base-300 bg-base-100 p-5 lg:mt-5 lg:rounded-3xl">
-              <p class="lozen-home-card-meta text-base-600">
-                What the tracker measures
-              </p>
-
-              <p class="lozen-home-card-body mt-3 text-sm leading-6 text-base-800">
-                Policy assumption, governance blind spot, activation condition, legislative outcome, and Lozen classification.
-              </p>
-            </div>
-          </aside>
-        </div>
+            <p class="mt-4 font-sans text-sm leading-6 text-base-800">
+              Policy assumption, governance blind spot, activation condition, legislative outcome, and Lozen classification.
+            </p>
+          </div>
+        </aside>
       </div>
     </div>
   </Wrapper>

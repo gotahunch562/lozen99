@@ -16,36 +16,44 @@ allPosts.sort((a, b) => {
 });
 ---
 
-<section class="lozen-home-section lozen-home-section--surface">
-  <Wrapper variant="standard" class="py-0">
-    <div class="lozen-home-container lozen-home-container--wide">
-      <div class="lozen-home-header lozen-home-header--center">
-        <span class="lozen-home-eyebrow">insights</span>
-
-        <h2 class="lozen-home-title">Menopause at Work</h2>
-
-        <p class="lozen-home-deck">
-          Legislative analysis, Clinical reality, Workplace systems, & Self.
-          <br />
-          <span class="italic">
-            What do we write about? What matters to her.
-          </span>
-        </p>
-      </div>
-
-      <div class="lozen-home-grid lozen-home-grid--two">
-        {allPosts.slice(0, 2).map((post) => <BlogCard post={post} />)}
-      </div>
-
-      <Button
-        isLink
-        href="/blog"
-        variant="default"
-        size="base"
-        class="mx-auto mt-10 w-fit sm:mt-12"
+<section class="bg-gradient-to-t from-base-200 via-base-100 to-white">
+  <Wrapper variant="standard" class="py-14 sm:py-18 lg:py-24 xl:py-28">
+    <div class="mx-auto max-w-3xl text-center">
+      <span
+        class="inline-flex border-l border-accent-500 pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-base-600"
       >
-        View all articles
-      </Button>
+        insights
+      </span>
+
+      <h2
+        class="mt-5 font-display text-[2.25rem] font-normal uppercase leading-[1.02] tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-[2.75rem] lg:text-[3.25rem]"
+      >
+        Menopause at Work
+      </h2>
+
+      <p
+        class="mx-auto mt-4 max-w-2xl font-sans text-base leading-7 text-base-700 text-balance sm:text-[1.0625rem] sm:leading-8"
+      >
+        Legislative analysis, Clinical reality, Workplace systems, & Self.
+        <br />
+        <span class="italic">
+          What do we write about? What matters to her.
+        </span>
+      </p>
     </div>
+
+    <div class="mt-10 grid grid-cols-1 gap-5 sm:mt-12 md:grid-cols-2">
+      {allPosts.slice(0, 2).map((post) => <BlogCard post={post} />)}
+    </div>
+
+    <Button
+      isLink
+      href="/blog"
+      variant="default"
+      size="base"
+      class="mx-auto mt-10 w-fit sm:mt-12"
+    >
+      View all articles
+    </Button>
   </Wrapper>
 </section>
