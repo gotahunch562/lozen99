@@ -28,7 +28,6 @@ const secondarySections = [
       { href: "/why-lozen-advisory", label: "Why Lozen Advisory" },
       { href: "/events", label: "Events" },
       { href: "/faq", label: "FAQ" },
-      { href: "/booking", label: "MAPS Blueprint℠" },
       { href: "/menopause-support-women-lawyers", label: "For Women Lawyers" },
       { href: "/retention-calculator", label: "Retention Calculator" },
       { href: "/menopause-legislation-tracker", label: "Menopause Legislation Tracker" },
@@ -55,6 +54,7 @@ const isActiveLink = (href: string) =>
           primaryLinks.map((link) => (
             <a
               href={link.href}
+              aria-current={isActiveLink(link.href) ? "page" : undefined}
               class:list={[
                 "block rounded-xl px-4 py-3 font-sans text-base font-semibold transition-colors duration-200",
                 isActiveLink(link.href)
@@ -80,6 +80,7 @@ const isActiveLink = (href: string) =>
                 {section.links.map((link) => (
                   <a
                     href={link.href}
+                    aria-current={isActiveLink(link.href) ? "page" : undefined}
                     class:list={[
                       "block rounded-xl px-4 py-2.5 font-sans text-sm font-semibold transition-colors duration-200",
                       isActiveLink(link.href)
