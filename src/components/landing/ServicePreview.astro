@@ -23,7 +23,7 @@ const frameworkCards = [
 ---
 
 <section class="bg-base-50">
-  <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20 xl:py-24">
+  <Wrapper variant="standard" class="py-14 sm:py-18 lg:py-24 xl:py-28">
     <div class="mx-auto max-w-6xl">
       <div
         class="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(320px,0.55fr)] lg:items-end lg:gap-8"
@@ -36,7 +36,7 @@ const frameworkCards = [
           </p>
 
           <h2
-            class="mt-5 max-w-4xl font-display text-[2.05rem] font-normal leading-[1.08] tracking-[-0.032em] text-base-950 sm:mt-6 sm:text-[2.45rem] lg:text-[2.9rem]"
+            class="mt-5 max-w-4xl font-display text-[2.25rem] font-normal uppercase leading-[1.02] tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-[2.75rem] lg:text-[3.25rem]"
           >
             Intelligence Analysis
           </h2>
@@ -47,26 +47,26 @@ const frameworkCards = [
         </p>
       </div>
 
-      <div class="mt-8 grid gap-5 sm:mt-10 lg:grid-cols-2">
+      <div class="mt-10 grid gap-4 sm:mt-12 lg:grid-cols-2 lg:gap-5">
         {
           frameworkCards.map((card) => (
             <a
               href={card.href}
-              class="group block rounded-2xl border border-base-300 bg-white p-5 no-underline shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-base-50 hover:shadow-md sm:p-6 lg:rounded-3xl"
+              class="group block rounded-2xl border border-base-300 bg-white p-5 no-underline shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-400 hover:bg-base-50 hover:shadow-md sm:p-8 lg:rounded-3xl"
             >
               <p class="font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-accent-700">
                 {card.eyebrow}
               </p>
 
-              <h3 class="mt-4 font-display text-[1.35rem] font-normal leading-[1.18] tracking-[-0.018em] text-base-950 sm:text-[1.55rem]">
+              <h3 class="mt-5 font-display text-[1.65rem] font-normal uppercase leading-tight tracking-[-0.025em] text-base-950 sm:text-[1.9rem]">
                 {card.title}
               </h3>
 
-              <p class="mt-4 max-w-2xl font-sans text-base leading-8 text-base-700">
+              <p class="mt-4 max-w-2xl font-sans text-[0.9375rem] leading-7 text-base-700 sm:mt-5 sm:text-base">
                 {card.description}
               </p>
 
-              <span class="mt-6 inline-flex font-sans text-sm font-semibold text-accent-700 transition-all duration-300 group-hover:translate-x-1 group-hover:text-base-950">
+              <span class="mt-7 inline-flex font-sans text-sm font-semibold text-accent-700 transition-all duration-300 group-hover:translate-x-1 group-hover:text-base-950 sm:mt-8">
                 {card.cta} →
               </span>
             </a>
