@@ -5,7 +5,7 @@ shortDescription: "Support for organizations facing sensitive workforce issues w
 priceFrom: "Sensitive Issue Support"
 duration: "Advisory support"
 image:
-  url: "../../images/services/serviceplaceholder.webp"
+  url: "/src/images/services/serviceplaceholder.webp"
   alt: "Workforce risk advisory discussion"
 metaDescription: "Strategic advisory for crisis, reputation, and workforce risk where disclosure dependence affects performance, retention, and leadership continuity."
 ---

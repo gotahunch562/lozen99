@@ -157,13 +157,15 @@ content:
         label: Category
         type: string
       - name: image
-        label: Service image
+        label: Service landing card image
         type: object
+        description: "Controls the image shown on the /services landing page cards. Service detail pages remain text-led."
         fields:
           - name: url
-            label: Image path
-            type: string
-            description: "Preserve existing relative paths unless intentionally changing the service image."
+            label: Image
+            type: image
+            options:
+              media: service_images
           - name: alt
             label: Alt text
             type: string

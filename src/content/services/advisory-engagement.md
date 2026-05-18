@@ -10,7 +10,7 @@ metaDescription: Advisory engagement for organizations addressing
   disclosure-dependent workforce risk, leadership continuity, retention, and
   performance protection.
 image:
-  url: ../../images/services/client2.jpeg
+  url: /src/images/services/client2.jpeg
   alt: Strategic advisory meeting
 priceFrom: Ongoing Counsel
 duration: Strategic engagement

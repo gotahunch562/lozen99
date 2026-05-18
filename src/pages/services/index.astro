@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import NarrativePage from "@/components/authority/NarrativePage.astro";
 import servicePlaceholder from "@/images/services/serviceplaceholder.webp";
 import { createServiceJsonLd } from "@/lib/seo/jsonLd";
@@ -9,36 +10,40 @@ const title = "What We Do";
 const seoTitle = "Services | Lozen Advisory";
 
 const description =
-  "We bring specialized expertise to refine your benefits infrastructure, sharpen your governance strategy, and ensure the analytical framework matches your organization\'s actual risk exposure.";
+  "We bring specialized expertise to refine your benefits infrastructure, sharpen your governance strategy, and ensure the analytical framework matches your organization's actual risk exposure.";
 
 const canonical = "https://www.lozenadvisory.com/services";
 
-const services = [
-  {
-    title: "Market Intelligence",
-    href: "/services/market-intelligence",
-    description:
-      "Research and analysis on disclosure-dependent workforce risk, menopause-at-work benefits utilization, AI implementation burden, and the business consequences of undercounted need.",
-  },
-  {
-    title: "Executive Briefing",
-    href: "/services/executive-briefing",
-    description:
-      "A focused advisory session for leadership teams that need clarity before a hidden issue becomes a visible crisis.",
-  },
-  {
-    title: "Advisory Engagement",
-    href: "/services/advisory-engagement",
-    description:
-      "Ongoing counsel on non-disclosure infrastructure, benefits strategy, AI governance, retention risk, leadership continuity, and reputational exposure.",
-  },
-  {
-    title: "Crisis, Reputation, and Workforce Risk",
-    href: "/services/crisis-reputation-workforce-risk",
-    description:
-      "Support for organizations facing sensitive workforce issues where incomplete data, low utilization, leadership exits, or AI implementation burden may create operational or reputational consequences.",
-  },
+const serviceOrder = [
+  "Market Intelligence",
+  "Executive Briefing",
+  "Advisory Engagement",
+  "Crisis, Reputation, and Workforce Risk",
 ];
+
+const serviceEntries = await getCollection("services");
+
+const services = serviceEntries
+  .sort((a, b) => {
+    const aIndex = serviceOrder.indexOf(a.data.title);
+    const bIndex = serviceOrder.indexOf(b.data.title);
+
+    if (aIndex === -1 && bIndex === -1) {
+      return a.data.title.localeCompare(b.data.title);
+    }
+
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
+
+    return aIndex - bIndex;
+  })
+  .map((service) => ({
+    title: service.data.title,
+    href: `/services/${service.id}`,
+    description: service.data.shortDescription || service.data.description,
+    image: service.data.image?.url || servicePlaceholder,
+    imageAlt: service.data.image?.alt || `${service.data.title} service image`,
+  }));
 
 const pageJsonLd = createServiceJsonLd({
   name: seoTitle,
@@ -103,10 +108,10 @@ const pageJsonLd = createServiceJsonLd({
         services.map((service) => (
           <article class="service-card">
             <a href={service.href} class="service-card__link">
-              <div class="service-card__media" aria-hidden="true">
+              <div class="service-card__media">
                 <Image
-                  src={servicePlaceholder}
-                  alt=""
+                  src={service.image}
+                  alt={service.imageAlt}
                   class="service-card__image"
                   loading="lazy"
                 />
