@@ -87,6 +87,25 @@ const pageJsonLd = {
     The absence of data is not the absence of risk.
   </p>
 
+  <section class="service-scope" aria-label="What Lozen Advisory is not">
+    <div class="service-scope__label">Scope Clarification</div>
+
+    <div class="service-scope__grid">
+      <h2>What Lozen Advisory Is Not</h2>
+
+      <div class="service-scope__copy">
+        <p>
+          Lozen Advisory does not collect employee data, administer benefits, or audit workforce behavior. We are not an HR analytics platform. We do not access your employees' records, claims history, or utilization files.
+        </p>
+
+        <p>
+          We advise on the design conditions that determine what your current infrastructure can reach and what it cannot. That is a governance question, not a data question. The work is at the leadership level, with your leadership team.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
   <section class="service-cards" aria-label="Services">
     <div class="service-cards__heading">
       <h2>Services</h2>
@@ -132,6 +151,60 @@ const pageJsonLd = {
     letter-spacing: var(--lozen-section-title-letter-spacing);
     line-height: var(--lozen-section-title-line-height) !important;
     text-wrap: balance;
+  }
+
+
+  .service-scope {
+    margin: 3rem 0 0;
+    border: 1px solid var(--color-base-300);
+    border-radius: 1.25rem;
+    background: var(--color-base-50);
+    padding: clamp(1.35rem, 3vw, 2rem);
+    box-shadow: 0 18px 42px rgba(6, 23, 47, 0.06);
+  }
+
+  .service-scope__label {
+    border-left: 1px solid var(--color-accent-500);
+    padding-left: 0.9rem;
+    color: var(--color-base-600);
+    font-family: var(--font-sans);
+    font-size: var(--lozen-eyebrow-size);
+    font-weight: var(--lozen-eyebrow-weight);
+    letter-spacing: var(--lozen-eyebrow-letter-spacing);
+    line-height: var(--lozen-eyebrow-line-height);
+    text-transform: uppercase;
+  }
+
+  .service-scope__grid {
+    display: grid;
+    grid-template-columns: minmax(12rem, 0.38fr) minmax(0, 1fr);
+    gap: clamp(1.35rem, 4vw, 2.75rem);
+    align-items: start;
+    margin-top: 1.35rem;
+  }
+
+  .service-scope h2 {
+    margin: 0 !important;
+    color: var(--color-base-950) !important;
+    font-family: var(--font-display);
+    font-size: clamp(1.55rem, 2.45vw, 2.15rem) !important;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.12 !important;
+    text-wrap: balance;
+  }
+
+  .service-scope__copy {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .service-scope__copy p {
+    margin: 0 !important;
+    color: var(--color-base-750, var(--color-base-700)) !important;
+    font-family: var(--font-sans);
+    font-size: 1.0625rem !important;
+    line-height: 1.82 !important;
   }
 
 .service-cards {
@@ -246,6 +319,17 @@ const pageJsonLd = {
   }
 
   @media (max-width: 760px) {
+
+
+    .service-scope__grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1rem;
+    }
+
+    .service-scope__copy p {
+      font-size: 1rem !important;
+      line-height: 1.78 !important;
+    }
 
     .service-cards {
       left: auto;
