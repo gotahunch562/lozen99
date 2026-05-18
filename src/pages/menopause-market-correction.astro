@@ -1,235 +1,67 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Text from "@/components/fundations/elements/Text.astro";
-import Button from "@/components/fundations/elements/Button.astro";
-import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import PressReleasePage from "@/components/press/PressReleasePage.astro";
 
-const title = "The Menopause Benefit Market Built the Wrong Thing. The Data Is Exposing It.";
+const title = "The Menopause-at-Work Market Followed the Playbook. The Playbook Was Wrong.";
 const description =
   "As PwC names menopause a defining women's health opportunity, Lozen Advisory issues a market correction on utilization failure and the false assumption that awareness equals adoption.";
 const metaDescription =
   "Lozen Advisory issues a market correction on menopause-at-work utilization failure and the false assumption that awareness equals adoption.";
 const canonical = "https://www.lozenadvisory.com/menopause-market-correction";
 const image = "/images/news/menopause-market-correction.jpg";
+const imageAlt = "Navy silhouette of a professional woman raising one hand.";
+const imageCaption = "Navy silhouette of a professional woman raising one hand. Credit: Lozen Advisory LLC.";
 const publishedDate = "May 19, 2026";
 const publishedDateIso = "2026-05-19";
 const mediaEmail = "media@lozenadvisory.com";
-
-const encodedUrl = encodeURIComponent(canonical);
-const encodedTitle = encodeURIComponent(title);
-const shareLinks = [
-  { label: "LinkedIn", href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}` },
-  { label: "X", href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}` },
-  { label: "Facebook", href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}` },
-  { label: "Email", href: `mailto:?subject=${encodedTitle}&body=${encodedUrl}` },
-];
-
-const articleJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  headline: title,
-  description,
-  datePublished: publishedDateIso,
-  dateModified: publishedDateIso,
-  image: [`https://www.lozenadvisory.com${image}`],
-  author: { "@type": "Organization", name: "Lozen Advisory LLC", url: "https://www.lozenadvisory.com" },
-  publisher: { "@type": "Organization", name: "Lozen Advisory LLC", url: "https://www.lozenadvisory.com" },
-  mainEntityOfPage: canonical,
-};
 ---
 
-<BaseLayout
-  title={`${title} | Lozen Advisory`}
-  description={metaDescription}
+<PressReleasePage
+  title={title}
+  description={description}
+  metaDescription={metaDescription}
   canonical={canonical}
-  ogImage={image}
-  ogImageAlt="Navy silhouette of a professional woman raising one hand."
-  ogType="article"
+  image={image}
+  imageAlt={imageAlt}
+  imageCaption={imageCaption}
+  publishedDate={publishedDate}
+  publishedDateIso={publishedDateIso}
+  category="Market Correction"
+  mediaEmail={mediaEmail}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)}></script>
+  <p><strong>Atlanta, GA — {publishedDate}</strong> — PwC has now named menopause as a defining opportunity in women's health. That recognition matters, it confirms that the market is no longer perceived as niche. Menopause is now projected to be a $15B–$25B market by 2030. Approximately <a href="https://www.pwc.com/us/en/industries/health-industries/library/unlocking-the-menopause-market.html">$1.7 billion has already been deployed</a> into menopause and midlife women's health platforms between 2020 and 2025, with funding events growing at roughly 15% annually, according to PwC.</p>
 
-  <!-- Masthead: dark hero matching news-press.astro -->
-  <section class="relative overflow-hidden bg-base-950 pt-32 pb-20 text-white lg:pt-40 lg:pb-28">
-    <div
-      aria-hidden="true"
-      class="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.055),transparent_42%)]"
-    ></div>
-    <Wrapper variant="standard" class="relative z-10">
-      <div class="max-w-4xl">
-        <a
-          href="/news-press"
-          class="inline-flex font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-200 transition-colors hover:text-white"
-        >
-          ← News &amp; Press
-        </a>
+  <p>Yet market expansion does not answer the question no one is asking: is the investment reaching the women it was designed for?</p>
 
-        <div class="mt-8 flex flex-wrap items-center gap-2">
-          <Text tag="span" variant="textXS" class="font-sans font-semibold uppercase tracking-[0.18em] text-base-200">
-            For Immediate Release
-          </Text>
-          <span class="text-base-600">·</span>
-          <Text tag="span" variant="textXS" class="font-sans font-semibold uppercase tracking-[0.18em] text-base-400">
-            {publishedDate}
-          </Text>
-          <span class="text-base-600">·</span>
-          <Text tag="span" variant="textXS" class="font-sans font-semibold uppercase tracking-[0.18em] text-base-200">
-            Press Release
-          </Text>
-        </div>
+  <p>Lozen Advisory LLC today issued a market correction: the menopause-at-work market has treated awareness as adoption, access as reach, and utilization as proof of need. The data is exposing the failure.</p>
 
-        <Text
-          tag="h1"
-          variant="display2XL"
-          class="mt-6 font-display font-normal tracking-[-0.05em] text-white"
-        >
-          {title}
-        </Text>
+  <blockquote>"The menopause-at-work market built awareness and called it reach," said Akilah E. Kamaria, founder of Lozen Advisory LLC. "Employers can run campaigns, train managers, launch a ‘Let’s Talk Menopause’ initiative, and build a company ‘Menopause Hub’, and still have no reliable way to assess whether the investment is reaching the women it was designed for."</blockquote>
 
-        <Text tag="p" variant="textXL" class="mt-6 max-w-2xl font-sans leading-8 text-base-300">
-          <em>{description}</em>
-        </Text>
+  <p>Employers have added benefits. Certification bodies have expanded. Government commissions have convened. Celebrity campaigns, TikTok, and medical influencers have moved menopause into the public conversation. Yet the central failure remains.</p>
 
-        <nav class="mt-8 flex flex-wrap items-center gap-2" aria-label="Share this press release">
-          <Text tag="span" variant="textXS" class="mr-1 font-sans font-semibold uppercase tracking-[0.13em] text-base-500">
-            Share
-          </Text>
-          {shareLinks.map((link) => (
-            <a
-              href={link.href}
-              target={link.label === "Email" ? undefined : "_blank"}
-              rel={link.label === "Email" ? undefined : "noopener noreferrer"}
-              class="inline-flex items-center justify-center rounded-full border border-base-700 bg-base-900 px-4 py-1.5 font-sans text-xs font-bold uppercase tracking-[0.08em] text-base-200 transition-colors hover:border-base-400 hover:bg-base-800 hover:text-white"
-            >{link.label}</a>
-          ))}
-        </nav>
-      </div>
-    </Wrapper>
-  </section>
+  <p>Women still do not understand the transition. Women still feel unprepared for the disruption. Women still are not using treatment and are dissatisfied with the available options. And, even as employers add more benefits, employee confidence that those benefits support them is falling.</p>
 
-  <!-- Body + Rail -->
-  <section class="bg-base-50">
-    <Wrapper variant="standard" class="py-16 lg:py-24">
-      <div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+  <p><a href="https://hellobonafide.com/pages/state-of-menopause-2025">Bonafide's fifth annual <em>State of Menopause</em> report</a> delivers the five-year verdict: more products, more visibility, more market activity, and women still no closer to comprehension, treatment use, confidence, or trust. The report found that 59% of women ages 40 to 49 never knew about perimenopause until symptoms began, 71% feel unprepared for how disruptive symptoms are, 69% are not using any treatment for their symptoms, and 48% of women ages 40 to 49 report symptoms have negatively impacted their ambition.</p>
 
-        <!-- Main: 2 columns, image above body in PRNewswire style -->
-        <div class="lg:col-span-2">
+  <p>That is not a market solving the problem. That is a market producing awareness without producing adoption.</p>
 
-          <!-- Image: full width of content column, natural landscape ratio, with caption -->
-          <figure class="mb-10">
-            <img
-              src={image}
-              alt="Navy silhouette of a professional woman raising one hand."
-              loading="eager"
-              decoding="async"
-              class="w-full rounded-2xl shadow-lg"
-            />
-            <figcaption class="mt-3 font-sans text-xs text-base-500 leading-relaxed">
-              Navy silhouette of a professional woman raising one hand. Credit: Lozen Advisory LLC.
-            </figcaption>
-          </figure>
+  <p>Maven Clinic titled its 2026 State of Women's and Family Health Benefits report <a href="https://info.mavenclinic.com/hubfs/Whitepapers/2026%20Maven%20State%20of%20Womens%20and%20Family%20Health%20Benefits%20Report.pdf"><em>More Benefits, Less Confidence</em></a>. The data behind that title is the market's admission. Employers increased women's and family health benefits by 39% year over year. Employee confidence that those benefits support them very well declined across every category.</p>
 
-          <!-- Body prose -->
-          <Wrapper variant="prose">
-            <p><strong>{publishedDate}</strong> — PwC has now named menopause as a defining opportunity in women's health. That recognition matters, it confirms that the market is no longer niche. Menopause is projected to be a $15B–$25B market by 2030.</p>
+  <p>The Michigan Women's Commission spent two years gathering one of the most substantial state-level menopause datasets in the country. Thousands of women. Thirteen community conversations. A statewide tour. The <a href="https://www.lozenadvisory.com/blog/michigan-menopause-memorandum">Menopause Memorandum</a> released in March 2026 with recommendations to educate employees, train supervisors, and expand benefits. Yet not one recommendation addressed the woman who said no — the woman who would not use the support because using it required visibility she could not afford. The data saw her, but the recommendations did not.</p>
 
-            <p>Yet market expansion does not answer <a href="https://www.lozenadvisory.com/blog/menopause-at-work-unquantified-data-gap">the measurement question</a>. Lozen Advisory LLC today issued a market correction: the menopause-at-work market has treated awareness as adoption, access as reach, and utilization as proof of need. The data is exposing the failure.</p>
+  <p>Lozen Advisory says the reason is structural. The menopause-at-work market has treated awareness as the pathway to adoption. The assumption is simple: once women know what is happening, they will seek support; once employers offer support, women will use it; once women use it, utilization data will show whether the benefit works.</p>
 
-            <blockquote>"The menopause-at-work market is over-indexed on access and underdeveloped on measurement," said Akilah E. Kamaria, founder of Lozen Advisory LLC. "Employers can add benefits, expand education, publish guidance and build a company 'Menopause Hub', and still have no reliable view of the women who they are attempting to serve."</blockquote>
+  <blockquote>That assumption fails at the point of professional risk. "The market has confused awareness with adoption," Kamaria said. "A woman can understand the perimenopause transition, recognize the symptoms, and still decline to enter a system that logs her private constraint. That type of non-disclosure is not ignorance; it is a rational calculation inside a professional environment where visibility carries cost."</blockquote>
 
-            <p>Approximately <a href="https://www.pwc.com/us/en/industries/health-industries/library/unlocking-the-menopause-market.html">$1.7 billion has been deployed</a> into menopause and midlife women's health platforms between 2020 and 2025, with funding events growing at roughly 15% annually, according to PwC. Employers have added benefits. Certification bodies have expanded. Government commissions have convened. Celebrity campaigns and medical influencers have moved menopause into the public conversation. Yet the central failure remains.</p>
+  <p>Kamaria built her career solving expensive data problems for major institutions across finance, healthcare, cybersecurity, and media. Lozen Advisory’s market correction comes from that experience. "The menopause-at-work market is built for the woman who raises her hand," Kamaria said. "The woman with the most to lose professionally was never going to raise hers."</p>
 
-            <p>Women still do not understand the transition. Women still feel unprepared for the disruption. Women still are not using treatment. Women are dissatisfied with the available options. And, even as employers add more benefits, employee confidence that those benefits support them is falling.</p>
+  <p>That is the structural failure. The market has been asking and advising employers to offer menopause support. Can that support be used, trusted, and accessed by women who will not disclose? "The absence of utilization is not the absence of need," Kamaria said. "It may be evidence that the system cannot reach the women it claims to support."</p>
 
-            <p><a href="https://hellobonafide.com/pages/state-of-menopause-2025">Bonafide's fifth annual <em>State of Menopause</em> report</a> delivers the five-year verdict: more products, more visibility, more market activity, and women still no closer to comprehension, treatment use, confidence, or trust. The report found that 59% of women ages 40 to 49 never knew about perimenopause until symptoms began, 71% feel unprepared for how disruptive symptoms are, 69% are not using any treatment for their symptoms, and 48% of women ages 40 to 49 report symptoms have negatively impacted their ambition.</p>
+  <p>The menopause-at-work benefit market is not failing because women didn’t understand the services. It is failing because the infrastructure was built around the raised hand.</p>
 
-            <p>That is not a market solving the problem. That is a market producing awareness without producing adoption.</p>
+  <hr />
 
-            <p>Maven Clinic titled its 2026 State of Women's and Family Health Benefits report <a href="https://info.mavenclinic.com/hubfs/Whitepapers/2026%20Maven%20State%20of%20Womens%20and%20Family%20Health%20Benefits%20Report.pdf"><em>More Benefits, Less Confidence</em></a>. The data behind that title is the market's admission. Employers increased women's and family health benefits by 39% year over year. Employee confidence that those benefits support them very well declined across every category.</p>
-
-            <p>The Michigan Women's Commission spent two years gathering one of the most substantial state-level menopause datasets in the country. Thousands of women. Thirteen community conversations. A statewide tour. The <a href="https://www.lozenadvisory.com/blog/michigan-menopause-memorandum">Menopause Memorandum</a> released in March 2026 with recommendations to educate employees, train supervisors, and expand benefits. Yet not one recommendation addressed the woman who said no — the woman who would not use the support because using it required visibility she could not afford. The data saw her, but the recommendations did not.</p>
-
-            <p>Lozen Advisory says the reason is structural. The menopause-at-work market has treated awareness as the pathway to adoption. The assumption is simple: once women know what is happening, they will seek support; once employers offer support, women will use it; once women use it, utilization data will show whether the benefit works.</p>
-
-            <blockquote>That assumption fails at the point of professional risk. "The market has confused awareness with adoption," Kamaria said. "A woman can understand the perimenopause transition, recognize the symptoms, and still decline to enter a system that records her private constraint. That type of non-disclosure is not ignorance, that is a rational calculation inside a professional environment where visibility carries cost."</blockquote>
-
-            <p>Kamaria spent her career as a data analyst working inside the decision systems organizations rely on to interpret performance, risk, and operational reality. Lozen Advisory's market correction comes from that background: when a system only measures what enters the record, the absence of data is not neutral. It may be the signal.</p>
-
-            <blockquote>"The absence of utilization is not the absence of need," Kamaria said. "It may be evidence that the system cannot reach the women it claims to support."</blockquote>
-
-            <p>That is the structural failure. The market has been asking and advising employers to offer menopause support. The salient question is whether that support can be used, measured, and trusted by women who will not disclose. The menopause-at-work benefit market is not failing because women didn't understand the services. It is failing because the infrastructure was built around the raised hand.</p>
-
-            <blockquote>"The menopause-at-work market is built for the woman who raises her hand," Kamaria said. "The woman with the most to lose professionally was never going to raise hers."</blockquote>
-
-            <p>The market built visibility.</p>
-            <p>It did not build reach.</p>
-
-            <hr />
-
-            <p><strong>Media Contact</strong><br />
-            For media inquiries, contact <a href={`mailto:${mediaEmail}`}>{mediaEmail}</a>.</p>
-          </Wrapper>
-        </div>
-
-        <!-- Rail: sticky sidebar matching BlogLayout exactly -->
-        <div>
-          <aside class="lg:sticky lg:top-32">
-            <div class="flex flex-col divide-y divide-base-500/10 rounded-3xl bg-white shadow-2xl outline-4 outline-base-500/10">
-              <div class="p-6">
-                <Text tag="h3" variant="textLG" class="font-display font-medium uppercase text-base-900">
-                  Release Date
-                </Text>
-                <Text tag="p" variant="textBase" class="mt-2 font-semibold text-base-700">
-                  {publishedDate}
-                </Text>
-              </div>
-              <div class="p-6">
-                <Text tag="h3" variant="textLG" class="font-display font-medium uppercase text-base-900">
-                  Category
-                </Text>
-                <Text tag="p" variant="textBase" class="mt-2 font-semibold text-base-700">
-                  Market Correction
-                </Text>
-              </div>
-              <div class="p-6">
-                <Text tag="h3" variant="textLG" class="font-display font-medium uppercase text-base-900">
-                  Media Contact
-                </Text>
-                <a
-                  href={`mailto:${mediaEmail}`}
-                  class="mt-2 block font-sans text-sm text-base-800 underline underline-offset-4 transition-colors hover:text-base-950"
-                >
-                  {mediaEmail}
-                </a>
-              </div>
-              <div class="p-6">
-                <Text tag="h3" variant="textLG" class="font-display font-medium uppercase text-base-900 mb-3">
-                  Share
-                </Text>
-                <div class="flex flex-col gap-2">
-                  {shareLinks.map((link) => (
-                    <a
-                      href={link.href}
-                      target={link.label === "Email" ? undefined : "_blank"}
-                      rel={link.label === "Email" ? undefined : "noopener noreferrer"}
-                      class="inline-flex items-center rounded-lg border border-base-200 bg-base-50 px-4 py-2 font-sans text-xs font-bold uppercase tracking-[0.08em] text-base-700 transition-colors hover:border-base-400 hover:bg-base-100 hover:text-base-950"
-                    >{link.label}</a>
-                  ))}
-                </div>
-              </div>
-              <div class="p-6">
-                <Text tag="h3" variant="textLG" class="font-display font-medium uppercase text-base-900">
-                  All Releases
-                </Text>
-                <Button isLink href="/news-press" variant="default" size="xs" class="mt-4 w-fit">
-                  View newsroom
-                </Button>
-              </div>
-            </div>
-          </aside>
-        </div>
-
-      </div>
-    </Wrapper>
-  </section>
-
-</BaseLayout>
+  <p><strong>Media Contact</strong><br />
+  Lozen Advisory LLC<br />
+  <a href={`mailto:${mediaEmail}`}>{mediaEmail}</a><br />
+  <a href="https://www.lozenadvisory.com">lozenadvisory.com</a></p>
+</PressReleasePage>

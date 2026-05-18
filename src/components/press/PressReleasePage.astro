@@ -1,0 +1,570 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  metaDescription?: string;
+  canonical: string;
+  image?: string;
+  imageAlt?: string;
+  imageCaption?: string;
+  publishedDate: string;
+  publishedDateIso: string;
+  releaseLabel?: string;
+  category?: string;
+  mediaEmail?: string;
+  backHref?: string;
+  backLabel?: string;
+}
+
+const {
+  title,
+  description,
+  metaDescription,
+  canonical,
+  image,
+  imageAlt = "",
+  imageCaption,
+  publishedDate,
+  publishedDateIso,
+  releaseLabel = "For Immediate Release",
+  category = "Press Release",
+  mediaEmail = "media@lozenadvisory.com",
+  backHref = "/news-press",
+  backLabel = "News & Press",
+} = Astro.props;
+
+const encodedUrl = encodeURIComponent(canonical);
+const encodedTitle = encodeURIComponent(title);
+
+const shareLinks = [
+  {
+    label: "LinkedIn",
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+  },
+  {
+    label: "X",
+    href: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+  },
+  {
+    label: "Facebook",
+    href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+  },
+  {
+    label: "Email",
+    href: `mailto:?subject=${encodedTitle}&body=${encodedUrl}`,
+  },
+];
+
+const releaseDetails = [
+  { label: "Release Date", value: publishedDate },
+  { label: "Category", value: category },
+  { label: "Media Contact", value: mediaEmail, href: `mailto:${mediaEmail}` },
+];
+
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: title,
+  description,
+  datePublished: publishedDateIso,
+  dateModified: publishedDateIso,
+  ...(image ? { image: [`https://www.lozenadvisory.com${image}`] } : {}),
+  author: {
+    "@type": "Organization",
+    name: "Lozen Advisory LLC",
+    url: "https://www.lozenadvisory.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Lozen Advisory LLC",
+    url: "https://www.lozenadvisory.com",
+  },
+  mainEntityOfPage: canonical,
+};
+---
+
+<BaseLayout
+  title={`${title} | Lozen Advisory`}
+  description={metaDescription ?? description}
+  canonical={canonical}
+  ogImage={image}
+  ogImageAlt={imageAlt}
+  ogType="article"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)}></script>
+
+  <article class="press-release-page">
+    <header class="press-release-page__hero">
+      <Wrapper variant="standard" class="relative z-10">
+        <div class="press-release-page__hero-shell">
+          <div class="press-release-page__hero-copy">
+            <a href={backHref} class="press-release-page__back">← {backLabel}</a>
+
+            <div class="press-release-page__meta" aria-label="Release metadata">
+              <span>{releaseLabel}</span>
+              <span>{publishedDate}</span>
+              <span>{category}</span>
+            </div>
+
+            <Text tag="h1" variant="displayMD" class="press-release-page__title">
+              {title}
+            </Text>
+
+            <Text tag="p" variant="textBase" class="press-release-page__deck">
+              <em>{description}</em>
+            </Text>
+          </div>
+
+          <nav class="press-release-page__share press-release-page__share--hero" aria-label="Share this press release">
+            <span>Share</span>
+            {shareLinks.map((link) => (
+              <a
+                href={link.href}
+                target={link.label === "Email" ? undefined : "_blank"}
+                rel={link.label === "Email" ? undefined : "noopener noreferrer"}
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </Wrapper>
+    </header>
+
+    <section class="press-release-page__section">
+      <Wrapper variant="standard">
+        <div class="press-release-page__layout">
+          <div class="press-release-page__main">
+            {
+              image && (
+                <figure class="press-release-page__figure">
+                  <img src={image} alt={imageAlt} loading="eager" decoding="async" />
+                  {imageCaption && <figcaption>{imageCaption}</figcaption>}
+                </figure>
+              )
+            }
+
+            <div class="press-release-page__body">
+              <slot />
+            </div>
+          </div>
+
+          <aside class="press-release-page__rail" aria-label="Release details">
+            <div class="press-release-page__rail-card">
+              <div class="press-release-page__rail-section">
+                <p class="press-release-page__rail-eyebrow">Release Details</p>
+                <dl>
+                  {releaseDetails.map((detail) => (
+                    <div>
+                      <dt>{detail.label}</dt>
+                      <dd>
+                        {detail.href ? <a href={detail.href}>{detail.value}</a> : detail.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+
+              <div class="press-release-page__rail-section">
+                <p class="press-release-page__rail-eyebrow">Share</p>
+                <nav class="press-release-page__share press-release-page__share--rail" aria-label="Share this press release">
+                  {shareLinks.map((link) => (
+                    <a
+                      href={link.href}
+                      target={link.label === "Email" ? undefined : "_blank"}
+                      rel={link.label === "Email" ? undefined : "noopener noreferrer"}
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+
+              <div class="press-release-page__rail-section">
+                <p class="press-release-page__rail-eyebrow">Newsroom</p>
+                <a href="/news-press" class="press-release-page__newsroom-link">View all releases →</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </Wrapper>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .press-release-page {
+    background: var(--color-base-50);
+    color: var(--color-base-700);
+  }
+
+  .press-release-page__hero {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-base-500) 28%, var(--color-base-950));
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.055), transparent 40%),
+      linear-gradient(135deg, var(--color-base-950) 0%, var(--color-base-900) 56%, #020a17 100%);
+    color: #ffffff;
+  }
+
+  .press-release-page__hero-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(14rem, 18rem);
+    gap: clamp(2rem, 5vw, 4.5rem);
+    align-items: end;
+    padding-top: clamp(8rem, 12vw, 10rem);
+    padding-bottom: clamp(3.25rem, 6vw, 5rem);
+  }
+
+  .press-release-page__hero-copy {
+    max-width: var(--lozen-article-content-width, 60rem);
+  }
+
+  .press-release-page__back {
+    display: inline-flex;
+    color: color-mix(in srgb, var(--color-base-100) 82%, white);
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    transition: color 180ms ease;
+  }
+
+  .press-release-page__back:hover,
+  .press-release-page__back:focus-visible {
+    color: #ffffff;
+  }
+
+  .press-release-page__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+    margin-top: 1.85rem;
+    color: color-mix(in srgb, var(--color-base-100) 80%, white);
+    font-family: var(--font-sans);
+    font-size: var(--lozen-meta-label-size, 0.75rem);
+    font-weight: var(--lozen-meta-label-weight, 700);
+    letter-spacing: var(--lozen-meta-label-letter-spacing, 0.14em);
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .press-release-page__meta span {
+    position: relative;
+  }
+
+  .press-release-page__meta span + span::before {
+    content: "";
+    display: inline-block;
+    width: 0.28rem;
+    height: 0.28rem;
+    margin-right: 1rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-base-300) 54%, transparent);
+    vertical-align: middle;
+  }
+
+  .press-release-page__title {
+    max-width: var(--lozen-article-content-width, 60rem);
+    margin-top: 1.05rem;
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-size: var(--lozen-article-hero-title-size, clamp(2rem, 3.4vw, 3.25rem));
+    font-weight: var(--lozen-article-hero-title-weight, 400);
+    letter-spacing: var(--lozen-article-hero-title-letter-spacing, -0.025em);
+    line-height: var(--lozen-article-hero-title-line-height, 1.06);
+    text-wrap: balance;
+  }
+
+  .press-release-page__deck {
+    max-width: 50rem;
+    margin-top: 1.25rem;
+    color: color-mix(in srgb, var(--color-base-100) 88%, white);
+    font-family: var(--font-sans);
+    font-size: var(--lozen-page-hero-deck-size, clamp(1rem, 1.25vw, 1.125rem));
+    line-height: var(--lozen-page-hero-deck-line-height, 1.72);
+  }
+
+  .press-release-page__section {
+    padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 7vw, 6rem);
+  }
+
+  .press-release-page__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 20rem);
+    gap: clamp(3rem, 5vw, 5rem);
+    align-items: start;
+  }
+
+  .press-release-page__main {
+    width: min(100%, var(--lozen-article-content-width, 60rem));
+  }
+
+  .press-release-page__figure {
+    margin: 0 0 clamp(2.25rem, 4vw, 3.25rem);
+  }
+
+  .press-release-page__figure img {
+    display: block;
+    width: 100%;
+    max-height: 28rem;
+    object-fit: cover;
+    border: 1px solid var(--color-base-200);
+    border-radius: 1.35rem;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .press-release-page__figure figcaption {
+    margin-top: 0.75rem;
+    color: var(--color-base-500);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    line-height: 1.55;
+  }
+
+  .press-release-page__body {
+    color: var(--color-base-700);
+    font-family: var(--font-sans);
+    font-size: var(--lozen-body-copy-large-size, 1.0625rem);
+    line-height: var(--lozen-body-copy-large-line-height, 1.86);
+  }
+
+  .press-release-page__body :global(*:first-child) {
+    margin-top: 0;
+  }
+
+  .press-release-page__body :global(p) {
+    margin: 0 0 1.45rem;
+    color: var(--color-base-700);
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .press-release-page__body :global(strong) {
+    color: var(--color-base-950);
+    font-weight: 760;
+  }
+
+  .press-release-page__body :global(a) {
+    color: var(--color-base-800);
+    font-weight: 740;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-base-500) 46%, transparent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.22em;
+    transition:
+      color 180ms ease,
+      text-decoration-color 180ms ease;
+  }
+
+  .press-release-page__body :global(a:hover),
+  .press-release-page__body :global(a:focus-visible) {
+    color: var(--color-base-950);
+    text-decoration-color: var(--color-base-950);
+  }
+
+  .press-release-page__body :global(blockquote) {
+    margin: 2.25rem 0;
+    border-left: 2px solid var(--color-base-400);
+    padding: 0.15rem 0 0.15rem 1.2rem;
+    color: var(--color-base-800);
+    font-family: var(--font-sans);
+    font-size: var(--lozen-pullquote-size, clamp(1.05rem, 1.2vw, 1.24rem));
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: var(--lozen-pullquote-letter-spacing, 0);
+    line-height: var(--lozen-pullquote-line-height, 1.68);
+  }
+
+  .press-release-page__body :global(hr) {
+    margin: 2.75rem 0;
+    border: 0;
+    border-top: 1px solid var(--color-base-200);
+  }
+
+  .press-release-page__rail {
+    position: sticky;
+    top: 7.25rem;
+  }
+
+  .press-release-page__rail-card {
+    overflow: hidden;
+    border: 1px solid var(--color-base-200);
+    border-radius: 1.35rem;
+    background: #ffffff;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .press-release-page__rail-section {
+    padding: 1.25rem;
+  }
+
+  .press-release-page__rail-section + .press-release-page__rail-section {
+    border-top: 1px solid var(--color-base-200);
+  }
+
+  .press-release-page__rail-eyebrow,
+  .press-release-page__share span,
+  .press-release-page__rail dt {
+    margin: 0;
+    color: var(--color-base-500);
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 760;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .press-release-page__rail dl {
+    display: grid;
+    gap: 1rem;
+    margin: 1rem 0 0;
+  }
+
+  .press-release-page__rail dd {
+    margin: 0.32rem 0 0;
+    color: var(--color-base-850, var(--color-base-900));
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 650;
+    line-height: 1.5;
+  }
+
+  .press-release-page__rail dd a,
+  .press-release-page__newsroom-link {
+    color: var(--color-base-800);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--color-base-500) 42%, transparent);
+    text-underline-offset: 0.22em;
+    transition:
+      color 180ms ease,
+      text-decoration-color 180ms ease;
+  }
+
+  .press-release-page__rail dd a:hover,
+  .press-release-page__rail dd a:focus-visible,
+  .press-release-page__newsroom-link:hover,
+  .press-release-page__newsroom-link:focus-visible {
+    color: var(--color-base-950);
+    text-decoration-color: var(--color-base-950);
+  }
+
+  .press-release-page__newsroom-link {
+    display: inline-flex;
+    margin-top: 0.8rem;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 760;
+  }
+
+  .press-release-page__share {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .press-release-page__share--hero {
+    justify-content: flex-start;
+  }
+
+  .press-release-page__share--rail {
+    display: grid;
+    margin-top: 0.9rem;
+  }
+
+  .press-release-page__share a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.45rem;
+    border: 1px solid color-mix(in srgb, var(--color-base-400) 46%, transparent);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0.7rem 0.95rem;
+    color: color-mix(in srgb, var(--color-base-100) 88%, white);
+    font-family: var(--font-sans);
+    font-size: 0.76rem;
+    font-weight: 760;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-decoration: none;
+    transition:
+      background 180ms ease,
+      border-color 180ms ease,
+      color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .press-release-page__share--rail a {
+    width: 100%;
+    border-color: var(--color-base-200);
+    background: var(--color-base-50);
+    color: var(--color-base-700);
+  }
+
+  .press-release-page__share a:hover,
+  .press-release-page__share a:focus-visible {
+    border-color: var(--color-base-200);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+
+  .press-release-page__share--rail a:hover,
+  .press-release-page__share--rail a:focus-visible {
+    border-color: var(--color-base-400);
+    background: #ffffff;
+    color: var(--color-base-950);
+  }
+
+  @media (max-width: 980px) {
+    .press-release-page__hero-shell,
+    .press-release-page__layout {
+      grid-template-columns: 1fr;
+    }
+
+    .press-release-page__share--hero {
+      margin-top: 0.5rem;
+    }
+
+    .press-release-page__main {
+      width: 100%;
+      max-width: var(--lozen-article-content-width, 60rem);
+      margin-inline: auto;
+    }
+
+    .press-release-page__rail {
+      position: static;
+      width: min(100%, var(--lozen-article-content-width, 60rem));
+      margin-inline: auto;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .press-release-page__hero-shell {
+      padding-top: clamp(7rem, 24vw, 8.5rem);
+      padding-bottom: 3rem;
+    }
+
+    .press-release-page__meta {
+      gap: 0.5rem 0.75rem;
+    }
+
+    .press-release-page__meta span + span::before {
+      margin-right: 0.75rem;
+    }
+
+    .press-release-page__figure img,
+    .press-release-page__rail-card {
+      border-radius: 1.1rem;
+    }
+  }
+</style>
