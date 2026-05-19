@@ -1,28 +1,30 @@
 ---
 title: Perimenopause Brain Fog Causes
 slug: perimenopause-brain-fog-causes
-pubDate: &id001 2026-02-01
-datePublished: *id001
+pubDate: 2026-02-01
+datePublished: 2026-02-01
 dateModified: 2026-05-05
 category: The Tender Path
-excerpt: 'Women in their forties are routinely evaluated for anxiety, depression, or early cognitive decline when what they are actually experiencing is the neurological impact of hormonal fluctuation. '
-description: Losing words or focus? Discover why perimenopause causes cognitive shifts that mimic ADHD or dementia—and why standard hormone tests often miss the transition.
-metaDescription: Losing words or focus? Discover why perimenopause causes cognitive shifts that mimic ADHD or dementia—and why standard hormone tests often miss the transition.
+excerpt: "Women in their forties are routinely evaluated for anxiety,
+  depression, or early cognitive decline when what they are actually
+  experiencing is the neurological impact of hormonal fluctuation. "
+description: Losing words or focus? Discover why perimenopause causes cognitive
+  shifts that mimic ADHD or dementia—and why standard hormone tests often miss
+  the transition.
+metaDescription: Losing words or focus? Discover why perimenopause causes
+  cognitive shifts that mimic ADHD or dementia—and why standard hormone tests
+  often miss the transition.
 image:
   url: /src/images/blog/brainfog-inline.avif
   alt: Abstract blue editorial placeholder image.
 heroImage: /src/images/blog/brainfog-inline.avif
 heroAlt: Abstract blue editorial placeholder image.
 tags:
-- The Tender Path
+  - The Tender Path
 spineDestination: menopause-support-women-lawyers
 draft: false
 isFeatured: false
 ---
-Let me read your standards file again before [writing.Now](http://writing.Now) I have the full standards. Writing the rewrite now.
-
----
-
 You used to be the one with the answers. The one who could hold ten things in your head and deliver on all of them. The one who never had to write everything down.
 
 Now you are standing in a room and cannot remember why you walked in. You are in the middle of a sentence and the word you need disappears. You are reading something you have read a hundred times and it is not landing.
@@ -39,7 +41,7 @@ This is not what people mean when they say everyone gets more forgetful with age
 
 This is the word that vanishes mid-sentence in a meeting. The decision you used to make in thirty seconds that now takes thirty minutes. The confidence in your own thinking that you cannot locate the way you used to. You knew your own mind. Right now your mind feels unreliable in a way it never has before, and you know the difference because you have been paying attention to your own mind for decades.
 
-That difference is real. It has a name.
+That difference is real., it has a name.
 
 ---
 
