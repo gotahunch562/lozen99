@@ -1,6 +1,5 @@
 ---
 // Fundations
-import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const primaryLinks = [
@@ -10,29 +9,6 @@ const primaryLinks = [
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
   { href: "/news-press", label: "News & Press" },
-];
-
-const secondarySections = [
-  {
-    title: "Frameworks",
-    links: [
-      { href: "/invisible-attrition", label: "Invisible Attrition℠" },
-      { href: "/architecture-of-invisible-attrition-series", label: "Executive Report Series" },
-      { href: "/disclosure-independence-infrastructure", label: "Disclosure Infrastructure" },
-      { href: "/retention-risk-analysis", label: "Retention Risk Analysis" },
-    ],
-  },
-  {
-    title: "Access",
-    links: [
-      { href: "/why-lozen-advisory", label: "Why Lozen Advisory" },
-      { href: "/events", label: "Events" },
-      { href: "/faq", label: "FAQ" },
-      { href: "/menopause-support-women-lawyers", label: "For Women Lawyers" },
-      { href: "/retention-calculator", label: "Retention Calculator" },
-      { href: "/menopause-legislation-tracker", label: "Menopause Legislation Tracker" },
-    ],
-  },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -49,7 +25,7 @@ const isActiveLink = (href: string) =>
     <div
       class="max-h-[calc(100vh-6.5rem)] overflow-y-auto rounded-2xl border border-base-200 bg-white/95 shadow-2xl outline-4 outline-base-500/5 backdrop-blur-xl"
     >
-      <div class="space-y-1 p-4 sm:p-6">
+      <nav class="space-y-1 p-4 sm:p-6" aria-label="Mobile navigation">
         {
           primaryLinks.map((link) => (
             <a
@@ -66,58 +42,7 @@ const isActiveLink = (href: string) =>
             </a>
           ))
         }
-      </div>
-
-      <div class="grid gap-5 border-t border-base-200 px-4 py-5 sm:px-6">
-        {
-          secondarySections.map((section) => (
-            <div>
-              <p class="font-sans text-xs font-bold uppercase tracking-[0.14em] text-base-500">
-                {section.title}
-              </p>
-
-              <div class="mt-2 grid gap-1">
-                {section.links.map((link) => (
-                  <a
-                    href={link.href}
-                    aria-current={isActiveLink(link.href) ? "page" : undefined}
-                    class:list={[
-                      "block rounded-xl px-4 py-2.5 font-sans text-sm font-semibold transition-colors duration-200",
-                      isActiveLink(link.href)
-                        ? "bg-base-900 text-white"
-                        : "text-base-800 hover:bg-base-50 hover:text-accent-700",
-                    ]}
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))
-        }
-      </div>
-
-      <div class="space-y-3 border-t border-base-200 p-4 sm:p-6">
-        <Button
-          isLink
-          size="base"
-          variant="accent"
-          class="w-full"
-          href="/request-briefing"
-        >
-          Request Briefing
-        </Button>
-
-        <Button
-          isLink
-          size="base"
-          variant="muted"
-          class="w-full"
-          href="/booking"
-        >
-          MAPS Blueprint℠
-        </Button>
-      </div>
+      </nav>
     </div>
   </Wrapper>
 </div>
