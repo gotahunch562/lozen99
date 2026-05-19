@@ -26,7 +26,7 @@ const getItemClasses = (status?: SeriesItem["status"]) => {
   }
 
   if (status === "forthcoming") {
-    return "border-base-200 bg-base-100 text-base-500";
+    return "border-base-200 bg-base-100 text-base-700";
   }
 
   return "border-base-200 bg-white text-base-800 hover:-translate-y-1 hover:border-accent-400 hover:bg-accent-50 hover:shadow-sm";
@@ -34,7 +34,7 @@ const getItemClasses = (status?: SeriesItem["status"]) => {
 ---
 
 <section class="rounded-3xl border border-base-200 bg-white p-6 shadow-sm sm:p-8">
-  <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-500">
+  <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-600">
     {eyebrow}
   </p>
 
@@ -46,7 +46,7 @@ const getItemClasses = (status?: SeriesItem["status"]) => {
 
       {
         description && (
-          <p class="mt-4 text-sm leading-6 text-base-700">
+          <p class="mt-4 text-sm leading-6 text-base-800">
             {description}
           </p>
         )
