@@ -26,11 +26,27 @@ const normalizePath = (pathname: string) => {
   return cleanPath || "/";
 };
 
+const hasFileExtension = (pathname: string) => /\/[^/]+\.[^/]+$/.test(pathname);
+
+const normalizeCanonicalUrl = (input: string | URL) => {
+  const url = new URL(input, site);
+
+  if (
+    url.pathname !== "/" &&
+    !url.pathname.endsWith("/") &&
+    !hasFileExtension(url.pathname)
+  ) {
+    url.pathname = `${url.pathname}/`;
+  }
+
+  return url.toString();
+};
+
 const currentPath = normalizePath(Astro.url.pathname);
 
 const canonical = pageCanonical
-  ? new URL(pageCanonical, site).toString()
-  : new URL(currentPath, site).toString();
+  ? normalizeCanonicalUrl(pageCanonical)
+  : normalizeCanonicalUrl(currentPath);
 
 const title =
   pageTitle?.trim() ||

@@ -6,6 +6,10 @@ import vercel from "@astrojs/vercel";
 
 export default defineConfig({
   adapter: vercel(),
+  trailingSlash: "always",
+  build: {
+    format: "directory",
+  },
   vite: {
     plugins: [tailwindcss()],
   },

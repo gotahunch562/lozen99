@@ -63,7 +63,7 @@ const pageJsonLd = createServiceJsonLd({
 
         <div class="service-detail-related__list">
           {relatedServices.map((service) => (
-            <a href={`/services/${service.slug}`} class="service-detail-related__link">
+            <a href={`/services/${service.id}`} class="service-detail-related__link">
               <span>{service.data.title}</span>
               {service.data.shortDescription && <small>{service.data.shortDescription}</small>}
             </a>
