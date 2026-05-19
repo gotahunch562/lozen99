@@ -492,8 +492,8 @@
   .lozen-article__body ul,
   .lozen-article__body ol,
   .lozen-article__callout p {
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 1.0625rem;
+    line-height: 1.85;
   }
 
   .lozen-article__body ul,
