@@ -14,6 +14,7 @@ import {
 import Search from "@/components/global/Search.astro";
 import Footer from "@/components/global/Footer.astro";
 import Navigation from "@/components/global/Navigation.astro";
+import Statcounter from "@/components/fundations/scripts/Statcounter.astro";
 
 interface Props {
   title?: string;
@@ -73,5 +74,6 @@ const hasJsonLd = Array.isArray(jsonLdGraph["@graph"]) && jsonLdGraph["@graph"].
     </main>
     {!hideFooter && <Footer />}
     <Search />
+    <Statcounter />
   </body>
 </html>
