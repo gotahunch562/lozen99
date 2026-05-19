@@ -73,7 +73,9 @@ const hasJsonLd = Array.isArray(jsonLdGraph["@graph"]) && jsonLdGraph["@graph"].
       <slot />
     </main>
     {!hideFooter && <Footer />}
-    <Search />
+    <div class="hidden xl:block">
+      <Search />
+    </div>
     <Statcounter />
   </body>
 </html>
