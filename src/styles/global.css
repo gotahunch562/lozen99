@@ -157,7 +157,7 @@
     min-width: 320px;
     background: var(--color-base-50);
     font-family: var(--font-sans);
-    color: var(--color-base-700);
+    color: var(--color-base-900);
   }
 
   h1,
@@ -297,7 +297,7 @@
 
 /* Lozen long-form page/article system */
 .lozen-article {
-  color: var(--color-base-600);
+  color: var(--color-base-800);
 }
 
 .lozen-article__body {
@@ -310,7 +310,7 @@
   font-family: var(--font-sans);
   font-size: var(--lozen-body-copy-large-size);
   line-height: var(--lozen-body-copy-large-line-height);
-  color: var(--color-base-600);
+  color: var(--color-base-800);
 }
 
 .lozen-article__body ul,
@@ -320,7 +320,7 @@
   font-family: var(--font-sans);
   font-size: var(--lozen-body-copy-large-size);
   line-height: var(--lozen-body-copy-large-line-height);
-  color: var(--color-base-600);
+  color: var(--color-base-800);
 }
 
 .lozen-article__body ul {
@@ -410,7 +410,7 @@
   margin: 0;
   font-size: var(--lozen-body-copy-large-size);
   line-height: var(--lozen-body-copy-large-line-height);
-  color: var(--color-base-700);
+  color: var(--color-base-800);
 }
 
 .lozen-article__quote-band {
