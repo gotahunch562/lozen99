@@ -165,21 +165,6 @@ const articleJsonLd = createNewsArticleJsonLd({
               </div>
 
               <div class="press-release-page__rail-section">
-                <p class="press-release-page__rail-eyebrow">Share</p>
-                <nav class="press-release-page__share press-release-page__share--rail" aria-label="Share this press release">
-                  {shareLinks.map((link) => (
-                    <a
-                      href={link.href}
-                      target={link.label === "Email" ? undefined : "_blank"}
-                      rel={link.label === "Email" ? undefined : "noopener noreferrer"}
-                    >
-                      {link.label}
-                    </a>
-                  ))}
-                </nav>
-              </div>
-
-              <div class="press-release-page__rail-section">
                 <p class="press-release-page__rail-eyebrow">Newsroom</p>
                 <a href="/news-press" class="press-release-page__newsroom-link">View all releases →</a>
               </div>
