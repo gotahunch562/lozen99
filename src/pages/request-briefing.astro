@@ -54,7 +54,21 @@ const description = "Request a Lozen Advisory briefing on disclosure-dependent w
           >
             Briefing Details
           </Text>
-          <form class="space-y-8 mt-8">
+          <form
+            id="briefing-inquiry-form"
+            data-inquiry-type="briefing"
+            class="space-y-8 mt-8"
+          >
+            <div class="hidden" aria-hidden="true">
+              <label for="briefing-inquiry-form-website">Website</label>
+              <input
+                type="text"
+                id="briefing-inquiry-form-website"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="space-y-2">
                 <label
@@ -182,6 +196,14 @@ const description = "Request a Lozen Advisory briefing on disclosure-dependent w
             <Button size="sm" variant="default" type="submit" class="w-fit">
               Request Briefing
             </Button>
+          
+            <p
+              id="briefing-inquiry-status"
+              class="font-sans text-base font-semibold text-base-800"
+              role="status"
+              aria-live="polite"
+            >
+            </p>
           </form>
         </div>
         <!-- Sidebar -->
@@ -254,4 +276,51 @@ const description = "Request a Lozen Advisory briefing on disclosure-dependent w
       </div>
     </Wrapper>
   </section>
+  <script is:inline>
+    function initInquiryForm(formId, statusId) {
+      const form = document.getElementById(formId);
+      const status = document.getElementById(statusId);
+
+      if (!form || !status) return;
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+        payload.type = form.dataset.inquiryType || "briefing";
+
+        status.textContent = "Sending...";
+        status.className = "font-sans text-base font-semibold text-base-800";
+
+        try {
+          const response = await fetch("/api/inquiry", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const data = await response.json().catch(() => ({}));
+
+          if (!response.ok) {
+            throw new Error(data.message || "Unable to send this inquiry.");
+          }
+
+          form.reset();
+          status.textContent = "Your briefing request was sent. Lozen Advisory will review your inquiry directly.";
+          status.className = "font-sans text-base font-semibold text-base-900";
+        } catch (error) {
+          status.textContent =
+            error instanceof Error
+              ? error.message
+              : "Unable to send this inquiry right now.";
+          status.className = "font-sans text-base font-semibold text-red-700";
+        }
+      });
+    }
+
+    initInquiryForm("briefing-inquiry-form", "briefing-inquiry-status");
+  </script>
 </BaseLayout>

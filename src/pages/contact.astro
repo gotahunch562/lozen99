@@ -49,7 +49,21 @@ const description = "Contact Lozen Advisory for strategic briefings, media reque
           >
             Send us a message
           </Text>
-          <form class="space-y-8 mt-8">
+          <form
+            id="contact-inquiry-form"
+            data-inquiry-type="contact"
+            class="space-y-8 mt-8"
+          >
+            <div class="hidden" aria-hidden="true">
+              <label for="contact-inquiry-form-website">Website</label>
+              <input
+                type="text"
+                id="contact-inquiry-form-website"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div class="space-y-2">
                 <label
@@ -111,6 +125,14 @@ const description = "Contact Lozen Advisory for strategic briefings, media reque
             <Button size="sm" variant="default" type="submit" class="w-fit">
               Send Message
             </Button>
+          
+            <p
+              id="contact-inquiry-status"
+              class="font-sans text-base font-semibold text-base-800"
+              role="status"
+              aria-live="polite"
+            >
+            </p>
           </form>
         </div>
         <!-- Sidebar -->
@@ -157,4 +179,51 @@ const description = "Contact Lozen Advisory for strategic briefings, media reque
       </div>
     </Wrapper>
   </section>
+  <script is:inline>
+    function initInquiryForm(formId, statusId) {
+      const form = document.getElementById(formId);
+      const status = document.getElementById(statusId);
+
+      if (!form || !status) return;
+
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+        payload.type = form.dataset.inquiryType || "contact";
+
+        status.textContent = "Sending...";
+        status.className = "font-sans text-base font-semibold text-base-800";
+
+        try {
+          const response = await fetch("/api/inquiry", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const data = await response.json().catch(() => ({}));
+
+          if (!response.ok) {
+            throw new Error(data.message || "Unable to send this inquiry.");
+          }
+
+          form.reset();
+          status.textContent = "Your message was sent. Lozen Advisory will review your inquiry directly.";
+          status.className = "font-sans text-base font-semibold text-base-900";
+        } catch (error) {
+          status.textContent =
+            error instanceof Error
+              ? error.message
+              : "Unable to send this inquiry right now.";
+          status.className = "font-sans text-base font-semibold text-red-700";
+        }
+      });
+    }
+
+    initInquiryForm("contact-inquiry-form", "contact-inquiry-status");
+  </script>
 </BaseLayout>
