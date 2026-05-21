@@ -61,7 +61,17 @@ content:
         type: date
       - name: category
         label: Category
-        type: string
+        type: select
+        required: true
+        description: "Primary editorial category. This controls Blog and Resource Library grouping."
+        options:
+          values:
+            - Legislative Analysis
+            - Research & Policy
+            - Legal Profession
+            - Performance & Career
+            - The Tender Path
+            - Disclosure Independence
       - name: excerpt
         label: Excerpt
         type: text
@@ -96,10 +106,24 @@ content:
         label: Hero image alt text
         type: string
       - name: tags
-        label: Tags
-        type: string
-        list: true
-        required: true
+        label: Secondary topics
+        type: select
+        required: false
+        description: "Optional secondary topics. Use only when a post should also appear on a specific topic/tag page."
+        options:
+          multiple: true
+          values:
+            - Disclosure Day
+            - Workplace Disclosure
+            - Disclosure Independence
+            - Invisible Attrition
+            - Tacere
+            - Power User Trap
+            - The Tender Path
+            - Legislative Analysis
+            - Research & Policy
+            - Legal Profession
+            - Performance & Career
       - name: spineDestination
         label: Spine destination
         type: string
