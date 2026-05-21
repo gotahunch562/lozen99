@@ -16,10 +16,10 @@ metaDescription: Disclosure Day, Steven Spielberg's 2026 film, gives the word
   is record creation.
 image:
   url: /src/images/blog/disclosuredaycommentary.webp
-  alt: Abstract blue digital overlay across a woman's face, suggesting disclosure,
+  alt: "Abstract blue digital overlay across a woman's face, suggesting workplace disclosure and record creation."
     visibility, and workplace record creation
 heroImage: /src/images/blog/disclosuredaycommentary.webp
-heroAlt: Abstract blue digital overlay across a woman's face, suggesting
+heroAlt: "Abstract blue digital overlay across a woman's face, suggesting workplace disclosure and record creation."
   disclosure, visibility, and workplace record creation
 tags:
   - Disclosure Day

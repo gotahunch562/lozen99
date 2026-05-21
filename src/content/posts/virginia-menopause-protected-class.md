@@ -10,9 +10,9 @@ description: 'Governor Spanberger executed a split decision on Virginia’s meno
 metaDescription: 'Governor Spanberger executed a split decision on Virginia’s menopause bills: signing an insurance mandate while substituting two studies for proposed workplace protections. Analyze the legislative shift from legal mandates to research directives.'
 image:
   url: /src/images/blog/VA_collage-2.webp
-  alt: collage representing all the women of the State of Virginia
+  alt: "Collage of senior professional women in workplace settings, representing the experienced workforce affected by Virginia menopause workplace protections."
 heroImage: /src/images/blog/VA_collage-2.webp
-heroAlt: collage representing all the women of the State of Virginia
+heroAlt: "Collage of senior professional women in workplace settings, representing the experienced workforce affected by Virginia menopause workplace protections."
 tags:
 - Legislative Analysis
 spineDestination: menopause-legislation-tracker

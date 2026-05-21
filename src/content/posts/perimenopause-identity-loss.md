@@ -10,9 +10,9 @@ description: Feeling like yourself again starts with understanding the shift. Ex
 metaDescription: Feeling like yourself again starts with understanding the shift. Explore how perimenopause impacts mental sharpness, identity, and performance for women in their 40s.
 image:
   url: /src/images/blog/identity-loss-inline.avif
-  alt: Abstract image of woman in shifting face squares
+  alt: "Woman reflecting on the identity shifts that accompany perimenopause."
 heroImage: /src/images/blog/identity-loss-inline.avif
-heroAlt: Abstract image of woman in shifting face squares
+heroAlt: "Woman reflecting on the identity shifts that accompany perimenopause."
 tags:
 - The Tender Path
 spineDestination: menopause-support-women-lawyers

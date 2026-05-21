@@ -17,9 +17,9 @@ metaDescription: Employers measure benefit utilization but miss the decision not
   organizations blind to the true cost of Invisible Attrition℠.
 image:
   url: /src/images/blog/73-point-menopause-data-perception-gap.webp
-  alt: infographic on invisible attrition
+  alt: "Illustration depicting the 73-point menopause data perception gap between HR manager confidence and employee disclosure reality."
 heroImage: /src/images/blog/73-point-menopause-data-perception-gap.webp
-heroAlt: infographic on invisible attrition
+heroAlt: "Illustration depicting the 73-point menopause data perception gap between HR manager confidence and employee disclosure reality."
 tags:
   - Research & Policy
 spineDestination: retention-risk-analysis

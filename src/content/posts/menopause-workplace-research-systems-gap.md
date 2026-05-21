@@ -10,9 +10,9 @@ description: A new menopause research center signals progress, but health-based 
 metaDescription: A new menopause research center signals progress, but health-based models cannot measure workplace systems. Discover why the field lacks the organizational disciplines to track Invisible Attrition℠.
 image:
   url: /src/images/blog/Problem_of_No-Signal_Attrition_in_Menopause.webp
-  alt: asian woman walking in pink suit
+  alt: "Woman executive in a blush suit walking through a corporate corridor lined with digital panels reading NO SIGNAL, IDENTITY NOT FOUND, and NO DATA AVAILABLE."
 heroImage: /src/images/blog/Problem_of_No-Signal_Attrition_in_Menopause.webp
-heroAlt: asian woman walking in pink suit
+heroAlt: "Woman executive in a blush suit walking through a corporate corridor lined with digital panels reading NO SIGNAL, IDENTITY NOT FOUND, and NO DATA AVAILABLE."
 tags:
 - Research & Policy
 spineDestination: retention-risk-analysis

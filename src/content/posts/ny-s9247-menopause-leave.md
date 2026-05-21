@@ -10,9 +10,9 @@ description: NY S9247 proposes five days of paid menopause leave, but a new enti
 metaDescription: NY S9247 proposes five days of paid menopause leave, but a new entitlement doesn't solve the disclosure barrier. Learn why leave utilization data creates a "dashboard delay" and fails to measure Invisible Attrition℠.
 image:
   url: /src/images/blog/NysenateBILL9247.webp
-  alt: Abstract blue editorial placeholder image.
+  alt: "Lady Justice holding legislative documents with the Statue of Liberty and Manhattan skyline in the background, representing New York menopause workplace legislation."
 heroImage: /src/images/blog/NysenateBILL9247.webp
-heroAlt: Abstract blue editorial placeholder image.
+heroAlt: "Lady Justice holding legislative documents with the Statue of Liberty and Manhattan skyline in the background, representing New York menopause workplace legislation."
 tags:
 - Legislative Analysis
 spineDestination: menopause-legislation-tracker

@@ -10,9 +10,9 @@ description: Women leave legal practice at higher rates during the associate-to-
 metaDescription: Women leave legal practice at higher rates during the associate-to-partner transition—the same window as perimenopause. Explore why traditional wellness programs fail women lawyers and the role of Tacere in the partnership pipeline.
 image:
   url: /src/images/blog/menopause-law-women-lawyers-performance-leadership.webp
-  alt: women partners in law firm
+  alt: "Women lawyers, associates, and partners in professional attire representing leadership and career progression in legal practice."
 heroImage: /src/images/blog/menopause-law-women-lawyers-performance-leadership.webp
-heroAlt: women partners in law firm
+heroAlt: "Women lawyers, associates, and partners in professional attire representing leadership and career progression in legal practice."
 tags:
 - Legal Profession
 spineDestination: menopause-support-women-lawyers

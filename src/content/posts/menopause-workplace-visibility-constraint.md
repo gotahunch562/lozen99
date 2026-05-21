@@ -10,9 +10,9 @@ description: Modern menopause workplace policies rely on formal disclosure, but 
 metaDescription: Modern menopause workplace policies rely on formal disclosure, but state-level data shows fewer than 1 in 5 women ever raise their hand. Discover why standard accommodation frameworks create a visibility gap and the rise of Invisible Attrition℠.
 image:
   url: /src/images/blog/visibility_constraint_v3.webp
-  alt: Abstract blue cracked glasss editorial image.
+  alt: "Close-up of a magnifying glass with cracked glass held against a blurred office building, symbolizing the visibility constraint in workplace measurement systems."
 heroImage: /src/images/blog/visibility_constraint_v3.webp
-heroAlt: Abstract blue cracked glasss editorial image.
+heroAlt: "Close-up of a magnifying glass with cracked glass held against a blurred office building, symbolizing the visibility constraint in workplace measurement systems."
 tags:
 - Research & Policy
 spineDestination: disclosure-independence-infrastructure

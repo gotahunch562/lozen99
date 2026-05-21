@@ -10,9 +10,9 @@ description: New research from The Fuchsia Tent aims to mainstream menopause sup
 metaDescription: New research from The Fuchsia Tent aims to mainstream menopause support, but for senior leaders, visibility is a liability. Discover why organizational programs fail those who require a disclosure-independent path to protect their professional record.
 image:
   url: /src/images/blog/professional_woman_executive.webp
-  alt: Abstract blue editorial placeholder image.
+  alt: "Professional woman executive in a corporate setting."
 heroImage: /src/images/blog/professional_woman_executive.webp
-heroAlt: Abstract blue editorial placeholder image.
+heroAlt: "Professional woman executive in a corporate setting."
 tags:
 - Performance & Career
 spineDestination: why-lozen-advisory

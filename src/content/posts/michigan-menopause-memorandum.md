@@ -10,9 +10,9 @@ description: 'The 2025 Michigan Menopause Memorandum reveals a staggering gap: w
 metaDescription: 'The 2025 Michigan Menopause Memorandum reveals a staggering gap: while 79% of women want menopause-supportive workplaces, fewer than 1 in 5 will disclose their status. Explore why employer-led policies fail to address Tacere and the reality of Invisible Attrition℠.'
 image:
   url: /src/images/blog/michigan_menopause_at_work_memorandum.webp
-  alt: Abstract blue editorial placeholder image.
+  alt: "Michigan Menopause Memorandum 2026 document contrasted with middle-aged professional women, illustrating gaps in workplace menopause policy and data."
 heroImage: /src/images/blog/michigan_menopause_at_work_memorandum.webp
-heroAlt: Abstract blue editorial placeholder image.
+heroAlt: "Michigan Menopause Memorandum 2026 document contrasted with middle-aged professional women, illustrating gaps in workplace menopause policy and data."
 tags:
 - Legislative Analysis
 spineDestination: menopause-legislation-tracker
