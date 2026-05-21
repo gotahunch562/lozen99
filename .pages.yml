@@ -82,6 +82,9 @@ content:
       - name: metaDescription
         label: Meta description
         type: text
+        required: false
+        hidden: true
+        description: "Optional technical SEO override. Hidden in Pages CMS; use Description for normal SEO summaries." 
       - name: image
         label: Card image
         type: object
