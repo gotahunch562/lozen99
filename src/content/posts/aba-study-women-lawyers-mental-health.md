@@ -21,7 +21,7 @@ isFeatured: false
 ---
 The American Bar Association will release its national study on women lawyers and mental wellness in August 2026. The data will be cited, the findings will circulate, and the conversation will follow. The profession will treat it as a starting point. You are not starting. You are already inside the condition the data will attempt to describe.
 
-If you are a woman lawyer navigating [perimenopause](https://www.lozenadvisory.com/blog/women-lawyers-leadership-perimenopause) or other health conditions inside a legal practice, you knew before the study was commissioned. You knew when you took the deposition with the migraine you did not mention. You knew when you billed the hours and did not ask for the adjustment. The ABA will document what is happening to women in this profession. What it cannot document is everything you decided, privately, before the study had a way to capture it, and why that gap exists is the subject of our Invisible Attrition℠ framework.
+If you are a woman lawyer navigating [perimenopause](https://www.lozenadvisory.com/blog/women-lawyers-leadership-perimenopause/) or other health conditions inside a legal practice, you knew before the study was commissioned. You knew when you took the deposition with the migraine you did not mention. You knew when you billed the hours and did not ask for the adjustment. The ABA will document what is happening to women in this profession. What it cannot document is everything you decided, privately, before the study had a way to capture it, and why that gap exists is the subject of our Invisible Attrition℠ framework.
 
 That is where this article begins.
 
@@ -107,7 +107,7 @@ You are not in collapse. You are in containment.
 
 You decline a leadership role without explanation while maintaining full billing expectations. You manage perimenopause and brain fog without accommodation, working harder in private to protect your performance from critique. You are managing more than anyone around you knows, and you have been doing it long enough that it has started to feel like the job. What it is costing you does not appear in any system your firm uses to evaluate you.
 
-This is what our analysis of [Invisible Attrition℠](https://www.lozenadvisory.com/invisible-attrition) identifies: the unmeasured erosion of leadership and performance capacity that occurs before traditional retention metrics detect risk. Invisible Attrition℠ is not a retention problem. It is a classification problem. A senior partner takes a lateral role and calls it a lifestyle decision. Another moves in-house and frames it as work-life balance. A third steps back from leadership without explanation at a moment that looks, from the outside, like personal timing. Each departure is recorded as voluntary. The calculation behind each one is something else entirely.
+This is what our analysis of [Invisible Attrition℠](https://www.lozenadvisory.com/invisible-attrition/) identifies: the unmeasured erosion of leadership and performance capacity that occurs before traditional retention metrics detect risk. Invisible Attrition℠ is not a retention problem. It is a classification problem. A senior partner takes a lateral role and calls it a lifestyle decision. Another moves in-house and frames it as work-life balance. A third steps back from leadership without explanation at a moment that looks, from the outside, like personal timing. Each departure is recorded as voluntary. The calculation behind each one is something else entirely.
 
 The exits look voluntary. The calculations behind them do not.
 
@@ -155,5 +155,5 @@ The work does not address the health condition. It addresses the strategic decis
 
 That is not clinical work. It is strategic advisory work that happens to occur in proximity to a health condition. It does not rely on visibility to function, and it exists entirely outside the employment relationship, which means it sits outside the calculation that governs everything else.
 
-The [MAPS Blueprint℠](https://www.lozenadvisory.com/menopause-support-women-lawyers) is where to start. If you are navigating perimenopause, surgical menopause, or a health condition inside a legal practice and you have decided not to disclose it, that decision is not the problem. What comes next is the question.
+The [MAPS Blueprint℠](https://www.lozenadvisory.com/booking/) is where to start. If you are navigating perimenopause, surgical menopause, or a health condition inside a legal practice and you have decided not to disclose it, that decision is not the problem. What comes next is the question.
 

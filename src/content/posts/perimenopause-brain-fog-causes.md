@@ -95,4 +95,4 @@ You are not waiting to feel like yourself again. You are navigating something re
 
 The first step is having the right name for what is happening. You have that now. The next step is a private path built around your life, your schedule, and your body as it is right now, not the body the system expected you to have.
 
-That is what [The Tender Path℠](https://www.lozenadvisory.com/menopause-support-women-lawyers) was built for. The [MAPS Blueprint℠](https://www.lozenadvisory.com/menopause-support-women-lawyers) is where to start.
+That is what [The Tender Path℠](https://www.lozenadvisory.com/normal-blood-tests-feel-off/) was built for. The [MAPS Blueprint℠](https://www.lozenadvisory.com/booking/) is where to start.

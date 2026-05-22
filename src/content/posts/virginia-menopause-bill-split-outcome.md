@@ -27,7 +27,7 @@ That sequence is worth reading carefully before examining what it means, because
 
 ## What the Legislature Passed
 
-The Virginia General Assembly passed [HB1173](https://lis.virginia.gov/bill/20261/HB1173) and SB258, which would have amended the Virginia Human Rights Act to make menopause and perimenopause a protected characteristic, prohibited employers from treating women differently because of where they are in their menopause transition, and required reasonable accommodations for known limitations. Both bills passed with strong bipartisan margins.
+The Virginia General Assembly passed [HB1173](https://lis.virginia.gov/bill/20261/HB1173) and [SB258](https://lis.virginia.gov/bill/20261/SB258), which would have amended the Virginia Human Rights Act to make menopause and perimenopause a protected characteristic, prohibited employers from treating women differently because of where they are in their menopause transition, and required reasonable accommodations for known limitations. Both bills passed with strong bipartisan margins.
 
 [SB790](https://lis.virginia.gov/bill/20261/SB790), which requires health insurers to cover medically necessary treatments for menopause and perimenopause symptoms, was signed and approved April 13, 2026. That provision is law, effective July 1, 2026.
 
@@ -43,7 +43,7 @@ The substitute study will examine menopause-related accommodations in employment
 
 Each of those categories shares a structural condition: they measure what employees have disclosed, requested, or formally utilized. The [Day 3 analysis of Virginia's original workforce study mandate](/blog/virginia-menopause-protected-class) documented this constraint precisely. The substitute does not change it. It formalizes it inside a different instrument.
 
-A study that draws from accommodation requests, healthcare utilization, and leave records will find what entered those systems. The Day 7 analysis of [New York's S7495](/blog/ny-s7495-invisible-majority-policy-gap), a study bill with identical category boundaries, establishes what that means: the population named in the findings is excluded from the measurement the findings commissioned.
+A study that draws from accommodation requests, healthcare utilization, and leave records will find what entered those systems. The Day 7 analysis of [New York's S7495](/blog/ny-s7495-invisible-majority-policy-gap/), a study bill with identical category boundaries, establishes what that means: the population named in the findings is excluded from the measurement the findings commissioned.
 
 Virginia named these women in the legislative record. The substitute then directed a study whose instruments cannot reach them.
 
@@ -63,7 +63,7 @@ SB790 is law, effective July 1, 2026. Insurance coverage for medically necessary
 
 The protection HB1173 and SB258 would have provided, the prohibition on discriminatory treatment and the accommodation mandate, does not exist in Virginia law. What exists is a study due July 1, 2028, operating on the same disclosure-dependent instruments the series has been examining since Day 1.
 
-That calculation has a name. The pattern it produces across the organizational record has a name too. Both are documented in the [Invisible Attrition℠](/invisible-attrition) framework.
+That calculation has a name. The pattern it produces across the organizational record has a name too. Both are documented in the [Invisible Attrition℠](/invisible-attrition/) framework.
 
 She was never silent. She decided.
 

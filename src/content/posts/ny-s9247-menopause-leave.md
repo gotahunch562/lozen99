@@ -31,7 +31,7 @@ What a leave entitlement does not change, however, is the condition that precede
 
 Research from Maven Clinic indicates that 44% of millennials and 34% of Gen Xers experiencing menopause have avoided discussing symptoms at work due to fear of stigma. Among millennials, 60% have not discussed symptoms with a healthcare provider, compared to 35% of Gen Xers. These are not employees declining leave. They are employees who never enter the system where leave becomes available.
 
-The [Michigan Women's Commission](https://www.michigan.gov/whitmer/commissions/womenscommission) survey found that 52% of respondents indicated their workplace culture did not foster an environment where women employees would be comfortable taking time off due to menopause-related symptoms. Fewer than one in five disclosed their menopause status at work at all.
+The [Michigan Women's Commission](https://www.michigan.gov/mwc/-/media/Project/Websites/mwc/Annual-Reports/Menopause-Memo-Final-PDF-V1.pdf) survey found that 52% of respondents indicated their workplace culture did not foster an environment where women employees would be comfortable taking time off due to menopause-related symptoms. Fewer than one in five disclosed their menopause status at work at all.
 
 A new leave category extends the system, but it does not resolve the condition that keeps a significant share of women employees outside it.
 
@@ -47,6 +47,6 @@ If S9247 passes, organizations will cite it as evidence of support. The entitlem
 
 The record captures activity. It cannot capture the decision not to participate.
 
-This is not a policy design flaw. It is the condition that produces [Invisible Attrition℠](/invisible-attrition). The women who need the leave most are precisely the ones least likely to request it, and the gap between their organizational impact and their presence in utilization records is not a measurement quirk. Leave data captures what was taken. It cannot capture the women who kept their own counsel and never requested it, and that is not incidental to this analysis. It is the governing condition this entire analysis demonstrates.
+This is not a policy design flaw. It is the condition that produces [Invisible Attrition℠](/invisible-attrition/). The women who need the leave most are precisely the ones least likely to request it, and the gap between their organizational impact and their presence in utilization records is not a measurement quirk. Leave data captures what was taken. It cannot capture the women who kept their own counsel and never requested it, and that is not incidental to this analysis. It is the governing condition this entire analysis demonstrates.
 
 [← Back to all articles](/blog)
