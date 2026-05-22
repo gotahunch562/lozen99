@@ -270,4 +270,123 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
       });
     });
   </script>
+  <style is:inline>
+    .lozen-blog-share {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.625rem;
+      margin: 1.5rem 0 0;
+      font-family: var(--font-sans);
+    }
+
+    .lozen-blog-share__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-base-700);
+    }
+
+    .lozen-blog-share__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-base-300);
+      border-radius: 999px;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--color-base-900);
+      background: rgba(255, 255, 255, 0.86);
+      text-decoration: none;
+      transition:
+        border-color 180ms ease,
+        background-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .lozen-blog-share__link:hover,
+    .lozen-blog-share__link:focus-visible {
+      border-color: var(--color-accent-600);
+      color: var(--color-base-950);
+      background: var(--color-accent-100);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    @media (max-width: 640px) {
+      .lozen-blog-share {
+        margin-top: 1.25rem;
+      }
+
+      .lozen-blog-share__link {
+        padding: 0.55rem 0.95rem;
+        font-size: 0.9375rem;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (document.querySelector(".lozen-blog-share")) return;
+
+      const heading = document.querySelector("main h1");
+      if (!heading) return;
+
+      const currentUrl = window.location.href.split("#")[0];
+      const pageTitle = document.title.replace(/\s*\|\s*Lozen Advisory\s*$/i, "").trim();
+
+      const links = [
+        {
+          label: "LinkedIn",
+          href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`,
+          external: true,
+        },
+        {
+          label: "X",
+          href: `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(pageTitle)}`,
+          external: true,
+        },
+        {
+          label: "Facebook",
+          href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`,
+          external: true,
+        },
+        {
+          label: "Email",
+          href: `mailto:?subject=${encodeURIComponent(pageTitle)}&body=${encodeURIComponent(currentUrl)}`,
+          external: false,
+        },
+      ];
+
+      const nav = document.createElement("nav");
+      nav.className = "lozen-blog-share";
+      nav.setAttribute("aria-label", "Share this article");
+
+      const label = document.createElement("span");
+      label.className = "lozen-blog-share__label";
+      label.textContent = "Share";
+      nav.appendChild(label);
+
+      links.forEach((item) => {
+        const link = document.createElement("a");
+        link.className = "lozen-blog-share__link";
+        link.href = item.href;
+        link.textContent = item.label;
+
+        if (item.external) {
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+        }
+
+        nav.appendChild(link);
+      });
+
+      heading.insertAdjacentElement("afterend", nav);
+    });
+  </script>
+
 </BaseLayout>
