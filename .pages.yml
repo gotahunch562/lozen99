@@ -130,7 +130,9 @@ content:
       - name: spineDestination
         label: Spine destination
         type: string
-        description: "Internal routing/control field. Preserve the route value; this is not visible article copy."
+        required: false
+        hidden: true
+        description: "Legacy internal routing/control field. Hidden in Pages CMS."
       - name: draft
         label: Draft
         type: boolean
