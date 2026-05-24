@@ -21,7 +21,7 @@ image:
 heroAlt: Confident female CFO sitting in a modern executive office behind a
   clear glass boundary etched with the words Non Disclosure.
 tags:
-  - Workplace Disclosure
+  - Disclosure Independence
 draft: false
 isFeatured: true
 ---

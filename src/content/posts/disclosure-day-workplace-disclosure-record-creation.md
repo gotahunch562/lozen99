@@ -20,10 +20,7 @@ image:
 heroImage: /src/images/blog/disclosuredaycommentary.webp
 heroAlt: "Abstract blue digital overlay across a woman's face, suggesting workplace disclosure and record creation."
 tags:
-  - Disclosure Day
-  - Workplace Disclosure
   - Disclosure Independence
-  - Invisible Attrition
 draft: false
 isFeatured: false
 ---
