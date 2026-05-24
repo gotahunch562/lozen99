@@ -26,7 +26,7 @@ tags:
 draft: true
 isFeatured: false
 ---
-Health benefit costs are a finance department problem now. Not an HR problem. Not a vendor performance problem. With employer healthcare line-items surging by 6.7% according to the [Mercer CFO Perspective on Health]([https://www.mercer.com](https://www.mercer.com)), health inflation is officially outpacing general economic inflation. Today, a third of finance leaders view health benefits as a top-three enterprise operating expense, yet only 1 in 4 CFOs report that their organizations can absorb these hikes without directly impacting operations. 
+Health benefit costs are a finance department problem now. Not an HR problem. Not a vendor performance problem. With employer healthcare line-items surging by 6.7% according to the Mercer CFO Perspective on Health, health inflation is officially outpacing general economic inflation. Today, a third of finance leaders view health benefits as a top-three enterprise operating expense, yet only 1 in 4 CFOs report that their organizations can absorb these hikes without directly impacting operations. 
 
 When developing healthcare cost containment strategies to mitigate these spikes, the CFO is being asked to defend spend, protect margins, and demonstrate that workforce investment is producing measurable value.
 
@@ -38,7 +38,7 @@ The dashboards say utilization is low. That reading may be wrong.
 
 *Figure 1: The widening gap between escalating healthcare line-item allocations and visible system engagement.*
 
-Utilization data only begins after an employee creates a record. A benefit can be contracted, available, and active, yet the organization still cannot see the population that never activated it, never filed the claim, never completed the [disclosure]([https://www.lozenadvisory.com/blog/disclosure-day-workplace-disclosure-record-creation/](https://www.lozenadvisory.com/blog/disclosure-day-workplace-disclosure-record-creation/)) of the condition, and never entered the system before performance or retention risk changed.
+Utilization data only begins after an employee creates a record. A benefit can be contracted, available, and active, yet the organization still cannot see the population that never activated it, never filed the claim, never completed the [disclosure](/blog/menopause-at-work-unquantified-data-gap/) of the condition, and never entered the system before performance or retention risk changed.
 
 Low utilization is not a clean signal. In disclosure-dependent benefit categories, it may mean the target population never became measurable. The spend is real. The exposure is real. The dashboard shows neither, creating untracked financial risk for the enterprise.
 
@@ -50,7 +50,7 @@ Low utilization is not a clean signal. In disclosure-dependent benefit categorie
 
 The employees least likely to create a utilization record are often the ones the organization can least afford to lose: women in senior leadership, high-performing managers, client-facing professionals, and executives whose perceived reliability is part of what the company depends on.
 
-They manage privately. They adjust without disclosing. They exit before the risk is recorded. By the time attrition data reflects the loss, the signal has been gone for months, transforming an unmeasured health benefit gap into a severe hidden workforce liability. This structural blind spot triggers a cycle of [Invisible Attrition]([https://www.lozenadvisory.com/architecture-of-invisible-attrition-series/](https://www.lozenadvisory.com/architecture-of-invisible-attrition-series/)) that degrades internal capabilities before leadership realizes a risk exists.
+They manage privately. They adjust without disclosing. They exit before the risk is recorded. By the time attrition data reflects the loss, the signal has been gone for months, transforming an unmeasured health benefit gap into a severe hidden workforce liability. This structural blind spot triggers a cycle of [Invisible Attrition℠](/invisible-attrition/) that degrades internal capabilities before leadership realizes a risk exists.
 
 ![Horizontal bar chart titled Low Utilization Masks the Exposure CFOs Still Carry showing 87% target cohort not seeking care, 73% active symptoms left untreated, 67% hidden presenteeism and productivity loss, and 23% invisible attrition or replacement risk.](../../images/blog/low-utilization-masks-cfo-exposure.webp)
 
