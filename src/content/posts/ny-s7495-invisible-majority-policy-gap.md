@@ -1,5 +1,5 @@
 ---
-title: 'NY S9247: Menopause Leave Entitlements and the Visibility Gap'
+title: 'New York S7495: Menopause Workforce Study and the Visibility Gap'
 slug: ny-s7495-invisible-majority-policy-gap
 pubDate: &id001 2026-04-21
 datePublished: *id001
@@ -19,13 +19,13 @@ spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
 ---
-New York State Senate Bill S7495 marks a shift in the legislative landscape. While S9247 focuses on access and S3908 on compensation, S7495 directs the state to measure the problem itself. But as New York prepares to study the impact of [menopause at work](/blog/menopause-at-work-study), a critical question remains: What will the state actually be able to see?
+New York State Senate Bill S7495 marks a shift in the legislative landscape. While S9247 focuses on access and S3908 on compensation, S7495 directs the state to measure the problem itself. But as New York prepares to study the impact of menopause at work, a critical question remains: What will the state actually be able to see?
 
 The bill's own findings name the crisis; nearly one in five menopausal women have considered leaving the workforce due to unsupported symptoms and employer uncertainty. Yet, there is a disconnect between the legislative intent and the study's methodology. **The Invisible Majority represents the structural policy gap that New York S7495 is currently unequipped to measure.** This article examines whether the state's methods can truly reach the population they want to help.
 
 ## What New York's Menopause Workforce Study Is Designed to Find
 
-New York S7495 would direct the Commissioner of Labor, in conjunction with the [Commissioner of Health](https://www.health.ny.gov/commissioner/), to conduct a study on the impact of menopause on the workforce and to develop best practices for workplaces. If enacted, findings would be submitted to the Governor and legislative leadership within two years. The physician training provisions are conditional: the department may create training guidelines only if it determines that physicians are not adequately trained. The requirement follows that determination, not the enactment.
+New York S7495 would direct the Commissioner of Labor, in conjunction with the Commissioner of Health, to conduct a study on the impact of menopause on the workforce and to develop best practices for workplaces. If enacted, findings would be submitted to the Governor and legislative leadership within two years. The physician training provisions are conditional: the department may create training guidelines only if it determines that physicians are not adequately trained. The requirement follows that determination, not the enactment.
 
 Study design determines what findings are possible. The statute names the categories the study will examine. Each one shares a structural condition: it measures what employees have disclosed, requested, or formally utilized.
 
@@ -47,7 +47,7 @@ Nearly half of millennials experiencing menopause have avoided discussing their 
 
 The study will produce accurate findings about the population that entered the categories it examines. The question is whether that population reflects the full scope of impact.
 
-Michigan's experience confirms that it does not. The [Menopause Memorandum](/blog/michigan-menopause-memorandum) drew from a robust state-level dataset with independent ethical review. Its central finding was not low impact, it was low disclosure. The study encountered the boundary condition before it could measure beyond it. Measurement design is not a technical detail, it determines what the findings can claim.
+Michigan's experience confirms that it does not. The [Menopause Memorandum](/blog/michigan-menopause-memorandum/) drew from a robust state-level dataset with independent ethical review. Its central finding was not low impact, it was low disclosure. The study encountered the boundary condition before it could measure beyond it. Measurement design is not a technical detail, it determines what the findings can claim.
 
 The study S7495 directs is itself an input. Commissioning research, submitting findings to the Governor, and publishing results are activities. When complete, they will be cited as evidence of action. But the study is the input. Whether its methods captured the full affected population is the output. If the design is bounded by the same disclosure requirement that governs every other formal system in this series, the output will confirm the input. The gap will remain unexamined, now with a government study to support it.
 
@@ -63,6 +63,4 @@ The study will produce accurate findings for the population it can observe. Thos
 
 The women named in the bill's own legislative findings are not a data gap. They were counted before the study began but the study's categories then exclude them. They are present, performing, and structurally outside the methods the study will use to find them. Their performance is intact and the system has no classification for them. That is Invisible Attrition℠: the condition the study was commissioned to measure, operating in the population the study's methods cannot reach. This is the same population that S9247's leave entitlement cannot reach and that Virginia's accommodation framework will not see. Nothing in the study New York State S7495 directs will be designed to see them.
 
-[See the full menopause legislation tracker.](/menopause-legislation-tracker)
-
-[← Back to all articles](/blog)
+[See the full menopause legislation tracker.](/menopause-legislation-tracker/)
