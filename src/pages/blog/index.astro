@@ -85,10 +85,6 @@ const livePosts = allPosts
 
 const featuredPost = livePosts.find((post) => getData(post).isFeatured) || livePosts[0];
 
-const latestPosts = livePosts
-  .filter((post) => !featuredPost || post.id !== featuredPost.id)
-  .slice(0, 8);
-
 const curatedCategories = [
   "Legislative Analysis",
   "Research & Policy",
@@ -107,6 +103,21 @@ const categoryLinks = curatedCategories
     count: livePosts.filter((post) => getCategory(post) === category).length,
   }))
   .filter((item) => item.count > 0);
+
+const categoryPreviewSections = curatedCategories
+  .map((category) => {
+    const posts = livePosts
+      .filter((post) => getCategory(post) === category)
+      .slice(0, 2);
+
+    return {
+      category,
+      href: `/blog/archive#${slugify(category)}`,
+      count: livePosts.filter((post) => getCategory(post) === category).length,
+      posts,
+    };
+  })
+  .filter((section) => section.posts.length > 0);
 
 const executiveReports = [
   {
@@ -169,11 +180,13 @@ const collectionJsonLd = createCollectionPageJsonLd({
           },
         ]
       : []),
-    ...latestPosts.map((post) => ({
-      title: getData(post).title,
-      href: getPostHref(post),
-      description: getExcerpt(post),
-    })),
+    ...categoryPreviewSections.flatMap((section) =>
+      section.posts.map((post) => ({
+        title: getData(post).title,
+        href: getPostHref(post),
+        description: getExcerpt(post),
+      })),
+    ),
     ...executiveReports.map((report) => ({
       title: report.title,
       href: report.href,
@@ -306,7 +319,7 @@ const collectionJsonLd = createCollectionPageJsonLd({
     </section>
   )}
 
-  {latestPosts.length > 0 && (
+  {categoryPreviewSections.length > 0 && (
     <section>
       <Wrapper variant="standard" class="py-10 lg:py-16">
         <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -316,7 +329,7 @@ const collectionJsonLd = createCollectionPageJsonLd({
               variant="textSM"
               class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
             >
-              Latest Stories
+              Research Library
             </Text>
 
             <Text
@@ -324,8 +337,12 @@ const collectionJsonLd = createCollectionPageJsonLd({
               variant="displayLG"
               class="mt-8 font-display text-base-900"
             >
-              Recent Analysis
+              Explore by Research Area
             </Text>
+
+            <p class="mt-5 lozen-type-body text-base-600">
+              Each section surfaces recent analysis from a defined Lozen Advisory research lane. The archive contains the complete article library.
+            </p>
           </div>
 
           <a
@@ -336,58 +353,86 @@ const collectionJsonLd = createCollectionPageJsonLd({
           </a>
         </div>
 
-        <div class="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {latestPosts.map((post) => {
-            const publishedDate = getPublishedDate(post);
-
-            return (
-              <article class="group overflow-hidden rounded-sm border border-base-300 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:shadow-md">
-                {getImageSrc(post) && (
-                  <a href={getPostHref(post)} class="block overflow-hidden">
-                    <img
-                      src={getImageSrc(post)}
-                      alt={getImageAlt(post)}
-                      class="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                      loading="lazy"
-                    />
-                  </a>
-                )}
-
-                <div class="p-8">
-                  <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-base-600 font-sans">
-                    <span>{getCategory(post)}</span>
-                    {publishedDate && <span aria-hidden="true">·</span>}
-                    {publishedDate && (
-                      <time datetime={String(publishedDate)}>
-                        {formatDate(publishedDate)}
-                      </time>
-                    )}
-                  </div>
-
-                  <h3 class="mt-5 lozen-type-card-title text-base-900">
-                    <a href={getPostHref(post)} class="transition-colors hover:text-base-700">
-                      {getData(post).title}
-                    </a>
+        <div class="mt-12 space-y-14">
+          {categoryPreviewSections.map((section) => (
+            <section aria-labelledby={`category-${slugify(section.category)}`}>
+              <div class="flex flex-col gap-3 border-b border-base-300 pb-5 md:flex-row md:items-end md:justify-between">
+                <div>
+                  <h3
+                    id={`category-${slugify(section.category)}`}
+                    class="lozen-type-section-title text-base-900"
+                  >
+                    {section.category}
                   </h3>
 
-                  {getExcerpt(post) && (
-                    <p class="mt-5 line-clamp-4 lozen-type-body text-base-600">
-                      {getExcerpt(post)}
-                    </p>
-                  )}
-
-                  <div class="mt-7">
-                    <a
-                      href={getPostHref(post)}
-                      class="inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
-                    >
-                      Read article →
-                    </a>
-                  </div>
+                  <p class="mt-2 text-sm text-base-600">
+                    {section.count} {section.count === 1 ? "article" : "articles"} in this research area
+                  </p>
                 </div>
-              </article>
-            );
-          })}
+
+                <a
+                  href={section.href}
+                  class="inline-flex w-fit text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
+                >
+                  View section →
+                </a>
+              </div>
+
+              <div class="mt-7 grid grid-cols-1 gap-8 lg:grid-cols-2">
+                {section.posts.map((post) => {
+                  const publishedDate = getPublishedDate(post);
+
+                  return (
+                    <article class="group overflow-hidden rounded-sm border border-base-300 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:shadow-md">
+                      {getImageSrc(post) && (
+                        <a href={getPostHref(post)} class="block overflow-hidden">
+                          <img
+                            src={getImageSrc(post)}
+                            alt={getImageAlt(post)}
+                            class="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                            loading="lazy"
+                          />
+                        </a>
+                      )}
+
+                      <div class="p-8">
+                        <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-base-600 font-sans">
+                          <span>{getCategory(post)}</span>
+                          {publishedDate && <span aria-hidden="true">·</span>}
+                          {publishedDate && (
+                            <time datetime={String(publishedDate)}>
+                              {formatDate(publishedDate)}
+                            </time>
+                          )}
+                        </div>
+
+                        <h4 class="mt-5 lozen-type-card-title text-base-900">
+                          <a href={getPostHref(post)} class="transition-colors hover:text-base-700">
+                            {getData(post).title}
+                          </a>
+                        </h4>
+
+                        {getExcerpt(post) && (
+                          <p class="mt-5 line-clamp-4 lozen-type-body text-base-600">
+                            {getExcerpt(post)}
+                          </p>
+                        )}
+
+                        <div class="mt-7">
+                          <a
+                            href={getPostHref(post)}
+                            class="inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
+                          >
+                            Read article →
+                          </a>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+          ))}
         </div>
       </Wrapper>
     </section>
