@@ -1,43 +1,204 @@
-<br/>
-<p align="center">
-  <img src="../../.github/assets/banner.jpg" alt="Build the web you want">
-  <br/><br/>
-  <a href="https://astro.build">Astro</a> is the all-in-one web framework designed for speed.
-  <br/>
-  Pull your content from anywhere and deploy everywhere, all powered by your favorite UI components and libraries.
-  <br/><br/>
-</p>
+# Lozen Advisory Website
 
-## Install
+This repository contains the production website for Lozen Advisory.
+
+Production site: https://www.lozenadvisory.com
+
+The site is built with Astro, Tailwind CSS, content collections, and the Vercel adapter. The original visual/theme base came from Lexington Themes Copperlane, but this repository is now a Lozen Advisory site and should be maintained as such.
+
+## Stack
+
+- Framework: Astro 6
+- Styling: Tailwind CSS 4
+- Content: Astro content collections and Markdown
+- Adapter: `@astrojs/vercel`
+- Sitemap: `@astrojs/sitemap`
+- MDX support: `@astrojs/mdx`
+- Image optimization: Astro image pipeline and Sharp
+- Package manager: pnpm through Corepack
+- Node version: 22.x
+
+## Required commands
+
+Use pnpm through Corepack. Do not use npm for this repository.
 
 ```bash
-# Recommended!
-npm create astro@latest
-
-# Manual:
-npm install astro
+corepack enable
+corepack pnpm install
+corepack pnpm run dev
+corepack pnpm run build
+corepack pnpm run preview
 ```
 
-Looking for help? Start with our [Getting Started](https://docs.astro.build/en/getting-started/) guide.
+## Vercel build settings
 
-Looking for quick examples? [Open a starter project](https://astro.new/) right in your browser.
+Use these settings on Vercel:
 
-## Documentation
+- Framework preset: Astro
+- Install command: `corepack pnpm install`
+- Build command: `corepack pnpm run build`
+- Output directory: `dist`
+- Node.js version: 22.x
 
-Visit our [official documentation](https://docs.astro.build/).
+## Repository rules
 
-## Support
+- Do not use `npm install`.
+- Do not recreate `package-lock.json`.
+- Keep `pnpm-lock.yaml`.
+- Do not commit `dist/`, `.vercel/`, `.astro/`, or `node_modules/`.
+- Use full-file replacements for substantial code changes.
+- Run `corepack pnpm run build` before committing code, layout, route, content schema, or navigation changes.
 
-Having trouble? Get help in the official [Astro Discord](https://astro.build/chat).
+## Key routes
 
-## Contributing
+Important public routes include:
 
-**New contributors welcome!** Check out our [Contributors Guide](/CONTRIBUTING.md) for help getting started.
+- `/`
+- `/services`
+- `/booking`
+- `/request-briefing`
+- `/blog`
+- `/blog/archive`
+- `/news-press`
+- `/news-press/menopause-market-correction`
+- `/menopause-legislation-tracker`
+- `/retention-calculator`
+- `/tools-resources`
+- `/invisible-attrition`
+- `/architecture-of-invisible-attrition-series`
+- `/events`
+- `/about`
+- `/about-ai`
+- `/faq`
+- `/contact`
+- `/women-lawyers-conference`
 
-Join us on [Discord](https://astro.build/chat) to meet other contributors. We'll help you get your first contribution in no time!
+The `/women-lawyers-conference` route is an intentional standalone QR-code landing page and does not need to be forced into main navigation.
 
-## Sponsors
+## Content architecture
 
-Astro is generously supported by [Cloudflare](https://www.cloudflare.com/pt-br/?utm_source=astro&utm_medium=astro&utm_campaign=astro), [Mux](https://www.mux.com/?utm_campaign=21819274-Astro&utm_source=astro), [Netlify](https://www.netlify.com/?utm_campaign=Astro-2024&utm_source=astro-referral), [Webflow](https://webflow.com/feature/cloud?utm_source=Astro&utm_medium=tech-partner&utm_campaign=fy26-astro&utm_content=fy26-docs), and several [other amazing organizations](https://opencollective.com/astrodotbuild).
+Blog posts live in:
 
-[❤️ Sponsor Astro! ❤️](https://github.com/withastro/.github/blob/main/FUNDING.md)
+```text
+src/content/posts/
+```
+
+Services live in:
+
+```text
+src/content/services/
+```
+
+Primary blog categories are curated editorial architecture, not an automatic tag cloud. Current active blog categories are:
+
+- Legal Profession
+- Legislative Analysis
+- Performance & Career
+- Research & Policy
+- The Tender Path
+- Disclosure Independence
+- CFO Resources
+- Corporate Boards
+
+The visible blog segmentation is controlled by the curated category lists in:
+
+```text
+src/pages/blog/index.astro
+src/pages/blog/archive.astro
+```
+
+Pages CMS category options are controlled in:
+
+```text
+.pages.yml
+```
+
+Tags are secondary metadata. Do not allow old or internal tags to become primary public blog architecture.
+
+## Contact and CTA rules
+
+Use:
+
+```text
+hello@lozenadvisory.com
+```
+
+for general public contact references.
+
+Use:
+
+```text
+media@lozenadvisory.com
+```
+
+only for press, media, and news contexts.
+
+Primary B2B briefing CTA route:
+
+```text
+/request-briefing
+```
+
+MAPS Blueprint℠ route:
+
+```text
+/booking
+```
+
+Do not automatically replace `/booking` with `/request-briefing`; they serve different purposes.
+
+## Downloads
+
+Public downloads live in:
+
+```text
+public/download/
+```
+
+Known public download filenames include:
+
+- `Lozen_PowerUserTrap_Brief.pdf`
+- `Lozen_Tacere_Brief.pdf`
+- `performance-protection-handout.pdf`
+- `symptom-literacy-checklist.pdf`
+
+## Executive Report Series
+
+The Executive Report Series is four reports plus a hub.
+
+Hub:
+
+```text
+/architecture-of-invisible-attrition-series
+```
+
+Reports:
+
+```text
+/voluntary-benefit-disclosure-gap
+/billable-hour-visibility-tax
+/succession-planning-retention-risk-data-gap
+/leadership-pipeline-manager-drain
+```
+
+Do not describe the report series as five-part unless the actual public series structure changes.
+
+## Menopause legislation tracker
+
+The menopause legislation tracker route is:
+
+```text
+/menopause-legislation-tracker
+```
+
+When tracker records are updated, also update the visible “Last updated” date and any related structured-data `dateModified` value.
+
+The tracker is a flagship public data asset. Prioritize desktop clarity while keeping mobile from breaking.
+
+## Notes for maintainers
+
+This site uses some inherited Copperlane component names and package metadata. Do not assume inherited names describe the current Lozen page purpose. Future refactors should prefer semantic Lozen names for components and sections.
+
+The site uses `sitemap-index.xml`, generated by Astro sitemap.
+
+Public site changes should be pushed to `main`; Vercel deploys from GitHub.
