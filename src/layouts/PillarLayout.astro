@@ -4,13 +4,15 @@
  * src/layouts/PillarLayout.astro
  *
  * Frontmatter fields expected from the .md file:
- *   title, heading, subtitle, metaDescription, pubDate, heroImage, heroAlt, clusters[]
+ *   title, heading, subtitle, metaDescription, jsonLdDescription,
+ *   definedTermName, definedTermDescription, pubDate, heroImage, heroAlt, clusters[]
  *
  * In Astro, markdown frontmatter is passed as Astro.props.frontmatter
  * when the file uses the layout: field. All fields destructure from there.
  */
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { createFrameworkPillarJsonLd } from "@/lib/seo/jsonLd";
 import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
@@ -22,6 +24,10 @@ const {
   heading,
   subtitle,
   metaDescription,
+  jsonLdDescription,
+  definedTermName,
+  definedTermDescription,
+  definedTermAlternateName,
   pubDate,
   heroImage,
   heroAlt = "",
@@ -30,6 +36,29 @@ const {
 
 const pageTitle = title || heading || "Lozen Advisory";
 const pageDescription = metaDescription || subtitle || "";
+const pageHref = frontmatter.slug || "/invisible-attrition";
+const frameworkTermName = definedTermName || "Invisible Attrition";
+const frameworkTermAlternateName =
+  definedTermAlternateName ||
+  (frameworkTermName.includes("℠") ? undefined : "Invisible Attrition℠");
+const frameworkTermDescription =
+  definedTermDescription ||
+  "The unmeasured erosion of leadership and performance capacity that occurs before traditional, disclosure-dependent retention metrics detect risk.";
+const frameworkJsonLdDescription = jsonLdDescription || pageDescription;
+
+const frameworkJsonLd = createFrameworkPillarJsonLd({
+  title: pageTitle,
+  description: frameworkJsonLdDescription,
+  href: pageHref,
+  image: heroImage,
+  termName: frameworkTermName,
+  termAlternateName: frameworkTermAlternateName,
+  termDescription: frameworkTermDescription,
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: pageTitle, href: pageHref },
+  ],
+});
 
 const formattedDate = pubDate
   ? new Date(pubDate).toLocaleDateString("en-US", {
@@ -40,7 +69,7 @@ const formattedDate = pubDate
   : "";
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={pageTitle} description={pageDescription} jsonLd={frameworkJsonLd}>
   <!-- Page header -->
   <section class="overflow-hidden border-b border-base-200 bg-white">
     <Wrapper

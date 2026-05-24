@@ -4,14 +4,16 @@
  * src/layouts/ClusterLayout.astro
  *
  * Frontmatter fields expected from the .md file:
- *   title, heading, subtitle, metaDescription, pubDate, clusterNumber,
- *   pillarSlug, pillarTitle, prevCluster, nextCluster
+ *   title, heading, subtitle, metaDescription, jsonLdDescription, pubDate,
+ *   datePublished, dateModified, clusterNumber, pillarSlug, pillarTitle,
+ *   prevCluster, nextCluster
  *
  * In Astro, markdown frontmatter is passed as Astro.props.frontmatter
  * when the file uses the layout: field. All fields destructure from there.
  */
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { createFrameworkClusterArticleJsonLd } from "@/lib/seo/jsonLd";
 import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
@@ -23,7 +25,14 @@ const {
   heading,
   subtitle,
   metaDescription,
+  jsonLdDescription,
   pubDate,
+  datePublished,
+  dateModified,
+  heroImage,
+  definedTermName,
+  definedTermDescription,
+  definedTermAlternateName,
   clusterNumber,
   pillarSlug,
   pillarTitle,
@@ -33,6 +42,39 @@ const {
 
 const pageTitle = title || heading || "Lozen Advisory";
 const pageDescription = metaDescription || subtitle || "";
+const pageHref = frontmatter.slug || Astro.url.pathname;
+const parentPillarHref = pillarSlug || "/invisible-attrition";
+const parentPillarTitle = pillarTitle || "Invisible Attrition℠";
+const frameworkTermName = definedTermName || "Invisible Attrition";
+const frameworkTermAlternateName =
+  definedTermAlternateName ||
+  (frameworkTermName.includes("℠") ? undefined : "Invisible Attrition℠");
+const frameworkTermDescription =
+  definedTermDescription ||
+  "The unmeasured erosion of leadership and performance capacity that occurs before traditional, disclosure-dependent retention metrics detect risk.";
+const frameworkJsonLdDescription = jsonLdDescription || pageDescription;
+const publishedDate = datePublished || pubDate;
+
+const frameworkJsonLd = createFrameworkClusterArticleJsonLd({
+  title: pageTitle,
+  description: frameworkJsonLdDescription,
+  href: pageHref,
+  image: heroImage,
+  datePublished: publishedDate,
+  dateModified: dateModified || publishedDate,
+  section: parentPillarTitle,
+  termName: frameworkTermName,
+  termAlternateName: frameworkTermAlternateName,
+  termDescription: frameworkTermDescription,
+  termHref: parentPillarHref,
+  pillarTitle: parentPillarTitle,
+  pillarHref: parentPillarHref,
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: parentPillarTitle, href: parentPillarHref },
+    { name: pageTitle, href: pageHref },
+  ],
+});
 
 const formattedDate = pubDate
   ? new Date(pubDate).toLocaleDateString("en-US", {
@@ -47,7 +89,7 @@ const clusterLabel = clusterNumber
   : "00";
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={pageTitle} description={pageDescription} jsonLd={frameworkJsonLd}>
   <!-- Page header -->
   <section class="overflow-hidden border-b border-base-200 bg-white">
     <Wrapper
@@ -56,12 +98,12 @@ const clusterLabel = clusterNumber
     >
       <div class="mx-auto max-w-5xl">
         {
-          pillarSlug && pillarTitle && (
+          parentPillarHref && parentPillarTitle && (
             <a
-              href={pillarSlug}
+              href={parentPillarHref}
               class="inline-flex font-sans text-sm font-semibold text-base-700 transition-colors duration-200 hover:text-accent-700"
             >
-              ← {pillarTitle}
+              ← {parentPillarTitle}
             </a>
           )
         }
@@ -72,7 +114,7 @@ const clusterLabel = clusterNumber
             variant="textSM"
             class="lozen-type-eyebrow border-l border-base-300 pl-4 text-base-700"
           >
-            Cluster {clusterLabel} · {pillarTitle}
+            Cluster {clusterLabel} · {parentPillarTitle}
           </Text>
 
           {
@@ -148,9 +190,9 @@ const clusterLabel = clusterNumber
 
           <div>
             {
-              pillarSlug && pillarTitle && (
+              parentPillarHref && parentPillarTitle && (
                 <a
-                  href={pillarSlug}
+                  href={parentPillarHref}
                   class="group flex h-full min-h-[8rem] flex-col items-center justify-center rounded-2xl border border-base-400 bg-white p-5 text-center no-underline shadow-lg ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:shadow-xl"
                 >
                   <span class="lozen-type-eyebrow text-base-600">
@@ -158,7 +200,7 @@ const clusterLabel = clusterNumber
                   </span>
 
                   <span class="mt-4 lozen-type-card-title-small text-base-950 transition-colors duration-200 group-hover:text-base-700">
-                    Back to {pillarTitle}
+                    Back to {parentPillarTitle}
                   </span>
                 </a>
               )
