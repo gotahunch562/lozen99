@@ -23,9 +23,9 @@ The legal profession is in the middle of a demographic shift that has no histori
 
 Women hold 28% of law firm partnerships. The gap between pipeline entry and senior leadership has narrowed in some firms and persisted in others, but the attrition that produces it is rarely examined with precision. Research documents stress, workload, and lack of sponsorship as contributing factors. What the research does not document is the cohort of women who left not because the firm failed them in any measurable way, but because they were managing something the firm had no framework to see.
 
-[DirectWomen](https://directwomen.org), which has worked since 2007 to increase the representation of women lawyers on corporate boards, noted in its 2026 Board Institute announcement that the share of female director appointments declined last year, continuing a trend from a 2020 peak. The pipeline problem does not end at partnership. It also follows her into the next stage of her career, a trajectory explored in [When Leadership and Biology Collide Quietly in Law Firms](/blog/women-lawyers-leadership-perimenopause).
+DirectWomen, which has worked since 2007 to increase the representation of women lawyers on corporate boards, noted in its 2026 Board Institute announcement that the share of female director appointments declined last year, continuing a trend from a 2020 peak. The pipeline problem does not end at partnership. It also follows her into the next stage of her career, a trajectory explored in [When Leadership and Biology Collide Quietly in Law Firms](/blog/women-lawyers-leadership-perimenopause).
 
-That trajectory, from associate to partner to board candidate, runs through the same years when many women lawyers are navigating perimenopause, menopause at work, and other health challenges inside a profession that requires visibility for assistance but punishes disclosure. This is the professional reality for a woman attorney navigating perimenopause or menopause inside a legal practice that has no framework for what the [menopause lawyer](/menopause-support-women-lawyers) combination requires.
+That trajectory, from associate to partner to board candidate, runs through the same years when many women lawyers are navigating perimenopause, menopause at work, and other health challenges inside a profession that requires visibility for assistance but punishes disclosure. This is the professional reality for a woman attorney navigating perimenopause or menopause inside a legal practice that has no framework for what the [menopause lawyer](/menopause-support-women-lawyers/) combination requires.
 
 ---
 
@@ -91,7 +91,7 @@ The result is that law firms are making partnership pipeline decisions based on 
 
 Even employer frameworks designed with the best intentions are built on a disclosure trigger. The woman who cannot afford to enter those systems is not a gap in the program. She is the population the program was not built to reach.
 
-This is [Invisible Attrition℠](/invisible-attrition): the unmeasured erosion of leadership and performance capacity that occurs before traditional retention metrics detect risk. It is not visible in billing data, performance reviews, or exit interviews. It accumulates during the period when every metric signals continuity. Performance management frameworks and corporate wellness policies share the same structural constraint: both activate at the point of disclosure and do not operate before it. The firm does not detect this pattern while it is happening; it becomes visible only at the point of departure.
+This is Invisible Attrition℠: the unmeasured erosion of leadership and performance capacity that occurs before traditional retention metrics detect risk. It is not visible in billing data, performance reviews, or exit interviews. It accumulates during the period when every metric signals continuity. Performance management frameworks and corporate wellness policies share the same structural constraint: both activate at the point of disclosure and do not operate before it. The firm does not detect this pattern while it is happening; it becomes visible only at the point of departure.
 
 ---
 
@@ -99,7 +99,7 @@ This is [Invisible Attrition℠](/invisible-attrition): the unmeasured erosion o
 
 The ABA Commission on Women in the Profession releases its mental wellness study on August 2, 2026. That report will document stress levels, attrition patterns, and wellness gaps across the profession. It will also be bounded by the same disclosure condition that limits every data source in this space. The attorneys who participated in the survey participated voluntarily, answered the questions they were comfortable answering, and produced a dataset that reflects the cohort who engaged.
 
-The attorneys managing the most significant pressures in the most performance-driven environments are also the ones least likely to complete a wellness survey about it. Although the report will produce findings worth reading, the gap it cannot close is the same gap that law firm HR systems cannot close: the cohort that never surfaced. For a deeper look at these limitations, see [ABA 2026 Study: Why Women Attorneys Still Leave Big Law](/blog/aba-study-women-lawyers-mental-health).
+The attorneys managing the most significant pressures in the most performance-driven environments are also the ones least likely to complete a wellness survey about it. Although the report will produce findings worth reading, the gap it cannot close is the same gap that law firm HR systems cannot close: the cohort that never surfaced. For a deeper look at these limitations, see [ABA 2026 Study: Why Women Attorneys Still Leave Big Law](/blog/aba-study-women-lawyers-mental-health/).
 
 The report will not reach:
 
