@@ -5,7 +5,8 @@ title: "Tacere at the Organizational Level: Why Disclosure Does Not Occur"
 heading: "Tacere at the Organizational Level: Why Disclosure Does Not Occur"
 subtitle: "The organizational systems that make silence the rational choice for senior leaders."
 slug: "/invisible-attrition/structural-silence"
-metaDescription: "In high-pressure environments, transparency carries professional consequences. Understand why Tacere is a rational structural result."
+jsonLdDescription: "Why employees avoid disclosure, benefits use, accommodation requests, or formal reporting when visibility creates professional risk, leaving workforce data incomplete."
+metaDescription: "Why employees avoid disclosure, benefits use, and formal requests when visibility creates professional risk, leaving workforce data incomplete."
 pubDate: "2026-02-15"
 
 

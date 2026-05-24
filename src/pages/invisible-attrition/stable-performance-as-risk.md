@@ -5,7 +5,8 @@ title: "Stable Performance as a Governance Blind Spot"
 heading: "Stable Performance as a Governance Blind Spot"
 subtitle: "Why the signal organizations trust most is the one most likely to mislead them."
 slug: "/invisible-attrition/stable-performance-as-risk"
-metaDescription: "Continued output signals reliability, not sustainability. Examine how stability masks governance risks in the leadership pipeline."
+jsonLdDescription: "Why stable performance can become a misleading signal when employees continue delivering while capacity, confidence, and long-term commitment are already eroding."
+metaDescription: "Why stable performance can mislead leaders when capacity, confidence, and long-term commitment are already eroding."
 pubDate: "2026-02-15"
 
 

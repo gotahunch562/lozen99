@@ -5,7 +5,8 @@ title: "Dashboard Delay: When Stable Metrics Are the Risk Signal"
 heading: "Dashboard Delay: When Stable Metrics Are the Risk Signal"
 subtitle: "The gap between when capacity begins to erode and when any institutional instrument registers it."
 slug: "/invisible-attrition/dashboard-delay"
-metaDescription: "Stable dashboard readings are not evidence of stable capacity. Resolve the lag between performance data capture and actual trajectory."
+jsonLdDescription: "Why HR dashboards can show stability while retention risk builds beneath the surface through delayed exits, quiet disengagement, career uncertainty, work-life strain, and manager-related friction."
+metaDescription: "Why HR dashboards show stability while retention risk builds through delayed exits, quiet disengagement, and workforce strain."
 pubDate: "2026-02-15"
 
 

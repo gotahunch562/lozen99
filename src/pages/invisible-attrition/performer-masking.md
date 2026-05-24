@@ -5,7 +5,8 @@ title: "Performer Masking: How Sustained Output Conceals Capacity Loss"
 heading: "Performer Masking: How Sustained Output Conceals Capacity Loss"
 subtitle: "Why the leaders organizations are least worried about are the ones most at risk."
 slug: "/invisible-attrition/performer-masking"
-metaDescription: "Top performers are the least likely to signal strain. Examine why critical talent exists outside the reach of standard support systems."
+jsonLdDescription: "Why sustained output can conceal workforce strain, capacity loss, and retention risk among women in leadership, senior leaders, client-facing professionals, and institutional knowledge holders."
+metaDescription: "Why sustained output can conceal capacity loss and retention risk among women in leadership, senior leaders, and institutional knowledge holders."
 pubDate: "2026-02-15"
 
 

@@ -5,7 +5,8 @@ title: "Employee Exits and Non-Disclosure"
 heading: "Employee Exits and Non-Disclosure"
 subtitle: "The exits that look like personal timing are not random. They share a profile, a tenure window, and a classification pathway."
 slug: "/invisible-attrition/who-disappears"
-metaDescription: "Employees who deliver fully and exit without disclosing the cause are absent from your data. Identify what the organization sees versus what it cannot."
+jsonLdDescription: "Which employees disappear from retention dashboards before they leave, including women in leadership, senior leaders, client-facing professionals, and institutional knowledge holders."
+metaDescription: "Which employees disappear from retention dashboards before they leave, including women in leadership, senior leaders, and institutional knowledge holders."
 pubDate: "2026-02-15"
 
 

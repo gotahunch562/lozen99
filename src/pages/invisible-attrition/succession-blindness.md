@@ -5,7 +5,8 @@ title: "Succession Planning and the Stable-Performance Blind Spot"
 heading: "Succession Planning and the Stable-Performance Blind Spot"
 subtitle: "Why replacement readiness is not the same as capacity stability, and what boards are not seeing."
 slug: "/invisible-attrition/succession-blindness"
-metaDescription: "Standard succession tools measure visibility. They fail to register the erosion occurring beneath the surface of continued delivery."
+jsonLdDescription: "How delayed exits, quiet disengagement, and hidden leadership strain create succession risk before workforce planning systems or retention dashboards show a problem."
+metaDescription: "How hidden leadership strain and delayed exits create succession risk before workforce planning or retention dashboards show a problem."
 pubDate: "2026-02-15"
 
 

@@ -5,7 +5,8 @@ title: "The Power User Trap℠: AI Adoption and the Concentration of Oversight W
 heading: "The Power User Trap℠: AI Adoption and the Concentration of Oversight Work"
 subtitle: "AI adoption routes more calibration, judgment, and accountability through the person most able to make the tool usable."
 slug: "/invisible-attrition/power-user-trap"
-metaDescription: "The Power User Trap℠ occurs when top talent becomes the informal validation layer for AI without formal reclassification of their oversight burden."
+jsonLdDescription: "How AI adoption can concentrate informal oversight work on trusted employees, creating hidden workload, job security concerns, and retention risk before systems classify the burden."
+metaDescription: "How AI adoption can create hidden workload and retention risk when trusted employees become the informal oversight layer."
 pubDate: "2026-02-15"
 
 

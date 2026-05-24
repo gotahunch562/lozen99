@@ -5,7 +5,8 @@ title: "Exit Data Failure: What Voluntary Departure Records Omit"
 heading: "Exit Data Failure: What Voluntary Departure Records Omit"
 subtitle: "How departures get coded as personal reasons and what that classification cannot see."
 slug: "/invisible-attrition/exit-data-failure"
-metaDescription: "Exit interviews record what employees choose to say, not what drove the departure. Address the gap between coded exit reasons and organizational cost."
+jsonLdDescription: "Why exit interviews, voluntary turnover data, and reasons-for-leaving reports miss the decisions, constraints, and workplace conditions that form before employees leave."
+metaDescription: "Why exit interviews and voluntary turnover data miss the decisions and workplace conditions that form before employees leave."
 pubDate: "2026-02-15"
 
 

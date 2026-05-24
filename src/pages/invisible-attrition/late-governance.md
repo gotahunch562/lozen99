@@ -5,7 +5,8 @@ title: "Late Governance: Why Retention Metrics Arrive After the Loss"
 heading: "Late Governance: Why Retention Metrics Arrive After the Loss"
 subtitle: "Governance systems are designed to respond to events. Invisible Attrition℠ does not produce an event until exit."
 slug: "/invisible-attrition/late-governance"
-metaDescription: "Retention metrics detect departure, not the conditions producing it. Address the measurement architecture gap in leadership continuity."
+jsonLdDescription: "Why governance systems often respond after the loss, when retention metrics finally record a departure but the workforce risk has already formed."
+metaDescription: "Why governance systems often respond after the loss, when retention metrics record a departure after risk has already formed."
 pubDate: "2026-02-15"
 
 
