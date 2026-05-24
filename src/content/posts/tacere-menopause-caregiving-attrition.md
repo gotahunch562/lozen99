@@ -21,7 +21,7 @@ isFeatured: false
 ---
 ## The Mid-Career Convergence: Why Menopause and Caregiving Data Collide
 
-Women managing [menopause at work](/blog/menopause-at-work-study) are frequently also managing caregiving responsibilities. The combination is not incidental. It is a documented pattern across mid-career and senior professional cohorts that does not appear reliably in workplace data.
+Women managing menopause at work are frequently also managing caregiving responsibilities. The combination is not incidental. It is a documented pattern across mid-career and senior professional cohorts that does not appear reliably in workplace data.
 
 The condition described across this series appears here as behavior.
 
@@ -49,7 +49,7 @@ The Michigan Women&apos;s Commission survey documented the disclosure pattern be
 
 Korn Ferry and Vira Health&apos;s survey of more than 8,000 women found that 74% of women dealing with menopausal symptoms at work do not feel supported by their workplace policies, and only 26% reported having formal policies or programs addressing menopause. Employers responding to that pattern with benefit expansion, leave entitlement, and accommodation frameworks are making real investments. Those investments reach employees who enter the systems built to support them. They do not, however, reach the employees who have already decided not to.
 
-**The organization will cite the investment as evidence of action. Employers see utilization but miss the [decision not to utilize workplace benefits](/blog/menopause-at-work-unquantified-data-gap).**
+**The organization will cite the investment as evidence of action. Employers see utilization but miss the [decision not to disclose](/blog/transparency-trap-executive-power-strategic-disclosure/).**
 
 The session was held.
 
@@ -63,14 +63,14 @@ The organization measured what it offered, it did not measure the utilization.
 
 ## Closing the 73-Point Data Gap: Why Workplace Offerings Are Not Impact
 
-Tacere describes the employees who do not engage. Not because support is unavailable, but because the calculation of risk concludes that the cost of disclosure exceeds the benefit of accommodation. The failure to measure is a choice of architecture, as analyzed in our [study of the 73-point data gap](/blog/menopause-at-work-unquantified-data-gap). Just as the New York S7495 study will rely on self-reported data that excludes the decision to remain silent, the corporate investment in benefits relies on utilization rates that ignore the population practicing Tacere. In environments where that calculation is common, the investment does not reach the employees it was designed to include.
+Tacere describes the employees who do not engage. Not because support is unavailable, but because the calculation of risk concludes that the cost of disclosure exceeds the benefit of accommodation. The failure to measure is a choice of architecture, as shown by the 73-point data gap. Just as the New York S7495 study will rely on self-reported data that excludes the decision to remain silent, the corporate investment in benefits relies on utilization rates that ignore the population practicing Tacere. In environments where that calculation is common, the investment does not reach the employees it was designed to include.
 
 ## Invisible Attrition℠: The Real Cost of the Calculated Exit
 
 She was never silent. She decided.
 
-That decision is Tacere, and the organizational consequence of that decision, accumulating across every instance of the same calculation made under the same conditions, is [Invisible Attrition℠](http://ssrn.com/abstract=6397780), not a related concept, but the governing condition of every data point in this article and every article that precedes it in this series. The conceptual framework is documented in the [Invisible Attrition℠ preprint](http://ssrn.com/abstract=6397780). The cost is not carried by the employee alone. It is absorbed by the organization in retention patterns that register only after she has already left, in a record that will show a departure and nothing else.
+That decision is Tacere, and the organizational consequence of that decision, accumulating across every instance of the same calculation made under the same conditions, is Invisible Attrition℠, not a related concept, but the governing condition of every data point in this article and every article that precedes it in this series. The cost is not carried by the employee alone. It is absorbed by the organization in retention patterns that register only after she has already left, in a record that will show a departure and nothing else.
 
 No system examined in this series is designed to capture it before it happens.
 
-[See the full menopause legislation tracker.](/menopause-legislation-tracker)
+[Read the Disclosure-Independent Performance Protection℠ infrastructure.](/disclosure-independence-infrastructure/)
