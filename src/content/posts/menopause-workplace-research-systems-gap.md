@@ -21,9 +21,9 @@ isFeatured: false
 ---
 A new menopause workplace research center has been announced. It signals progress. It also exposes a structural gap in how menopause workplace impact is defined and measured.
 
-[The center brings together expertise](https://news.northeastern.edu/2026/04/08/menopause-workplace-research-center/) in communication, neuroscience, and public health. This composition is well-suited to study visibility, symptomatology, and population-level effects. It can establish prevalence, document cognitive and physiological changes, and quantify broad economic impact.
+The center brings together expertise in communication, neuroscience, and public health. This composition is well-suited to study visibility, symptomatology, and population-level effects. It can establish prevalence, document cognitive and physiological changes, and quantify broad economic impact.
 
-However, it cannot, as currently structured, study [menopause within work systems](/blog/menopause-at-work-study).
+However, it cannot, as currently structured, study menopause within work systems.
 
 ## Menopause Workplace Research Focuses on Health, Not Work Systems
 
@@ -31,7 +31,7 @@ However, it cannot, as currently structured, study [menopause within work system
 
 **Organizational behavior** defines how performance is interpreted inside firms, how evaluation systems translate output into ratings, promotion decisions, and advancement.
 
-[Labor economics](https://www.nber.org/) models career trajectories longitudinally: tracking earnings paths, promotion timing, and exit probabilities.
+Labor economics models career trajectories longitudinally: tracking earnings paths, promotion timing, and exit probabilities.
 
 **Management and decision science** examine how performance holds or degrades under constraint, including changes in decision latency, risk tolerance, and cognitive load.
 
@@ -65,7 +65,7 @@ Large employers, particularly in law, finance, and consulting, bear direct expos
 
 Insurance carriers are exposed differently. When functional capacity fluctuates, it can translate into longer-duration claims, delayed return-to-work, or partial disability classifications that extend cost over time. These systems are built to price risk, but only when the variables are clearly defined.
 
-In both cases, the economic impact is real but unallocated. The loss is visible in outcomes, [attrition](/invisible-attrition), claims, performance variability, but not attributable to a measurable condition.
+In both cases, the economic impact is real but unallocated. The loss is visible in outcomes, attrition, claims, performance variability, but not attributable to a measurable condition.
 
 This creates a class of stakeholders with aligned financial interest and limited operational access. They bear the cost of a problem that is not yet defined in a way their systems can process.
 
@@ -73,14 +73,10 @@ This creates a class of stakeholders with aligned financial interest and limited
 
 The field is expanding into the workplace without incorporating the organizational disciplines required to study it effectively. The result is research that establishes importance without establishing measurement.
 
-Until that changes, menopause at work will remain visible, but not operational.
+Until that changes, menopause at work will remain visible, but not operational. The [Northeastern research center announcement](https://news.northeastern.edu/2026/04/08/menopause-workplace-research-center/) is an important marker of field expansion; the remaining question is whether research can move from health visibility into organizational measurement.
 
 Related Reading
 
-[Menopause Workplace Frameworks: The Visibility Constraint](/blog/menopause-workplace-visibility-constraint)
+[Menopause at Work: The Data Employers Do Not See](/blog/menopause-at-work-unquantified-data-gap/)
 
-[The Women Who Leave Without Saying Why](/invisible-attrition/who-disappears)
-
-[Virginia HB1173/SB258: What the menopause law protects in the workplace, and what it cannot measure.](/blog/virginia-menopause-protected-class)
-
-[← Back to all articles](/blog)
+[Architecture of Invisible Attrition℠: Executive Report Series](/architecture-of-invisible-attrition-series/)
