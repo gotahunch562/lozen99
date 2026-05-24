@@ -19,7 +19,7 @@ spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
 ---
-Every menopause leave entitlement requires a disclosure event to function. S9247 is one of several bills in the current New York legislative session addressing menopause at work. [New York State Senate Bill S9247](https://www.nysenate.gov/legislation/bills/2025/S9247) proposes five days of paid menopause leave annually alongside workplace guidance. This article examines what the shared structural condition means for the population S9247 was written to protect.
+Every menopause leave entitlement requires a disclosure event to function. S9247 is one of several bills in the current New York legislative session addressing menopause at work. New York State Senate Bill S9247 proposes five days of paid menopause leave annually alongside workplace guidance. This article examines what the shared structural condition means for the population S9247 was written to protect.
 
 ## What New York S9247 Gets Right About Menopause Leave
 
@@ -35,9 +35,9 @@ The [Michigan Women's Commission](https://www.michigan.gov/mwc/-/media/Project/W
 
 A new leave category extends the system, but it does not resolve the condition that keeps a significant share of women employees outside it.
 
-Where no request is made, no record is created. And where no record exists, no need can be measured. Study designs that rely on leave records to measure impact will produce findings bounded by how much leave was actually taken. What workforce studies miss is not absent from the workforce. That is not missing data, it is data that was never created. That is a [dashboard delay](/invisible-attrition/dashboard-delay): the system only reflects the condition after the point where it could have been measured in time to act.
+Where no request is made, no record is created. And where no record exists, no need can be measured. Study designs that rely on leave records to measure impact will produce findings bounded by how much leave was actually taken. What workforce studies miss is not absent from the workforce. That is not missing data, it is data that was never created. That is a dashboard delay: the system only reflects the condition after the point where it could have been measured in time to act.
 
-This is not a limitation of S9247 specifically. It is a structural condition of entitlement-based frameworks, and it is consistent with what [Virginia's accommodation protections](/blog/virginia-menopause-protected-class) face and what New York's proposed workforce study will encounter. The workplace impact not captured by utilization is the same impact that does not appear in standard retention metrics, until it is too late to be actionable.
+This is not a limitation of S9247 specifically. It is a structural condition of entitlement-based frameworks, and it is consistent with what [Virginia's accommodation protections](/blog/virginia-menopause-protected-class/) face and what New York's proposed workforce study will encounter. The workplace impact not captured by utilization is the same impact that does not appear in standard retention metrics, until it is too late to be actionable.
 
 ## Why Menopause Leave Utilization Will Not Reflect Need
 
@@ -47,6 +47,6 @@ If S9247 passes, organizations will cite it as evidence of support. The entitlem
 
 The record captures activity. It cannot capture the decision not to participate.
 
-This is not a policy design flaw. It is the condition that produces [Invisible Attrition℠](/invisible-attrition/). The women who need the leave most are precisely the ones least likely to request it, and the gap between their organizational impact and their presence in utilization records is not a measurement quirk. Leave data captures what was taken. It cannot capture the women who kept their own counsel and never requested it, and that is not incidental to this analysis. It is the governing condition this entire analysis demonstrates.
+This is not a policy design flaw. It is the condition that produces Invisible Attrition℠. The women who need the leave most are precisely the ones least likely to request it, and the gap between their organizational impact and their presence in utilization records is not a measurement quirk. Leave data captures what was taken. It cannot capture the women who kept their own counsel and never requested it, and that is not incidental to this analysis. It is the governing condition this entire analysis demonstrates.
 
-[← Back to all articles](/blog)
+[See the full menopause legislation tracker.](/menopause-legislation-tracker/)

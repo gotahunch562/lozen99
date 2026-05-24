@@ -29,11 +29,11 @@ Taken together, these developments suggest the legal profession is starting to e
 
 One of those pressures is timing.
 
-Many women reach senior leadership roles inside law firms in their forties and early fifties. These are the same years when the biological transition known as perimenopause often begins. This overlap explains why conversations about **women law firm leaders and menopause** are beginning to surface more frequently in the profession. For women navigating this intersection, Lozen Advisory provides confidential performance strategies designed specifically for the [menopause lawyer](/menopause-support-women-lawyers) experience.
+Many women reach senior leadership roles inside law firms in their forties and early fifties. These are the same years when the biological transition known as perimenopause often begins. This overlap explains why conversations about **women law firm leaders and menopause** are beginning to surface more frequently in the profession. For women navigating this intersection, Lozen Advisory provides confidential performance strategies designed specifically for the [menopause lawyer](/menopause-support-women-lawyers/) experience.
 
 What makes the moment distinctive is not weakness or decline. It is the intersection of two realities. Leadership roles at the top of a law firm require visible steadiness. Perimenopause introduces physiological changes that are rarely discussed in professional environments.
 
-The result is a quiet tension that many women manage privately while continuing to lead, a pattern we describe as [Invisible Attrition℠](/invisible-attrition).
+The result is a quiet tension that many women manage privately while continuing to lead, a pattern we describe as Invisible Attrition℠.
 
 ---
 
@@ -53,11 +53,11 @@ The **ABA mental wellness study of women lawyers** is one example of this effort
 
 Professional organizations have also begun introducing discussions about menopause in the workplace, including the **menopause session at the NAWL (un)conference**.
 
-These conversations represent meaningful progress; they recognize an experience that historically remained outside the professional dialogue. For women already operating at the highest levels of firm leadership, however, the situation can be more complex. Recent research on [menopause at work](/blog/menopause-at-work-study) confirms that even well-funded studies have not reached the women who need discretion most.
+These conversations represent meaningful progress; they recognize an experience that historically remained outside the professional dialogue. For women already operating at the highest levels of firm leadership, however, the situation can be more complex. Recent research on menopause at work confirms that even well-funded studies have not reached the women who need discretion most.
 
 Leadership in law firms is shaped not only by competence but by perception. Authority often depends on the confidence others place in a leader's steadiness. Introducing a biological explanation into that environment can feel complicated, even when the underlying experience is entirely ordinary. Many women find that standard tests miss what they are experiencing, making the case for disclosure even harder to build.
 
-As a result, many women in leadership continue to navigate the transition privately. Few are aware that specialized advisory services now exist to help leaders protect both performance and professional reputation during this period. [Lozen Advisory](/why-lozen-advisory) **works in that space**, supporting women in leadership as they manage the transition while maintaining the authority and credibility they have spent decades building.
+As a result, many women in leadership continue to navigate the transition privately. Few are aware that specialized advisory services now exist to help leaders protect both performance and professional reputation during this period. Lozen Advisory works in that space, supporting women in leadership as they manage the transition while maintaining the authority and credibility they have spent decades building.
 
 ## How Women Lawyers Embody Leadership Discipline
 
@@ -73,7 +73,7 @@ Over time, some women begin evaluating their professional path with a new perspe
 
 The question becomes whether the structure of leadership roles allows space for the realities that accompany long professional lives. Some women choose to remain exactly where they are. Others gradually shift their careers toward roles that provide greater autonomy or flexibility.
 
-These decisions often develop slowly and privately over time, a pattern explored further in [why women attorneys leave Big Law quietly](/blog/aba-study-women-lawyers-mental-health).
+These decisions often develop slowly and privately over time, a pattern explored further in [why women attorneys leave Big Law quietly](/blog/aba-study-women-lawyers-mental-health/).
 
 ## The Future of Menopause Discussions in Law Firms
 
@@ -81,7 +81,7 @@ The legal profession is beginning to examine the pressures women lawyers encount
 
 The **ABA mental wellness study of women lawyers** reflects one effort to understand those pressures. The **NAWL (un)conference menopause session** signals that biological transitions are beginning to enter professional conversations as well.
 
-What remains less visible is how these experiences unfold for women who have already reached positions of leadership. Managing partners, practice leaders, and senior rainmakers carry responsibility not only for their own work but for the stability of the institutions they lead. A detailed examination of what law firm performance systems cannot measure is explored in [Menopause in Law: Visible Performance vs Invisible Cost](/blog/menopause-law-invisible-cost).
+What remains less visible is how these experiences unfold for women who have already reached positions of leadership. Managing partners, practice leaders, and senior rainmakers carry responsibility not only for their own work but for the stability of the institutions they lead. A detailed examination of what law firm performance systems cannot measure is explored in [Menopause in Law: Visible Performance vs Invisible Cost](/blog/menopause-law-invisible-cost/).
 
 Recognizing that many of these leaders encounter **perimenopause during the same years they carry the greatest professional responsibility** does not diminish their authority.
 

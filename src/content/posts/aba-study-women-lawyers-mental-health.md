@@ -21,7 +21,7 @@ isFeatured: false
 ---
 The American Bar Association will release its national study on women lawyers and mental wellness in August 2026. The data will be cited, the findings will circulate, and the conversation will follow. The profession will treat it as a starting point. You are not starting. You are already inside the condition the data will attempt to describe.
 
-If you are a woman lawyer navigating [perimenopause](https://www.lozenadvisory.com/blog/women-lawyers-leadership-perimenopause/) or other health conditions inside a legal practice, you knew before the study was commissioned. You knew when you took the deposition with the migraine you did not mention. You knew when you billed the hours and did not ask for the adjustment. The ABA will document what is happening to women in this profession. What it cannot document is everything you decided, privately, before the study had a way to capture it, and why that gap exists is the subject of our Invisible Attrition℠ framework.
+If you are a woman lawyer navigating [perimenopause](/blog/women-lawyers-leadership-perimenopause/) or other health conditions inside a legal practice, you knew before the study was commissioned. You knew when you took the deposition with the migraine you did not mention. You knew when you billed the hours and did not ask for the adjustment. The ABA will document what is happening to women in this profession. What it cannot document is everything you decided, privately, before the study had a way to capture it, and why that gap exists is the subject of our Invisible Attrition℠ framework.
 
 That is where this article begins.
 
@@ -73,7 +73,7 @@ Not the silence of someone with nothing to say. Tacere is the sustained, strateg
 
 You have been doing this precisely. You have watched what happens when a woman in your firm signals need, and you know exactly what the cost is and how long it follows her. The PIP that appears six months later. The client relationship quietly reassigned. The partnership track that closes without a conversation. So when the migraine comes and the brief is due, you manage it privately. When the brain fog is bad and the partner meeting is in an hour, you prepare twice as hard and say nothing. That is not weakness or avoidance. You read the room correctly, and you acted on what you found.
 
-The data confirms what she already knew. [A 2021 NIH study](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0250563) of nearly 3,000 licensed attorneys found that 40.9 percent will not discuss well-being concerns with their employer for fear it will negatively impact their careers. That number includes women lawyers who are still performing, still billing, and still indispensable to their clients. The fear is not of being seen as weak. It is of being seen differently, and knowing exactly what that difference costs in a profession that has been measuring your legitimacy since the first day you walked in.
+The data confirms what she already knew. A 2021 NIH study of nearly 3,000 licensed attorneys found that 40.9 percent will not discuss well-being concerns with their employer for fear it will negatively impact their careers. That number includes women lawyers who are still performing, still billing, and still indispensable to their clients. The fear is not of being seen as weak. It is of being seen differently, and knowing exactly what that difference costs in a profession that has been measuring your legitimacy since the first day you walked in.
 
 She was never silent. She decided.
 
@@ -107,7 +107,7 @@ You are not in collapse. You are in containment.
 
 You decline a leadership role without explanation while maintaining full billing expectations. You manage perimenopause and brain fog without accommodation, working harder in private to protect your performance from critique. You are managing more than anyone around you knows, and you have been doing it long enough that it has started to feel like the job. What it is costing you does not appear in any system your firm uses to evaluate you.
 
-This is what our analysis of [Invisible Attrition℠](https://www.lozenadvisory.com/invisible-attrition/) identifies: the unmeasured erosion of leadership and performance capacity that occurs before traditional retention metrics detect risk. Invisible Attrition℠ is not a retention problem. It is a classification problem. A senior partner takes a lateral role and calls it a lifestyle decision. Another moves in-house and frames it as work-life balance. A third steps back from leadership without explanation at a moment that looks, from the outside, like personal timing. Each departure is recorded as voluntary. The calculation behind each one is something else entirely.
+This is what our analysis of Invisible Attrition℠ identifies: the unmeasured erosion of leadership and performance capacity that occurs before traditional retention metrics detect risk. Invisible Attrition℠ is not a retention problem. It is a classification problem. A senior partner takes a lateral role and calls it a lifestyle decision. Another moves in-house and frames it as work-life balance. A third steps back from leadership without explanation at a moment that looks, from the outside, like personal timing. Each departure is recorded as voluntary. The calculation behind each one is something else entirely.
 
 The exits look voluntary. The calculations behind them do not.
 
@@ -123,7 +123,7 @@ The findings will measure reported experience. They will not capture non-disclos
 
 The profession has been studying this problem for years with genuine intent, and intent is not the issue. Systems do not require intent. They require incentive and opportunity. The incentive structure inside law firms rewards visible endurance and seamless availability. The opportunity to exit quietly, without formal record, exists at every career stage. Those two conditions produce the pattern the ABA will document in August 2026, and they do not resolve when the study publishes.
 
-What the report cannot address is the calculated decision shaping how women lawyers respond to those pressures in real time. That decision operates before the exit data exists. Increased awareness of well-being resources does not change it. [When visibility carries professional consequences](https://www.lozenadvisory.com/blog/menopause-workplace-visibility-constraint) inside fast-paced and stressful legal environments, many women choose private containment over institutional accommodation, and no toolkit resolves that while the incentive structure producing it remains intact.
+What the report cannot address is the calculated decision shaping how women lawyers respond to those pressures in real time. That decision operates before the exit data exists. Increased awareness of well-being resources does not change it. When visibility carries professional consequences inside fast-paced and stressful legal environments, many women choose private containment over institutional accommodation, and no toolkit resolves that while the incentive structure producing it remains intact.
 
 The infrastructure exists. The calculus remains.
 
@@ -149,11 +149,11 @@ The question is not whether you are strong enough to disclose. You have already 
 
 ## **Where Lozen Advisory Fits for Women Lawyers**
 
-Lozen Advisory is a confidential advisory firm that helps women protect what they have built and sustain leadership capacity when disclosure is not an option.
+[Lozen Advisory’s support for women lawyers](/menopause-support-women-lawyers/) helps women protect what they have built and sustain leadership capacity when disclosure is not an option.
 
 The work does not address the health condition. It addresses the strategic decisions a woman in leadership faces while managing one. When to adjust workload architecture. How to protect institutional relationships that depend on her presence. What succession signaling does and does not cost her. How to make decisions about her position that do not require disclosing what she is managing.
 
 That is not clinical work. It is strategic advisory work that happens to occur in proximity to a health condition. It does not rely on visibility to function, and it exists entirely outside the employment relationship, which means it sits outside the calculation that governs everything else.
 
-The [MAPS Blueprint℠](https://www.lozenadvisory.com/booking/) is where to start. If you are navigating perimenopause, surgical menopause, or a health condition inside a legal practice and you have decided not to disclose it, that decision is not the problem. What comes next is the question.
+The [MAPS Blueprint℠](/booking/) is where to start. If you are navigating perimenopause, surgical menopause, or a health condition inside a legal practice and you have decided not to disclose it, that decision is not the problem. What comes next is the question.
 

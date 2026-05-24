@@ -21,9 +21,9 @@ isFeatured: false
 ---
 Maryland's Senate passed Senate Bill 892 by a vote of 41 to 0. The House followed at 135 to 2. The bill enrolled on April 8, 2026.
 
-Those numbers are worth reading before examining what the legislation does, because they say something the bill text does not. A near-unanimous vote on a menopause bill is not movement on a marginal issue. It is confirmation that the condition the bill addresses has reached systemic recognition. Maryland SB892 is the most recent state to act on [menopause at work](/blog/menopause-at-work-study) through the clinical and insurance access layer.
+Those numbers are worth reading before examining what the legislation does, because they say something the bill text does not. A near-unanimous vote on a menopause bill is not movement on a marginal issue. It is confirmation that the condition the bill addresses has reached systemic recognition. Maryland SB892 is the most recent state to act on [menopause at work](/blog/menopause-at-work-study/) through the clinical and insurance access layer.
 
-[SB892](https://mgaleg.maryland.gov/2026RS/bills/sb/sb0892f.pdf) operates at the clinical and insurance access layer. It does two things. It requires health occupations boards to grant at least two continuing education credits for every one hour of menopause-specific training completed. It also requires insurers, nonprofit health service plans, and health maintenance organizations to cover the evaluation and management of menopause and menopause-associated conditions.
+SB892 operates at the clinical and insurance access layer. It does two things. It requires health occupations boards to grant at least two continuing education credits for every one hour of menopause-specific training completed. It also requires insurers, nonprofit health service plans, and health maintenance organizations to cover the evaluation and management of menopause and menopause-associated conditions.
 
 Both provisions respond to documented failures in the clinical system. Both improve what happens once a woman seeks care. Neither addresses the condition that determines whether she enters that system at all.
 
@@ -45,7 +45,7 @@ A 64-credit menopause program from Harvard Medical School and Massachusetts Gene
 
 The coverage requirement addresses a separate access point. Women seeking menopause care have historically encountered two barriers in sequence: a provider without adequate training, and an insurer without a coverage obligation. The insurance provision removes the second barrier. It does not resolve the first, but it eliminates the financial constraint for those who have already located a knowledgeable provider.
 
-Both provisions operate at the same layer of the problem. Both address what happens after a woman enters the clinical system and seeks care. Both assume the initiating condition: that she has engaged, that she has disclosed her symptoms, and that she has the professional circumstances to pursue a clinical pathway without cost to her standing. Those conditions are not professionally neutral for women in leadership. They are shaped by the risks attached to disclosure in environments where performance is continuously evaluated. That constraint, and how it governs entry into formal systems, is [examined in the structural silence framework.](/invisible-attrition/structural-silence)
+Both provisions operate at the same layer of the problem. Both address what happens after a woman enters the clinical system and seeks care. Both assume the initiating condition: that she has engaged, that she has disclosed her symptoms, and that she has the professional circumstances to pursue a clinical pathway without cost to her standing. Those conditions are not professionally neutral for women in leadership. They are shaped by the risks attached to disclosure in environments where performance is continuously evaluated. That constraint, and how it governs entry into formal systems, is examined in the structural silence framework.
 
 ## Structural Limits of Menopause Legislation and Healthcare Access
 
@@ -81,6 +81,6 @@ The legislation improves training. It expands coverage. It strengthens the clini
 
 The decision to engage is not neutral. It is a cost calculation shaped by information, experience, and professional context. SB892 operates only after that calculation has been made.
 
-That pre-engagement condition is where [Invisible Attrition℠](/invisible-attrition) begins: the erosion of performance and capacity that occurs before any formal system detects it, and before any legislative framework is able to respond.
+That pre-engagement condition is where Invisible Attrition℠ begins: the erosion of performance and capacity that occurs before any formal system detects it, and before any legislative framework is able to respond.
 
-See the full [menopause legislation tracker](/menopause-legislation-tracker).
+See the full [menopause legislation tracker](/menopause-legislation-tracker/).
