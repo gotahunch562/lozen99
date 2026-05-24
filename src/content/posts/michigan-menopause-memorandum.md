@@ -21,7 +21,7 @@ isFeatured: false
 ---
 In 2025, the Michigan Women's Commission did something that had not been done at this scale in the United States. It convened 13 statewide conversations, engaged more than 2,500 women, collected 652 survey responses, introduced seven pieces of legislation, and produced a document endorsed by Governor Gretchen Whitmer calling menopause an economic, health, and community issue that Michigan could no longer ignore.
 
-The [Michigan Menopause Memorandum](https://www.michigan.gov/leo/-/media/Project/Websites/mwc/Annual-Reports/Menopause-Memo-Final-PDF-V1.pdf) is serious, data-informed, and well-intentioned. It is also built almost entirely around the employer. That is not a criticism of the work. It is the gap the work itself reveals.
+The Michigan Menopause Memorandum is serious, data-informed, and well-intentioned. It is also built almost entirely around the employer. That is not a criticism of the work. It is the gap the work itself reveals.
 
 ## What the Data Found
 
@@ -57,13 +57,13 @@ The Memorandum's employer recommendations are thoughtful. Educate employees not 
 
 Every recommendation flows through the employer. Every solution assumes access to a woman who is willing to raise her hand inside a system she has already told you she does not trust. Only 12% of respondents were confident they knew who to ask for help when menopause symptoms presented workplace challenges. Only 8% expressed satisfaction with the menopause-related resources currently available at their workplace.
 
-[The infrastructure the Memorandum recommends building is the same infrastructure women are already declining to use.](/blog/menopause-at-work-study)
+[The infrastructure the Memorandum recommends building is the same infrastructure women are already declining to use.](/blog/menopause-workplace-visibility-constraint/)
 
 ## The Number Behind the Number
 
 Eleven respondents in the Michigan survey reported they left their job due to menopause symptoms. The Memorandum notes that if the survey is representative of all midlife working Michigan women experiencing menopause symptoms, this represents a loss of 16,500 women from the Michigan workforce every year. Sixteen thousand five hundred women. Gone. Recorded, in most cases, as a personal decision.
 
-That number is what [Invisible Attrition℠](/invisible-attrition) describes. The unmeasured erosion of leadership and performance capacity that occurs before traditional retention metrics detect risk. The exit that looks voluntary from the outside and was, in fact, a calculated response to an environment that was not designed to hold what she was carrying.
+That number is what Invisible Attrition℠ describes. The unmeasured erosion of leadership and performance capacity that occurs before traditional retention metrics detect risk. The exit that looks voluntary from the outside and was, in fact, a calculated response to an environment that was not designed to hold what she was carrying.
 
 The Memorandum identifies the exits. It does not yet have a framework for what was happening before the exit. The private recalibration. The containment. The sustained decision to carry what could not safely be known.
 
@@ -83,4 +83,4 @@ That problem requires something that operates outside the employer entirely. Som
 
 She needs a strategy that was built for the room she is actually in, not the room the policy is trying to create.
 
-[Lozen Advisory](/) was built for that gap. The [MAPS Blueprint℠](/booking) is where to begin.
+That gap is why the [menopause legislation tracker](/menopause-legislation-tracker/) matters. It organizes the policy record around what formal systems can measure, and what they still cannot see.
