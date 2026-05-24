@@ -138,10 +138,66 @@ export interface DatasetJsonLdInput {
   }>;
 }
 
+export interface DefinedTermSetJsonLdInput {
+  name?: string;
+  description?: string;
+  href?: string;
+  id?: string;
+  terms?: Array<{
+    name: string;
+    href: string;
+    description?: string;
+    alternateName?: string;
+    termId?: string;
+  }>;
+}
+
+export interface DefinedTermJsonLdInput {
+  name: string;
+  description: string;
+  href: string;
+  alternateName?: string;
+  termId?: string;
+  termSetId?: string;
+  keywords?: string[];
+}
+
+export interface FrameworkPillarJsonLdInput {
+  title: string;
+  description?: string;
+  href: string;
+  image?: string;
+  termName: string;
+  termDescription: string;
+  termAlternateName?: string;
+  termSetName?: string;
+  termSetDescription?: string;
+  termSetHref?: string;
+  breadcrumbs?: BreadcrumbItemInput[];
+}
+
+export interface FrameworkClusterArticleJsonLdInput extends BasePageInput {
+  type?: "Article" | "BlogPosting" | "ScholarlyArticle" | "Report";
+  section?: string;
+  termName: string;
+  termDescription: string;
+  termHref: string;
+  termAlternateName?: string;
+  termSetName?: string;
+  termSetDescription?: string;
+  termSetHref?: string;
+  pillarTitle: string;
+  pillarHref: string;
+}
+
 const SITE_URL = "https://www.lozenadvisory.com";
 const SITE_NAME = "Lozen Advisory";
 const ORGANIZATION_NAME = "Lozen Advisory LLC";
 const DEFAULT_AUTHOR_NAME = "Akilah E. Kamaria";
+const DEFAULT_FRAMEWORK_TERM_SET_ID = `${SITE_URL}/#lozen-frameworks`;
+const DEFAULT_FRAMEWORK_TERM_SET_NAME = "Lozen Advisory Frameworks";
+const DEFAULT_FRAMEWORK_TERM_SET_DESCRIPTION =
+  "A set of proprietary analytical frameworks developed by Lozen Advisory to describe disclosure-dependent workforce measurement gaps, retention risk, and leadership capacity erosion.";
 
 const compact = <T>(items: Array<T | false | null | undefined>): T[] =>
   items.filter(Boolean) as T[];
@@ -189,6 +245,246 @@ export const createBreadcrumbJsonLd = (
     item: absoluteUrl(item.href),
   })),
 });
+
+export const createDefinedTermSetJsonLd = ({
+  name = DEFAULT_FRAMEWORK_TERM_SET_NAME,
+  description = DEFAULT_FRAMEWORK_TERM_SET_DESCRIPTION,
+  href,
+  id = DEFAULT_FRAMEWORK_TERM_SET_ID,
+  terms = [],
+}: DefinedTermSetJsonLdInput = {}): JsonLdObject => ({
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": id,
+  name,
+  description,
+  url: href ? absoluteUrl(href) : SITE_URL,
+  creator: {
+    "@id": `${SITE_URL}/#organization`,
+  },
+  publisher: {
+    "@id": `${SITE_URL}/#organization`,
+  },
+  hasDefinedTerm: terms.length
+    ? terms.map((term) => ({
+        "@type": "DefinedTerm",
+        "@id": term.termId ?? `${absoluteUrl(term.href)}#term`,
+        name: term.name,
+        alternateName: term.alternateName,
+        description: term.description,
+        url: absoluteUrl(term.href),
+      }))
+    : undefined,
+});
+
+export const createDefinedTermJsonLd = ({
+  name,
+  description,
+  href,
+  alternateName,
+  termId,
+  termSetId = DEFAULT_FRAMEWORK_TERM_SET_ID,
+  keywords,
+}: DefinedTermJsonLdInput): JsonLdObject => ({
+  "@context": "https://schema.org",
+  "@type": "DefinedTerm",
+  "@id": termId ?? `${absoluteUrl(href)}#term`,
+  name,
+  alternateName,
+  description,
+  url: absoluteUrl(href),
+  keywords: keywords?.join(", "),
+  inDefinedTermSet: {
+    "@id": termSetId,
+  },
+});
+
+export const createFrameworkPillarJsonLd = ({
+  title,
+  description,
+  href,
+  image,
+  termName,
+  termDescription,
+  termAlternateName,
+  termSetName = DEFAULT_FRAMEWORK_TERM_SET_NAME,
+  termSetDescription = DEFAULT_FRAMEWORK_TERM_SET_DESCRIPTION,
+  termSetHref,
+  breadcrumbs,
+}: FrameworkPillarJsonLdInput): JsonLdObject[] => {
+  const pageUrl = absoluteUrl(href);
+  const termId = `${pageUrl}#term`;
+  const pageId = `${pageUrl}#webpage`;
+
+  return compact<JsonLdObject>([
+    createDefinedTermSetJsonLd({
+      name: termSetName,
+      description: termSetDescription,
+      href: termSetHref,
+      id: DEFAULT_FRAMEWORK_TERM_SET_ID,
+      terms: [
+        {
+          name: termName,
+          href,
+          description: termDescription,
+          alternateName: termAlternateName,
+          termId,
+        },
+      ],
+    }),
+    createDefinedTermJsonLd({
+      name: termName,
+      alternateName: termAlternateName,
+      description: termDescription,
+      href,
+      termId,
+      termSetId: DEFAULT_FRAMEWORK_TERM_SET_ID,
+    }),
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": pageId,
+      name: title,
+      description,
+      url: pageUrl,
+      isPartOf: {
+        "@id": `${SITE_URL}/#website`,
+      },
+      about: {
+        "@id": termId,
+      },
+      mainEntity: {
+        "@id": termId,
+      },
+      publisher: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+      maintainer: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+      primaryImageOfPage: image
+        ? {
+            "@type": "ImageObject",
+            url: absoluteUrl(image),
+          }
+        : undefined,
+    },
+    breadcrumbs?.length && createBreadcrumbJsonLd(breadcrumbs),
+  ]);
+};
+
+export const createFrameworkClusterArticleJsonLd = ({
+  title,
+  description,
+  href,
+  image,
+  datePublished,
+  dateModified,
+  authorName = DEFAULT_AUTHOR_NAME,
+  keywords,
+  breadcrumbs,
+  type = "Article",
+  section,
+  termName,
+  termDescription,
+  termHref,
+  termAlternateName,
+  termSetName = DEFAULT_FRAMEWORK_TERM_SET_NAME,
+  termSetDescription = DEFAULT_FRAMEWORK_TERM_SET_DESCRIPTION,
+  termSetHref,
+  pillarTitle,
+  pillarHref,
+}: FrameworkClusterArticleJsonLdInput): JsonLdObject[] => {
+  const pageUrl = absoluteUrl(href);
+  const termUrl = absoluteUrl(termHref);
+  const pillarUrl = absoluteUrl(pillarHref);
+  const termId = `${termUrl}#term`;
+  const pageId = `${pageUrl}#webpage`;
+  const articleId = `${pageUrl}#article`;
+  const pillarPageId = `${pillarUrl}#webpage`;
+
+  return compact<JsonLdObject>([
+    createDefinedTermSetJsonLd({
+      name: termSetName,
+      description: termSetDescription,
+      href: termSetHref,
+      id: DEFAULT_FRAMEWORK_TERM_SET_ID,
+      terms: [
+        {
+          name: termName,
+          href: termHref,
+          description: termDescription,
+          alternateName: termAlternateName,
+          termId,
+        },
+      ],
+    }),
+    createDefinedTermJsonLd({
+      name: termName,
+      alternateName: termAlternateName,
+      description: termDescription,
+      href: termHref,
+      termId,
+      termSetId: DEFAULT_FRAMEWORK_TERM_SET_ID,
+    }),
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": pageId,
+      name: title,
+      description,
+      url: pageUrl,
+      isPartOf: {
+        "@id": `${SITE_URL}/#website`,
+      },
+      about: {
+        "@id": termId,
+      },
+      mainEntity: {
+        "@id": articleId,
+      },
+      primaryImageOfPage: image
+        ? {
+            "@type": "ImageObject",
+            url: absoluteUrl(image),
+          }
+        : undefined,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": type,
+      "@id": articleId,
+      headline: title,
+      description,
+      url: pageUrl,
+      mainEntityOfPage: {
+        "@id": pageId,
+      },
+      image: image ? absoluteUrl(image) : undefined,
+      datePublished,
+      dateModified: dateModified ?? datePublished,
+      articleSection: section,
+      keywords: keywords?.join(", "),
+      author: {
+        "@type": "Person",
+        name: authorName,
+      },
+      publisher: {
+        "@id": `${SITE_URL}/#organization`,
+      },
+      about: {
+        "@id": termId,
+      },
+      isPartOf: {
+        "@type": "WebPage",
+        "@id": pillarPageId,
+        name: pillarTitle,
+        url: pillarUrl,
+      },
+    },
+    breadcrumbs?.length && createBreadcrumbJsonLd(breadcrumbs),
+  ]);
+};
 
 export const createCreativeWorkSeriesJsonLd = ({
   name,
