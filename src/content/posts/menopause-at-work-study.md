@@ -5,6 +5,7 @@ pubDate: &id001 2026-03-01
 datePublished: *id001
 dateModified: 2026-05-05
 category: Performance & Career
+homepageSection: menopause-at-work
 excerpt: New 2026 research aims to mainstream menopause support, but will it reach senior leaders? Learn why disclosure-independent paths are required for professional continuity.
 description: New research from The Fuchsia Tent aims to mainstream menopause support, but for senior leaders, visibility is a liability. Discover why organizational programs fail those who require a disclosure-independent path to protect their professional record.
 metaDescription: New research from The Fuchsia Tent aims to mainstream menopause support, but for senior leaders, visibility is a liability. Discover why organizational programs fail those who require a disclosure-independent path to protect their professional record.

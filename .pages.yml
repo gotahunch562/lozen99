@@ -74,6 +74,14 @@ content:
             - Disclosure Independence
             - CFO Resources
             - Corporate Boards
+      - name: homepageSection
+        label: Homepage section
+        type: select
+        required: false
+        description: "Optional. Use only for posts that should appear in a specific homepage section."
+        options:
+          values:
+            - menopause-at-work
       - name: excerpt
         label: Excerpt
         type: text

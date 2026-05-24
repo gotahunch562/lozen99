@@ -15,7 +15,7 @@ const getSortDate = (post: any) => {
 };
 
 const livePosts = allPosts
-  .filter((post) => post.data.draft !== true)
+  .filter((post) => post.data.draft !== true && post.data.homepageSection === "menopause-at-work")
   .sort((a, b) => getSortDate(b) - getSortDate(a));
 ---
 
