@@ -144,5 +144,3 @@ This is not a framework that relates to the problem. It is the classification th
 For the broader corporate risk frame, see [Retention Risk Analysis](/retention-risk-analysis/).
 
 Related reading: [Who Studies Menopause at Work, and Who Doesn't](/blog/menopause-workplace-research-systems-gap/).
-
-[← Back to all articles](/blog)
