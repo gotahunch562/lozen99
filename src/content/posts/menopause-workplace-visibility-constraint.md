@@ -19,11 +19,11 @@ spineDestination: disclosure-independence-infrastructure
 draft: false
 isFeatured: false
 ---
-[Menopause at work](/blog/menopause-at-work-study) is increasingly addressed through existing accommodation and anti-discrimination frameworks. Recent analysis of emerging legislation reaches a consistent conclusion: employers should rely on established processes, including the formal accommodation request process, supporting documentation, and manager escalation.
+Menopause at work is increasingly addressed through existing accommodation and anti-discrimination frameworks. Recent analysis of emerging legislation reaches a consistent conclusion: employers should rely on established processes, including the formal accommodation request process, supporting documentation, and manager escalation.
 
 That analysis is correct and also incomplete.
 
-Menopause workplace advocacy has grown into a national movement, with significant legislative activity across more than a dozen states and growing public engagement from clinicians, attorneys, and [advocates](https://thepauselife.com/pages/menopause-advocacy). Perimenopause awareness has expanded and the policy record is still being written. What neither the advocacy nor the legislation has resolved is the condition that precedes the frameworks they are building.
+Menopause workplace advocacy has grown into a national movement, with significant legislative activity across more than a dozen states and growing public engagement from clinicians, attorneys, and advocates. Perimenopause awareness has expanded and the policy record is still being written. What neither the advocacy nor the legislation has resolved is the condition that precedes the frameworks they are building.
 
 ## How Menopause Workplace Frameworks Are Designed to Work
 
@@ -37,18 +37,18 @@ Research from Maven Clinic indicates that 44% of millennials and 34% of Gen Xers
 
 The Michigan Model: Mapping the disconnect between policy frameworks and employee participation.
 
-State-level data from Michigan confirms this pattern at policy scale. [The Michigan Women's Commission Menopause: It's a Movement!](https://www.michigan.gov/mwc/news/2026/03/26/new-menopause-report-makes-recommendations-to-help-women-thrive-in-midlife) initiative engaged more than 2,500 women across the state, informed the introduction of seven menopause-related bills in the Michigan Legislature, and generated over 600 survey responses, creating one of the most robust state-level datasets on menopause and work in the country. The survey found that fewer than one in five women chose to disclose their menopause status at work. In these cases, employees continue performing without entering formal systems.
+State-level data from Michigan confirms this pattern at policy scale. [The Michigan Women's Commission Menopause: It's a Movement!](/blog/michigan-menopause-memorandum/) initiative engaged more than 2,500 women across the state, informed the introduction of seven menopause-related bills in the Michigan Legislature, and generated over 600 survey responses, creating one of the most robust state-level datasets on menopause and work in the country. The survey found that fewer than one in five women chose to disclose their menopause status at work. In these cases, employees continue performing without entering formal systems.
 
 The absence of requests is not neutral, it is a condition of how the system operates.
 
 ## Menopause at Work: The Gap Between Compliance and Impact
 
-Employers may follow processes, maintain documentation, and meet legal obligations. But, at the same time, menopause-related impact may continue to affect [performance, capacity, and retention](/blog/women-lawyers-leadership-perimenopause) without classification. Analysis of how this gap presents across state-level legislative frameworks reinforces the pattern.
+Employers may follow processes, maintain documentation, and meet legal obligations. But, at the same time, menopause-related impact may continue to affect performance, capacity, and retention without classification. Analysis of how this gap presents across state-level legislative frameworks reinforces the pattern.
 
 This creates a gap between what is managed and what is measured.
 
 ## What Menopause Workplace Policy Cannot See
 
-The legal framework functions as designed. It captures what enters it but misses a portion that does not. This is the condition underlying menopause at work policies: systems measure participation, while a significant share of the impact of those policies remain outside of the mechanisms required to observe it.This gap is [Invisible Attrition℠](/invisible-attrition): the impact that remains operationally present while absent from the systems used to measure it, and does not register in retention metrics until the exit occurs.
+The legal framework functions as designed. It captures what enters it but misses a portion that does not. This is the condition underlying menopause at work policies: systems measure participation, while a significant share of the impact of those policies remain outside of the mechanisms required to observe it. This gap is Invisible Attrition℠: the impact that remains operationally present while absent from the systems used to measure it, and does not register in retention metrics until the exit occurs.
 
-[← Back to all articles](/blog)
+[Read the Disclosure-Independent Performance Protection℠ infrastructure.](/disclosure-independence-infrastructure/)
