@@ -19,25 +19,25 @@ spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
 ---
-**Editor's note:** Governor Spanberger's action deadline was April 13, 2026. The Governor proposed a substitute for HB1173 and SB258, replacing the workplace protection and accommodation mandate with a study directive. SB790, the insurance coverage bill, was signed April 13, 2026. Coverage applies to policies issued or renewed on or after January 1, 2027. A full analysis of the Governor's split decision is available here: [Virginia's Governor Substituted a Study for Menopause Protections](/blog/virginia-menopause-bill-split-outcome).
+**Editor's note:** Governor Spanberger's action deadline was April 13, 2026. The Governor proposed a substitute for HB1173 and SB258, replacing the workplace protection and accommodation mandate with a study directive. SB790, the insurance coverage bill, was signed April 13, 2026. Coverage applies to policies issued or renewed on or after January 1, 2027. A full analysis of the Governor's split decision is available here: [Virginia's Governor Substituted a Study for Menopause Protections](/blog/virginia-menopause-bill-split-outcome/).
 
-Virginia's General Assembly has passed the most comprehensive menopause workplace protection package enacted by any state legislature to date. House Bill 1173 and Senate Bill 258 were enrolled and communicated to [Governor Spanberger](https://www.governor.virginia.gov/) on March 14, 2026. The Governor's action deadline is April 13, 2026. If signed, they take effect July 1, 2026.
+Virginia's General Assembly has passed the most comprehensive menopause workplace protection package enacted by any state legislature to date. House Bill 1173 and Senate Bill 258 were enrolled and communicated to Governor Spanberger on March 14, 2026. The Governor's action deadline is April 13, 2026. If signed, they take effect July 1, 2026.
 
 ## Virginia's New Protected Characteristic: What HB1173 and SB258 Cover
 
 The two bills address different aspects of workplace protection. HB1173 extends the same reasonable accommodation rights that apply to pregnancy and childbirth to employees experiencing menopause. SB258 goes further, making menopause and perimenopause a protected characteristic under Virginia's anti-discrimination law, prohibiting employers from treating women differently in hiring, employment, or access to government services because of where they are in their menopause transition.
 
-A note on language: you may have seen the phrase "protected class" used to describe this kind of legal status. The precise term Virginia's statute uses is "protected characteristic." In practice, the meaning for a woman at work is the same: your employer cannot legally treat you differently, pass you over, or push you out because you are experiencing menopause. The distinction matters because "protected class" is a broader term from federal civil rights law, while "protected characteristic" is the specific language Virginia wrote into its Human Rights Act. If you are searching for this topic online, either term will lead you to the same legal development. Together they create the most comprehensive menopause-specific workplace protections enacted by a U.S. state to date for [menopause at work](/blog/menopause-at-work-study).
+A note on language: you may have seen the phrase "protected class" used to describe this kind of legal status. The precise term Virginia's statute uses is "protected characteristic." In practice, the meaning for a woman at work is the same: your employer cannot legally treat you differently, pass you over, or push you out because you are experiencing menopause. The distinction matters because "protected class" is a broader term from federal civil rights law, while "protected characteristic" is the specific language Virginia wrote into its Human Rights Act. If you are searching for this topic online, either term will lead you to the same legal development. Together they create the most comprehensive menopause-specific workplace protections enacted by a U.S. state to date for menopause at work.
 
 A related bill, SB790, introduced by Senator Ryan McDougle, passed both chambers unanimously and is also awaiting the Governor's signature by April 13. If signed, it will require health insurers to cover treatments for menopause and perimenopause symptoms for policies issued or renewed on or after January 1, 2027.
 
 ## Workforce Study Mandate
 
-HB1173 and SB258 also mandate a workforce study. The Commissioner of Labor and Industry, in consultation with the Commissioner of Health, must [study menopause and perimenopause](https://www.murray.senate.gov/senator-murray-rep-houlahan-introduce-bipartisan-bicameral-legislation-strengthening-menopause-research-at-dod-and-va/) in the workforce, examine existing workplace policies, develop best practices, and submit a report to the Governor and General Assembly by July 1, 2028.
+HB1173 and SB258 also mandate a workforce study. The Commissioner of Labor and Industry, in consultation with the Commissioner of Health, must study menopause and perimenopause in the workforce, examine existing workplace policies, develop best practices, and submit a report to the Governor and General Assembly by July 1, 2028.
 
 ## How Menopause at Work Enters Formal Workplace Records
 
-This article does not examine what the law accomplishes. It examines what the mandated study will be able to see. The condition established in the [framework article](/blog/menopause-workplace-visibility-constraint) that opens this series applies here without alteration.
+This article does not examine what the law accomplishes. It examines what the mandated study will be able to see. The condition established in the framework article that opens this series applies here without alteration.
 
 ## The Virginia Workforce Study: What the Mandate Will Measure
 
@@ -63,6 +63,6 @@ For leadership, this creates a predictable distortion: policy effectiveness will
 
 ## The Data Gap: What the Study Cannot See in Menopause at Work
 
-The women who never entered the formal system are not an outlier. They are the population the study was designed to find. That cohort is not a footnote. It is not a gap Virginia's legislators failed to see. It is [Invisible Attrition℠](/invisible-attrition): the condition under which women remain fully present in the workforce, fully absorbed in managing what their employers cannot see, and entirely absent from every instrument the mandated study will use to find them. Virginia has established the most comprehensive formal workplace protections for menopause of any state in the country. The study will produce data about the women who used those protections. It will not describe the women who never did.
+The women who never entered the formal system are not an outlier. They are the population the study was designed to find. That cohort is not a footnote. It is not a gap Virginia's legislators failed to see. It is Invisible Attrition℠: the condition under which women remain fully present in the workforce, fully absorbed in managing what their employers cannot see, and entirely absent from every instrument the mandated study will use to find them. Virginia has established the most comprehensive formal workplace protections for menopause of any state in the country. The study will produce data about the women who used those protections. It will not describe the women who never did.
 
-[← Back to all articles](/blog)
+[See the full menopause legislation tracker.](/menopause-legislation-tracker/)
