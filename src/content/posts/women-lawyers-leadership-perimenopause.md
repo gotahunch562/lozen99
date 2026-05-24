@@ -81,7 +81,7 @@ The legal profession is beginning to examine the pressures women lawyers encount
 
 The **ABA mental wellness study of women lawyers** reflects one effort to understand those pressures. The **NAWL (un)conference menopause session** signals that biological transitions are beginning to enter professional conversations as well.
 
-What remains less visible is how these experiences unfold for women who have already reached positions of leadership. Managing partners, practice leaders, and senior rainmakers carry responsibility not only for their own work but for the stability of the institutions they lead. A detailed examination of what law firm performance systems cannot measure is explored in Menopause in Law: Visible Performance vs Invisible Cost.
+What remains less visible is how these experiences unfold for women who have already reached positions of leadership. Managing partners, practice leaders, and senior rainmakers carry responsibility not only for their own work but for the stability of the institutions they lead. A detailed examination of what law firm performance systems cannot measure is explored in [Menopause in Law: Visible Performance vs Invisible Cost](/blog/menopause-law-invisible-cost/).
 
 Recognizing that many of these leaders encounter **perimenopause during the same years they carry the greatest professional responsibility** does not diminish their authority.
 

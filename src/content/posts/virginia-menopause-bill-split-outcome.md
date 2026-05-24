@@ -59,7 +59,7 @@ SB790, the insurance coverage bill, was signed because it operates at the clinic
 
 ## SB790 Is Law. The Workplace Protection Is Not.
 
-SB790 is law, effective July 1, 2026. Insurance coverage for medically necessary menopause and perimenopause treatment is meaningful for the women who seek clinical care and whose providers are equipped to give it. The Maryland SB892 analysis documented the clinical recognition gap that precedes coverage. Coverage does not resolve the gap. It removes one barrier for women who have already crossed the others.
+SB790 is law, effective July 1, 2026. Insurance coverage for medically necessary menopause and perimenopause treatment is meaningful for the women who seek clinical care and whose providers are equipped to give it. The [Maryland SB892 analysis](/blog/maryland-sb892-menopause/) documented the clinical recognition gap that precedes coverage. Coverage does not resolve the gap. It removes one barrier for women who have already crossed the others.
 
 The protection HB1173 and SB258 would have provided, the prohibition on discriminatory treatment and the accommodation mandate, does not exist in Virginia law. What exists is a study due July 1, 2028, operating on the same disclosure-dependent instruments the series has been examining since Day 1.
 
