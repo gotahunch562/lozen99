@@ -22,7 +22,7 @@ const posts = defineCollection({
       }),
       heroImage: image().optional(),
       heroAlt: z.string().optional(),
-      tags: z.array(z.string()),
+      tags: z.array(z.string()).optional().default([]),
       spineDestination: z.string().optional(),
       draft: z.boolean().optional().default(false),
       isFeatured: z.boolean().optional().default(false),
