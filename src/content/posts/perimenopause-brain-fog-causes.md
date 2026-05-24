@@ -29,7 +29,7 @@ You used to be the one with the answers. The one who could hold ten things in yo
 
 Now you are standing in a room and cannot remember why you walked in. You are in the middle of a sentence and the word you need disappears. You are reading something you have read a hundred times and it is not landing.
 
-You have searched for early signs of dementia in women. You have told yourself it is stress, or sleep, or something you are not doing right. The [tests came back normal](https://www.lozenadvisory.com/blog/normal-labs-perimenopause). Your doctor says you are fine.
+You have searched for early signs of dementia in women. You have told yourself it is stress, or sleep, or something you are not doing right. The [tests came back normal](/blog/normal-labs-perimenopause/). Your doctor says you are fine.
 
 You know you are not fine.
 
@@ -41,13 +41,13 @@ This is not what people mean when they say everyone gets more forgetful with age
 
 This is the word that vanishes mid-sentence in a meeting. The decision you used to make in thirty seconds that now takes thirty minutes. The confidence in your own thinking that you cannot locate the way you used to. You knew your own mind. Right now your mind feels unreliable in a way it never has before, and you know the difference because you have been paying attention to your own mind for decades.
 
-That difference is real., it has a name.
+That difference is real. It has a name.
 
 ---
 
 ## Normal Results, Real Symptoms
 
-You asked. They tested. The results said normal. You went home still losing words, still hitting walls in the afternoon, still feeling like [a stranger in your own body](https://www.lozenadvisory.com/blog/perimenopause-identity-loss).
+You asked. They tested. The results said normal. You went home still losing words, still hitting walls in the afternoon, still feeling like a stranger in your own body.
 
 This is one of the most consistent and least addressed gaps in perimenopause care.
 
@@ -85,7 +85,7 @@ Tracee Ellis Ross said perimenopause was really frying her brain. Gabrielle Unio
 
 These are not women who ignore their health. They are women who still had no framework for what was happening in their own minds, because no one connected the cognitive shifts to the hormonal transition occurring quietly in the background.
 
-For women in hierarchical and intense professional environments, the [workplace implications of menopause](https://www.lozenadvisory.com/blog/menopause-at-work-study) are only now being studied at scale. The [impact on women in high-pressure and competitive fields](https://www.lozenadvisory.com/blog/aba-study-women-lawyers-mental-health) is even less understood. That connection exists. Knowing it changes the question you are asking about yourself.
+For women in hierarchical and intense professional environments, the workplace implications of menopause are only now being studied at scale. The impact on women in high-pressure and competitive fields is even less understood. That connection exists. Knowing it changes the question you are asking about yourself.
 
 ---
 
@@ -95,4 +95,4 @@ You are not waiting to feel like yourself again. You are navigating something re
 
 The first step is having the right name for what is happening. You have that now. The next step is a private path built around your life, your schedule, and your body as it is right now, not the body the system expected you to have.
 
-That is what [The Tender Path℠](https://www.lozenadvisory.com/normal-blood-tests-feel-off/) was built for. The [MAPS Blueprint℠](https://www.lozenadvisory.com/booking/) is where to start.
+That is what [The Tender Path℠](/normal-blood-tests-feel-off/) was built for. The [MAPS Blueprint℠](/booking/) is where to start.
