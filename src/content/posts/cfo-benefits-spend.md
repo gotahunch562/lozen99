@@ -21,6 +21,8 @@ image:
 heroImage: /src/images/blog/cfo-benefits-spend.avif
 heroAlt: A CFO analyzing a prism that splits healthcare benefit spend into
   visible utilization metrics and hidden workforce risks like attrition.
+tags:
+  - Disclosure Independence
 draft: true
 isFeatured: false
 ---
