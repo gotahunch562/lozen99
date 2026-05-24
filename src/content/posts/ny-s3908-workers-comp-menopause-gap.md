@@ -5,7 +5,7 @@ pubDate: &id001 2026-04-22
 datePublished: *id001
 dateModified: 2026-05-05
 category: Legislative Analysis
-excerpt: While S9247 seeks to create a standalone leave category, S3908 uses an existing state mechanism designed for health-related workforce impacts.
+excerpt: While [S9247 seeks to create a standalone leave category](/blog/ny-s9247-menopause-leave/), S3908 uses an existing state mechanism designed for health-related workforce impacts.
 description: NY Senate Bill S3908 routes menopause leave through workers' comp. This analysis examines the structural policy gap and why Invisible Attrition℠ remains unmeasured by state data.
 metaDescription: NY Senate Bill S3908 routes menopause leave through workers' comp. This analysis examines the structural policy gap and why Invisible Attrition℠ remains unmeasured by state data.
 image:

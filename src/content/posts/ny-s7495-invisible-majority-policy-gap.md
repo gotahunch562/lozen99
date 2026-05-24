@@ -19,7 +19,7 @@ spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
 ---
-New York State Senate Bill S7495 marks a shift in the legislative landscape. While S9247 focuses on access and S3908 on compensation, S7495 directs the state to measure the problem itself. But as New York prepares to study the impact of menopause at work, a critical question remains: What will the state actually be able to see?
+New York State Senate Bill S7495 marks a shift in the legislative landscape. While S9247 focuses on access and [S3908 on compensation](/blog/ny-s3908-workers-comp-menopause-gap/), S7495 directs the state to measure the problem itself. But as New York prepares to study the impact of menopause at work, a critical question remains: What will the state actually be able to see?
 
 The bill's own findings name the crisis; nearly one in five menopausal women have considered leaving the workforce due to unsupported symptoms and employer uncertainty. Yet, there is a disconnect between the legislative intent and the study's methodology. **The Invisible Majority represents the structural policy gap that New York S7495 is currently unequipped to measure.** This article examines whether the state's methods can truly reach the population they want to help.
 
@@ -47,7 +47,7 @@ Nearly half of millennials experiencing menopause have avoided discussing their 
 
 The study will produce accurate findings about the population that entered the categories it examines. The question is whether that population reflects the full scope of impact.
 
-Michigan's experience confirms that it does not. The [Menopause Memorandum](/blog/michigan-menopause-memorandum/) drew from a robust state-level dataset with independent ethical review. Its central finding was not low impact, it was low disclosure. The study encountered the boundary condition before it could measure beyond it. Measurement design is not a technical detail, it determines what the findings can claim.
+Michigan's experience confirms that it does not. The Menopause Memorandum drew from a robust state-level dataset with independent ethical review. Its central finding was not low impact, it was low disclosure. The study encountered the boundary condition before it could measure beyond it. Measurement design is not a technical detail, it determines what the findings can claim.
 
 The study S7495 directs is itself an input. Commissioning research, submitting findings to the Governor, and publishing results are activities. When complete, they will be cited as evidence of action. But the study is the input. Whether its methods captured the full affected population is the output. If the design is bounded by the same disclosure requirement that governs every other formal system in this series, the output will confirm the input. The gap will remain unexamined, now with a government study to support it.
 
