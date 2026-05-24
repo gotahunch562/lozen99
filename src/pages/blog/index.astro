@@ -1,106 +1,24 @@
----
-// Fundations
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Text from "@/components/fundations/elements/Text.astro";
-import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-import { createCollectionPageJsonLd } from "@/lib/seo/jsonLd";
+cd /Users/lozen/Documents/GitHub/lozen99
 
-// Content
-import { getCollection } from "astro:content";
+python3 - <<'PY'
+from pathlib import Path
 
-const allPosts = await getCollection("posts");
+path = Path("src/pages/blog/index.astro")
+text = path.read_text()
 
-const getData = (post: any) => post.data as any;
-
-const normalizeSlug = (value: string) =>
-  String(value || "")
-    .replace(/^\/?blog\//, "")
-    .replace(/^\/+/, "")
-    .replace(/\.mdx?$/, "");
-
-const getSlug = (post: any) => {
-  const data = getData(post);
-  return normalizeSlug(data.slug || post.slug || post.id);
-};
-
-const getPostHref = (post: any) => `/blog/${getSlug(post)}`;
-
-const getPublishedDate = (post: any) => {
-  const data = getData(post);
-  return data.datePublished || data.pubDate || data.dateModified || "";
-};
-
-const getSortDate = (post: any) => {
-  const dateValue = getPublishedDate(post);
-  return dateValue ? new Date(dateValue).getTime() : 0;
-};
-
-const getImageSrc = (post: any) => {
-  const data = getData(post);
-  const imageUrl = data.image?.url;
-
-  if (imageUrl?.src) return imageUrl.src;
-  if (typeof imageUrl === "string") return imageUrl;
-  if (data.heroImage?.src) return data.heroImage.src;
-  if (typeof data.heroImage === "string") return data.heroImage;
-
-  return "";
-};
-
-const getImageAlt = (post: any) => {
-  const data = getData(post);
-  return data.image?.alt || data.heroAlt || data.title || "";
-};
-
-const getCategory = (post: any) => {
-  const data = getData(post);
-  return data.category || data.tags?.[0] || "Articles";
-};
-
-const getExcerpt = (post: any) => {
-  const data = getData(post);
-  return data.excerpt || data.metaDescription || data.description || "";
-};
-
-const formatDate = (dateValue: string | Date) => {
-  if (!dateValue) return "";
-
-  return new Intl.DateTimeFormat("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  }).format(new Date(dateValue));
-};
-
-const slugify = (value: string) =>
-  value
-    .toLowerCase()
-    .replace(/&/g, "and")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-
-const livePosts = allPosts
-  .filter((post) => getData(post).draft !== true)
-  .sort((a, b) => getSortDate(b) - getSortDate(a));
-
-const featuredPost = livePosts.find((post) => getData(post).isFeatured) || livePosts[0];
-
-const latestPosts = livePosts
+# Remove mixed latest-post feed.
+old_latest_const = '''const latestPosts = livePosts
   .filter((post) => !featuredPost || post.id !== featuredPost.id)
   .slice(0, 8);
 
-const curatedCategories = [
-  "Legislative Analysis",
-  "Research & Policy",
-  "Legal Profession",
-  "Performance & Career",
-  "The Tender Path",
-  "Disclosure Independence",
-  "CFO Resources",
-  "Corporate Boards",
-];
+'''
+if old_latest_const not in text:
+    raise SystemExit("Could not find latestPosts const block. No changes made.")
 
-const categoryLinks = curatedCategories
+text = text.replace(old_latest_const, "")
+
+# Add category preview sections after categoryLinks.
+old_category_links = '''const categoryLinks = curatedCategories
   .map((category) => ({
     category,
     href: `/blog/archive#${slugify(category)}`,
@@ -108,205 +26,66 @@ const categoryLinks = curatedCategories
   }))
   .filter((item) => item.count > 0);
 
-const executiveReports = [
-  {
-    label: "Series Hub",
-    title: "The Architecture of Invisible Attrition℠",
-    description:
-      "A four-part executive report series on the workforce risks that emerge before conventional attrition data can see them.",
-    href: "/architecture-of-invisible-attrition-series",
-  },
-  {
-    label: "Report 01",
-    title: "Voluntary Benefits and the Disclosure Gap",
-    description:
-      "Why benefit availability does not equal measurable reach when utilization depends on disclosure.",
-    href: "/voluntary-benefit-disclosure-gap",
-  },
-  {
-    label: "Report 02",
-    title: "The Billable Hour Visibility Tax",
-    description:
-      "How performance systems can miss the cost of managing private constraints inside visible work.",
-    href: "/billable-hour-visibility-tax",
-  },
-  {
-    label: "Report 03",
-    title: "Succession Planning and the Retention Risk Data Gap",
-    description:
-      "Why leadership continuity models can fail before a departure becomes visible.",
-    href: "/succession-planning-retention-risk-data-gap",
-  },
-  {
-    label: "Report 04",
-    title: "Leadership Pipeline Manager Drain",
-    description:
-      "A report on managerial capacity erosion before succession systems register risk.",
-    href: "/leadership-pipeline-manager-drain",
-  },
-];
+'''
 
+new_category_links = '''const categoryLinks = curatedCategories
+  .map((category) => ({
+    category,
+    href: `/blog/archive#${slugify(category)}`,
+    count: livePosts.filter((post) => getCategory(post) === category).length,
+  }))
+  .filter((item) => item.count > 0);
 
-const seriesHub = executiveReports[0];
-const reportItems = executiveReports.slice(1);
+const categoryPreviewSections = curatedCategories
+  .map((category) => {
+    const posts = livePosts
+      .filter((post) => getCategory(post) === category)
+      .slice(0, 2);
 
-const title = "Blog | Lozen Advisory";
+    return {
+      category,
+      href: `/blog/archive#${slugify(category)}`,
+      count: livePosts.filter((post) => getCategory(post) === category).length,
+      posts,
+    };
+  })
+  .filter((section) => section.posts.length > 0);
 
-const description =
-  "Articles for women navigating perimenopause, disclosure, performance pressure, leadership, career protection, and private decision-making at work.";
+'''
 
-const collectionJsonLd = createCollectionPageJsonLd({
-  title,
-  description,
-  href: "/blog",
-  items: [
-    ...(featuredPost
-      ? [
-          {
-            title: getData(featuredPost).title,
-            href: getPostHref(featuredPost),
-            description: getExcerpt(featuredPost),
-          },
-        ]
-      : []),
-    ...latestPosts.map((post) => ({
+if old_category_links not in text:
+    raise SystemExit("Could not find categoryLinks block. No changes made.")
+
+text = text.replace(old_category_links, new_category_links)
+
+# Update JSON-LD to use categorized previews instead of mixed latestPosts.
+old_jsonld_latest = '''    ...latestPosts.map((post) => ({
       title: getData(post).title,
       href: getPostHref(post),
       description: getExcerpt(post),
-    })),
-    ...executiveReports.map((report) => ({
-      title: report.title,
-      href: report.href,
-      description: report.description,
-    })),
-  ],
-  breadcrumbs: [
-    { name: "Home", href: "/" },
-    { name: "Research & Analysis", href: "/blog" },
-  ],
-});
----
+    })),'''
 
-<BaseLayout title={title} description={description} jsonLd={collectionJsonLd}>
-  <section class="bg-gradient-to-b from-base-200 via-white to-base-100">
-    <Wrapper variant="standard" class="py-20 lg:py-28">
-      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-        <div>
-          <Text
-            tag="span"
-            variant="textSM"
-            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-          >
-            Research
-          </Text>
+new_jsonld_latest = '''    ...categoryPreviewSections.flatMap((section) =>
+      section.posts.map((post) => ({
+        title: getData(post).title,
+        href: getPostHref(post),
+        description: getExcerpt(post),
+      })),
+    ),'''
 
-          <Text
-            tag="h1"
-            variant="displayXL"
-            class="mt-8 font-display text-base-900"
-          >
-            Lozen Advisory Research & Analysis
-          </Text>
+if old_jsonld_latest not in text:
+    raise SystemExit("Could not find latestPosts JSON-LD block. No changes made.")
 
-          <Text
-            tag="p"
-            variant="textBase"
-            class="mt-6 max-w-2xl text-base-600 text-balance"
-          >
-            Disclosure-independent analysis on retention risk, menopause at work,
-            invisible attrition, leadership continuity, and the organizational data
-            sources that fail to capture what was never disclosed.
-          </Text>
-        </div>
+text = text.replace(old_jsonld_latest, new_jsonld_latest)
 
-        <nav
-          class="rounded-sm border border-base-300 bg-white p-5 shadow-sm"
-          aria-label="Blog archive navigation"
-        >
-          <p class="mb-4 text-xs font-medium uppercase tracking-[0.16em] text-base-600 font-sans">
-            Explore the research
-          </p>
+# Replace mixed Recent Analysis section with category sections.
+start = text.find('  {latestPosts.length > 0 && (')
+end = text.find('  <section>\n    <Wrapper variant="standard" class="py-10 lg:py-20">', start)
 
-          {categoryLinks.length > 0 && (
-            <div class="flex flex-wrap gap-2">
-              {categoryLinks.map((item) => (
-                <a
-                  href={item.href}
-                  class="rounded-full border border-base-300 px-4 py-2 text-sm text-base-700 transition-colors hover:border-base-500 hover:text-base-950 focus-visible:border-base-500 focus-visible:text-base-950"
-                >
-                  {item.category}
-                  <span class="ml-1 text-base-500">({item.count})</span>
-                </a>
-              ))}
-            </div>
-          )}
+if start == -1 or end == -1:
+    raise SystemExit("Could not locate Recent Analysis section boundaries. No changes made.")
 
-          <a
-            href="/blog/archive"
-            class="mt-5 inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
-          >
-            View all research articles →
-          </a>
-        </nav>
-      </div>
-    </Wrapper>
-  </section>
-
-  {featuredPost && (
-    <section>
-      <Wrapper variant="standard" class="py-8 lg:py-14">
-        <div class="grid grid-cols-1 overflow-hidden rounded-sm border border-base-300 bg-white shadow-sm transition-all duration-300 hover:border-accent-500 hover:shadow-md lg:grid-cols-[1.1fr_0.9fr]">
-          {getImageSrc(featuredPost) && (
-            <a href={getPostHref(featuredPost)} class="block overflow-hidden">
-              <img
-                src={getImageSrc(featuredPost)}
-                alt={getImageAlt(featuredPost)}
-                class="h-80 w-full object-cover transition-transform duration-500 hover:scale-[1.02] lg:h-full"
-                loading="eager"
-              />
-            </a>
-          )}
-
-          <div class="flex flex-col justify-center p-8 lg:p-12">
-            <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-base-600 font-sans">
-              <span>{getCategory(featuredPost)}</span>
-              {getPublishedDate(featuredPost) && (
-                <>
-                  <span aria-hidden="true">·</span>
-                  <time datetime={String(getPublishedDate(featuredPost))}>
-                    {formatDate(getPublishedDate(featuredPost))}
-                  </time>
-                </>
-              )}
-            </div>
-
-            <h2 class="mt-5 lozen-type-section-title text-base-900">
-              <a href={getPostHref(featuredPost)} class="transition-colors hover:text-base-700">
-                {getData(featuredPost).title}
-              </a>
-            </h2>
-
-            {getExcerpt(featuredPost) && (
-              <p class="mt-6 lozen-type-body text-base-600">
-                {getExcerpt(featuredPost)}
-              </p>
-            )}
-
-            <div class="mt-8">
-              <a
-                href={getPostHref(featuredPost)}
-                class="inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
-              >
-                Read article →
-              </a>
-            </div>
-          </div>
-        </div>
-      </Wrapper>
-    </section>
-  )}
-
-  {latestPosts.length > 0 && (
+new_section = '''  {categoryPreviewSections.length > 0 && (
     <section>
       <Wrapper variant="standard" class="py-10 lg:py-16">
         <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
@@ -316,7 +95,7 @@ const collectionJsonLd = createCollectionPageJsonLd({
               variant="textSM"
               class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
             >
-              Latest Stories
+              Research Library
             </Text>
 
             <Text
@@ -324,8 +103,12 @@ const collectionJsonLd = createCollectionPageJsonLd({
               variant="displayLG"
               class="mt-8 font-display text-base-900"
             >
-              Recent Analysis
+              Explore by Research Area
             </Text>
+
+            <p class="mt-5 lozen-type-body text-base-600">
+              Each section surfaces recent analysis from a defined Lozen Advisory research lane. The archive contains the complete article library.
+            </p>
           </div>
 
           <a
@@ -336,145 +119,97 @@ const collectionJsonLd = createCollectionPageJsonLd({
           </a>
         </div>
 
-        <div class="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {latestPosts.map((post) => {
-            const publishedDate = getPublishedDate(post);
-
-            return (
-              <article class="group overflow-hidden rounded-sm border border-base-300 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:shadow-md">
-                {getImageSrc(post) && (
-                  <a href={getPostHref(post)} class="block overflow-hidden">
-                    <img
-                      src={getImageSrc(post)}
-                      alt={getImageAlt(post)}
-                      class="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                      loading="lazy"
-                    />
-                  </a>
-                )}
-
-                <div class="p-8">
-                  <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-base-600 font-sans">
-                    <span>{getCategory(post)}</span>
-                    {publishedDate && <span aria-hidden="true">·</span>}
-                    {publishedDate && (
-                      <time datetime={String(publishedDate)}>
-                        {formatDate(publishedDate)}
-                      </time>
-                    )}
-                  </div>
-
-                  <h3 class="mt-5 lozen-type-card-title text-base-900">
-                    <a href={getPostHref(post)} class="transition-colors hover:text-base-700">
-                      {getData(post).title}
-                    </a>
+        <div class="mt-12 space-y-14">
+          {categoryPreviewSections.map((section) => (
+            <section aria-labelledby={`category-${slugify(section.category)}`}>
+              <div class="flex flex-col gap-3 border-b border-base-300 pb-5 md:flex-row md:items-end md:justify-between">
+                <div>
+                  <h3
+                    id={`category-${slugify(section.category)}`}
+                    class="lozen-type-section-title text-base-900"
+                  >
+                    {section.category}
                   </h3>
 
-                  {getExcerpt(post) && (
-                    <p class="mt-5 line-clamp-4 lozen-type-body text-base-600">
-                      {getExcerpt(post)}
-                    </p>
-                  )}
-
-                  <div class="mt-7">
-                    <a
-                      href={getPostHref(post)}
-                      class="inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
-                    >
-                      Read article →
-                    </a>
-                  </div>
+                  <p class="mt-2 text-sm text-base-600">
+                    {section.count} {section.count === 1 ? "article" : "articles"} in this research area
+                  </p>
                 </div>
-              </article>
-            );
-          })}
+
+                <a
+                  href={section.href}
+                  class="inline-flex w-fit text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
+                >
+                  View section →
+                </a>
+              </div>
+
+              <div class="mt-7 grid grid-cols-1 gap-8 lg:grid-cols-2">
+                {section.posts.map((post) => {
+                  const publishedDate = getPublishedDate(post);
+
+                  return (
+                    <article class="group overflow-hidden rounded-sm border border-base-300 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:shadow-md">
+                      {getImageSrc(post) && (
+                        <a href={getPostHref(post)} class="block overflow-hidden">
+                          <img
+                            src={getImageSrc(post)}
+                            alt={getImageAlt(post)}
+                            class="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                            loading="lazy"
+                          />
+                        </a>
+                      )}
+
+                      <div class="p-8">
+                        <div class="flex flex-wrap items-center gap-3 text-xs font-medium uppercase tracking-[0.14em] text-base-600 font-sans">
+                          <span>{getCategory(post)}</span>
+                          {publishedDate && <span aria-hidden="true">·</span>}
+                          {publishedDate && (
+                            <time datetime={String(publishedDate)}>
+                              {formatDate(publishedDate)}
+                            </time>
+                          )}
+                        </div>
+
+                        <h4 class="mt-5 lozen-type-card-title text-base-900">
+                          <a href={getPostHref(post)} class="transition-colors hover:text-base-700">
+                            {getData(post).title}
+                          </a>
+                        </h4>
+
+                        {getExcerpt(post) && (
+                          <p class="mt-5 line-clamp-4 lozen-type-body text-base-600">
+                            {getExcerpt(post)}
+                          </p>
+                        )}
+
+                        <div class="mt-7">
+                          <a
+                            href={getPostHref(post)}
+                            class="inline-flex text-sm font-medium text-base-900 underline decoration-base-400 underline-offset-[0.24em] transition-colors hover:text-base-700"
+                          >
+                            Read article →
+                          </a>
+                        </div>
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+          ))}
         </div>
       </Wrapper>
     </section>
   )}
 
-  <section>
-    <Wrapper variant="standard" class="py-10 lg:py-20">
-      <div class="flex flex-col gap-5 border-y border-base-300 py-8 lg:flex-row lg:items-center lg:justify-between">
-        <div class="max-w-2xl">
-          <Text
-            tag="span"
-            variant="textSM"
-            class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-          >
-            Resource Library
-          </Text>
+'''
 
-          <Text
-            tag="h2"
-            variant="displayLG"
-            class="mt-6 font-display text-base-900"
-          >
-            You might also like...
-          </Text>
-        </div>
+text = text[:start] + new_section + text[end:]
 
-        <a
-          href="/blog/archive"
-          class="inline-flex w-fit rounded-full border border-base-400 px-5 py-3 text-sm font-medium text-base-900 transition-colors hover:border-base-700 hover:bg-base-900 hover:text-white"
-        >
-          View all research articles →
-        </a>
-      </div>
-    </Wrapper>
-  </section>
+path.write_text(text)
+print("Updated blog index layout to show category-based article previews.")
+PY
 
-  <section class="border-t border-base-200 bg-white">
-    <Wrapper variant="standard" class="py-8 lg:py-10">
-      <div class="flex flex-col gap-5 rounded-sm border border-base-300 bg-base-50 p-5 shadow-sm lg:flex-row lg:items-start lg:justify-between lg:p-6">
-        <div class="max-w-2xl">
-          <Text
-            tag="span"
-            variant="textSM"
-            class="pl-4 font-medium uppercase border-l text-base-900 font-sans border-base-400"
-          >
-            Executive Report Series
-          </Text>
-
-          <Text
-            tag="h2"
-            variant="displaySM"
-            class="mt-4 font-display text-base-900"
-          >
-            The Architecture of Invisible Attrition℠
-          </Text>
-
-          <p class="mt-3 lozen-type-body text-base-800">
-            A curated series on workforce risks that emerge before conventional attrition data can see them.
-          </p>
-        </div>
-
-        {seriesHub && (
-          <a
-            href={seriesHub.href}
-            class="inline-flex w-fit shrink-0 rounded-full border border-base-400 px-5 py-3 text-sm font-medium text-base-900 transition-colors hover:border-base-700 hover:bg-base-900 hover:text-white"
-          >
-            Read series →
-          </a>
-        )}
-      </div>
-
-      <div class="mt-5 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
-        {reportItems.map((item) => (
-          <a
-            href={item.href}
-            class="group rounded-sm border border-base-300 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-500 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-base-500"
-          >
-            <p class="text-xs font-medium uppercase tracking-[0.14em] text-base-600">
-              {item.label}
-            </p>
-            <h3 class="mt-3 lozen-type-card-title-small text-base-900 transition-colors group-hover:text-base-700">
-              {item.title}
-            </h3>
-          </a>
-        ))}
-      </div>
-    </Wrapper>
-  </section>
-
-</BaseLayout>
+corepack pnpm run build
