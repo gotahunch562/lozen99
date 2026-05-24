@@ -9,11 +9,14 @@ import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("posts");
 
-allPosts.sort((a, b) => {
-  const dateA = new Date(a.data.pubDate).getTime();
-  const dateB = new Date(b.data.pubDate).getTime();
-  return dateB - dateA;
-});
+const getSortDate = (post: any) => {
+  const dateValue = post.data.datePublished || post.data.pubDate || post.data.dateModified;
+  return dateValue ? new Date(dateValue).getTime() : 0;
+};
+
+const livePosts = allPosts
+  .filter((post) => post.data.draft !== true)
+  .sort((a, b) => getSortDate(b) - getSortDate(a));
 ---
 
 <section class="bg-gradient-to-t from-base-200 via-base-100 to-white">
@@ -43,7 +46,7 @@ allPosts.sort((a, b) => {
     </div>
 
     <div class="mt-8 grid grid-cols-1 gap-5 sm:mt-10 md:grid-cols-2">
-      {allPosts.slice(0, 2).map((post) => <BlogCard post={post} />)}
+      {livePosts.slice(0, 2).map((post) => <BlogCard post={post} />)} 
     </div>
 
     <Button
