@@ -5,7 +5,7 @@
  *
  * Frontmatter fields expected from the .md file:
  *   title, heading, subtitle, metaDescription, jsonLdDescription,
- *   definedTermName, definedTermDescription, pubDate, heroImage, heroAlt, clusters[]
+ *   definedTermName, definedTermDescription, definedTermAlternateName, pubDate, heroImage, heroAlt, clusters[]
  *
  * In Astro, markdown frontmatter is passed as Astro.props.frontmatter
  * when the file uses the layout: field. All fields destructure from there.
@@ -37,10 +37,10 @@ const {
 const pageTitle = title || heading || "Lozen Advisory";
 const pageDescription = metaDescription || subtitle || "";
 const pageHref = frontmatter.slug || "/invisible-attrition";
-const frameworkTermName = definedTermName || "Invisible Attrition";
+const frameworkTermName = definedTermName || "Invisible Attrition℠";
 const frameworkTermAlternateName =
   definedTermAlternateName ||
-  (frameworkTermName.includes("℠") ? undefined : "Invisible Attrition℠");
+  (frameworkTermName === "Invisible Attrition℠" ? "Invisible Attrition" : undefined);
 const frameworkTermDescription =
   definedTermDescription ||
   "The unmeasured erosion of leadership and performance capacity that occurs before traditional, disclosure-dependent retention metrics detect risk.";

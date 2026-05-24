@@ -45,10 +45,10 @@ const pageDescription = metaDescription || subtitle || "";
 const pageHref = frontmatter.slug || Astro.url.pathname;
 const parentPillarHref = pillarSlug || "/invisible-attrition";
 const parentPillarTitle = pillarTitle || "Invisible Attrition℠";
-const frameworkTermName = definedTermName || "Invisible Attrition";
+const frameworkTermName = definedTermName || "Invisible Attrition℠";
 const frameworkTermAlternateName =
   definedTermAlternateName ||
-  (frameworkTermName.includes("℠") ? undefined : "Invisible Attrition℠");
+  (frameworkTermName === "Invisible Attrition℠" ? "Invisible Attrition" : undefined);
 const frameworkTermDescription =
   definedTermDescription ||
   "The unmeasured erosion of leadership and performance capacity that occurs before traditional, disclosure-dependent retention metrics detect risk.";
