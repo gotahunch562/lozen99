@@ -33,6 +33,27 @@ const jsonResponse = (body: Record<string, unknown>, status = 200) =>
     },
   });
 
+const methodNotAllowedResponse = () =>
+  new Response(JSON.stringify({ message: "This endpoint accepts POST requests only." }), {
+    status: 405,
+    headers: {
+      allow: "POST",
+      "content-type": "application/json; charset=utf-8",
+      "x-robots-tag": "noindex, nofollow",
+    },
+  });
+
+export const GET: APIRoute = async () => methodNotAllowedResponse();
+
+export const HEAD: APIRoute = async () =>
+  new Response(null, {
+    status: 405,
+    headers: {
+      allow: "POST",
+      "x-robots-tag": "noindex, nofollow",
+    },
+  });
+
 export const POST: APIRoute = async ({ request }) => {
   if (!request.headers.get("content-type")?.includes("application/json")) {
     return jsonResponse({ message: "Invalid request." }, 400);
