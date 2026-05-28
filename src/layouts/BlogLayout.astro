@@ -13,14 +13,16 @@ import LegalSeriesConnector from "@/components/series/LegalSeriesConnector.astro
 const { frontmatter, currentSlug: suppliedCurrentSlug } = Astro.props;
 const currentSlug = suppliedCurrentSlug || "";
 
-// Get all posts and filter by tag
+// Get published posts and filter by tag
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("posts");
-const relatedPosts = allPosts.filter((post) =>
-  post.data.tags.some((tag) => frontmatter.tags.includes(tag))
-);
-const filteredRelatedPosts = relatedPosts
+const frontmatterTags = frontmatter.tags ?? [];
+const filteredRelatedPosts = allPosts
+  .filter((post) => post.data.draft !== true)
   .filter((post) => post.data.title !== frontmatter.title)
+  .filter((post) =>
+    (post.data.tags ?? []).some((tag) => frontmatterTags.includes(tag))
+  )
   .slice(0, 2);
 const publishedDate = new Date(frontmatter.pubDate);
 const formattedPubDate = publishedDate.toLocaleDateString("en-US", {

@@ -7,8 +7,16 @@ import { getCollection } from "astro:content";
 
 const posts = await getCollection("posts");
 
+const normalizeSlug = (value: string) =>
+  String(value || "")
+    .replace(/^\/?blog\//, "")
+    .replace(/^\/+/, "")
+    .replace(/\.mdx?$/, "");
+
+const livePosts = posts.filter((post) => post.data.draft !== true);
+
 const searchItems = [
-  ...posts.map((post) => ({
+  ...livePosts.map((post) => ({
     title: post.data.title,
     description: post.data.description || "",
     meta: post.data.pubDate
@@ -18,7 +26,7 @@ const searchItems = [
           day: "numeric",
         })
       : "",
-    url: `/blog/${post.id}`,
+    url: `/blog/${normalizeSlug(post.data.slug || post.slug || post.id)}`,
     type: "Article",
   })),
 ];

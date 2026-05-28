@@ -7,6 +7,7 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 // Content
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("posts");
+const livePosts = allPosts.filter((post) => post.data.draft !== true);
 const tagMap = new Map();
 const pageTitle = "Tag Index";
 
@@ -24,7 +25,7 @@ const normalizeTag = (tag: string) => {
   return { label, slug };
 };
 
-for (const post of allPosts) {
+for (const post of livePosts) {
   const tags = post.data.tags ?? [];
   for (const tag of tags) {
     const { label, slug } = normalizeTag(tag);

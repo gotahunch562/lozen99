@@ -38,9 +38,10 @@ export async function getStaticPaths() {
   };
 
   const allPosts = await getCollection("posts");
+  const livePosts = allPosts.filter((post) => post.data.draft !== true);
   const tagMap = new Map();
 
-  for (const post of allPosts) {
+  for (const post of livePosts) {
     const tags = post.data.tags ?? [];
     for (const tag of tags) {
       const { label, slug } = normalizeTagPath(tag);
