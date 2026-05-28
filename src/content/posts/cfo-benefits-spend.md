@@ -23,7 +23,7 @@ heroAlt: A CFO analyzing a prism that splits healthcare benefit spend into
   visible utilization metrics and hidden workforce risks like attrition.
 tags:
   - Disclosure Independence
-draft: true
+draft: false
 isFeatured: false
 ---
 Health benefit costs are a finance department problem now. Not an HR problem. Not a vendor performance problem. With employer healthcare line-items surging by 6.7% according to the Mercer CFO Perspective on Health, health inflation is officially outpacing general economic inflation. Today, a third of finance leaders view health benefits as a top-three enterprise operating expense, yet only 1 in 4 CFOs report that their organizations can absorb these hikes without directly impacting operations. 
