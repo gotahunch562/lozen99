@@ -119,6 +119,17 @@ export const ENACTED: LegislationRow[] = [
     notes: "A5278 requires a diagnosis and a clinical record to activate coverage. Women managing symptoms outside the clinical system are named in the legislative intent and excluded from the utilization data the coverage produces. The collection condition was never met because the clinical encounter never occurred.",
     url: "https://njleg.gov/bill-search/2024/A5278/bill-text?f=A5500&n=5278_E2",
   },
+  {
+    jurisdiction: "Maryland",
+    bill: "SB0892 — Health Occupations, Public Health, and Insurance — Menopause — Provider Training, Coverage, and Access",
+    focus: "Omnibus",
+    status: "Signed by Governor Wes Moore May 26, 2026 — Chapter 605. Effective July 1, 2026 and October 1, 2026. Cross-filed with HB1121.",
+    assumes: "CME credit incentives, mandatory insurance coverage, and advisory council changes will improve provider preparedness and patient access to menopause care",
+    cannotMeasure: "SB0892 names women experiencing menopause as the population requiring improved care. The CME mechanism offers double credit to providers who complete training voluntarily — it does not require any provider to complete it. The insurance coverage activates on evaluation and management under a clinical record. Women managing symptoms without clinical engagement are named in the legislative intent and excluded by the coverage trigger. The advisory council membership change produces recommendations. Recommendations are not enforcement.",
+    classification: "Dashboard Delay",
+    notes: "The CME credit multiplier is analytically distinctive from every other CME provision in this tracker. Maryland does not mandate menopause training. It grants at least 2 hours of CME credit for every 1 hour completed on menopause and menopause-associated symptoms. That is an incentive structure. Illinois removed its CME mandate in the engrossed version. Massachusetts has a conditional assessment. Maryland is the only state using a credit multiplier to pull providers toward training rather than requiring it. Whether incentive-based design produces broader behavior change than conditional mandates is an open empirical question this bill will not answer — it has no measurement mechanism for provider participation rates.",
+    url: "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/SB0892/?ys=2026RS",
+  },
 ];
 
 export const ACTIVE: LegislationRow[] = [
