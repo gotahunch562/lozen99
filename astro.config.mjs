@@ -5,6 +5,7 @@ import mdx from "@astrojs/mdx";
 import vercel from "@astrojs/vercel";
 
 export default defineConfig({
+  site: "https://www.lozenadvisory.com",
   adapter: vercel(),
   trailingSlash: "always",
   build: {
@@ -13,6 +14,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  site: "https://www.lozenadvisory.com",
-  integrations: [tailwindcss(), sitemap(), mdx()],
+  integrations: [sitemap(), mdx()],
 });

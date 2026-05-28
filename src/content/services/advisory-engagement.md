@@ -16,9 +16,9 @@ priceFrom: Ongoing Counsel
 duration: Strategic engagement
 isFeatured: false
 ---
-The Advisory Engagement provides ongoing counsel for organizations facing deeper or more complex risk.
+The Advisory Engagement provides ongoing counsel for organizations facing deeper or more complex risk. 
 
-This work is for clients who need more than a briefing. They may be evaluating benefits strategy, preparing for executive or board-level questions, responding to low utilization, assessing AI implementation risk, reviewing retention exposure, or trying to understand why current workforce data does not explain what leaders are seeing inside the business.
+Sharpen your focus and get feedback from experts through Lozen Advisory. Available as a 2-hour or half-day session virtually, or as a full day of in-person engagement. Lozen Advisory strategy sessions are available to high-tech and service providers, offering an outside, expert perspective on:  evaluating benefits strategy, preparing for executive or board-level questions, responding to low utilization, assessing AI implementation risk, reviewing retention exposure, or trying to understand why current workforce data does not explain what leaders are seeing inside the business.
 
 Lozen Advisory helps clients move from scattered signals to a clearer operating position.
 
