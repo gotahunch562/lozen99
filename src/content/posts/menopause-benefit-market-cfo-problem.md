@@ -21,7 +21,7 @@ heroAlt: A CFO analyzing a Menopause benefits utilization. On his face is the
   cold financial reality. He is worried.
 tags:
   - Disclosure Independence
-draft: true
+draft: false
 isFeatured: false
 ---
 # The Menopause Benefit Market Is Running Into the CFO Problem
