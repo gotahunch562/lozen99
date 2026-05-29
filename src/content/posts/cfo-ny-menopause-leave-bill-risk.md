@@ -23,8 +23,8 @@ heroAlt: A CFO analyzing the impact of proposed menopause legislation on his
 tags:
   - Legislative Analysis
   - Workplace Disclosure
-draft: true
-isFeatured: false
+draft: false
+isFeatured: true
 ---
 ## The NY State Menopause Leave Bill Has Three Problems. None of Them Are Related to Menopause.
 
