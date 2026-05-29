@@ -6,13 +6,13 @@ datePublished: 2026-05-29
 dateModified: 2026-05-29
 category: CFO Resources
 excerpt: >
-  Naming the problems with NY Bill A10270 is not an argument against the
+  Naming the problems with NY Bill A10296 is not an argument against the
   legislation; it is an argument for building it strategically. From premature
   insurance repricing and a broken data collection model to a rigid demographic
   definition that completely omits surgical and premature menopause, the bill as
   written systematically excludes the very workforce it endeavors to help.
 description: >
-  New York Assembly Bill A10270 aims to mandate menopause leave, but its text
+  New York Assembly Bill A10296 aims to mandate menopause leave, but its text
   creates critical actuarial, demographic, and disclosure risks for employers.
 image:
   url: /src/images/blog/cfo-worried-legislation.webp
@@ -28,19 +28,19 @@ isFeatured: true
 ---
 ## The NY State Menopause Leave Bill Has Four Problems. None of Them Are Related to Menopause.
 
-A bill moving through the New York State Legislature is designed to help women. But before New York State builds [menopause leave into law](/blog/ny-s3908-workers-comp-menopause-gap/), four structural problems **inherent in** Bill A10270 need to be named and addressed.
+A bill moving through the New York State Legislature is designed to help women. But before New York State builds [menopause leave into law](/blog/ny-s3908-workers-comp-menopause-gap/), four structural problems raised by A10296, A10270, and the companion Senate bills need to be named and addressed.
 
 Naming the problems is not an argument against the bill. It is an argument for building it strategically, with consideration of certain facts.
 
 ## Structural Problem One — The premium arrives before the assistance does.
 
-The moment menopause is classified as a compensable condition under workers' compensation law, every employer with New York operations pays higher premiums. Not when a claim is filed. Before.
+The moment menopause is classified as a compensable condition under workers' compensation law, and some employers with New York operations pays higher premiums. Not when a claim is filed. Before.
 
 Actuarial repricing is triggered by the classification itself. The employer absorbs the cost before a single employee takes a single day of leave. That is not a design feature; it is a design flaw.
 
-To properly understand the cost to employers, keep in mind that the New York State Workers' Compensation Board assessment rate is 7% of standard premium. Nearly 60,000 employers insure more than 820,000 employees through NYSIF Disability and Paid Leave Benefits alone. The moment menopause is added as a compensable condition under that system, every one of those employers is affected before a single claim is filed.
+To properly understand the cost to employers, keep in mind that the New York State Workers' Compensation Board assessment rate is 7% of standard premium. Nearly 60,000 employers insure more than 820,000 employees through [NYSIF Disability and Paid Leave Benefits](https://www.wcb.ny.gov/content/main/DisabilityBenefits/employer-disability-benefits.jsp) alone. The moment menopause is added as a compensable condition under that system, every one of those employers is affected before a single claim is filed.
 
-A bill designed to help women will land the hardest on small businesses—which make up 97% of those 58,000 employers—before a single woman takes a single day of leave.
+A bill designed to help women will land the hardest on small businesses which make up 97% of those 58,000 employers before a single woman takes a single day of leave.
 
 ## Structural Problem Two — The women who need it most will not use it.
 
@@ -60,19 +60,19 @@ The guidance will be calibrated strictly to the disclosed population. The undisc
 
 ## Structural Problem Four — The bill does not say which menopause counts.
 
-The statutory text of [NY Assembly Bill A10270](https://www.nysenate.gov/legislation/bills/2025/A10270) defines menopause through a generic list of physical symptoms, but it completely omits surgical menopause, premature menopause, medically induced menopause, chemotherapy-induced menopause, or menopause caused by ovarian removal.
+The statutory text of NY Assembly Bill A10296 defines menopause through a generic list of physical symptoms, but it completely omits surgical menopause, premature menopause, medically induced menopause, chemotherapy-induced menopause, or menopause caused by ovarian removal.
 
-That omission matters because a woman can be 23 years old and be in menopause due to fibroids, cancer treatment, major surgery, or an unexpected medical event.
+That omission matters because a woman can be 23 years old and be in [menopause due to fibroids,](https://powerinthepause.bwhi.org/hubfs/PowerInThePause/BWHI-2025-Menopause-Survey-Preliminary-Findings.pdf?hsLang=en) cancer treatment, major surgery, or an unexpected medical event.
 
 Because the law does not explicitly map these clinical paths, the actual execution of the protection is left entirely to the subjective recognition of employers, corporate insurers, physicians, and claims administrators. The women most likely to be aggressively questioned or denied are the younger workers whose profiles do not fit the demographics of the claims department. That is not a minor drafting issue; it is an operational blind spot that invites discriminatory scrutiny.
 
-## What Assembly Bill A10270 Needs
+## What Assembly Bill A10296 Needs
 
 This bill does not need to be repealed; it needs to be redesigned. This can be achieved by separating the leave entitlement from the workers' compensation classification and removing the disclosure requirement from the measurement architecture.
 
 We must start by building the guidance framework around what the data cannot see, not just what it can. The women this bill was written to help deserve infrastructure that is designed to reach them.
 
-The awareness lobby is right that menopause belongs in workplace policy. The data is real, and the need is documented. But as written, [the bill will raise employer costs,](https://ww3.nysif.com/Home/Employer/DBpolicyholder/AboutClaims/DB_450) produce incomplete data, and systematically exclude the women it wants to help.
+The awareness lobby is right that menopause belongs in workplace policy. The data is real, and the need is documented. But as written, the bill will raise employer costs, produce incomplete data, and systematically exclude the women it wants to help.
 
 ## Request a Strategic Briefing
 
