@@ -291,13 +291,13 @@ export const DID_NOT_PASS: FailedRow[] = [
 export const ADVISORY: AdvisoryRow[] = [
   {
     jurisdiction: "Michigan",
-    instrument: "Women's Commission Memorandum & Public Meeting",
+    instrument: "Michigan Women\u2019s Commission \u2014 Menopause Memorandum and Active Policy Push",
     focus: "Advisory",
-    status: "Active",
-    structuralRole: "Signals issue presence",
+    status: "Memorandum released March 2026. Active employer and legislative engagement as of May 28, 2026. Governor Whitmer participating.",
+    structuralRole: "Signals issue presence; generates voluntary employer recommendations",
     classification: "Dashboard Delay",
-    notes: "No system activation occurs for an advisory instrument. The Michigan data is the most analytically significant state-level record in the tracker. Its central finding was not low impact. It was low disclosure: fewer than one in five women disclosed their menopause status at work. The study encountered the boundary condition before it could measure past it. The memorandum documents the gap. It cannot close it.",
-    url: "https://www.michigan.gov/mwc",
-  },
+    notes: "The Michigan Women\u2019s Commission surveyed thousands of women, held a statewide tour, documented 16,500 Michigan women leaving the workforce annually due to menopause symptoms, and produced a 32-page memorandum. The May 28 LEO press release pushes those findings into active employer engagement. The recommendations for employers are: educate all employees about perimenopause and menopause; provide trusted information and resources; update policies with a midlife health lens; create low-cost accommodations; provide basic menopause awareness training for supervisors and HR staff. Every recommendation is voluntary. No mechanism activates without employer election. The Michigan Center for Data and Analytics published the 2026 Women in the Michigan Workforce Report in the same month. That report documents the wage gap, labor force participation by parental status, industry concentration, and 10-year employment projections. Menopause does not appear as a variable in any of it. The 16,500 women the Memorandum counted are invisible in the dataset the MCDA published the same month. The MWC measured the gap. The MCDA report confirms the gap is not in the formal data. Both reports come from the same department.",
+    url: "https://www.michigan.gov/leo/news/2026/05/28/state-leaders-push-policy-solutions-for-women-in-midlife-provide-recommendations-for-employers",
+  }
 ];
 
