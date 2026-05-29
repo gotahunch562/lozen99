@@ -28,9 +28,7 @@ isFeatured: true
 ---
 ## The NY State Menopause Leave Bill Has Four Problems. None of Them Are Related to Menopause.
 
-
-
-A bill moving through the New York State Legislature is designed to help women. But, before New York State Legislators build [menopause leave into law](/blog/ny-s3908-workers-comp-menopause-gap/), four structural problems raised by A10296, A10270, and the companion Senate bills, need to be named and addressed.
+A bill moving through the New York State Legislature is designed to help women. But, before New York State Legislators build [menopause leave into law](https://chatgpt.com/blog/ny-s3908-workers-comp-menopause-gap/), four structural problems raised by A10296, A10270, and the companion Senate bills need to be named and addressed.
 
 Naming the problems is not an argument against the bill. It is an argument for building it strategically, with consideration of certain facts.
 
@@ -48,9 +46,9 @@ A bill designed to help women would land the hardest on small businesses which m
 
 Here is the pathway the bill requires for utilization: a woman must name her condition, file a request, generate documentation, and move through an approval process.
 
-For a [senior executive in a market-moving environment](/disclosure-independence-infrastructure/), being seen as someone whose capacity is in question is a dealbreaker. The data confirms this is not a fringe concern; stigma is real. In a global survey of more than 8,000 women, only 27% had spoken with senior leadership about their situation. In a parallel survey of 898 working women, 97% concealed or downplayed their condition at work.
+For a [senior executive in a market-moving environment](https://chatgpt.com/disclosure-independence-infrastructure/), being seen as someone whose capacity is in question is a dealbreaker. The data confirms this is not a fringe concern; stigma is real. In a global survey of more than 8,000 women, only 27% had spoken with senior leadership about their situation. In a parallel survey of 898 working women, 97% concealed or downplayed their condition at work.
 
-The women the bills are designed to help, are the women least likely to engage the infrastructure it creates.
+The women the bills are designed to help are the women least likely to engage the infrastructure they create.
 
 ## Structural Problem Three — The measurement is broken before it begins.
 
@@ -58,7 +56,7 @@ The bill directs the Commissioner of Labor to develop workplace guidance on meno
 
 It will not count the women who assessed the personal cost of filing and decided against it.
 
-The guidance will be calibrated strictly to the disclosed population. The undisclosed population will remain invisible. Policy will conclude the problem is smaller than it is, and [the next round of legislation](/menopause-legislation-tracker/) will hit the exact same ceiling.
+The guidance will be calibrated strictly to the disclosed population. The undisclosed population will remain invisible. Policy will conclude the problem is smaller than it is, and [the next round of legislation](https://chatgpt.com/menopause-legislation-tracker/) will hit the exact same ceiling.
 
 ## Structural Problem Four — The bill does not say which menopause counts.
 
@@ -70,14 +68,15 @@ Because the law does not explicitly map these clinical paths, the actual executi
 
 ## What New York’s Menopause Leave Bills Need
 
-This bills do not need to be repealed; they need to be redesigned. This can be achieved by separating the leave entitlement from the workers' compensation classification and removing the disclosure requirement from the measurement architecture.
+These bills do not need to be repealed; they need to be redesigned. This can be achieved by separating the leave entitlement from the workers' compensation classification and removing the disclosure requirement from the measurement architecture.
 
-We must start by building the guidance framework around what the data cannot see, not just what it can. The women this bill was written to help deserve infrastructure that is designed to reach them.
+We must start by building the guidance framework around what the data cannot see, not just what it can. The women these bills were written to help deserve infrastructure that is designed to reach them.
 
-The awareness lobby is right that menopause belongs in workplace policy. The data is real, and the need is well documented. But as written, the bills will raise employer costs, produce incomplete data, and systematically exclude the women it wants to help.
+The awareness lobby is right that menopause belongs in workplace policy. The data is real, and the need is well documented. But as written, the bills will raise employer costs, produce incomplete data, and systematically exclude the women they want to help.
 
 ## Request a Strategic Briefing
 
 Lozen Advisory works with organizations examining benefits ROI, leadership retention, workforce-risk visibility, and the measurement gaps created when utilization depends on disclosure.
 
-[Request a Strategic Briefing](/request-briefing/)
+[Request a Strategic Briefing](https://chatgpt.com/request-briefing/)
+
