@@ -178,6 +178,17 @@ export const ACTIVE: LegislationRow[] = [
     url: "https://www.senate.mo.gov/BillTracking/Bills/BillInformation?year=2026&billid=1584504",
   },
   {
+    jurisdiction: "Louisiana",
+    bill: "HB944 \u2014 Women's Health Consortium",
+    focus: "Omnibus",
+    status: "In Committee",
+    assumes: "Coordination produces system change",
+    cannotMeasure: "HB944 names women experiencing menopause as the population requiring coordinated health system response. The coordination mechanism then produces recommendations. Policy without an enforcement mechanism is a recommendation. The gap between legislative intent and clinical behavior change is not tracked.",
+    classification: "Dashboard Delay",
+    notes: "HB944 creates a Women's Health Consortium to coordinate a system response to menopause care. Coordination produces recommendations. Recommendations require implementation to produce change. The gap between legislative intent and clinical behavior change is not measured, not enforced, and not tracked. The recommendation is the output. Whether it executes is a separate question the bill cannot answer.",
+    url: "https://www.legis.la.gov/legis/BillInfo.aspx?i=250918",
+  },
+  {
     jurisdiction: "Colorado",
     bill: "HB26-1122 \u2014 HRT Coverage",
     focus: "Insurance",
