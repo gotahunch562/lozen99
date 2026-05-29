@@ -302,13 +302,23 @@ export const DID_NOT_PASS: FailedRow[] = [
 export const ADVISORY: AdvisoryRow[] = [
   {
     jurisdiction: "Michigan",
-    instrument: "Michigan Women\u2019s Commission, Menopause Memorandum and Policy Push",
+    instrument: "Michigan Women\u2019s Commission, Menopause Memorandum",
     focus: "Advisory",
-    status: "Active",
+    status: "Released March 26, 2026",
     structuralRole: "Signals issue presence; generates voluntary employer recommendations",
     classification: "Dashboard Delay",
-    notes: "No system activation occurs for an advisory instrument. The Michigan data is the most analytically significant state-level record in the tracker. Its central finding was not low impact. It was low disclosure: fewer than one in five women disclosed their menopause status at work. The study encountered the boundary condition before it could measure past it. The memorandum documents the gap. It cannot close it. On May 28, 2026, the Michigan Department of Labor and Economic Opportunity issued a press release pushing the Memorandum findings into active employer and legislative engagement. The employer recommendations remain voluntary. No mechanism activates without employer election.",
+    notes: "March 26, 2026. No system activation occurs for an advisory instrument. The Michigan data is the most analytically significant state-level record in the tracker. Its central finding was not low impact. It was low disclosure: fewer than one in five women disclosed their menopause status at work. The study encountered the boundary condition before it could measure past it. The memorandum documents the gap. It cannot close it.",
     url: "https://www.michigan.gov/mwc",
+  },
+  {
+    jurisdiction: "Michigan",
+    instrument: "Michigan LEO Press Release and MCDA Workforce Report",
+    focus: "Advisory",
+    status: "Active May 28, 2026",
+    structuralRole: "Pushes Memorandum findings into active employer engagement; surfaces measurement gap between advisory data and formal workforce record",
+    classification: "Dashboard Delay",
+    notes: "May 28, 2026. Michigan Department of Labor and Economic Opportunity issued a press release pushing Memorandum findings into active employer and legislative engagement. The employer recommendations are voluntary: educate all employees about perimenopause and menopause; provide trusted information and resources; update workplace policies with a midlife health lens; offer low-cost accommodations; provide basic menopause awareness training for supervisors and HR staff. No mechanism activates without employer election. No recommendation generates a data point. The Michigan Center for Data and Analytics published the 2026 Women in the Michigan Workforce Report the same month. That report documents the wage gap, labor force participation by parental status, industry concentration, and 10-year employment projections. Menopause does not appear in it. The 16,500 women the Memorandum counted are not a variable in the MCDA dataset. Both reports came from the same department.",
+    url: "https://www.michigan.gov/leo/news/2026/05/28/state-leaders-push-policy-solutions-for-women-in-midlife-provide-recommendations-for-employers",
   },
 ];
 
