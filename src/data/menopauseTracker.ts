@@ -179,13 +179,13 @@ export const ACTIVE: LegislationRow[] = [
   },
   {
     jurisdiction: "Louisiana",
-    bill: "HB944 \u2014 Women's Health Consortium",
+    bill: "HB944 — Women's Health Consortium",
     focus: "Omnibus",
-    status: "In Committee",
-    assumes: "Coordination produces system change",
-    cannotMeasure: "HB944 names women experiencing menopause as the population requiring coordinated health system response. The coordination mechanism then produces recommendations. Policy without an enforcement mechanism is a recommendation. The gap between legislative intent and clinical behavior change is not tracked.",
+    status: "Passed Senate May 29, 2026; ordered returned to House",
+    assumes: "A formal consortium, interagency agenda, funding-priority program, workforce-impact review, and annual reporting structure will produce system change",
+    cannotMeasure: "HB944 names women experiencing perimenopause, menopause, and postmenopause as populations requiring coordinated health system response. The consortium can identify barriers, evaluate training, assess workforce impact, share data, coordinate resources, and issue annual reports. Those functions create a governance structure. They do not create a treatment pathway, enforcement mechanism, employer obligation, or clinical access point for the woman managing symptoms now.",
     classification: "Dashboard Delay",
-    notes: "HB944 creates a Women's Health Consortium to coordinate a system response to menopause care. Coordination produces recommendations. Recommendations require implementation to produce change. The gap between legislative intent and clinical behavior change is not measured, not enforced, and not tracked. The recommendation is the output. Whether it executes is a separate question the bill cannot answer.",
+    notes: "HB944 passed the Senate on May 29, 2026, with Senate floor amendments adopted, and was ordered returned to the House. The reengrossed text creates the Louisiana Women's Health Consortium inside the Louisiana Department of Health. The consortium must develop a Funding Priority Program for Women's Health Initiatives, an Interagency Women's Health Agenda, evaluate training in care delivery, evaluate workforce impacts, ensure information and data sharing, coordinate an evidence-based online clearinghouse, and submit an annual written report by December 31 each year. The bill is stronger than a general recommendation framework because it creates a standing state structure. The gap remains execution: agenda, funding priority, reporting, and data sharing do not themselves create access.",
     url: "https://www.legis.la.gov/legis/BillInfo.aspx?i=250918",
   },
   {
