@@ -23,7 +23,7 @@ heroAlt: Confident female CFO sitting in a modern executive office behind a
 tags:
   - Disclosure Independence
 draft: false
-isFeatured: true
+isFeatured: false
 ---
 The standard advice given to ambitious women climbing the ranks is simple: improve your executive presence and make yourself more visible. *Be transparent,* the coaches say: *ask for resources, have open dialogue, and display vulnerability.* But that advice is rarely written by people who manage the real-world liabilities of power and authority.
 
