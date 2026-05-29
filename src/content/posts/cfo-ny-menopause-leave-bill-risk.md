@@ -1,0 +1,75 @@
+---
+title: "NY Menopause Leave Bill: Three Structural Problems"
+slug: cfo-ny-menopause-leave-bill-risk
+pubDate: 2026-05-29
+datePublished: 2026-05-29
+dateModified: 2026-05-29
+category: CFO Resources
+excerpt: >
+  Naming the problems with NY Bill A10270 is not an argument against the
+  legislation; it is an argument for building it strategically. From premature
+  insurance repricing to a broken data collection model that ignores the
+  undisclosed population, the bill as written systematically excludes the very
+  executives it endeavors to help.
+description: >
+  New York Assembly Bill A10270 aims to mandate menopause leave, but its design
+  creates critical actuarial and disclosure risks for employers and executives. 
+image:
+  url: /src/images/blog/cfo-worried-legislation.webp
+  alt: A CFO analyzing the impact of proposed legislation on his bottom line.
+heroImage: /src/images/blog/cfo-worried-legislation-1.webp
+heroAlt: A CFO analyzing the impact of proposed menopause legislation on his
+  bottom line.
+tags:
+  - Legislative Analysis
+  - Workplace Disclosure
+draft: true
+isFeatured: false
+---
+## The NY State Menopause Leave Bill Has Three Problems. None of Them Are Related to Menopause.
+
+A bill moving through the New York State Legislature is designed to help women. But before New York State builds [menopause leave into law](/blog/ny-s3908-workers-comp-menopause-gap/), three structural problems **inherent in** Bill A10270 need to be named and addressed.
+
+Naming the problems is not an argument against the bill. It is an argument for building it strategically, with consideration of certain facts.
+
+## Structural Problem One — The premium arrives before the assistance does.
+
+The moment menopause is classified as a compensable condition under workers' compensation law, every employer with New York operations pays higher premiums. Not when a claim is filed. Before.
+
+Actuarial repricing is triggered by the classification itself. The employer absorbs the cost before a single employee takes a single day of leave. That is not a design feature; it is a design flaw.
+
+To properly understand the cost to employers, keep in mind that the New York State Workers' Compensation Board assessment rate is 7% of standard premium. Nearly 60,000 employers insure more than 820,000 employees through NYSIF Disability and Paid Leave Benefits alone. The moment menopause is added as a compensable condition under that system, every one of those employers is affected before a single claim is filed.
+
+A bill designed to help women will land the hardest on small businesses—which make up 97% of those 58,000 employers—before a single woman takes a single day of leave.
+
+## Structural Problem Two — The women who need it most will not use it.
+
+Here is the pathway the bill requires for utilization: a woman must name her condition, file a request, generate documentation, and move through an approval process.
+
+For a senior executive in a market-moving environment, being seen as someone whose capacity is in question is a dealbreaker. The data confirms this is not a fringe concern; stigma is real. In a global survey of more than 8,000 women, only 27% had spoken with senior leadership about their situation. In a parallel survey of 898 working women, 97% concealed or downplayed their condition at work.
+
+The women the bill was designed to help are the women least likely to engage the infrastructure it creates.
+
+## Structural Problem Three — The measurement is broken before it begins.
+
+The bill directs the Commissioner of Labor to develop workplace guidance on menopause based on the data the program generates. That data will count utilization. It will count filed claims and approved requests.
+
+It will not count the women who assessed the personal cost of filing and decided against it.
+
+The guidance will be calibrated strictly to the disclosed population. The undisclosed population will remain invisible. Policy will conclude the problem is smaller than it is, and [the next round of legislation](/menopause-legislation-tracker/) will hit the exact same ceiling.
+
+## What Assembly Bill A10270 Needs
+
+This bill does not need to be repealed; it needs to be redesigned. This can be achieved by separating the leave entitlement from the workers' compensation classification and removing the disclosure requirement from the measurement architecture.
+
+We must start by building the guidance framework around what the data cannot see, not just what it can. The women this bill was written to help deserve infrastructure that is designed to reach them.
+
+The awareness lobby is right that menopause belongs in workplace policy. The data is real, and the need is documented. But as written, NY State Assembly Bill A10270 will raise employer costs, produce incomplete data, and systematically exclude the women it endeavors to help.
+
+The employer-coverage figures come from [NYSIF Disability and Paid Leave Benefits](https://ww3.nysif.com/Home/Employer/DBpolicyholder/AboutClaims/DB_450), and the bill text is available through the [New York State Senate legislation page](https://www.nysenate.gov/legislation/bills/2025/A10270).
+
+## Request a Strategic Briefing
+
+Lozen Advisory works with organizations examining benefits ROI, leadership retention, workforce-risk visibility, and the measurement gaps created when utilization depends on disclosure.
+
+[Request a Strategic Briefing](/request-briefing/)
