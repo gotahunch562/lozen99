@@ -189,6 +189,17 @@ export const ACTIVE: LegislationRow[] = [
     url: "https://www.legis.la.gov/legis/BillInfo.aspx?i=250918",
   },
   {
+    jurisdiction: "California",
+    bill: "2026–27 May Revision Trailer Bill Language — Menopause Coverage",
+    focus: "Omnibus",
+    status: "Proposed trailer bill language in 2026–27 May Revision",
+    assumes: "Coverage mandates, provider continuing-education incentives, plan notices, annual assessments, utilization-review standards, reimbursement policies, and Medi-Cal coverage will move menopause care into formal health system records",
+    cannotMeasure: "California’s trailer bill language creates a more concrete coverage and utilization-review pathway than a general education bill. Still, the record it can produce begins only when a woman is enrolled in a covered plan or Medi-Cal, receives a notice or assessment, enters primary care or obstetrician-gynecologist care, seeks treatment, triggers medical necessity review, or generates a claim. Women managing symptoms outside covered insurance, outside clinical care, after opting out of assessments or notices, or before any claim or encounter remain outside what the proposal is able to measure.",
+    classification: "Dashboard Delay",
+    notes: "Proposed 2026–27 May Revision trailer bill language from the Department of Managed Health Care and the Department of Health Care Services. The proposal adds continuing-education credit incentives beginning July 1, 2027 for qualifying nurse practitioners, physicians and surgeons, and osteopathic physicians and surgeons. It requires health care service plans and insurers to cover FDA-approved treatments used to treat menopausal symptoms, excluding GLP-1 drugs used solely for weight loss; create access programs; provide menopause information to contracted primary-care providers; maintain reimbursement policies identifying CPT codes; provide annual menopause assessments for enrollees or insured individuals age 40 and older during primary care and obstetrician-gynecologist appointments; send notices describing menopause and covered services; and maintain policies to contract with or incentivize menopause-credentialed providers. It also requires utilization-review criteria to follow generally accepted menopause-care standards and extends Medi-Cal coverage for FDA-approved treatments, subject to medical necessity, federal approvals, and federal financial participation. The analytical significance is the route: after vetoing standalone menopause coverage legislation, the administration has placed a narrower, FDA- and medical-necessity-bounded, plan-administered version inside budget trailer bill language. The mechanism is stronger than advisory guidance, but it remains proposed and still measures participation in plan, clinical, assessment, utilization-review, and claims pathways.",
+    url: "https://trailerbill.dof.ca.gov/public/trailerBill/pdf/1385",
+  },
+  {
     jurisdiction: "Colorado",
     bill: "HB26-1122 \u2014 HRT Coverage",
     focus: "Insurance",
