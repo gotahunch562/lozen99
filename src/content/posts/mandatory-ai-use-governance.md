@@ -33,7 +33,7 @@ The market has moved past experimental pilots and voluntary sandbox environments
 
 AI metrics are beginning to appear inside corporate headcount discussions, performance expectations, hiring criteria, training standards, and top-down productivity narratives.
 
-This structural shift introduces a measurement risk: executive leadership is moving faster than the data collection architecture beneath it. An enterprise can require widespread AI tool utilization long before it identifies what tasks the technology actually removed, what liabilities it relocated, and which specific professionals are now absorbing the burden of making machine-generated output operationally usable.
+++This structural shift introduces a measurement risk++: executive leadership is moving faster than the data collection architecture beneath it. An enterprise can require widespread AI tool utilization long before it identifies what tasks the technology actually removed, what liabilities it relocated, and which specific professionals are now absorbing the burden of making machine-generated output operationally usable.
 
 Current tracking models count adoption before they analyze judgment. They log sheer output volume before evaluating manual correction. They celebrate operational velocity while omitting the compounding cost of determining whether a machine-generated asset can be commercially trusted.
 
@@ -73,7 +73,7 @@ In the broader corporate ecosystem, these errors will not surface so cleanly. Th
 
 The true operational risk is not whether an organization has drafted an AI policy. The risk is whether the person whose signature carries the work has a defined mechanism to handle the verification burden.
 
-Lozen Advisory defines this as the **Name Standard**: a personal governance decision that defines what AI-assisted output requires before it carries your name and what carrying your name actually means.
+Lozen Advisory defines this as the **Name Standard**: *a personal governance decision that defines what AI-assisted output requires before it carries your name, and what carrying your name actually means.*
 
 ## AI Externalizes Execution and Internalizes Judgment
 
@@ -83,7 +83,7 @@ The software never owns the downstream operational or financial consequence of a
 
 This is why the current corporate adoption mandate conversation is fundamentally shallow. Leadership metrics ask whether workers are logging into the software, when the material financial question is what specific type of labor has been forced into the unmeasured human layer.
 
-> AI externalizes execution while internalizing judgment.
+> *AI externalizes execution while internalizing judgment.*
 
 It removes labor from the visible act of producing a draft and packs it into the invisible work of doubt, calibration, error detection, and accountability.
 
@@ -91,7 +91,7 @@ Velocity improves, but the underlying operational model grows fragile. This hidd
 
 ## The Power User Becomes the Control Layer
 
-This systemic exposure is where Lozen Advisory identifies the [Power User Trap℠](https://chatgpt.com/invisible-attrition/power-user-trap/).
+This systemic exposure is where Lozen Advisory identifies the [Power User Trap℠](/invisible-attrition/power-user-trap/).
 
 The power user is not merely an employee who uses AI frequently. The power user is the human architecture through whom AI becomes operationally viable for the business. She is the professional who learns the failure modes, supplies the missing institutional context, flags the subtle hallucinations, cleans the raw output, and translates generic machine prose into the authentic, defensible language of the enterprise.
 
@@ -105,7 +105,7 @@ Mandatory AI utilization must never be confused with governed AI utilization.
 
 Governance is not the passive existence of a corporate policy. Sullivan & Cromwell possessed explicit review policies and technical processes. Governance is not the appearance of high adoption metrics, nor is it the basic tracking of software seat utilization.
 
-An adoption mandate asks whether your workforce is using the tool. [AI Workforce Materiality](https://chatgpt.com/ai-workforce-materiality/) asks whether the organization understands what liabilities the tool relocated, which professionals absorbed the risk, what metrics the company can legally substantiate, and what exposures remain invisible until financial or regulatory loss appears.
+An adoption mandate asks whether your workforce is using the tool. [AI Workforce Materiality](/ai-workforce-materiality/) asks whether the organization understands what liabilities the tool relocated, which professionals absorbed the risk, what metrics the company can legally substantiate, and what exposures remain invisible until financial or regulatory loss appears.
 
 > AI governance begins where adoption metrics stop.
 
@@ -129,7 +129,7 @@ These are not audit questions in the narrow compliance sense. They are governanc
 
 ### Series Context
 
-*This article opens Lozen Advisory’s [AI Workforce Materiality](https://www.google.com/search?q=/ai-workforce-materiality/) series, which examines how corporate AI adoption creates human-capital exposure when companies measure tool use before they measure the human judgment required to make AI output usable.*
+*This article opens Lozen Advisory’s [AI Workforce Materiality](/ai-workforce-materiality/) series, which examines how corporate AI adoption creates human-capital exposure when companies measure tool use before they measure the human judgment required to make AI output usable.*
 
 - **Next:** [AI Investment Is Scaling Faster Than Human Capacity] turns from mandatory use to capital allocation, asking whether organizations are funding AI faster than the workforce systems required to convert that investment into durable operating value.
 
@@ -138,3 +138,4 @@ These are not audit questions in the narrow compliance sense. They are governanc
 AI adoption is a governance issue, not an IT project. Lozen Advisory conducts private, 60-minute Strategic Briefings for corporate boards, General Counsel, and CFOs. This is a targeted advisory intervention designed to expose unpriced human-capital liability, map your current verification strain, and deliver the exact frameworks required to govern AI at the enterprise level.
 
 [Commission a Strategic Briefing](/ai-workforce-materiality-briefing/)
+
