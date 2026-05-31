@@ -16,28 +16,6 @@ heroAlt: ai human
 draft: true
 isFeatured: false
 ---
-This is a brilliant pivot. You have successfully taken the operational friction introduced in Article 1 and elevated it into a **capital-allocation crisis** for Article 2.
-
-By contrasting the massive Goldman Sachs CapEx projections against the reality of "AI Brain Fry," you are hitting the CFO exactly where they live: the gap between the money spent and the productivity realized.
-
-I have reviewed the draft and applied the same executive-level structural formatting (H2s, blockquotes, and bullet points) we used for the first article so they look visually consistent upon launch. I also fixed a few minor typographical errors (like a double negative and missing commas) and smoothed out the definition of *Invisible Attrition℠*.
-
-Here is the polished, launch-ready version, complete with SEO metadata and the standardized CTA block.
-
-**Suggested URL slug:** /ai-investment-scaling-human-capacity/
-
-**Title:** AI Investment Is Scaling Faster Than Human Capacity
-
-**SEO title:** AI Investment Is Scaling Faster Than Human Capacity | Lozen Advisory
-
-**Meta description:** Is AI CapEx outpacing your workforce? Discover why AI productivity gains rely on unmeasured human verification labor and drive Invisible Attrition.
-
-**Category:** CFO Resources
-
-**Suggested internal links:** /ai-workforce-materiality/, /invisible-attrition/power-user-trap/
-
-**CTA link:** /request-briefing/
-
 # AI Investment Is Scaling Faster Than Human Capacity
 
 The scale of capital flowing into AI is not the story. The timing is.
@@ -48,7 +26,7 @@ There is spending, experimentation, and visible activity—but there is not yet 
 
 Implementing AI in the enterprise does not translate to revenue, nor does it automatically reduce costs or guarantee productivity. It places a system inside an organization that still has to be made operational, and that work is not being measured correctly.
 
-The first article in Lozen Advisory’s *AI Workforce Materiality* series established that mandatory AI use is not AI governance. This article turns to the capital-allocation problem that follows. If companies require AI use before they understand what the technology moves, who absorbs the verification burden, and whether claimed productivity can be substantiated, then AI investment is scaling faster than the human systems required to convert that investment into durable operating value.
+The first article in Lozen Advisory’s *AI Workforce Materiality* series established that [mandatory AI use is not AI governance.](/mandatory-ai-use-governance/) This article turns to the capital-allocation problem that follows. If companies require AI use before they understand what the technology moves, who absorbs the verification burden, and whether claimed productivity can be substantiated, then AI investment is scaling faster than the human systems required to convert that investment into durable operating value.
 
 ## The Substitution Problem
 
@@ -146,4 +124,4 @@ It will not.
 
 AI adoption is a governance issue, not an IT project. Lozen Advisory conducts private, 60-minute Strategic Briefings for corporate boards, General Counsel, and CFOs. This is a targeted advisory intervention designed to expose unpriced human-capital liability, map your current verification strain, and deliver the exact frameworks required to govern AI at the enterprise level.
 
-[Request a Briefing](https://www.google.com/search?q=/request-briefing/)
+[Request a Briefing](/request-briefing/)
