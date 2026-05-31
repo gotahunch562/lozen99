@@ -63,7 +63,7 @@ The legal profession has provided a clear example of what occurs when the human 
 
 According to [Reuters](https://www.reuters.com/legal/litigation/sullivan-cromwell-law-firm-apologizes-ai-hallucinations-court-filing-2026-04-21/), the firm stated that its established internal AI policies and secondary review processes had not been followed prior to submission.
 
-The Sullivan & Cromwell case study is important because the failure cannot be blamed on a lack of technical talent or institutional resources. It occurred within a premier firm possessing explicit compliance frameworks, mandatory training pathways, and clear review structures. The breakdown was not the absence of an AI policy. It was the failure of the human governance layer tasked with stopping an unverified machine output from entering a formal record.
+The Sullivan & Cromwell case study, one of many corporate AI embarrassment stories, is important because the failure cannot be blamed on a lack of technical talent or institutional resources. It occurred within a premier firm possessing explicit compliance frameworks, mandatory training pathways, and clear review structures. The breakdown was not the absence of an AI policy. It was the failure of the human governance layer tasked with stopping an unverified machine output from entering a formal record.
 
 This friction extends beyond the legal sector. Court filings make these systemic breakdowns visible because they enter a transparent public ledger where citations can be cross-checked by opposing counsel and reviewed by a judge.
 
