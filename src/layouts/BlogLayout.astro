@@ -114,84 +114,72 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
       />
     </Wrapper>
   </section>
-  <section>
-    <Wrapper variant="standard" class="py-12">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-        <div class="lg:col-span-2">
-          <div class="relative pl-4 border-l-2 border-accent-500">
-            <Text
-              tag="h2"
-              variant="textLG"
-              class="font-display font-normal text-base-900"
-            >
-              In this article
-            </Text>
-            <Text
-              tag="p"
-              variant="textBase"
-              class="text-base-700 max-w-2xl mt-4 text-balance"
-            >
-              {frontmatter.description}
-            </Text>
+  <section class="lozen-blog-body-section">
+    <Wrapper variant="standard" class="py-12 lg:py-16">
+      <div class="lozen-blog-article-layout">
+        <article class="lozen-blog-article-shell">
+          <div class="lozen-blog-inline-meta" aria-label="Article metadata">
+            <span>
+              Published
+              <time datetime={publishedDate.toISOString()}>
+                {formattedPubDate}
+              </time>
+            </span>
+            <span>{tags[0]?.label ?? "Insights"}</span>
+            <a href="/blog">View all articles</a>
           </div>
-          <Wrapper variant="prose" class="mt-8">
+
+          <div
+            class="lozen-blog-prose prose prose-lg w-full max-w-none mt-8
+            prose-headings:font-display prose-headings:font-normal prose-headings:text-base-900
+            prose-p:font-sans prose-p:text-base-800 prose-p:leading-8 prose-strong:text-base-900
+            prose-li:text-base-800 prose-li:leading-8
+            prose-a:text-accent-700 prose-a:border-b prose-a:border-accent-600 prose-a:no-underline
+            prose-a:transition-colors prose-a:duration-200
+            prose-a:hover:text-base-950 prose-a:hover:border-accent-500
+            prose-blockquote:border-l-accent-500 prose-blockquote:text-base-800
+            prose-li:marker:text-accent-500
+            prose-pre:border prose-pre:border-base-200 prose-pre:bg-base-50
+            prose-pre:rounded-xl prose-pre:scrollbar-hide
+            prose-tr:border-base-200 prose-thead:border-base-300"
+          >
             <slot />
             <LegalSeriesConnector currentSlug={currentSlug} />
-          </Wrapper>
-        </div>
-        <div>
-          <aside class="lg:sticky lg:top-32">
-            <div
-              class="flex flex-col bg-white rounded-3xl shadow-2xl outline-4 outline-base-500/10 divide-y divide-base-500/10"
-            >
-              <div class="p-6">
-                <Text
-                  tag="h3"
-                  variant="textLG"
-                  class="font-display font-normal text-base-900"
-                >
-                  Published
-                  <time class="ml-1" datetime={publishedDate.toISOString()}>
-                    {formattedPubDate}
-                  </time>
-                </Text>
-                <ul role="list" class="flex flex-col gap-1 mt-4">
-                  {
-                    tags.map(({ label, slug }) => (
-                      <a
-                        href={`/blog/tags/${slug}`}
-                        class="text-base-900 capitalize text-sm hover:text-accent-500 underline-offset-4 hover:underline flex"
-                      >
-                        {label}
-                      </a>
-                    ))
-                  }
-                </ul>
-              </div>
-              <div class="p-6">
-                <Text
-                  tag="h3"
-                  variant="textLG"
-                  class="font-display font-normal text-base-900"
-                >
-                  Explore more topics
-                </Text>
-                <Text tag="p" variant="textSM" class="mt-2 text-base-700">
-                  Discover more insights.
-                </Text>
-                <Button
-                  isLink
-                  href="/blog"
-                  variant="default"
-                  size="xs"
-                  class="mt-12 w-fit"
-                >
-                  View all articles
-                </Button>
-              </div>
+          </div>
+        </article>
+
+        <aside class="lozen-blog-rail" aria-label="Article metadata">
+          <div class="lozen-blog-rail__card">
+            <div class="lozen-blog-rail__section">
+              <p class="lozen-blog-rail__label">Published</p>
+              <time
+                class="lozen-blog-rail__date"
+                datetime={publishedDate.toISOString()}
+              >
+                {formattedPubDate}
+              </time>
             </div>
-          </aside>
-        </div>
+
+            <div class="lozen-blog-rail__section">
+              <p class="lozen-blog-rail__label">Topic</p>
+              <ul role="list" class="lozen-blog-rail__tags">
+                {
+                  tags.map(({ label, slug }) => (
+                    <li>
+                      <a href={`/blog/tags/${slug}`}>{label}</a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+
+            <div class="lozen-blog-rail__section">
+              <a class="lozen-blog-rail__archive-link" href="/blog">
+                View all articles
+              </a>
+            </div>
+          </div>
+        </aside>
       </div>
     </Wrapper>
   </section>
@@ -273,6 +261,206 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
     });
   </script>
   <style is:inline>
+    .lozen-blog-body-section {
+      background:
+        radial-gradient(circle at 80% 6%, rgba(50, 70, 101, 0.08), transparent 34rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 252, 0.86));
+    }
+
+    .lozen-blog-article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2.5rem;
+      margin-inline: auto;
+      max-width: 64rem;
+    }
+
+    .lozen-blog-article-shell {
+      min-width: 0;
+      width: 100%;
+    }
+
+    .lozen-blog-prose {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      max-width: none !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .lozen-blog-prose :where(h1) {
+      max-width: 13ch;
+      color: var(--color-base-950);
+      letter-spacing: 0.03em;
+    }
+
+    .lozen-blog-prose :where(p, ul, ol, blockquote) {
+      max-width: 54rem;
+    }
+
+    .lozen-blog-prose :where(h2, h3, h4) {
+      max-width: 56rem;
+    }
+
+    .lozen-blog-prose :where(blockquote) {
+      margin-left: 0;
+    }
+
+    .lozen-blog-inline-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      align-items: center;
+      margin-top: 1.75rem;
+      padding: 0.875rem 1rem;
+      border: 1px solid rgba(112, 132, 158, 0.22);
+      border-radius: 1.25rem;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--color-base-700);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      line-height: 1.4;
+    }
+
+    .lozen-blog-inline-meta span,
+    .lozen-blog-inline-meta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .lozen-blog-inline-meta a {
+      color: var(--color-base-900);
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(196, 174, 46, 0.7);
+    }
+
+    .lozen-blog-inline-meta a:hover,
+    .lozen-blog-inline-meta a:focus-visible {
+      color: var(--color-base-950);
+      border-bottom-color: var(--color-accent-500);
+      outline: none;
+    }
+
+    .lozen-blog-rail {
+      display: none;
+    }
+
+    .lozen-blog-rail__card {
+      position: sticky;
+      top: 8rem;
+      overflow: hidden;
+      border: 1px solid rgba(112, 132, 158, 0.18);
+      border-radius: 1.25rem;
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: 0 1.25rem 3rem rgba(10, 24, 44, 0.12);
+      backdrop-filter: blur(14px);
+    }
+
+    .lozen-blog-rail__section {
+      padding: 1.125rem;
+      border-bottom: 1px solid rgba(112, 132, 158, 0.14);
+    }
+
+    .lozen-blog-rail__section:last-child {
+      border-bottom: 0;
+    }
+
+    .lozen-blog-rail__label {
+      margin: 0;
+      color: var(--color-base-600);
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .lozen-blog-rail__date {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--color-base-950);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    .lozen-blog-rail__tags {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin: 0.6rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .lozen-blog-rail__tags a,
+    .lozen-blog-rail__archive-link {
+      color: var(--color-base-900);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 650;
+      line-height: 1.45;
+      text-decoration: none;
+    }
+
+    .lozen-blog-rail__tags a:hover,
+    .lozen-blog-rail__tags a:focus-visible,
+    .lozen-blog-rail__archive-link:hover,
+    .lozen-blog-rail__archive-link:focus-visible {
+      color: var(--color-accent-700);
+      outline: none;
+    }
+
+    .lozen-blog-rail__archive-link {
+      display: inline-flex;
+      border-bottom: 1px solid rgba(196, 174, 46, 0.72);
+    }
+
+    @media (min-width: 1280px) {
+      .lozen-blog-article-layout {
+        grid-template-columns: minmax(0, 64rem) 13rem;
+        gap: 3rem;
+        align-items: start;
+        justify-content: center;
+        max-width: 82rem;
+      }
+
+      .lozen-blog-inline-meta {
+        display: none;
+      }
+
+      .lozen-blog-rail {
+        display: block;
+        min-width: 0;
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .lozen-blog-article-layout {
+        grid-template-columns: minmax(0, 66rem) 13rem;
+        gap: 4rem;
+        max-width: 86rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .lozen-blog-article-layout {
+        max-width: 100%;
+      }
+
+      .lozen-blog-inline-meta {
+        border-radius: 1rem;
+        padding: 0.8rem 0.9rem;
+      }
+
+      .lozen-blog-prose :where(h1) {
+        max-width: 100%;
+      }
+    }
+
     .lozen-blog-share {
       display: flex;
       flex-wrap: wrap;
