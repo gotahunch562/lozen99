@@ -59,7 +59,7 @@ The people experiencing it are not struggling with the technology. They are ofte
 
 A practitioner operating at the front lines of enterprise AI noted that even sustained effort to stay current now feels inadequate, because the pace of development has redefined what "current" means faster than any individual can track it.
 
-These are not people who fell behind. These are people who are paying close attention and still cannot close the gap.
+These are not the people who fell behind. These are the people who are paying close attention and still cannot close the gap.
 
 ## Where the Cost Actually Lives
 
@@ -71,9 +71,9 @@ That gap is the mechanism. The cost shows up as cognitive load:
 
 The employee is no longer simply executing work. She is managing a system that produces work of variable reliability, and that burden does not distribute evenly.
 
-Paradoxically, top performers absorb it first. They are the ones who adopt early, validate outputs, catch errors before they move forward, and become the control layer the system does not yet have. This is the **[Power User Trap℠](https://www.google.com/search?q=/invisible-attrition/power-user-trap/)**.
+Paradoxically, top performers absorbs the burden first. They are the ones who adopt early, validate outputs, catch errors before they move forward, and become the control layer the system does not yet have. This is the **[Power User Trap℠](https://www.google.com/search?q=/invisible-attrition/power-user-trap/)**.
 
-The power user becomes the person the organization points to as evidence that AI is working. Her output is observable, but the effort required to stabilize that output is not. The work still gets done. However, it is being stabilized manually by the exact people the organization can least afford to strain, and that stabilization has a cost that does not appear in dashboards, productivity metrics, or ROI calculations.
+The power user becomes the person the organization points to as evidence that AI is working. Her output is observable, but the effort required to stabilize that output is not. The work still gets done. However, it is being stabilized manually by the exact people the organization can least afford to strain.  And, that stabilization has a cost that does not appear in dashboards, productivity metrics, or ROI calculations.
 
 The same governance gap appears here in financial form. Adoption metrics can rise while human capacity is being consumed faster than the organization can measure.
 
@@ -109,7 +109,7 @@ AI has usage, but it does not yet have infrastructure-level dependence. That is 
 
 It is not.
 
-Capital can be deployed ahead of proof—that has happened before. What cannot be assumed, however, is that the human system underneath that capital will scale with it.
+Capital can be deployed ahead of proof—that has happened before. What cannot be assumed however, is that the human system undergirding that capital will scale with it.
 
 It will not.
 
