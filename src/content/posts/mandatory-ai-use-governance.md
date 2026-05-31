@@ -25,8 +25,6 @@ tags:
 draft: false
 isFeatured: false
 ---
-# Mandatory AI Use Is Not AI Governance
-
 Corporate AI adoption has entered its coercive phase.
 
 The market has moved past experimental pilots and voluntary sandbox environments. Organizations are no longer simply exploring the technology. They are beginning to treat AI utility as a baseline expectation of professional output.
