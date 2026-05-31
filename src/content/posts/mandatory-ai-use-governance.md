@@ -5,12 +5,15 @@ pubDate: 2026-05-30
 datePublished: 2026-05-30
 dateModified: 2026-05-30
 category: Corporate Boards
-excerpt: AI externalizes execution while internalizing judgment. It removes
-  labor from visible production and packs it entirely into the invisible work of
-  vigilance and doubt.
-description: From overstated ROI to unbacked productivity claims. Lozen Advisory
-  examines the AI human-capital exposure facing CFOs, General Counsel, and
-  boards.
+excerpt: >+
+  AI externalizes execution while internalizing judgment. It shifts labor out of
+  the visible act of producing the artifact and into the less visible work of
+  vigilance, doubt, calibration, and responsibility for error. Output increases.
+  Artifacts look polished. Velocity improves. However, the person responsible
+  for the work still has to determine whether the result can be trusted.
+
+description: Is your AI ROI overstated? Examine the AI human-capital exposure
+  facing CFOs, General Counsel, and boards.
 image:
   url: /src/images/blog/mandatory-ai-use-1.webp
   alt: woman representing the frustration of the Power User in AI
