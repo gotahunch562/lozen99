@@ -4,7 +4,7 @@ slug: disclosure-day-workplace-disclosure-record-creation
 pubDate: 2026-05-16
 datePublished: 2026-05-16
 dateModified: 2026-05-16
-category: Disclosure Independence
+category: Performance & Career
 excerpt: Steven Spielberg's Disclosure Day gives the word disclosure a cultural
   moment. At work, however, disclosure is not only revelation. It is record
   creation.
@@ -16,9 +16,11 @@ metaDescription: Disclosure Day, Steven Spielberg's 2026 film, gives the word
   is record creation.
 image:
   url: /src/images/blog/disclosuredaycommentary.webp
-  alt: "Abstract blue digital overlay across a woman's face, suggesting workplace disclosure and record creation."
+  alt: Abstract blue digital overlay across a woman's face, suggesting workplace
+    disclosure and record creation.
 heroImage: /src/images/blog/disclosuredaycommentary.webp
-heroAlt: "Abstract blue digital overlay across a woman's face, suggesting workplace disclosure and record creation."
+heroAlt: Abstract blue digital overlay across a woman's face, suggesting
+  workplace disclosure and record creation.
 tags:
   - Disclosure Independence
 draft: false
