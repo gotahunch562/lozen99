@@ -1,9 +1,9 @@
 ---
 title: "# AI Investment Is Scaling Faster Than Human Capacity"
 slug: ai-investment-human-capacity
-pubDate: 2026-05-29
-datePublished: 2026-05-29
-dateModified: 2026-05-29
+pubDate: 2026-06-01
+datePublished: 2026-06-01
+dateModified: 2026-06-01
 category: Research & Policy
 description: AI investment is accelerating faster than workforce capacity. This
   analysis examines why productivity gains may depend on unmeasured human
@@ -23,6 +23,8 @@ The scale of capital flowing into AI is not the story. The timing is.
 Investment is being deployed ahead of proof. That is not unusual in a technology cycle. What is unusual is the magnitude of that deployment relative to what has actually been demonstrated inside companies. For three years, markets accepted AI spending as a necessary land grab. By the first quarter of 2026, however, that patience had begun to narrow. There is spending, experimentation, and visible activity, but there is not yet durable monetization.
 
 Buying AI does not translate to revenue. It does not automatically reduce cost or guarantee productivity. It places a system inside an organization that still has to be made operational, and that work is not being measured correctly.
+
+The first article in Lozen Advisory’s [AI Workforce Materiality](https://chatgpt.com/ai-workforce-materiality/) series established that [mandatory AI use is not AI governance](https://chatgpt.com/mandatory-ai-use-governance/). This article turns to the capital-allocation problem that follows. If companies require AI use before they understand what the technology moves, who absorbs the verification burden, and whether claimed productivity can be substantiated, then AI investment may scale faster than the human systems required to convert that investment into durable operating value.
 
 ## The Substitution Problem
 
@@ -61,6 +63,8 @@ The cost shows up as cognitive load. Decision fatigue increases. Attention fragm
 Top performers absorb it first. They are the ones who adopt early, validate outputs, catch errors before they move forward, and become the control layer the system does not yet have. This is [The Power User Trap℠](https://chatgpt.com/invisible-attrition/power-user-trap/).
 
 The power user becomes the person the organization points to as evidence that AI is working. Her output is observable, but the effort required to stabilize that output is not. The work still gets done. However, it is being stabilized manually by the exact people the organization can least afford to strain, and that stabilization has a cost that does not appear in dashboards, productivity metrics, or ROI calculations.
+
+The same governance gap appears here in financial form. Adoption metrics can rise while human capacity is being consumed faster than the organization can measure.
 
 It shows up later as performance strain, disengagement, or attrition.
 
@@ -104,8 +108,15 @@ Capital can be deployed ahead of proof. That has happened before. What cannot be
 
 It will not.
 
-## Request a Strategic Briefing
+## Series Context
 
-Lozen Advisory works with organizations examining AI implementation risk, workforce-capacity strain, productivity assumptions, and the measurement gaps created when human verification labor is treated as invisible.
+This article is the second article in Lozen Advisory’s [AI Workforce Materiality](https://chatgpt.com/ai-workforce-materiality/) series. The first article, [Mandatory AI Use Is Not AI Governance](https://chatgpt.com/mandatory-ai-use-governance/), examined the difference between adoption mandates and governed use. This article turns that same question toward capital allocation: what happens when AI investment scales faster than the human capacity required to verify, stabilize, and operationalize it.
 
-[Request a Strategic Briefing](https://chatgpt.com/request-briefing/)
+The next article, **Generation Is Fast. Governance Is Not.**, turns from investment pressure to the governance layer itself. It examines how AI output appears immediate while verification, judgment, and risk assessment remain human, expert, and largely unmeasured.
+
+## Commission a Strategic Briefing
+
+AI adoption is an active workforce materiality issue. Lozen Advisory advises organizations examining AI implementation risk, workforce-capacity strain, productivity assumptions, and the measurement gaps created when human verification labor is treated as invisible.
+
+[Commission a Strategic Briefing](https://chatgpt.com/request-briefing/)
+
