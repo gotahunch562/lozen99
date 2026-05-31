@@ -107,4 +107,4 @@ Those are entirely different questions.
 
 AI adoption is an active workforce materiality issue. Lozen Advisory advises senior executives, General Counsel, CFOs, and corporate boards on AI implementation risk, unpriced verification strain, productivity assumptions, and the critical data failures that occur when human calibration labor is treated as invisible.
 
-To request an enterprise-level briefing, visit /request-briefing/
+[Request a Strategic Briefing](/request-briefing/)
