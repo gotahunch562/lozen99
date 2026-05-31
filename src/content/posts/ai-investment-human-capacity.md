@@ -4,7 +4,7 @@ slug: ai-investment-human-capacity
 pubDate: 2026-06-01
 datePublished: 2026-06-01
 dateModified: 2026-06-01
-category: Research & Policy
+category: Corporate Boards
 description: AI investment is accelerating faster than workforce capacity. This
   analysis examines why productivity gains may depend on unmeasured human
   verification labor.
