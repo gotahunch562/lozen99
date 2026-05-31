@@ -37,13 +37,19 @@ This structural shift introduces a measurement risk: executive leadership is mov
 
 Current tracking models count adoption before they analyze judgment. They log sheer output volume before evaluating manual correction. They celebrate operational velocity while omitting the compounding cost of determining whether a machine-generated asset can be commercially trusted.
 
-That is not governance. It is an adoption mandate.
+> That is not governance. It is an adoption mandate.
 
 ## The Workforce Is Already Signaling the Gap
 
-Enterprise data indicates that the executive narrative and the actual employee experience are not aligned. A global survey of 3,750 executives and workers across 14 countries, published by [Fortune](https://fortune.com/2026/04/09/ai-backlash-quiet-quitting-fobo-obsolete-white-collar-rebellion/), found that 54% of employees had bypassed their company’s AI tools in the prior 30 days, opting to complete the assignment manually. Another 33% had not used the tools at all.
+Enterprise data indicates that the executive narrative and the actual employee experience are not aligned. A global survey of 3,750 executives and workers across 14 countries, published by [Fortune](https://fortune.com/2026/04/09/ai-backlash-quiet-quitting-fobo-obsolete-white-collar-rebellion/), found a significant gap between executive confidence in AI and employee willingness to use company-provided tools.
 
-The study also highlighted a stark trust deficit: only 9% of professionals trusted AI to inform complex, business-critical decisions, compared with 61% of upper management.
+The adoption story already contains a warning signal:
+
+- 54% of workers bypassed their company’s AI tools in the prior 30 days.
+- 33% had not used the tools at all.
+- 9% of workers trusted AI for complex, business-critical decisions, compared with 61% of upper management.
+
+The numbers do not show a workforce that simply needs more enthusiasm. They show a workforce confronting a tool leadership may trust more than the people required to govern its output.
 
 This statistical disconnect cannot be dismissed as standard employee friction or poor adoption hygiene. It is an explicit warning that corporate dashboards are tracking an incomplete picture.
 
@@ -77,13 +83,15 @@ The software never owns the downstream operational or financial consequence of a
 
 This is why the current corporate adoption mandate conversation is fundamentally shallow. Leadership metrics ask whether workers are logging into the software, when the material financial question is what specific type of labor has been forced into the unmeasured human layer.
 
-**AI externalizes execution while internalizing judgment.** It removes labor from the visible act of producing a draft and packs it into the invisible work of doubt, calibration, error detection, and accountability.
+> AI externalizes execution while internalizing judgment.
+
+It removes labor from the visible act of producing a draft and packs it into the invisible work of doubt, calibration, error detection, and accountability.
 
 Velocity improves, but the underlying operational model grows fragile. This hidden judgment burden carries a corporate cost that legacy analytics cannot count: it accumulates in the extra hours spent auditing work that looks complete, the operational friction of relying on a tool that can sound right while being wrong, and the unmeasured rework required to fix plausible errors before they reach a client or a regulator.
 
 ## The Power User Becomes the Control Layer
 
-This systemic exposure is where Lozen Advisory identifies the Power User Trap℠.
+This systemic exposure is where Lozen Advisory identifies the [Power User Trap℠](https://chatgpt.com/invisible-attrition/power-user-trap/).
 
 The power user is not merely an employee who uses AI frequently. The power user is the human architecture through whom AI becomes operationally viable for the business. She is the professional who learns the failure modes, supplies the missing institutional context, flags the subtle hallucinations, cleans the raw output, and translates generic machine prose into the authentic, defensible language of the enterprise.
 
@@ -97,14 +105,36 @@ Mandatory AI utilization must never be confused with governed AI utilization.
 
 Governance is not the passive existence of a corporate policy. Sullivan & Cromwell possessed explicit review policies and technical processes. Governance is not the appearance of high adoption metrics, nor is it the basic tracking of software seat utilization.
 
-An adoption mandate asks whether your workforce is using the tool. AI Workforce Materiality asks whether the organization understands what liabilities the tool relocated, which professionals absorbed the risk, what metrics the company can legally substantiate, and what exposures remain invisible until financial or regulatory loss appears.
+An adoption mandate asks whether your workforce is using the tool. [AI Workforce Materiality](https://chatgpt.com/ai-workforce-materiality/) asks whether the organization understands what liabilities the tool relocated, which professionals absorbed the risk, what metrics the company can legally substantiate, and what exposures remain invisible until financial or regulatory loss appears.
+
+> AI governance begins where adoption metrics stop.
 
 Those are entirely different questions.
 
-*This article opens Lozen Advisory’s AI Workforce Materiality series. The series examines how corporate AI adoption creates human-capital exposure when companies measure tool use, productivity claims, and workforce transformation before they measure the human judgment required to make AI output usable. The next article, **AI Investment Is Scaling Faster Than Human Capacity**, turns from mandatory use to capital allocation and asks whether organizations are funding AI faster than the workforce systems required to convert that investment into durable operating value.*
+## The Materiality Question Set
 
-# Request a Strategic Briefing
+Boards and General Counsel do not need another adoption dashboard. They need a sharper inquiry framework for determining whether the organization understands the human-capital exposure created by AI use.
+
+The material question is not only whether employees are using AI. It is whether operational leaders can answer what AI use has moved, who now carries the verification burden, and where risk remains unmeasured.
+
+A board-level inquiry should begin with questions such as:
+
+- Which specific professionals currently hold the unmeasured mandate to verify AI-assisted output before it enters a public, legal, regulatory, financial, client-facing, or board-facing record?
+- What work has AI actually removed, and what verification labor has it relocated into human judgment?
+- Which AI productivity or ROI claims can the organization substantiate without relying on software usage, seat utilization, or output volume as a proxy for governed value?
+- If an AI-generated error creates regulatory, legal, financial, or reputational exposure, what currently protects the individual professional whose name carried the work?
+- What would have to happen before current systems detect that AI adoption has concentrated operational capability inside a narrow group of power users?
+
+These are not audit questions in the narrow compliance sense. They are governance questions. If leadership cannot answer them, the organization may be treating AI adoption as evidence of transformation while leaving the human control layer undefined, unmeasured, and unprotected.
+
+## Series Context
+
+This article opens Lozen Advisory’s [AI Workforce Materiality](https://chatgpt.com/ai-workforce-materiality/) series. The series examines how corporate AI adoption creates human-capital exposure when companies measure tool use, productivity claims, and workforce transformation before they measure the human judgment required to make AI output usable.
+
+The next article, **AI Investment Is Scaling Faster Than Human Capacity**, turns from mandatory use to capital allocation. It asks whether organizations are funding AI faster than the workforce systems required to convert that investment into durable operating value.
+
+## Request a Strategic Briefing
 
 AI adoption is an active workforce materiality issue. Lozen Advisory advises senior executives, General Counsel, CFOs, and corporate boards on AI implementation risk, unpriced verification strain, productivity assumptions, and the critical data failures that occur when human calibration labor is treated as invisible.
 
-[Request a Strategic Briefing](/request-briefing/)
+[Request a Strategic Briefing](https://chatgpt.com/request-briefing/)
