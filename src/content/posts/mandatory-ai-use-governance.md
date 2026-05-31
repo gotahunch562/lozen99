@@ -127,14 +127,15 @@ A board-level inquiry should begin with questions such as:
 
 These are not audit questions in the narrow compliance sense. They are governance questions. If leadership cannot answer them, the organization may be treating AI adoption as evidence of transformation while leaving the human control layer undefined, unmeasured, and unprotected.
 
-## Series Context
+### Series Context
 
-This article opens Lozen Advisory’s [AI Workforce Materiality](https://chatgpt.com/ai-workforce-materiality/) series. The series examines how corporate AI adoption creates human-capital exposure when companies measure tool use, productivity claims, and workforce transformation before they measure the human judgment required to make AI output usable.
+*This article opens Lozen Advisory’s [AI Workforce Materiality](https://www.google.com/search?q=/ai-workforce-materiality/) series, which examines how corporate AI adoption creates human-capital exposure when companies measure tool use before they measure the human judgment required to make AI output usable.*
 
-The next article, **AI Investment Is Scaling Faster Than Human Capacity**, turns from mandatory use to capital allocation. It asks whether organizations are funding AI faster than the workforce systems required to convert that investment into durable operating value.
+- **Next:** [AI Investment Is Scaling Faster Than Human Capacity] turns from mandatory use to capital allocation, asking whether organizations are funding AI faster than the workforce systems required to convert that investment into durable operating value.
 
-## Request a Strategic Briefing
+### Secure a Strategic Briefing
 
-AI adoption is an active workforce materiality issue. Lozen Advisory advises senior executives, General Counsel, CFOs, and corporate boards on AI implementation risk, unpriced verification strain, productivity assumptions, and the critical data failures that occur when human calibration labor is treated as invisible.
+AI adoption is a governance issue, not an IT project. Lozen Advisory conducts private, 60-minute Strategic Briefings for corporate boards, General Counsel, and CFOs. This is a targeted advisory intervention designed to expose unpriced human-capital liability, map your current verification strain, and deliver the exact frameworks required to govern AI at the enterprise level.
 
-[[Commission a Strategic Briefing]](/ai-workforce-materiality-briefing/)
+Commission a Strategic Briefing
+
