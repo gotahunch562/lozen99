@@ -115,7 +115,7 @@ Boards and General Counsel do not need another adoption dashboard. They need a s
 
 The material question is not only whether employees are using AI. It is whether operational leaders can answer what AI use has moved, who now carries the verification burden, and where risk remains unmeasured.
 
-A board-level inquiry should begin with questions such as:
+**A board-level inquiry should begin with questions such as:**
 
 - Which specific professionals currently hold the unmeasured mandate to verify AI-assisted output before it enters a public, legal, regulatory, financial, client-facing, or board-facing record?
 - What work has AI actually removed, and what verification labor has it relocated into human judgment?
