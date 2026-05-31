@@ -1,9 +1,9 @@
 ---
 title: Mandatory AI Use Is Not AI Governance
 slug: mandatory-ai-use-governance
-pubDate: 2026-05-30
-datePublished: 2026-05-30
-dateModified: 2026-05-30
+pubDate: 2026-05-31
+datePublished: 2026-05-31
+dateModified: 2026-05-31
 category: Corporate Boards
 excerpt: >+
   AI externalizes execution while internalizing judgment. It shifts labor out of
