@@ -22,7 +22,7 @@ heroAlt: "woman representing the epistemic load:  concentration of operational
   dependency and unmeasured key-person risk. "
 tags:
   - Research & Policy
-draft: true
+draft: false
 isFeatured: false
 ---
 # Mandatory AI Use Is Not AI Governance
