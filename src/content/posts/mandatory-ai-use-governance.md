@@ -31,7 +31,7 @@ The market has moved past experimental pilots and voluntary sandbox environments
 
 AI metrics are beginning to appear inside corporate headcount discussions, performance expectations, hiring criteria, training standards, and top-down productivity narratives.
 
-This structural shift introduces a measurement risk: executive leadership is moving faster than the data collection architecture beneath it. An enterprise can require widespread AI tool utilization long before it identifies what tasks the technology actually removed, what liabilities it relocated, and which specific professionals are now absorbing the burden of making machine-generated output operationally usable.
+[This structural shift introduces a measurement risk:](/retention-risk-analysis/) executive leadership is moving faster than the data collection architecture beneath it. An enterprise can require widespread AI tool utilization long before it identifies what tasks the technology actually removed, what liabilities it relocated, and which specific professionals are now absorbing the burden of making machine-generated output operationally usable.
 
 Current tracking models count adoption before they analyze judgment. They log sheer output volume before evaluating manual correction. They celebrate operational velocity while omitting the compounding cost of determining whether a machine-generated asset can be commercially trusted.
 
