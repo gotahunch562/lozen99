@@ -11,6 +11,11 @@ const metaDescription =
 
 const canonical = "https://www.lozenadvisory.com/ai-workforce-materiality/";
 
+const heroImage = "/images/authority/ai-workforce-materiality.webp";
+
+const heroImageAlt =
+  "A red-toned digital image of a human figure holding a data interface with charts and analytical displays.";
+
 interface SeriesItem {
   number: string;
   title: string;
@@ -187,6 +192,11 @@ const seriesJsonLd = createCreativeWorkSeriesJsonLd({
   metaDescription={metaDescription}
   canonical={canonical}
   eyebrow="AI Workforce Materiality"
+  ogImage={heroImage}
+  ogImageAlt={heroImageAlt}
+  heroImage={heroImage}
+  heroImageAlt={heroImageAlt}
+  heroImagePosition="center center"
   typeLabel="Article Series"
   backHref="/blog"
   backLabel="Back to Research"
