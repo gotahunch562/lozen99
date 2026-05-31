@@ -137,4 +137,4 @@ The next article, **AI Investment Is Scaling Faster Than Human Capacity**, turns
 
 AI adoption is an active workforce materiality issue. Lozen Advisory advises senior executives, General Counsel, CFOs, and corporate boards on AI implementation risk, unpriced verification strain, productivity assumptions, and the critical data failures that occur when human calibration labor is treated as invisible.
 
-[[Commission a Strategic Briefing](/request-briefing/)](https://chatgpt.com/request-briefing/)
+[[Commission a Strategic Briefing]](/request-briefing/)
