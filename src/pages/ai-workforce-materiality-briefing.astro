@@ -1,0 +1,275 @@
+---
+import NarrativePage from "@/components/authority/NarrativePage.astro";
+import { createArticleJsonLd } from "@/lib/seo/jsonLd";
+
+const title = "The AI Workforce Materiality Briefing";
+
+const seoTitle = "AI Workforce Materiality Briefing | Lozen Advisory";
+
+const metaDescription =
+  "A paid Strategic Briefing for boards, CFOs, and General Counsel examining AI workforce materiality, verification strain, productivity claims, and disclosure-control exposure.";
+
+const canonical = "https://www.lozenadvisory.com/ai-workforce-materiality-briefing/";
+
+const heroImage = "/images/authority/ai-workforce-materiality-briefing.avif";
+
+const heroImageAlt =
+  "Executives seated in a boardroom setting during a strategic advisory discussion on enterprise risk and governance.";
+
+const briefingFocusAreas = [
+  {
+    title: "Identify the blind spots",
+    body:
+      "Where is AI-assisted output moving faster than your current compliance, review, approval, or escalation systems can detect?",
+  },
+  {
+    title: "Map the Power User Trap℠",
+    body:
+      "Where is automated velocity relying on unpriced human calibration, institutional knowledge, exception handling, and judgment concentrated inside a narrow group of critical talent?",
+  },
+  {
+    title: "Establish the Name Standard",
+    body:
+      "What governance conditions must exist before AI-assisted output carries a professional name, executive approval, board reliance, client communication, regulatory representation, or enterprise record?",
+  },
+];
+
+const articleJsonLd = createArticleJsonLd({
+  title: seoTitle,
+  description: metaDescription,
+  href: canonical,
+  type: "Article",
+  section: "AI Workforce Materiality",
+  keywords: [
+    "AI Workforce Materiality",
+    "Strategic Briefing",
+    "Power User Trap",
+    "AI governance",
+    "AI ROI",
+    "human capital disclosure",
+    "disclosure controls",
+  ],
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: "AI Workforce Materiality", href: "/ai-workforce-materiality/" },
+    { name: "AI Workforce Materiality Briefing", href: canonical },
+  ],
+});
+---
+
+<NarrativePage
+  title={title}
+  seoTitle={seoTitle}
+  description="Stop measuring software adoption. Start governing human-capital exposure."
+  metaDescription={metaDescription}
+  canonical={canonical}
+  eyebrow="Strategic Briefing"
+  typeLabel="Paid Advisory Engagement"
+  backHref="/ai-workforce-materiality/"
+  backLabel="Back to AI Workforce Materiality"
+  ogImage={heroImage}
+  ogImageAlt={heroImageAlt}
+  heroImage={heroImage}
+  heroImageAlt={heroImageAlt}
+  heroImagePosition="center center"
+  textHeroLayout="wide"
+  articleJsonLd={articleJsonLd}
+  bottomCta={{
+    title: "Commission a Strategic Briefing",
+    description:
+      "The AI Workforce Materiality Briefing is designed for executives who need to examine AI implementation risk before unpriced verification strain becomes cost, disclosure exposure, or operational loss.",
+    href: "/request-briefing/",
+    linkLabel: "Submit Briefing Inquiry →",
+  }}
+>
+  <p>
+    Organizations are moving faster than their governance architecture. When executive leadership mandates AI use without measuring the human judgment required to verify, correct, contextualize, and defend AI-assisted output, the organization creates an unpriced workforce exposure.
+  </p>
+
+  <p>
+    The Strategic Briefing is a private, 60-minute advisory engagement designed for corporate boards, CFOs, and General Counsel examining AI implementation risk, workforce-capacity strain, productivity assumptions, and disclosure-control exposure.
+  </p>
+
+  <p>
+    This is not a discovery call or a vendor pitch. It is a standalone paid advisory engagement.
+  </p>
+
+  <section class="briefing-intake">
+    <div class="briefing-intake__content">
+      <h2>What the briefing examines</h2>
+
+      <p>
+        During the briefing, Lozen Advisory works with leadership to examine three core exposure points.
+      </p>
+    </div>
+
+    <div class="briefing-focus-grid">
+      {
+        briefingFocusAreas.map((item) => (
+          <article class="briefing-focus-card">
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="briefing-outcome">
+    <h2>What leadership leaves with</h2>
+
+    <p>
+      You will leave the briefing with a clearer view of your financial, legal, operational, and governance exposure, along with a board-facing advisory leave-behind leadership can use to guide internal inquiry, cross-functional review, and enterprise AI governance discussion.
+    </p>
+
+    <div class="briefing-outcome__list" aria-label="Briefing outputs">
+      <div>
+        <span>01</span>
+        <p>A sharper view of what AI use has moved inside the organization.</p>
+      </div>
+
+      <div>
+        <span>02</span>
+        <p>A working map of who now carries the verification and calibration burden.</p>
+      </div>
+
+      <div>
+        <span>03</span>
+        <p>A governance frame for evaluating which productivity claims can be substantiated.</p>
+      </div>
+
+      <div>
+        <span>04</span>
+        <p>A board-facing structure for identifying exposure before cost, liability, or operational loss appears.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="briefing-eligibility">
+    <h2>Who should request this briefing</h2>
+
+    <p>
+      This briefing is designed for executives with authority over enterprise financial, legal, workforce, operational, or governance risk, including corporate boards, CFOs, General Counsel, CHROs, risk leaders, and senior executives accountable for AI implementation.
+    </p>
+  </section>
+</NarrativePage>
+
+<style>
+  .briefing-intake,
+  .briefing-outcome,
+  .briefing-eligibility {
+    margin-top: 3rem;
+  }
+
+  .briefing-intake {
+    border-top: 1px solid var(--color-base-300);
+    padding-top: 2.5rem;
+  }
+
+  .briefing-intake__content {
+    max-width: 46rem;
+  }
+
+  .briefing-focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .briefing-focus-card {
+    border: 1px solid color-mix(in srgb, var(--color-base-300) 88%, transparent);
+    border-radius: 1.2rem;
+    background:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(248, 245, 240, 0.92)),
+      #ffffff;
+    padding: clamp(1.1rem, 2.4vw, 1.45rem);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .briefing-focus-card h3 {
+    margin: 0;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 1.9vw, 1.45rem);
+    font-weight: 520;
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+  }
+
+  .briefing-focus-card p {
+    margin: 0.8rem 0 0;
+    color: var(--color-base-800);
+    font-size: var(--lozen-body-copy-small-size);
+    line-height: var(--lozen-body-copy-small-line-height);
+  }
+
+  .briefing-outcome {
+    border-radius: 1.6rem;
+    background:
+      radial-gradient(circle at 12% 0%, rgba(190, 47, 61, 0.22), transparent 34%),
+      linear-gradient(135deg, var(--color-base-950), var(--color-base-900));
+    padding: clamp(1.5rem, 4vw, 2.2rem);
+    color: #ffffff;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .briefing-outcome h2 {
+    color: #ffffff;
+  }
+
+  .briefing-outcome > p {
+    max-width: 48rem;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .briefing-outcome__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin-top: 1.4rem;
+  }
+
+  .briefing-outcome__list div {
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.07);
+    padding: 1rem;
+  }
+
+  .briefing-outcome__list span {
+    display: inline-flex;
+    color: var(--color-accent-300);
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    font-weight: 850;
+    letter-spacing: 0.16em;
+    line-height: 1.35;
+  }
+
+  .briefing-outcome__list p {
+    margin: 0.55rem 0 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: var(--lozen-body-copy-small-size);
+    line-height: var(--lozen-body-copy-small-line-height);
+  }
+
+  .briefing-eligibility {
+    border: 1px solid var(--color-base-200);
+    border-radius: 1.4rem;
+    background: #ffffff;
+    padding: clamp(1.25rem, 3vw, 1.8rem);
+    box-shadow: var(--shadow-md);
+  }
+
+  .briefing-eligibility p {
+    max-width: 48rem;
+  }
+
+  @media (max-width: 860px) {
+    .briefing-focus-grid,
+    .briefing-outcome__list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
