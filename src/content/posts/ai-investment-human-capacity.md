@@ -35,9 +35,7 @@ The first article in Lozen Advisory’s [AI Workforce Materiality](/ai-workforce
 
 ## The Substitution Problem
 
-Most companies are not integrating AI into core infrastructure. They are placing it alongside existing workflows and expecting professionals to use it, test it, verify it, and incorporate it without a corresponding redesign of how work is done.
-
-The result is not efficiency. It is substitution.
+Most companies are not integrating AI into core infrastructure. They are placing it alongside existing workflows and expecting professionals to use it, test it, verify it, and incorporate it without a corresponding redesign of how work is done. The result is not efficiency. It is substitution.
 
 Large language models simulate coherence, not truth. Time saved on initial output is replaced by time spent verifying that output. The burden does not disappear; it moves. And this is where the productivity model begins to break.
 
@@ -75,9 +73,7 @@ That gap is where the unmeasured labor hides. The cost shows up as cognitive loa
 - Attention fragments.
 - Confidence in output declines.
 
-The employee is no longer simply executing work. She is managing a system that produces work of variable reliability, and that burden does not distribute evenly.
-
-Paradoxically, top performers absorb the burden first. They are the ones who adopt early, validate outputs, catch errors before they move forward, and become the control layer the system does not yet have. This is the **[Power User Trap℠](/invisible-attrition/power-user-trap/)**.
+The employee is no longer simply executing work. She is managing a system that produces work of variable reliability, and that burden does not distribute evenly. Paradoxically, top performers absorb the burden first. They are the ones who adopt early, validate outputs, catch errors before they move forward, and become the control layer the system does not yet have. This is the **[Power User Trap℠](/invisible-attrition/power-user-trap/)**.
 
 The power user becomes the person the organization points to as evidence that AI is working. Her output is observable, but the effort required to stabilize that output is not. The work still gets done. However, it is being stabilized manually by the exact people the organization can least afford to strain. And, that stabilization has a cost that does not appear in dashboards, productivity metrics, or ROI calculations.
 
@@ -85,9 +81,7 @@ The same governance gap appears here in financial form. Adoption metrics can ris
 
 ## The Gap Is Bridged With Human Cognition
 
-Capital is being deployed on the assumption of productivity gains, but those gains depend on seamless integration into enterprise workflows. That integration has not occurred at scale. Instead, organizations are layering AI into environments that were not designed for it and asking professionals to bridge the gap with human cognition.
-
-That is not an infinite resource.
+Capital is being deployed on the assumption of productivity gains, but those gains depend on seamless integration into enterprise workflows. That integration has not occurred at scale. Instead, organizations are layering AI into environments that were not designed for it and asking professionals to bridge the gap with human cognition. That is not an infinite resource.
 
 When monetization lags and human capacity is strained, the system does not fail immediately. It degrades in ways that evade standard reporting:
 
@@ -95,9 +89,7 @@ When monetization lags and human capacity is strained, the system does not fail 
 - **Errors increase** in ways that are difficult to attribute.
 - **Critical talent disengages** before departure becomes visible to the organization.
 
-When the person leaves, however, the loss is often classified as personal, cultural, or managerial rather than structural.
-
-This is part of the same problem Lozen Advisory has identified in other workforce systems: [unmeasured workforce risk](/blog/menopause-at-work-unquantified-data-gap/) does not disappear because a dashboard fails to capture it. It accumulates outside formal data until the organization experiences the cost as attrition, performance strain, or succession exposure.
+When the person leaves, however, the loss is often classified as personal, cultural, or managerial rather than structural. This is part of the same problem Lozen Advisory has identified in other workforce systems: [unmeasured workforce risk](/blog/menopause-at-work-unquantified-data-gap/) does not disappear because a dashboard fails to capture it. It accumulates outside formal data until the organization experiences the cost as attrition, performance strain, or succession exposure.
 
 ## Invisible Attrition℠ Is the Organizational Cost
 
@@ -111,9 +103,7 @@ Before the system breaks, the illusion of stability persists:
 - The output is still appearing.
 - The system still looks functional.
 
-However, the capacity required to sustain that performance is already being consumed faster than it is being replenished, and standard performance metrics will not capture the condition in time.
-
-By the time those metrics detect the loss, it is too late to mitigate.
+However, the capacity required to sustain that performance is already being consumed faster than it is being replenished, and standard performance metrics will not capture the condition in time. By the time those metrics detect the loss, it is too late to mitigate.
 
 ## The Risk the Market Is Not Measuring
 
@@ -125,15 +115,11 @@ That distinction is being made at the level of:
 - Free cash flow
 - Monetization discipline
 
-It is **not** yet being made at the level of workforce capacity.
-
-The risk is not that AI lacks potential, and it is not that companies should not adopt it. The risk is that the system is scaling investment on top of a human layer already absorbing unmeasured strain.
+It is **not** yet being made at the level of workforce capacity. The risk is not that AI lacks potential, and it is not that companies should not adopt it. The risk is that the system is scaling investment on top of a human layer already absorbing unmeasured strain.
 
 AI has usage, but it does not yet have infrastructure-level dependence. That is a precise and important distinction. The market is funding a level of enterprise reliance that has not fully materialized, and the mechanism required to get there is being carried by professionals whose capacity is treated as constant.
 
-It is not.
-
-Capital can be deployed ahead of proof, that has happened before. What cannot be assumed however, is that the human system undergirding that capital will scale with it.
+It is not. Capital can be deployed ahead of proof, that has happened before. What cannot be assumed however, is that the human system undergirding that capital will scale with it.
 
 It will not.
 
