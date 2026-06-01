@@ -62,7 +62,7 @@ These are not the people who fell behind. These are the people who are paying cl
 
 ## Where the Cost Actually Lives
 
-That gap is the mechanism. The cost shows up as cognitive load:
+That gap is where the unmeasured labor hides. The cost shows up as cognitive load:
 
 - Decision fatigue increases.
 - Attention fragments.
