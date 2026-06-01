@@ -104,14 +104,35 @@ summary:
 },
 ];
 
-const normalizeSlug = (value: string) =>
-value
-.replace(/\/g, "/")
-.replace(/.mdx?$/i, "")
-.replace(/^/+/, "")
-.replace(//+$/, "")
-.replace(/^blog//, "")
-.replace(/^posts//, "");
+const normalizeSlug = (value: string) => {
+let slug = value;
+
+if (slug.endsWith(".md")) {
+slug = slug.slice(0, -3);
+}
+
+if (slug.endsWith(".mdx")) {
+slug = slug.slice(0, -4);
+}
+
+while (slug.startsWith("/")) {
+slug = slug.slice(1);
+}
+
+while (slug.endsWith("/")) {
+slug = slug.slice(0, -1);
+}
+
+if (slug.startsWith("blog/")) {
+slug = slug.slice("blog/".length);
+}
+
+if (slug.startsWith("posts/")) {
+slug = slug.slice("posts/".length);
+}
+
+return slug;
+};
 
 const formatPublishedDate = (date: Date) =>
 date.toLocaleDateString("en-US", {
