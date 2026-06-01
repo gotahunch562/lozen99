@@ -51,7 +51,10 @@ The numbers do not show a workforce that simply needs more enthusiasm. They show
 
 This statistical disconnect cannot be dismissed as standard employee friction or poor adoption hygiene. It is an explicit warning that corporate dashboards are tracking an incomplete picture.
 
-Where executives see automated capability, the workforce sees an unpriced review burden. Management views software that generates assets instantly. Professionals view raw material that must still be verified, corrected, reframed, sourced, validated for tone, and cross-referenced against institutional knowledge.
+Where executives see automated capability, the workforce sees an unpriced review burden:
+
+- **Management views** software that generates assets instantly.
+- **Professionals view** raw material that must still be verified, corrected, reframed, sourced, validated for tone, and cross-referenced against institutional knowledge.
 
 While the system accelerates the initial creation of an artifact, it never relieves the individual professional of responsibility for the final result. The mandate does not eliminate the labor. It compresses the timeline and relocates the work away from production and into human judgment.
 
@@ -65,7 +68,14 @@ The Sullivan & Cromwell case study, one of many corporate AI embarrassment stori
 
 This friction extends beyond the legal sector. Court filings make these systemic breakdowns visible because they enter a transparent public ledger where citations can be cross-checked by opposing counsel and reviewed by a judge.
 
-In the broader corporate ecosystem, these errors will not surface so cleanly. They will integrate silently into internal board memoranda, public investor talking points, risk registers, regulatory compliance drafts, financial narratives, and strategic positioning decks. The machine output looks coherent. It carries the prose of completion. It moves rapidly through the enterprise architecture because few leaders have the allocated time, specialized domain expertise, or structural authority to slow the asset down for an audit.
+In the broader corporate ecosystem, these errors will not surface as cleanly as they do on a public court docket. They will integrate silently into:
+
+- Internal board memoranda
+- Public investor talking points
+- Risk registers and financial narratives
+- Regulatory compliance drafts
+
+The machine output looks coherent. It carries the prose of completion. It moves rapidly through the enterprise architecture because few leaders have the allocated time, specialized domain expertise, or structural authority to slow the asset down for an audit.
 
 ## The Name Standard
 
@@ -91,7 +101,12 @@ Velocity improves, but the underlying operational model grows fragile. This hidd
 
 This systemic exposure is where Lozen Advisory identifies the [Power User Trap℠](/invisible-attrition/power-user-trap/).
 
-The power user is not merely an employee who uses AI frequently. The power user is the human architecture through whom AI becomes operationally viable for the business. She is the professional who learns the failure modes, supplies the missing institutional context, flags the subtle hallucinations, cleans the raw output, and translates generic machine prose into the authentic, defensible language of the enterprise.
+The power user is not merely an employee who uses AI frequently. The power user is the human architecture through whom AI becomes operationally viable for the business. She is the professional who:
+
+- Learns the failure modes of the system.
+- Supplies the missing institutional context.
+- Flags subtle hallucinations.
+- Translates generic machine prose into the authentic, defensible language of the enterprise.
 
 Traditional analytics dashboards view this individual as statistical proof that the software investment is generating immediate ROI. The more precise risk evaluation is that the technology is operating on the back of her unpriced, unmeasured human labor.
 
@@ -101,13 +116,14 @@ If an organization depends on a narrow group of power users to prevent AI output
 
 Mandatory AI utilization must never be confused with governed AI utilization.
 
-Governance is not the passive existence of a corporate policy. Sullivan & Cromwell possessed explicit review policies and technical processes. Governance is not the appearance of high adoption metrics, nor is it the basic tracking of software seat utilization.
+Governance is not the passive existence of a corporate policy. Governance is not the appearance of high adoption metrics, nor is it the basic tracking of software seat utilization.
 
-An adoption mandate asks whether your workforce is using the tool. [AI Workforce Materiality](/ai-workforce-materiality/) asks whether the organization understands what liabilities the tool relocated, which professionals absorbed the risk, what metrics the company can legally substantiate, and what exposures remain invisible until financial or regulatory loss appears.
-
-> AI governance begins where adoption metrics stop.
+- **An adoption mandate** asks whether your workforce is using the tool.
+- **AI Workforce Materiality** asks what the tool moved, who absorbed it, and what exposures remain invisible until financial or regulatory loss appears.
 
 Those are entirely different questions.
+
+> AI governance begins where adoption metrics stop.
 
 ## The Materiality Question Set
 
