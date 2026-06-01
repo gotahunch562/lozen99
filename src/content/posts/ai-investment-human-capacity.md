@@ -20,7 +20,7 @@ image:
   alt: AI and human
 heroImage: /src/images/blog/ai-workload-power-user-trap-senior-leader.webp
 heroAlt: woman at work reflecting the human in the middle of ai work
-draft: true
+draft: false
 isFeatured: false
 ---
 The scale of capital flowing into AI is not the story. The timing is.
