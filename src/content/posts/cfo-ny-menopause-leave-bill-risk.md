@@ -24,7 +24,7 @@ tags:
   - Legislative Analysis
   - Workplace Disclosure
 draft: false
-isFeatured: true
+isFeatured: false
 ---
 ## The NY State Menopause Leave Bill Has Four Problems. None of Them Are Related to Menopause.
 
