@@ -56,7 +56,7 @@ Where executives see automated capability, the workforce sees an unpriced review
 
 While the system accelerates the initial creation of an artifact, it never relieves the individual professional of responsibility for the final result. The mandate does not eliminate the labor. It compresses the timeline and relocates the work away from production and into human judgment.
 
-## Sullivan & Cromwell Illustrates the Failure of the Review Layer
+## Sullivan & Cromwell Illustrates Failure of the Review Layer
 
 The legal profession has provided a clear example of what occurs when the human review layer fails under operational pressure. In April 2026, Sullivan & Cromwell apologized to a federal bankruptcy judge after an official court filing was discovered to contain AI-generated inaccuracies, including fabricated case law citations and misstatements of law.
 
