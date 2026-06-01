@@ -5,6 +5,13 @@ pubDate: 2026-06-01
 datePublished: 2026-06-01
 dateModified: 2026-06-01
 category: Corporate Boards
+seriesKey: ai-workforce-materiality
+seriesOrder: 2
+excerpt: The scale of capital flowing into AI is not the story—the timing is.
+  Companies are deploying massive AI investments ahead of proof, assuming
+  automatic productivity gains. But AI doesn't eliminate labor; it relocates it
+  into unmeasured human verification. Discover why AI CapEx is scaling faster
+  than the human capacity required to convert it into durable operating value.
 description: Is AI CapEx outpacing your workforce? Discover why AI productivity
   gains rely on unmeasured human verification labor and drive Invisible
   Attrition.
@@ -12,7 +19,7 @@ image:
   url: /src/images/blog/ai-workload-power-user-trap-senior-leader.webp
   alt: AI and human
 heroImage: /src/images/blog/ai-workload-power-user-trap-senior-leader.webp
-heroAlt: ai human
+heroAlt: woman at work reflecting the human in the middle of ai work
 draft: true
 isFeatured: false
 ---
