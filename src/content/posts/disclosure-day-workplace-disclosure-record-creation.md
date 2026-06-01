@@ -63,17 +63,11 @@ Clean data is not, however, the same as complete data, which is the same measure
 An employee may also be:
 
 - managing symptoms
-
 - caregiving responsibilities
-
 - exhaustion
-
 - treatment
-
 - grief
-
 - family pressure
-
 - medical uncertainty or another private constraint while continuing to perform.
 
 They may preserve appearances because the professional standard has not changed. They may avoid disclosure, because the cost of becoming visible is greater than the value of formal support. From the organization's point of view, nothing appears. That does not mean nothing is taking place, it just means a disclosure designed system cannot see it.
