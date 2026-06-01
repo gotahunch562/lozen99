@@ -22,9 +22,9 @@ Investment is being deployed ahead of proof. That is not unusual in a technology
 
 There is spending, experimentation, and visible activity, but there is not yet durable monetization.
 
-Implementing AI in the enterprise does not translate to revenue, nor does it automatically reduce costs or guarantee productivity. It places a system inside an organization that still has to be made operational, and that work is not being measured correctly.
+> Implementing AI in the enterprise does not translate to revenue, nor does it automatically reduce costs or guarantee productivity. It places a system inside an organization that still has to be made operational, and that work is not being measured correctly.
 
-The first article in Lozen Advisory’s [AI Workforce Materiality](https://www.lozenadvisory.com/ai-workforce-materiality/) series established that [mandatory AI use is not AI governance](https://www.lozenadvisory.com/mandatory-ai-use-governance/). This article turns to the capital-allocation problem that follows. If companies require AI use before they understand what the technology moves, who absorbs the verification burden, and whether claimed productivity can be substantiated, then AI investment is scaling faster than the human systems required to convert that investment into durable operating value.
+The first article in Lozen Advisory’s [AI Workforce Materiality](/ai-workforce-materiality/) series established that [mandatory AI use is not AI governance](/blog/mandatory-ai-use-governance/). This article turns to the capital-allocation problem that follows. If companies require AI use before they understand what the technology moves, who absorbs the verification burden, and whether claimed productivity can be substantiated, then AI investment is scaling faster than the human systems required to convert that investment into durable operating value.
 
 ## The Substitution Problem
 
@@ -51,11 +51,12 @@ That is the gap. The money is scaling faster than the operating model.
 
 There is already a name for what that experience produces. People are calling it "AI Brain Fry," but it is not burnout in the traditional sense. It is more specific: the exhaustion that comes from being required to move at machine speed while maintaining human accountability for every output the machine generates.
 
-It is the feeling of being simultaneously accelerated and behind.
+> It is the feeling of being simultaneously accelerated and behind.
 
-The people experiencing it are not struggling with the technology. They are often the ones closest to it. A communications strategist building actively in this space described it plainly: *the more you learn, the less you know.* The cycle moves from the satisfaction of creating something previously impossible to the realization that there is always more to understand, more to verify, and more to control.
+The people experiencing it are not struggling with the technology. They are often the ones closest to it:
 
-A practitioner operating at the front lines of enterprise AI noted that even sustained effort to stay current now feels inadequate, because the pace of development has redefined what "current" means faster than any individual can track it.
+- **The Strategist:** A communications strategist building actively in this space described it plainly: *the more you learn, the less you know.* The cycle moves from the satisfaction of creating something previously impossible to the realization that there is always more to understand, more to verify, and more to control.
+- **The Practitioner:** A professional operating at the front lines of enterprise AI noted that even sustained effort to stay current now feels inadequate, because the pace of development has redefined what "current" means faster than any individual can track it.
 
 These are not the people who fell behind. These are the people who are paying close attention and still cannot close the gap.
 
@@ -69,7 +70,7 @@ That gap is the mechanism. The cost shows up as cognitive load:
 
 The employee is no longer simply executing work. She is managing a system that produces work of variable reliability, and that burden does not distribute evenly.
 
-Paradoxically, top performers absorb the burden first. They are the ones who adopt early, validate outputs, catch errors before they move forward, and become the control layer the system does not yet have. This is the **[Power User Trap℠](https://www.lozenadvisory.com/invisible-attrition/power-user-trap/)**.
+Paradoxically, top performers absorb the burden first. They are the ones who adopt early, validate outputs, catch errors before they move forward, and become the control layer the system does not yet have. This is the **[Power User Trap℠](/invisible-attrition/power-user-trap/)**.
 
 The power user becomes the person the organization points to as evidence that AI is working. Her output is observable, but the effort required to stabilize that output is not. The work still gets done. However, it is being stabilized manually by the exact people the organization can least afford to strain. And, that stabilization has a cost that does not appear in dashboards, productivity metrics, or ROI calculations.
 
@@ -81,9 +82,15 @@ Capital is being deployed on the assumption of productivity gains, but those gai
 
 That is not an infinite resource.
 
-When monetization lags and human capacity is strained, the system does not fail immediately. It degrades. Work slows in ways that are difficult to diagnose. Errors increase in ways that are difficult to attribute. Critical talent disengages before departure becomes visible to the organization. When the person leaves, however, the loss is often classified as personal, cultural, or managerial rather than structural.
+When monetization lags and human capacity is strained, the system does not fail immediately. It degrades in ways that evade standard reporting:
 
-This is part of the same problem Lozen Advisory has identified in other workforce systems: [unmeasured workforce risk](https://www.lozenadvisory.com/blog/menopause-at-work-unquantified-data-gap/) does not disappear because a dashboard fails to capture it. It accumulates outside formal data until the organization experiences the cost as attrition, performance strain, or succession exposure.
+- **Work slows** in ways that are difficult to diagnose.
+- **Errors increase** in ways that are difficult to attribute.
+- **Critical talent disengages** before departure becomes visible to the organization.
+
+When the person leaves, however, the loss is often classified as personal, cultural, or managerial rather than structural.
+
+This is part of the same problem Lozen Advisory has identified in other workforce systems: [unmeasured workforce risk](/blog/menopause-at-work-unquantified-data-gap/) does not disappear because a dashboard fails to capture it. It accumulates outside formal data until the organization experiences the cost as attrition, performance strain, or succession exposure.
 
 ## Invisible Attrition℠ Is the Organizational Cost
 
@@ -91,15 +98,27 @@ This is **Invisible Attrition℠**: the unmeasured erosion of leadership and per
 
 "AI Brain Fry" is what it feels like from the inside. The Power User Trap℠ is what captures the people best positioned to survive it. Invisible Attrition℠, however, is what it costs the organization before anyone outside the work can see that something has changed.
 
-The professional is still present. The output is still appearing. The system still looks functional. However, the capacity required to sustain that performance is already being consumed faster than it is being replenished, and standard performance metrics will not capture the condition in time.
+Before the system breaks, the illusion of stability persists:
+
+- The professional is still present.
+- The output is still appearing.
+- The system still looks functional.
+
+However, the capacity required to sustain that performance is already being consumed faster than it is being replenished, and standard performance metrics will not capture the condition in time.
 
 By the time those metrics detect the loss, it is too late to mitigate.
 
 ## The Risk the Market Is Not Measuring
 
-The market is now distinguishing between companies that have converted AI into bottom-line results and companies whose capital expenditures are functioning as a drain on shareholder value. That distinction is being made at the level of stock performance, free cash flow, and monetization discipline.
+The market is now distinguishing between companies that have converted AI into bottom-line results and companies whose capital expenditures are functioning as a drain on shareholder value.
 
-It is not yet being made at the level of workforce capacity.
+That distinction is being made at the level of:
+
+- Stock performance
+- Free cash flow
+- Monetization discipline
+
+It is **not** yet being made at the level of workforce capacity.
 
 The risk is not that AI lacks potential, and it is not that companies should not adopt it. The risk is that the system is scaling investment on top of a human layer already absorbing unmeasured strain.
 
@@ -128,17 +147,3 @@ A board-level inquiry should begin with questions such as:
 - If the professionals converting AI investment into usable work reduce their effort, leave, or stop absorbing the hidden review burden, what part of the AI investment case fails first?
 
 These are not IT implementation questions. They are capital-governance questions. If leadership cannot answer them, the organization may be funding AI faster than it is governing the human capacity required to make that investment work.
-
-## Series Context
-
-This is the second article in Lozen Advisory’s [AI Workforce Materiality](https://www.lozenadvisory.com/ai-workforce-materiality/) series.
-
-The first article, [Mandatory AI Use Is Not AI Governance](https://www.lozenadvisory.com/mandatory-ai-use-governance/), examined the difference between adoption mandates and governed use. This article turns that same question toward capital allocation, asking whether organizations are funding AI faster than the workforce systems required to convert that investment into durable operating value.
-
-- The next article, **Generation Is Fast. Governance Is Not.**, explores the specific mechanisms of AI generation versus the human judgment required to govern it.
-
-## Commission a Strategic Briefing
-
-AI adoption is a governance issue, not an IT project. Lozen Advisory conducts private Strategic Briefings for corporate boards, General Counsel, and CFOs. This is a targeted advisory intervention designed to expose unpriced human-capital liability, map current verification strain, and deliver the frameworks required to govern AI at the enterprise level.
-
-[Commission a Strategic Briefing](https://www.lozenadvisory.com/request-briefing/)
