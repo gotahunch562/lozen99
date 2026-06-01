@@ -1,247 +1,241 @@
 media:
-
-* name: blog_images
-  label: Blog images
-  input: src/images/blog
-  output: /src/images/blog
-  extensions: [avif, webp, png, jpg, jpeg, svg]
-  rename: safe
-* name: service_images
-  label: Service images
-  input: src/images/services
-  output: /src/images/services
-  extensions: [avif, webp, png, jpg, jpeg, svg]
-  rename: safe
-* name: public_downloads
-  label: Public downloads
-  input: public/download
-  output: /download
-  categories: [document]
-  rename: safe
+  - name: blog_images
+    label: Blog images
+    input: src/images/blog
+    output: /src/images/blog
+    extensions: [avif, webp, png, jpg, jpeg, svg]
+    rename: safe
+  - name: service_images
+    label: Service images
+    input: src/images/services
+    output: /src/images/services
+    extensions: [avif, webp, png, jpg, jpeg, svg]
+    rename: safe
+  - name: public_downloads
+    label: Public downloads
+    input: public/download
+    output: /download
+    categories: [document]
+    rename: safe
 
 content:
-
-* name: posts
-  label: Blog posts
-  type: collection
-  path: src/content/posts
-  format: yaml-frontmatter
-  filename:
-  template: "{slug}.md"
-  field: create
-  operations:
-  delete: false
-  view:
-  primary: title
-  fields: [title, pubDate, category, isFeatured, draft]
-  sort: [pubDate, title]
-  search: [title, description, excerpt, category, tags]
-  default:
-  sort: pubDate
-  order: desc
-  fields:
-
-  * name: title
-    label: Title
-    type: string
-    required: true
-  * name: slug
-    label: Slug
-    type: string
-    required: true
-    pattern:
-    regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-    message: "Use lowercase letters, numbers, and hyphens only."
-  * name: pubDate
-    label: Publish date
-    type: date
-    required: true
-  * name: datePublished
-    label: Date published
-    type: date
-  * name: dateModified
-    label: Date modified
-    type: date
-  * name: category
-    label: Category
-    type: select
-    required: true
-    description: "Primary editorial category. This controls Blog and Resource Library grouping."
-    options:
-    values:
-    - Legislative Analysis
-    - Research & Policy
-    - Legal Profession
-    - Performance & Career
-    - The Tender Path
-    - Disclosure Independence
-    - CFO Resources
-    - Corporate Boards
-  * name: homepageSection
-    label: Homepage section
-    type: select
-    required: false
-    description: "Optional. Use only for posts that should appear in a specific homepage section."
-    options:
-    values:
-    - menopause-at-work
-  * name: seriesKey
-    label: Series
-    type: select
-    required: false
-    description: "Optional. Use for posts that belong to a formal Lozen Advisory article series."
-    options:
-    values:
-    - ai-workforce-materiality
-  * name: seriesOrder
-    label: Series order
-    type: number
-    required: false
-    description: "Optional. Controls this post's position inside its formal article series."
-  * name: excerpt
-    label: Excerpt
-    type: text
-  * name: description
-    label: Description
-    type: text
-    required: true
-  * name: metaDescription
-    label: Meta description
-    type: text
-    required: false
-    hidden: true
-    description: "Optional technical SEO override. Hidden in Pages CMS; use Description for normal SEO summaries."
-  * name: image
-    label: Card image
-    type: object
-    required: true
+  - name: posts
+    label: Blog posts
+    type: collection
+    path: src/content/posts
+    format: yaml-frontmatter
+    filename:
+      template: "{slug}.md"
+      field: create
+    operations:
+      delete: false
+    view:
+      primary: title
+      fields: [title, pubDate, category, isFeatured, draft]
+      sort: [pubDate, title]
+      search: [title, description, excerpt, category, tags]
+      default:
+        sort: pubDate
+        order: desc
     fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          message: "Use lowercase letters, numbers, and hyphens only."
+      - name: pubDate
+        label: Publish date
+        type: date
+        required: true
+      - name: datePublished
+        label: Date published
+        type: date
+      - name: dateModified
+        label: Date modified
+        type: date
+      - name: category
+        label: Category
+        type: select
+        required: true
+        description: "Primary editorial category. This controls Blog and Resource Library grouping."
+        options:
+          values:
+            - Legislative Analysis
+            - Research & Policy
+            - Legal Profession
+            - Performance & Career
+            - The Tender Path
+            - Disclosure Independence
+            - CFO Resources
+            - Corporate Boards
+      - name: homepageSection
+        label: Homepage section
+        type: select
+        required: false
+        description: "Optional. Use only for posts that should appear in a specific homepage section."
+        options:
+          values:
+            - menopause-at-work
+      - name: seriesKey
+        label: Series
+        type: select
+        required: false
+        description: "Optional. Use for posts that belong to a formal Lozen Advisory article series."
+        options:
+          values:
+            - ai-workforce-materiality
+      - name: seriesOrder
+        label: Series order
+        type: number
+        required: false
+        description: "Optional. Controls this post's position inside its formal article series."
+      - name: excerpt
+        label: Excerpt
+        type: text
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: metaDescription
+        label: Meta description
+        type: text
+        required: false
+        hidden: true
+        description: "Optional technical SEO override. Hidden in Pages CMS; use Description for normal SEO summaries."
+      - name: image
+        label: Card image
+        type: object
+        required: true
+        fields:
+          - name: url
+            label: Image
+            type: image
+            required: true
+            options:
+              media: blog_images
+          - name: alt
+            label: Alt text
+            type: string
+            required: true
+      - name: heroImage
+        label: Hero image
+        type: image
+        options:
+          media: blog_images
+      - name: heroAlt
+        label: Hero image alt text
+        type: string
+      - name: tags
+        label: Secondary topics
+        type: select
+        required: false
+        description: "Optional secondary topics. Use only when a post should also appear on a specific topic/tag page."
+        options:
+          multiple: true
+          values:
+            - Disclosure Day
+            - Workplace Disclosure
+            - Disclosure Independence
+            - Invisible Attrition
+            - Tacere
+            - Power User Trap
+            - The Tender Path
+            - Legislative Analysis
+            - Research & Policy
+            - Legal Profession
+            - Performance & Career
+      - name: spineDestination
+        label: Spine destination
+        type: string
+        required: false
+        hidden: true
+        description: "Legacy internal routing/control field. Hidden in Pages CMS."
+      - name: draft
+        label: Draft
+        type: boolean
+      - name: isFeatured
+        label: Featured
+        type: boolean
+      - name: body
+        label: Article body
+        type: rich-text
+        options:
+          format: markdown
+          media: blog_images
+          path: blog
+          rename: safe
+          switcher: true
 
-    * name: url
-      label: Image
-      type: image
-      required: true
-      options:
-      media: blog_images
-    * name: alt
-      label: Alt text
-      type: string
-      required: true
-  * name: heroImage
-    label: Hero image
-    type: image
-    options:
-    media: blog_images
-  * name: heroAlt
-    label: Hero image alt text
-    type: string
-  * name: tags
-    label: Secondary topics
-    type: select
-    required: false
-    description: "Optional secondary topics. Use only when a post should also appear on a specific topic/tag page."
-    options:
-    multiple: true
-    values:
-    - Disclosure Day
-    - Workplace Disclosure
-    - Disclosure Independence
-    - Invisible Attrition
-    - Tacere
-    - Power User Trap
-    - The Tender Path
-    - Legislative Analysis
-    - Research & Policy
-    - Legal Profession
-    - Performance & Career
-  * name: spineDestination
-    label: Spine destination
-    type: string
-    required: false
-    hidden: true
-    description: "Legacy internal routing/control field. Hidden in Pages CMS."
-  * name: draft
-    label: Draft
-    type: boolean
-  * name: isFeatured
-    label: Featured
-    type: boolean
-  * name: body
-    label: Article body
-    type: rich-text
-    options:
-    format: markdown
-    media: blog_images
-    path: blog
-    rename: safe
-    switcher: true
-
-* name: services
-  label: Services
-  type: collection
-  path: src/content/services
-  format: yaml-frontmatter
-  operations:
-  create: false
-  rename: false
-  delete: false
-  view:
-  primary: title
-  fields: [title, shortDescription, priceFrom, duration]
-  sort: [title]
-  search: [title, description, shortDescription]
-  default:
-  sort: title
-  order: asc
-  fields:
-
-  * name: title
-    label: Title
-    type: string
-    required: true
-  * name: shortDescription
-    label: Short description
-    type: text
-    required: true
-  * name: description
-    label: Description
-    type: text
-    required: true
-  * name: metaDescription
-    label: Meta description
-    type: text
-  * name: category
-    label: Category
-    type: string
-  * name: image
-    label: Service landing card image
-    type: object
-    description: "Controls the image shown on the /services landing page cards. Service detail pages remain text-led."
+  - name: services
+    label: Services
+    type: collection
+    path: src/content/services
+    format: yaml-frontmatter
+    operations:
+      create: false
+      rename: false
+      delete: false
+    view:
+      primary: title
+      fields: [title, shortDescription, priceFrom, duration]
+      sort: [title]
+      search: [title, description, shortDescription]
+      default:
+        sort: title
+        order: asc
     fields:
-
-    * name: url
-      label: Image
-      type: image
-      options:
-      media: service_images
-    * name: alt
-      label: Alt text
-      type: string
-  * name: priceFrom
-    label: Price / engagement type
-    type: string
-  * name: duration
-    label: Duration
-    type: string
-  * name: isFeatured
-    label: Featured
-    type: boolean
-  * name: body
-    label: Service body
-    type: rich-text
-    options:
-    format: markdown
-    media: service_images
-    path: services
-    rename: safe
-    switcher: true
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: shortDescription
+        label: Short description
+        type: text
+        required: true
+      - name: description
+        label: Description
+        type: text
+        required: true
+      - name: metaDescription
+        label: Meta description
+        type: text
+      - name: category
+        label: Category
+        type: string
+      - name: image
+        label: Service landing card image
+        type: object
+        description: "Controls the image shown on the /services landing page cards. Service detail pages remain text-led."
+        fields:
+          - name: url
+            label: Image
+            type: image
+            options:
+              media: service_images
+          - name: alt
+            label: Alt text
+            type: string
+      - name: priceFrom
+        label: Price / engagement type
+        type: string
+      - name: duration
+        label: Duration
+        type: string
+      - name: isFeatured
+        label: Featured
+        type: boolean
+      - name: body
+        label: Service body
+        type: rich-text
+        options:
+          format: markdown
+          media: service_images
+          path: services
+          rename: safe
+          switcher: true
