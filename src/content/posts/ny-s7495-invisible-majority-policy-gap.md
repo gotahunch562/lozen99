@@ -82,5 +82,3 @@ Menopause-at-work legislation is creating a new workforce-risk record for employ
 
 [Commission a Strategic Briefing](/request-briefing/)
 
-
-
