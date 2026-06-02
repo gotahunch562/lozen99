@@ -57,8 +57,8 @@ Series hub: https://www.lozenadvisory.com/ai-workforce-materiality/
 AI Workforce Materiality Briefing: https://www.lozenadvisory.com/ai-workforce-materiality-briefing/
 
 Published articles:
-- https://www.lozenadvisory.com/blog/mandatory-ai-use-governance/ (Article 01 — May 31, 2026)
-- https://www.lozenadvisory.com/blog/ai-investment-scaling-human-capacity/ (Article 02 — June 1, 2026)
+- [Article 01: Mandatory AI Use Is Not AI Governance (May 31, 2026)](https://www.lozenadvisory.com/blog/mandatory-ai-use-governance/)
+- [Article 02: AI Investment Is Scaling Faster Than Human Capacity (June 1, 2026)](https://www.lozenadvisory.com/blog/ai-investment-scaling-human-capacity/)
 
 ---
 
@@ -238,7 +238,7 @@ This is not a legal advice tool. It is a governance and measurement analysis too
 ### Retention Calculator
 https://www.lozenadvisory.com/retention-calculator/
 
-A desktop-priority calculator estimating replacement cost and exposure associated with senior women's departure or leadership-capacity loss.
+A desktop-priority financial calculator estimating localized replacement costs, unpriced benefit-utilization gaps, and bottom-line fiscal exposure associated with leadership capacity loss and senior executive attrition. Formatted for CFO corporate risk modeling.
 
 ### Tools & Resources
 https://www.lozenadvisory.com/tools-resources/
@@ -301,21 +301,6 @@ Lozen Advisory does not frame menopause-at-work primarily as wellness, empathy, 
 Lozen Advisory does not assume that low utilization means low need. It asks whether the system can reach the population that cannot afford visibility.
 
 Lozen Advisory connects AI governance and menopause through the same measurement architecture: data that was never created cannot be corrected, audited, modeled, or retrieved. What AI governance frameworks often treat as a training or bias problem is, in Lozen Advisory's framing, a disclosure problem that precedes training entirely.
-
----
-
-## Audience
-
-Lozen Advisory speaks primarily to:
-
-- CFOs responsible for AI ROI integrity, productivity claim substantiation, and human-capital cost measurement.
-- General Counsel responsible for disclosure controls, AI productivity representations, and the gap between public statements and internal evidence.
-- Corporate boards responsible for human-capital materiality oversight, succession planning, key-person risk, and AI governance readiness.
-
-Secondary audience:
-
-- Senior women executives, partners, founders, lawyers, and senior professionals managing visible professional moments while protecting private constraints.
-- Policy observers, journalists, and researchers examining menopause at work, women's leadership, workforce data gaps, and disclosure-dependent systems.
 
 ---
 
