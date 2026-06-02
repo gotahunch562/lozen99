@@ -36,7 +36,7 @@ Disclosure means:
 - A private fact becomes visible. 
 - Something previously withheld enters.
 
-At work, however, disclosure is not only revelation. It is HR record creation.
+At work, however, [disclosure is not only revelation.](https://www.lozenadvisory.com/disclosure-independence-infrastructure/) It is HR record creation.
 
 ## The Workplace Turns Disclosure Into a HR Record
 
@@ -48,7 +48,7 @@ That context may help. It may open access to leave, flexibility, accommodation, 
 
 A private fact does not remain private because it was shared carefully. Once it enters an organization, it can also affect how future behavior is understood. A missed deadline may be read differently. A hard week may be interpreted differently. A change in energy, focus, availability, or communication may be connected back to information that was already in the file. The HR record does not have to be used unfairly to matter. It only has to exist.
 
-## Why Employees Choose Not to Create a HR Record 
+## Why Employees Choose Not to Create a HR Record
 
 That is the part many workplace conversations miss. Disclosure is often framed as honesty, openness, courage, or asking for help. Those words describe the personal side; they do not, however, describe the organizational side. Inside an organization, disclosed information can become evidence. It can explain behavior, justify support, trigger process, and shape how performance is understood later.
 
