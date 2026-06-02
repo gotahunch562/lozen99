@@ -3,7 +3,7 @@ title: "Menopause Workplace Research: The Systems Gap"
 slug: menopause-workplace-research-systems-gap
 pubDate: 2026-04-09
 datePublished: 2026-04-09
-dateModified: 2026-05-05
+dateModified: 2026-06-02
 category: Research & Policy
 excerpt: 'The announcement of a new menopause workplace research center
   highlights a significant structural gap: "workplace impact" is being treated
