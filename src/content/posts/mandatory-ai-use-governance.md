@@ -25,7 +25,7 @@ heroAlt: "woman representing the epistemic load:  concentration of operational
 tags:
   - Research & Policy
 draft: false
-isFeatured: false
+isFeatured: true
 ---
 Corporate AI adoption has entered its coercive phase.
 
