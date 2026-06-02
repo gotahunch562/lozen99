@@ -1,20 +1,32 @@
 ---
 title: Michigan Menopause Memorandum
 slug: michigan-menopause-memorandum
-pubDate: &id001 2026-04-01
-datePublished: *id001
-dateModified: 2026-05-05
+pubDate: 2026-04-01
+datePublished: 2026-04-01
+dateModified: 2026-06-02
 category: Legislative Analysis
-excerpt: 'Michigan’s landmark menopause study confirms a crisis of silence. With 16,500 women potentially exiting the state’s workforce annually, the data reveals a profound disconnect: the infrastructure being built is the very same system women are already declining to use.'
-description: 'The 2025 Michigan Menopause Memorandum reveals a staggering gap: while 79% of women want menopause-supportive workplaces, fewer than 1 in 5 will disclose their status. Explore why employer-led policies fail to address Tacere and the reality of Invisible Attrition℠.'
-metaDescription: 'The 2025 Michigan Menopause Memorandum reveals a staggering gap: while 79% of women want menopause-supportive workplaces, fewer than 1 in 5 will disclose their status. Explore why employer-led policies fail to address Tacere and the reality of Invisible Attrition℠.'
+excerpt: "Michigan’s landmark menopause study confirms a crisis of silence. With
+  16,500 women potentially exiting the state’s workforce annually, the data
+  reveals a profound disconnect: the infrastructure being built is the very same
+  system women are already declining to use."
+description: "The 2025 Michigan Menopause Memorandum reveals a staggering gap:
+  while 79% of women want menopause-supportive workplaces, fewer than 1 in 5
+  will disclose their status. Explore why employer-led policies fail to address
+  Tacere and the reality of Invisible Attrition℠."
+metaDescription: "The 2025 Michigan Menopause Memorandum reveals a staggering
+  gap: while 79% of women want menopause-supportive workplaces, fewer than 1 in
+  5 will disclose their status. Explore why employer-led policies fail to
+  address Tacere and the reality of Invisible Attrition℠."
 image:
   url: /src/images/blog/michigan_menopause_at_work_memorandum.webp
-  alt: "Michigan Menopause Memorandum 2026 document contrasted with middle-aged professional women, illustrating gaps in workplace menopause policy and data."
+  alt: Michigan Menopause Memorandum 2026 document contrasted with middle-aged
+    professional women, illustrating gaps in workplace menopause policy and
+    data.
 heroImage: /src/images/blog/michigan_menopause_at_work_memorandum.webp
-heroAlt: "Michigan Menopause Memorandum 2026 document contrasted with middle-aged professional women, illustrating gaps in workplace menopause policy and data."
+heroAlt: Michigan Menopause Memorandum 2026 document contrasted with middle-aged
+  professional women, illustrating gaps in workplace menopause policy and data.
 tags:
-- Legislative Analysis
+  - Legislative Analysis
 spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
@@ -35,15 +47,15 @@ And then there is this: fewer than 1 in 5 women disclosed their menopause status
 
 The Memorandum also captured the voices of Michigan women directly, and those voices tell a different story than the recommendations that follow them.
 
-"I would in no way discuss any menopause issues with anyone from work."
-
-That is an anonymous survey respondent. Not an outlier. A recurring theme.
-
-"Human Resource employees are not always a trusted confidence."
+> "I would in no way discuss any menopause issues with anyone from work."
+>
+> That is an anonymous survey respondent. Not an outlier. A recurring theme.
+>
+> "Human Resource employees are not always a trusted confidence."
 
 That is from a woman in manufacturing, who added that having to disclose menopausal symptoms to male supervisors caused her additional anxiety.
 
-"I am not aware of any resources at all, and I am uncertain if my employer must support me or if that is their choice, since it is not a protected work category. I am not certain what I could even ask for."
+> "I am not aware of any resources at all, and I am uncertain if my employer must support me or if that is their choice, since it is not a protected work category. I am not certain what I could even ask for."
 
 That is a woman who does not know her rights, cannot find her resources, and is not asking for help.
 
@@ -84,3 +96,9 @@ That problem requires something that operates outside the employer entirely. Som
 She needs a strategy that was built for the room she is actually in, not the room the policy is trying to create.
 
 That gap is why the [menopause legislation tracker](/menopause-legislation-tracker/) matters. It organizes the policy record around what formal systems can measure, and what they still cannot see.
+
+## Commission a Strategic Briefing
+
+Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
+
+[Commission a Strategic Briefing](/request-briefing/)
