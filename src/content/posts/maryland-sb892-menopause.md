@@ -1,20 +1,31 @@
 ---
-title: 'Maryland SB892: The Limits of Menopause Mandates'
+title: "Maryland SB892: The Limits of Menopause Mandates"
 slug: maryland-sb892-menopause
-pubDate: &id001 2026-04-16
-datePublished: *id001
-dateModified: 2026-05-05
+pubDate: 2026-04-16
+datePublished: 2026-04-16
+dateModified: 2026-06-02
 category: Legislative Analysis
-excerpt: 'Maryland SB892: The Limits of Menopause Mandates. The legislation improves training. It expands coverage. It strengthens the clinical system at the point of care. But it does not alter the condition that governs entry into that system.'
-description: Maryland SB892 passed with near-unanimous support, but can training alone fix the menopause retention crisis? Explore why insurance mandates often miss the "Invisible Majority℠."
-metaDescription: Maryland SB892 passed with near-unanimous support, but can training alone fix the menopause retention crisis? Explore why insurance mandates often miss the "Invisible Majority℠."
+excerpt: "Maryland SB892: The Limits of Menopause Mandates. The legislation
+  improves training. It expands coverage. It strengthens the clinical system at
+  the point of care. But it does not alter the condition that governs entry into
+  that system."
+description: Maryland SB892 passed with near-unanimous support, but can training
+  alone fix the menopause retention crisis? Explore why insurance mandates often
+  miss the "Invisible Majority℠."
+metaDescription: Maryland SB892 passed with near-unanimous support, but can
+  training alone fix the menopause retention crisis? Explore why insurance
+  mandates often miss the "Invisible Majority℠."
 image:
   url: /src/images/blog/Maryland_SB892_and_menopause_healthcare.webp
-  alt: "Maryland SB892 menopause legislation document on desk with Department of Health sign highlighting menopause care coverage and clinical training policy."
+  alt: Maryland SB892 menopause legislation document on desk with Department of
+    Health sign highlighting menopause care coverage and clinical training
+    policy.
 heroImage: /src/images/blog/Maryland_SB892_and_menopause_healthcare.webp
-heroAlt: "Maryland SB892 menopause legislation document on desk with Department of Health sign highlighting menopause care coverage and clinical training policy."
+heroAlt: Maryland SB892 menopause legislation document on desk with Department
+  of Health sign highlighting menopause care coverage and clinical training
+  policy.
 tags:
-- Legislative Analysis
+  - Legislative Analysis
 spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
@@ -84,3 +95,9 @@ The decision to engage is not neutral. It is a cost calculation shaped by inform
 That pre-engagement condition is where Invisible Attrition℠ begins: the erosion of performance and capacity that occurs before any formal system detects it, and before any legislative framework is able to respond.
 
 See the full [menopause legislation tracker](/menopause-legislation-tracker/).
+
+## Commission a Strategic Briefing
+
+Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
+
+[Commission a Strategic Briefing](/request-briefing/)
