@@ -24,7 +24,7 @@ heroAlt: Power user of AI, woman experiencing the cognitive stress of working wi
 tags:
   - Power User Trap
 draft: false
-isFeatured: true
+isFeatured: false
 ---
 Large language models (AI) generate output in seconds. Deciding whether to rely on that output for decision making takes considerably longer.
 
