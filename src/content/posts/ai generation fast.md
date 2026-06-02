@@ -26,7 +26,7 @@ tags:
 draft: true
 isFeatured: false
 ---
-AI generates output in seconds. Deciding whether to rely on that output takes considerably longer.
+Large language models (AI) generate output in seconds. Deciding whether to rely on that output for decision making takes considerably longer.
 
 Large Language Models can generate a paragraph, summarize large volumes of text, create blocks of code, draft legal contracts, and generate a memo in seconds. However, the organization still has to decide whether the output is accurate, usable, defensible, and safe to use as a business asset. LLM output arrives in seconds, before human judgment has time to evaluate, challenge, or contextualize it. That "human-in-the middle" gap between production and review is [where AI data governance should begin](/blog/ai-investment-scaling-human-capacity/).
 
@@ -46,13 +46,13 @@ Most organizations are measuring the easier half of AI adoption by relying on so
 | Prompts completed | Accountability for what moves forward |
 
 
-The right column is where the exposure forms.
+The column on the right is where the exposure forms.
 
 ---
 
 ## The Output Is Not the Work
 
-Every artifact an LLM generates still requires a human decision before it becomes institutional work. The speed of generation creates a false impression that the work is complete; however, someone still has to read what the tool produced, determine whether it reflects what the organization knows and can substantiate, assess the risk it carries, and decide whether it can move forward under the organization's brand. Conventional wisdom treats faster output as productivity. In contrast, the data governance required before that output can move forward has not gotten faster at all.
+Every artifact an LLM generates still requires a human decision before it becomes institutional work product. In the workplace the speed of generation creates a false impression that the task is complete; however, someone still has to read what the tool produced, determine whether it reflects what the organization knows and can substantiate, assess the risk it carries, and decide whether it can move forward under the organization's brand. Conventional wisdom treats faster output as productivity. In contrast, the data governance required before that output can move forward has not gotten faster at all.
 
 As established in [Mandatory AI Use Is Not AI Governance](/blog/mandatory-ai-use-governance/), forced adoption is ignoring a risk framework. Measuring adoption is not the same as measuring governed value; and that distinction is where the investment case begins to separate from the operating reality.
 
@@ -62,30 +62,32 @@ As established in [Mandatory AI Use Is Not AI Governance](/blog/mandatory-ai-use
 
 ## Coherence Is Not Truth
 
-Prevailing wisdom assumes that confident-sounding output is reliable output. But large language models are not producing truth; they are producing coherence, and those are not the same thing. The prose looks complete, the tone sounds authoritative, and the structure resembles finished work precisely because the model was trained to produce that effect. That polish is the risk: output can appear valid before it has encoded any governance standards.
+Conventional wisdom assumes that confident-sounding output is reliable output. But large language models are not producing truth; they are producing coherence. The prose looks complete, the tone sounds authoritative, and the structure resembles finished work, precisely because the model was trained to produce that effect. That polished look is the risk: output can appear valid before it has encoded any governance standards.
 
-Coherence is a presentation feature; truth is a verification outcome. A machine-generated paragraph can sound correct while being factually wrong. A summary can omit the controlling fact while accurately representing everything around it. A recommendation can reflect generic logic while missing the operational reality of this specific business. Paradoxically, the better the output looks, the less likely the reviewer is to scrutinize it, and the riskier it becomes.
+Coherence is a presentation feature; truth is a verification outcome. A machine-generated paragraph can sound correct while being factually wrong. A summary can omit the controlling fact while accurately representing everything around it. A recommendation can reflect generic logic while missing the operational reality of the specific business rules. Paradoxically, the better the output looks, the less likely the reviewer is to scrutinize it, hence the riskier it becomes.
 
 > **The danger is not only that AI makes mistakes. The danger is that AI adoption increases the volume of decisions while degrading the conditions under which good judgment is possible. Language models simulate coherence, not truth.**
 
-That creates a specific governance burden for the employee using the tool:
+This visual construct of LLM generated work creates a specific governance burden for the employee using the tool. The tool produces the artifact; the employee supplies the judgment. But the judgment required here is not a quick review; it is sustained critical engagement with output the employee did not produce, created by reasoning they cannot inspect, applied to a process they do not control.
 
-- Reading with suspicion, not only comprehension
-- Checking whether output is true, not merely fluent
-- Identifying what is missing, overstated, or unsupported
-- Carrying accountability for what moves forward under their name or the organization's authority
+They must innately:
 
-The tool produces the artifact; the employee supplies the judgment. But the judgment required here is not a quick review; it is sustained critical engagement with output the employee did not produce, created by reasoning they cannot inspect, applied to a process they do not control.
+- Read with suspicion, not only comprehension
+- Check whether output is true, not merely fluent
+- Identify what is missing, overstated, or unsupported
+- Carry accountability for what moves forward under their name or the organization's brand
+
+
 
 ---
 
 ## AI Externalizes Execution and Internalizes Judgment
 
-AI changes the location of the work. That burden does not disappear when the draft is complete; it reduces the visible effort of producing a draft while increasing the invisible effort of determining whether the draft should be used.
+AI adds effort and changes the location of the work.  It reduces the visible effort of producing a draft, while increasing the invisible effort of determining whether the draft should be used.
 
-AI externalizes execution while internalizing judgment.
+> **AI externalizes execution while internalizing judgment.**
 
-The labor moves out of production and into vigilance: the work of doubt, calibration, review, correction, and accountability for error. That is why AI efficiency claims often feel hollow to the employees doing the work. The organization sees more output; the person doing the work carries more burden.
+The labor moves out of the realm of production and into vigilance: the work of doubt, calibration, and accountability for errors. This is why AI efficiency claims often feel hollow to the employees doing the work. The organization sees more output; the person doing the work carries more burden.
 
 That burden has a name. A March 2026 BCG and Harvard Business Review study of nearly 1,500 workers identified it as **AI brain fry**: acute cognitive overload from excessive AI oversight, distinct from burnout, and directly linked to intention to quit. The study found that top AI users were twice as likely to leave and showed significantly elevated fatigue rates. The employees absorbing the most governance burden are also the most likely to exit.
 
@@ -97,7 +99,7 @@ That burden has a name. A March 2026 BCG and Harvard Business Review study of ne
 
 This manual stabilization creates a [Power User Trap℠](/invisible-attrition/power-user-trap/) that directly threatens operational resilience.
 
-The power user is not merely the employee who uses AI often. The power user is the person through whom AI becomes usable inside real work:
+The power user is not merely the employee who uses AI often. The power user is the person through whom AI becomes usable inside real work. The power user is:
 
 - Learning the tool's failure modes before anyone else
 - Supplying the organizational context the model cannot hold
@@ -105,7 +107,7 @@ The power user is not merely the employee who uses AI often. The power user is t
 - Translating machine output into the organization's actual operating logic
 - Absorbing accountability for what moves forward
 
-Prevailing wisdom treats this as an adoption success signal. The team is moving faster, the tool is being used, output is increasing, and leadership reads that as evidence the investment is working. In contrast, the more precise reading is that the system is stabilizing through one person's judgment, and that distinction changes the risk profile entirely. The organization has not built AI capability; it has concentrated AI governance inside a single employee. The entire LLM governance industry is building infrastructure for the input and output layers. The human judgment layer in the middle: the verification, calibration, and accountability that converts AI output into institutional work, has no vendor, no framework, no audit log, and no budget line.
+The organization does not see this invisible work and treats this as an adoption success signal. The team is moving faster, the tool is being used, output is increasing, and leadership reads that as evidence the investment is working. In contrast, the more precise reading is that the system is stabilizing through one person's judgment, and that distinction changes the risk profile entirely. The organization has not built AI capability; it has concentrated AI governance inside a single employee. The entire LLM governance industry is building infrastructure for the input and output layers. The human judgment layer in the middle: the verification, calibration, and accountability that converts AI output into institutional work, has no vendor, no framework, no audit log, and no budget line.
 
 If the organization treats the power user as proof that AI works, it may miss that AI is working through an unmeasured human control layer. Because, if that employee becomes overloaded, withdraws, or leaves, the workflow will reveal that the capability was never fully embedded. It was concentrated inside a person, and not within the data architecture of the organization.
 
@@ -122,11 +124,11 @@ That employee knew things no dashboard captured:
 - Which exceptions the model handles badly and why
 - How to recognize a plausible answer that is operationally wrong
 
-Salient point: without that knowledge, the organization cannot calibrate the tool going forward. It cannot catch the errors the tool has been making all along, because the person who was catching them is gone. And paradoxically, it cannot train a replacement at the same level, because the knowledge was never formally recorded. It was absorbed through practice, refined through experience, and never transferred into any system the organization controls.
+The salient point is that without this persons knowledge, the organization cannot calibrate the tool going forward. It cannot catch the errors the tool has been making all along, because the person who was catching them is gone. And paradoxically, it cannot train a replacement at the same level, because the knowledge was never formally recorded. It was absorbed through practice, refined through experience, and never transferred into any system the organization controls.
 
 > **When the power user exits, the AI "governance layer" exits with them. What remains is an AI tool the organization never formally governed in the first place.**
 
-This is where [AI adoption becomes key-person risk](/ai-workforce-materiality/). The succession exposure is not only about leadership. It is about the calibration capacity required to make AI output safe to rely on, and that capacity has no formal home in most organizational charts.
+This is where [AI adoption becomes key-person risk](/ai-workforce-materiality/). The succession exposure is not only about leadership. It is about the calibration capacity required to make AI output safe to rely on, and that capacity has no formal role or definition in most organizational charts.
 
 ---
 
