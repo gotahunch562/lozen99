@@ -1,25 +1,34 @@
 ---
 title: Virginia Menopause Bill Split Outcome
 slug: virginia-menopause-bill-split-outcome
-pubDate: &id001 2026-04-16
-datePublished: *id001
-dateModified: 2026-05-05
+pubDate: 2026-04-16
+datePublished: 2026-04-16
+dateModified: 2026-06-02
 category: Legislative Analysis
-excerpt: Virginia’s Governor signed targeted menopause protections but deferred broader workplace bills to a study. The Governor substituted a second study. That sequence is the most significant policy development in this series since it launched.
-description: Virginia’s Governor signed targeted menopause protections but deferred broader workplace bills to a study. Learn how this split decision affects employer compliance and disclosure.
-metaDescription: Virginia’s Governor signed targeted menopause protections but deferred broader workplace bills to a study. Learn how this split decision affects employer compliance and disclosure.
+excerpt: Virginia’s Governor signed targeted menopause protections but deferred
+  broader workplace bills to a study. The Governor substituted a second study.
+  That sequence is the most significant policy development in this series since
+  it launched.
+description: Virginia’s Governor signed targeted menopause protections but
+  deferred broader workplace bills to a study. Learn how this split decision
+  affects employer compliance and disclosure.
+metaDescription: Virginia’s Governor signed targeted menopause protections but
+  deferred broader workplace bills to a study. Learn how this split decision
+  affects employer compliance and disclosure.
 image:
   url: /src/images/blog/Virginia_Signs_Menopause_Protections_Into_Law.webp
-  alt: "Virginia Senate bills SB258 and SB790 laid across a leather portfolio with reading glasses and a red pen, annotated with analysis notes."
+  alt: Virginia Senate bills SB258 and SB790 laid across a leather portfolio with
+    reading glasses and a red pen, annotated with analysis notes.
 heroImage: /src/images/blog/Virginia_Signs_Menopause_Protections_Into_Law.webp
-heroAlt: "Virginia Senate bills SB258 and SB790 laid across a leather portfolio with reading glasses and a red pen, annotated with analysis notes."
+heroAlt: Virginia Senate bills SB258 and SB790 laid across a leather portfolio
+  with reading glasses and a red pen, annotated with analysis notes.
 tags:
-- Legislative Analysis
+  - Legislative Analysis
 spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
 ---
-Virginia's legislature passed menopause at work protections. The Governor substituted a study. That sequence is the most significant policy development in this series since it launched.
+Virginia's legislature passed menopause at work protections. The Governor substituted a study. That sequence is the most significant policy development in this [menopause at work legislation](/menopause-legislation-tracker/) series since it launched.
 
 The condition established across this series applies here with one material difference: the legislature passed the protection. The Governor substituted a study.
 
@@ -53,7 +62,7 @@ Systems do not require intent. They require incentive and opportunity.
 
 The Governor's substitute is not evidence of bad faith. It is evidence of how formal systems respond when asked to extend protection into a domain where the disclosure condition makes the population difficult to measure. The response is: study it first. Measure before acting. Produce a record before producing a protection.
 
-That response is structurally identical to the pattern the series has documented across every bill it has examined. The legislature names the women. The system asks for data about the women. The data instrument excludes the women who do not enter formal systems. The findings confirm manageable reported impact. The protection waits.
+That response is structurally identical to the pattern the legislative analysis series has documented across every bill it has examined. The legislature names the women. The system asks for data about the women. The data instrument excludes the women who do not enter formal systems. The findings confirm manageable reported impact. The protection waits.
 
 SB790, the insurance coverage bill, was signed because it operates at the clinical layer, not the employment layer. Coverage requires a woman to seek treatment under her name. That is a disclosure condition she controls outside the employment relationship. The Governor signed the bill that does not require her employer to know.
 
@@ -68,3 +77,9 @@ That calculation has a name. The pattern it produces across the organizational r
 She was never silent. She decided.
 
 See the full [menopause legislation tracker](/menopause-legislation-tracker/).
+
+## Commission a Strategic Briefing
+
+Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after employee disclosure.
+
+[Commission a Strategic Briefing](https://chatgpt.com/request-briefing/)
