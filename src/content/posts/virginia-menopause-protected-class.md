@@ -1,20 +1,33 @@
 ---
 title: Virginia’s Governor Substituted a Study for Menopause Protections
 slug: virginia-menopause-protected-class
-pubDate: &id001 2026-04-16
-datePublished: *id001
-dateModified: 2026-05-05
+pubDate: 2026-04-16
+datePublished: 2026-04-16
+dateModified: 2026-06-02
 category: Legislative Analysis
-excerpt: Governor Spanberger’s April 2026 action deadline resulted in a significant shift for Virginia’s menopause policy. While the insurance coverage bill (SB790) was signed into law, the Governor substituted studies for both the workplace accommodation and anti-discrimination mandates.
-description: 'Governor Spanberger executed a split decision on Virginia’s menopause bills: signing an insurance mandate while substituting two studies for proposed workplace protections. Analyze the legislative shift from legal mandates to research directives.'
-metaDescription: 'Governor Spanberger executed a split decision on Virginia’s menopause bills: signing an insurance mandate while substituting two studies for proposed workplace protections. Analyze the legislative shift from legal mandates to research directives.'
+excerpt: Governor Spanberger’s April 2026 action deadline resulted in a
+  significant shift for Virginia’s menopause policy. While the insurance
+  coverage bill (SB790) was signed into law, the Governor substituted studies
+  for both the workplace accommodation and anti-discrimination mandates.
+description: "Governor Spanberger executed a split decision on Virginia’s
+  menopause bills: signing an insurance mandate while substituting two studies
+  for proposed workplace protections. Analyze the legislative shift from legal
+  mandates to research directives."
+metaDescription: "Governor Spanberger executed a split decision on Virginia’s
+  menopause bills: signing an insurance mandate while substituting two studies
+  for proposed workplace protections. Analyze the legislative shift from legal
+  mandates to research directives."
 image:
   url: /src/images/blog/VA_collage-2.webp
-  alt: "Collage of senior professional women in workplace settings, representing the experienced workforce affected by Virginia menopause workplace protections."
+  alt: Collage of senior professional women in workplace settings, representing
+    the experienced workforce affected by Virginia menopause workplace
+    protections.
 heroImage: /src/images/blog/VA_collage-2.webp
-heroAlt: "Collage of senior professional women in workplace settings, representing the experienced workforce affected by Virginia menopause workplace protections."
+heroAlt: Collage of senior professional women in workplace settings,
+  representing the experienced workforce affected by Virginia menopause
+  workplace protections.
 tags:
-- Legislative Analysis
+  - Legislative Analysis
 spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
@@ -66,3 +79,9 @@ For leadership, this creates a predictable distortion: policy effectiveness will
 The women who never entered the formal system are not an outlier. They are the population the study was designed to find. That cohort is not a footnote. It is not a gap Virginia's legislators failed to see. It is Invisible Attrition℠: the condition under which women remain fully present in the workforce, fully absorbed in managing what their employers cannot see, and entirely absent from every instrument the mandated study will use to find them. Virginia has established the most comprehensive formal workplace protections for menopause of any state in the country. The study will produce data about the women who used those protections. It will not describe the women who never did.
 
 [See the full menopause legislation tracker.](/menopause-legislation-tracker/)
+
+## Commission a Strategic Briefing
+
+Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
+
+[Commission a Strategic Briefing](/request-briefing/)
