@@ -3,7 +3,7 @@ title: "NY Menopause Leave Bill: Four Structural Problems"
 slug: cfo-ny-menopause-leave-bill-risk
 pubDate: 2026-05-29
 datePublished: 2026-05-29
-dateModified: 2026-06-01
+dateModified: 2026-06-02
 category: CFO Resources
 excerpt: >
   Naming the problems with NY Bill A10296 is not an argument against the
