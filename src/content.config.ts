@@ -12,6 +12,8 @@ const posts = defineCollection({
       datePublished: z.coerce.date().optional(),
       dateModified: z.coerce.date().optional(),
       category: z.string().optional(),
+      seriesKey: z.string().optional(),
+      seriesOrder: z.coerce.number().int().positive().optional(),
       homepageSection: z.enum(["menopause-at-work"]).optional(),
       description: z.string(),
       excerpt: z.string().optional(),
