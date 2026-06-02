@@ -18,9 +18,11 @@ metaDescription: Employers measure benefit utilization but miss the decision not
   organizations blind to the true cost of Invisible Attrition℠.
 image:
   url: /src/images/blog/73-point-menopause-data-perception-gap.webp
-  alt: "Illustration depicting the 73-point menopause data perception gap between HR manager confidence and employee disclosure reality."
+  alt: Illustration depicting the 73-point menopause data perception gap between
+    HR manager confidence and employee disclosure reality.
 heroImage: /src/images/blog/73-point-menopause-data-perception-gap.webp
-heroAlt: "Illustration depicting the 73-point menopause data perception gap between HR manager confidence and employee disclosure reality."
+heroAlt: Illustration depicting the 73-point menopause data perception gap
+  between HR manager confidence and employee disclosure reality.
 tags:
   - Research & Policy
 spineDestination: retention-risk-analysis
@@ -73,23 +75,15 @@ The question is whether the system, as designed, captures the full scope of impa
 
 Consider what the dominant employer advice model actually prescribes. Mercer, one of the world's largest HR consulting firms, advises employers to take nine steps toward menopause support:
 
-Provide coverage
-
-Offer telehealth
-
-Allow flexible schedules
-
-Accommodate shift workers
-
-Offer cooling options
-
-Prioritize education
-
-Create a culture of openness
-
-Include men in the conversation
-
-Build peer support groups
+- Provide coverage
+- Offer telehealth
+- Allow flexible schedules
+- Accommodate shift workers
+- Offer cooling options
+- Prioritize education
+- Create a culture of openness
+- Include men in the conversation
+- Build peer support groups
 
 Every one of those nine recommendations requires the woman to surface. She has to request the telehealth appointment. She has to use the cooling room. She has to join the peer group. She has to answer the anonymous survey. She has to say the word out loud. Nine recommendations. One hundred percent visibility required.
 
@@ -101,19 +95,13 @@ The population managing against visibility is the population the entire model wa
 
 That population does not grow smaller as awareness increases. The volume of research on menopause in the workplace has grown steadily. The policy activity has accelerated. The employer frameworks have multiplied. By the logic of awareness-driven change, outcomes should be improving. The data does not show that.
 
-The reasoning is not complicated.
-
-More studies produce more awareness.
-
-More awareness produces more frameworks.
-
-More frameworks produce more support options. The engagement requirement does not change.
-
-The population least likely to engage does not engage.
-
-Outcomes for that segment do not improve.
-
-Aggregate results appear stagnant or worsening.
+- The reasoning is not complicated.
+- More studies produce more awareness.
+- More awareness produces more frameworks.
+- More frameworks produce more support options. The engagement requirement does not change.
+- The population least likely to engage does not engage.
+- Outcomes for that segment do not improve.
+- Aggregate results appear stagnant or worsening.
 
 Each step is real. None of them changes the variable that governs whether the support reaches the population that needs it most.
 
@@ -140,6 +128,12 @@ Invisible Attrition℠ describes this condition precisely: the unmeasured erosio
 This is not a framework that relates to the problem. It is the classification that governs it. Every accommodation request that was never filed, every leave day that was never taken, every exit interview that captured nothing because nothing was ever disclosed: those are not data gaps. They are instances of Invisible Attrition℠ operating exactly as the condition predicts. The pattern that Virginia's study will encounter, that New York's leave entitlements will not reach, that Michigan's data already confirmed: it is the same condition. The record will show compliance. It will show utilization. It will show that the conversation happened and the benefits were offered and the cooling room was installed. What the record will not show is the woman who calculated the cost of visibility, decided against it, and left. She is the data the system defined as the problem and then excluded from the record.
 
 [See the full menopause legislation tracker.](/menopause-legislation-tracker)
+
+## Commission a Strategic Briefing
+
+Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
+
+[Commission a Strategic Briefing](https://chatgpt.com/request-briefing/)
 
 For the broader corporate risk frame, see [Retention Risk Analysis](/retention-risk-analysis/).
 
