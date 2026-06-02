@@ -1,20 +1,34 @@
 ---
-title: 'Menopause Workplace Frameworks: The Visibility Constraint'
+title: "Menopause Workplace Frameworks: The Visibility Constraint"
 slug: menopause-workplace-visibility-constraint
-pubDate: &id001 2026-04-03
-datePublished: *id001
-dateModified: 2026-05-05
+pubDate: 2026-04-03
+datePublished: 2026-04-03
+dateModified: 2026-06-02
 category: Research & Policy
-excerpt: Menopause workplace advocacy has successfully moved into the legislative mainstream, yet a critical disconnect remains. While new frameworks rely on formal disclosure and manager escalation to trigger support, research shows that the vast majority of women, particularly in senior roles, opt out of these systems entirely
-description: Modern menopause workplace policies rely on formal disclosure, but state-level data shows fewer than 1 in 5 women ever raise their hand. Discover why standard accommodation frameworks create a visibility gap and the rise of Invisible Attrition℠.
-metaDescription: Modern menopause workplace policies rely on formal disclosure, but state-level data shows fewer than 1 in 5 women ever raise their hand. Discover why standard accommodation frameworks create a visibility gap and the rise of Invisible Attrition℠.
+excerpt: Menopause workplace advocacy has successfully moved into the
+  legislative mainstream, yet a critical disconnect remains. While new
+  frameworks rely on formal disclosure and manager escalation to trigger
+  support, research shows that the vast majority of women, particularly in
+  senior roles, opt out of these systems entirely
+description: Modern menopause workplace policies rely on formal disclosure, but
+  state-level data shows fewer than 1 in 5 women ever raise their hand. Discover
+  why standard accommodation frameworks create a visibility gap and the rise of
+  Invisible Attrition℠.
+metaDescription: Modern menopause workplace policies rely on formal disclosure,
+  but state-level data shows fewer than 1 in 5 women ever raise their hand.
+  Discover why standard accommodation frameworks create a visibility gap and the
+  rise of Invisible Attrition℠.
 image:
   url: /src/images/blog/visibility_constraint_v3.webp
-  alt: "Close-up of a magnifying glass with cracked glass held against a blurred office building, symbolizing the visibility constraint in workplace measurement systems."
+  alt: Close-up of a magnifying glass with cracked glass held against a blurred
+    office building, symbolizing the visibility constraint in workplace
+    measurement systems.
 heroImage: /src/images/blog/visibility_constraint_v3.webp
-heroAlt: "Close-up of a magnifying glass with cracked glass held against a blurred office building, symbolizing the visibility constraint in workplace measurement systems."
+heroAlt: Close-up of a magnifying glass with cracked glass held against a
+  blurred office building, symbolizing the visibility constraint in workplace
+  measurement systems.
 tags:
-- Research & Policy
+  - Research & Policy
 spineDestination: disclosure-independence-infrastructure
 draft: false
 isFeatured: false
@@ -52,3 +66,9 @@ This creates a gap between what is managed and what is measured.
 The legal framework functions as designed. It captures what enters it but misses a portion that does not. This is the condition underlying menopause at work policies: systems measure participation, while a significant share of the impact of those policies remain outside of the mechanisms required to observe it. This gap is Invisible Attrition℠: the impact that remains operationally present while absent from the systems used to measure it, and does not register in retention metrics until the exit occurs.
 
 [Read the Disclosure-Independent Performance Protection℠ infrastructure.](/disclosure-independence-infrastructure/)
+
+## Commission a Strategic Briefing
+
+Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
+
+[Commission a Strategic Briefing](https://chatgpt.com/request-briefing/)
