@@ -28,7 +28,7 @@ isFeatured: false
 ---
 Large language models (AI) generate output in seconds. Deciding whether to rely on that output for decision making takes considerably longer.
 
-Large Language Models can generate a paragraph, summarize large volumes of text, create blocks of code, draft legal contracts, and generate a memo in seconds. However, the organization still has to decide whether the output is accurate, usable, defensible, and safe to use as a business asset. LLM output arrives in seconds, before human judgment has time to evaluate, challenge, or contextualize it. That "human-in-the middle" gap between production and review is [where AI data governance should begin](/blog/ai-investment-scaling-human-capacity/).
+Large Language Models can generate a paragraph, summarize large volumes of text, create blocks of code, draft legal contracts, and generate a memo in seconds. However, the organization still has to decide whether the output is accurate, usable, defensible, and safe to use as a business asset. LLM output arrives in seconds, before human judgment has time to evaluate, challenge, or contextualize it, and that "human-in-the middle" gap between production and review is [where AI data governance should begin](/blog/ai-investment-scaling-human-capacity/).
 
 ---
 
