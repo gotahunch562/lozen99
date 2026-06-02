@@ -1,20 +1,27 @@
 ---
-title: 'New York S3908: The Menopause Workers-Comp Policy Gap'
+title: "New York S3908: The Menopause Workers-Comp Policy Gap"
 slug: ny-s3908-workers-comp-menopause-gap
-pubDate: &id001 2026-04-22
-datePublished: *id001
-dateModified: 2026-05-05
+pubDate: 2026-04-22
+datePublished: 2026-04-22
+dateModified: 2026-06-02
 category: Legislative Analysis
-excerpt: While S9247 seeks to create a standalone leave category, S3908 uses an existing state mechanism designed for health-related workforce impacts.
-description: NY Senate Bill S3908 routes menopause leave through workers' comp. This analysis examines the structural policy gap and why Invisible Attrition℠ remains unmeasured by state data.
-metaDescription: NY Senate Bill S3908 routes menopause leave through workers' comp. This analysis examines the structural policy gap and why Invisible Attrition℠ remains unmeasured by state data.
+excerpt: While S9247 seeks to create a standalone leave category, S3908 uses an
+  existing state mechanism designed for health-related workforce impacts.
+description: NY Senate Bill S3908 routes menopause leave through workers' comp.
+  This analysis examines the structural policy gap and why Invisible Attrition℠
+  remains unmeasured by state data.
+metaDescription: NY Senate Bill S3908 routes menopause leave through workers'
+  comp. This analysis examines the structural policy gap and why Invisible
+  Attrition℠ remains unmeasured by state data.
 image:
   url: /src/images/blog/ny-s3908-workers-comp-policy-gap.webp
-  alt: "Editorial illustration of a dark wood desk with stacked legal files and glowing silhouettes of women entering the workers’ compensation policy gap."
+  alt: Editorial illustration of a dark wood desk with stacked legal files and
+    glowing silhouettes of women entering the workers’ compensation policy gap.
 heroImage: /src/images/blog/ny-s3908-workers-comp-policy-gap.webp
-heroAlt: "Editorial illustration of a dark wood desk with stacked legal files and glowing silhouettes of women entering the workers’ compensation policy gap."
+heroAlt: Editorial illustration of a dark wood desk with stacked legal files and
+  glowing silhouettes of women entering the workers’ compensation policy gap.
 tags:
-- Legislative Analysis
+  - Legislative Analysis
 spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
@@ -48,3 +55,9 @@ That cohort does not appear in utilization, claims, or exit records. They appear
 That is exit data failure. Not a related concept or a deeper read, the governing condition that every data point in this analysis is an instance of. S3908 would extend formal protection to employees who enter the system. Invisible Attrition℠ names what happens to the ones who do not, and why no record will show it until they are already gone.
 
 [See the full menopause legislation tracker.](/menopause-legislation-tracker/)
+
+## Commission a Strategic Briefing
+
+Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
+
+[Commission a Strategic Briefing](https://chatgpt.com/request-briefing/)
