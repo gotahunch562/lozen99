@@ -5,6 +5,8 @@ pubDate: 2026-05-31
 datePublished: 2026-05-31
 dateModified: 2026-05-31
 category: Corporate Boards
+seriesKey: ai-workforce-materiality
+seriesOrder: 1
 excerpt: >+
   AI externalizes execution while internalizing judgment. It shifts labor out of
   the visible act of producing the artifact and into the less visible work of
