@@ -89,6 +89,11 @@ function getBlogLastmodMap() {
 
 const blogLastmodMap = getBlogLastmodMap();
 
+const staticLastmodMap = new Map([
+  [`${SITE_URL}/menopause-legislation-tracker/`, "2026-05-29T00:00:00.000Z"],
+]);
+
+
 const excludedSitemapUrls = new Set([
   `${SITE_URL}/disclosure-independence-work-infrastructure/`,
 ]);
@@ -101,7 +106,7 @@ export function serializeSitemapItem(item) {
     return undefined;
   }
 
-  const lastmod = blogLastmodMap.get(normalizedUrl);
+  const lastmod = blogLastmodMap.get(normalizedUrl) || staticLastmodMap.get(normalizedUrl);
 
   if (lastmod) {
     item.lastmod = lastmod;
