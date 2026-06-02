@@ -29,14 +29,14 @@ content:
       field: create
     operations:
       delete: false
-view:
-  primary: title
-  fields: [title, pubDate, dateModified, category, isFeatured, draft]
-  sort: [dateModified, pubDate, title]
-  search: [title, description, excerpt, category, tags]
-  default:
-    sort: dateModified
-    order: desc
+    view:
+      primary: title
+      fields: [title, pubDate, dateModified, category, isFeatured, draft]
+      sort: [dateModified, pubDate, title]
+      search: [title, description, excerpt, category, tags]
+      default:
+        sort: dateModified
+        order: desc
     fields:
       - name: title
         label: Title
