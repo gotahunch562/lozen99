@@ -150,7 +150,7 @@ The evidence that this gap is real and costly is no longer theoretical. The orga
 
 In each case, the governance failure was not at the strategy layer. It was at the verification layer: the layer no title or policy announcement reaches.
 
-Consulting companies declare that appointing a Chief AI Officer signals governance maturity. In contrast, what these incidents reveal is that the title addresses the strategy layer while neglecting the verification layer. This is the critical layer where AI output becomes institutional, legal, or client-facing record. However in the current AI landscape this layer is entirely dependent on employees whose job descriptions never included the tasks and whose effort is not being measured.
+Consulting companies declare that appointing a Chief AI Officer signals governance maturity. In contrast, what these incidents reveal is that the "title" addresses the strategy layer while neglecting the verification layer. This is the critical layer where AI output becomes institutional, legal, or client-facing record. However, in the current AI hype landscape, this layer is entirely dependent on employees whose job descriptions never included the tasks and whose efforts are not being measured.
 
 ---
 
@@ -170,9 +170,9 @@ Before the next board meeting or budget cycle, the organization should be able t
 
 - Between AI output generation and organizational reliance on that output, what governance steps currently exist and who is accountable for each one?
 - Where has AI output moved into client-facing, regulatory, legal, or board-facing use before a formal review structure was in place to receive it?
-- Which employees are currently absorbing verification, reframing, risk assessment, and exception handling as informal labor with no corresponding authority, compensation adjustment, or capacity relief?
+- Which employees are currently absorbing verification, risk assessment, and exception handling as informal labor with no corresponding authority, compensation adjustment, or capacity relief?
 - If the employee who catches the error is unavailable, overburdened, or gone, what is the first place that failure would appear?
-- What would it cost to replace the calibration knowledge that employee holds, and has anyone estimated it?
+- What would it cost to replace the calibration knowledge the employee holds, and has anyone estimated it?
 
 ---
 
