@@ -1,20 +1,32 @@
 ---
-title: 'New York S9247: Menopause Leave and the Disclosure Constraint'
+title: "New York S9247: Menopause Leave and the Disclosure Constraint"
 slug: ny-s9247-menopause-leave
-pubDate: &id001 2026-04-08
-datePublished: *id001
+pubDate: 2026-04-08
+datePublished: 2026-04-08
 dateModified: 2026-05-05
 category: Legislative Analysis
-excerpt: New York Senate Bill S9247 aims to reduce the friction between menopause symptoms and workplace access by introducing a specific leave entitlement. However, like all disclosure-based frameworks, the system only activates once an employee raises her hand, a trigger that fewer than one in five women are willing to pull.
-description: NY S9247 proposes five days of paid menopause leave, but a new entitlement doesn't solve the disclosure barrier. Learn why leave utilization data creates a "dashboard delay" and fails to measure Invisible Attrition℠.
-metaDescription: NY S9247 proposes five days of paid menopause leave, but a new entitlement doesn't solve the disclosure barrier. Learn why leave utilization data creates a "dashboard delay" and fails to measure Invisible Attrition℠.
+excerpt: New York Senate Bill S9247 aims to reduce the friction between
+  menopause symptoms and workplace access by introducing a specific leave
+  entitlement. However, like all disclosure-based frameworks, the system only
+  activates once an employee raises her hand, a trigger that fewer than one in
+  five women are willing to pull.
+description: NY S9247 proposes five days of paid menopause leave, but a new
+  entitlement doesn't solve the disclosure barrier. Learn why leave utilization
+  data creates a "dashboard delay" and fails to measure Invisible Attrition℠.
+metaDescription: NY S9247 proposes five days of paid menopause leave, but a new
+  entitlement doesn't solve the disclosure barrier. Learn why leave utilization
+  data creates a "dashboard delay" and fails to measure Invisible Attrition℠.
 image:
   url: /src/images/blog/NysenateBILL9247.webp
-  alt: "Lady Justice holding legislative documents with the Statue of Liberty and Manhattan skyline in the background, representing New York menopause workplace legislation."
+  alt: Lady Justice holding legislative documents with the Statue of Liberty and
+    Manhattan skyline in the background, representing New York menopause
+    workplace legislation.
 heroImage: /src/images/blog/NysenateBILL9247.webp
-heroAlt: "Lady Justice holding legislative documents with the Statue of Liberty and Manhattan skyline in the background, representing New York menopause workplace legislation."
+heroAlt: Lady Justice holding legislative documents with the Statue of Liberty
+  and Manhattan skyline in the background, representing New York menopause
+  workplace legislation.
 tags:
-- Legislative Analysis
+  - Legislative Analysis
 spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
@@ -50,3 +62,9 @@ The record captures activity. It cannot capture the decision not to participate.
 This is not a policy design flaw. It is the condition that produces Invisible Attrition℠. The women who need the leave most are precisely the ones least likely to request it, and the gap between their organizational impact and their presence in utilization records is not a measurement quirk. Leave data captures what was taken. It cannot capture the women who kept their own counsel and never requested it, and that is not incidental to this analysis. It is the governing condition this entire analysis demonstrates.
 
 [See the full menopause legislation tracker.](/menopause-legislation-tracker/)
+
+## Commission a Strategic Briefing
+
+Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
+
+[Commission a Strategic Briefing](/request-briefing/)
