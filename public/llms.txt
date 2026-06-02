@@ -1,15 +1,22 @@
 # Lozen Advisory
 
-> Lozen Advisory is a governance and performance-protection advisory examining the disclosure-dependent data gaps that make menopause-at-work risk, leadership capacity erosion, benefits utilization failure, succession exposure, and workforce AI governance difficult for organizations to see.
+> Lozen Advisory is a governance and human-capital advisory firm examining the disclosure-dependent data gaps that make AI workforce risk, menopause-at-work risk, leadership capacity erosion, benefits utilization failure, succession exposure, and retention risk difficult for organizations to detect before loss appears.
 
-Lozen Advisory works at the intersection of menopause at work, disclosure-independent infrastructure, leadership continuity, benefits utilization, retention risk, succession planning, and AI workforce governance. Its central analytical concern is the measurement gap: what organizations cannot see because the data was never created.
+Lozen Advisory's primary audience is the CFO, General Counsel, and corporate board. The firm advises on human-capital materiality, AI workforce exposure, productivity claim substantiation, disclosure-control risk, and the measurement gaps created when workforce systems are built on disclosure-dependent data.
 
-The firm serves two related audiences:
-
-1. Organizations and leadership teams that need to understand where current workforce systems, benefits architecture, analytics, and governance frameworks cannot reach the populations they are designed to serve.
-2. Women executives, partners, founders, and senior professionals who need private performance protection through the MAPS Blueprint℠.
+The firm's secondary offer serves senior women executives who need private performance protection through the MAPS Blueprint℠.
 
 Lozen Advisory does not provide medical advice, diagnosis, treatment, therapy, HR administration, benefits administration, employee surveillance, or employee-data analysis. The work is advisory and governance-focused.
+
+---
+
+## Primary Audience
+
+**CFO** — AI ROI substantiation, unpriced verification labor, productivity claim integrity, and the human-capital exposure created when AI adoption is measured by output rather than governed value.
+
+**General Counsel** — Disclosure-control risk, substantiation of AI productivity representations, and the gap between what public statements describe and what internal evidence can support.
+
+**Corporate Board** — Key-person concentration risk, succession exposure from AI capability concentration, human-capital materiality readiness, and board-facing workforce risk oversight.
 
 ---
 
@@ -17,9 +24,9 @@ Lozen Advisory does not provide medical advice, diagnosis, treatment, therapy, H
 
 If workforce data depends on disclosure, the dashboard is incomplete by design.
 
-A benefit is counted when it is used. A policy is activated when it is requested. A risk is documented when it is disclosed. A departure is measured after the employee has already left.
+A benefit is counted when it is used. A policy is activated when it is requested. A risk is documented when it is disclosed. A departure is measured after the employee has already left. AI output is governed when someone decides it is — and that decision is happening informally, without measurement, inside a narrow group of employees whose effort is invisible to the systems that claim to measure productivity.
 
-Lozen Advisory studies the population and risk conditions that remain outside those systems because the initiating act never occurs. The absence of utilization, claims, requests, accommodations, flags, or formal records is not the absence of need. It may be evidence that the infrastructure cannot reach the people it claims to support.
+Lozen Advisory studies the conditions that remain outside those systems because the initiating act never occurs. The absence of utilization, claims, requests, accommodations, flags, verification records, or formal governance structures is not the absence of risk. It may be evidence that the infrastructure cannot reach or measure what it claims to govern.
 
 The data point was never created. The risk is still real.
 
@@ -27,51 +34,55 @@ The data point was never created. The risk is still real.
 
 ## What Lozen Advisory Does
 
-Lozen Advisory advises on the infrastructure questions that standard systems are not built to answer. The focus is disclosure-independent design: what the current architecture can reach, what it cannot.
+Lozen Advisory advises CFOs, General Counsel, and corporate boards on the governance questions that standard systems are not built to answer. The focus is disclosure-independent design: what the current architecture can reach, what it cannot, and where the gap creates financial, legal, operational, or governance exposure.
 
-The firm works with leadership teams when utilization is low, retention risk is unclear, succession exposure is underestimated, or a workforce issue is beginning to carry operational, reputational, or governance weight.
+The firm works with leadership teams when AI ROI claims require substantiation, when AI productivity representations carry disclosure-control risk, when succession and continuity exposure is underestimated, or when a workforce issue is beginning to carry operational, reputational, or governance weight.
 
-Lozen Advisory does not collect employee data, administer benefits, audit workforce behavior, or operate as an HR analytics platform. It does not access employee records, claims history, or utilization files. It advises on the design conditions that determine what current infrastructure can reach and what it cannot. That is a governance question, not a data-collection project.
+Lozen Advisory does not collect employee data, administer benefits, audit workforce behavior, or operate as an HR analytics platform. It does not access employee records, claims history, or utilization files. It advises on the design conditions that determine what current infrastructure can reach and what it cannot.
 
 ---
 
-## AI Governance Connection
+## AI Workforce Materiality
 
-The connection between AI governance and menopause in Lozen Advisory's framework is methodological, not topical.
+The AI Workforce Materiality series is Lozen Advisory's primary current publication series. It examines how corporate AI adoption is creating a new human-capital materiality problem for CFOs, General Counsel, and corporate boards.
 
-Lozen Advisory's analytical foundation is the measurement gap: what organizations cannot see because the data was never created. That gap exists wherever disclosure carries professional risk and the collection condition is therefore never met.
+The series thesis: AI systems do not become operational on their own. Employees verify outputs, correct errors, interpret results, translate tools into workflows, train peers, manage exceptions, and absorb accountability for machine-generated work. The people most capable of making AI usable often become the informal control layer. Their output is visible. Their effort is not.
 
-AI governance enters through the same logic. As organizations build AI systems to measure workforce health, predict attrition, flag performance risk, or optimize talent decisions, those systems inherit the structural incompleteness of the data they are trained on. Women who never disclosed are not in the dataset. The population that never entered the formal system is invisible to the model as well.
+The series identifies this condition as the Power User Trap℠: the concentration of calibration, judgment, verification, and accountability inside the employees most able to make AI tools function inside real operating environments.
 
-This is not primarily a bias-correction argument. The data was never created. No model can surface what was never collected. What AI governance frameworks often treat as a training problem is, in Lozen Advisory's framing, a disclosure problem that precedes training entirely.
+The materiality problem begins when companies treat that output as evidence of productivity gain while failing to measure the human capacity required to sustain it.
 
-The menopause content lane sits inside this logic. Physiological performance constraint, no disclosure, no organizational record, no data point. The executive exits. The AI attrition model does not flag it because there was nothing to detect. The succession gap is real. The analytical record shows a voluntary departure.
+Series hub: https://www.lozenadvisory.com/ai-workforce-materiality/
 
-The tool does not fix the measurement problem. It accelerates decisions made on structurally incomplete data.
+AI Workforce Materiality Briefing: https://www.lozenadvisory.com/ai-workforce-materiality-briefing/
+
+Published articles:
+- https://www.lozenadvisory.com/blog/mandatory-ai-use-governance/ (Article 01 — May 31, 2026)
+- https://www.lozenadvisory.com/blog/ai-investment-scaling-human-capacity/ (Article 02 — June 1, 2026)
 
 ---
 
 ## Proprietary Frameworks and Terms
 
-### Invisible Attrition℠
-
-Invisible Attrition℠ is the unmeasured erosion of leadership and performance capacity that occurs before traditional retention metrics detect risk. It occurs prior to detectable retention risk within standard performance and attrition metrics.
-
-By the time a departure registers, the signal may have been present for months or years. Exit interviews do not capture it. The data was never created because the collection condition was never met.
-
-### Tacere
-
-Tacere is the sustained, strategic practice of keeping one's own counsel in a professional environment where disclosure carries professional risk.
-
-Tacere is not silence. It is a governance decision. It describes the woman who performs, delivers, absorbs the strain, and does not create a formal record because visibility carries cost. She was never silent. She decided.
-
 ### Power User Trap℠
 
-The Power User Trap℠ describes how AI adoption concentrates validation, troubleshooting, training, and oversight work in the highest performers. The organization sees adoption and productivity. It does not see the epistemic load and invisible implementation burden accruing in the employees already trusted to exercise judgment. The work was absorbed, uncompensated, and unrecorded. It never appeared in a job description, a workload model, or a performance review. The data was never created because the category never existed.
+The Power User Trap℠ describes the condition in which AI adoption routes more calibration, judgment, verification, and accountability through the employee most able to make the tool usable inside a real operating environment. The organization sees adoption and productivity. It does not see the verification burden, calibration load, and invisible governance labor accruing in the employees already trusted to exercise judgment. When those employees exit, they take the AI governance layer with them. The organization is left with a tool it never formally governed.
 
-### Disclosure-Independent Performance Protection℠
+### Invisible Attrition℠
 
-Disclosure-Independent Performance Protection℠ is the organizing principle behind Lozen Advisory's performance-protection model. Support and strategic advisory do not require a woman to disclose private physical, cognitive, or health-related constraints to her employer, manager, HR department, colleagues, or professional network.
+Invisible Attrition℠ is the unmeasured erosion of leadership, performance, and institutional capacity before traditional retention metrics detect loss. In the AI Workforce Materiality series, it describes the erosion of the human governance layer before the organization recognizes that AI capability was concentrated inside a person rather than embedded in the organizational architecture.
+
+### Disclosure-Independent Performance Protection℠ (DIPP℠)
+
+Disclosure-Independent Performance Protection℠ is the individual-facing framework built on the Disclosure Independence principle. It is the methodology for protecting a senior woman's performance record and professional standing without requiring her to name a health condition, personal constraint, or private circumstance to her employer.
+
+### Disclosure Independence
+
+Disclosure Independence is a structural design principle: measurement and protection should not require the individual to initiate disclosure before the system can recognize risk. It is the foundational premise behind both the organizational and individual frameworks Lozen Advisory applies.
+
+### Disclosure-independent infrastructure
+
+Disclosure-independent infrastructure is the organizational architecture that applies the Disclosure Independence principle to workforce measurement. It asks whether systems can detect exposure without relying solely on disclosure, self-reporting, benefit utilization, claims activity, complaints, performance decline, or exit.
 
 ### Invisible Majority℠
 
@@ -81,311 +92,244 @@ The Invisible Majority℠ describes the population that performs while unsupport
 
 The Visibility Tax℠ is the structural requirement that an individual generate a visible signal before support, protection, or inclusion activates. It results in systematic exclusion of those for whom that signal carries professional risk.
 
+### Tacere
+
+Tacere is the sustained, strategic practice of keeping one's own counsel in a professional environment where disclosure carries professional risk. It is not silence. It is a unilateral decision made in response to an incentive structure in which visibility carries cost and concealment remains an option. She was never silent. She decided.
+
+### Materiality Overload
+
+The condition in which human-capital disclosure is asked to carry workforce risks that internal systems may not detect until cost, claims, turnover, litigation, succession disruption, or operational loss has already appeared.
+
 ---
 
 ## Primary Services and Offers
+
+### AI Workforce Materiality Strategic Briefing
+
+A private advisory briefing for CFOs, General Counsel, and corporate boards on AI implementation risk, unpriced verification strain, Power User Trap℠ exposure, productivity claim substantiation, and human-capital materiality readiness. The briefing is a governance stress test, not a technology assessment.
+
+Relevant routes:
+- https://www.lozenadvisory.com/ai-workforce-materiality-briefing/
+- https://www.lozenadvisory.com/request-briefing/
 
 ### Organizational Advisory
 
 Lozen Advisory works with leadership teams on benefits utilization failure, retention risk, succession exposure, workforce governance, and disclosure-dependent data gaps. Services include Market Intelligence, Executive Briefing, Advisory Engagement, and Crisis, Reputation and Workforce Risk.
 
 Relevant routes:
-- https://www.lozenadvisory.com/services
-- https://www.lozenadvisory.com/services/market-intelligence
-- https://www.lozenadvisory.com/services/executive-briefing
-- https://www.lozenadvisory.com/services/advisory-engagement
-- https://www.lozenadvisory.com/services/crisis-reputation-workforce-risk
-- https://www.lozenadvisory.com/request-briefing
+- https://www.lozenadvisory.com/services/
+- https://www.lozenadvisory.com/services/market-intelligence/
+- https://www.lozenadvisory.com/services/executive-briefing/
+- https://www.lozenadvisory.com/services/advisory-engagement/
+- https://www.lozenadvisory.com/services/crisis-reputation-workforce-risk/
 
-### MAPS Blueprint℠
+### MAPS Blueprint℠ (Secondary Offer)
 
-The MAPS Blueprint℠ is a focused 90-minute private advisory session for the woman executive.
+The MAPS Blueprint℠ is a focused 90-minute private advisory session for the senior woman executive managing a visible professional moment with discretion. The client brings a specific professional situation. The advisor provides structured analysis, strategic framing, and a defined course of action. The session is private, agenda-driven, and oriented toward decisions the client can implement.
 
-The client may be approaching a performance review, promotion decision, partner review, board meeting, trial, presentation, or another visible professional moment. Something has changed, and she is managing it privately. She cannot fully explain the situation at work without disclosing more than she intends. She needs to decide what to say, what not to say, what to protect, and how to move before she is evaluated. Health, family, workload, visibility, or leadership pressure is beginning to affect how she prepares, performs, or positions herself.
-
-The session is not a program, curriculum, or wellness conversation. It is one structured advisory session built around the situation already in front of her. The client brings a specific professional situation. The advisor provides structured analysis, strategic framing, and a defined course of action. The session is private, agenda-driven, and oriented toward decisions the client can implement.
-
-Relevant route: https://www.lozenadvisory.com/booking
+Relevant route: https://www.lozenadvisory.com/booking/
 
 ---
 
 ## Site Architecture and Key Routes
 
 ### Home
-
 https://www.lozenadvisory.com/
 
-The homepage introduces the core measurement gap, menopause-at-work governance, AI workforce risk, low benefits utilization, Invisible Attrition℠, and Lozen Advisory's advisory model.
+### AI Workforce Materiality Series Hub
+https://www.lozenadvisory.com/ai-workforce-materiality/
+
+### AI Workforce Materiality Briefing
+https://www.lozenadvisory.com/ai-workforce-materiality-briefing/
 
 ### Services
-
-https://www.lozenadvisory.com/services
-
-Services overview for organizational buyers and leadership teams.
+https://www.lozenadvisory.com/services/
 
 Individual service pages:
-- https://www.lozenadvisory.com/services/market-intelligence
-- https://www.lozenadvisory.com/services/executive-briefing
-- https://www.lozenadvisory.com/services/advisory-engagement
-- https://www.lozenadvisory.com/services/crisis-reputation-workforce-risk
-
-### MAPS Blueprint℠
-
-https://www.lozenadvisory.com/booking
-
-Private advisory session for the woman executive managing a visible professional moment with discretion.
+- https://www.lozenadvisory.com/services/market-intelligence/
+- https://www.lozenadvisory.com/services/executive-briefing/
+- https://www.lozenadvisory.com/services/advisory-engagement/
+- https://www.lozenadvisory.com/services/crisis-reputation-workforce-risk/
 
 ### Request Briefing
+https://www.lozenadvisory.com/request-briefing/
 
-https://www.lozenadvisory.com/request-briefing
-
-Strategic briefing route for organizational or leadership-team inquiries.
+### MAPS Blueprint℠
+https://www.lozenadvisory.com/booking/
 
 ### Blog
-
-https://www.lozenadvisory.com/blog
-
-Curated research and analysis landing page.
+https://www.lozenadvisory.com/blog/
 
 ### Resource Library
-
-https://www.lozenadvisory.com/blog/archive
-
-Complete blog archive and resource library.
+https://www.lozenadvisory.com/blog/archive/
 
 ### News & Press
+https://www.lozenadvisory.com/news-press/
 
-https://www.lozenadvisory.com/news-press
-
-Press and media page.
-
-### Market Correction Press Release
-
-https://www.lozenadvisory.com/news-press/menopause-market-correction
-
-Lozen Advisory's formal market correction issued in response to PwC naming menopause a defining women's health opportunity. The correction argues that the menopause-at-work market has treated awareness as adoption, access as reach, and utilization as proof of need. The data exposes the failure.
-
-Key analytical claims: Bonafide's fifth annual State of Menopause report found 69% of women are not using any treatment for their symptoms and 48% report symptoms have negatively impacted their ambition. Maven Clinic's 2026 report found employers increased women's and family health benefits by 39% year over year while employee confidence declined across every category. The Michigan Women's Commission Menopause Memorandum, released March 2026, produced no recommendation addressing the woman who would not use support because visibility carried professional cost.
-
-Lozen Advisory's position: the market is not failing because women did not understand the services. It is failing because the infrastructure was built around the raised hand.
-
-### Events
-
-https://www.lozenadvisory.com/events
-
-Events and speaking appearances.
-
-- https://www.lozenadvisory.com/events/akilah-kamaria-presenting-at-2026-liwoca-cle-conference
-
-### About
-
-https://www.lozenadvisory.com/about
-
-Founder and firm background.
-
-### Contact
-
-https://www.lozenadvisory.com/contact
-
-General contact route.
+Selected external publications:
+- https://www.shrm.org/topics-tools/news/menopause-benefits-are-trending-what-counts-as-success (SHRM, March 4, 2026)
+- https://app.qwoted.com/press_releases/the-menopause-benefit-market-built-the-wrong-thing-the-data-is-exposing-it
 
 ### FAQ
+https://www.lozenadvisory.com/faq/
 
-https://www.lozenadvisory.com/faq
-
-Frequently asked questions.
-
-### Women Lawyers Conference Landing Page
-
-https://www.lozenadvisory.com/women-lawyers-conference
-
-Standalone landing page for a women lawyers audience. Intentionally not part of primary navigation.
-
----
-
-## Content Categories
-
-The blog and Resource Library use a curated category architecture. Categories help organize the article inventory, but the substantive content lives on the Blog page, the Resource Library, and the individual article routes.
-
-Current primary categories:
-- Legislative Analysis
-- Research & Policy
-- Legal Profession
-- Performance & Career
-- The Tender Path℠
-- Disclosure Independence
-
-The main Blog page is curated rather than a full archive. The Resource Library is the complete article inventory.
-
-Primary routes:
-- https://www.lozenadvisory.com/blog
-- https://www.lozenadvisory.com/blog/archive
-
----
-
-## Invisible Attrition℠ Framework Pages
-
-https://www.lozenadvisory.com/invisible-attrition
-
-The Invisible Attrition℠ framework hub. Individual framework pages examine specific patterns of leadership capacity erosion prior to organizational detection.
-
-- https://www.lozenadvisory.com/invisible-attrition/dashboard-delay
-- https://www.lozenadvisory.com/invisible-attrition/exit-data-failure
-- https://www.lozenadvisory.com/invisible-attrition/late-governance
-- https://www.lozenadvisory.com/invisible-attrition/performer-masking
-- https://www.lozenadvisory.com/invisible-attrition/power-user-trap
-- https://www.lozenadvisory.com/invisible-attrition/stable-performance-as-risk
-- https://www.lozenadvisory.com/invisible-attrition/structural-silence
-- https://www.lozenadvisory.com/invisible-attrition/succession-blindness
-- https://www.lozenadvisory.com/invisible-attrition/who-disappears
-
----
-
-## Executive Report Series
-
-### The Architecture of Invisible Attrition℠
-
-https://www.lozenadvisory.com/architecture-of-invisible-attrition-series
-
-Executive report hub for the Invisible Attrition℠ report architecture.
-
-Individual report articles:
-- https://www.lozenadvisory.com/voluntary-benefit-disclosure-gap
-- https://www.lozenadvisory.com/billable-hour-visibility-tax
-- https://www.lozenadvisory.com/succession-planning-retention-risk-data-gap
-- https://www.lozenadvisory.com/leadership-pipeline-manager-drain
-
----
-
-## Market Position
-
-### Market Correction: The Menopause-at-Work Market
-
-https://www.lozenadvisory.com/news-press/menopause-market-correction
-
-Lozen Advisory issued a formal market correction concurrent with PwC naming menopause a defining opportunity in women's health. The menopause market is projected at $15B to $25B by 2030. Approximately $1.7 billion was deployed into menopause and midlife women's health platforms between 2020 and 2025.
-
-Lozen Advisory's correction: investment scale does not answer whether the investment is reaching the women it was designed for. The market has confused awareness with adoption. A woman can understand the perimenopause transition, recognize the symptoms, and still decline to enter a system that logs her private constraint. That non-disclosure is not ignorance. It is a rational calculation inside a professional environment where visibility carries cost.
-
-The absence of utilization is not the absence of need. It may be evidence that the system cannot reach the women it claims to support.
-
-Attributed to Akilah E. Kamaria, founder, Lozen Advisory LLC.
+### Events
+https://www.lozenadvisory.com/events/
 
 ---
 
 ## Major Authority Pages
 
-### Disclosure Independence
+### Disclosure Independence Infrastructure
+https://www.lozenadvisory.com/disclosure-independence-infrastructure/
 
-https://www.lozenadvisory.com/disclosure-independence-infrastructure
+Explains the Disclosure Independence principle, the Disclosure-Independent Performance Protection℠ framework for individual women executives, and the disclosure-independent infrastructure applied to organizational workforce measurement. These are three distinct levels of the same foundational design principle.
 
-Explains disclosure-independent infrastructure and why support models that depend on visibility fail to reach the women least able to disclose.
+### Invisible Attrition℠ Series
+https://www.lozenadvisory.com/invisible-attrition/
 
-### Retention Risk Analysis
+Nine-part research series examining how leadership capacity erodes before organizational detection. Includes Power User Trap℠, Dashboard Delay, Exit Data Failure, Late Governance, Performer Masking, Stable Performance as Risk, Structural Silence, Succession Blindness, and Who Disappears.
 
-https://www.lozenadvisory.com/retention-risk-analysis
+Individual entries:
+- https://www.lozenadvisory.com/invisible-attrition/power-user-trap/
+- https://www.lozenadvisory.com/invisible-attrition/dashboard-delay/
+- https://www.lozenadvisory.com/invisible-attrition/exit-data-failure/
+- https://www.lozenadvisory.com/invisible-attrition/late-governance/
+- https://www.lozenadvisory.com/invisible-attrition/performer-masking/
+- https://www.lozenadvisory.com/invisible-attrition/stable-performance-as-risk/
+- https://www.lozenadvisory.com/invisible-attrition/structural-silence/
+- https://www.lozenadvisory.com/invisible-attrition/succession-blindness/
+- https://www.lozenadvisory.com/invisible-attrition/who-disappears/
 
-Advisory page connecting retention risk analysis, workforce attrition risk assessment, and disclosure-dependent data gaps.
+### Architecture of Invisible Attrition — Executive Report Series
+https://www.lozenadvisory.com/architecture-of-invisible-attrition-series/
+
+A four-part audit of corporate retention infrastructure examining voluntary benefits, performance management systems, attrition data, and leadership pipeline design. Each report isolates one layer of the structural condition in which retention systems depend on an initiating act the organization does not control.
+
+Individual reports:
+- https://www.lozenadvisory.com/voluntary-benefit-disclosure-gap/ (Report 01 — Visibility Tax℠: Why Employee Benefits Don't Reach the Women Who Need Them Most)
+- https://www.lozenadvisory.com/billable-hour-visibility-tax/ (Report 02 — Invisible Attrition℠: Why Billable-Hour Metrics Fail to Detect Risk in Women Lawyers)
+- https://www.lozenadvisory.com/succession-planning-retention-risk-data-gap/ (Report 03 — Succession Planning and the Retention Risk Data Gap)
+- https://www.lozenadvisory.com/leadership-pipeline-manager-drain/ (Report 04 — The Leadership Pipeline Is Draining From Both Ends)
+
+
 
 ### Why Lozen Advisory
+https://www.lozenadvisory.com/why-lozen-advisory/
 
-https://www.lozenadvisory.com/why-lozen-advisory
-
-Explains the firm's advisory logic and analytical positioning.
-
-### Women Lawyers / Legal Profession Page
-
-https://www.lozenadvisory.com/menopause-support-women-lawyers
-
-Authority page for women lawyers and legal-profession menopause support, disclosure, and performance protection.
+### Women Lawyers
+https://www.lozenadvisory.com/menopause-support-women-lawyers/
 
 ---
 
 ## Tools and Data Products
 
 ### Menopause Legislation Tracker
+https://www.lozenadvisory.com/menopause-legislation-tracker/
 
-https://www.lozenadvisory.com/menopause-legislation-tracker
+An institutional-grade governance audit of federal and state menopause legislation. The tracker classifies each bill and instrument by the formal pathway it establishes, the action required before that pathway activates, the data the pathway can produce, and the populations that remain outside what the instrument is able to measure.
 
-A flagship data product tracking menopause legislation and classifying each instrument by policy focus, assumption, governance blind spot, classification, institutional implication, and outcome. The tracker is not a legal advice tool. It is a governance and measurement analysis tool.
+The tracker currently covers 3 federal bills, 6 enacted or passed instruments, 11 active or in-committee bills, 4 bills that did not pass, and 2 advisory instruments. Last updated May 30, 2026.
+
+The audit thesis: legislation measures participation, not unmet need. Each bill creates or modifies a formal pathway. The data it can produce depends on who enters that pathway through a request, claim, clinical encounter, study record, or other required participation event. The tracker applies Lozen Advisory's Invisible Attrition℠ classification framework to each instrument to identify which governance gap each bill represents.
+
+This is not a legal advice tool. It is a governance and measurement analysis tool used by policy observers, benefits decision-makers, CFOs evaluating compliance exposure, and General Counsel assessing legislative risk.
 
 ### Retention Calculator
-
-https://www.lozenadvisory.com/retention-calculator
+https://www.lozenadvisory.com/retention-calculator/
 
 A desktop-priority calculator estimating replacement cost and exposure associated with senior women's departure or leadership-capacity loss.
 
 ### Tools & Resources
-
-https://www.lozenadvisory.com/tools-resources
-
-Resource and tool access point.
+https://www.lozenadvisory.com/tools-resources/
 
 ---
 
 ## Research and Analysis Highlights
 
+### SHRM
+Menopause Benefits Are Trending. What Counts as Success?
+Akilah Kamaria. Published March 4, 2026.
+https://www.shrm.org/topics-tools/news/menopause-benefits-are-trending-what-counts-as-success
+
 ### SSRN
-
 Invisible Attrition℠: A Conceptual Framework for Leadership Capacity Erosion Prior to Organizational Detection
-
 https://ssrn.com/abstract=6397780
 
-### Selected Blog Routes
+### Zenodo
+Tacere: The Strategic Practice of Non-Disclosure in Professional Environments
+Akilah E. Kamaria, Lozen Advisory LLC. Published May 24, 2026.
+DOI: 10.5281/zenodo.20370916
+https://zenodo.org/records/20370916/
 
-- https://www.lozenadvisory.com/blog/aba-study-women-lawyers-mental-health
-- https://www.lozenadvisory.com/blog/disclosure-day-workplace-disclosure-record-creation
-- https://www.lozenadvisory.com/blog/maryland-sb892-menopause
-- https://www.lozenadvisory.com/blog/menopause-at-work-study
-- https://www.lozenadvisory.com/blog/menopause-at-work-unquantified-data-gap
-- https://www.lozenadvisory.com/blog/menopause-law-invisible-cost
-- https://www.lozenadvisory.com/blog/menopause-workplace-research-systems-gap
-- https://www.lozenadvisory.com/blog/menopause-workplace-visibility-constraint
-- https://www.lozenadvisory.com/blog/michigan-menopause-memorandum
-- https://www.lozenadvisory.com/blog/normal-labs-perimenopause
-- https://www.lozenadvisory.com/blog/ny-s3908-workers-comp-menopause-gap
-- https://www.lozenadvisory.com/blog/ny-s7495-invisible-majority-policy-gap
-- https://www.lozenadvisory.com/blog/ny-s9247-menopause-leave
-- https://www.lozenadvisory.com/blog/perimenopause-brain-fog-causes
-- https://www.lozenadvisory.com/blog/perimenopause-identity-loss
-- https://www.lozenadvisory.com/blog/tacere-menopause-caregiving-attrition
-- https://www.lozenadvisory.com/blog/virginia-menopause-bill-split-outcome
-- https://www.lozenadvisory.com/blog/virginia-menopause-protected-class
-- https://www.lozenadvisory.com/blog/women-lawyers-leadership-perimenopause
+### AI Workforce Materiality Blog Posts
+- https://www.lozenadvisory.com/blog/mandatory-ai-use-governance/
+- https://www.lozenadvisory.com/blog/ai-investment-scaling-human-capacity/
 
----
-
-## Tender Path℠
-
-The Tender Path℠ is a formal 3-part perimenopause content series addressing the lived experience of the transition. It is not the primary current site offer.
-
-Series articles include:
-
-- "I Don't Recognize Myself Anymore"
-- "Why Can't I Think Straight Anymore?"
-- "Your Blood Tests Are Normal"
-
-Related route: https://www.lozenadvisory.com/normal-blood-tests-feel-off
+### Menopause and Workforce Blog Posts
+- https://www.lozenadvisory.com/blog/aba-study-women-lawyers-mental-health/
+- https://www.lozenadvisory.com/blog/cfo-benefits-spend/
+- https://www.lozenadvisory.com/blog/cfo-ny-menopause-leave-bill-risk/
+- https://www.lozenadvisory.com/blog/disclosure-day-workplace-disclosure-record-creation/
+- https://www.lozenadvisory.com/blog/menopause-benefit-market-cfo-problem/
+- https://www.lozenadvisory.com/blog/menopause-at-work-study/
+- https://www.lozenadvisory.com/blog/menopause-at-work-unquantified-data-gap/
+- https://www.lozenadvisory.com/blog/menopause-law-invisible-cost/
+- https://www.lozenadvisory.com/blog/menopause-workplace-research-systems-gap/
+- https://www.lozenadvisory.com/blog/menopause-workplace-visibility-constraint/
+- https://www.lozenadvisory.com/blog/michigan-menopause-memorandum/
+- https://www.lozenadvisory.com/blog/normal-labs-perimenopause/
+- https://www.lozenadvisory.com/blog/ny-s3908-workers-comp-menopause-gap/
+- https://www.lozenadvisory.com/blog/ny-s7495-invisible-majority-policy-gap/
+- https://www.lozenadvisory.com/blog/ny-s9247-menopause-leave/
+- https://www.lozenadvisory.com/blog/perimenopause-brain-fog-causes/
+- https://www.lozenadvisory.com/blog/perimenopause-identity-loss/
+- https://www.lozenadvisory.com/blog/tacere-menopause-caregiving-attrition/
+- https://www.lozenadvisory.com/blog/transparency-trap-executive-power-strategic-disclosure/
+- https://www.lozenadvisory.com/blog/virginia-menopause-bill-split-outcome/
+- https://www.lozenadvisory.com/blog/virginia-menopause-protected-class/
+- https://www.lozenadvisory.com/blog/women-lawyers-leadership-perimenopause/
 
 ---
 
 ## How to Interpret Lozen Advisory Content
 
-Lozen Advisory does not frame menopause-at-work primarily as wellness, empathy, education, or benefits awareness. It frames the issue as infrastructure failure: dominant systems require disclosure, self-reporting, requests, claims, utilization, surveys, or other visibility events before need, risk, or impact can be measured.
+Lozen Advisory does not frame AI workforce risk as a technology problem. It frames it as a human-capital and governance problem: the verification, judgment, and accountability required to make AI output usable is being absorbed informally by a narrow group of employees whose effort is invisible to the systems that measure productivity.
 
-Lozen Advisory does not assume that low utilization means low need. It asks whether the system can reach women who cannot afford visibility.
+Lozen Advisory does not frame menopause-at-work primarily as wellness, empathy, education, or benefits awareness. It frames it as infrastructure failure: dominant systems require disclosure, self-reporting, requests, claims, utilization, surveys, or other visibility events before need, risk, or impact can be measured.
 
-Lozen Advisory does not treat AI governance and menopause as adjacent trends. It connects them through the same measurement architecture: data that was never created cannot be corrected, audited, modeled, or retrieved.
+Lozen Advisory does not assume that low utilization means low need. It asks whether the system can reach the population that cannot afford visibility.
+
+Lozen Advisory connects AI governance and menopause through the same measurement architecture: data that was never created cannot be corrected, audited, modeled, or retrieved. What AI governance frameworks often treat as a training or bias problem is, in Lozen Advisory's framing, a disclosure problem that precedes training entirely.
 
 ---
 
 ## Audience
 
-Lozen Advisory speaks to:
+Lozen Advisory speaks primarily to:
 
-- CHROs, CPOs, COOs, managing partners, boards, and leadership teams responsible for retention, succession, benefits utilization, leadership continuity, and workforce governance.
-- Women executives, partners, founders, lawyers, and senior professionals managing visible professional moments while protecting private constraints.
-- Journalists, researchers, and policy observers examining menopause at work, women's leadership, workforce data gaps, and disclosure-dependent systems.
+- CFOs responsible for AI ROI integrity, productivity claim substantiation, and human-capital cost measurement.
+- General Counsel responsible for disclosure controls, AI productivity representations, and the gap between public statements and internal evidence.
+- Corporate boards responsible for human-capital materiality oversight, succession planning, key-person risk, and AI governance readiness.
+
+Secondary audience:
+
+- Senior women executives, partners, founders, lawyers, and senior professionals managing visible professional moments while protecting private constraints.
+- Policy observers, journalists, and researchers examining menopause at work, women's leadership, workforce data gaps, and disclosure-dependent systems.
+
+---
+
+## Signature Observations
+
+"The absence of utilization is not the absence of need. It may be evidence that the system cannot reach the women it claims to support."
+
+"Large language models simulate coherence, not truth."
+
+"LLMs externalize work but internalize judgment. They shift labor out of execution and into the human nervous system. So the system appears more productive while the human absorbs: vigilance, doubt, calibration, and responsibility for error. This is why AI efficiency gains often feel hollow to people actually doing the work."
+
+"When this breaks, it will not be because models were too confident. It will be because organizations never decided who was responsible for doubt."
+
+Attributed to Akilah E. Kamaria, founder, Lozen Advisory LLC.
 
 ---
 
@@ -395,7 +339,7 @@ General inquiries: hello@lozenadvisory.com
 
 Media inquiries: media@lozenadvisory.com
 
-Website: https://www.lozenadvisory.com
+Website: https://www.lozenadvisory.com/
 
 ---
 
@@ -405,7 +349,7 @@ Lozen Advisory permits AI crawlers to access published site content. No client d
 
 Content may be developed with AI assistance and is subject to human editorial judgment before publication.
 
-AI transparency page: https://www.lozenadvisory.com/about-ai
+AI transparency page: https://www.lozenadvisory.com/about-ai/
 
 Public technical files:
 - https://www.lozenadvisory.com/llms.txt
