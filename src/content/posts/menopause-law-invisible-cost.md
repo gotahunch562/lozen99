@@ -1,20 +1,31 @@
 ---
-title: 'Menopause in Law: Visible Performance vs Invisible Cost'
+title: "Menopause in Law: Visible Performance vs Invisible Cost"
 slug: menopause-law-invisible-cost
-pubDate: &id001 2026-04-07
-datePublished: *id001
+pubDate: 2026-04-07
+datePublished: 2026-04-07
 dateModified: 2026-05-05
 category: Legal Profession
-excerpt: The legal profession evaluates authority through consistency and steadiness of judgment. For the woman attorney, perimenopause arrives during her most consequential leadership window, creating a performance risk that existing law firm frameworks are not built to see.
-description: Women leave legal practice at higher rates during the associate-to-partner transition—the same window as perimenopause. Explore why traditional wellness programs fail women lawyers and the role of Tacere in the partnership pipeline.
-metaDescription: Women leave legal practice at higher rates during the associate-to-partner transition—the same window as perimenopause. Explore why traditional wellness programs fail women lawyers and the role of Tacere in the partnership pipeline.
+excerpt: The legal profession evaluates authority through consistency and
+  steadiness of judgment. For the woman attorney, perimenopause arrives during
+  her most consequential leadership window, creating a performance risk that
+  existing law firm frameworks are not built to see.
+description: Women leave legal practice at higher rates during the
+  associate-to-partner transition—the same window as perimenopause. Explore why
+  traditional wellness programs fail women lawyers and the role of Tacere in the
+  partnership pipeline.
+metaDescription: Women leave legal practice at higher rates during the
+  associate-to-partner transition—the same window as perimenopause. Explore why
+  traditional wellness programs fail women lawyers and the role of Tacere in the
+  partnership pipeline.
 image:
   url: /src/images/blog/menopause-law-women-lawyers-performance-leadership.webp
-  alt: "Women lawyers, associates, and partners in professional attire representing leadership and career progression in legal practice."
+  alt: Women lawyers, associates, and partners in professional attire representing
+    leadership and career progression in legal practice.
 heroImage: /src/images/blog/menopause-law-women-lawyers-performance-leadership.webp
-heroAlt: "Women lawyers, associates, and partners in professional attire representing leadership and career progression in legal practice."
+heroAlt: Women lawyers, associates, and partners in professional attire
+  representing leadership and career progression in legal practice.
 tags:
-- Legal Profession
+  - Legal Profession
 spineDestination: menopause-support-women-lawyers
 draft: false
 isFeatured: false
@@ -33,11 +44,9 @@ That trajectory, from associate to partner to board candidate, runs through the 
 
 Perimenopause does not announce itself with a date. It arrives across a period of years, often during the most consequential stage of a woman lawyer's career, and it does not arrive on the same timeline for every woman. For some it begins earlier than clinical models predict. For others it arrives without a transition at all, as surgical menopause following a hysterectomy or other procedure can begin immediately, at any age, with no warning period. For many, it coincides with:
 
-The associate-to-partner transition
-
-The origination threshold
-
-The leadership visibility window
+- The associate-to-partner transition
+- The origination threshold
+- The leadership visibility window
 
 The "menopause at work" market has produced cooling rooms, flexible scheduling, manager toolkits, peer support networks, and employer designation programs. Every one of those solutions requires a woman to enter a visible support pathway, and in legal practice that is the pathway she has already decided not to take.
 
@@ -57,11 +66,9 @@ The legal profession evaluates authority through consistency of performance and 
 
 The result is a disclosure calculation that most women lawyers complete privately, quickly, and without external input. They assess what disclosure would cost:
 
-Perception of diminished capacity
-
-Risk of being managed out of high-profile cases
-
-Conversation about health leads to a PIP or becomes part of the informal narrative that shapes the next performance review
+- Perception of diminished capacity
+- Risk of being managed out of high-profile cases
+- Conversation about health leads to a PIP or becomes part of the informal narrative that shapes the next performance review
 
 They weigh that against what disclosure might provide and decide against it. The legal career they have spent years building does not allow the visibility that disclosure requires.
 
@@ -103,15 +110,19 @@ The attorneys managing the most significant pressures in the most performance-dr
 
 The report will not reach:
 
-The attorney billing at full rate who did not complete a wellness survey
-
-The partner who managed privately and left without an exit interview
-
-The board candidate who calculated that participation carried professional risk
+- The attorney billing at full rate who did not complete a wellness survey
+- The partner who managed privately and left without an exit interview
+- The board candidate who calculated that participation carried professional risk
 
 What is already observable is this. Women leave legal practice at measurably higher rates than men at the senior associate and early partner level. The departures are concentrated in the career stage that overlaps with perimenopause and menopause. The profession has no systematic way to distinguish between departures driven by life choice and departures driven by an unmanaged physiological transition that the environment made it professionally unsafe to discuss.
 
 That distinction matters. Not because it changes what happened, but because understanding it is the only way to change what happens next.
+
+## Commission a Strategic Briefing
+
+Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
+
+[Commission a Strategic Briefing](/request-briefing/)
 
 ---
 
