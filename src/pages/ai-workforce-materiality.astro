@@ -19,8 +19,8 @@ const heroImageAlt =
 
 interface PlannedSeriesItem {
   number: string;
+  seriesOrder: number;
   title: string;
-  plannedSlug: string;
   summary: string;
 }
 
@@ -30,76 +30,44 @@ interface SeriesItem extends PlannedSeriesItem {
   href?: string;
 }
 
+const aiSeriesKey = "ai-workforce-materiality";
+
 const plannedSeriesItems: PlannedSeriesItem[] = [
   {
     number: "01",
+    seriesOrder: 1,
     title: "Mandatory AI Use Is Not AI Governance",
-    plannedSlug: "mandatory-ai-use-governance",
-    summary:
-      "Why executive pressure to use AI can create workforce exposure when companies measure adoption before they measure judgment, verification, and accountability.",
+    summary: "Adoption pressure.",
   },
   {
     number: "02",
+    seriesOrder: 2,
     title: "AI Investment Is Scaling Faster Than Human Capacity",
-    plannedSlug: "ai-investment-scaling-human-capacity",
-    summary:
-      "How capital allocation pressure can push organizations to fund AI faster than the workforce systems required to convert that investment into durable operating value.",
+    summary: "Capital pressure.",
   },
   {
     number: "03",
-    title: "Generation Is Fast. Governance Is Not.",
-    plannedSlug: "generation-is-fast-governance-is-not",
-    summary:
-      "Why AI output may appear immediate while verification, judgment, risk assessment, and accountability remain human, expert, and largely unmeasured.",
+    seriesOrder: 3,
+    title: "LLM Generation Is Fast. Governance Is Not.",
+    summary: "Governance mechanism.",
   },
   {
     number: "04",
-    title: "The CFO Problem With AI ROI",
-    plannedSlug: "cfo-problem-ai-roi",
-    summary:
-      "Why AI efficiency claims can overstate returns when they omit the hidden labor required to verify, correct, contextualize, and stabilize machine output.",
+    seriesOrder: 4,
+    title: "The Missing Cost Base in AI ROI",
+    summary: "CFO article. Narrower, sharper, less repetitive.",
   },
   {
     number: "05",
+    seriesOrder: 5,
     title: "AI Productivity Claims Are Becoming a Disclosure-Control Problem",
-    plannedSlug: "ai-productivity-claims-disclosure-control-problem",
-    summary:
-      "Why public claims about AI-driven productivity, cost reduction, and operational transformation require internal evidence beyond tool use and adoption metrics.",
+    summary: "GC article. Shadow AI, substantiation, formal records.",
   },
   {
     number: "06",
-    title: "The Materiality Overload Crisis in Form 10-K Human Capital Disclosures",
-    plannedSlug: "materiality-overload-form-10-k-human-capital-disclosures",
-    summary:
-      "How the human-capital disclosure category is being asked to carry workforce risks that internal systems may not detect, quantify, or explain before loss appears.",
-  },
-  {
-    number: "07",
-    title: "AI Risk Factors Are Expanding Faster Than Human-Capital Detection Systems",
-    plannedSlug: "ai-risk-factors-human-capital-detection-systems",
-    summary:
-      "Why AI risk disclosures may expand faster than the workforce measurement systems needed to detect the human-capital exposure created by AI adoption.",
-  },
-  {
-    number: "08",
-    title: "When AI Adoption Becomes Key-Person Risk",
-    plannedSlug: "ai-adoption-key-person-risk",
-    summary:
-      "How AI capability can concentrate inside the power users who make tools usable, creating continuity, succession, and operating-resilience exposure.",
-  },
-  {
-    number: "09",
-    title: "Why AI Workforce Risk Requires Disclosure-Independent Measurement",
-    plannedSlug: "ai-workforce-risk-disclosure-independent-measurement",
-    summary:
-      "Why standard workforce systems may miss AI-related exposure when risk forms before people disclose strain, use formal pathways, trigger claims, or exit.",
-  },
-  {
-    number: "10",
+    seriesOrder: 6,
     title: "Human Capital Materiality Readiness Before the 10-K",
-    plannedSlug: "human-capital-materiality-readiness-before-10-k",
-    summary:
-      "What CFOs, General Counsel, and boards need to understand before AI workforce exposure becomes part of annual-reporting judgment.",
+    summary: "Conversion article.",
   },
 ];
 
@@ -141,17 +109,26 @@ const formatPublishedDate = (value: Date | string) =>
     timeZone: "UTC",
   });
 
-const publishedPosts = await getCollection("posts", ({ data }) => data.draft !== true);
-
-const publishedPostsBySlug = new Map(
-  publishedPosts.map((post) => {
-    const slug = normalizeSlug(post.data.slug || post.id);
-    return [slug, post];
-  }),
+const publishedPosts = await getCollection(
+  "posts",
+  ({ data }) =>
+    data.draft !== true &&
+    data.seriesKey === aiSeriesKey &&
+    typeof data.seriesOrder === "number",
 );
 
+const publishedPostsBySeriesOrder = new Map<number, (typeof publishedPosts)[number]>();
+
+for (const post of publishedPosts) {
+  const seriesOrder = post.data.seriesOrder;
+
+  if (typeof seriesOrder === "number" && !publishedPostsBySeriesOrder.has(seriesOrder)) {
+    publishedPostsBySeriesOrder.set(seriesOrder, post);
+  }
+}
+
 const seriesItems: SeriesItem[] = plannedSeriesItems.map((item) => {
-  const matchingPost = publishedPostsBySlug.get(item.plannedSlug);
+  const matchingPost = publishedPostsBySeriesOrder.get(item.seriesOrder);
 
   if (!matchingPost) {
     return {
@@ -302,7 +279,7 @@ const seriesJsonLd = createCreativeWorkSeriesJsonLd({
   </section>
 
   <section class="series-section">
-    <h2>Generation Is Fast. Governance Is Not.</h2>
+    <h2>LLM Generation Is Fast. Governance Is Not.</h2>
 
     <p>
       Between generation and operational reliance sits a governance layer: verification, judgment, reframing, risk assessment, exception handling, and accountability. That layer requires human expertise and domain knowledge. It requires the ability to know when an output sounds right but is wrong, when a claim is plausible but incomplete, and when a document appears finished while still carrying institutional risk.
@@ -364,7 +341,7 @@ const seriesJsonLd = createCreativeWorkSeriesJsonLd({
   <section class="series-roadmap" aria-label="Series roadmap">
     <div class="series-roadmap__intro">
       <h2>Series Roadmap</h2>
-      <p>Planned sequence for this series. Articles will be linked automatically when published.</p>
+      <p>Current sequence for this series. Articles are linked automatically when published with the matching series metadata.</p>
     </div>
 
     <div class="series-accordion">
