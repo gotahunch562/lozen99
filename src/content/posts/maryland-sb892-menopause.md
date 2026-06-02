@@ -64,33 +64,23 @@ The limits of that reach operate on two dimensions.
 
 The first is the market that formed in the absence of clinical care. Demand did not disappear. It reorganized into a parallel market that captures women before they ever enter the clinical system. That market is reinforced through repeated exposure and algorithmic targeting once a woman engages even once. As Dr. Nanette Santoro, an OB-GYN professor at the University of Colorado Anschutz, told the Associated Press in March 2026, the marketing has become very aggressive and pervasive.
 
-Better-trained providers do not displace that market. They enter into competition with it, including the systems that have already shaped patient perception and demand.
-
-The second dimension is structural. Engagement is not automatic. It is initiated and carried by the patient.
+Better-trained providers do not displace that market. They enter into competition with it, including the systems that have already shaped patient perception and demand. The second dimension is structural. Engagement is not automatic, it is initiated and carried by the patient.
 
 Evidence shows menopause care is often prompted by patient request rather than integrated into standard care pathways. Women must recognize symptoms, decide to act, and persist through incomplete or dismissive encounters. Care is frequently siloed. Clinicians may attribute symptoms to other causes before considering menopause. Across studies, dissatisfaction with care remains high even among women with access.
 
-The burden of navigation sits with the woman. SB892's training provision is designed to improve what she encounters when she engages. It does not reduce what it costs her to get there.
-
-For some women, that cost is informational. For others, it is experiential, shaped by prior interactions with the healthcare system.
+The burden of navigation sits with the woman. SB892's training provision is designed to improve what she encounters when she engages. It does not reduce what it costs her to get there. For some women, that cost is informational. For others, it is experiential, shaped by prior interactions with the healthcare system.
 
 For Black women, that barrier is compounded. Preliminary findings from the [Black Women's Health Imperative](https://powerinthepause.bwhi.org/) survey of more than 1,500 U.S.-based Black women found that:
 
-52% did not know which medical recommendations to follow
-
-46% lacked adequate information to manage symptoms
-
-43% reported discrimination or unfair treatment when seeking care
+- 52% did not know which medical recommendations to follow
+- 46% lacked adequate information to manage symptoms
+- 43% reported discrimination or unfair treatment when seeking care
 
 The population studied was educated, insured, and professionally active. Access to a system and confidence in that system are not the same condition.
 
-A woman who anticipates dismissal or inequitable treatment has already made a calculation about whether engagement is worth the cost.
+A woman who anticipates dismissal or inequitable treatment has already made a calculation about whether engagement is worth the cost. That calculation is where the limits of SB892 become visible.
 
-That calculation is where the limits of SB892 become visible.
-
-The legislation improves training. It expands coverage. It strengthens the clinical system at the point of care. But it does not alter the condition that governs entry into that system.
-
-The decision to engage is not neutral. It is a cost calculation shaped by information, experience, and professional context. SB892 operates only after that calculation has been made.
+The legislation improves training. It expands coverage. It strengthens the clinical system at the point of care. But it does not alter the condition that governs entry into that system. The decision to engage is not neutral. It is a cost calculation shaped by information, experience, and professional context. SB892 operates only after that calculation has been made.
 
 That pre-engagement condition is where Invisible Attrition℠ begins: the erosion of performance and capacity that occurs before any formal system detects it, and before any legislative framework is able to respond.
 
