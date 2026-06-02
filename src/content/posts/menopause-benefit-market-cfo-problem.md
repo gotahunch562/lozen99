@@ -24,8 +24,6 @@ tags:
 draft: false
 isFeatured: false
 ---
-# The Menopause Benefit Market Is Running Into the CFO Problem
-
 Menopause in the workplace has entered a different phase.
 
 PwC frames menopause as a growth market, and the benefits market is beginning to follow that signal. Dedicated menopause benefits are being positioned as a workforce, retention, and women's health opportunity. However, that market narrative is now colliding with a less convenient financial reality: employers are evaluating new health-benefit offerings in a cost environment that demands proof of value.
