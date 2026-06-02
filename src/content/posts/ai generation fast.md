@@ -23,8 +23,8 @@ heroImage: /src/images/blog/indian_woman_worry.avif
 heroAlt: Power user of AI, woman experiencing the cognitive stress of working with LLM's
 tags:
   - Power User Trap
-draft: true
-isFeatured: false
+draft: false
+isFeatured: true
 ---
 Large language models (AI) generate output in seconds. Deciding whether to rely on that output for decision making takes considerably longer.
 
