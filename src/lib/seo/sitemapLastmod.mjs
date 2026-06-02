@@ -89,8 +89,18 @@ function getBlogLastmodMap() {
 
 const blogLastmodMap = getBlogLastmodMap();
 
+const excludedSitemapUrls = new Set([
+  `${SITE_URL}/disclosure-independence-work-infrastructure/`,
+]);
+
+
 export function serializeSitemapItem(item) {
   const normalizedUrl = item.url.endsWith("/") ? item.url : `${item.url}/`;
+
+  if (excludedSitemapUrls.has(normalizedUrl)) {
+    return undefined;
+  }
+
   const lastmod = blogLastmodMap.get(normalizedUrl);
 
   if (lastmod) {
