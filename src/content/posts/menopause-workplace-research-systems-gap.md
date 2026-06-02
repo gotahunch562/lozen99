@@ -1,20 +1,31 @@
 ---
-title: 'Menopause Workplace Research: The Systems Gap'
+title: "Menopause Workplace Research: The Systems Gap"
 slug: menopause-workplace-research-systems-gap
-pubDate: &id001 2026-04-09
-datePublished: *id001
+pubDate: 2026-04-09
+datePublished: 2026-04-09
 dateModified: 2026-05-05
 category: Research & Policy
-excerpt: 'The announcement of a new menopause workplace research center highlights a significant structural gap: "workplace impact" is being treated as an extension of health research rather than a function of organizational behavior and labor economics.'
-description: A new menopause research center signals progress, but health-based models cannot measure workplace systems. Discover why the field lacks the organizational disciplines to track Invisible Attrition℠.
-metaDescription: A new menopause research center signals progress, but health-based models cannot measure workplace systems. Discover why the field lacks the organizational disciplines to track Invisible Attrition℠.
+excerpt: 'The announcement of a new menopause workplace research center
+  highlights a significant structural gap: "workplace impact" is being treated
+  as an extension of health research rather than a function of organizational
+  behavior and labor economics.'
+description: A new menopause research center signals progress, but health-based
+  models cannot measure workplace systems. Discover why the field lacks the
+  organizational disciplines to track Invisible Attrition℠.
+metaDescription: A new menopause research center signals progress, but
+  health-based models cannot measure workplace systems. Discover why the field
+  lacks the organizational disciplines to track Invisible Attrition℠.
 image:
   url: /src/images/blog/Problem_of_No-Signal_Attrition_in_Menopause.webp
-  alt: "Woman executive in a blush suit walking through a corporate corridor lined with digital panels reading NO SIGNAL, IDENTITY NOT FOUND, and NO DATA AVAILABLE."
+  alt: Woman executive in a blush suit walking through a corporate corridor lined
+    with digital panels reading NO SIGNAL, IDENTITY NOT FOUND, and NO DATA
+    AVAILABLE.
 heroImage: /src/images/blog/Problem_of_No-Signal_Attrition_in_Menopause.webp
-heroAlt: "Woman executive in a blush suit walking through a corporate corridor lined with digital panels reading NO SIGNAL, IDENTITY NOT FOUND, and NO DATA AVAILABLE."
+heroAlt: Woman executive in a blush suit walking through a corporate corridor
+  lined with digital panels reading NO SIGNAL, IDENTITY NOT FOUND, and NO DATA
+  AVAILABLE.
 tags:
-- Research & Policy
+  - Research & Policy
 spineDestination: retention-risk-analysis
 draft: false
 isFeatured: false
@@ -23,7 +34,7 @@ A new menopause workplace research center has been announced. It signals progres
 
 The center brings together expertise in communication, neuroscience, and public health. This composition is well-suited to study visibility, symptomatology, and population-level effects. It can establish prevalence, document cognitive and physiological changes, and quantify broad economic impact.
 
-However, it cannot, as currently structured, study menopause within work systems.
+However, it cannot, as currently structured, study [menopause within work systems](/blog/menopause-at-work-study/).
 
 ## Menopause Workplace Research Focuses on Health, Not Work Systems
 
@@ -31,11 +42,11 @@ However, it cannot, as currently structured, study menopause within work systems
 
 **Organizational behavior** defines how performance is interpreted inside firms, how evaluation systems translate output into ratings, promotion decisions, and advancement.
 
-Labor economics models career trajectories longitudinally: tracking earnings paths, promotion timing, and exit probabilities.
+**Labor economics** models career trajectories longitudinally: tracking earnings paths, promotion timing, and exit probabilities.
 
 **Management and decision science** examine how performance holds or degrades under constraint, including changes in decision latency, risk tolerance, and cognitive load.
 
-Without these disciplines, the workplace impact of menopause remains a claim rather than a measurable, operational construct.
+Without these disciplines, the [workplace impact of menopause](/blog/menopause-workplace-visibility-constraint/) remains a claim rather than a measurable, operational construct.
 
 ## Why Menopause Requires Organizational and Economic Measurement
 
@@ -43,11 +54,9 @@ The current research model can describe how menopause affects the workforce and 
 
 What is missing is the ability to define and detect how perimenopause manifests inside work systems:
 
-how performance is maintained or shifts
-
-how those shifts are interpreted by management
-
-when these factors produce measurable career outcomes
+- how performance is maintained or shifts
+- how those shifts are interpreted by management
+- when these factors produce measurable career outcomes
 
 Currently, there are no defined variables for this layer, no instrumentation inside organizations, and no framework for testing interventions against real-world performance data.
 
@@ -74,6 +83,12 @@ This creates a class of stakeholders with aligned financial interest and limited
 The field is expanding into the workplace without incorporating the organizational disciplines required to study it effectively. The result is research that establishes importance without establishing measurement.
 
 Until that changes, menopause at work will remain visible, but not operational. The [Northeastern research center announcement](https://news.northeastern.edu/2026/04/08/menopause-workplace-research-center/) is an important marker of field expansion; the remaining question is whether research can move from health visibility into organizational measurement.
+
+## Commission a Strategic Briefing
+
+Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
+
+[Commission a Strategic Briefing](/request-briefing/)
 
 Related Reading
 
