@@ -6,7 +6,7 @@ priceFrom: "Leadership Session"
 duration: "Focused advisory"
 image:
   url: "/src/images/services/executivebriefing.webp"
-  alt: "Executive advisory discussion"
+  alt: "Executive advisory discussion in a private setting"
 metaDescription: "Executive briefings for leaders assessing disclosure-dependent workforce risk, invisible attrition, benefits utilization, and succession exposure."
 ---
 

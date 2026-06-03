@@ -10,9 +10,9 @@ description: Virginia’s Governor signed targeted menopause protections but def
 metaDescription: Virginia’s Governor signed targeted menopause protections but deferred broader workplace bills to a study. Learn how this split decision affects employer compliance and disclosure.
 image:
   url: /src/images/blog/Virginia_Signs_Menopause_Protections_Into_Law.webp
-  alt: "Virginia Senate bills SB258 and SB790 laid across a leather portfolio with reading glasses and a red pen, annotated with analysis notes."
+  alt: "Virginia menopause bills annotated on a leather portfolio"
 heroImage: /src/images/blog/Virginia_Signs_Menopause_Protections_Into_Law.webp
-heroAlt: "Virginia Senate bills SB258 and SB790 laid across a leather portfolio with reading glasses and a red pen, annotated with analysis notes."
+heroAlt: "Virginia menopause bills annotated on a leather portfolio"
 tags:
 - Legislative Analysis
 spineDestination: menopause-legislation-tracker

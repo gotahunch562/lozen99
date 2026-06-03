@@ -11,7 +11,7 @@ metaDescription: Advisory engagement for organizations addressing
   performance protection.
 image:
   url: /src/images/services/client2.jpeg
-  alt: Strategic advisory meeting
+  alt: "Strategic advisory meeting with executive stakeholders"
 priceFrom: Ongoing Counsel
 duration: Strategic engagement
 isFeatured: false

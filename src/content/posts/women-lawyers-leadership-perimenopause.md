@@ -10,9 +10,9 @@ description: NAWL and the ABA are bringing menopause into the legal mainstream, 
 metaDescription: NAWL and the ABA are bringing menopause into the legal mainstream, but do these studies reach senior partners? Explore the tension between leadership visibility and perimenopause, and why discretion remains a strategic priority for women in law.
 image:
   url: /src/images/blog/board.webp
-  alt: senior partners in law firm
+  alt: "Senior law firm partners in a board meeting"
 heroImage: /src/images/blog/board.webp
-heroAlt: senior partners in law firm
+heroAlt: "Senior law firm partners in a board meeting"
 tags:
 - Legal Profession
 spineDestination: menopause-support-women-lawyers

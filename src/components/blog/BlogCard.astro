@@ -16,11 +16,12 @@ const getPostHref = (post: any) =>
   `/blog/${normalizeSlug(post.data.slug || post.slug || post.id)}`;
 
 // Content
-const { title, description, url, image, pubDate } = {
+const { title, description, url, image, imageAlt, pubDate } = {
   url: getPostHref(post),
   title: post.data.title,
   description: post.data.description,
   image: post.data.image.url,
+  imageAlt: post.data.image.alt || post.data.title,
   pubDate: post.data.pubDate,
 };
 ---
@@ -38,7 +39,7 @@ const { title, description, url, image, pubDate } = {
 
   <Image
     src={image}
-    alt={title}
+    alt={imageAlt}
     width={1000}
     height={750}
     class="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"

@@ -16,11 +16,9 @@ description: >
   corporate ROI.
 image:
   url: /src/images/blog/cfo-benefits-spend-1.avif
-  alt: A CFO analyzing a prism that splits healthcare benefit spend into visible
-    utilization metrics and hidden workforce risks like attrition.
+  alt: "CFO analyzing visible benefit spend and hidden workforce risk"
 heroImage: /src/images/blog/cfo-benefits-spend.avif
-heroAlt: A CFO analyzing a prism that splits healthcare benefit spend into
-  visible utilization metrics and hidden workforce risks like attrition.
+heroAlt: "CFO analyzing visible benefit spend and hidden workforce risk"
 tags:
   - Disclosure Independence
 draft: false

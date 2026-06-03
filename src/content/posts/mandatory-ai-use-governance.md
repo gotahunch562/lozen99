@@ -16,10 +16,9 @@ description: Is your AI ROI overstated? Examine the AI human-capital exposure
   facing CFOs, General Counsel, and boards.
 image:
   url: /src/images/blog/mandatory-ai-use-1.webp
-  alt: woman representing the frustration of the Power User in AI
+  alt: "Frustrated power user managing mandatory AI workload"
 heroImage: /src/images/blog/mandatory-ai-use-1.webp
-heroAlt: "woman representing the epistemic load:  concentration of operational
-  dependency and unmeasured key-person risk. "
+heroAlt: "Frustrated power user managing mandatory AI workload"
 tags:
   - Research & Policy
 draft: false

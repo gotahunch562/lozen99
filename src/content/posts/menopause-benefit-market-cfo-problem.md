@@ -14,11 +14,9 @@ description: Menopause benefits face a cold financial reality. Low utilization
   cannot fix.
 image:
   url: /src/images/blog/worried-cfo.avif
-  alt: A CFO analyzing a Menopause benefits utilization. On his face is the cold
-    financial reality. He is worried.
+  alt: "Concerned CFO reviewing menopause benefit utilization risk"
 heroImage: /src/images/blog/worried-cfo-1.avif
-heroAlt: A CFO analyzing a Menopause benefits utilization. On his face is the
-  cold financial reality. He is worried.
+heroAlt: "Concerned CFO reviewing menopause benefit utilization risk"
 tags:
   - Disclosure Independence
 draft: false

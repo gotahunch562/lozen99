@@ -10,9 +10,9 @@ description: 'The "Sandwich Generation" faces a dual crisis: perimenopause and c
 metaDescription: 'The "Sandwich Generation" faces a dual crisis: perimenopause and caregiving. Explore the organizational cost of "Tacere" and why current workplace benefits miss the mark.'
 image:
   url: /src/images/blog/caregiving_and_menopause.webp
-  alt: "Woman business owner in her late 40s seated in a dimly lit executive office at dusk, with a child’s toy block and an aging parent’s watch symbolizing invisible caregiving responsibilities."
+  alt: "Business owner balancing menopause, caregiving, and executive responsibilities"
 heroImage: /src/images/blog/caregiving_and_menopause.webp
-heroAlt: "Woman business owner in her late 40s seated in a dimly lit executive office at dusk, with a child’s toy block and an aging parent’s watch symbolizing invisible caregiving responsibilities."
+heroAlt: "Business owner balancing menopause, caregiving, and executive responsibilities"
 tags:
 - Research & Policy
 spineDestination: disclosure-independence-infrastructure

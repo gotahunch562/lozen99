@@ -16,10 +16,9 @@ description: >
   creates critical actuarial, demographic, and disclosure risks for employers.
 image:
   url: /src/images/blog/cfo-worried-legislation.webp
-  alt: A CFO analyzing the impact of proposed legislation on his bottom line.
+  alt: "CFO assessing proposed menopause leave legislation costs"
 heroImage: /src/images/blog/cfo-worried-legislation-1.webp
-heroAlt: A CFO analyzing the impact of proposed menopause legislation on his
-  bottom line.
+heroAlt: "CFO assessing proposed menopause leave legislation costs"
 tags:
   - Legislative Analysis
   - Workplace Disclosure

@@ -10,9 +10,9 @@ description: Is AI CapEx outpacing your workforce? Discover why AI productivity
   Attrition.
 image:
   url: /src/images/blog/ai-workload-power-user-trap-senior-leader.webp
-  alt: AI and human
+  alt: "Senior leader balancing AI workload and human capacity"
 heroImage: /src/images/blog/ai-workload-power-user-trap-senior-leader.webp
-heroAlt: ai human
+heroAlt: "Senior leader balancing AI workload and human capacity"
 draft: true
 isFeatured: false
 ---

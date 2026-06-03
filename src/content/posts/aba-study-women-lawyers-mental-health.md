@@ -10,9 +10,9 @@ description: The ABA 2026 study measures reported data. Learn why non-disclosure
 metaDescription: The ABA 2026 study measures reported data. Learn why non-disclosure is a strategic choice for women leaders protecting their career trajectory.
 image:
   url: /src/images/blog/LozenAdvisoryLegalBlog.webp
-  alt: "Gold scales of justice resting on braided ropes in deep red, gold, and navy, against a dark background."
+  alt: "Gold scales of justice on braided red, gold, and navy ropes"
 heroImage: /src/images/blog/LozenAdvisoryLegalBlog.webp
-heroAlt: "Gold scales of justice resting on braided ropes in deep red, gold, and navy, against a dark background."
+heroAlt: "Gold scales of justice on braided red, gold, and navy ropes"
 tags:
 - Legal Profession
 spineDestination: menopause-support-women-lawyers

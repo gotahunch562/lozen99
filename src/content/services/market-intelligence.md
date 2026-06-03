@@ -6,7 +6,7 @@ priceFrom: "Research & Analysis"
 duration: "Organizational advisory"
 image:
   url: "/src/images/services/serviceplaceholder.webp"
-  alt: "Professional advisory conversation"
+  alt: "Professional advisory conversation in an executive office"
 metaDescription: "Market intelligence on disclosure-dependent workforce risk, retention exposure, benefits utilization gaps, and leadership continuity signals."
 ---
 
