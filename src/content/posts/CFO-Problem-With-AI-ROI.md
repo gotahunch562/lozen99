@@ -36,7 +36,7 @@ If AI generates more output but requires more review, the gross speed gain is no
 
 ## The Cost Side Is Becoming Less Predictable
 
-The Information reported that Anthropic customers, including ServiceNow, are facing difficulty predicting what they will pay this year. ServiceNow said it had consumed its full-year budget for Anthropic AI tools before the year was out.
+The Information reported that Anthropic customers, including [ServiceNow, are facing difficulty predicting what they will pay this year.](https://www.theinformation.com/newsletters/applied-ai/anthropic-costs-unpredictable) ServiceNow said it had consumed its full-year budget for Anthropic AI tools before the year was out.
 
 A seat-based SaaS model let finance forecast software cost by headcount. Generative AI forces finance to forecast behavior, usage intensity, task complexity, and token consumption. Reuters also reported that Commonwealth Bank of Australia CEO Matt Comyn warned corporate AI costs are likely to rise unpredictably as companies use AI for more complex tasks.
 
@@ -46,15 +46,13 @@ A seat-based SaaS model let finance forecast software cost by headcount. Generat
 
 ServiceNow’s chief digital information officer said better telemetry would make it easier to identify employees who are “tokenmaxxing,” or using AI tools inefficiently.
 
-That detail matters because AI spend is not only a vendor-pricing issue. It is also an employee-behavior issue. If employees can run complex AI tasks without visibility into consumption, budgets can be exhausted before finance understands which workflows drove the cost.
+Tokenmaxxing exposes the CFO flaw in AI ROI. It treats AI consumption as if it were evidence of value, when it may only be evidence of activity. The more employees are pushed to use AI, the more token consumption can rise. But higher usage does not prove that costs fell, judgment improved, rework declined, or business value increased.
 
-A company cannot claim AI is reducing cost while ignoring the systems required to control the cost of AI itself.
+That distinction is now showing up in the market. Business Insider reported that Amazon shut down an internal AI token leaderboard and warned employees not to use AI just to use AI. Reuters Breakingviews has also described corporate AI sticker shock as companies confront tokenmaxxing, usage-based pricing, and AI bills that are harder to forecast. The ServiceNow discussion is part of the same pattern: AI spend is becoming behavioral, metered, and harder to control.
 
 ## The Human Governance Layer Still Has to Be Priced
 
-If a tool produces a draft in two minutes but a senior employee spends twenty minutes verifying, correcting, and contextualizing it, the ROI calculation cannot stop at the two-minute output.
-
-AI externalizes execution while internalizing judgment. If finance counts the first without measuring the second, the return calculation is incomplete.
+If a tool produces a draft in two minutes but a senior employee spends twenty minutes verifying, correcting, and contextualizing it, the ROI calculation cannot stop at the two-minute output. AI externalizes execution while internalizing judgment. If finance counts the first, without measuring the second, the return calculation is incomplete.
 
 This is where the [Power User Trap℠](/invisible-attrition/power-user-trap/) becomes a finance issue. The power user is the employee through whom AI becomes usable inside real work: learning the failure modes, supplying institutional context, catching plausible errors, and translating machine output into something the organization can rely on.
 
