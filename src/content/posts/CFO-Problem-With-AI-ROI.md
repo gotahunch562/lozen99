@@ -7,14 +7,18 @@ dateModified: 2026-06-03
 category: CFO Resources
 seriesKey: ai-workforce-materiality
 seriesOrder: 4
+excerpt: Recent reporting on tokenmaxxing makes the cost problem harder to
+  ignore. Companies pushed employees to use AI as proof of adoption, and in some
+  cases even tracked high token consumption as a success signal. Now the bill is
+  arriving.
 description: AI ROI is becoming harder to defend when savings underperform,
   usage costs become harder to forecast, and human verification labor is
   excluded from the model.
 image:
-  url: /src/images/blog/blog-placeholder-blue.svg
-  alt: BLUE
-heroImage: /src/images/blog/blog-placeholder-blue.svg
-heroAlt: BLUE
+  url: /src/images/blog/dollarfloat.avif
+  alt: dollars floating away on water
+heroImage: /src/images/blog/dollarfloat-1.avif
+heroAlt: dollars floating away on water
 draft: true
 isFeatured: false
 ---
