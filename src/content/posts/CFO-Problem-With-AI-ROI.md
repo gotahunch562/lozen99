@@ -19,7 +19,7 @@ image:
   alt: dollars floating away on water
 heroImage: /src/images/blog/dollarfloat-1.avif
 heroAlt: dollars floating away on water
-draft: true
+draft: false
 isFeatured: false
 ---
 AI ROI is becoming harder to defend, and the problem is not that AI has no value.
