@@ -22,17 +22,21 @@ heroAlt: dollars floating away on water
 draft: false
 isFeatured: false
 ---
-AI ROI is becoming harder to defend, and the problem is not that AI has no value.
+AI Return-On-Investment (ROI) is becoming harder to quantify, and the problem is not that AI has no value, it is a matter of time and hindsight.
 
-The problem is that many ROI models are built around the easiest parts of the AI story to count: tool adoption, output volume, time to generate, and vendor-promised productivity gains. Prevailing wisdom treats those numbers as evidence that the investment is working. In contrast, the harder parts are arriving later, and they are not in the model.
+The problem is that many ROI models are built around the easiest parts of the AI story to count: tool adoption, output volume, time to generate, and vendor-promised productivity gains. Conventional wisdom treats those numbers as evidence that the investment is working. In contrast, the harder parts are arriving later, and they are not in the model.
 
-The CFO problem with AI ROI is not one problem. It is three problems moving at once: expected savings are underperforming, actual costs are becoming harder to control, and [human verification labor is still missing](/retention-calculator/) from the calculation.
+The CFO problem with AI ROI is not just one problem, it is three problems converging in the same space: 
+
+1. Expected savings are underperforming
+2. Actual costs are becoming harder to control
+3.  [human verification labor is still missing](/retention-calculator/) from the calculation
 
 > AI ROI is being squeezed from both sides before the human governance layer is even priced.
 
 ## The Savings Story Is Not Arriving Cleanly
 
-The AI investment case has been sold as a cost-reduction story. But recent data makes that story harder to accept without qualification.
+The AI investment case has been sold as a cost-reduction story, "fire humans, AI is cheap". But recent data makes that story harder to believe or accept at face value.
 
 A Bain & Company survey reported by Bloomberg found that 40% of companies were showing AI cost reductions of 10% or less, while only 4% globally had reached savings above 30%. AI budgets are being approved in anticipation of savings that may not arrive on the original timeline, in the original magnitude, or in the original cost model.
 
@@ -60,7 +64,7 @@ If a tool produces a draft in two minutes but a senior employee spends twenty mi
 
 This is where the [Power User Trap℠](/invisible-attrition/power-user-trap/) becomes a finance issue. The power user is the employee through whom AI becomes usable inside real work: learning the failure modes, supplying institutional context, catching plausible errors, and translating machine output into something the organization can rely on.
 
-Gartner warned CFOs in 2026 not to mistake AI deployment for value creation. That warning is the correct finance posture. Deployment is not the same as durable operating value.
+Gartner warned CFOs in 2026 not to mistake AI deployment for value creation. That warning is the correct finance posture, deployment is not the same as durable operating value.
 
 ## The CFO Question Has Changed
 
@@ -68,7 +72,7 @@ The CFO question is no longer simply: how much are we spending on AI? It is also
 
 The full cost model includes licenses, tokens, vendor fees, usage monitoring, deployment labor, internal review burden, rework, and the power users whose judgment stabilizes the system without appearing in any budget line.
 
-> The financial question is not whether AI can produce output faster. The financial question is whether the organization can prove that faster output became durable operating value after the full human and technical cost was counted.
+> **The financial question is not whether AI can produce output faster. The financial question is whether the organization can prove that faster output became durable operating value after the full human and technical cost was counted.**
 
 ## The Materiality Question Set
 
