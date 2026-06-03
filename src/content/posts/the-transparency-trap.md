@@ -33,7 +33,7 @@ The data highlights a glaring systemic reality: disclosure from a woman leader i
 
 When conventional advice tells women to over-share and disclose their health conditions and caregiving constraints, it overlooks the operational mechanics of highly competitive environments. In a rigid corporate ecosystem, laying your cards on the table does not automatically guarantee fairness or support. Instead, unsolicited disclosure frequently allows outside interests to misinterpret normal professional friction as a lack of capability.
 
-## **The Executive Burnout Crisis and the Disclosure Demand**
+## The Executive Burnout Crisis and the Disclosure Demand
 
 The market data makes the risk visible. **[The Conference Board's Activism Report](https://www.conference-board.org/press/shareholder-activism-2025)** documents the heightened scrutiny female executives face in hostile shareholder campaigns. Executive evaluation research from Russell Reynolds Associates also describes the double bind women CEOs face when they navigate public leadership transitions. The pipeline is narrowing even as overall executive turnover reaches record levels. Burnout is running alongside that pattern, and it is not incidental to it.
 
@@ -45,7 +45,7 @@ This corporate pressure has created what researchers call the **"menopause penal
 
 Let’s correct the narrative. This is not an HR benefits conversation; it is an executive power conversation about the terms of disclosure and the need for [Disclosure-Independent Performance Protection℠ infrastructure](/disclosure-independence-infrastructure/).
 
-## **Disclosure Is a Decision, Not a Requirement**
+## Disclosure Is a Decision, Not a Requirement
 
 What exactly are women safeguarding when they practice [Tacere — keeping their own counsel](/blog/tacere-menopause-caregiving-attrition/) — rather than defaulting to full disclosure? They are protecting their performance, their reputations, and their long-term career trajectories.
 
