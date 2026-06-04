@@ -1,5 +1,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
+import sitemap from "@astrojs/sitemap";
+import { serializeSitemapItem } from "./src/lib/seo/sitemapLastmod.mjs";
 import mdx from "@astrojs/mdx";
 import vercel from "@astrojs/vercel";
 
@@ -13,5 +15,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [mdx()],
+  integrations: [sitemap({ serialize: serializeSitemapItem }), mdx()],
 });
