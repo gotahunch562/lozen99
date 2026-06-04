@@ -16,9 +16,9 @@ description: Is AI CapEx outpacing your workforce? Discover why AI productivity
   gains rely on unmeasured human verification labor and drive Invisible
   Attrition.
 image:
-  url: /src/images/blog/ai-workload-power-user-trap-senior-leader.webp
-  alt: AI and human
-heroImage: /src/images/blog/ai-workload-power-user-trap-senior-leader.webp
+  url: /src/images/blog/ai-investment-is-scaling-faster.avif
+  alt: woman at work reflecting the human in the middle of ai work
+heroImage: /src/images/blog/ai-investment-is-scaling-faster-1.avif
 heroAlt: woman at work reflecting the human in the middle of ai work
 draft: false
 isFeatured: false
