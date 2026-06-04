@@ -111,7 +111,7 @@ Before the next board meeting or budget cycle, the organization should be able t
 
 ## Series Context
 
-This is the third article in Lozen Advisory's AI Workforce Materiality series. The next article, **The CFO Problem With AI ROI**, examines whether AI efficiency claims overstate returns when hidden verification labor is omitted from the calculation.
+This is the third article in Lozen Advisory's [AI Workforce Materiality series.](/ai-workforce-materiality/) The next article, **The CFO Problem With AI ROI**, examines whether AI efficiency claims overstate returns when hidden verification labor is omitted from the calculation.
 
 ## Commission a Strategic Briefing
 
