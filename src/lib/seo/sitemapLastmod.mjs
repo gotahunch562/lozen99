@@ -1,3 +1,4 @@
+import { execFileSync } from "node:child_process";
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { basename, extname, join, relative, sep } from "node:path";
 
@@ -17,15 +18,6 @@ const DATE_FIELDS = [
   "datePublished",
   "date",
 ];
-
-// Hardcoded lastmod for pages that carry no frontmatter date.
-// Only add a date here if it is real — do not fabricate one.
-const STATIC_LASTMOD_OVERRIDES = {
-  [`${SITE_URL}/menopause-legislation-tracker/`]: "2026-06-04",
-  [`${SITE_URL}/`]:                               "2026-06-01",
-  [`${SITE_URL}/about/`]:                         "2026-05-01",
-  // add others as needed
-};
 
 const EXCLUDED_EXACT_URLS = new Set([
   `${SITE_URL}/blog/archive/`,
@@ -76,11 +68,30 @@ function getDateFromFrontmatter(frontmatter) {
   return "";
 }
 
-// Reads dateModified from createDatasetJsonLd({ dateModified: "YYYY-MM-DD" })
-// inside .astro files that have no frontmatter date.
+// Reads dateModified from any jsonLd call e.g. createArticleJsonLd({ dateModified: "YYYY-MM-DD" })
 function getDateFromJsonLdCall(fileContent) {
   const match = fileContent.match(/dateModified:\s*["'](\d{4}-\d{2}-\d{2})["']/);
   return match ? match[1] : "";
+}
+
+// Falls back to the file's last Git commit date.
+// On Vercel, the full Git history is available during build.
+function getGitLastModified(filePath) {
+  if (!filePath || !existsSync(filePath)) return "";
+  try {
+    const output = execFileSync(
+      "git",
+      ["log", "-1", "--format=%cI", "--", filePath],
+      {
+        cwd: process.cwd(),
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+      }
+    ).trim();
+    return normalizeDate(output);
+  } catch {
+    return "";
+  }
 }
 
 function isDraft(frontmatter) {
@@ -135,7 +146,10 @@ function getBlogLastmodMap() {
     const frontmatter = getFrontmatter(fileContent);
     if (!frontmatter || isDraft(frontmatter) || isNoindex(frontmatter)) continue;
     const slug = getField(frontmatter, "slug") || basename(file, extname(file));
-    const lastmod = normalizeDate(getDateFromFrontmatter(frontmatter));
+    // 1. Frontmatter date
+    let lastmod = normalizeDate(getDateFromFrontmatter(frontmatter));
+    // 2. Git fallback
+    if (!lastmod) lastmod = getGitLastModified(filePath);
     if (slug && lastmod) lastmodMap.set(normalizeBlogUrl(slug), lastmod);
   }
   return lastmodMap;
@@ -187,13 +201,11 @@ function getStaticPageLastmodMap() {
     // 1. Frontmatter date fields
     let lastmod = normalizeDate(getDateFromFrontmatter(frontmatter));
 
-    // 2. dateModified inside createDatasetJsonLd() call (catches tracker + similar pages)
+    // 2. dateModified inside any jsonLd call in the script block
     if (!lastmod) lastmod = normalizeDate(getDateFromJsonLdCall(fileContent));
 
-    // 3. Hardcoded override table for pages with no machine-readable date at all
-    if (!lastmod && STATIC_LASTMOD_OVERRIDES[normalizeUrl(url)]) {
-      lastmod = normalizeDate(STATIC_LASTMOD_OVERRIDES[normalizeUrl(url)]);
-    }
+    // 3. Git last commit date — automatic, updates on every deploy
+    if (!lastmod) lastmod = getGitLastModified(filePath);
 
     if (lastmod) lastmodMap.set(url, lastmod);
   }
@@ -210,13 +222,7 @@ export function serializeSitemapItem(item) {
   const lastmod =
     blogLastmodMap.get(normalizedUrl) ||
     staticPageLastmodMap.get(normalizedUrl) ||
-    STATIC_LASTMOD_OVERRIDES[normalizedUrl]
-      ? normalizeDate(
-          blogLastmodMap.get(normalizedUrl) ||
-          staticPageLastmodMap.get(normalizedUrl) ||
-          STATIC_LASTMOD_OVERRIDES[normalizedUrl] || ""
-        )
-      : undefined;
+    "";
 
   if (lastmod) item.lastmod = lastmod;
   return item;
