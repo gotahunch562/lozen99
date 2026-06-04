@@ -31,7 +31,7 @@ spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
 ---
-In 2025, the Michigan Women's Commission did something that had not been done at this scale in the United States. It convened 13 statewide conversations, engaged more than 2,500 women, collected 652 survey responses, introduced seven pieces of legislation, and produced a document endorsed by Governor Gretchen Whitmer calling menopause an economic, health, and community issue that Michigan could no longer ignore.
+In 2025, the Michigan Women's Commission did something that had not been done at this scale in the United States. It convened 13 statewide conversations, engaged more than 2,500 women, collected 652 survey responses, introduced [seven pieces of legislation](/menopause-legislation-tracker/), and produced a document endorsed by Governor Gretchen Whitmer calling menopause an economic, health, and community issue that Michigan could no longer ignore.
 
 The Michigan Menopause Memorandum is serious, data-informed, and well-intentioned. It is also built almost entirely around the employer. That is not a criticism of the work. It is the gap the work itself reveals.
 
@@ -69,7 +69,7 @@ The Memorandum's employer recommendations are thoughtful. Educate employees not 
 
 Every recommendation flows through the employer. Every solution assumes access to a woman who is willing to raise her hand inside a system she has already told you she does not trust. Only 12% of respondents were confident they knew who to ask for help when menopause symptoms presented workplace challenges. Only 8% expressed satisfaction with the menopause-related resources currently available at their workplace.
 
-[The infrastructure the Memorandum recommends building is the same infrastructure women are already declining to use.](/blog/menopause-workplace-visibility-constraint/)
+The infrastructure the Memorandum recommends building is the same infrastructure [women are already declining to use.](/architecture-of-invisible-attrition-series/)
 
 ## The Number Behind the Number
 
