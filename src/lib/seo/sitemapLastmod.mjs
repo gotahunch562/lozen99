@@ -1,10 +1,4 @@
-import { execFileSync } from "node:child_process";
-import {
-  existsSync,
-  readdirSync,
-  readFileSync,
-  statSync,
-} from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { basename, extname, join, relative, sep } from "node:path";
 
 const SITE_URL = "https://www.lozenadvisory.com";
@@ -13,14 +7,11 @@ const PAGES_DIR = join(process.cwd(), "src/pages");
 
 const CONTENT_EXTENSIONS = new Set([".astro", ".md", ".mdx"]);
 
-const UPDATED_DATE_FIELDS = [
+const DATE_FIELDS = [
   "updatedDate",
   "dateModified",
   "lastModified",
   "lastmod",
-];
-
-const PUBLISHED_DATE_FIELDS = [
   "publishDate",
   "pubDate",
   "datePublished",
@@ -28,7 +19,7 @@ const PUBLISHED_DATE_FIELDS = [
 ];
 
 const EXCLUDED_EXACT_URLS = new Set([
-  // Add exact URLs here only when a real page should be intentionally excluded.
+  `${SITE_URL}/blog/archive/`,
 ]);
 
 const EXCLUDED_URL_PATTERNS = [
@@ -74,8 +65,8 @@ function getField(frontmatter, fieldName) {
     .replace(/["']$/, "");
 }
 
-function getFirstField(frontmatter, fieldNames) {
-  for (const fieldName of fieldNames) {
+function getDateFromFrontmatter(frontmatter) {
+  for (const fieldName of DATE_FIELDS) {
     const value = getField(frontmatter, fieldName);
     if (value) return value;
   }
@@ -110,58 +101,6 @@ function normalizeDate(value) {
 
   if (Number.isNaN(date.getTime())) return "";
   return date.toISOString();
-}
-
-function getGitLastModified(filePath) {
-  try {
-    const output = execFileSync(
-      "git",
-      ["log", "-1", "--format=%cI", "--", filePath],
-      {
-        cwd: process.cwd(),
-        encoding: "utf8",
-        stdio: ["ignore", "pipe", "ignore"],
-      }
-    ).trim();
-
-    return normalizeDate(output);
-  } catch {
-    return "";
-  }
-}
-
-function getFileSystemLastModified(filePath) {
-  try {
-    return statSync(filePath).mtime.toISOString();
-  } catch {
-    return "";
-  }
-}
-
-function getSourceLastModified(filePath, frontmatter = "") {
-  const explicitUpdatedDate = normalizeDate(
-    getFirstField(frontmatter, UPDATED_DATE_FIELDS)
-  );
-
-  if (explicitUpdatedDate) {
-    return explicitUpdatedDate;
-  }
-
-  const gitLastModified = getGitLastModified(filePath);
-
-  if (gitLastModified) {
-    return gitLastModified;
-  }
-
-  const publishedDate = normalizeDate(
-    getFirstField(frontmatter, PUBLISHED_DATE_FIELDS)
-  );
-
-  if (publishedDate) {
-    return publishedDate;
-  }
-
-  return getFileSystemLastModified(filePath);
 }
 
 function walkFiles(dir) {
@@ -212,7 +151,7 @@ function getBlogLastmodMap() {
     }
 
     const slug = getField(frontmatter, "slug") || basename(file, extname(file));
-    const lastmod = getSourceLastModified(filePath, frontmatter);
+    const lastmod = normalizeDate(getDateFromFrontmatter(frontmatter));
 
     if (slug && lastmod) {
       lastmodMap.set(normalizeBlogUrl(slug), lastmod);
@@ -291,7 +230,7 @@ function getStaticPageLastmodMap() {
       continue;
     }
 
-    const lastmod = getSourceLastModified(filePath, frontmatter);
+    const lastmod = normalizeDate(getDateFromFrontmatter(frontmatter));
 
     if (lastmod) {
       lastmodMap.set(url, lastmod);
