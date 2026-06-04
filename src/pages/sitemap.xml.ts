@@ -1,15 +1,11 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { basename, extname, join, relative, sep } from "node:path";
 
-export const prerender = true;
-
 const SITE_URL = "https://www.lozenadvisory.com";
 const POSTS_DIR = join(process.cwd(), "src/content/posts");
 const PAGES_DIR = join(process.cwd(), "src/pages");
-const TRACKER_PAGE = join(PAGES_DIR, "menopause-legislation-tracker.astro");
 
 const CONTENT_EXTENSIONS = new Set([".astro", ".md", ".mdx"]);
-const POST_EXTENSIONS = new Set([".md", ".mdx"]);
 
 const DATE_FIELDS = [
   "updatedDate",
@@ -21,55 +17,6 @@ const DATE_FIELDS = [
   "datePublished",
   "date",
 ];
-
-/**
- * Controlled fallback dates for internal pages that do not expose dates
- * in Markdown/MDX frontmatter or visible page text.
- *
- * The menopause legislation tracker is intentionally omitted because its
- * sitemap date is read from the page's own "Last updated:" line.
- *
- * Update this map only for non-blog Astro/internal pages that do not have
- * another reliable date source.
- */
-const STATIC_PAGE_LASTMOD = new Map([
-  [`${SITE_URL}/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/about-ai/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/about/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/ai-workforce-materiality-briefing/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/ai-workforce-materiality/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/architecture-of-invisible-attrition-series/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/billable-hour-visibility-tax/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/blog/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/booking/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/contact/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/disclosure-independence-infrastructure/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/disclosure-independence-work-infrastructure/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/events/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/events/akilah-kamaria-presenting-at-2026-liwoca-cle-conference/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/faq/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/invisible-attrition/`, "2026-05-14T00:00:00.000Z"],
-  [`${SITE_URL}/leadership-pipeline-manager-drain/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/menopause-support-women-lawyers/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/news-press/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/news-press/menopause-market-correction/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/normal-blood-tests-feel-off/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/privacy-policy/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/request-briefing/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/retention-calculator/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/retention-risk-analysis/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/services/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/services/advisory-engagement/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/services/crisis-reputation-workforce-risk/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/services/executive-briefing/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/services/market-intelligence/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/succession-planning-retention-risk-data-gap/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/terms-of-service/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/tools-resources/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/voluntary-benefit-disclosure-gap/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/why-lozen-advisory/`, "2026-06-04T00:00:00.000Z"],
-  [`${SITE_URL}/women-lawyers-conference/`, "2026-06-04T00:00:00.000Z"],
-]);
 
 const EXCLUDED_EXACT_URLS = new Set([
   `${SITE_URL}/blog/archive/`,
@@ -100,15 +47,6 @@ function normalizeUrl(url) {
   if (/\.[a-z0-9]+$/i.test(url)) return url;
 
   return `${url}/`;
-}
-
-function escapeXml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&apos;");
 }
 
 function getFrontmatter(fileContent) {
@@ -165,42 +103,6 @@ function normalizeDate(value) {
   return date.toISOString();
 }
 
-function normalizeReadableDate(value) {
-  if (!value) return "";
-
-  const date = new Date(`${value.trim()} UTC`);
-
-  if (Number.isNaN(date.getTime())) return "";
-  return date.toISOString();
-}
-
-function getDateFromVisiblePageText(pageContent) {
-  const lastUpdatedMatch = pageContent.match(
-    /Last\s+updated:\s*([A-Za-z]+\s+\d{1,2},\s+\d{4})/i
-  );
-
-  if (lastUpdatedMatch?.[1]) {
-    return normalizeReadableDate(lastUpdatedMatch[1]);
-  }
-
-  const statusDateMatch = pageContent.match(
-    /Current\s+legislative\s+status\s+as\s+of\s+([A-Za-z]+\s+\d{1,2},\s+\d{4})/i
-  );
-
-  if (statusDateMatch?.[1]) {
-    return normalizeReadableDate(statusDateMatch[1]);
-  }
-
-  return "";
-}
-
-function getTrackerLastmod() {
-  if (!existsSync(TRACKER_PAGE)) return "";
-
-  const pageContent = readFileSync(TRACKER_PAGE, "utf8");
-  return getDateFromVisiblePageText(pageContent);
-}
-
 function walkFiles(dir) {
   if (!existsSync(dir)) return [];
 
@@ -230,18 +132,14 @@ function normalizeBlogUrl(slug) {
   return `${SITE_URL}/blog/${cleanSlug}/`;
 }
 
-function isPostFile(filePath) {
-  return POST_EXTENSIONS.has(extname(filePath));
-}
+function getBlogLastmodMap() {
+  const lastmodMap = new Map();
 
-function getBlogEntries() {
-  if (!existsSync(POSTS_DIR)) return [];
+  if (!existsSync(POSTS_DIR)) return lastmodMap;
 
-  const files = readdirSync(POSTS_DIR)
-    .filter((file) => isPostFile(file))
-    .sort();
-
-  const entries = [];
+  const files = readdirSync(POSTS_DIR).filter((file) =>
+    [".md", ".mdx"].includes(extname(file))
+  );
 
   for (const file of files) {
     const filePath = join(POSTS_DIR, file);
@@ -253,13 +151,14 @@ function getBlogEntries() {
     }
 
     const slug = getField(frontmatter, "slug") || basename(file, extname(file));
-    const loc = normalizeBlogUrl(slug);
     const lastmod = normalizeDate(getDateFromFrontmatter(frontmatter));
 
-    entries.push({ loc, lastmod });
+    if (slug && lastmod) {
+      lastmodMap.set(normalizeBlogUrl(slug), lastmod);
+    }
   }
 
-  return entries;
+  return lastmodMap;
 }
 
 function isContentPageFile(filePath) {
@@ -272,8 +171,6 @@ function isContentPageFile(filePath) {
 
   if (!relativePath || relativePath.startsWith("..")) return false;
   if (fileName === "404.astro" || fileName === "500.astro") return false;
-  if (relativePath === "sitemap.xml.ts") return false;
-  if (relativePath === "rss.xml.js") return false;
   if (pathParts.some((part) => part.startsWith("_"))) return false;
   if (pathParts.some((part) => part.includes("[") || part.includes("]"))) return false;
   if (pathParts[0] === "api") return false;
@@ -312,14 +209,12 @@ function shouldExcludeUrl(url) {
   return EXCLUDED_URL_PATTERNS.some((pattern) => pattern.test(normalizedUrl));
 }
 
-function getStaticPageEntries() {
-  if (!existsSync(PAGES_DIR)) return [];
+function getStaticPageLastmodMap() {
+  const lastmodMap = new Map();
 
-  const files = walkFiles(PAGES_DIR)
-    .filter(isContentPageFile)
-    .sort();
+  if (!existsSync(PAGES_DIR)) return lastmodMap;
 
-  const entries = [];
+  const files = walkFiles(PAGES_DIR).filter(isContentPageFile);
 
   for (const filePath of files) {
     const fileContent = readFileSync(filePath, "utf8");
@@ -329,86 +224,38 @@ function getStaticPageEntries() {
       continue;
     }
 
-    const loc = pageFileToUrl(filePath);
+    const url = pageFileToUrl(filePath);
 
-    if (!loc || shouldExcludeUrl(loc)) {
+    if (!url || shouldExcludeUrl(url)) {
       continue;
     }
 
-    let lastmod = normalizeDate(getDateFromFrontmatter(frontmatter));
+    const lastmod = normalizeDate(getDateFromFrontmatter(frontmatter));
 
-    if (!lastmod && loc === `${SITE_URL}/menopause-legislation-tracker/`) {
-      lastmod = getTrackerLastmod();
-    }
-
-    if (!lastmod) {
-      lastmod = getDateFromVisiblePageText(fileContent);
-    }
-
-    if (!lastmod) {
-      lastmod = STATIC_PAGE_LASTMOD.get(loc) || "";
-    }
-
-    entries.push({ loc, lastmod });
-  }
-
-  return entries;
-}
-
-function dedupeAndSortEntries(entries) {
-  const entryMap = new Map();
-
-  for (const entry of entries) {
-    const loc = normalizeUrl(entry.loc);
-
-    if (!loc || shouldExcludeUrl(loc)) {
-      continue;
-    }
-
-    const existingEntry = entryMap.get(loc);
-
-    if (!existingEntry || (!existingEntry.lastmod && entry.lastmod)) {
-      entryMap.set(loc, { loc, lastmod: entry.lastmod || "" });
+    if (lastmod) {
+      lastmodMap.set(url, lastmod);
     }
   }
 
-  return [...entryMap.values()].sort((a, b) => a.loc.localeCompare(b.loc));
+  return lastmodMap;
 }
 
-function renderUrlEntry(entry) {
-  const loc = `    <loc>${escapeXml(entry.loc)}</loc>`;
+const blogLastmodMap = getBlogLastmodMap();
+const staticPageLastmodMap = getStaticPageLastmodMap();
 
-  if (!entry.lastmod) {
-    return `  <url>\n${loc}\n  </url>`;
+export function serializeSitemapItem(item) {
+  const normalizedUrl = normalizeUrl(item.url);
+
+  if (shouldExcludeUrl(normalizedUrl)) {
+    return undefined;
   }
 
-  return `  <url>\n${loc}\n    <lastmod>${escapeXml(entry.lastmod)}</lastmod>\n  </url>`;
-}
+  const lastmod =
+    blogLastmodMap.get(normalizedUrl) || staticPageLastmodMap.get(normalizedUrl);
 
-function renderSitemap(entries) {
-  const urls = entries.map(renderUrlEntry).join("\n");
-
-  return `<?xml version="1.0" encoding="UTF-8"?>\n` +
-    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    `${urls}\n` +
-    `</urlset>\n`;
-}
-
-export async function GET() {
-  const trackerLastmod = getTrackerLastmod();
-
-  if (trackerLastmod) {
-    STATIC_PAGE_LASTMOD.set(`${SITE_URL}/menopause-legislation-tracker/`, trackerLastmod);
+  if (lastmod) {
+    item.lastmod = lastmod;
   }
 
-  const entries = dedupeAndSortEntries([
-    ...getStaticPageEntries(),
-    ...getBlogEntries(),
-  ]);
-
-  return new Response(renderSitemap(entries), {
-    headers: {
-      "Content-Type": "application/xml; charset=utf-8",
-    },
-  });
+  return item;
 }
