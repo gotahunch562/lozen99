@@ -191,7 +191,6 @@ export interface FrameworkClusterArticleJsonLdInput extends BasePageInput {
 }
 
 const SITE_URL = "https://www.lozenadvisory.com";
-const SITE_HOME_URL = `${SITE_URL}/`;
 const SITE_NAME = "Lozen Advisory";
 const ORGANIZATION_NAME = "Lozen Advisory LLC";
 const DEFAULT_AUTHOR_NAME = "Akilah E. Kamaria";
@@ -203,34 +202,11 @@ const DEFAULT_FRAMEWORK_TERM_SET_DESCRIPTION =
 const compact = <T>(items: Array<T | false | null | undefined>): T[] =>
   items.filter(Boolean) as T[];
 
-const hasFileExtension = (pathname: string): boolean =>
-  /\/[^/?#]+\.[a-z0-9]{2,8}$/i.test(pathname);
-
-const withCanonicalTrailingSlash = (url: string): string => {
-  if (!url.startsWith(SITE_URL)) return url;
-
-  const parsedUrl = new URL(url);
-
-  if (parsedUrl.pathname === "/") return parsedUrl.toString();
-  if (hasFileExtension(parsedUrl.pathname)) return parsedUrl.toString();
-
-  if (!parsedUrl.pathname.endsWith("/")) {
-    parsedUrl.pathname = `${parsedUrl.pathname}/`;
-  }
-
-  return parsedUrl.toString();
-};
-
 export const absoluteUrl = (href?: string | null): string | undefined => {
   if (!href) return undefined;
-
-  if (href.startsWith("http://") || href.startsWith("https://")) {
-    return withCanonicalTrailingSlash(href);
-  }
-
-  if (href.startsWith("#")) return `${SITE_HOME_URL}${href}`;
-
-  return withCanonicalTrailingSlash(`${SITE_URL}${href.startsWith("/") ? href : `/${href}`}`);
+  if (href.startsWith("http://") || href.startsWith("https://")) return href;
+  if (href.startsWith("#")) return `${SITE_URL}/${href}`;
+  return `${SITE_URL}${href.startsWith("/") ? href : `/${href}`}`;
 };
 
 export const createOrganizationJsonLd = (): JsonLdObject => ({
@@ -238,7 +214,7 @@ export const createOrganizationJsonLd = (): JsonLdObject => ({
   "@type": "Organization",
   "@id": `${SITE_URL}/#organization`,
   name: ORGANIZATION_NAME,
-  url: SITE_HOME_URL,
+  url: SITE_URL,
   email: "hello@lozenadvisory.com",
   founder: {
     "@type": "Person",
@@ -251,7 +227,7 @@ export const createWebSiteJsonLd = (): JsonLdObject => ({
   "@type": "WebSite",
   "@id": `${SITE_URL}/#website`,
   name: SITE_NAME,
-  url: SITE_HOME_URL,
+  url: SITE_URL,
   publisher: {
     "@id": `${SITE_URL}/#organization`,
   },
@@ -282,7 +258,7 @@ export const createDefinedTermSetJsonLd = ({
   "@id": id,
   name,
   description,
-  url: href ? absoluteUrl(href) : SITE_HOME_URL,
+  url: href ? absoluteUrl(href) : SITE_URL,
   creator: {
     "@id": `${SITE_URL}/#organization`,
   },
@@ -393,7 +369,7 @@ export const createFrameworkPillarJsonLd = ({
           }
         : undefined,
     },
-    breadcrumbs && breadcrumbs.length > 0 ? createBreadcrumbJsonLd(breadcrumbs) : undefined,
+    breadcrumbs?.length && createBreadcrumbJsonLd(breadcrumbs),
   ]);
 };
 
@@ -506,7 +482,7 @@ export const createFrameworkClusterArticleJsonLd = ({
         url: pillarUrl,
       },
     },
-    breadcrumbs && breadcrumbs.length > 0 ? createBreadcrumbJsonLd(breadcrumbs) : undefined,
+    breadcrumbs?.length && createBreadcrumbJsonLd(breadcrumbs),
   ]);
 };
 
