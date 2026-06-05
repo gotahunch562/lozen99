@@ -53,9 +53,9 @@ This is not a program awareness gap. Lozen Advisory's research on Invisible Attr
 
 ## The Gap Between Market Signal and Organizational Reality
 
-PwC acknowledges the utilization problem directly. Its payer and employer section notes that utilization remains limited and prescribes the fix: invest in education and navigation so employees know what exists and how to access it. That is an awareness diagnosis. It locates the failure in communication.
+PwC acknowledges the utilization problem directly. Its payer and employer section notes that utilization remains limited and prescribes the fix: invest in education and navigation so employees know what exists and how to access it. That is an awareness diagnosis that locates the failure in communication.
 
-However, Lozen Advisory's research on Invisible Attrition℠ locates the failure elsewhere entirely. The senior women these programs are designed to retain are not avoiding them because they are unaware. They are avoiding them because using a company-sponsored menopause pathway requires initiating disclosure, and [disclosure introduces professional exposure](/invisible-attrition/structural-silence/) they are unwilling to absorb. More education does not change that calculus. Better navigation does not change that calculus. The structural barrier is the disclosure dependency itself.
+However, Lozen Advisory's research on Invisible Attrition℠ locates the failure elsewhere. The senior women these programs are designed to retain are not avoiding them because they are unaware. They are avoiding them because using a company-sponsored menopause pathway requires initiating disclosure, and [disclosure introduces professional exposure](/invisible-attrition/structural-silence/) they are unwilling to absorb. More education does not change that calculus. Better navigation does not change that calculus. The structural barrier is the disclosure dependency itself.
 
 PwC's prescribed solution, investing in education and navigation to drive engagement, will produce engagement data without producing retention outcomes. The programs will appear more utilized. The attrition they were purchased to prevent will continue.
 
