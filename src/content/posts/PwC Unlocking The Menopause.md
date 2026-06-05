@@ -33,13 +33,17 @@ The $600 billion women’s health market that PwC forecasts by 2030 is real. The
 
 That diagnosis is wrong. And organizations building strategy on it are investing in the wrong fix while the attrition continues.
 
-What the forecast does not measure is whether awareness works. Awareness mantras are loud in the market  but they are based on assumptions not data. **** Boards and General Counsel cannot make decisions in this realm without closer examination of the facts.
+What the forecast does not measure is whether awareness works. Awareness mantras are loud in the market  but they are based on assumptions not data. **** 
+
+Boards and General Counsel cannot make decisions in this realm without closer examination of the facts.
 
 ---
 
+## Supply & Demand?
+
 PwC's analysis is tracking supply. Employers are purchasing benefit packages; vendors are expanding; the category is growing. By every market metric, the problem has a perfect solution.
 
-However, utilization data tells a different story. [Adoption rates among eligible employees remain in the single digits](/blog/menopause-at-work-unquantified-data-gap/) across most enterprise programs. The senior women these benefits are designed to retain are not using them.
+However, utilization data tells a different story. [Adoption rates among eligible employees remain in the single digits](/blog/menopause-at-work-unquantified-data-gap/) across most enterprise programs. The senior women these benefits are designed to retain are not using them. Demand has not materialized.
 
 This is not a program awareness gap. Lozen Advisory's research on Invisible Attrition℠ establishes that non-use among this population is structurally rational: using a company-sponsored menopause pathway requires initiating disclosure, and disclosure introduces professional exposure the employee is unwilling to absorb. The benefit exists. The structural barrier to accessing it also exists.
 
