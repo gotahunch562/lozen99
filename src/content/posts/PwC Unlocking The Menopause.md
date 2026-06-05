@@ -18,8 +18,9 @@ description: >2+
 
 image:
   url: /src/images/blog/awareness-brigade.webp
-  alt: infographic
+  alt: infographic on awareness vs adoption of menopause benefits
 heroImage: /src/images/blog/the-menopause-market-forecast.avif
+heroAlt: woman yellow sweater documenting menopause information
 tags:
   - Performance & Career
   - Invisible Attrition
