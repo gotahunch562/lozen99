@@ -33,7 +33,7 @@ The $600 billion women’s health market that PwC forecasts by 2030 is real. The
 
 That diagnosis is wrong. And organizations building strategy on it are investing in the wrong fix while the attrition continues.
 
-What the forecast does not measure is whether awareness works. Awareness mantras are loud in the market  but they are based on assumptions not data. **** 
+What the forecast does not measure is whether awareness works. Awareness mantras are loud in the market  but they are based on assumptions not data.
 
 Boards and General Counsel cannot make decisions in this realm without closer examination of the facts.
 
