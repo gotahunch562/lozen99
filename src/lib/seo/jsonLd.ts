@@ -1,3 +1,5 @@
+import { resolveDateForHref } from "./pageDates.mjs";
+
 export type JsonLdValue =
   | string
   | number
@@ -50,6 +52,7 @@ export interface WebPageJsonLdInput {
   description?: string;
   href: string;
   image?: string;
+  dateModified?: string;
   breadcrumbs?: BreadcrumbItemInput[];
 }
 
@@ -631,8 +634,11 @@ export const createWebPageJsonLd = ({
   description,
   href,
   image,
+  dateModified,
   breadcrumbs,
 }: WebPageJsonLdInput): JsonLdObject | JsonLdObject[] => {
+  const resolvedDateModified = dateModified ?? resolveDateForHref(href);
+
   const page: JsonLdObject = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -640,6 +646,7 @@ export const createWebPageJsonLd = ({
     name: title,
     description,
     url: absoluteUrl(href),
+    ...(resolvedDateModified ? { dateModified: resolvedDateModified } : {}),
     isPartOf: {
       "@id": `${SITE_URL}/#website`,
     },

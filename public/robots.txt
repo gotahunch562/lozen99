@@ -25,4 +25,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://www.lozenadvisory.com/sitemap.xml
+Sitemap: https://www.lozenadvisory.com/sitemap-index.xml

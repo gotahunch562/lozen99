@@ -6,6 +6,7 @@ import type { JsonLdObject } from "@/lib/seo/jsonLd";
 import {
   createJsonLdGraph,
   createOrganizationJsonLd,
+  createWebPageJsonLd,
   createWebSiteJsonLd,
   serializeJsonLd,
 } from "@/lib/seo/jsonLd";
@@ -46,9 +47,35 @@ const {
   hideFooter = false,
 } = Astro.props;
 
+const jsonLdItems = (Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []) as JsonLdObject[];
+
+const hasWebPageJsonLd = jsonLdItems.some((item) => {
+  if (item["@type"] === "WebPage") return true;
+  const graph = item["@graph"];
+
+  return Array.isArray(graph) && graph.some((node) => {
+    return typeof node === "object" && node !== null && (node as JsonLdObject)["@type"] === "WebPage";
+  });
+});
+
+const canonicalHref = canonical ?? Astro.url.pathname;
+const defaultWebPageJsonLd =
+  includeBaseJsonLd &&
+  title &&
+  canonicalHref &&
+  !hasWebPageJsonLd
+    ? createWebPageJsonLd({
+        title,
+        description: description ?? metaDescription,
+        href: canonicalHref,
+        image: ogImage,
+      })
+    : undefined;
+
 const jsonLdGraph = createJsonLdGraph([
   includeBaseJsonLd && createOrganizationJsonLd(),
   includeBaseJsonLd && createWebSiteJsonLd(),
+  defaultWebPageJsonLd,
   jsonLd,
 ]);
 const hasJsonLd = Array.isArray(jsonLdGraph["@graph"]) && jsonLdGraph["@graph"].length > 0;
