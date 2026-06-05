@@ -33,7 +33,7 @@ The $600 billion women’s health market that PwC forecasts by 2030 is real. The
 
 That diagnosis is wrong. And organizations building strategy on it are investing in the wrong fix while the attrition continues.
 
-What the forecast does not measure is whether adoption works. [Optimism about supply is not evidence of function](news-press/menopause-market-correction/).
+What the forecast does not measure is whether adoption works. [Optimism about supply is not evidence of function](/news-press/menopause-market-correction/).
 
 Boards and General Counsel are inheriting that assumption without examining it.
 
