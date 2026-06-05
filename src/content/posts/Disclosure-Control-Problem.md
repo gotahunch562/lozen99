@@ -89,7 +89,7 @@ The disclosure-control problem is not theoretical. In each of the following case
 - Four months later the firm filed another hallucination-riddled brief in a separate matter
 - The policy announcement did not reach the verification layer; nothing did
 
-In each case the organization could not substantiate how the work was produced, what was verified, or who was accountable before the output moved. That is not a LLM hallucination problem, it's a disclosure-control problem.
+In each case the organization could not substantiate how the work was produced, what was verified, or who was accountable before the output moved. That is not an LLM hallucination problem, it's a disclosure-control problem.
 
 ---
 
