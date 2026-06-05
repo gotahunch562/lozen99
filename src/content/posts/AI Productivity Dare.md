@@ -9,9 +9,9 @@ category: CFO Resources
 excerpt: Language models simulate coherence, not truth. When executives
   eliminate human capacity to prove AI ROI, they don't eliminate the work, they
   just force it into a structural blind spot.
-description: Some executives are trying to prove AI productivity by cutting
-  human capacity first. Lozen Advisory examines why reducing headcount is not an
-  LLM governance strategy.
+description: When executives cut human capacity to prove AI ROI, they are
+  running a dare, not a strategy. Lozen Advisory examines why this creates a
+  blind spot.
 image:
   url: /src/images/blog/unwell-1.avif
   alt: "woman stress of reducing headcount "
