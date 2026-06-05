@@ -29,7 +29,6 @@ const AI_WORKFORCE_SERIES_KEY = "ai-workforce-materiality";
 const AI_WORKFORCE_BASELINE_LASTMOD = "2026-05-31";
 
 const EXPLICIT_PAGE_DATES = new Map([
-  ["/menopause-and-the-law/", "2026-06-04"],
   ["/ai-workforce-materiality-briefing/", "2026-05-31"],
   ["/disclosure-independence-infrastructure/", "2026-05-30"],
   ["/news-press/menopause-market-correction/", "2026-05-19"],
