@@ -43,9 +43,9 @@ PwC's analysis is tracking supply. Employers are purchasing benefit packages; ve
 
 However, utilization data tells a different story. Adoption rates among eligible employees remain in the single digits across most enterprise programs. The senior women these benefits are designed to retain are not using them.
 
-![](/src/images/blog/awareness-brigade.webp)
-
 This is not a program awareness gap. Lozen Advisory's research on Invisible Attrition℠ establishes that non-use among this population is structurally rational: using a company-sponsored menopause pathway requires initiating disclosure, and disclosure introduces professional exposure the employee is unwilling to absorb. The benefit exists. The structural barrier to accessing it also exists.
+
+![Workplace awareness campaign imagery illustrating the limits of benefit visibility when disclosure creates professional exposure](/src/images/blog/awareness-brigade.webp)
 
 > The benefit exists in theory. The professional cost of using it exists in practice. The gap between what the benefit offers and what accessing it costs is where silence is produced.
 
@@ -73,7 +73,7 @@ The internal utilization data does not support that public representation.
 
 ---
 
-## What the Market Correction Actually Names
+## What the PwC Market Correction Actually Names
 
 The CFO-level reckoning that is now working through corporate benefit budgets, documented in Lozen Advisory's market correction analysis, identifies this as a capital allocation failure. Purchased benefit seats that generate no utilization, are sunk cost.
 
