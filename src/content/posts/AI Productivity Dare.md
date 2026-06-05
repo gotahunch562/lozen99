@@ -10,8 +10,8 @@ excerpt: Language models simulate coherence, not truth. When executives
   eliminate human capacity to prove AI ROI, they don't eliminate the work, they
   just force it into a structural blind spot.
 description: When executives cut human capacity to prove AI ROI, they are
-  running a dare, not a governance strategy. Lozen Advisory examines this blind
-  spot.
+  running a dare, not a llm governance strategy. Lozen Advisory examines this
+  blind spot.
 image:
   url: /src/images/blog/unwell-1.avif
   alt: "woman stress of reducing headcount "
