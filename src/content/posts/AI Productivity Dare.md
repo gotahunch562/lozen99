@@ -29,7 +29,7 @@ In January, Snowflake CIO Mike Blandina cut his engineering team to its year-end
 
 That is [not an AI governance strategy](/mandatory-ai-use-governance/). It is a pressure test dressed as one.
 
-Blandina's team is now smaller, under explicit pressure to produce with AI assistance, and operating inside an incentive structure where flagging a bad model output carries visible professional cost. The organization will see throughput. It will not see the verification labor that throughput required. It will not see who absorbed the doubt — and it will not see who is practicing [Tacere, keeping silent about what the tools cannot do](https://zenodo.org/records/20370916) because visibility carries the risk of losing the job.
+Blandina's team is now smaller, under explicit pressure to produce with AI assistance, and operating inside an incentive structure where flagging a bad model output carries visible professional cost. The organization will see throughput. It will not see the verification labor that throughput required. It will not see who absorbed the doubt — and it will not see who is practicing [Tacere, keeping silent about what the tools cannot do](https://zenodo.org/records/20370916) because visibility carries the risk of losing their job.
 
 > *What happens when leadership tests AI productivity by removing human capacity before proving what the technology actually replaces?*
 
@@ -51,7 +51,7 @@ The reasons are instructive. More than half of HR leaders said AI required more 
 
 Gartner has projected that by 2027, half of companies that attributed customer service headcount reductions to AI will rehire staff to perform similar functions. Forrester was blunter: it expects half of AI-attributed layoffs to be quietly reversed.
 
-> *LLMs are being used to justify headcount cuts meanwhile creating new cost-control problems.*
+> LLMs are being used to justify headcount cuts, while creating the next cost-control problem.
 
 ---
 
