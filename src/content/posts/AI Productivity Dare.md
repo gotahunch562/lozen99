@@ -31,7 +31,7 @@ That is [not an AI governance strategy](/mandatory-ai-use-governance/). It is a 
 
 Blandina's team is now smaller, under explicit pressure to produce with AI assistance, and operating inside an incentive structure where flagging a bad model output carries visible professional cost. The organization will see throughput. It will not see the verification labor that throughput required. It will not see who absorbed the doubt — and it will not see who is practicing [Tacere, keeping silent about what the tools cannot do](https://zenodo.org/records/20370916) because visibility carries the risk of losing the job.
 
-> *"What happens when leadership tests AI productivity by removing human capacity before proving what the technology actually replaces?"*
+> *What happens when leadership tests AI productivity by removing human capacity before proving what the technology actually replaces?*
 
 This is the measurement problem that matters for CFOs right now — not whether AI tools produce output, but whether organizations have any infrastructure to govern what that output costs, who is responsible for it, and where the liability lives when it is wrong.
 
@@ -43,7 +43,7 @@ Most do not. And the gap is not in the model, it is in the workforce buzzwords a
 
 The Snowflake experiment is not an outlier. It is a pattern — and the pattern is already reversing.
 
-> *"The problem is not executive enthusiasm for AI. The problem is executive imitation without measurement."*
+> *The problem is not executive enthusiasm for AI. The problem is executive imitation without measurement.*
 
 Two in three organizations that cut staff because of AI are already rehiring those workers, according to a February 2026 [Careerminds study of 600 HR professionals](https://careerminds.com/blog/cost-of-ai-layoffs). More than half began rebuilding within six months. Nearly one-third had rehired between a quarter and a half of all eliminated roles.
 
@@ -51,7 +51,7 @@ The reasons are instructive. More than half of HR leaders said AI required more 
 
 Gartner has projected that by 2027, half of companies that attributed customer service headcount reductions to AI will rehire staff to perform similar functions. Forrester was blunter: it expects half of AI-attributed layoffs to be quietly reversed.
 
-> *"LLMs are being used to justify headcount cuts meanwhile creating new cost-control problems."*
+> *LLMs are being used to justify headcount cuts meanwhile creating new cost-control problems.*
 
 ---
 
@@ -59,7 +59,7 @@ Gartner has projected that by 2027, half of companies that attributed customer s
 
 The organizations that struggled most were, by Careerminds' own account, making irreversible decisions without the full picture. What that report does not name is the verification labor accumulating inside the [Power User Trap℠](/invisible-attrition/power-user-trap/) — the informal, unmeasured human absorption that keeps AI output usable but carries no line item on the balance sheet and requires no disclosure event to exist.
 
-> *"Language models simulate coherence, not truth."*
+> *Language models simulate coherence, not truth.*
 
 This is what LLM governance looks like when it is not governed: unpriced, invisible, and concentrated inside the employees an organization can least afford to lose.
 
