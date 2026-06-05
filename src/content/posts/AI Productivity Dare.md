@@ -17,7 +17,7 @@ image:
   alt: "woman stress of reducing headcount "
 heroImage: /src/images/blog/unwell-2.avif
 heroAlt: "woman stress of reducing headcount "
-draft: false
+draft: true
 isFeatured: false
 ---
 ## When AI Adoption Replaces LLM Governance
