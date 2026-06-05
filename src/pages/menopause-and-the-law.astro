@@ -1,0 +1,416 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+const title = "Menopause and the Law: Understanding Your Legal Landscape | Lozen Advisory";
+const description =
+  "There is no such thing as a menopause lawyer — yet. This page explains what the law currently covers, which states have enacted protections, and what kind of attorney handles menopause-related claims.";
+const canonicalPath = "/menopause-and-the-law/";
+const canonicalUrl = "https://www.lozenadvisory.com/menopause-and-the-law/";
+const dateModified = "2026-06-02";
+
+const pageJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: title,
+  description,
+  url: canonicalUrl,
+  publisher: {
+    "@type": "Organization",
+    name: "Lozen Advisory LLC",
+    url: "https://www.lozenadvisory.com/",
+  },
+  dateModified,
+};
+
+const states = [
+  {
+    state: "Rhode Island",
+    covers: "Workplace accommodation; adds menopause to protected traits under employment anti-discrimination law",
+    inEffect: "June 2025",
+    enacted: true,
+  },
+  {
+    state: "New Jersey",
+    covers: "Insurance coverage mandate for menopause treatment",
+    inEffect: "January 2026",
+    enacted: true,
+  },
+  {
+    state: "Louisiana",
+    covers: "Private insurer coverage for menopause treatments",
+    inEffect: "August 2024",
+    enacted: true,
+  },
+  {
+    state: "Virginia",
+    covers: "Insurance coverage; prior authorization restrictions for HRT",
+    inEffect: "July 1, 2026",
+    enacted: true,
+  },
+  {
+    state: "Maryland",
+    covers: "Omnibus: insurance coverage, provider training, employer accommodation obligations",
+    inEffect: "October 1, 2026",
+    enacted: true,
+  },
+  {
+    state: "Washington",
+    covers: "Executive Order 26-01: state agency accommodation obligations under existing civil rights law; model guidance for private employers",
+    inEffect: "June 1, 2026",
+    enacted: true,
+  },
+  {
+    state: "Illinois",
+    covers: "Workplace accommodation; pending Governor signature as of June 2026",
+    inEffect: "Pending",
+    enacted: false,
+  },
+  {
+    state: "Philadelphia, PA",
+    covers: "City ordinance: adds menopause to protected traits in employment anti-discrimination law",
+    inEffect: "January 1, 2027",
+    enacted: true,
+  },
+];
+
+const claimTypes = [
+  {
+    title: "Workplace / Employment",
+    body: "Were you fired, demoted, passed over, or pushed out while experiencing menopause symptoms? Did you request an accommodation and were refused? Did your employer fail to engage in any interactive process after you disclosed symptoms?",
+    note: "Attorney type: Employment / Civil rights",
+  },
+  {
+    title: "Insurance Coverage",
+    body: "Was your menopause treatment denied, delayed, or required to go through prior authorization? Were you in a state with a coverage mandate — New Jersey, Virginia, Maryland, Louisiana — and still denied your claim?",
+    note: "Attorney type: Insurance coverage / Bad faith",
+  },
+  {
+    title: "Healthcare / Provider",
+    body: "Were your menopause symptoms misdiagnosed as anxiety, depression, or another condition? Were you denied treatment based on a diagnostic test — such as an FSH test — that is known to produce false negatives during perimenopause?",
+    note: "Attorney type: Medical malpractice / Healthcare",
+  },
+  {
+    title: "Constructive Dismissal",
+    body: "Did you feel forced to leave a job because your employer made your working conditions intolerable after symptoms began — changed your schedule, removed responsibilities, isolated you, or failed to act on documented requests?",
+    note: "Attorney type: Employment / Wrongful termination",
+  },
+];
+
+const attorneySteps = [
+  {
+    n: "1",
+    heading: "Match the claim to the practice area first",
+    body: "An employment attorney for workplace claims. An insurance coverage or bad-faith attorney for denied treatment. A medical malpractice attorney for misdiagnosis or treatment delay. Do not look for a menopause specialist — look for an attorney who handles your type of claim and is willing to learn the menopause-specific law in your state.",
+  },
+  {
+    n: "2",
+    heading: "Ask specifically about your state's law",
+    body: "If you are in Rhode Island, New Jersey, Virginia, Maryland, Washington, or a state with active legislation, ask the attorney whether they are familiar with the specific statute or executive order. An attorney who is willing to research it is better than one who dismisses it.",
+  },
+  {
+    n: "3",
+    heading: "Understand the existing framework",
+    body: "Even in states without specific menopause legislation, menopause symptoms may qualify as a disability under the ADA, a sex-related condition under Title VII, or a protected impairment under state civil rights statutes. An employment or civil rights attorney can evaluate this without waiting for new law to pass.",
+  },
+  {
+    n: "4",
+    heading: "Document before you consult",
+    body: "Before your first consultation, write down the dates and facts of what happened. Any accommodation request you made, any response you received, any clinical documentation of your symptoms, any employment decision that followed. An attorney evaluating your claim needs a timeline, not a summary.",
+  },
+  {
+    n: "5",
+    heading: "Be aware of filing deadlines",
+    body: "EEOC charges must generally be filed within 180 to 300 days of the discriminatory act. State agency deadlines vary. The deadline runs from the discriminatory event, not from the date of consultation. If time has passed, consult an attorney before deciding whether to proceed.",
+  },
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonicalPath}
+  dateModified={dateModified}
+  jsonLd={pageJsonLd}
+>
+
+  <main>
+
+    <!-- ─── HERO ─── -->
+    <section class="lozen-tracker-hero">
+      <Wrapper variant="standard" class="py-14 sm:py-20 lg:py-28">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(300px,0.5fr)] lg:items-end lg:gap-12">
+
+          <div class="max-w-4xl">
+            <p class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-700">
+              Legal Landscape
+            </p>
+
+            <h1 class="mt-6 font-display text-4xl font-normal uppercase leading-[1.02] tracking-[-0.04em] text-base-950 sm:mt-8 sm:text-5xl lg:text-6xl">
+              There is no such<br class="hidden sm:block" /> thing as a<br class="hidden sm:block" /> menopause lawyer.
+            </h1>
+
+            <p class="mt-6 max-w-2xl font-sans text-base leading-7 text-base-700 sm:mt-7 sm:text-lg sm:leading-8">
+              People search for a menopause lawyer because something happened — at work, with their insurance, with a provider — and they don't know what kind of legal help they need. This page explains the current legal landscape, which states have enacted protections, and what kind of attorney handles these cases.
+            </p>
+
+            <p class="mt-7 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500 sm:mt-8">
+              Updated June 2, 2026
+            </p>
+          </div>
+
+          <aside class="lozen-tracker-insight-card p-5 sm:p-6 lg:rounded-3xl">
+            <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1 bg-accent-500"></div>
+
+            <p class="font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500">
+              Legal information notice
+            </p>
+
+            <p class="mt-5 font-display text-xl font-normal uppercase leading-tight tracking-[-0.025em] text-base-950">
+              This page provides legal landscape information only.
+            </p>
+
+            <p class="mt-5 font-sans text-sm leading-6 text-base-700">
+              It is not legal advice and does not create an attorney-client relationship. If you believe you have a claim, consult a licensed attorney in your state.
+            </p>
+          </aside>
+
+        </div>
+      </Wrapper>
+    </section>
+
+    <!-- ─── SECTION 1: WHY NO MENOPAUSE LAWYER ─── -->
+    <section class="lozen-tracker-section">
+      <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
+        <div class="mx-auto max-w-4xl">
+          <p class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500">
+            01 — Context
+          </p>
+
+          <h2 class="mt-5 font-display text-3xl font-normal uppercase leading-tight tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-4xl">
+            Why there is no menopause lawyer — yet
+          </h2>
+
+          <div class="mt-7 grid gap-5 font-sans text-base leading-8 text-base-700 sm:mt-8 sm:text-lg sm:leading-9">
+            <p>
+              No US law school offers a menopause law specialty. No bar association has a menopause practice group. That is not because the legal issues don't exist — it is because the laws that create those issues are new, and the first cases under them are only now beginning to form.
+            </p>
+            <p>
+              Until recently, menopause had no explicit protection under federal or most state employment law. That is changing. Six states have enacted menopause-specific protections since 2024. Eleven more bills are active in 2026 legislative sessions. The first failure-to-accommodate claims under Rhode Island's 2025 law are likely already in pipeline. The legal category is forming in real time.
+            </p>
+            <p>
+              What exists now is a set of <strong class="font-semibold text-base-950">existing legal frameworks</strong> — employment discrimination law, disability law, insurance coverage law, civil rights statutes — that apply to menopause-related harm even where menopause is not explicitly named. The attorney who handles your case already exists. You need to know which kind to look for.
+            </p>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <!-- ─── SECTION 2: CLAIM TYPES ─── -->
+    <section class="lozen-tracker-section lozen-tracker-section--muted">
+      <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
+        <div class="mx-auto max-w-4xl">
+          <p class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500">
+            02 — Claim types
+          </p>
+
+          <h2 class="mt-5 font-display text-3xl font-normal uppercase leading-tight tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-4xl">
+            What kind of claim might you have
+          </h2>
+
+          <p class="mt-6 font-sans text-base leading-7 text-base-700 sm:text-lg sm:leading-8">
+            Menopause-related legal claims fall into three categories. They are not mutually exclusive.
+          </p>
+
+          <div class="mt-8 grid gap-4 sm:grid-cols-2">
+            {claimTypes.map((claim) => (
+              <div class="relative border border-base-200 bg-white p-6 transition-shadow hover:shadow-md">
+                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-0.5 bg-base-950 transition-colors group-hover:bg-accent-500"></div>
+                <h3 class="font-sans text-sm font-semibold uppercase tracking-[0.06em] text-base-950">
+                  {claim.title}
+                </h3>
+                <p class="mt-3 font-sans text-sm leading-6 text-base-700">
+                  {claim.body}
+                </p>
+                <p class="mt-4 font-sans text-xs font-semibold uppercase tracking-[0.12em] text-base-500">
+                  {claim.note}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <!-- ─── SECTION 3: STATE TABLE ─── -->
+    <section class="lozen-tracker-section">
+      <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
+        <div class="mx-auto max-w-4xl">
+          <p class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500">
+            03 — Enacted protections
+          </p>
+
+          <h2 class="mt-5 font-display text-3xl font-normal uppercase leading-tight tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-4xl">
+            Which states have enacted protections
+          </h2>
+
+          <p class="mt-6 font-sans text-base leading-7 text-base-700 sm:text-lg sm:leading-8">
+            If you are in one of these states, specific legal protections may apply to your situation beyond general employment or disability law.
+          </p>
+
+          <!-- Desktop table -->
+          <div class="lozen-tracker-table-wrap mt-8" tabindex="0" role="region" aria-label="Enacted menopause protections by state">
+            <table class="lozen-tracker-table">
+              <thead>
+                <tr>
+                  <th class="lozen-tracker-th">State</th>
+                  <th class="lozen-tracker-th">What it covers</th>
+                  <th class="lozen-tracker-th">In effect</th>
+                  <th class="lozen-tracker-th">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {states.map((row) => (
+                  <tr class="lozen-tracker-row">
+                    <td class="lozen-tracker-td lozen-tracker-td--strong">{row.state}</td>
+                    <td class="lozen-tracker-td">{row.covers}</td>
+                    <td class="lozen-tracker-td lozen-tracker-td--strong" style="white-space:nowrap">{row.inEffect}</td>
+                    <td class="lozen-tracker-td">
+                      <span class={`lozen-tracker-status-badge ${row.enacted ? "lozen-tracker-status--enacted" : "lozen-tracker-status--active"}`}>
+                        {row.enacted ? (row.inEffect === "Pending" ? "Pending" : "Enacted") : "Active"}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Mobile cards -->
+          <div class="lozen-tracker-mobile-grid">
+            {states.map((row) => (
+              <article class="lozen-tracker-mobile-card">
+                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-1 bg-accent-500"></div>
+                <div class="grid gap-4">
+                  <div>
+                    <p class="lozen-tracker-mobile-label">State</p>
+                    <p class="mt-1 font-sans text-base font-semibold text-base-950">{row.state}</p>
+                  </div>
+                  <div>
+                    <p class="lozen-tracker-mobile-label">What it covers</p>
+                    <p class="lozen-tracker-mobile-value">{row.covers}</p>
+                  </div>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <p class="lozen-tracker-mobile-label">In effect</p>
+                      <p class="lozen-tracker-mobile-value">{row.inEffect}</p>
+                    </div>
+                    <div>
+                      <p class="lozen-tracker-mobile-label">Status</p>
+                      <span class={`lozen-tracker-status-badge ${row.enacted ? "lozen-tracker-status--enacted" : "lozen-tracker-status--active"}`}>
+                        {row.enacted ? (row.inEffect === "Pending" ? "Pending" : "Enacted") : "Active"}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <p class="mt-5 font-sans text-xs leading-5 text-base-500">
+            Enacted and near-enacted laws only. 11 additional bills are active in 2026 sessions across additional states. For the full picture including active bills, federal legislation, and analytical notes on each law's scope, see the <a href="/menopause-legislation-tracker/" class="font-semibold text-base-700 underline decoration-accent-500 underline-offset-4 transition-colors hover:text-accent-700">Lozen Advisory Legislation Tracker</a>.
+          </p>
+        </div>
+      </Wrapper>
+    </section>
+
+    <!-- ─── SECTION 4: ATTORNEY GUIDE ─── -->
+    <section class="lozen-tracker-section lozen-tracker-section--muted">
+      <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
+        <div class="mx-auto max-w-4xl">
+          <p class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500">
+            04 — Finding counsel
+          </p>
+
+          <h2 class="mt-5 font-display text-3xl font-normal uppercase leading-tight tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-4xl">
+            What to look for in an attorney
+          </h2>
+
+          <p class="mt-6 font-sans text-base leading-7 text-base-700 sm:text-lg sm:leading-8">
+            Because menopause law is emerging rather than established, most attorneys handling these cases will come from adjacent practice areas. Here is how to find and evaluate them.
+          </p>
+
+          <div class="mt-8 divide-y divide-base-200 border border-base-200">
+            {attorneySteps.map((step) => (
+              <div class="grid grid-cols-[48px_1fr] bg-white">
+                <div class="flex items-start justify-center border-r border-base-200 bg-base-50 pt-5">
+                  <span class="font-display text-xl font-light text-base-400">{step.n}</span>
+                </div>
+                <div class="p-5 sm:p-6">
+                  <h3 class="font-sans text-sm font-semibold text-base-950">{step.heading}</h3>
+                  <p class="mt-2 font-sans text-sm leading-6 text-base-700">{step.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <!-- ─── SECTION 5: CLOSING ANALYSIS ─── -->
+    <section class="lozen-tracker-section">
+      <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
+        <div class="mx-auto max-w-4xl">
+          <p class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500">
+            05 — What the law cannot see
+          </p>
+
+          <h2 class="mt-5 font-display text-3xl font-normal uppercase leading-tight tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-4xl">
+            The gap between who a law names and who it serves
+          </h2>
+
+          <div class="mt-7 grid gap-5 font-sans text-base leading-8 text-base-700 sm:mt-8 sm:text-lg sm:leading-9">
+            <p>
+              Every law in this space — at the state and federal level — creates a system that activates when you use it. It requires a request, a claim, a disclosure, a formal pathway. The protections are real for the people who access them.
+            </p>
+            <p>
+              What the law does not yet measure is the population that decided not to. The workers who left before filing. The women who calculated that disclosure carried more professional risk than it returned. The patients whose symptoms were documented as something else. That population is not small, and it is not protected — not because the law failed them, but because the law has not yet been built to find them.
+            </p>
+            <p>
+              Lozen Advisory tracks this gap across every active piece of menopause legislation in the United States. The tracker is public, updated in real time, and includes analytical notes on what each law can and cannot measure — and why that matters for employers, insurers, healthcare providers, and the people the laws were written for.
+            </p>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+    <!-- ─── TRACKER CTA ─── -->
+    <section class="lozen-tracker-section lozen-tracker-section--muted">
+      <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
+        <div class="mx-auto max-w-4xl">
+          <div class="flex flex-col gap-6 border border-base-200 bg-base-950 p-8 sm:flex-row sm:items-center sm:justify-between sm:gap-10 sm:p-10">
+            <div>
+              <p class="font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-400">
+                Lozen Advisory
+              </p>
+              <h2 class="mt-3 font-display text-2xl font-normal uppercase leading-tight tracking-[-0.025em] text-white sm:text-3xl">
+                Menopause Legislation Tracker 2026
+              </h2>
+              <p class="mt-4 font-sans text-sm leading-6 text-base-400">
+                Every active state and federal menopause bill. Status, effective dates, coverage scope, and analytical notes on the governance gap each law creates.
+              </p>
+            </div>
+            <a
+              href="/menopause-legislation-tracker/"
+              class="inline-block shrink-0 bg-accent-500 px-7 py-4 font-sans text-xs font-semibold uppercase tracking-[0.12em] text-white transition-opacity hover:opacity-85"
+            >
+              View the tracker →
+            </a>
+          </div>
+        </div>
+      </Wrapper>
+    </section>
+
+  </main>
+
+</BaseLayout>
