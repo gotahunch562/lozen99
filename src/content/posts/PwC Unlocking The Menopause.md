@@ -41,7 +41,7 @@ Boards and General Counsel cannot make decisions in this realm without closer ex
 
 ## Supply & Demand?
 
-PwC's analysis is tracking supply. Employers are purchasing benefit packages; vendors are expanding; the category is growing. By every market metric, the problem has a perfect solution.
+PwC's analysis is tracking supply. Employers are purchasing benefit packages; vendors are expanding; the category is growing. By every market metric, the menopause at work problem has a perfect solution.
 
 However, utilization data tells a different story. [Adoption rates among eligible employees remain in the single digits](/blog/menopause-at-work-unquantified-data-gap/) across most enterprise programs. The senior women these benefits are designed to retain are not using them. Demand has not materialized.
 
