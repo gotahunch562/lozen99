@@ -87,9 +87,9 @@ The question is whether they inherit it before or after the attrition it fails t
 
 ## What the Board and General Counsel Should Be Able to Answer
 
-- **Does the organization's current benefit offering require an upfront professional paper trail?** If protection or support only activates after an employee explicitly identifies themselves as experiencing symptoms, the tool will fail to capture the most critical risk cohorts.
-- **Does it measure utilization or mitigation?** A vendor dashboard that shows clicks does not show whether invisible attrition was prevented. Efficacy must be measured by the stabilization of leadership capacity, not engagement logs.
-- **Does it account for Structural Silence?** If the framework has no mechanism to support workers who choose to manage their health entirely outside the corporate viewport, the enterprise remains completely exposed to unpriced labor force withdrawal.
+- **Verification of Professional Exposure:** Does the current benefit pathway require an upfront professional paper trail? If access or specialized leave requires an employee to explicitly flag symptom status to a manager or vendor dashboard, the architecture forces a disclosure dependency that triggers rational non-use.
+- **Efficacy Metric Alignment:** Does the infrastructure measure engagement logs or genuine risk mitigation? A vendor dashboard showing high click rates does not prove leadership capacity has been stabilized. Compliance documentation must tie capital deployment to retention, not portal traffic.
+- **Accounting for Structural Silence:** Does the risk model account for workers managing their health entirely outside the corporate viewport? If the enterprise has no mechanism to support the silent tier of senior talent, the organization's continuity tracking remains fundamentally incomplete.
 
 *This analysis applies Invisible Attrition℠ to the market conditions documented in [PwC's 2026 women's health forecast.](https://www.pwc.com/us/en/industries/health-industries/library/unlocking-the-menopause-market.html)* 
 
