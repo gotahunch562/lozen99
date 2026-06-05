@@ -67,7 +67,7 @@ When an organization responds to PwC's market forecast by purchasing a benefit, 
 
 The internal utilization data does not support that public representation.
 
-**General Counsel should be asking a specific question:** does the gap between what the organization claims to have built and what senior women are actually using constitute a substantiation exposure? In most cases, it does. The benefit is listed and the utilization is invisible. However, the departure data, which eventually shows the true attrition pattern, surfaces only after the loss has already occurred.
+**General Counsel should be asking a specific question:** does the gap between what the organization claims to have built and what senior women are actually using constitute a substantiation exposure? In most cases, it does. The benefit is listed and the utilization is invisible. However, the departure data, which eventually shows the true attrition pattern, surfaces only after the loss.
 
 **The board faces the same structure from a different angle.** Succession and continuity risk concentrate inside a narrow population of senior talent. When the tools designed to stabilize that population are functionally unused, the organization's continuity measurement is incomplete. The board is being asked to make governance decisions with information that does not reflect operational reality.
 
