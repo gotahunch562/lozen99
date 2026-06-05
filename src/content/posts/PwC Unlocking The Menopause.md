@@ -29,11 +29,13 @@ tags:
 draft: true
 isFeatured: false
 ---
-The $600 billion women's health market that PwC forecasts by 2030 is real. The employer adoption surge it describes, from 4% to 25% of enterprises offering dedicated menopause benefits, is real. PwC's diagnosis of why utilization remains low is also stated clearly: employees don't know these benefits exist or how to access them.
+The $600 billion women’s health market that PwC forecasts by 2030 is real. The employer adoption surge it describes, from 4% to 25% of enterprises offering dedicated menopause benefits, is real. PwC’s diagnosis of why utilization remains low is also stated clearly: employees do not know these benefits exist or how to access them.
 
-That diagnosis is wrong. And organizations building strategy on it are investing in the wrong fix while the attrition continues. What the forecast does not measure is, if adoption is working; and [optimism about supply is not the same as evidence of function.](/news-press/menopause-market-correction/)
+That diagnosis is wrong. And organizations building strategy on it are investing in the wrong fix while the attrition continues.
 
-Boards and General Counsel are inheriting that assumption without examining it. 
+What the forecast does not measure is whether adoption works. [Optimism about supply is not evidence of function](news-press/menopause-market-correction/).
+
+Boards and General Counsel are inheriting that assumption without examining it.
 
 ---
 
@@ -77,7 +79,7 @@ The CFO-level reckoning that is now working through corporate benefit budgets, d
 
 But the governance exposure sits above [the CFO problem](/blog/cfo-benefits-spend/). Boards and GC are not primarily concerned with vendor spend. They are concerned with whether the organization's stated position on talent retention reflects what the organization can actually demonstrate.
 
-PwC's forecast confirms that the market believes midlife women's health is a retention lever. The correction that Lozen Advisory documents is that belief has not been tested against the structural reality of how these programs fail to reach the people they are designed to serve. That gap, between the market's assumption and the organization's operational evidence, is what boards and General Counsel are now positioned to inherit.
+PwC's forecast confirms that the market believes midlife women's health is a retention lever. Lozen Advisory documented the fact that this belief has not been tested against the structural reality of how these programs fail on utilization metrics. That gap, between the market's assumption and the organization's operational evidence, is what boards and General Counsel are now positioned to inherit.
 
 The question is whether they inherit it before or after the attrition it fails to prevent becomes visible.
 
