@@ -41,7 +41,7 @@ Boards and General Counsel are inheriting that assumption without examining it.
 
 PwC's analysis is tracking supply. Employers are purchasing benefit packages; vendors are expanding; the category is growing. By every market metric, the problem has a perfect solution.
 
-However, utilization data tells a different story. Adoption rates among eligible employees remain in the single digits across most enterprise programs. The senior women these benefits are designed to retain are not using them.
+However, utilization data tells a different story. [Adoption rates among eligible employees remain in the single digits](/blog/menopause-at-work-unquantified-data-gap/) across most enterprise programs. The senior women these benefits are designed to retain are not using them.
 
 This is not a program awareness gap. Lozen Advisory's research on Invisible Attrition℠ establishes that non-use among this population is structurally rational: using a company-sponsored menopause pathway requires initiating disclosure, and disclosure introduces professional exposure the employee is unwilling to absorb. The benefit exists. The structural barrier to accessing it also exists.
 
