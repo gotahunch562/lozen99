@@ -46,6 +46,7 @@ const {
   includeBaseJsonLd = true,
   hideNavigation = false,
   hideFooter = false,
+  dateModified,
 } = Astro.props;
 
 const jsonLdItems = (Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []) as JsonLdObject[];
@@ -70,6 +71,7 @@ const defaultWebPageJsonLd =
         description: description ?? metaDescription,
         href: canonicalHref,
         image: ogImage,
+        dateModified,
       })
     : undefined;
 
