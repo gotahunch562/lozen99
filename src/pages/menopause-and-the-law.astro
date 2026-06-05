@@ -1,25 +1,37 @@
 ---
-import AuthorityPage from "@/components/authority/AuthorityPage.astro";
+import NarrativePage from "@/components/authority/NarrativePage.astro";
 
-const title = "Menopause and the Law: Understanding Your Legal Landscape";
+const seoTitle = "Menopause and the Law: Corporate Liability, Compliance Exposure, and the Emerging Legal Landscape | Lozen Advisory";
+const pageTitle = "Menopause and the Law: Understanding the Emerging Legal Landscape";
 const description =
-  "There is no such thing as a menopause lawyer — yet. This page explains what the law currently covers, which states have enacted protections, and what kind of attorney handles menopause-related claims.";
+  "There is no such thing as a menopause lawyer — yet. There is, however, a rapidly expanding body of state law, executive action, and federal legislation creating measurable corporate liability in employment, insurance, and healthcare.";
 const canonicalUrl = "https://www.lozenadvisory.com/menopause-and-the-law/";
+const datePublished = "2026-06-04";
 const dateModified = "2026-06-04";
 const dateLabel = "Updated June 4, 2026";
+const heroImage = "/images/authority/menopause-lawyers-info.avif";
+const heroImageAlt = "A professional legal and workplace information visual for a page about menopause and the law.";
 
-const pageJsonLd = {
+const articleJsonLd = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: title,
+  "@type": "Article",
+  headline: pageTitle,
   description,
   url: canonicalUrl,
+  datePublished,
+  dateModified,
+  keywords:
+    "menopause law, menopause legal liability, menopause employment law, menopause workplace accommodations, menopause insurance coverage, menopause legislation, corporate compliance risk",
+  author: {
+    "@type": "Person",
+    name: "Akilah E. Kamaria",
+  },
+  image: `https://www.lozenadvisory.com${heroImage}`,
   publisher: {
     "@type": "Organization",
-    name: "Lozen Advisory LLC",
+    name: "Lozen Advisory",
     url: "https://www.lozenadvisory.com/",
   },
-  dateModified,
 };
 
 const states = [
@@ -27,265 +39,244 @@ const states = [
     state: "Rhode Island",
     covers: "Workplace accommodation; adds menopause to protected traits under employment anti-discrimination law",
     inEffect: "June 2025",
-    enacted: true,
+    status: "Enacted",
   },
   {
     state: "New Jersey",
     covers: "Insurance coverage mandate for menopause treatment",
     inEffect: "January 2026",
-    enacted: true,
+    status: "Enacted",
   },
   {
     state: "Louisiana",
     covers: "Private insurer coverage for menopause treatments",
     inEffect: "August 2024",
-    enacted: true,
+    status: "Enacted",
   },
   {
     state: "Virginia",
     covers: "Insurance coverage; prior authorization restrictions for HRT",
     inEffect: "July 1, 2026",
-    enacted: true,
+    status: "Enacted",
   },
   {
     state: "Maryland",
     covers: "Omnibus: insurance coverage, provider training, employer accommodation obligations",
     inEffect: "October 1, 2026",
-    enacted: true,
+    status: "Enacted",
   },
   {
     state: "Washington",
     covers: "Executive Order 26-01: state agency accommodation obligations under existing civil rights law; model guidance for private employers",
     inEffect: "June 1, 2026",
-    enacted: true,
+    status: "Enacted",
   },
   {
     state: "Illinois",
     covers: "Workplace accommodation; pending Governor signature as of June 2026",
     inEffect: "Pending",
-    enacted: false,
+    status: "Pending",
   },
   {
     state: "Philadelphia, PA",
     covers: "City ordinance: adds menopause to protected traits in employment anti-discrimination law",
     inEffect: "January 1, 2027",
-    enacted: true,
+    status: "Enacted",
   },
 ];
 
-const claimTypes = [
+const liabilityExposures = [
   {
-    title: "Workplace / Employment",
-    body: "Were you fired, demoted, passed over, or pushed out while experiencing menopause symptoms? Did you request an accommodation and were refused? Did your employer fail to engage in any interactive process after you disclosed symptoms?",
-    note: "Attorney type: Employment / Civil rights",
+    title: "Failure to accommodate — workplace",
+    body: "Employers in Rhode Island, Maryland, and Illinois face enacted or near-enacted accommodation obligations. The legal exposure is not limited to formal requests. Where an employer knew or should have known that an employee was experiencing qualifying symptoms, the absence of a formal accommodation request does not eliminate liability. The interactive process obligation may attach before the employee acts.",
+    note: "Relevant practice area: Employment / Civil rights defense",
   },
   {
-    title: "Insurance Coverage",
-    body: "Was your menopause treatment denied, delayed, or required to go through prior authorization? Were you in a state with a coverage mandate — New Jersey, Virginia, Maryland, Louisiana — and still denied your claim?",
-    note: "Attorney type: Insurance coverage / Bad faith",
+    title: "Insurance coverage disputes",
+    body: "New Jersey, Virginia, Maryland, and Louisiana have enacted coverage mandates for menopause treatment. Bad-faith denial, prior authorization disputes, and network adequacy claims are now viable in these jurisdictions. Coverage effective dates for Virginia and Maryland are July and October 2026 respectively — the first denial disputes will surface within months of those dates.",
+    note: "Relevant practice area: Insurance coverage / Bad faith",
   },
   {
-    title: "Healthcare / Provider",
-    body: "Were your menopause symptoms misdiagnosed as anxiety, depression, or another condition? Were you denied treatment based on a diagnostic test — such as an FSH test — that is known to produce false negatives during perimenopause?",
-    note: "Attorney type: Medical malpractice / Healthcare",
+    title: "Healthcare provider liability",
+    body: "Coverage mandates tied to diagnostic thresholds — including FSH tests known to produce false negatives during perimenopause — create clinical liability exposure. Perimenopause misdiagnosed as anxiety or depression, followed by a documented coverage denial or treatment delay, presents a viable malpractice theory in states with enacted coverage obligations.",
+    note: "Relevant practice area: Healthcare / Medical malpractice",
   },
   {
-    title: "Constructive Dismissal",
-    body: "Did you feel forced to leave a job because your employer made your working conditions intolerable after symptoms began — changed your schedule, removed responsibilities, isolated you, or failed to act on documented requests?",
-    note: "Attorney type: Employment / Wrongful termination",
+    title: "Constructive dismissal and pattern-and-practice",
+    body: "Where an employer's response to disclosed symptoms includes schedule changes, role reduction, isolation, or inaction on documented requests, constructive dismissal claims are viable under existing employment law regardless of whether a state-specific menopause statute applies. The federal occupational health research mandate in S.4503, if enacted, will produce findings that support pattern-and-practice theories at scale.",
+    note: "Relevant practice area: Employment / Wrongful termination",
   },
 ];
 
-const attorneySteps = [
+const complianceSteps = [
   {
     n: "1",
-    heading: "Match the claim to the practice area first",
-    body: "An employment attorney for workplace claims. An insurance coverage or bad-faith attorney for denied treatment. A medical malpractice attorney for misdiagnosis or treatment delay. Do not look for a menopause specialist — look for an attorney who handles your type of claim and is willing to learn the menopause-specific law in your state.",
+    heading: "Map your jurisdiction exposure before the effective dates.",
+    body: "Virginia's coverage mandate takes effect July 1, 2026. Maryland's omnibus obligations activate October 1, 2026. Illinois is pending Governor signature. Employers and insurers operating in these states have a narrow compliance window. Accommodation policies, benefits plan reviews, and HR protocol updates should be underway now, not after the first claim.",
   },
   {
     n: "2",
-    heading: "Ask specifically about your state's law",
-    body: "If you are in Rhode Island, New Jersey, Virginia, Maryland, Washington, or a state with active legislation, ask the attorney whether they are familiar with the specific statute or executive order. An attorney who is willing to research it is better than one who dismisses it.",
+    heading: "Audit accommodation protocols for the interactive process gap.",
+    body: "Rhode Island's law has been in effect since 2025. The interactive process obligation activates at notification, not at formal request. If your clients' accommodation protocols require a written request before engagement begins, that protocol may already create exposure in Rhode Island and will create exposure in Maryland and Illinois on their effective dates.",
   },
   {
     n: "3",
-    heading: "Understand the existing framework",
-    body: "Even in states without specific menopause legislation, menopause symptoms may qualify as a disability under the ADA, a sex-related condition under Title VII, or a protected impairment under state civil rights statutes. An employment or civil rights attorney can evaluate this without waiting for new law to pass.",
+    heading: "Assess insurance plan compliance against coverage mandates.",
+    body: "Plans covering employees in New Jersey, Virginia, Maryland, and Louisiana should be reviewed against the specific coverage mandates in each jurisdiction. Prior authorization restrictions for HRT are expressly limited in Virginia and Colorado. Network adequacy claims are viable where coverage exists but qualified providers are inaccessible.",
   },
   {
     n: "4",
-    heading: "Document before you consult",
-    body: "Before your first consultation, write down the dates and facts of what happened. Any accommodation request you made, any response you received, any clinical documentation of your symptoms, any employment decision that followed. An attorney evaluating your claim needs a timeline, not a summary.",
+    heading: "Monitor the federal research mandate.",
+    body: "S.4503 — the Senate companion to H.R. 9090, with 16 bipartisan cosponsors — contains an occupational health research provision directing federal study of workplace stressors related to menopause symptoms. Once those findings publish, they become expert evidence in pending and future failure-to-accommodate and constructive dismissal cases. Employers should be briefing clients on this timeline now.",
   },
   {
     n: "5",
-    heading: "Be aware of filing deadlines",
-    body: "EEOC charges must generally be filed within 180 to 300 days of the discriminatory act. State agency deadlines vary. The deadline runs from the discriminatory event, not from the date of consultation. If time has passed, consult an attorney before deciding whether to proceed.",
+    heading: "Note the legislative intent record.",
+    body: "H.R. 9090 has been introduced three times without passage. That record — combined with the Washington EO, the Rhode Island and Maryland enacted laws, and the S.4503 Senate momentum — constitutes a documented federal and state acknowledgment of the problem. The argument that employers had no notice of this issue is no longer credible.",
   },
 ];
 ---
 
-<AuthorityPage
-  title={title}
+<NarrativePage
+  title={pageTitle}
+  seoTitle={seoTitle}
   description={description}
+  metaDescription={description}
+  canonical={canonicalUrl}
+  eyebrow="Legal Landscape"
+  typeLabel="Corporate Liability"
   dateLabel={dateLabel}
-  articleJsonLd={pageJsonLd}
   backHref="/tools-resources/"
   backLabel="Back to Resources"
+  ogImage={heroImage}
+  ogImageAlt={heroImageAlt}
+  heroImage={heroImage}
+  heroImageAlt={heroImageAlt}
+  heroImagePosition="center center"
+  articleJsonLd={articleJsonLd}
+  railTitle="Page Context"
+  railItems={[
+    {
+      label: "Audience",
+      value:
+        "Employers, insurers, healthcare organizations, corporate counsel, and advisors assessing menopause-related compliance and litigation exposure.",
+    },
+    {
+      label: "Updated",
+      value: "June 4, 2026",
+    },
+  ]}
+  railLinks={[
+    {
+      label: "Menopause Legislation Tracker",
+      href: "/menopause-legislation-tracker/",
+      description: "State and federal menopause legislation status, scope, and analytical notes.",
+    },
+  ]}
+  bottomCta={{
+    label: "Lozen Advisory",
+    title: "Track the legislation shaping this liability landscape.",
+    description:
+      "The public tracker organizes active state and federal menopause bills, enacted protections, effective dates, and analytical notes on the governance gap each law creates.",
+    href: "/menopause-legislation-tracker/",
+    linkLabel: "View the tracker →",
+  }}
 >
-  <Fragment slot="rail">
-    <div class="rounded-3xl border border-base-200 bg-white p-6 shadow-sm">
-      <p class="border-l border-accent-500 pl-4 text-xs font-medium uppercase tracking-[0.18em] text-base-600">
-        Legal information notice
-      </p>
-      <p class="mt-5 font-display text-xl font-medium uppercase leading-tight tracking-tight text-base-950">
-        This page provides legal landscape information only.
-      </p>
-      <p class="mt-4 text-sm leading-6 text-base-700">
-        It is not legal advice and does not create an attorney-client relationship. If you believe you have a claim, consult a licensed attorney in your state.
-      </p>
-    </div>
+  <p>
+    There is no such thing as a menopause lawyer — yet. There is, however, a rapidly expanding body of state law, executive action, and federal legislation creating measurable corporate liability in employment, insurance, and healthcare. This page maps the statutory landscape: what has been enacted, what is active, and where the first claims are forming.
+  </p>
 
-    <div class="mt-5 rounded-3xl border border-base-200 bg-base-50 p-6">
-      <p class="text-xs font-medium uppercase tracking-[0.18em] text-base-600">
-        Updated
-      </p>
-      <p class="mt-3 text-sm font-semibold text-base-900">
-        June 4, 2026
-      </p>
-      <p class="mt-3 text-sm leading-6 text-base-700">
-        For full state-by-state tracking, see the public legislation tracker.
-      </p>
-      <a
-        href="/menopause-legislation-tracker/"
-        class="mt-5 inline-flex text-sm font-bold text-base-950 underline decoration-accent-500 underline-offset-4"
-      >
-        View tracker →
-      </a>
-    </div>
-  </Fragment>
+  <h2>Why there is no menopause lawyer — yet</h2>
 
-  <div class="authority-article-body">
-    <p>
-      People search for a menopause lawyer because something happened — at work, with their insurance, with a provider — and they do not know what kind of legal help they need. The legal issue may be real, but the attorney category is not yet organized around the word menopause.
-    </p>
+  <p>
+    No US law school offers a menopause law specialty. No bar association has a menopause practice group. That is not because the legal exposure does not exist — it is because the laws creating that exposure are new, and the first cases under them are only now entering the pipeline.
+  </p>
 
-    <p>
-      This page explains the current legal landscape, which states have enacted protections, and what kind of attorney typically handles menopause-related claims.
-    </p>
+  <p>
+    Until recently, menopause had no explicit protection under federal or most state employment law. That has changed. Six states have enacted menopause-specific protections since 2024. Eleven more bills are active in 2026 legislative sessions. The first failure-to-accommodate claims under Rhode Island's 2025 law are likely already in formation. The legal category is developing in real time — and the compliance window for employers, insurers, and healthcare organizations is closing.
+  </p>
 
-    <span class="section-number">01 — Context</span>
-    <h2>Why there is no menopause lawyer — yet</h2>
+  <p>
+    What exists now is a set of existing legal frameworks — employment discrimination law, disability law, insurance coverage law, civil rights statutes — that apply to menopause-related harm even where menopause is not yet explicitly named. The litigation is coming under law that is already in force.
+  </p>
 
-    <p>
-      No US law school offers a menopause law specialty. No bar association has a menopause practice group. That is not because the legal issues do not exist. It is because the laws that create those issues are new, and the first cases under them are only now beginning to form.
-    </p>
+  <h2>Where corporate liability is forming</h2>
 
-    <p>
-      Until recently, menopause had no explicit protection under federal or most state employment law. That is changing. Six states have enacted menopause-specific protections since 2024. Eleven more bills are active in 2026 legislative sessions. The first failure-to-accommodate claims under Rhode Island's 2025 law are likely already in pipeline. The legal category is forming in real time.
-    </p>
+  <p>
+    Menopause-related legal exposure falls into four categories. For multi-state employers, insurers, and healthcare organizations, they are not mutually exclusive.
+  </p>
 
-    <p>
-      What exists now is a set of <strong>existing legal frameworks</strong> — employment discrimination law, disability law, insurance coverage law, civil rights statutes — that apply to menopause-related harm even where menopause is not explicitly named. The attorney who handles your case already exists. You need to know which kind to look for.
-    </p>
-
-    <span class="section-number">02 — Claim types</span>
-    <h2>What kind of claim might you have</h2>
-
-    <p>
-      Menopause-related legal claims fall into three categories. They are not mutually exclusive.
-    </p>
-
-    <div class="authority-card-grid">
-      {claimTypes.map((claim) => (
-        <section class="authority-card">
-          <h3>{claim.title}</h3>
-          <p>{claim.body}</p>
-          <p class="authority-card__note">{claim.note}</p>
-        </section>
-      ))}
-    </div>
-
-    <span class="section-number">03 — Enacted protections</span>
-    <h2>Which states have enacted protections</h2>
-
-    <p>
-      If you are in one of these states, specific legal protections may apply to your situation beyond general employment or disability law.
-    </p>
-
-    <div class="authority-state-grid" aria-label="Enacted menopause protections by state">
-      {states.map((row) => (
-        <article class="authority-state-card">
-          <div class="authority-state-card__header">
-            <h3>{row.state}</h3>
-            <span>{row.enacted ? (row.inEffect === "Pending" ? "Pending" : "Enacted") : "Active"}</span>
-          </div>
-
-          <dl>
-            <div>
-              <dt>What it covers</dt>
-              <dd>{row.covers}</dd>
-            </div>
-
-            <div>
-              <dt>In effect</dt>
-              <dd>{row.inEffect}</dd>
-            </div>
-          </dl>
-        </article>
-      ))}
-    </div>
-
-    <p class="authority-note">
-      Enacted and near-enacted laws only. Eleven additional bills are active in 2026 sessions across additional states. For the full picture including active bills, federal legislation, and analytical notes on each law's scope, see the <a href="/menopause-legislation-tracker/">Lozen Advisory Legislation Tracker</a>.
-    </p>
-
-    <span class="section-number">04 — Finding counsel</span>
-    <h2>What to look for in an attorney</h2>
-
-    <p>
-      Because menopause law is emerging rather than established, most attorneys handling these cases will come from adjacent practice areas. Here is how to find and evaluate them.
-    </p>
-
-    <div class="authority-step-list">
-      {attorneySteps.map((step) => (
-        <section class="authority-step">
-          <span>{step.n}</span>
-          <div>
-            <h3>{step.heading}</h3>
-            <p>{step.body}</p>
-          </div>
-        </section>
-      ))}
-    </div>
-
-    <span class="section-number">05 — What the law cannot see</span>
-    <h2>The gap between who a law names and who it serves</h2>
-
-    <p>
-      Every law in this space — at the state and federal level — creates a system that activates when you use it. It requires a request, a claim, a disclosure, a formal pathway. The protections are real for the people who access them.
-    </p>
-
-    <p>
-      What the law does not yet measure is the population that decided not to. The workers who left before filing. The women who calculated that disclosure carried more professional risk than it returned. The patients whose symptoms were documented as something else. That population is not small, and it is not protected — not because the law failed them, but because the law has not yet been built to find them.
-    </p>
-
-    <p>
-      Lozen Advisory tracks this gap across every active piece of menopause legislation in the United States. The tracker is public, updated in real time, and includes analytical notes on what each law can and cannot measure — and why that matters for employers, insurers, healthcare providers, and the people the laws were written for.
-    </p>
-
-    <section class="authority-bottom-stack">
-      <div class="authority-cta">
-        <p>Lozen Advisory</p>
-        <h2>Menopause Legislation Tracker 2026</h2>
-        <p>
-          Every active state and federal menopause bill. Status, effective dates, coverage scope, and analytical notes on the governance gap each law creates.
-        </p>
-        <a href="/menopause-legislation-tracker/">View the tracker →</a>
-      </div>
-    </section>
+  <div class="authority-card-grid">
+    {liabilityExposures.map((exposure) => (
+      <section class="authority-card">
+        <h3>{exposure.title}</h3>
+        <p>{exposure.body}</p>
+        <p class="authority-card__note">{exposure.note}</p>
+      </section>
+    ))}
   </div>
-</AuthorityPage>
+
+  <h2>The statutory map</h2>
+
+  <p>
+    The following jurisdictions have enacted menopause-specific legislation or executive action. Multi-state employers and insurers should assess compliance obligations in each jurisdiction where they operate.
+  </p>
+
+  <div class="authority-state-grid" aria-label="Enacted menopause protections by state">
+    {states.map((row) => (
+      <article class="authority-state-card">
+        <div class="authority-state-card__header">
+          <h3>{row.state}</h3>
+          <span>{row.status}</span>
+        </div>
+
+        <dl>
+          <div>
+            <dt>What it covers</dt>
+            <dd>{row.covers}</dd>
+          </div>
+
+          <div>
+            <dt>In effect</dt>
+            <dd>{row.inEffect}</dd>
+          </div>
+        </dl>
+      </article>
+    ))}
+  </div>
+
+  <p class="authority-note">
+    This table reflects enacted and near-enacted instruments only. Eleven additional bills are active in 2026 sessions. For the full picture including active bills, federal legislation, effective dates, and analytical notes on each instrument's scope and governance gaps, see the <a href="/menopause-legislation-tracker/">Lozen Advisory Legislation Tracker</a>.
+  </p>
+
+  <h2>What corporate counsel should be doing now</h2>
+
+  <div class="authority-step-list">
+    {complianceSteps.map((step) => (
+      <section class="authority-step">
+        <span>{step.n}</span>
+        <div>
+          <h3>{step.heading}</h3>
+          <p>{step.body}</p>
+        </div>
+      </section>
+    ))}
+  </div>
+
+  <h2>The gap between who a law names and who it serves</h2>
+
+  <p>
+    Every law in this space creates a system that activates at the point of participation. It requires a request, a claim, a disclosure, a formal pathway. The protections are real for the people who use them.
+  </p>
+
+  <p>
+    What the law does not yet measure is the population that decided not to. The workers who left before filing. The employees who calculated that disclosure carried more professional risk than it returned. The patients whose symptoms were documented as something else. That population does not appear in accommodation data, coverage claims, or utilization records — and its absence is routinely mistaken for low need or low impact.
+  </p>
+
+  <p>
+    Lozen Advisory tracks this gap across every active piece of menopause legislation in the United States using a proprietary classification framework applied consistently since April 2026. The tracker documents what each law assumes, what action must occur before its process begins, what data it can produce, and which populations remain outside what it is able to measure. That analytical record is available to employers building compliance infrastructure, insurers assessing coverage exposure, and counsel evaluating the legislative intent record in advance of litigation.
+  </p>
+</NarrativePage>
 
 <style>
   .authority-card-grid {
@@ -433,55 +424,6 @@ const attorneySteps = [
 
   .authority-step > div {
     padding: 1.25rem;
-  }
-
-  .authority-cta {
-    border: 1px solid var(--color-base-800);
-    border-radius: 1.5rem;
-    background: var(--color-base-950);
-    padding: clamp(1.5rem, 4vw, 2.5rem);
-    color: white;
-    box-shadow: var(--shadow-xl);
-  }
-
-  .authority-cta p:first-child {
-    margin: 0;
-    color: var(--color-base-300);
-    font-family: var(--font-sans);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-  }
-
-  .authority-cta h2 {
-    margin: 0.85rem 0 0;
-    color: white;
-    font-family: var(--font-display);
-    font-size: clamp(1.65rem, 3vw, 2.4rem);
-    font-weight: 500;
-    line-height: 1.05;
-    letter-spacing: -0.035em;
-    text-transform: uppercase;
-  }
-
-  .authority-cta p {
-    max-width: 42rem;
-    color: var(--color-base-200);
-  }
-
-  .authority-cta a {
-    display: inline-flex;
-    margin-top: 1rem;
-    border: 1px solid var(--color-accent-500);
-    border-radius: 999px;
-    background: var(--color-accent-500);
-    padding: 0.78rem 1.05rem;
-    color: var(--color-base-950);
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    font-weight: 800;
-    text-decoration: none;
   }
 
   @media (max-width: 760px) {
