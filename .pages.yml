@@ -31,9 +31,9 @@ content:
       delete: false
     view:
       primary: title
-      fields: [title, pubDate, dateModified, category, isFeatured, draft]
+      fields: [title, subtitle, pubDate, dateModified, category, isFeatured, draft]
       sort: [dateModified, pubDate, title]
-      search: [title, description, excerpt, category, tags]
+      search: [title, subtitle, description, excerpt, category, tags]
       default:
         sort: dateModified
         order: desc
@@ -42,6 +42,11 @@ content:
         label: Title
         type: string
         required: true
+      - name: subtitle
+        label: Subtitle
+        type: string
+        required: false
+        description: "Optional visible subtitle/deck under the article title. Use when the title should stay short."
       - name: slug
         label: Slug
         type: string
