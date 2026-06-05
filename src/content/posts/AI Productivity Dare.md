@@ -1,6 +1,6 @@
 ---
-title: "The AI Productivity Dare: Why Reducing Headcount Is Not an LLM
-  Governance Strategy"
+title: The AI Productivity Dare
+subtitle: Why Reducing Headcount Is Not an LLM Governance Strategy
 slug: ai-productivity-dare
 pubDate: 2026-06-05
 datePublished: 2026-06-05
@@ -20,8 +20,8 @@ heroAlt: "woman stress of reducing headcount "
 tags:
   - Power User Trap
   - Tacere
-draft: true
-isFeatured: false
+draft: false
+isFeatured: true
 ---
 ## When AI Adoption Replaces LLM Governance
 
@@ -65,4 +65,4 @@ This is what LLM governance looks like when it is not governed: unpriced, invisi
 
 ---
 
-*The AI Workforce Materiality Briefing is a private governance stress test for CFOs, General Counsel, and corporate boards. [Request the briefing.](/request-briefing/)*
+*The AI Workforce Materiality Briefing is a private governance advisory meeting for CFOs, General Counsel, and corporate boards. [Request the briefing.](/ai-workforce-materiality-briefing/)*
