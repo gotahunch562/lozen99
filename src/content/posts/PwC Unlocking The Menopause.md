@@ -26,7 +26,7 @@ tags:
   - Invisible Attrition
   - Tacere
   - Workplace Disclosure
-draft: true
+draft: false
 isFeatured: false
 ---
 The $600 billion women’s health market that PwC forecasts by 2030 is real. The employer adoption surge it describes, from 4% to 25% of enterprises offering dedicated menopause benefits, is real. PwC’s diagnosis of why utilization remains low is also stated clearly: employees do not know these benefits exist or how to access them.
