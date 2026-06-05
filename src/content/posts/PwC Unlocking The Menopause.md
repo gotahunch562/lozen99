@@ -17,7 +17,7 @@ description: >2+
   difference is material.
 
 image:
-  url: /src/images/blog/awareness-brigade.webp
+  url: /src/images/blog/the-menopause-market-forecast-1.avif
   alt: infographic on awareness vs adoption of menopause benefits
 heroImage: /src/images/blog/the-menopause-market-forecast.avif
 heroAlt: woman yellow sweater documenting menopause information
@@ -33,9 +33,7 @@ The $600 billion women’s health market that PwC forecasts by 2030 is real. The
 
 That diagnosis is wrong. And organizations building strategy on it are investing in the wrong fix while the attrition continues.
 
-What the forecast does not measure is whether adoption works. [Optimism about supply is not evidence of function](/news-press/menopause-market-correction/).
-
-Boards and General Counsel are inheriting that assumption without examining it.
+What the forecast does not measure is whether awareness works. Awareness mantras are loud in the market  but they are based on assumptions not data. **** Boards and General Counsel cannot make decisions in this realm without closer examination of the facts.
 
 ---
 
