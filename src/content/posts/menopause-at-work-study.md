@@ -24,6 +24,10 @@ heroImage: /src/images/blog/professional_woman_executive.webp
 heroAlt: Professional woman executive in a corporate setting.
 tags:
   - Performance & Career
+  - Workplace Disclosure
+  - Invisible Attrition
+  - Tacere
+  - Power User Trap
 spineDestination: why-lozen-advisory
 draft: false
 isFeatured: false
@@ -40,7 +44,7 @@ She is not in the echo chamber the study is trying to break out of. She was neve
 
 ### Why Employer-Facing Frameworks Fall Short
 
-The research is designed to persuade organizations to act and that is a very worthy goal. The estimated $26.6 billion in annual employer costs attributed to menopause is a real number, and the case for organizational response is legitimate. Yet the architecture of every proposed solution runs through the employer: benefits audits, manager training, formulary changes and leadership conversation training. Each of these interventions requires the organization to name the problem, and each named program creates a signal, one that feeds directly into what we call [Invisible Attrition℠.](/structural-silence/) However well-intentioned, that signal tells anyone paying attention that a woman accessing the service has something to manage.
+The research is designed to persuade organizations to act and that is a very worthy goal. The estimated $26.6 billion in annual employer costs attributed to menopause is a real number, and the case for organizational response is legitimate. Yet the architecture of every proposed solution runs through the employer: benefits audits, manager training, formulary changes and leadership conversation training. Each of these interventions requires the organization to name the problem, and each named program creates a signal, one that feeds directly into what we call [Invisible Attrition℠.](/invisible-attrition/structural-silence/) However well-intentioned, that signal tells anyone paying attention that a woman accessing the service has something to manage.
 
 That signal is the barrier the study does not measure and the frameworks it will produce cannot dissolve.
 
