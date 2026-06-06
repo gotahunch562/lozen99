@@ -25,11 +25,14 @@ heroAlt: Illustration depicting the 73-point menopause data perception gap
   between HR manager confidence and employee disclosure reality.
 tags:
   - Research & Policy
+  - Workplace Disclosure
+  - Disclosure Independence
+  - Invisible Attrition
 spineDestination: retention-risk-analysis
 draft: false
 isFeatured: false
 ---
-Employers making decisions about menopause support are working from available data. Accommodation requests, leave utilization, healthcare benefit engagement, and manager escalations form the basis for what most organizations can measure. The [visibility constraint](/billable-hour-visibility-tax) is the same across all of them: the system cannot measure what it has not been designed to collect. It reflects what employees report. It does not reflect what they do not.
+Employers making decisions about menopause support are working from available data. Accommodation requests, leave utilization, healthcare benefit engagement, and manager escalations form the basis for what most organizations can measure. The [visibility constraint](/blog/billable-hour-visibility-tax) is the same across all of them: the system cannot measure what it has not been designed to collect. It reflects what employees report. It does not reflect what they do not.
 
 ---
 
@@ -71,7 +74,7 @@ Two examples illustrate how this plays out. The financial outcome is the same in
 
 In the first, a senior employee exits with no prior signals. Performance reviews were strong. Attendance was unremarkable. Her exit is recorded as personal. Replacement costs the organization up to 200% of her annual salary. The cost was real. The cause was never visible.
 
-In the second, a senior employee exits after increased leave usage, no promotion over multiple cycles, and a lateral role adjustment. Each signal was captured. None was connected to a condition that affects roughly one in ten women who have gone through menopause and left a job because of it. [Her exit is also recorded as personal.](/exit-data-failure/) Same replacement cost. An estimated $2,100 in excess annual healthcare costs absorbed before she left.
+In the second, a senior employee exits after increased leave usage, no promotion over multiple cycles, and a lateral role adjustment. Each signal was captured. None was connected to a condition that affects roughly one in ten women who have gone through menopause and left a job because of it. [Her exit is also recorded as personal.](/invisible-attrition/exit-data-failure/) Same replacement cost. An estimated $2,100 in excess annual healthcare costs absorbed before she left.
 
 Two different data failures. One never captured. One captured and misinterpreted. The financial loss is identical either way.
 
