@@ -47,6 +47,8 @@ However, utilization data tells a different story. [Adoption rates among eligibl
 
 This is not a program awareness gap. Lozen Advisory's research on Invisible Attrition℠ establishes that non-use among this population is structurally rational: using a company-sponsored menopause pathway requires initiating disclosure, and disclosure introduces professional exposure the employee is unwilling to absorb. The benefit exists. The structural barrier to accessing it also exists.
 
+![Workplace awareness campaign imagery illustrating the limits of benefit visibility when disclosure creates professional exposure](/images/blog/awareness-brigade.webp)
+
 ![Workplace awareness campaign imagery illustrating the limits of benefit visibility when disclosure creates professional exposure](/src/images/blog/awareness-brigade.webp)
 
 > The benefit exists in theory. The professional cost of using it exists in practice. The gap between what the benefit offers and what accessing it costs is where silence is produced.
