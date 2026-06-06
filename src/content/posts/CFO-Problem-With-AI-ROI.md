@@ -19,6 +19,11 @@ image:
   alt: dollars floating away on water
 heroImage: /src/images/blog/dollarfloat-1.avif
 heroAlt: dollars floating away on water
+tags:
+  - Power User Trap
+  - Workplace Disclosure
+  - Invisible Attrition
+  - Tacere
 draft: false
 isFeatured: false
 ---
@@ -30,7 +35,7 @@ The CFO problem with AI ROI is not just one problem, it is three problems conver
 
 1. Expected savings are underperforming
 2. Actual costs are becoming harder to control
-3.  [human verification labor is still missing](/retention-calculator/) from the calculation
+3. [human verification labor is still missing](/retention-calculator/) from the calculation
 
 > AI ROI is being squeezed from both sides before the human governance layer is even priced.
 
