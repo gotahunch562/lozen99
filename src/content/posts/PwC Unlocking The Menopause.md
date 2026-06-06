@@ -1,5 +1,5 @@
 ---
-title: Why PwC Unlocking The Menopause Market Forecast Is Optimistic at Best
+title: Why PwC's Menopause Market Forecast Is Optimistic at Best
 slug: menopause-benefit-market-correction-board-exposure
 pubDate: 2026-06-06
 datePublished: 2026-06-06
@@ -17,7 +17,7 @@ description: >2+
   difference is material.
 
 image:
-  url: /src/images/blog/the-menopause-market-forecast-1.avif
+  url: /src/images/blog/awareness brigade.webp
   alt: infographic on awareness vs adoption of menopause benefits
 heroImage: /src/images/blog/the-menopause-market-forecast.avif
 heroAlt: woman yellow sweater documenting menopause information
@@ -31,7 +31,7 @@ isFeatured: false
 ---
 The $600 billion women’s health market that PwC forecasts by 2030 is real. The employer adoption surge it describes, from 4% to 25% of enterprises offering dedicated menopause benefits, is real. PwC’s diagnosis of why utilization remains low is also stated clearly: employees do not know these benefits exist or how to access them.
 
-That diagnosis is wrong. And organizations building strategy on it are investing in the wrong fix while the attrition continues.
+That diagnosis is wrong. And organizations building strategy on it are investing in the wrong fix [while the attrition continues.](/architecture-of-invisible-attrition-series/)
 
 What the forecast does not measure is whether awareness works. Awareness mantras are loud in the market  but they are based on assumptions not data.
 
@@ -91,7 +91,7 @@ The question is whether they inherit it before or after the attrition it fails t
 - **Efficacy Metric Alignment:** Does the infrastructure measure engagement logs or genuine risk mitigation? A vendor dashboard showing high click rates does not prove leadership capacity has been stabilized. Compliance documentation must tie capital deployment to retention, not portal traffic.
 - **Accounting for Structural Silence:** Does the risk model account for workers managing their health entirely outside the corporate viewport? If the enterprise has no mechanism to support the silent tier of senior talent, the organization's continuity tracking remains fundamentally incomplete.
 
-*This analysis applies Invisible Attrition℠ to the market conditions documented in [PwC's 2026 women's health forecast.](https://www.pwc.com/us/en/industries/health-industries/library/unlocking-the-menopause-market.html)* 
+*This analysis applies Invisible Attrition℠ to the market conditions documented in [PwC's 2026](https://www.pwc.com/us/en/industries/health-industries/library/unlocking-the-menopause-market.html)* **[Unlocking The Menopause Market Forecast.](https://www.pwc.com/us/en/industries/health-industries/library/unlocking-the-menopause-market.html)**
 
 *For a private advisory on what your organization's benefit utilization data implies for board-level continuity risk and General Counsel substantiation exposure, commission a [Strategic Briefing](/request-briefing/)*
 
