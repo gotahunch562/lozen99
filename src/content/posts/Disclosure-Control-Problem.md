@@ -1,5 +1,5 @@
 ---
-title: AI Productivity Claims Are Becoming a Disclosure-Control Problem
+title: Are AI Productivity Claims A Disclosure-Control Problem?
 subtitle: Can AI Work Product Withstand Scrutiny?
 slug: ai-productivity-vs-governance
 pubDate: 2026-06-05
