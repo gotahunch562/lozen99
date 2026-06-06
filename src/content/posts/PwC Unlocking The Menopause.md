@@ -1,9 +1,9 @@
 ---
 title: Why PwC Unlocking The Menopause Market Forecast Is Optimistic at Best
 slug: menopause-benefit-market-correction-board-exposure
-pubDate: 2026-06-05
-datePublished: 2026-06-05
-dateModified: 2026-06-05
+pubDate: 2026-06-06
+datePublished: 2026-06-06
+dateModified: 2026-06-06
 category: CFO Resources
 homepageSection: menopause-at-work
 excerpt: The corporate benefits landscape is currently dominated by what can
