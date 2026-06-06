@@ -27,7 +27,7 @@ isFeatured: true
 
 In January, Snowflake CIO Mike Blandina cut his engineering team to its year-end headcount target — ten months early. He described it as a "provocative way" to force AI tool adoption. His logic was direct: remove enough people, and the team will either use the tools or fail.
 
-That is [not an AI governance strategy](/mandatory-ai-use-governance/). It is a pressure test dressed as one.
+That is [not an AI governance strategy](/blog/mandatory-ai-use-governance/). It is a pressure test dressed as one.
 
 Blandina's team is now smaller, under explicit pressure to produce with AI assistance, and operating inside an incentive structure where flagging a bad model output carries visible professional cost. The organization will see throughput. It will not see the verification labor that throughput required. It will not see who absorbed the doubt — and it will not see who is practicing [Tacere, keeping silent about what the tools cannot do](https://zenodo.org/records/20370916) because visibility carries the risk of losing their job.
 
