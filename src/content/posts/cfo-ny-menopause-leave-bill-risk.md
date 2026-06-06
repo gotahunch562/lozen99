@@ -1,5 +1,6 @@
 ---
 title: "NY Menopause Leave Bill: Four Structural Problems"
+subtitle: None of Them Are Related to Menopause
 slug: cfo-ny-menopause-leave-bill-risk
 pubDate: 2026-05-29
 datePublished: 2026-05-29
@@ -23,11 +24,10 @@ heroAlt: A CFO analyzing the impact of proposed menopause legislation on his
 tags:
   - Legislative Analysis
   - Workplace Disclosure
+  - Invisible Attrition
 draft: false
 isFeatured: false
 ---
-## The NY State Menopause Leave Bill Has Four Problems. None of Them Are Related to Menopause.
-
 A bill moving through the New York State Legislature is designed to help women. But, before New York State Legislators build [menopause leave into law](/blog/ny-s3908-workers-comp-menopause-gap/), four structural problems raised by A10296, A10270, and the companion Senate bills need to be named and addressed.
 
 Naming the problems is not an argument against the bill. It is an argument for building it strategically, with consideration of certain facts.
