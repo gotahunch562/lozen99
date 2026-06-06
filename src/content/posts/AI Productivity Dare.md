@@ -20,6 +20,7 @@ heroAlt: "woman stress of reducing headcount "
 tags:
   - Power User Trap
   - Tacere
+  - Invisible Attrition
 draft: false
 isFeatured: true
 ---
