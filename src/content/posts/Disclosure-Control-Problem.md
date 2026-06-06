@@ -2,8 +2,8 @@
 title: Are AI Productivity Claims A Disclosure-Control Problem?
 subtitle: Can AI Work Product Withstand Scrutiny?
 slug: ai-productivity-vs-governance
-pubDate: 2026-06-05
-datePublished: 2026-06-05
+pubDate: 2026-06-06
+datePublished: 2026-06-06
 dateModified: 2026-06-06
 category: Corporate Boards
 seriesKey: ai-workforce-materiality
@@ -23,7 +23,7 @@ tags:
   - Power User Trap
   - Legal Profession
   - Disclosure Independence
-draft: true
+draft: false
 isFeatured: false
 ---
 Companies are telling boards, investors, and the market that AI is improving productivity, reducing cost, and transforming operations. The question is not whether AI can generate more output; the question is whether the organization can prove how that output entered the business record.
