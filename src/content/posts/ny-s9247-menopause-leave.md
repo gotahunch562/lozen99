@@ -11,20 +11,18 @@ excerpt: New York Senate Bill S9247/A10296 aims to reduce the friction between
   activates once an employee raises her hand, a trigger that fewer than one in
   five women are willing to pull.
 description: An audit of New York Bill S9247 and A10296. Discover why a 5-day
-  menopause leave mandate fails to protect talent due to disclosure-dependent
-  design.
+  menopause leave mandate fails to protect key talent due to
+  disclosure-dependent design.
 metaDescription: NY S9247 proposes five days of paid menopause leave, but a new
   entitlement doesn't solve the disclosure barrier. Learn why leave utilization
   data creates a "dashboard delay" and fails to measure Invisible Attrition℠.
 image:
   url: /src/images/blog/NysenateBILL9247.webp
   alt: Lady Justice holding legislative documents with the Statue of Liberty and
-    Manhattan skyline in the background, representing New York menopause
-    workplace legislation.
+    Manhattan skyline
 heroImage: /src/images/blog/NysenateBILL9247.webp
 heroAlt: Lady Justice holding legislative documents with the Statue of Liberty
-  and Manhattan skyline in the background, representing New York menopause
-  workplace legislation.
+  and Manhattan skyline
 tags:
   - Legislative Analysis
   - Workplace Disclosure
