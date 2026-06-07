@@ -3,7 +3,7 @@ title: Maryland SB 892 Enacted The Clinical vs Corporate Gap
 slug: maryland-sb892-menopause
 pubDate: 2026-04-16
 datePublished: 2026-04-16
-dateModified: 2026-06-02
+dateModified: 2026-06-06
 category: Legislative Analysis
 excerpt: "Maryland SB892: The Limits of Menopause Mandates. The legislation
   improves training. It expands coverage. It strengthens the clinical system at
