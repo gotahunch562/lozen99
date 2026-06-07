@@ -23,7 +23,7 @@ tags:
   - Tacere
   - Power User Trap
   - Research & Policy
-draft: true
+draft: false
 isFeatured: false
 ---
 ***Status Note — Foundational Framework; Capital Allocation & Technology Risk Audit***
