@@ -1,21 +1,19 @@
 ---
-title: "The Capacity Substitution Error: Talent Attrition and CFO Risk"
+title: "The Capacity Substitution Error: AI Governance and Talent Risk"
 slug: talent-attrition-cfo-risk
 pubDate: 2026-06-06
 datePublished: 2026-06-06
 dateModified: 2026-06-06
 category: CFO Resources
-description: this is a test
+description: A fiduciary audit of the Capacity Substitution Error. Discover why
+  concurrent AI capital expenditure and Invisible Attrition create a structural
+  board blind spot.
 image:
   url: /src/images/blog/stable-performance-as-risk.webp
   alt: test
 draft: true
 isFeatured: false
 ---
-
-
-
-
 There are two disparate conversations currently being had in corporate leadership forums daily. One is a knowledge management problem to be solved with AI. The other is AI governance and risk management. Conventional wisdom says these are disparate problems with vertical solutions.
 
 In actuality, they are the same governance error viewed from opposite sides.
@@ -30,7 +28,7 @@ The second conversation is about attrition. It has two dimensions.
 
 The mechanism that makes it invisible is **Tacere** — the sustained, strategic practice of non-disclosure by a senior executive operating in an environment where visibility carries professional risk. The organisation does not see the departure coming because the person leaving has assessed, correctly, that naming their reason costs more than leaving quietly. The silence is not a failure of psychological safety. It is a rational response to a structural incentive. [(Kamaria, 2026)](https://doi.org/10.5281/zenodo.20370916)
 
-**Dimension two** is the seeds of attrition growing among the people who are the first adopters of AI technology in the workplace. These are the senior practitioners being asked to implement tools that, in organisational logic, are intended to replace them. AI adoption routes more calibration, judgment, and accountability through the person most able to make the tool usable. The organisation reads that concentration as successful adoption. The person carrying it experiences it as accumulation. This is the [Power User Trap℠](https://www.lozenadvisory.com/invisible-attrition/power-user-trap/) — and it produces the same invisible exit pattern as the first dimension, through a different structural mechanism.
+**Dimension two** is the seeds of attrition growing among the people who are the first adopters of AI technology in the workplace. These are the senior practitioners being asked to implement tools that, in organisational logic, are intended to replace them. AI adoption routes more calibration, judgment, and accountability through the person most able to make the tool usable. The organisation reads that concentration as successful adoption. The person carrying it experiences it as accumulation. This is the [Power User Trap℠](/invisible-attrition/power-user-trap/) — and it produces the same invisible exit pattern as the first dimension, through a different structural mechanism.
 
 The governance architecture has never been asked to connect these seemingly disparate ideas into a cohesive frame. This article is the clarion call to begin.
 
