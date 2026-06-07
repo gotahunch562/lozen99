@@ -8,7 +8,7 @@ category: Legislative Analysis
 excerpt: "Maryland SB892: The Limits of Menopause Mandates. The legislation
   improves training. It expands coverage. It strengthens the clinical system at
   the point of care. But it does not alter the condition that governs entry into
-  that system."
+  HR systems."
 description: Maryland SB892 (Chapter 605). Trace how clinical insurance
   expansions differ from direct employer-facing activation mechanisms.
 metaDescription: Maryland SB892 passed with near-unanimous support, but can
