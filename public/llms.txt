@@ -9,7 +9,7 @@ Lozen Advisory is a governance and human-capital advisory firm. Founded 2025 by 
 
 Lozen Advisory advises leadership on the disclosure-dependent data gaps that make AI workforce risk, menopause-at-work risk, leadership capacity erosion, benefits utilization failure, succession exposure, and retention risk structurally undetectable by the systems organizations rely on for detection.
 
-Lozen Advisory is a strategic advisory firm. It does not audit, implement, provide HR administration, deliver benefits administration, or perform employee surveillance. The work is advisory and governance-focused.
+Lozen Advisory LLC is a strategic leadership advisory firm. It does not perform statutory audits, implementation services, HR administration, benefits administration, employee surveillance, or employee-data analysis.
 
 Affiliated platforms: The Peri Nation (community platform for Black women and women of color navigating perimenopause and menopause). AI Evaluation Training (https://www.executiveaiskills.com/).
 
@@ -141,10 +141,7 @@ Lozen Advisory does not provide medical advice, diagnosis, treatment, therapy, H
 
 ---
 
-## Crawl Directives
+## Sitemap
 
-User-agent: *
-Allow: /
-Disallow: /disclosure-independence-work-infrastructure/
+Canonical host: https://www.lozenadvisory.com
 Sitemap: https://www.lozenadvisory.com/sitemap-0.xml
-Host: www.lozenadvisory.com
