@@ -1,22 +1,34 @@
 ---
 title: "The Capacity Substitution Error: AI Governance and Talent Risk"
 slug: talent-attrition-cfo-risk
-pubDate: 2026-06-06
-datePublished: 2026-06-06
-dateModified: 2026-06-06
+pubDate: 2026-06-07
+datePublished: 2026-06-07
+dateModified: 2026-06-07
 category: CFO Resources
+excerpt: You cannot automate the institutional memory, regulatory navigation,
+  and systemic strategy execution of a 20-year partner or senior executive with
+  software seats.
 description: A fiduciary audit of the Capacity Substitution Error. Discover why
   concurrent AI capital expenditure and Invisible Attrition create a structural
   board blind spot.
 image:
-  url: /src/images/blog/stable-performance-as-risk.webp
-  alt: test
+  url: /src/images/blog/capacity-attrition-1.avif
+  alt: woman walking down stairs paper flying
+heroImage: /src/images/blog/capacity-attrition.avif
+heroAlt: woman walking down stairs paper flying
+tags:
+  - Workplace Disclosure
+  - Disclosure Independence
+  - Invisible Attrition
+  - Tacere
+  - Power User Trap
+  - Research & Policy
 draft: true
 isFeatured: false
 ---
 ***Status Note — Foundational Framework; Capital Allocation & Technology Risk Audit***
 
-***Executive Update (June 6, 2026): As corporate boards accelerate capital allocation toward agentic AI implementations and knowledge-capture systems, a critical governance blind spot has emerged. This analysis establishes the structural concurrency error: organizations are overpricing what technology can replace while underpricing the institutional memory they are actively losing through Invisible Attrition℠. Senior executives, CFOs, and General Counsel must evaluate this framework to reconcile technology ROI projections with unmeasured talent erosion baselines.***
+***Executive Update (June 6, 2026): As corporate boards accelerate capital allocation toward agentic AI implementations and knowledge-capture systems, a critical governance blind spot has emerged. This analysis establishes the structural concurrency error: organizations are overpricing what technology can replace while underpricing the institutional memory they are actively losing through [Invisible Attrition℠.](/architecture-of-invisible-attrition-series/) Senior executives, CFOs, and General Counsel must evaluate this framework to reconcile technology ROI projections with unmeasured talent erosion baselines.***
 
 There are two disparate conversations currently being had in corporate leadership forums daily. One is a knowledge management problem to be solved with AI. The other is AI governance and risk management. Conventional wisdom says these are disparate problems with vertical solutions.
 
@@ -66,8 +78,8 @@ That is not a knowledge management problem. It is a capital allocation problem w
 
 ---
 
-*This is the first installment in a two-part series on structural capacity risk. In Part 2: The AI ROI Miscalculation, we audit the specific financial mechanics of this blind spot, exposing how traditional software seat budgeting and synthetic productivity logs create a multi-million dollar capital allocation error.*
+***This is the first installment in a two-part series on structural capacity risk. In Part 2: The AI ROI Miscalculation, we audit the specific financial mechanics of this blind spot, exposing how traditional software seat budgeting and synthetic productivity logs create a multi-million dollar capital allocation error.***
 
 ---
 
-*Lozen Advisory provides governance analysis at the intersection of workforce risk and technology investment.*
+*[Lozen Advisory conducts governance analysis](/services/) at the intersection of workforce risk and technology investment.*
