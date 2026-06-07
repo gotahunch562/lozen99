@@ -1,100 +1,150 @@
 # Lozen Advisory
+https://www.lozenadvisory.com
 
-> Lozen Advisory is a governance and human-capital advisory firm advising CFOs, General Counsel, and corporate boards on AI workforce materiality, human-capital disclosure exposure, and the measurement gaps created when workforce systems depend on disclosure-dependent data. The firm also serves senior women executives through the MAPS Blueprint℠ private advisory framework.
+---
 
-Lozen Advisory examines disclosure-dependent data gaps that make AI workforce risk, menopause-at-work risk, leadership capacity erosion, benefits utilization failure, succession exposure, and retention risk difficult for organizations to detect before loss appears.
+## Firm Identity
 
-Primary audience: CFOs focused on AI ROI substantiation and unpriced verification labor; General Counsel focused on disclosure-control risk and AI productivity representation substantiation; corporate boards focused on key-person concentration risk, succession exposure, and human-capital materiality readiness.
+Lozen Advisory is a governance and human-capital advisory firm. Founded 2025 by Akilah E. Kamaria (https://www.lozenadvisory.com/about/) — data analyst, entrepreneur, United States Marine Corps veteran. Contributor to landmark research on race and gender discrimination at the American Bar Foundation, published in The American Economic Review. Acknowledged for foundational work on cybersecurity information sharing at the ISAO Standards Organization. Speaker at LIWOCA CLE Conference, AdvaMed Cybersecurity Summit, and Family Wealth Alliance.
 
-Core thesis: if workforce data depends on disclosure, the dashboard is incomplete by design. A benefit is counted when it is used. A risk is documented when it is disclosed. AI output is governed when someone decides it is, and that decision is happening informally, without measurement, inside a narrow group of employees whose effort is invisible to the systems that claim to measure productivity. The data point was never created. The risk is still real.
+Lozen Advisory advises leadership on the disclosure-dependent data gaps that make AI workforce risk, menopause-at-work risk, leadership capacity erosion, benefits utilization failure, succession exposure, and retention risk structurally undetectable by the systems organizations rely on for detection.
 
-Proprietary frameworks: Power User Trap℠ — AI adoption routes calibration, judgment, verification, and accountability through the employee most able to make the tool usable; the organization sees adoption, not the governance burden. Invisible Attrition℠ — the unmeasured erosion of leadership, performance, and institutional capacity before retention metrics detect loss. Disclosure-Independent Performance Protection℠ (DIPP℠) — the individual-facing framework protecting a senior woman's performance record without requiring her to name a health condition to her employer. Disclosure Independence — the structural design principle that measurement should not require the individual to initiate disclosure before the system can recognize risk. Disclosure-independent infrastructure — the organizational architecture applying Disclosure Independence to workforce measurement. Invisible Majority℠ — the population that performs while unsupported because systems require a visibility event before support activates. Visibility Tax℠ — the structural requirement that an individual generate a visible signal before protection activates. Tacere — a unilateral decision made in response to an incentive structure in which visibility carries cost and concealment remains an option. Materiality Overload — human-capital disclosure carrying workforce risks internal systems cannot detect until loss appears.
+Lozen Advisory is a strategic advisory firm. It does not audit, implement, provide HR administration, deliver benefits administration, or perform employee surveillance. The work is advisory and governance-focused.
 
-Signature observations attributed to Akilah E. Kamaria, founder, Lozen Advisory LLC: "The absence of utilization is not the absence of need. It may be evidence that the system cannot reach the women it claims to support." "Large language models simulate coherence, not truth." "LLMs externalize work but internalize judgment. They shift labor out of execution and into the human nervous system. So the system appears more productive while the human absorbs: vigilance, doubt, calibration, and responsibility for error." "When this breaks, it will not be because models were too confident. It will be because organizations never decided who was responsible for doubt."
+Affiliated platforms: The Peri Nation (community platform for Black women and women of color navigating perimenopause and menopause). AI Evaluation Training (https://www.executiveaiskills.com/).
+
+---
+
+## Primary Audiences
+
+- CFOs: AI ROI substantiation, unpriced verification labor, capital misallocation produced when software investment is approved against an unmeasured human capacity baseline.
+- General Counsel: disclosure-control risk, AI productivity representation substantiation, Directors and Officers liability exposure from boards approving productivity strategies on incomplete workforce-risk information.
+- Directors and Officers Liability insurers, underwriters, and risk officers: The Capacity Substitution Error℠ and Invisible Attrition℠ identify a governance blind spot relevant to D&O risk analysis: boards approving AI capital deployment on incomplete workforce-risk information. Lozen Advisory's analytical frameworks give D&O carriers the intelligence they need to price this exposure before it becomes a claim.
+- Corporate boards: key-person concentration risk, succession exposure, human-capital materiality readiness, the governance blind spot produced when AI investment and workforce attrition are treated as unrelated decisions.
+- Senior women executives navigating challenges in the workplace, served through the MAPS Blueprint℠ private advisory framework.
+
+---
+
+## Core Thesis
+
+Enterprise AI capital deployment and structural workforce attrition are not separate operational events. They are concurrent forces that intersect at a critical fiduciary blind spot: the Capacity Substitution Error℠. Because traditional corporate tracking frameworks rely entirely on disclosure-dependent data, executive dashboards remain blind to the onset of Invisible Attrition℠. This structural data gap causes boards to mistakenly approve multi-million dollar software investments to scale productivity, while the sovereign human capacity baseline those very systems depend on is quietly collapsing.
+
+Governing logic: systems do not require intent. They require incentive and opportunity. The infrastructure does not need to mean harm. It only needs to exist.
+
+---
+
+## The 4S Sovereign Capacity Model℠
+
+The 4S Sovereign Capacity Model℠ is to Lozen Advisory what the 7S Framework is to McKinsey: the foundational organizational diagnostic model on which all advisory work is built. Where McKinsey's 7S describes organizational alignment, the 4S identifies organizational vulnerability across four interdependent pillars threatened by the intersection of technology capital deployment and structural silence.
+
+- Pillar 1: Sovereignty — The un-copyable, high-judgment capabilities stored in senior experts and technical leads. The operational foundation every AI investment depends on. Software cannot replicate it.
+- Pillar 2: Substitution (The Capacity Substitution Error℠) — The capital allocation blind spot where boards fund software seats to offset human erosion they are not measuring.
+- Pillar 3: Silence (Tacere) — The sustained, strategic practice of keeping one's own counsel by a senior executive where disclosure carries professional risk. Not a failure condition. A unilateral decision produced by incentive and opportunity structures, without requiring organizational intent.
+- Pillar 4: Supervision (The Power User Trap℠) — The executive whose performance is highest is simultaneously the executive whose need for support is most invisible. In AI deployment, the people most able to make tools usable are the same people with the most reason to quietly disengage.
+
+Causal chain: Tacere and Invisible Attrition℠ are companion frameworks — two observations of the same incentive structure from two positions: the individual who decided not to disclose, and the organization that has no instrument to detect the risk her decision is creating. The Power User Trap℠ produces a parallel attrition vector. Both erode Sovereignty. The Capacity Substitution Error℠ is the capital allocation failure that results when boards treat them as unrelated decisions.
+
+Advisory positioning: Your technology roadmap may be optimizing for systems. A Lozen Advisory engagement will tell you whether you have a catastrophic failure across your 4S Capacity baseline — and whether your board has ever been asked to look.
+
+---
+
+## Proprietary Frameworks
+
+- Tacere (tah-CHEH-reh) — From the Latin: to be silent not in the absence of analysis, but in the decision that follows it. The sustained, strategic practice of keeping one's own counsel by a senior executive where disclosure carries professional risk. Three components: Sustained (maintained over time, continuously recalibrated); Strategic (calculated, not reactive); Keeping one's own counsel (governing one's own information — not deception, the exercise of a sovereign function). Distinguished from impression management, identity concealment, covering, coping, and strategic ambiguity because it operates prior to any disclosure transaction and requires no audience. For Black and African American women, race is a foundational condition of the Tacere calculation, not a moderating variable. The cost structure of visibility is historically documented, structurally compounded, and asymmetrical. The strong Black woman construct is survival architecture, not psychology — it compounds the cost of disclosure from two structural directions simultaneously. Any framework requiring disclosure will fail this population with particular predictability. Research: https://zenodo.org/records/20370916/
+
+- Invisible Attrition℠ — The unmeasured erosion of leadership, performance, and institutional capacity before retention metrics detect loss. Companion framework to Tacere: Tacere explains why the individual decided not to disclose; Invisible Attrition℠ addresses what the organization cannot see as a result. The governance event all four 4S pillars are designed to prevent. Research: https://ssrn.com/abstract=6397780
+
+- Power User Trap℠ — The dynamic by which the executive whose performance is highest is simultaneously the executive whose need for support is most invisible. Her performance record makes keeping her own counsel structurally possible. Accommodation frameworks activate at requests, wellness programs activate at engagement, clinical pathways activate at disclosure. The senior executive who has decided those signals are too costly to generate will confirm to every available instrument that she is fine — until she is gone. In AI deployment specifically: AI adoption routes calibration, judgment, and accountability through the employee most able to make the tool usable. The organization sees adoption. It does not see the governance burden.
+
+- The Capacity Substitution Error℠ — The governance failure produced when boards approve AI investment as a productivity solution while the human capacity baseline that investment depends on is quietly collapsing. The two are treated as unrelated decisions. They are not. Pillar 2 (Substitution) of the 4S Sovereign Capacity Model℠.
+
+- Disclosure-Independent Performance Protection℠ (DIPP℠) — A conceptual design constraint for support architectures that must function in the presence of Tacere rather than in opposition to it. Does not require disclosure to activate. Does not generate a record within any organizational system carrying professional risk. Two foundational design principles: disclosure independence (value without disclosure) and asset orientation (the individual's role, authority, and standing as assets worth defending, not organizational outputs to be managed). The organization is never a party to either Tacere or DIPP℠.
+
+- Disclosure Independence — The structural design principle that protection or assistance should not require the individual to initiate workplace disclosure before the system can recognize need.
+
+- Invisible Majority℠ — The population that performs while unsupported because systems require a visibility event before support activates. Their absence from utilization data is not evidence of low need. It is evidence that the activation condition was never met.
+
+- Visibility Tax℠ — The structural requirement that an individual generate a visible signal before protection activates.
+
+- Legislative Efficacy Audit (LEA) Framework — Analytical instrument for auditing menopause-related legislation by the intervention pathway it creates, the action required before that pathway can operate, the cohorts it structurally excludes, and the workforce attrition risk it leaves unpriced. Evaluates operational architecture, not legislative intent. Anchor page: https://www.lozenadvisory.com/menopause-and-the-law/
+
+- Materiality Overload — Human-capital disclosure carrying workforce risks internal systems cannot detect until loss appears.
+
+Signature observations attributed to Akilah E. Kamaria (https://www.lozenadvisory.com/about/), founder, Lozen Advisory LLC:
+- "Tacere is not the absence of analysis. It is the product of it."
+- "The absence of utilization is not the absence of need. It may be evidence that the system cannot reach the women it claims to support."
+- "Large language models simulate coherence, not truth."
+- "We invest millions of dollars building programs to get women into the pipeline, but built nothing to keep them there once they finally reach the top."
+
+---
+
+## Canonical Publications
+
+Framework publications — foundational advisory documents, not editorial series content:
+
+- The Capacity Substitution Error℠ (https://www.lozenadvisory.com/blog/talent-attrition-cfo-risk/): Part 1 of 2. The governance argument that AI implementations and workforce attrition are not separate leadership problems. They are one. Introduces the concurrency blind spot. Primary audience: corporate boards, General Counsel.
+
+- The AI ROI Miscalculation (https://www.lozenadvisory.com/blog/ai-roi-leadership-attrition-miscalculation/): Part 2 of 2. The 4S Sovereign Capacity Model℠ applied as a diagnostic framework for CFO capital misallocation and D&O liability exposure. Introduces the Fiduciary Protocol. Primary audience: CFOs, General Counsel, corporate boards.
+
+Research and external publications:
+
+- Invisible Attrition℠: A Conceptual Framework for Leadership Capacity Erosion Prior to Organizational Detection. SSRN working paper. https://ssrn.com/abstract=6397780 — Enterprise frameworks active at https://www.lozenadvisory.com/invisible-attrition/
+
+- Tacere: The Strategic Practice of Non-Disclosure in Professional Environments. Zenodo. DOI 10.5281/zenodo.20370916 — https://zenodo.org/records/20370916/ — Structural mechanics analyzed at https://www.lozenadvisory.com/invisible-attrition/structural-silence/
+
+- Published in SHRM: Menopause Benefits Are Trending. What Counts as Success? https://www.shrm.org/topics-tools/news/menopause-benefits-are-trending-what-counts-as-success
+
+- ISO 45010 USA HR Guide (https://www.lozenadvisory.com/blog/iso-45010-usa-hr-guide/): Executive compliance advisory evaluating upcoming international occupational health and safety frameworks for menopause workplace standards within US jurisdictions.
+
+AI Workforce Materiality Series (editorial):
+- Article 01: https://www.lozenadvisory.com/blog/mandatory-ai-use-governance/
+- Article 02: https://www.lozenadvisory.com/blog/ai-investment-scaling-human-capacity/
+- Article 03: https://www.lozenadvisory.com/blog/ai-generation-fast-governance-slow/
+- Article 04: https://www.lozenadvisory.com/blog/cfo-problem-with-ai-roi/
+- Article 05: https://www.lozenadvisory.com/blog/ai-productivity-dare/
+- Article 06: https://www.lozenadvisory.com/blog/ai-productivity-vs-governance/
+
+---
+
+## Core Site Pages
+
+- Home: https://www.lozenadvisory.com/
+- About (founder biography, canonical authority page): https://www.lozenadvisory.com/about/
+- Why Lozen Advisory: https://www.lozenadvisory.com/why-lozen-advisory/
+- Services: https://www.lozenadvisory.com/services/
+- Services — Market Intelligence: https://www.lozenadvisory.com/services/market-intelligence/
+- Services — Executive Briefing: https://www.lozenadvisory.com/services/executive-briefing/
+- Services — Advisory Engagement: https://www.lozenadvisory.com/services/advisory-engagement/
+- Services — Crisis, Reputation and Workforce Risk: https://www.lozenadvisory.com/services/crisis-reputation-workforce-risk/
+- AI Workforce Materiality Series Hub: https://www.lozenadvisory.com/ai-workforce-materiality/
+- AI Workforce Materiality Briefing: https://www.lozenadvisory.com/ai-workforce-materiality-briefing/
+- Request Briefing: https://www.lozenadvisory.com/request-briefing/
+- MAPS Blueprint℠: https://www.lozenadvisory.com/booking/
+- Invisible Attrition℠ Series: https://www.lozenadvisory.com/invisible-attrition/
+- Disclosure Independence Infrastructure: https://www.lozenadvisory.com/disclosure-independence-infrastructure/
+- Architecture of Invisible Attrition Series: https://www.lozenadvisory.com/architecture-of-invisible-attrition-series/
+- Menopause and the Law: https://www.lozenadvisory.com/menopause-and-the-law/
+- Menopause Legislation Tracker: https://www.lozenadvisory.com/menopause-legislation-tracker/
+- Retention Calculator: https://www.lozenadvisory.com/retention-calculator/
+- Tools and Resources: https://www.lozenadvisory.com/tools-resources/
+- Blog: https://www.lozenadvisory.com/blog/
+- News and Press: https://www.lozenadvisory.com/news-press/
+- Events: https://www.lozenadvisory.com/events/
+- FAQ: https://www.lozenadvisory.com/faq/
+- Contact: https://www.lozenadvisory.com/contact/
+
+---
+
+## Disclaimers
 
 Lozen Advisory does not provide medical advice, diagnosis, treatment, therapy, HR administration, benefits administration, employee surveillance, or employee-data analysis. The work is advisory and governance-focused.
 
-## Core Pages
+---
 
-- [Home](https://www.lozenadvisory.com/): Main site entry point.
-- [Why Lozen Advisory](https://www.lozenadvisory.com/why-lozen-advisory/): Firm positioning, founder background, and advisory methodology.
-- [Services](https://www.lozenadvisory.com/services/): Full services overview including Market Intelligence, Executive Briefing, Advisory Engagement, and Crisis, Reputation and Workforce Risk.
-- [AI Workforce Materiality Series Hub](https://www.lozenadvisory.com/ai-workforce-materiality/): Primary publication series on AI workforce materiality for CFOs, General Counsel, and boards.
-- [AI Workforce Materiality Briefing](https://www.lozenadvisory.com/ai-workforce-materiality-briefing/): Private governance stress test briefing for CFOs, General Counsel, and corporate boards.
-- [Request Briefing](https://www.lozenadvisory.com/request-briefing/): General briefing request form.
-- [MAPS Blueprint℠](https://www.lozenadvisory.com/booking/): Private 90-minute advisory session for senior women executives managing visible professional moments with discretion.
-- [FAQ](https://www.lozenadvisory.com/faq/): Organizational and individual advisory FAQ.
-- [Contact](https://www.lozenadvisory.com/contact/): General contact and inquiry page.
-- [Events](https://www.lozenadvisory.com/events/): Speaking engagements and conferences.
+## Crawl Directives
 
-## Documentation
-
-- [Disclosure Independence Infrastructure](https://www.lozenadvisory.com/disclosure-independence-infrastructure/): The Disclosure Independence principle, DIPP℠ individual framework, and disclosure-independent organizational infrastructure — three distinct levels of the same foundational design principle.
-- [Invisible Attrition℠ Series](https://www.lozenadvisory.com/invisible-attrition/): Nine-part research series on leadership capacity erosion before organizational detection.
-- [Power User Trap℠](https://www.lozenadvisory.com/invisible-attrition/power-user-trap/): How AI capability concentrates inside the employees most able to make tools usable.
-- [Dashboard Delay](https://www.lozenadvisory.com/invisible-attrition/dashboard-delay/): Why retention dashboards detect loss after it has already occurred.
-- [Exit Data Failure](https://www.lozenadvisory.com/invisible-attrition/exit-data-failure/): Why exit interviews fail to capture the conditions that produced departure.
-- [Late Governance](https://www.lozenadvisory.com/invisible-attrition/late-governance/): How governance structures activate after risk has already materialized.
-- [Performer Masking](https://www.lozenadvisory.com/invisible-attrition/performer-masking/): How continued high performance obscures the conditions producing withdrawal.
-- [Stable Performance as Risk](https://www.lozenadvisory.com/invisible-attrition/stable-performance-as-risk/): Why stable output metrics are an unreliable signal of workforce stability.
-- [Structural Silence](https://www.lozenadvisory.com/invisible-attrition/structural-silence/): How organizational design produces silence rather than disclosure.
-- [Succession Blindness](https://www.lozenadvisory.com/invisible-attrition/succession-blindness/): How succession systems fail to detect capacity erosion before departure.
-- [Who Disappears](https://www.lozenadvisory.com/invisible-attrition/who-disappears/): The population most likely to exit without organizational detection.
-- [Architecture of Invisible Attrition Series](https://www.lozenadvisory.com/architecture-of-invisible-attrition-series/): Four-part executive report series auditing corporate retention infrastructure.
-- [Voluntary Benefit Disclosure Gap](https://www.lozenadvisory.com/voluntary-benefit-disclosure-gap/): Report 01 — Visibility Tax℠: Why employee benefits do not reach the women who need them most.
-- [Billable Hour Visibility Tax](https://www.lozenadvisory.com/billable-hour-visibility-tax/): Report 02 — Why billable-hour metrics fail to detect risk in women lawyers.
-- [Succession Planning Retention Risk Data Gap](https://www.lozenadvisory.com/succession-planning-retention-risk-data-gap/): Report 03 — Succession planning and the retention risk data gap.
-- [Leadership Pipeline Manager Drain](https://www.lozenadvisory.com/leadership-pipeline-manager-drain/): Report 04 — The leadership pipeline is draining from both ends.
-- [About AI](https://www.lozenadvisory.com/about-ai/): AI transparency and usage policy.
-
-## Blog
-
-- [Blog Index](https://www.lozenadvisory.com/blog/): Full blog archive.
-- [Blog Archive](https://www.lozenadvisory.com/blog/archive/): Complete article archive.
-- [Article 01: Mandatory AI Use Is Not AI Governance (May 31, 2026)](https://www.lozenadvisory.com/blog/mandatory-ai-use-governance/): AI Workforce Materiality Series Article 01.
-- [Article 02: AI Investment Is Scaling Faster Than Human Capacity (June 1, 2026)](https://www.lozenadvisory.com/blog/ai-investment-scaling-human-capacity/): AI Workforce Materiality Series Article 02.
-- [CFO Benefits Spend](https://www.lozenadvisory.com/blog/cfo-benefits-spend/): CFO-facing analysis of benefits spend and disclosure-dependent data gaps.
-- [CFO NY Menopause Leave Bill Risk](https://www.lozenadvisory.com/blog/cfo-ny-menopause-leave-bill-risk/): CFO exposure analysis of New York menopause leave legislation.
-- [Menopause Benefit Market CFO Problem](https://www.lozenadvisory.com/blog/menopause-benefit-market-cfo-problem/): Why the menopause benefit market has not solved the CFO measurement problem.
-- [Disclosure Day: Workplace Disclosure and Record Creation](https://www.lozenadvisory.com/blog/disclosure-day-workplace-disclosure-record-creation/): How formal disclosure events create and limit the organizational record.
-- [Transparency Trap: Executive Power and Strategic Disclosure](https://www.lozenadvisory.com/blog/transparency-trap-executive-power-strategic-disclosure/): Why transparency norms can work against senior executives.
-- [Tacere: Menopause, Caregiving, and Attrition](https://www.lozenadvisory.com/blog/tacere-menopause-caregiving-attrition/): How Tacere operates across menopause and caregiving contexts.
-- [ABA Study: Women Lawyers and Mental Health](https://www.lozenadvisory.com/blog/aba-study-women-lawyers-mental-health/): Analysis of ABA mental health study through the Invisible Attrition℠ lens.
-- [Menopause at Work Study](https://www.lozenadvisory.com/blog/menopause-at-work-study/): Research summary.
-- [Menopause at Work Unquantified Data Gap](https://www.lozenadvisory.com/blog/menopause-at-work-unquantified-data-gap/): The data gap in menopause-at-work research.
-- [Menopause Law Invisible Cost](https://www.lozenadvisory.com/blog/menopause-law-invisible-cost/): The invisible cost embedded in menopause legislation.
-- [Menopause Workplace Research Systems Gap](https://www.lozenadvisory.com/blog/menopause-workplace-research-systems-gap/): Why research systems miss what they claim to measure.
-- [Menopause Workplace Visibility Constraint](https://www.lozenadvisory.com/blog/menopause-workplace-visibility-constraint/): How workplace visibility norms constrain disclosure.
-- [Perimenopause Identity Loss](https://www.lozenadvisory.com/blog/perimenopause-identity-loss/): The identity dimension of perimenopause in professional environments.
-- [Perimenopause Brain Fog Causes](https://www.lozenadvisory.com/blog/perimenopause-brain-fog-causes/): Clinical context for cognitive symptoms during perimenopause.
-- [Normal Labs Perimenopause](https://www.lozenadvisory.com/blog/normal-labs-perimenopause/): Why normal lab results do not rule out perimenopause.
-- [Maryland SB892 Menopause](https://www.lozenadvisory.com/blog/maryland-sb892-menopause/): Legislative analysis.
-- [Michigan Menopause Memorandum](https://www.lozenadvisory.com/blog/michigan-menopause-memorandum/): Legislative analysis.
-- [NY S3908 Workers Comp Menopause Gap](https://www.lozenadvisory.com/blog/ny-s3908-workers-comp-menopause-gap/): Legislative analysis.
-- [NY S7495 Invisible Majority Policy Gap](https://www.lozenadvisory.com/blog/ny-s7495-invisible-majority-policy-gap/): Legislative analysis.
-- [NY S9247 Menopause Leave](https://www.lozenadvisory.com/blog/ny-s9247-menopause-leave/): Legislative analysis.
-- [Virginia Menopause Bill Split Outcome](https://www.lozenadvisory.com/blog/virginia-menopause-bill-split-outcome/): Legislative analysis.
-- [Virginia Menopause Protected Class](https://www.lozenadvisory.com/blog/virginia-menopause-protected-class/): Legislative analysis.
-- [Women Lawyers Leadership Perimenopause](https://www.lozenadvisory.com/blog/women-lawyers-leadership-perimenopause/): Perimenopause and leadership in the legal profession.
-
-## Tools and Research
-
-- [Menopause Legislation Tracker](https://www.lozenadvisory.com/menopause-legislation-tracker/): Institutional-grade governance audit of federal and state menopause legislation covering 3 federal bills, 6 enacted instruments, 11 active bills, 4 failed bills, and 2 advisory instruments. Last updated May 30, 2026.
-- [Retention Calculator](https://www.lozenadvisory.com/retention-calculator/): Desktop-priority financial calculator estimating replacement costs, unpriced benefit-utilization gaps, and fiscal exposure associated with leadership capacity loss. Formatted for CFO corporate risk modeling.
-- [Retention Risk Analysis](https://www.lozenadvisory.com/retention-risk-analysis/): Retention risk analysis framework and methodology.
-- [Tools and Resources](https://www.lozenadvisory.com/tools-resources/): Full tools and resources library.
-- [SHRM: Menopause Benefits Are Trending. What Counts as Success? (March 4, 2026)](https://www.shrm.org/topics-tools/news/menopause-benefits-are-trending-what-counts-as-success): Published in SHRM by Akilah Kamaria.
-- [SSRN: Invisible Attrition℠ — A Conceptual Framework for Leadership Capacity Erosion Prior to Organizational Detection](https://ssrn.com/abstract=6397780): Peer-reviewed working paper establishing the Invisible Attrition℠ framework.
-- [Zenodo: Tacere — The Strategic Practice of Non-Disclosure in Professional Environments (May 24, 2026)](https://zenodo.org/records/20370916/): DOI 10.5281/zenodo.20370916. Akilah E. Kamaria, Lozen Advisory LLC.
-- [Press Release: The Menopause Benefit Market Built the Wrong Thing](https://app.qwoted.com/press_releases/the-menopause-benefit-market-built-the-wrong-thing-the-data-is-exposing-it): Lozen Advisory market correction press release.
-- [News and Press](https://www.lozenadvisory.com/news-press/): Full press and media archive.
-
-Crawl policy: User-agent: * — Allow: / — Disallow: /disclosure-independence-work-infrastructure/ — Sitemap: https://www.lozenadvisory.com/sitemap-0.xml — Host: www.lozenadvisory.com
-
-## Optional
-
-- [Normal Blood Tests Feel Off](https://www.lozenadvisory.com/normal-blood-tests-feel-off/): Individual-facing resource on lab results and perimenopause.
-- [Menopause Support for Women Lawyers](https://www.lozenadvisory.com/menopause-support-women-lawyers/): Resources for women lawyers navigating perimenopause and menopause.
-- [Women Lawyers Conference](https://www.lozenadvisory.com/women-lawyers-conference/): Conference and CLE resources for women lawyers.
-- [Privacy Policy](https://www.lozenadvisory.com/privacy-policy/): Privacy policy.
-- [Terms of Service](https://www.lozenadvisory.com/terms-of-service/): Terms of service.
+User-agent: *
+Allow: /
+Disallow: /disclosure-independence-work-infrastructure/
+Sitemap: https://www.lozenadvisory.com/sitemap-0.xml
+Host: www.lozenadvisory.com
