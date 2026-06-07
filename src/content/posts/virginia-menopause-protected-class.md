@@ -1,18 +1,17 @@
 ---
-title: Virginia’s Governor Substituted a Study for Menopause Protections
+title: "Virginia HB 1173 Veto: Menopause Risks & The Data Gap"
 slug: virginia-menopause-protected-class
 pubDate: 2026-04-16
 datePublished: 2026-04-16
-dateModified: 2026-06-02
+dateModified: 2026-06-06
 category: Legislative Analysis
 excerpt: Governor Spanberger’s April 2026 action deadline resulted in a
   significant shift for Virginia’s menopause policy. While the insurance
   coverage bill (SB790) was signed into law, the Governor substituted studies
   for both the workplace accommodation and anti-discrimination mandates.
-description: "Governor Spanberger executed a split decision on Virginia’s
-  menopause bills: signing an insurance mandate while substituting two studies
-  for proposed workplace protections. Analyze the legislative shift from legal
-  mandates to research directives."
+description: An executive analysis of the Virginia HB 1173/SB 258 and the veto
+  on May 19, 2026. Audit the structural data gap behind the state-mandated 2028
+  workforce study.
 metaDescription: "Governor Spanberger executed a split decision on Virginia’s
   menopause bills: signing an insurance mandate while substituting two studies
   for proposed workplace protections. Analyze the legislative shift from legal
@@ -28,15 +27,26 @@ heroAlt: Collage of senior professional women in workplace settings,
   workplace protections.
 tags:
   - Legislative Analysis
+  - Research & Policy
+  - Workplace Disclosure
+  - Tacere
 spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
 ---
-**Editor's note:** Governor Spanberger's action deadline was April 13, 2026. The Governor proposed a substitute for HB1173 and SB258, replacing the workplace protection and accommodation mandate with a study directive. SB790, the insurance coverage bill, was signed April 13, 2026. Coverage applies to policies issued or renewed on or after January 1, 2027. A full analysis of the Governor's split decision is available here: [Virginia's Governor Substituted a Study for Menopause Protections](/blog/virginia-menopause-bill-split-outcome/).
+Executive Update (June 2026): On May 19, 2026, Governor Abigail Spanberger officially vetoed the anti-discrimination and accommodation mandates of HB 1173 and SB 258 after the General Assembly declined her initial substitutes. In her veto statement, the Governor asserted that the Virginia Human Rights Act (VHRA) already protects employees from menopause discrimination under existing age and gender clauses. However, the state-mandated study remains law, and the separate insurance mandate (SB 790) was signed, taking effect January 1, 2027. Read our full regulatory breakdown here: [Virginia Menopause Bill Split Outcome](https:///blog/virginia-menopause-bill-split-outcome/).
 
-Virginia's General Assembly has passed the most comprehensive menopause workplace protection package enacted by any state legislature to date. House Bill 1173 and Senate Bill 258 were enrolled and communicated to Governor Spanberger on March 14, 2026. The Governor's action deadline is April 13, 2026. If signed, they take effect July 1, 2026.
+## The Virginia Menopause Mandate: The Friction Behind HB 1173 and SB 258
+
+[The legislative journey of Virginia House Bill 1173](/menopause-legislation-tracker/) and Senate Bill 258 represented the most aggressive attempt by a U.S. state legislature to codify menopause as an explicit **protected characteristic** within state labor law. As originally passed by the General Assembly, HB 1173 sought to extend the exact reasonable accommodation frameworks that govern pregnancy to menopausal employees, while SB 258 aimed to explicitly amend the Virginia Human Rights Act (VHRA).
+
+While Governor Spanberger’s May 19, 2026 veto halted the creation of a distinct, named protected class, it did not eliminate the [regulatory friction for employers.](/menopause-and-the-law/) Because the executive branch vetoed the bill on the explicit grounds that menopause-related adverse actions are *already litigable* under existing age and sex discrimination statutes, corporate General Counsel and defense firms must now prepare for a wave of novel filings weaponizing those exact existing clauses.
+
+Meanwhile, the insurance landscape did fundamentally shift. Under SB 790, which passed with unanimous support and was signed into law, health insurers in the Commonwealth are required to provide comprehensive coverage for medically necessary menopause and perimenopause treatments for policies issued or renewed on or after January 1, 2027.
 
 ## Virginia's New Protected Characteristic: What HB1173 and SB258 Cover
+
+Virginia's General Assembly has passed the most comprehensive menopause workplace protection package enacted by any state legislature to date. House Bill 1173 and Senate Bill 258 were enrolled and communicated to Governor Spanberger on March 14, 2026. The Governor's action deadline is April 13, 2026. If signed, they take effect July 1, 2026. 
 
 The two bills address different aspects of workplace protection. HB1173 extends the same reasonable accommodation rights that apply to pregnancy and childbirth to employees experiencing menopause. SB258 goes further, making menopause and perimenopause a protected characteristic under Virginia's anti-discrimination law, prohibiting employers from treating women differently in hiring, employment, or access to government services because of where they are in their menopause transition.
 
@@ -48,10 +58,6 @@ A related bill, SB790, introduced by Senator Ryan McDougle, passed both chambers
 
 HB1173 and SB258 also mandate a workforce study. The Commissioner of Labor and Industry, in consultation with the Commissioner of Health, must study menopause and perimenopause in the workforce, examine existing workplace policies, develop best practices, and submit a report to the Governor and General Assembly by July 1, 2028.
 
-## How Menopause at Work Enters Formal Workplace Records
-
-This article does not examine what the law accomplishes. It examines what the mandated study will be able to see. The condition established in the framework article that opens this series applies here without alteration.
-
 ## The Virginia Workforce Study: What the Mandate Will Measure
 
 Before findings are produced, study design determines what findings are possible.
@@ -60,13 +66,13 @@ Workforce studies draw from formal system records: accommodations, leave, health
 
 Virginia's accommodation protections, once signed, will be real. An employee who asks for accommodation under HB1173 enters the formal system and generates a record. The study will draw from those records. Where disclosure does not occur, no record is created.
 
-The law cannot reach what it cannot see.
+### The law cannot cover what it cannot see.
 
 Research from Maven Clinic indicates that 60% of millennials and 35% of Gen Xers experiencing menopause have not discussed symptoms with a healthcare provider. These women are present in the workforce but absent from the records a study would draw from.
 
-Where disclosure does not occur, no record is created.
+### Where disclosure does not occur, no record is created.
 
-Michigan's statewide study illustrates what this means in practice. With 652 survey respondents and independent ethical review to ensure research integrity, it is among the most rigorous state-level datasets on menopause and work produced to date. Its finding that fewer than one in five women disclosed their menopause status at work was not incidental. It was the central problem the survey encountered. The study did not encounter low impact. It encountered low disclosure. The dataset reflects who entered the system, not who was affected.
+Michigan's statewide study illustrates what this means in practice. With 652 survey respondents and independent ethical review to ensure research integrity, it is among the most rigorous state-level datasets on menopause and work produced to date. Its finding that [fewer than one in five women disclosed their menopause status at work](/invisible-attrition/structural-silence/) was not incidental. It was the central problem the survey encountered. The study did not encounter low impact, it encountered low disclosure. The dataset reflects who entered the system, not who was affected.
 
 Other state-level efforts face the same constraint, including the New York bills examined in this series. A study drawing from formal records will find what entered those records.
 
