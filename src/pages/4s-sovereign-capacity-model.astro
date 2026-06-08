@@ -1,0 +1,218 @@
+---
+import NarrativePage from "@/components/authority/NarrativePage.astro";
+import { createArticleJsonLd } from "@/lib/seo/jsonLd";
+
+const title = "The 4S Sovereign Capacity Model℠";
+
+const seoTitle =
+  "The 4S Sovereign Capacity Model: Lozen Advisory's Foundational Advisory Framework";
+
+const metaDescription =
+  "Lozen Advisory's foundational advisory framework for evaluating structural workforce risk, AI investment, non-disclosure design, and institutional capacity exposure.";
+
+const canonical =
+  "https://www.lozenadvisory.com/4s-sovereign-capacity-model/";
+
+const image = "/images/authority/4S-Framework_Model.avif";
+
+const imageAlt =
+  "A four-part strategic framework showing Sovereignty, Substitution, Silence, and Supervision as connected dimensions of institutional capacity risk.";
+
+const pillars = [
+  {
+    number: "01",
+    heading: "Sovereignty — The Asset Layer",
+    body:
+      "The goal: institutional judgment, specialized memory, and elite executive execution capacity that no software can replicate.",
+  },
+  {
+    number: "02",
+    heading: "Substitution — The Capital Gap",
+    body:
+      "The capital allocation blind spot where boards fund technology as direct replacement capacity — the Capacity Substitution Error℠.",
+  },
+  {
+    number: "03",
+    heading: "Silence — The Disclosure Failure",
+    body:
+      "Structural non-disclosure mechanisms that keep key talent attrition entirely invisible until the institutional loss becomes a liability.",
+  },
+  {
+    number: "04",
+    heading: "Supervision — The Governance Layer",
+    body:
+      "The perilous governance gap where AI systems scale faster than the human accountability layer required to protect them — the ",
+    linkText: "Power User Trap℠",
+    href: "/invisible-attrition/power-user-trap/",
+    afterLink: ".",
+  },
+];
+
+const articleJsonLd = createArticleJsonLd({
+  title: seoTitle,
+  description: metaDescription,
+  href: canonical,
+  image,
+  type: "Article",
+  section: "Advisory Foundation",
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: "Advisory Foundation", href: "/4s-sovereign-capacity-model/" },
+    { name: title, href: canonical },
+  ],
+});
+---
+
+<NarrativePage
+  title={title}
+  seoTitle={seoTitle}
+  description={metaDescription}
+  metaDescription={metaDescription}
+  canonical={canonical}
+  eyebrow="Advisory Foundation"
+  typeLabel="Foundational Advisory Framework"
+  dateLabel="Created: June 7, 2026"
+  backHref="/"
+  backLabel="Back to Home"
+  heroImage={image}
+  heroImageAlt={imageAlt}
+  articleJsonLd={articleJsonLd}
+>
+  <p>
+    Boards are approving AI investment as a productivity solution while the capacity baseline that investment depends on is quietly collapsing. Lozen Advisory's menopause-at-work analysis is not a benefits argument. It is the visible entry point into a larger capacity-risk problem: senior human judgment can be lost, hidden, substituted, and overloaded while boards fund technology as if the human baseline is stable.
+  </p>
+
+  <p>
+    The 4S Sovereign Capacity Model℠ is Lozen Advisory's foundational advisory framework. It gives leadership the intelligence to understand structural workforce risk, plan strategy, and visualize what dashboards cannot. With the knowledge gained from the 4S Sovereign Capacity Model℠, organizations can reimagine non-disclosure as part of workplace design and enable innovation before costs become unrecoverable.
+  </p>
+
+  <section class="framework-definition">
+    <h2>Where Corporate Strategy Meets the Limits of Unmeasured Human Capacity</h2>
+
+    <p>
+      The 4S Sovereign Capacity Model℠ defines the capacity-risk problem beneath AI investment, workforce-risk visibility, and institutional capacity exposure.
+    </p>
+  </section>
+
+  <section class="framework-pillar-index" aria-label="The 4 Pillars">
+    <h2>The 4 Pillars</h2>
+
+    {
+      pillars.map((pillar) => (
+        <article class="framework-pillar">
+          <div class="framework-pillar__number">{pillar.number}</div>
+
+          <div class="framework-pillar__body">
+            <h3>{pillar.heading}</h3>
+
+            <p>
+              {pillar.body}
+              {pillar.href && pillar.linkText && (
+                <a href={pillar.href}>{pillar.linkText}</a>
+              )}
+              {pillar.afterLink}
+            </p>
+          </div>
+        </article>
+      ))
+    }
+  </section>
+</NarrativePage>
+
+<style>
+  .framework-definition {
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-base-300);
+    padding-top: 2.5rem;
+  }
+
+  .framework-pillar-index {
+    display: grid;
+    gap: 1rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-base-300);
+    padding-top: 1.25rem;
+  }
+
+  .framework-pillar-index > h2 {
+    margin: 0 0 0.5rem;
+  }
+
+  .framework-pillar {
+    display: grid;
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    gap: 1.25rem;
+    border: 1px solid var(--color-base-200);
+    border-radius: 1.15rem;
+    background: #ffffff;
+    padding: clamp(1.2rem, 2.5vw, 1.65rem);
+    box-shadow: var(--shadow-sm);
+    transition:
+      border-color 180ms ease,
+      box-shadow 180ms ease,
+      transform 180ms ease;
+  }
+
+  .framework-pillar:hover,
+  .framework-pillar:focus-within {
+    border-color: var(--color-base-500);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .framework-pillar__number {
+    color: var(--color-base-500);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 850;
+    letter-spacing: 0.16em;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  .framework-pillar__body h3 {
+    margin: 0;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: var(--lozen-card-title-size);
+    font-weight: var(--lozen-card-title-weight);
+    letter-spacing: var(--lozen-card-title-letter-spacing);
+    line-height: var(--lozen-card-title-line-height);
+    text-wrap: balance;
+  }
+
+  .framework-pillar__body p {
+    margin: 0.85rem 0 0;
+    font-size: var(--lozen-body-copy-size);
+    line-height: var(--lozen-body-copy-line-height);
+  }
+
+  .framework-pillar__body a {
+    color: var(--color-base-900);
+    font-weight: 800;
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-base-600) 42%, transparent);
+    transition:
+      color 180ms ease,
+      border-color 180ms ease;
+  }
+
+  .framework-pillar__body a:hover,
+  .framework-pillar__body a:focus-visible {
+    color: var(--color-base-950);
+    border-color: var(--color-base-950);
+  }
+
+  @media (max-width: 640px) {
+    .framework-pillar {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.75rem;
+      padding: 1.45rem 0;
+    }
+
+    .framework-pillar__body p {
+      font-size: var(--lozen-body-copy-size);
+      line-height: var(--lozen-body-copy-line-height);
+    }
+  }
+</style>
