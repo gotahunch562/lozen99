@@ -35,7 +35,7 @@ Governing logic: systems do not require intent. They require incentive and oppor
 
 ## The 4S Sovereign Capacity Model℠
 
-The 4S Sovereign Capacity Model℠ is Lozen Advisory's foundational advisory framework. It gives leadership the intelligence to understand structural workforce risk, plan strategy, and visualize what dashboards cannot. With the knowledge gained from the 4S Sovereign Capacity Model℠, organizations can reimagine non-disclosure as part of workplace design and enable innovation before costs become unrecoverable. Sovereignty — the institutional judgment, specialized memory, and elite executive execution capacity that no software can replicate — is the goal. Substitution, Silence, and Supervision are the three forces currently eroding it.
+The 4S Sovereign Capacity Model℠ is Lozen Advisory's foundation framework for evaluating structural workforce risk, AI investment, non-disclosure design, and institutional capacity exposure. It gives leadership the intelligence to understand structural workforce risk, plan strategy, and visualize what dashboards cannot. With the knowledge gained from the 4S Sovereign Capacity Model℠, organizations can reimagine non-disclosure as part of workplace design and enable innovation before costs become unrecoverable. Sovereignty — the institutional judgment, specialized memory, and elite executive execution capacity that no software can replicate — is the goal. Substitution, Silence, and Supervision are the three forces currently eroding it.
 
 - Pillar 1: Sovereignty — Institutional judgment, specialized memory, regulatory navigation, and elite executive execution capacity. Unique human capabilities that automated software, enterprise algorithms, and large language models cannot replicate. When senior decision-makers experience unmitigated capacity strain, the organization loses its primary sovereign defense against volatile market conditions. Advanced software cannot substitute for this layer; it can only depend on it.
 - Pillar 2: Substitution (The Capacity Substitution Error℠) — A critical capital allocation error occurs when boards fund technology as direct replacement capacity. They commit capital under the assumption that software scales independently, failing to account for the heavy human baseline required to make those tools usable, contextualized, and profitable. The investment thesis cannot be validated if the organization does not know what sovereign capacity it is losing, at what rate, and at what seniority level.
@@ -114,6 +114,7 @@ AI Workforce Materiality Series (editorial):
 
 ## Core Site Pages
 
+- 4S Sovereign Capacity Model℠ (canonical framework page): https://www.lozenadvisory.com/4s-sovereign-capacity-model/
 - Home: https://www.lozenadvisory.com/
 - About (founder biography, canonical authority page): https://www.lozenadvisory.com/about/
 - Why Lozen Advisory: https://www.lozenadvisory.com/why-lozen-advisory/
