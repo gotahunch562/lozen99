@@ -4,19 +4,26 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const proofCards = [
   {
-    title: "Analytical Foundation",
+    title: "Sovereignty",
     description:
-      "Lozen Advisory is built on decades of solving expensive data problems for major institutions across finance, healthcare, cybersecurity, and media.",
+      "The goal: institutional judgment, specialized memory, and elite executive execution capacity that no software can replicate.",
   },
   {
-    title: "Disclosure-Dependent Systems",
+    title: "Substitution",
     description:
-      "The work identifies where benefits data, HR records, utilization reports, and retention metrics depend on an initiating act before risk can be seen.",
+      "The capital allocation blind spot where boards fund technology as direct replacement capacity — the Capacity Substitution Error℠.",
   },
   {
-    title: "Policy & Workforce Risk",
+    title: "Silence",
     description:
-      "The legislation tracker, executive reports, and Invisible Attrition℠ framework connect policy design to measurable leadership continuity risk.",
+      "Structural non-disclosure mechanisms that keep key talent attrition entirely invisible until the institutional loss becomes a liability.",
+  },
+  {
+    title: "Supervision",
+    description:
+      "The perilous governance gap where AI systems scale faster than the human accountability layer required to protect them — the",
+    linkText: "Power User Trap℠",
+    href: "https://www.lozenadvisory.com/invisible-attrition/power-user-trap/",
   },
 ];
 ---
@@ -34,15 +41,24 @@ const proofCards = [
         <h2
           class="mt-5 max-w-4xl font-display text-[2.2rem] font-normal leading-[1.06] tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-[2.65rem] lg:text-[3rem]"
         >
-          Where Strategy Meets the Limits of Your Data
+          <a
+            href="/4s-sovereign-capacity-model/"
+            class="text-inherit no-underline transition-colors hover:text-accent-700 focus-visible:text-accent-700"
+          >
+            The 4S Sovereign Capacity Model℠
+          </a>
         </h2>
 
         <p class="mt-6 max-w-4xl font-sans text-base leading-8 text-base-700 sm:text-[1.0625rem] sm:leading-8 lg:mt-7">
-          Most organizations have governance frameworks, benefits infrastructure, and retention metrics in place. The question Lozen Advisory addresses is whether those systems remain attached to organizational reality — or whether they are measuring the activity that gets reported while missing the risk that does not.
+          Boards are approving AI investment as a productivity solution while the capacity baseline that investment depends on is quietly collapsing. Lozen Advisory's menopause-at-work analysis is not a benefits argument. It is the visible entry point into a larger capacity-risk problem: senior human judgment can be lost, hidden, substituted, and overloaded while boards fund technology as if the human baseline is stable.
+        </p>
+
+        <p class="mt-5 max-w-4xl font-sans text-base leading-8 text-base-700 sm:text-[1.0625rem] sm:leading-8">
+          The 4S Sovereign Capacity Model℠ is Lozen Advisory's foundational advisory framework. It gives leadership the intelligence to understand structural workforce risk, plan strategy, and visualize what dashboards cannot. With the knowledge gained from the 4S Sovereign Capacity Model℠, organizations can reimagine non-disclosure as part of workplace design and enable innovation before costs become unrecoverable.
         </p>
       </div>
 
-      <div class="mt-8 grid gap-4 sm:mt-10 md:grid-cols-3">
+      <div class="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 xl:grid-cols-4">
         {
           proofCards.map((card) => (
             <article class="group relative overflow-hidden rounded-2xl border border-base-300 bg-white p-5 shadow-sm ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-base-50 hover:shadow-md sm:p-6 lg:rounded-3xl">
@@ -60,6 +76,18 @@ const proofCards = [
 
               <p class="mt-4 font-sans text-[0.975rem] leading-8 text-base-700 sm:mt-5">
                 {card.description}
+                {card.href && card.linkText && (
+                  <>
+                    {" "}
+                    <a
+                      href={card.href}
+                      class="font-semibold text-base-950 underline decoration-accent-500 decoration-1 underline-offset-4 transition-colors hover:text-accent-700"
+                    >
+                      {card.linkText}
+                    </a>
+                    .
+                  </>
+                )}
               </p>
             </article>
           ))
