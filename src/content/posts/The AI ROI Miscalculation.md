@@ -1,11 +1,15 @@
 ---
-title: "The AI ROI Miscalculation: Systemic Friction in Capital Scaling"
-subtitle: ai-roi-miscalculation
+title: "AI ROI Miscalculation: Capital Misallocation & Capacity Risk"
 slug: ai-roi-miscalculation
 pubDate: 2026-06-08
 datePublished: 2026-06-08
 dateModified: 2026-06-08
 category: Corporate Boards
+excerpt: When financial reporting infrastructure fails to register the quiet
+  erosion of specialized human expertise, the technology ROI projections built
+  on top of it inevitably crack. Discover how standard corporate accounting
+  structures an unintended balance-sheet illusion by treating software licensing
+  as an asset and human retention as an optimized expense.
 description: Deconstruct the financial fallacies of the software per-seat
   capacity model. Expose how reporting dashboards mask human capital erosion as
   productivity.
