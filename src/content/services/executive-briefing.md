@@ -1,7 +1,7 @@
 ---
 title: "Executive Briefing"
-description: "A focused advisory session for leadership teams that need clarity before a hidden issue becomes a visible crisis."
-shortDescription: "A focused advisory session for leadership teams that need clarity before a hidden issue becomes a visible crisis."
+description: "A focused advisory session for leadership teams evaluating AI investment, workforce-risk visibility, institutional capacity exposure, or a hidden issue before it becomes a visible crisis."
+shortDescription: "A focused advisory session for leadership teams evaluating AI investment, workforce-risk visibility, institutional capacity exposure, or a hidden issue before it becomes a visible crisis."
 priceFrom: "Leadership Session"
 duration: "Focused advisory"
 image:
