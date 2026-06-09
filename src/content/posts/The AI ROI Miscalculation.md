@@ -1,5 +1,5 @@
 ---
-title: "AI ROI Miscalculation: Capital Misallocation & Capacity Risk"
+title: "AI ROI Miscalculation: Capital & Human Capacity Risk"
 slug: ai-roi-miscalculation
 pubDate: 2026-06-08
 datePublished: 2026-06-08
