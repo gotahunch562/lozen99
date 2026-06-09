@@ -28,7 +28,7 @@ isFeatured: false
 
 ***Executive Update (June 9, 2026): As of June 9, 2026, A1940 / S3908 remains in the Labor Committee pathway. The Assembly record shows referral to Labor in 2025 and again in 2026, with no enacted outcome to date. This analysis is preserved because paid-leave architecture raises the same threshold question across sessions: what must an employee disclose before protection operates, and which workers remain outside the statutory pathway because disclosure itself creates professional risk?***
 
-New York State Senate Bill S3908 takes the legislative argument for menopause at work leave a step further by routing it through the workers' compensation system. While [S9247 seeks to create a standalone leave category](/blog/ny-s9247-menopause-leave/), S3908 uses an existing state mechanism designed for health-related workforce impacts.
+**New York State Senate Bill S3908** takes the legislative argument for menopause at work leave a step further by routing it through the workers' compensation system. While [S9247 seeks to create a standalone leave category](/blog/ny-s9247-menopause-leave/), S3908 uses an existing state mechanism designed for health-related workforce impacts.
 
 The transition to a different system does not resolve the underlying visibility constraint. The policy gap in S3908 exists in the space before a claim is ever filed. This analysis examines why a system built on formal disclosure cannot reach the Invisible Majority℠ who perform while unsupported.
 
