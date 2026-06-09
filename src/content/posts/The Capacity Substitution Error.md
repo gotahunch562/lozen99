@@ -14,9 +14,9 @@ excerpt: " As corporate boards accelerate capital allocation toward agentic AI
   Attrition℠. Senior executives, CFOs, and General Counsel must evaluate this
   framework to reconcile technology ROI projections with unmeasured talent
   erosion baselines."
-description: A fiduciary audit of The Capacity Substitution Error℠ . Discover
-  why concurrent AI capital expenditure and Invisible Attrition create a
-  structural board blind spot.
+description: Discover why concurrent AI capital expenditure and Invisible
+  Attrition℠ create a structural board blind spot. Map structural capacity risk
+  beneath technology scaling and unmeasured key talent.
 image:
   url: /src/images/blog/capacity-attrition-1.avif
   alt: woman walking down stairs paper flying
@@ -42,7 +42,7 @@ The first strategic vector focuses on technology implementation. Governing board
 
 The concurrent vector focuses on talent erosion, which manifests across two distinct structural dimensions:
 
-## **Dimension One: Invisible Attrition℠**
+## Dimension One: Invisible Attrition℠
 
  **[Invisible Attrition℠.**](/invisible-attrition/) This is the undocumented, silent departure of high-judgment anchors at the precise career maturity stage where their institutional value is highest. This vulnerability frequently clusters within specific demographic layers—such as senior female executives and 20-year partners—whose deep operational knowledge has never been formalized into systems of record. This erosion fails to register on executive dashboards because corporate reporting is engineered exclusively to track observable output and transactional headcount movement. Standard data structures are fundamentally unequipped to operationalize the systemic costs required to sustain elite human performance, or to detect its decay before a resignation lands. This is leadership capacity eroding long before organizational detection [(Kamaria, 2026)](https://dx.doi.org/10.2139/ssrn.6397780). The primary engine of this invisibility is **Tacere ****(tah-CHEH-reh):—the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk. The institution never sees the departure coming because the individual has correctly calculated that naming the structural friction costs more than exiting quietly. This silence is not a failure of psychological safety; it is a strategic, predictable response to a structural incentive structure [(Kamaria, 2026](https://zenodo.org/records/20370916)).
 
@@ -60,7 +60,7 @@ Resolving this structural disconnect is the [foundational requirement for long-t
 
 ---
 
-*This is the first installment in a three-part series on structural capacity risk. I**n Part 2: The Balance Sheet Illusion,** we examine the specific financial mechanics of this blind spot, exposing how traditional software seat budgeting and synthetic productivity logs create a multi-million dollar capital allocation error.*
+*This is the first installment in a three-part series on structural capacity risk. I*n Part 2: The Balance Sheet Illusion,* we examine the specific financial mechanics of this blind spot, exposing how traditional software seat budgeting and synthetic productivity logs create a multi-million dollar capital allocation error.*
 
 ## Request an Executive Briefing
 
