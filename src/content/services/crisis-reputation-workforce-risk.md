@@ -1,11 +1,7 @@
 ---
 title: Crisis, Reputation, and Workforce Risk
-shortDescription: Support for organizations facing sensitive workforce issues
-  where incomplete data, low utilization, leadership exits, or AI implementation
-  burden may create operational or reputational consequences.
-description: Support for organizations facing sensitive workforce issues where
-  incomplete data, low utilization, leadership exits, or AI implementation
-  burden may create operational or reputational consequences.
+shortDescription: Support for organizations facing sensitive workforce issues where incomplete data, low utilization, leadership exits, structural non-disclosure, or AI implementation burden may create operational or reputational consequences.
+description: Support for organizations facing sensitive workforce issues where incomplete data, low utilization, leadership exits, structural non-disclosure, or AI implementation burden may create operational or reputational consequences.
 metaDescription: Strategic advisory for crisis, reputation, and workforce risk
   where disclosure dependence affects performance, retention, and leadership
   continuity.
