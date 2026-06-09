@@ -4,22 +4,25 @@ subtitle: None of Them Are Related to Menopause
 slug: cfo-ny-menopause-leave-bill-risk
 pubDate: 2026-05-29
 datePublished: 2026-05-29
-dateModified: 2026-06-02
+dateModified: 2026-06-09
 category: CFO Resources
-excerpt: >
+excerpt: >-
+  New York Menopause Leave Mandate Exposure:
+
   Naming the problems with NY Bill A10296 is not an argument against the
   legislation; it is an argument for building it strategically. From premature
   insurance repricing and a broken data collection model to a rigid demographic
   definition that completely omits surgical and premature menopause, the bill as
-  written systematically excludes the very workforce it endeavors to help.
-description: >
-  New York Assembly Bill A10296 aims to mandate menopause leave, but its text
-  creates critical actuarial, demographic, and disclosure risks for employers.
+  written systematically excludes the very workforce it endeavors to help. 
+description: >+
+  Analysis of NY S9247 and A10296 for CFOs. Learn how disclosure-dependent
+  benefits distort capital allocation and talent risk modeling.
+
 image:
   url: /src/images/blog/cfo-worried-legislation.webp
-  alt: "CFO assessing proposed menopause leave legislation costs"
+  alt: CFO assessing proposed menopause leave legislation costs
 heroImage: /src/images/blog/cfo-worried-legislation-1.webp
-heroAlt: "CFO assessing proposed menopause leave legislation costs"
+heroAlt: CFO assessing proposed menopause leave legislation costs
 tags:
   - Legislative Analysis
   - Workplace Disclosure
@@ -27,11 +30,15 @@ tags:
 draft: false
 isFeatured: false
 ---
+**Status Note — Prior Draft; CFO Risk Analysis Preserved**
+
+**Executive Update (June 9, 2026): As of June 9, 2026, S9247 / A10296 remains in the Labor Committee pathway and has not advanced in its current form. The current session ended and will not resume until January 2027. This article is retained because the bill created a CFO-relevant question that remains unresolved: whether a menopause leave mandate can identify, price, and reduce workforce risk when activation depends on individual disclosure. If the bill is reintroduced in 2027, the central drafting issue will be whether the next version contains a stronger measurement and employer-facing architecture.**
+
 A bill moving through the New York State Legislature is designed to help women. But, before New York State Legislators build [menopause leave into law](/blog/ny-s3908-workers-comp-menopause-gap/), four structural problems raised by A10296, A10270, and the companion Senate bills need to be named and addressed.
 
 Naming the problems is not an argument against the bill. It is an argument for building it strategically, with consideration of certain facts.
 
-## Structural Problem One — The premium arrives before the assistance does.
+## Structural Problem One — The premium arrives before the assistance.
 
 The moment menopause is classified as a compensable condition under workers' compensation law, some employers with New York operations pay higher premiums. Not when a claim is filed. Before.
 
