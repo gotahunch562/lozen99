@@ -6,3 +6,6 @@ node_modules/
 .astro/
 .vercel/
 dist/
+
+# Local scratch/backups
+/tmp-local-backups/
