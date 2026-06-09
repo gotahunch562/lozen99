@@ -3,7 +3,7 @@ title: "New York S3908: The Menopause Workers-Comp Policy Gap"
 slug: ny-s3908-workers-comp-menopause-gap
 pubDate: 2026-04-22
 datePublished: 2026-04-22
-dateModified: 2026-06-02
+dateModified: 2026-06-09
 category: Legislative Analysis
 excerpt: While S9247 seeks to create a standalone leave category, S3908 uses an
   existing state mechanism designed for health-related workforce impacts.
@@ -15,22 +15,26 @@ metaDescription: NY Senate Bill S3908 routes menopause leave through workers'
   Attrition℠ remains unmeasured by state data.
 image:
   url: /src/images/blog/ny-s3908-workers-comp-policy-gap.webp
-  alt: "Legal files illustrating the menopause workers’ compensation policy gap"
+  alt: Legal files illustrating the menopause workers’ compensation policy gap
 heroImage: /src/images/blog/ny-s3908-workers-comp-policy-gap.webp
-heroAlt: "Legal files illustrating the menopause workers’ compensation policy gap"
+heroAlt: Legal files illustrating the menopause workers’ compensation policy gap
 tags:
   - Legislative Analysis
 spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
 ---
+**Status Note — Committee Pathway; Reintroduction Risk for 2027**
+
+***Executive Update (June 9, 2026): As of June 9, 2026, A1940 / S3908 remains in the Labor Committee pathway. The Assembly record shows referral to Labor in 2025 and again in 2026, with no enacted outcome to date. This analysis is preserved because paid-leave architecture raises the same threshold question across sessions: what must an employee disclose before protection operates, and which workers remain outside the statutory pathway because disclosure itself creates professional risk?***
+
 New York State Senate Bill S3908 takes the legislative argument for menopause at work leave a step further by routing it through the workers' compensation system. While [S9247 seeks to create a standalone leave category](/blog/ny-s9247-menopause-leave/), S3908 uses an existing state mechanism designed for health-related workforce impacts.
 
 The transition to a different system does not resolve the underlying visibility constraint. The policy gap in S3908 exists in the space before a claim is ever filed. This analysis examines why a system built on formal disclosure cannot reach the Invisible Majority℠ who perform while unsupported.
 
 ## What S3908 Would Do
 
-S3908, the New York Menstrual and Menopause Act, would provide four days of paid leave per year for menstrual complications and menopause under the workers' compensation law. This is a meaningful advance. Dedicated paid leave would create a formal mechanism where none currently exists under workers' compensation for this condition.
+[S3908, the New York Menstrual and Menopause Act,](/menopause-legislation-tracker/) would provide four days of paid leave per year for menstrual complications and menopause under the workers' compensation law. This is a meaningful advance. Dedicated paid leave would create a formal mechanism where none currently exists under workers' compensation for this condition.
 
 Workers' compensation operates on a claim. A claim requires an employee to identify a covered condition, file a request, and enter the administrative process. The leave exists at the point of claim. It does not activate before it. No claim filed means no record exists.
 
@@ -46,13 +50,11 @@ Exit data does not resolve this gap either. Employees who leave without filing a
 
 ## The Policy Gap: Who S3908 Cannot Reach
 
-S3908 would extend meaningful protection to employees who file a claim. The majority of women who do not feel safe disclosing in their professional environment will never file one. The policy record will reflect who claimed the leave, it will not describe who needed it.
+[S3908 would extend meaningful protection](https://www.nysenate.gov/legislation/bills/2025/S3908) to employees who file a claim. The majority of women who do not feel safe disclosing in their professional environment will never file one. The policy record will reflect who claimed the leave, it will not describe who needed it.
 
 That cohort does not appear in utilization, claims, or exit records. They appear only in retention patterns, and only after she has already left.
 
 That is exit data failure. Not a related concept or a deeper read, the governing condition that every data point in this analysis is an instance of. S3908 would extend formal protection to employees who enter the system. Invisible Attrition℠ names what happens to the ones who do not, and why no record will show it until they are already gone.
-
-[See the full menopause legislation tracker.](/menopause-legislation-tracker/)
 
 ## Commission a Strategic Briefing
 
