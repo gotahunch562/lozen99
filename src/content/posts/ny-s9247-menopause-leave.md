@@ -18,9 +18,9 @@ metaDescription: NY S9247 proposes five days of paid menopause leave, but a new
   data creates a "dashboard delay" and fails to measure Invisible Attrition℠.
 image:
   url: /src/images/blog/NysenateBILL9247.webp
-  alt: "Lady Justice with New York menopause workplace legislation documents"
+  alt: Lady Justice with New York menopause workplace legislation documents
 heroImage: /src/images/blog/NysenateBILL9247.webp
-heroAlt: "Lady Justice with New York menopause workplace legislation documents"
+heroAlt: Lady Justice with New York menopause workplace legislation documents
 tags:
   - Legislative Analysis
   - Workplace Disclosure
@@ -31,9 +31,9 @@ spineDestination: menopause-legislation-tracker
 draft: false
 isFeatured: false
 ---
-***Status Note June 2026**— Current Session Stalled; Reintroduction Expected for 2027*
+***Status Note June 2026— Current Session Stalled; Reintroduction Expected for 2027***
 
-*Executive Update (June 6, 2026): As of June 6, 2026, S9247 / A10296 remains referred to Labor in the 2025–2026 New York legislative session. The bill has not advanced beyond committee referral in its current form. Based on legislative feedback, this analysis should be read as a prior-draft assessment and a 2027 drafting opportunity, not as a live-passage forecast. Its value is that the bill identified the workforce-retention issue, but did not yet resolve the measurement, employer-activation, or disclosure-dependent exclusion architecture.*
+***Executive Update (June 6, 2026): As of June 6, 2026, S9247 / A10296 remains referred to Labor in the 2025–2026 New York legislative session. The bill has not advanced beyond committee referral in its current form. Based on legislative feedback, this analysis should be read as a prior-draft assessment and a 2027 drafting opportunity, not as a live-passage forecast. Its value is that the bill identified the workforce-retention issue, but did not yet resolve the measurement, employer-activation, or disclosure-dependent exclusion architecture.***
 
 Every menopause leave entitlement requires a disclosure event to function. S9247 is one of [several bills in the current New York legislative session](/menopause-legislation-tracker/) addressing menopause at work. New York State Senate Bill S9247 proposes five days of paid menopause leave annually alongside workplace guidance. This article examines what the shared structural condition means for the population S9247 was written to protect.
 
