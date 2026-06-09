@@ -33,6 +33,9 @@ const EXPLICIT_PAGE_DATES = new Map([
   ["/disclosure-independence-infrastructure/", "2026-05-30"],
   ["/news-press/menopause-market-correction/", "2026-05-19"],
   ["/voluntary-benefit-disclosure-gap/", "2026-04-27"],
+  ["/", "2026-06-09"],
+  ["/4s-sovereign-capacity-model/", "2026-06-08"]
+  ["/menopause-and-the-law/", "2026-06-06"],
 ]);
 
 const EXCLUDED_EXACT_PATHS = new Set([
