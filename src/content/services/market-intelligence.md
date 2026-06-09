@@ -1,7 +1,7 @@
 ---
 title: "Market Intelligence"
-description: "Research and analysis on disclosure-dependent workforce risk, menopause-at-work benefits utilization, AI implementation burden, and the business consequences of undercounted need."
-shortDescription: "Research and analysis on disclosure-dependent workforce risk, menopause as a signal, benefits utilization, AI implementation burden, and hidden retention exposure."
+description: "Research and analysis on disclosure-dependent workforce risk, benefits utilization gaps, menopause as an enterprise signal, AI implementation burden, and hidden retention exposure"
+shortDescription: "Research and analysis on disclosure-dependent workforce risk, benefits utilization gaps, menopause as an enterprise signal, AI implementation burden, and hidden retention exposure."
 priceFrom: "Research & Analysis"
 duration: "Organizational advisory"
 image:
