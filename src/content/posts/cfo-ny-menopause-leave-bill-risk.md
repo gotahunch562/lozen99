@@ -32,11 +32,11 @@ isFeatured: false
 ---
 **Status Note — Prior Draft; CFO Risk Analysis Preserved**
 
-**Executive Update (June 9, 2026): As of June 9, 2026, S9247 / A10296 remains in the Labor Committee pathway and has not advanced in its current form. The current session ended and will not resume until January 2027. This article is retained because the bill created a CFO-relevant question that remains unresolved: whether a menopause leave mandate can identify, price, and reduce workforce risk when activation depends on individual disclosure. If the bill is reintroduced in 2027, the central drafting issue will be whether the next version contains a stronger measurement and employer-facing architecture.**
+**Executive Update (June 9, 2026): As of June 9, 2026, S9247 / A10296 remains in the Labor Committee pathway and has not advanced in its current form. The current session ended on June 4, 2026 and will not resume until January 2027. This article is retained because the bill created a CFO-relevant question that remains unresolved: whether a menopause leave mandate can identify, price, and reduce workforce risk when activation depends on individual disclosure. If the bill is reintroduced in 2027, the central drafting issue will be whether the next version contains a stronger measurement and employer-facing architecture.**
 
 A bill moving through the New York State Legislature is designed to help women. But, before New York State Legislators build [menopause leave into law](/blog/ny-s3908-workers-comp-menopause-gap/), four structural problems raised by A10296, A10270, and the companion Senate bills need to be named and addressed.
 
-Naming the problems is not an argument against the bill. It is an argument for building it strategically, with consideration of certain facts.
+Naming the problems is not an argument against the bill. It is an argument for building it strategically, with consideration of certain facts. 
 
 ## Structural Problem One — The premium arrives before the assistance.
 
