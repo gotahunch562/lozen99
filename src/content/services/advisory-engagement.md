@@ -1,14 +1,10 @@
 ---
 title: Advisory Engagement
-shortDescription: Ongoing counsel on non-disclosure infrastructure, benefits
-  strategy, AI governance, retention risk, leadership continuity, and
-  reputational exposure.
-description: Ongoing counsel on non-disclosure infrastructure, benefits
-  strategy, AI governance, retention risk, leadership continuity, and
-  reputational exposure.
+shortDescription: Ongoing counsel on disclosure-independent infrastructure, the Capacity Substitution Error℠, benefits strategy, AI governance, retention risk, leadership continuity, and reputational exposure.
+description: Ongoing counsel on disclosure-independent infrastructure, the Capacity Substitution Error℠, benefits strategy, AI governance, retention risk, leadership continuity, and reputational exposure.
 metaDescription: Advisory engagement for organizations addressing
   disclosure-dependent workforce risk, leadership continuity, retention, and
-  performance protection.
+ capacity.
 image:
   url: /src/images/services/client2.jpeg
   alt: "Strategic advisory meeting with executive stakeholders"
