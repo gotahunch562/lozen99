@@ -71,7 +71,7 @@ When a financial model fundamentally miscalculates the stability of its core ass
 
 ## Request an Executive Briefing
 
-**[Please submit the formal request parameters](https://www.lozenadvisory.com/request-briefing/)** below to initiate conflict clearing and schedule your session. All inquiries are handled with absolute professional discretion.
+**[Please submit the formal request parameters](/request-briefing/)** below to initiate conflict clearing and schedule your session. All inquiries are handled with absolute professional discretion.
 
 - **Corporate Entity & Sector**
 - **Principal Contact & Governance Role** *(e.g., Board Director, Chief Legal Officer, Executive Leadership)*
