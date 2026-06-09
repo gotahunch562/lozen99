@@ -56,11 +56,11 @@ Current information architecture has never equipped leadership to connect these 
 
 [Lozen Advisory’s analysis reveals a far more volatile dynamic](/blog/ai-productivity-dare/). The institutional crisis is active now. Human capacity and technological scaling are not shifting in sequence; they are colliding in real time. Because leadership infrastructure relies on disconnected data structures, boards approve technology spending while the human architecture required to govern it is already destabilized. This is not a knowledge management gap. It is a systemic capital misallocation driven by a profound breakdown in governance design.
 
-Resolving this structural disconnect is the [foundational requirement for long-term institutional sovereignty.](/4s-sovereign-capacity-model/)
+Resolving this structural disconnect is the foundational requirement for long-term institutional sovereignty.
 
 ---
 
-*This is the first installment in a three-part series on structural capacity risk. I*n Part 2: The Balance Sheet Illusion,* we examine the specific financial mechanics of this blind spot, exposing how traditional software seat budgeting and synthetic productivity logs create a multi-million dollar capital allocation error.*
+*This is the first installment in a three-part series on structural capacity risk. [](/blog/ai-roi-miscalculation/)*[In Part 2: The Balance Sheet Illusion](/blog/ai-roi-miscalculation/),* we examine the specific financial mechanics of this blind spot, exposing how traditional software seat budgeting and synthetic productivity logs create a multi-million dollar capital allocation error.*
 
 ## Request an Executive Briefing
 
