@@ -17,9 +17,9 @@ description: Is AI CapEx outpacing your workforce? Discover why AI productivity
   Attrition.
 image:
   url: /src/images/blog/ai-investment-is-scaling-faster.avif
-  alt: woman at work reflecting the human in the middle of ai work
+  alt: "Senior leader balancing AI workload and human capacity"
 heroImage: /src/images/blog/ai-investment-is-scaling-faster-1.avif
-heroAlt: woman at work reflecting the human in the middle of ai work
+heroAlt: "Senior leader balancing AI workload and human capacity"
 draft: false
 isFeatured: false
 ---

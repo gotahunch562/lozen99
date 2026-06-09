@@ -10,9 +10,9 @@ description: "You feel exhausted, your joints ache, and your sleep is broken yet
 metaDescription: "You feel exhausted, your joints ache, and your sleep is broken yet your labs are normal. Learn why standard tests can miss perimenopause."
 image:
   url: /src/images/blog/body_changing.avif
-  alt: woman in perimenopause standing still
+  alt: "Woman in perimenopause standing in quiet reflection"
 heroImage: /src/images/blog/body_changing.avif
-heroAlt: woman in perimenopause standing still
+heroAlt: "Woman in perimenopause standing in quiet reflection"
 tags:
 - The Tender Path
 spineDestination: menopause-support-women-lawyers

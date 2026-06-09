@@ -11,7 +11,7 @@ metaDescription: Strategic advisory for crisis, reputation, and workforce risk
   continuity.
 image:
   url: /src/images/services/Crisis, Reputation.webp
-  alt: Workforce risk advisory discussion
+  alt: "Workforce risk advisory discussion at a conference table"
 priceFrom: Sensitive Issue Support
 duration: Advisory support
 isFeatured: false

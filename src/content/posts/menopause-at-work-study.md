@@ -19,9 +19,9 @@ metaDescription: New research from The Fuchsia Tent aims to mainstream menopause
   to protect their professional record.
 image:
   url: /src/images/blog/professional_woman_executive.webp
-  alt: Professional woman executive in a corporate setting.
+  alt: "Professional woman executive in a corporate setting"
 heroImage: /src/images/blog/professional_woman_executive.webp
-heroAlt: Professional woman executive in a corporate setting.
+heroAlt: "Professional woman executive in a corporate setting"
 tags:
   - Performance & Career
   - Workplace Disclosure

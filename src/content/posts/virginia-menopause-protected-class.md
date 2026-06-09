@@ -18,13 +18,9 @@ metaDescription: "Governor Spanberger executed a split decision on Virginia’s
   mandates to research directives."
 image:
   url: /src/images/blog/VA_collage-2.webp
-  alt: Collage of senior professional women in workplace settings, representing
-    the experienced workforce affected by Virginia menopause workplace
-    protections.
+  alt: "Professional women affected by Virginia menopause workplace protections"
 heroImage: /src/images/blog/VA_collage-2.webp
-heroAlt: Collage of senior professional women in workplace settings,
-  representing the experienced workforce affected by Virginia menopause
-  workplace protections.
+heroAlt: "Professional women affected by Virginia menopause workplace protections"
 tags:
   - Legislative Analysis
   - Research & Policy

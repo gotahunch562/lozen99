@@ -16,10 +16,8 @@ description: Reject the total transparency trap. Learn why managing disclosure
   for women leaders.
 image:
   url: /src/images/blog/power-requires-privacy-women-disclosure.avif
-  alt: Confident female CFO sitting in a modern executive office behind a clear
-    glass boundary etched with the words Non Disclosure.
-heroAlt: Confident female CFO sitting in a modern executive office behind a
-  clear glass boundary etched with the words Non Disclosure.
+  alt: "Woman CFO behind glass boundary marked Non Disclosure"
+heroAlt: "Woman CFO behind glass boundary marked Non Disclosure"
 tags:
   - Disclosure Independence
 draft: false

@@ -17,13 +17,9 @@ metaDescription: New York S7495 commissions a menopause workforce study, but its
   and the population the study cannot reach.
 image:
   url: /src/images/blog/DiscloureGap_NY_Bill_S7495.webp
-  alt: Conceptual image illustrating the menopause workforce study measurement
-    gap, with glasses bringing only part of a group of professional women into
-    focus.
+  alt: "Glasses focusing part of a professional women’s workforce study"
 heroImage: /src/images/blog/DiscloureGap_NY_Bill_S7495.webp
-heroAlt: Conceptual image illustrating the menopause workforce study measurement
-  gap, with glasses bringing only part of a group of professional women into
-  focus.
+heroAlt: "Glasses focusing part of a professional women’s workforce study"
 tags:
   - Legislative Analysis
 spineDestination: menopause-legislation-tracker

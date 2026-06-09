@@ -16,9 +16,9 @@ metaDescription: Losing words or focus? Discover why perimenopause causes
   often miss the transition.
 image:
   url: /src/images/blog/brainfog-inline.avif
-  alt: "Woman in quiet contemplation, representing the cognitive challenges of perimenopause brain fog."
+  alt: "Woman in quiet contemplation representing perimenopause brain fog"
 heroImage: /src/images/blog/brainfog-inline.avif
-heroAlt: "Woman in quiet contemplation, representing the cognitive challenges of perimenopause brain fog."
+heroAlt: "Woman in quiet contemplation representing perimenopause brain fog"
 tags:
   - The Tender Path
 spineDestination: menopause-support-women-lawyers

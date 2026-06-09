@@ -19,12 +19,9 @@ metaDescription: "The 2025 Michigan Menopause Memorandum reveals a staggering
   address Tacere and the reality of Invisible Attrition℠."
 image:
   url: /src/images/blog/michigan_menopause_at_work_memorandum.webp
-  alt: Michigan Menopause Memorandum 2026 document contrasted with middle-aged
-    professional women, illustrating gaps in workplace menopause policy and
-    data.
+  alt: "Michigan menopause memorandum contrasted with professional women at work"
 heroImage: /src/images/blog/michigan_menopause_at_work_memorandum.webp
-heroAlt: Michigan Menopause Memorandum 2026 document contrasted with middle-aged
-  professional women, illustrating gaps in workplace menopause policy and data.
+heroAlt: "Michigan menopause memorandum contrasted with professional women at work"
 tags:
   - Legislative Analysis
 spineDestination: menopause-legislation-tracker

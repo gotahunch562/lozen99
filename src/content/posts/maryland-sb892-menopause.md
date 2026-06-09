@@ -16,12 +16,9 @@ metaDescription: Maryland SB892 passed with near-unanimous support, but can
   mandates often miss the "Invisible Majority℠."
 image:
   url: /src/images/blog/Maryland_SB892_and_menopause_healthcare.webp
-  alt: Maryland SB892 menopause legislation document on desk with Department of
-    Health sign highlighting menopause care coverage and clinical training
-    policy.
+  alt: "Maryland SB892 menopause legislation document on policy desk"
 heroImage: /src/images/blog/Maryland_SB892_and_menopause_healthcare.webp
-heroAlt: "Maryland SB892 menopause legislatio desk with Department of Health
-  sign highlighting menopause "
+heroAlt: "Maryland SB892 menopause legislation document on policy desk"
 tags:
   - Legislative Analysis
   - Workplace Disclosure

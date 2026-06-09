@@ -20,13 +20,9 @@ metaDescription: Modern menopause workplace policies rely on formal disclosure,
   rise of Invisible Attrition℠.
 image:
   url: /src/images/blog/visibility_constraint_v3.webp
-  alt: Close-up of a magnifying glass with cracked glass held against a blurred
-    office building, symbolizing the visibility constraint in workplace
-    measurement systems.
+  alt: "Magnifying glass over blurred office building showing measurement limits"
 heroImage: /src/images/blog/visibility_constraint_v3.webp
-heroAlt: Close-up of a magnifying glass with cracked glass held against a
-  blurred office building, symbolizing the visibility constraint in workplace
-  measurement systems.
+heroAlt: "Magnifying glass over blurred office building showing measurement limits"
 tags:
   - Research & Policy
 spineDestination: disclosure-independence-infrastructure
