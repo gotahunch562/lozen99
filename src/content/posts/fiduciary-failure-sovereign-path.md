@@ -18,7 +18,7 @@ image:
   alt: satisfy fiduciary obligations with paperwork
 heroImage: /src/images/blog/the-sovereign-path-1.avif
 heroAlt: satisfy fiduciary obligations with paperwork
-draft: true
+draft: false
 isFeatured: false
 ---
 *Our examination of the AI ROI miscalculation in Part 2 exposed a dangerous accounting asymmetry: traditional capital allocation paradigms capitalize technology systems as assets while treating the liquidation of core human architecture as a routine expense.*
@@ -56,7 +56,7 @@ isFeatured: false
 
 *Institutions that execute this integrated mapping eliminate compounding capital misallocation and insulate directors from unmonitored fiduciary exposure under the Caremark standard. The ones that fail to adapt will continue to sink immense capital into scaling automated workflows, completely blind to the reality that the foundational judgment they are paying to expand is already walking out the door.*
 
-*This is the systemic friction where Lozen Advisory operates. By applying the [**4S Sovereign Capacity Model℠**,](/4s-sovereign-capacity-model/) we look past isolated software metrics and fragmented talent reporting to evaluate the structural resilience of your entire institutional ecosystem. We expose the unpriced liabilities built into your current strategic trajectory, answering the ultimate question: Is your human infrastructure viable and resilient, and has your leadership ever been equipped to look?*
+*This is the systemic friction where Lozen Advisory operates. By applying the **[4S Sovereign Capacity Model℠**,](/4s-sovereign-capacity-model/) we look past isolated software metrics and fragmented talent reporting to evaluate the structural resilience of your entire institutional ecosystem. We expose the unpriced liabilities built into your current strategic trajectory, answering the ultimate question: Is your human infrastructure viable and resilient, and has your leadership ever been equipped to look?*
 
 ## *The Fiduciary Protocol: Questions for Institutional Leadership*
 
@@ -64,6 +64,5 @@ isFeatured: false
 
 - ***The Capacity Ledger**: Is the board capitalizing technology deployment against a validated, stable human capacity baseline, or are standard efficiency metrics actively masking the structural liquidation of specialized core knowledge?*
 - ***The Architectural Data Gap**: Does the institution's risk-monitoring framework rely on passive, employee-driven disclosure, or does it utilize an independent diagnostic mechanism designed to map structural silence (Tacere) before it manifests as an active exit record?*
-- ***The Capital Allocation Alignment**: Is technology expenditure actively securing and scaling enterprise sovereignty, or is it functioning as an unpriced capital substitution designed to offset an unmitigated, invisible retention risk?*  
-
+- ***The Capital Allocation Alignment**: Is technology expenditure actively securing and scaling enterprise sovereignty, or is it functioning as an unpriced capital substitution designed to offset an unmitigated, invisible retention risk?*
 
