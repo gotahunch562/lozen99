@@ -37,7 +37,7 @@ A governing board that authorizes AI capability deployment based on an unverifie
 
 If the institution is capitalizing technology assets while experiencing the undocumented liquidation of its primary technical anchors, leadership is not making a clean productivity bet. It is endorsing a core strategy based on incomplete information.
 
-Directors bear a duty of care to identify, price, and confront material risks affecting institutional operations. Under ++[the Caremark doctrine](https://www.sidley.com/en/insights/publications/2026/04/caremark-claims-limited-delaware-court-clarifies-board-oversight-and-liability-standards)++, boards must implement monitoring infrastructure capable of detecting systemic vulnerabilities before they trigger operational or financial crisis. Relying on passive dashboards, benign exit data, and disclosure-dependent reporting to track the erosion of institutional memory is no longer defensible. A board that authorizes seven-figure technology roadmaps using systems that cannot calculate human asset erosion may be creating the very information vacuum it later claims prevented intervention.
+Directors bear a duty of care to identify, price, and confront material risks affecting institutional operations. Under [the Caremark doctrine](https://www.sidley.com/en/insights/publications/2026/04/caremark-claims-limited-delaware-court-clarifies-board-oversight-and-liability-standards), boards must implement monitoring infrastructure capable of detecting systemic vulnerabilities before they trigger operational or financial crisis. Relying on passive dashboards, benign exit data, and disclosure-dependent reporting to track the erosion of institutional memory is no longer defensible. A board that authorizes seven-figure technology roadmaps using systems that cannot calculate human asset erosion may be creating the very information vacuum it later claims prevented intervention.
 
 The quiet displacement of specialized human infrastructure is a material, unpriced operational risk. It sits at the intersection of two financial vectors boards have rarely been forced to reconcile:
 
@@ -56,7 +56,7 @@ The dominant AI governance conversation remains fixated on localized risk tracki
 
 The current financial information architecture has engineered a blind spot so severe that leadership can capitalize technology assets and liquidate specialized human memory in the same quarter while remaining unaware of the collision. This is a failure of infrastructure, not intent. It does not require malice. It requires incentive and opportunity.
 
-This is where ++[the Sovereign Capacity Model℠](/sovereign-capacity-model/)++ becomes a board-level diagnostic. The Sovereign Capacity Model℠ is Lozen Advisory’s diagnostic architecture for evaluating where corporate strategy depends on human capacity the organization has not measured, priced, protected, or governed.
+This is where [the Sovereign Capacity Model℠](/sovereign-capacity-model/) becomes a board-level diagnostic. The Sovereign Capacity Model℠ is Lozen Advisory’s diagnostic architecture for evaluating where corporate strategy depends on human capacity the organization has not measured, priced, protected, or governed.
 
 The model organizes one strategic goal, Sovereignty, against three diagnostic pressure points: Substitution, Silence, and Supervision. Sovereignty is the outcome leadership is trying to preserve: the institutional judgment, specialized memory, and executive execution capacity that no software can replicate. The pressure points examine how AI investment, structural non-disclosure, and governance accountability can erode that goal before risk becomes visible in conventional reporting systems.
 
@@ -73,9 +73,9 @@ This structure is not a generic workforce model. It is a board, CFO, and General
 Forward-looking institutions seeking long-term sovereignty must re-engineer governance design around the goal and the three diagnostic pressure points:
 
 - **Protect institutional sovereignty** by validating whether the organization still controls the core judgment, memory, and technical interpretation required to govern its own operating model.
-- **Correct the ++[Capacity Substitution Error℠](/blog/talent-attrition-cfo-risk/)++** by integrating talent infrastructure tracking into technology capital allocation models, so boards do not fund software systems without pricing the human layer required to secure them.
-- **Surface ++[Structural Silence](/invisible-attrition/structural-silence/)++ (Tacere)** by building monitoring systems that do not depend on employee disclosure as the initiating condition.
-- **Neutralize the ++[Power User Trap℠](/invisible-attrition/power-user-trap/)++** by identifying where AI deployment concentrates verification, correction, escalation, and accountability burdens inside a small group of critical performers.
+- **Correct the [Capacity Substitution Error℠](/blog/talent-attrition-cfo-risk/)** by integrating talent infrastructure tracking into technology capital allocation models, so boards do not fund software systems without pricing the human layer required to secure them.
+- **Surface [Structural Silence](/invisible-attrition/structural-silence/)(Tacere)** by building monitoring systems that do not depend on employee disclosure as the initiating condition.
+- **Neutralize the [Power User Trap℠](/invisible-attrition/power-user-trap/)** by identifying where AI deployment concentrates verification, correction, escalation, and accountability burdens inside a small group of critical performers.
 
 Institutions that execute this mapping reduce capital misallocation and insulate directors from unmonitored fiduciary exposure. Institutions that fail to adapt will continue funding automated workflows while the judgment they are trying to scale walks out the door.
 
@@ -92,4 +92,4 @@ Executive leadership teams, Chief Legal Officers, and governing boards can use t
 
 ## **Request an Executive Briefing**
 
-++**[Request an executive briefing](/request-briefing/)**++ to evaluate whether your current AI investment strategy is protecting institutional sovereignty or quietly expanding fiduciary exposure.
+**[Request an executive briefing](/request-briefing/)** to evaluate whether your current AI investment strategy is protecting institutional sovereignty or quietly expanding fiduciary exposure.
