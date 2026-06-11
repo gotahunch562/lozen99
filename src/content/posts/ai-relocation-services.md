@@ -27,7 +27,7 @@ tags:
 draft: true
 isFeatured: false
 ---
-## Need to relocate human labor so the vendors can keep calling the system autonomous ? 
+## Need to relocate human labor so the vendors can keep calling the system autonomous ?
 
 If you want to evaluate different options, it helps to know a few details:
 
@@ -55,3 +55,5 @@ That is not autonomy.
 That is [labor displacement inside the workflow.](https://www.deloitte.com/us/en/services/consulting/articles/defensive-ux-responsible-gen-ai-framework.html)
 
 **A Lozen Advisory satire.**
+
+*The AI Workforce Materiality Briefing is a private governance advisory meeting for CFOs, General Counsel, and corporate boards. [Request the briefing.](/ai-workforce-materiality-briefing/)*
