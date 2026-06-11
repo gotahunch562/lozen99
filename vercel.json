@@ -1,4 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/4s-sovereign-capacity-model/",
+      "destination": "/sovereign-capacity-model/",
+      "permanent": true
+    }
+  ]
 }
