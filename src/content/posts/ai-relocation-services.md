@@ -24,8 +24,8 @@ tags:
   - Invisible Attrition
   - Workplace Disclosure
   - Performance & Career
-draft: true
-isFeatured: false
+draft: false
+isFeatured: true
 ---
 ## Need to relocate human labor so the vendors can keep calling the system autonomous ?
 
