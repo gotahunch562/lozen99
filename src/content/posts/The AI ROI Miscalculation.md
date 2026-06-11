@@ -26,9 +26,11 @@ tags:
 draft: false
 isFeatured: false
 ---
-In Part 1 of this series, we isolated the foundational architecture of the [4S Sovereign Capacity Model℠](/4s-sovereign-capacity-model/) and exposed ***Systemic Silence***—the structural blind spot rendering the attrition of critical knowledge anchors entirely invisible to corporate dashboards. But data failures do not exist in a vacuum; they dictate capital allocation. When reporting infrastructure fails to register the quiet erosion of specialized human architecture, the financial models built on top of it inevitably crack.
+In Part 1 of this series, we isolated the foundational architecture of the [Sovereign Capacity Model℠](/sovereign-capacity-model/) and exposed —[the structural blind spot](/invisible-attrition/dashboard-delay/) rendering the attrition of critical knowledge anchors entirely invisible to corporate dashboards. But data failures do not exist in a vacuum; they dictate capital allocation. When reporting infrastructure fails to register the quiet erosion of specialized human architecture, the financial models built on top of it inevitably crack.
 
-What if the tool you authorized to scale your organization is the precise catalyst driving your most critical talent to quietly walk out the door? This is the core of the AI ROI miscalculation: an immense deployment of capital authorized against an unverified, highly volatile capacity baseline. This is the *[Capacity Substitution Error℠*—](/blog/talent-attrition-cfo-risk/)governing boards mistakenly funding software licensing seats to offset human capital erosion, entirely unaware that their oversight frameworks are fundamentally blind to the resulting attrition. Traditional corporate frameworks isolate capital allocation metrics from talent ecosystem health, treating software scaling and human attrition as disconnected balance-sheet variables. When an institution scales automated deployment faster than it builds the infrastructure to understand what that deployment costs in human terms, it creates a severe structural misallocation.
+**What if the tool you authorized to scale your organization is the precise catalyst driving your most critical talent to quietly walk out the door?** 
+
+This is the core of the AI ROI miscalculation: an immense deployment of capital authorized against an unverified, highly volatile capacity baseline. This is the capacity drain governing boards mistakenly funding software licensing seats to offset human capital erosion, entirely unaware that their oversight frameworks are fundamentally blind to the resulting attrition. Traditional corporate frameworks isolate capital allocation metrics from talent ecosystem health, treating software scaling and human attrition as disconnected balance-sheet variables. When an institution scales automated deployment faster than it builds the infrastructure to understand what that deployment costs in human terms, it creates a severe structural misallocation.
 
 ## The Substitution Fallacy: Transactional Labor vs. Institutional Sovereignty
 
@@ -44,14 +46,14 @@ This is a hard operational barrier that standard financial modeling treats as in
 
 The prevailing technological paradigm correctly highlights that AI can assist, augment, and accelerate process efficiency. What the dominant capital allocation conversation fails to calculate is a profound systemic contradiction built directly into the ROI spreadsheet: the very human infrastructure required to make technology investments viable is the exact layer the investment logic systematically devalues. The financial model prices the software seat as an asset and treats human retention as an optimized expense. Consequently, the board approves the platform while the human architecture required to govern and secure it is already navigating its own quiet exit.
 
-## Systemic Silence: Why Dashboards Mask Financial Erosion
+## Dashboard Delay: Why Dashboards Mask Financial Erosion
 
-This capital misallocation is driven by a fundamental information asymmetry: corporate data architecture is engineered to track technology assets with precision, while remaining structurally blind to the financial erosion of the human ecosystem. Technology deployment arrives at the leadership table backed by hyper-legible data—formal capitalization models, integration roadmaps, and explicit efficiency projections. It integrates easily into financial planning because corporate reporting infrastructure has been built to prioritize structured inputs.
+This capital misallocation is driven by a fundamental information asymmetry: corporate data architecture is engineered to track technology assets with precision, while remaining structurally blind to the financial erosion of the human ecosystem. Technology deployment arrives at the leadership table backed by data—formal capitalization models, integration roadmaps, and explicit efficiency projections. It integrates easily into financial planning because corporate reporting infrastructure has been built to prioritize structured inputs.
 
 The quiet fracturing of the human infrastructure does not arrive that way. The systemic forces driving it operate entirely outside standard ledger entries:
 
-- **Disclosure Risk:** A structural dynamic where providing transparent feedback carries higher professional risk for an executive than a silent departure.
-- **Structural Silence:** The total absence of diagnostic monitoring tools designed to capture what is deliberately left unsaid.
+- **[Disclosure Risk](/invisible-attrition/performer-masking/):** A structural dynamic where providing transparent feedback carries higher professional risk for an executive than a silent departure.
+- **Invisible Attrition:** The total absence of diagnostic monitoring tools designed to capture this risk
 - **Unsupported Transition Points:** Systemic gaps where the institution offers no financial or structural architecture to retain long-term expertise.
 - **Uncalibrated Systems Work**: The unpriced [accumulation of calibration and judgment load](/invisible-attrition/performer-masking/) required to make AI functional, which is never codified as a formal cost.
 
