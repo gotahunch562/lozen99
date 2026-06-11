@@ -44,9 +44,9 @@ These represent real, measurable operational efficiencies because they automate 
 
 This is a hard operational barrier that standard financial modeling treats as invisible. The attributes that render a strategic leader irreplaceable—their nuanced reading of regulatory volatility, their capacity to maintain institutional trust during a governance crisis, and their inherited map of historical system failures—cannot be encoded into a data lake or simulated by an automated model. They reside entirely within human infrastructure. When that asset disengages, that structural memory evaporates permanently, creating an unpriced balance-sheet liability.
 
-The prevailing technological paradigm correctly highlights that AI can assist, augment, and accelerate process efficiency. What the dominant capital allocation conversation fails to calculate is a profound systemic contradiction built directly into the ROI spreadsheet: the very human infrastructure required to make technology investments viable is the exact layer the investment logic systematically devalues. The financial model prices the software seat as an asset and treats human retention as an optimized expense. Consequently, the board approves the platform while the human architecture required to govern and secure it is already navigating its own quiet exit.
+The prevailing technological paradigm correctly highlights that AI can assist, augment, and accelerate process efficiency. What the dominant capital allocation conversation fails to calculate is a profound systemic contradiction built directly into the ROI spreadsheet: the very human infrastructure required to make technology investments viable is the exact layer the investment logic systematically devalues. **The financial model prices the software seat as an asset and treats human retention as an optimized expense.** Consequently, the board approves the platform while the human architecture required to govern and secure it is already navigating its own quiet exit.
 
-## Dashboard Delay: Why Dashboards Mask Financial Erosion
+##  Why Dashboards Mask Financial Erosion
 
 This capital misallocation is driven by a fundamental information asymmetry: corporate data architecture is engineered to track technology assets with precision, while remaining structurally blind to the financial erosion of the human ecosystem. Technology deployment arrives at the leadership table backed by data—formal capitalization models, integration roadmaps, and explicit efficiency projections. It integrates easily into financial planning because corporate reporting infrastructure has been built to prioritize structured inputs.
 
@@ -67,15 +67,10 @@ Conversely, the liquidation of the human expertise required to anchor and govern
 
 Authorizing a seven-figure technology roadmap under these parameters is not strategic risk management. It is operating with a structurally deficient balance sheet. The operational liability is immediate and compounding; the current financial architecture simply lacks the opportunity to calculate it.
 
-When a financial model fundamentally miscalculates the stability of its core assets, the resulting exposure cannot remain confined to the ledger. In the final installment of this series, we move from the balance sheet illusion to the boardroom floor—examining how this structural capital misallocation translates directly into personal, unmonitored fiduciary liability under the *[Caremark* doctrine.](https://www.akingump.com/en/insights/articles/does-ai-care-about-caremark-applying-the-core-principles-of-corporate-governance-to-artificial-intelligence-integration)
+When a financial model fundamentally miscalculates the stability of its core assets, the resulting exposure cannot remain confined to the ledger. In the final installment of this series, we move from the balance sheet illusion to the boardroom floor—examining how this structural capital misallocation translates directly into personal, unmonitored fiduciary liability under the [Caremark doctrine.](https://www.akingump.com/en/insights/articles/does-ai-care-about-caremark-applying-the-core-principles-of-corporate-governance-to-artificial-intelligence-integration)
 
 ***This is the second installment in a three-part series on structural capacity risk. In Part 3: Fiduciary Failure and the Sovereign Path, we move from the balance sheet illusion to the boardroom floor, examining how this structural capital misallocation translates directly into personal, unmonitored fiduciary liability under the Caremark doctrine.***
 
 ## Request an Executive Briefing
 
-**[Please submit the formal request parameters](/request-briefing/)** below to initiate conflict clearing and schedule your session. All inquiries are handled with absolute professional discretion.
-
-- **Corporate Entity & Sector**
-- **Principal Contact & Governance Role** *(e.g., Board Director, Chief Legal Officer, Executive Leadership)*
-- **Strategic Timeline** *(Immediate evaluation requirement, upcoming board quarter, or long-term systems design)*
-
+**[Please submit a request](/request-briefing/)** to schedule your session. All inquiries are handled with discretion.
