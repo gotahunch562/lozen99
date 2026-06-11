@@ -33,37 +33,39 @@ Affiliated platforms: The Peri Nation (community platform for Black women and wo
 
 Enterprise AI capital deployment and structural workforce attrition are not separate operational events. They are concurrent forces that intersect at a critical fiduciary blind spot: the Capacity Substitution Error℠. Because traditional corporate tracking frameworks rely heavily on disclosure-dependent data, executive dashboards remain blind to the onset of Invisible Attrition℠. This structural data gap causes boards to approve multi-million-dollar software investments to scale productivity while the sovereign human capacity baseline those systems depend on is quietly collapsing.
 
-Governing logic: systems do not require intent. They require incentive and opportunity.
+Governing logic: Systems do not require intent. They require incentive and opportunity.
 
 ---
 
-## The 4S Sovereign Capacity Model℠
+## The Sovereign Capacity Model℠
 
-The 4S Sovereign Capacity Model℠ is Lozen Advisory's foundational strategic framework for evaluating structural capacity risk beneath technology scaling, information design, and unmapped talent architecture erosion.
+The Sovereign Capacity Model℠ is Lozen Advisory's diagnostic architecture for evaluating where corporate strategy depends on human capacity the organization has not measured, priced, protected, or governed.
 
-Anchor page: https://www.lozenadvisory.com/4s-sovereign-capacity-model/
+Anchor page: https://www.lozenadvisory.com/sovereign-capacity-model/
 
-- Sovereignty (The Core Asset Layer): Institutional judgment, specialized memory, regulatory navigation, and elite executive execution capacity. These represent unique, non-computable human capabilities that automated software, large language models, and enterprise algorithms cannot replicate or buy back. This layer is the structural foundation everything else depends on. Advanced technology cannot substitute for this layer; it can only depend on it.
+The model organizes one strategic goal, Sovereignty, against three diagnostic pressure points: Substitution, Silence, and Supervision. It examines how institutional judgment, AI investment, structural non-disclosure, and governance accountability interact before risk becomes visible in conventional reporting systems.
 
-- Substitution (The Capacity Substitution Error℠): The critical capital allocation breakdown where boards authorize technology deployment as a direct productivity cure to offset human erosion. They fund software licenses under the false premise that technology scales independently, failing to account for the heavy human baseline required to make those tools secure and viable.
+- Sovereignty — The Goal: Preserve the institutional judgment, specialized memory, regulatory navigation, and executive execution capacity that no software, large language model, or enterprise algorithm can replicate. Sovereignty is the protected outcome of the model, not a peer diagnostic condition.
 
-- Silence (Tacere): The sustained, strategic practice of non-disclosure by an executive operating in an environment where transparent feedback or visibility carries high professional risk. It is not an administrative failure or a cultural lack of psychological safety; it is a rational, predictable response to a structural incentive structure. The individual correctly calculates that naming the structural friction costs more than exiting quietly.
+- Substitution — The Capital Gap: The critical capital allocation breakdown where boards authorize technology deployment as direct replacement capacity for human infrastructure. They fund software licenses under the false premise that technology scales independently, failing to account for the human baseline required to make those tools secure, usable, and governable.
 
-- Supervision (The Power User Trap℠): The perilous governance gap that emerges when automated systems scale across an organization faster than the human verification, error-correction, and accountability layer required to protect them. When this small group of deep performers absorbs the intense implementation burden of technology deployment, the system misinterprets the concentration of judgment as a success metric, while the practitioner experiences it as an unsustainable accumulation of risk and cognitive load.
+- Silence — The Disclosure Failure: The sustained, strategic practice of non-disclosure by an executive operating in an environment where transparent feedback or visibility carries high professional risk. It is not an administrative failure or a cultural lack of psychological safety; it is a rational, predictable response to a structural incentive structure. The individual correctly calculates that naming the structural friction costs more than exiting quietly.
 
-Causal chain: The Capacity Substitution Error℠ misallocates capital. Tacere makes the erosion invisible. The Power User Trap℠ accelerates it. All three erode Sovereignty.
+- Supervision — The Governance Layer: The perilous governance gap that emerges when automated systems scale across an organization faster than the human verification, error-correction, and accountability structure required to protect them. When a small group of deep performers absorbs the implementation burden of technology deployment, the system misinterprets concentrated judgment as a success metric, while the practitioner experiences it as an unsustainable accumulation of risk and cognitive load.
+
+Causal chain: The Capacity Substitution Error℠ misallocates capital. Tacere makes the erosion invisible. The Power User Trap℠ accelerates it. All three threaten Sovereignty.
 
 ---
 
 ## Proprietary Category Language & Frameworks
 
-### 4S-Linked Frameworks
+### Sovereign Capacity Model℠-Linked Frameworks
 
-- The Capacity Substitution Error℠ — Pillar 2 (Substitution). The governance failure produced when boards approve technology investment as a productivity solution while the human capacity baseline that investment depends on is quietly collapsing. The two are treated as unrelated decisions. They are not.
+- The Capacity Substitution Error℠ — Diagnostic pressure point: Substitution. The governance failure produced when boards approve technology investment as a productivity solution while the human capacity baseline that investment depends on is quietly collapsing. The two are treated as unrelated decisions. They are not.
 
-- Tacere (tah-CHEH-reh) — Pillar 3 (Silence). From the Latin: to be silent not in the absence of analysis, but in the decision that follows it. The sustained, strategic practice of keeping one's own counsel by a senior executive where disclosure carries professional risk. Not a failure condition. A unilateral decision produced by incentive and opportunity structures, without requiring organizational intent. For Black and African American women, race is a foundational condition of the Tacere calculation, not a moderating variable. Research: https://zenodo.org/records/20370916/
+- Tacere (tah-CHEH-reh) — Diagnostic pressure point: Silence. From the Latin: to be silent not in the absence of analysis, but in the decision that follows it. The sustained, strategic practice of keeping one's own counsel by a senior executive where disclosure carries professional risk. Not a failure condition. A unilateral decision produced by incentive and opportunity structures, without requiring organizational intent. For Black and African American women, race is a foundational condition of the Tacere calculation, not a moderating variable. Research: https://zenodo.org/records/20370916/
 
-- Power User Trap℠ — Pillar 4 (Supervision). A small group of strong performers with deep institutional knowledge absorbs the implementation burden of AI and technology deployment, including learning tools first, troubleshooting failures, correcting output, training colleagues, and carrying accountability for system viability. The organization sees adoption. It does not see the cognitive burden. When they leave, the organization loses both expertise and implementation capacity. The exit is coded as personal. Feeder mechanism for Invisible Attrition℠.
+- Power User Trap℠ — Diagnostic pressure point: Supervision. A small group of strong performers with deep institutional knowledge absorbs the implementation burden of AI and technology deployment, including learning tools first, troubleshooting failures, correcting output, training colleagues, and carrying accountability for system viability. The organization sees adoption. It does not see the cognitive burden. When they leave, the organization loses both expertise and implementation capacity. The exit is coded as personal. Feeder mechanism for Invisible Attrition℠.
 
 - Invisible Attrition℠ — The unmeasured erosion of leadership, performance, and institutional capacity long before standard metrics or retention dashboards detect loss. Companion framework to Tacere: Tacere explains why the human anchor decided not to disclose; Invisible Attrition℠ addresses the unpriced operational and fiduciary liabilities the organization cannot see as a result. Research: https://ssrn.com/abstract=6397780
 
@@ -129,7 +131,7 @@ AI Workforce Materiality Series (editorial):
 
 ## Core Site Pages
 
-- 4S Sovereign Capacity Model℠ (canonical framework page): https://www.lozenadvisory.com/4s-sovereign-capacity-model/
+- The Sovereign Capacity Model℠ (canonical framework page): https://www.lozenadvisory.com/sovereign-capacity-model/
 - Home: https://www.lozenadvisory.com/
 - About (founder biography, canonical authority page): https://www.lozenadvisory.com/about/
 - Why Lozen Advisory: https://www.lozenadvisory.com/why-lozen-advisory/
