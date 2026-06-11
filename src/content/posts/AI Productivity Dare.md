@@ -64,9 +64,9 @@ The organizations that struggled most were, by Careerminds' own account, making 
 
 This is what LLM governance looks like when it is not governed: unpriced, invisible, and concentrated inside the employees an organization can least afford to lose.
 
-## The Token Cost Mirage: Runaway Spend and Structural Shifts 
+## The Token Cost Mirage: Runaway Spend and Structural Shifts
 
-The token-cost problem is exposing a rift in the **AI Hype Cycle**. By June 2026, the executive mood has shifted from unmeasured enthusiasm to a deep anxiety over runaway costs and unquantified operational shifts. High-profile enterprise failures such as Uber exhausting its entire annual AI budget in a matter of months due to surging code-assistant usage, have proven that raw model utilization is a financial liability when decoupled from human governance. While legacy software providers scramble to sell multi-million dollar dashboards to route models and cap individual employee token usage, they are treating a [human capacity crisis as a software optimization problem](/4s-sovereign-capacity-model/). **Capping tokens does not reduce the hidden verification burden** shifting onto your highest-judgment senior leadership; it merely masks it.
+The token-cost problem is exposing a rift in the **AI Hype Cycle**. By June 2026, the executive mood has shifted from unmeasured enthusiasm to a deep anxiety over runaway costs and unquantified operational shifts. High-profile enterprise failures such as Uber exhausting its entire annual AI budget in a matter of months due to surging code-assistant usage, have proven that raw model utilization is a financial liability when decoupled from human governance. While legacy software providers scramble to sell multi-million dollar dashboards to route models and cap individual employee token usage, they are treating a [human capacity crisis as a software optimization problem](/sovereign-capacity-model/). **Capping tokens does not reduce the hidden verification burden** shifting onto your highest-judgment senior leadership; it merely masks it.
 
 ---
 
