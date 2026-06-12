@@ -1,6 +1,5 @@
 ---
 title: Whose Reputation Is It Anyway? The Case for The Name Standard℠
-subtitle: "When AI Leaves the Building: It Carries Your Name, Not the Model’s"
 slug: the-name-standard-ai-governance
 pubDate: 2026-06-12
 datePublished: 2026-06-12
