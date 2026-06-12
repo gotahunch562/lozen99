@@ -31,9 +31,9 @@ content:
       delete: false
     view:
       primary: title
-      fields: [title, subtitle, pubDate, dateModified, category, isFeatured, draft]
+      fields: [title, seo_title, subtitle, pubDate, dateModified, category, isFeatured, draft]
       sort: [dateModified, pubDate, title]
-      search: [title, subtitle, description, excerpt, category, tags]
+      search: [title, seo_title, subtitle, description, excerpt, category, tags]
       default:
         sort: dateModified
         order: desc
@@ -42,6 +42,11 @@ content:
         label: Title
         type: string
         required: true
+      - name: seo_title
+        label: SEO title
+        type: string
+        required: false
+        description: "Optional SEO title override. Use when the visible article title should stay more editorial or expressive."
       - name: subtitle
         label: Subtitle
         type: string
@@ -71,6 +76,11 @@ content:
         description: "Primary editorial category. This controls Blog and Resource Library grouping."
         options:
           values:
+            - AI Governance
+            - AI Workforce Risk
+            - Board & Fiduciary Risk
+            - Disclosure-Independent Measurement
+            - Institutional Capacity
             - Legislative Analysis
             - Research & Policy
             - Legal Profession
@@ -144,12 +154,28 @@ content:
         options:
           multiple: true
           values:
+            - AI Governance
+            - AI Workforce Risk
+            - Name Standard
+            - Human Oversight
+            - AI Accountability
+            - Legal Risk
+            - GRC
+            - Responsible AI
+            - Internal Audit
+            - Verification Burden
+            - Workforce Materiality
+            - Human-Capital Exposure
+            - Sovereign Capacity Model
+            - Capacity Substitution Error
+            - Power User Trap
+            - Board Governance
+            - CFO Resources
             - Disclosure Day
             - Workplace Disclosure
             - Disclosure Independence
             - Invisible Attrition
             - Tacere
-            - Power User Trap
             - The Tender Path
             - Legislative Analysis
             - Research & Policy
