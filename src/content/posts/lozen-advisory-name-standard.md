@@ -24,8 +24,8 @@ tags:
   - Invisible Attrition
   - Legislative Analysis
   - Research & Policy
-draft: true
-isFeatured: false
+draft: false
+isFeatured: true
 ---
 When AI-assisted work leaves an organization, it does not leave under the name of the large language model.
 
@@ -39,7 +39,7 @@ The Name Standard℠ defines what must be true, before AI-assisted output can ca
 
 It asks whether the person responsible for this output had the time, authority, information, review capacity, documentation, and refusal rights necessary to make oversight real. Without those conditions, [accountability becomes ceremonial.](https://www.theregister.com/ai-and-ml/2026/06/12/kpmgs-ai-report-turns-into-a-demo-of-ai-hallucinations/5255029) The name on the output will belong to a human being, while the governance behind it is weak or nonexistent.
 
-##  5 questions governance professionals should ask 
+## 5 questions governance professionals should ask
 
 Evaluate your organization's alignment with The Name Standard℠ and clarify your responsibilities:
 
