@@ -10,9 +10,9 @@ excerpt: When AI-assisted work leaves an organization, it does not leave under
   The Name Standard℠ defines what must be true before AI-assisted output can
   carry human authority, professional judgment, executive approval, or
   institutional sign-off.
-description: When AI-assisted work leaves your organization, it carries an
-  employee's name not the LLMs. Lozen Advisory is introducing The Name Standard℠
-  to bring real accountability to AI governance.
+description: When AI work leaves your firm, it carries an employee's name—not
+  the model's. Learn how Lozen Advisory's Name Standard℠ brings real AI
+  accountability.
 image:
   url: /src/images/blog/the-name-standard-ai-governance-lozen-advisory-llc.avif
   alt: The Name Standard℠ signature is an example of AI governance
