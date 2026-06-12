@@ -25,7 +25,7 @@ tags:
   - Workplace Disclosure
   - Performance & Career
 draft: false
-isFeatured: true
+isFeatured: false
 ---
 ## Need to relocate human labor so the vendors can keep calling the system autonomous ?
 
