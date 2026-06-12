@@ -1,7 +1,7 @@
 ---
-title: The Name Standard℠ for AI Governance | Lozen Advisory
+title: "Whose Reputation Is It Anyway? "
 seo_title: The Name Standard℠ for AI Governance | Lozen Advisory
-subtitle: "Whose Reputation Is It Anyway? "
+subtitle: The Case for The Name Standard℠
 slug: the-name-standard-ai-governance
 pubDate: 2026-06-12
 datePublished: 2026-06-12
