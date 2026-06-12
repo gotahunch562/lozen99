@@ -22,7 +22,7 @@ tags:
   - Tacere
   - Invisible Attrition
 draft: false
-isFeatured: true
+isFeatured: false
 ---
 ## When AI Adoption Replaces LLM Governance
 
