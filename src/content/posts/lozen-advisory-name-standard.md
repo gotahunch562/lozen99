@@ -34,13 +34,13 @@ It leaves under the name of an employee, manager, lawyer, analyst, executive, ri
 
 That is why [human oversight cannot remain a vague governance principle](/blog/ai-generation-fast-governance-slow/). If a person’s name, approval, signature, professional judgment, or institutional authority attaches to AI-assisted output, there must be a standard for what that attachment means. Lozen Advisory calls this the Name Standard℠.
 
-## What Human Sign-Off Actually Means in the Age of AI
+## When the AI gets it wrong, whose name is on it?
 
 The Name Standard℠ defines what must be true, before AI-assisted output can carry a person’s name, authority, professional judgment, or institutional sign-off.
 
 It asks whether the person responsible for this output had the time, authority, information, review capacity, documentation, and refusal rights necessary to make oversight real. Without those conditions, [accountability becomes ceremonial.](https://www.theregister.com/ai-and-ml/2026/06/12/kpmgs-ai-report-turns-into-a-demo-of-ai-hallucinations/5255029) The name on the output will belong to a human being, while the governance behind it is weak or nonexistent.
 
-## 5 questions governance professionals should ask
+## 5 questions GRC professionals should ask.
 
 Evaluate your organization's alignment with The Name Standard℠ and clarify your responsibilities:
 
@@ -50,7 +50,7 @@ Evaluate your organization's alignment with The Name Standard℠ and clarify you
 4. **Are we allocating sufficient time and providing the necessary source data for professionals to genuinely verify the AI's complex calculations or assertions?**
 5. **Where does the liability fall if an AI-assisted output bearing an executive's or institution's signature causes a compliance or legal failure?**
 
-*The AI Workforce Materiality Briefing is a private governance advisory meeting for CFOs, General Counsel, and corporate boards. **[Request the briefing.](/ai-workforce-materiality-briefing/)***
+*If your organization is currently running AI pilots without a documented Name Standard workflow, your named Senior Managers are exposed. Contact Lozen Advisory for a private, Sovereign Capacity Briefing.* ***[Request the briefing.](/ai-workforce-materiality-briefing/)***
 
 **The Name Standard℠** is a service mark of Lozen Advisory LLC.
 
