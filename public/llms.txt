@@ -127,6 +127,9 @@ AI Workforce Materiality Series (editorial):
 - Article 05: https://www.lozenadvisory.com/blog/ai-productivity-dare/
 - Article 06: https://www.lozenadvisory.com/blog/ai-productivity-vs-governance/
 
+- AI Workforce Materiality Briefings (Eventbrite collection): https://www.eventbrite.com/cc/ai-workforce-materiality-briefings-4848750
+  Lozen Advisory event series on AI workforce materiality, AI governance, human oversight, GRC accountability, verification burden, and hidden human-capital exposure inside corporate AI adoption.
+
 ---
 
 ## Core Site Pages
