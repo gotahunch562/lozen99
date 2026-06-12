@@ -12,6 +12,9 @@ import BlogCard from "@/components/blog/BlogCard.astro";
 import LegalSeriesConnector from "@/components/series/LegalSeriesConnector.astro";
 const { frontmatter, currentSlug: suppliedCurrentSlug } = Astro.props;
 const currentSlug = suppliedCurrentSlug || "";
+const displayTitle = frontmatter.title;
+const seoTitle = frontmatter.seo_title || frontmatter.title;
+const categoryLabel = frontmatter.category || "Insights";
 
 // Get published posts and filter by tag
 import { getCollection } from "astro:content";
@@ -19,7 +22,7 @@ const allPosts = await getCollection("posts");
 const frontmatterTags = frontmatter.tags ?? [];
 const filteredRelatedPosts = allPosts
   .filter((post) => post.data.draft !== true)
-  .filter((post) => post.data.title !== frontmatter.title)
+  .filter((post) => post.data.title !== displayTitle)
   .filter((post) =>
     (post.data.tags ?? []).some((tag) => frontmatterTags.includes(tag))
   )
@@ -35,13 +38,13 @@ const seoDescription =
   frontmatter.metaDescription || frontmatter.description || frontmatter.excerpt || "";
 
 const ogImage = frontmatter.image?.url?.src ?? frontmatter.image?.url;
-const ogImageAlt = frontmatter.image?.alt || frontmatter.title;
+const ogImageAlt = frontmatter.image?.alt || displayTitle;
 
 const publishedDateIso = (frontmatter.datePublished || frontmatter.pubDate)?.toISOString?.() || new Date(frontmatter.datePublished || frontmatter.pubDate).toISOString();
 const modifiedDateIso = (frontmatter.dateModified || frontmatter.datePublished || frontmatter.pubDate)?.toISOString?.() || new Date(frontmatter.dateModified || frontmatter.datePublished || frontmatter.pubDate).toISOString();
 
 const articleJsonLd = createArticleJsonLd({
-  title: frontmatter.title,
+  title: seoTitle,
   description: seoDescription,
   href: `/blog/${currentSlug}`,
   image: ogImage,
@@ -53,7 +56,7 @@ const articleJsonLd = createArticleJsonLd({
   breadcrumbs: [
     { name: "Home", href: "/" },
     { name: "Research & Analysis", href: "/blog" },
-    { name: frontmatter.title, href: `/blog/${currentSlug}` },
+    { name: displayTitle, href: `/blog/${currentSlug}` },
   ],
 });
 
@@ -73,7 +76,7 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
 ---
 
 <BaseLayout
-  title={frontmatter.title}
+  title={seoTitle}
   description={seoDescription}
   ogImage={ogImage}
   ogImageAlt={ogImageAlt}
@@ -88,14 +91,14 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
           variant="textSM"
           class="lozen-type-eyebrow border-l border-base-300 pl-4 text-base-700"
         >
-          {tags[0]?.label ?? "Insights"}
+          {categoryLabel}
         </Text>
         <Text
           tag="h1"
           variant="displayMD"
           class="mt-8 text-base-900"
         >
-          {frontmatter.title}
+          {displayTitle}
         </Text>
         <Text
           tag="p"
@@ -125,7 +128,7 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
                 {formattedPubDate}
               </time>
             </span>
-            <span>{tags[0]?.label ?? "Insights"}</span>
+            <span>{categoryLabel}</span>
             <a href="/blog">View all articles</a>
           </div>
 
