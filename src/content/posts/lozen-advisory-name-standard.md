@@ -1,10 +1,11 @@
 ---
 title: Whose Reputation Is It Anyway? The Case for The Name Standard℠
+seo_title: The Name Standard℠ for AI Governance | Lozen Advisory
 slug: the-name-standard-ai-governance
 pubDate: 2026-06-12
 datePublished: 2026-06-12
 dateModified: 2026-06-12
-category: Corporate Boards
+category: AI Governance
 excerpt: When AI-assisted work leaves an organization, it does not leave under
   the name of the large language model. It leaves under the name of a person.
   The Name Standard℠ defines what must be true before AI-assisted output can
