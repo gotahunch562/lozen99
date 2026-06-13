@@ -5,7 +5,7 @@ slug: ai-productivity-dare
 pubDate: 2026-06-05
 datePublished: 2026-06-05
 dateModified: 2026-06-09
-category: CFO Resources
+category: AI Governance
 excerpt: Language models simulate coherence, not truth. When executives
   eliminate human capacity to prove AI ROI, they don't eliminate the work, they
   just force it into a structural blind spot.
