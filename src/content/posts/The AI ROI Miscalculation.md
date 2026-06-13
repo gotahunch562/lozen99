@@ -4,7 +4,7 @@ slug: ai-roi-miscalculation
 pubDate: 2026-06-08
 datePublished: 2026-06-08
 dateModified: 2026-06-08
-category: Corporate Boards
+category: AI Governance
 excerpt: When financial reporting infrastructure fails to register the quiet
   erosion of specialized human expertise, the technology ROI projections built
   on top of it inevitably crack. Discover how standard corporate accounting
@@ -46,7 +46,7 @@ This is a hard operational barrier that standard financial modeling treats as in
 
 The prevailing technological paradigm correctly highlights that AI can assist, augment, and accelerate process efficiency. What the dominant capital allocation conversation fails to calculate is a profound systemic contradiction built directly into the ROI spreadsheet: the very human infrastructure required to make technology investments viable is the exact layer the investment logic systematically devalues. **The financial model prices the software seat as an asset and treats human retention as an optimized expense.** Consequently, the board approves the platform while the human architecture required to govern and secure it is already navigating its own quiet exit.
 
-##  Why Dashboards Mask Financial Erosion
+## Why Dashboards Mask Financial Erosion
 
 This capital misallocation is driven by a fundamental information asymmetry: corporate data architecture is engineered to track technology assets with precision, while remaining structurally blind to the financial erosion of the human ecosystem. Technology deployment arrives at the leadership table backed by data—formal capitalization models, integration roadmaps, and explicit efficiency projections. It integrates easily into financial planning because corporate reporting infrastructure has been built to prioritize structured inputs.
 
