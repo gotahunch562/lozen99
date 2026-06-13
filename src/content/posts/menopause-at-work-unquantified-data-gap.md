@@ -4,7 +4,7 @@ slug: menopause-at-work-unquantified-data-gap
 pubDate: 2026-04-23
 datePublished: 2026-04-23
 dateModified: 2026-06-03
-category: Research & Policy
+category: Disclosure & Measurement
 homepageSection: menopause-at-work
 excerpt: Standard HR metrics from leave requests to benefit engagement capture
   only what is disclosed. They cannot measure the calculated silence of a leader

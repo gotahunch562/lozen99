@@ -76,19 +76,11 @@ content:
         description: "Primary editorial category. This controls Blog and Resource Library grouping."
         options:
           values:
-            - AI Governance
-            - AI Workforce Risk
-            - Board & Fiduciary Risk
-            - Disclosure-Independent Measurement
-            - Institutional Capacity
-            - Legislative Analysis
-            - Research & Policy
-            - Legal Profession
-            - Performance & Career
+            - AI Governance & Workforce Risk
+            - Legislation & Policy
+            - Disclosure & Measurement
+            - Women, Work & Leadership
             - The Tender Path
-            - Disclosure Independence
-            - CFO Resources
-            - Corporate Boards
       - name: homepageSection
         label: Homepage section
         type: select

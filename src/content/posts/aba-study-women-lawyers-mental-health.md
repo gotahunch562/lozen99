@@ -4,7 +4,7 @@ slug: aba-study-women-lawyers-mental-health
 pubDate: &id001 2026-04-15
 datePublished: *id001
 dateModified: 2026-05-05
-category: Legal Profession
+category: Women, Work & Leadership
 excerpt: The American Bar Association will release its national study on women lawyers and mental wellness in August 2026. The data will be cited, the findings will circulate, and the conversation will follow. The legal profession will treat it as a starting point.
 description: The ABA 2026 study measures reported data. Learn why non-disclosure is a strategic choice for women leaders protecting their career trajectory.
 metaDescription: The ABA 2026 study measures reported data. Learn why non-disclosure is a strategic choice for women leaders protecting their career trajectory.

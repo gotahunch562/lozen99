@@ -4,7 +4,7 @@ slug: mandatory-ai-use-governance
 pubDate: 2026-05-31
 datePublished: 2026-05-31
 dateModified: 2026-05-31
-category: Corporate Boards
+category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 1
 excerpt: >+

@@ -4,7 +4,7 @@ slug: menopause-law-invisible-cost
 pubDate: 2026-04-07
 datePublished: 2026-04-07
 dateModified: 2026-05-05
-category: Legal Profession
+category: Women, Work & Leadership
 excerpt: The legal profession evaluates authority through consistency and
   steadiness of judgment. For the woman attorney, perimenopause arrives during
   her most consequential leadership window, creating a performance risk that

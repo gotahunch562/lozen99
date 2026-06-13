@@ -5,7 +5,7 @@ slug: talent-attrition-cfo-risk
 pubDate: 2026-06-07
 datePublished: 2026-06-07
 dateModified: 2026-06-08
-category: CFO Resources
+category: AI Governance & Workforce Risk
 excerpt: " As corporate boards accelerate capital allocation toward agentic AI
   implementations and knowledge-capture systems, a critical governance blind
   spot has emerged. This analysis establishes the structural concurrency error:

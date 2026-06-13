@@ -5,7 +5,7 @@ slug: corporate-ai-relocation-services
 pubDate: 2026-06-11
 datePublished: 2026-06-11
 dateModified: 2026-06-11
-category: AI Workforce Risk
+category: AI Governance & Workforce Risk
 excerpt: "AI systems are accelerating output, transactions, discovery, and
   decision support. The market is beginning to answer with proof layers:
   citation checkers, provenance cards, agent spending logs, audit packets, and

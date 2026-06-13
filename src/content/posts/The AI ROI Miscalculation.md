@@ -4,7 +4,7 @@ slug: ai-roi-miscalculation
 pubDate: 2026-06-08
 datePublished: 2026-06-08
 dateModified: 2026-06-08
-category: AI Governance
+category: AI Governance & Workforce Risk
 excerpt: When financial reporting infrastructure fails to register the quiet
   erosion of specialized human expertise, the technology ROI projections built
   on top of it inevitably crack. Discover how standard corporate accounting

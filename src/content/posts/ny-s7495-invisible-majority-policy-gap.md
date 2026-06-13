@@ -4,7 +4,7 @@ slug: ny-s7495-invisible-majority-policy-gap
 pubDate: 2026-04-21
 datePublished: 2026-04-21
 dateModified: 2026-06-02
-category: Legislative Analysis
+category: Legislation & Policy
 excerpt: "The bill's own findings name the crisis; nearly one in five menopausal
   women have considered leaving the workforce due to unsupported symptoms and
   employer uncertainty. Yet, there is a disconnect between the legislative

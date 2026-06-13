@@ -4,7 +4,7 @@ slug: ai-investment-scaling-human-capacity
 pubDate: 2026-06-01
 datePublished: 2026-06-01
 dateModified: 2026-06-01
-category: Corporate Boards
+category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 2
 excerpt: The scale of capital flowing into AI is not the story—the timing is.

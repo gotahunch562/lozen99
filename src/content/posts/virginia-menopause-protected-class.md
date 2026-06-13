@@ -4,7 +4,7 @@ slug: virginia-menopause-protected-class
 pubDate: 2026-04-16
 datePublished: 2026-04-16
 dateModified: 2026-06-06
-category: Legislative Analysis
+category: Legislation & Policy
 excerpt: Governor Spanberger’s April 2026 action deadline resulted in a
   significant shift for Virginia’s menopause policy. While the insurance
   coverage bill (SB790) was signed into law, the Governor substituted studies

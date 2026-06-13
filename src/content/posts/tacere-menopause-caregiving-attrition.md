@@ -4,7 +4,7 @@ slug: tacere-menopause-caregiving-attrition
 pubDate: &id001 2026-04-24
 datePublished: *id001
 dateModified: 2026-05-05
-category: Research & Policy
+category: Disclosure & Measurement
 excerpt: Perimenopause and caregiving are a mid-career reality rarely captured in data. This analysis examines the cost of Tacere.
 description: 'The "Sandwich Generation" faces a dual crisis: perimenopause and caregiving. Explore the organizational cost of "Tacere" and why current workplace benefits miss the mark.'
 metaDescription: 'The "Sandwich Generation" faces a dual crisis: perimenopause and caregiving. Explore the organizational cost of "Tacere" and why current workplace benefits miss the mark.'

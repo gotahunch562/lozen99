@@ -4,7 +4,7 @@ slug: menopause-at-work-study
 pubDate: 2026-03-01
 datePublished: 2026-03-01
 dateModified: 2026-06-02
-category: Performance & Career
+category: Women, Work & Leadership
 homepageSection: menopause-at-work
 excerpt: New 2026 research aims to mainstream menopause support, but will it
   reach senior leaders? Learn why disclosure-independent paths are required for

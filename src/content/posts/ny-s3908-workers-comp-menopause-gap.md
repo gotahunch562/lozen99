@@ -4,7 +4,7 @@ slug: ny-s3908-workers-comp-menopause-gap
 pubDate: 2026-04-22
 datePublished: 2026-04-22
 dateModified: 2026-06-09
-category: Legislative Analysis
+category: Legislation & Policy
 excerpt: While S9247 seeks to create a standalone leave category, S3908 uses an
   existing state mechanism designed for health-related workforce impacts.
 description: NY Senate Bill S3908 routes menopause leave through workers' comp.

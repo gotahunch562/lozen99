@@ -4,7 +4,7 @@ slug: women-lawyers-leadership-perimenopause
 pubDate: &id001 2026-04-07
 datePublished: *id001
 dateModified: 2026-05-05
-category: Legal Profession
+category: Women, Work & Leadership
 excerpt: The inclusion of menopause on the NAWL (un)conference agenda and the 2026 ABA mental wellness study signal a demographic shift in the legal profession. Yet, for managing partners and practice leaders, the biological transition occurs during their most visible years of authority.
 description: NAWL and the ABA are bringing menopause into the legal mainstream, but do these studies reach senior partners? Explore the tension between leadership visibility and perimenopause, and why discretion remains a strategic priority for women in law.
 metaDescription: NAWL and the ABA are bringing menopause into the legal mainstream, but do these studies reach senior partners? Explore the tension between leadership visibility and perimenopause, and why discretion remains a strategic priority for women in law.

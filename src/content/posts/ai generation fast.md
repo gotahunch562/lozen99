@@ -4,7 +4,7 @@ slug: ai-generation-fast-governance-slow
 pubDate: 2026-06-02
 datePublished: 2026-06-02
 dateModified: 2026-06-02
-category: Corporate Boards
+category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 3
 excerpt: Coherence is a presentation feature; truth is a verification outcome.

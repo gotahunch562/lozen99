@@ -4,7 +4,7 @@ slug: transparency-trap-executive-power-strategic-disclosure
 pubDate: 2026-05-21
 datePublished: 2026-05-21
 dateModified: 2026-06-02
-category: Performance & Career
+category: Women, Work & Leadership
 excerpt: Conventional wisdom tells ambitious women that leadership requires
   total visibility and transparency. But for executives managing reputations,
   boards, and public authority, disclosure is a calculated operational risk.

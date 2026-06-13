@@ -4,7 +4,7 @@ slug: menopause-benefit-market-cfo-problem
 pubDate: 2026-05-27
 datePublished: 2026-05-27
 dateModified: 2026-06-01
-category: CFO Resources
+category: AI Governance & Workforce Risk
 excerpt: The menopause-at-work market is growing rapidly, but it is about to
   collide with a cold financial reality. As average employer health premiums
   climb past $18,500, CFOs are demanding proof of value over moral urgency. The

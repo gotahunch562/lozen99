@@ -5,7 +5,7 @@ slug: virginia-menopause-bill-split-outcome
 pubDate: 2026-04-16
 datePublished: 2026-04-16
 dateModified: 2026-06-06
-category: Legislative Analysis
+category: Legislation & Policy
 excerpt: Virginia’s Governor signed targeted menopause protections but deferred
   broader workplace bills to a study. The Governor substituted a second study.
   That sequence is the most significant policy development in this series since

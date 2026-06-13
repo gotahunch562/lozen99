@@ -4,7 +4,7 @@ slug: ny-s9247-menopause-leave
 pubDate: 2026-04-08
 datePublished: 2026-04-08
 dateModified: 2026-06-06
-category: Legislative Analysis
+category: Legislation & Policy
 excerpt: New York Senate Bill S9247/A10296 aims to reduce the friction between
   menopause symptoms and workplace access by introducing a specific leave
   entitlement. However, like all disclosure-based frameworks, the system only

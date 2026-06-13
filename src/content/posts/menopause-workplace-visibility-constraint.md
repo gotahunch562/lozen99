@@ -4,7 +4,7 @@ slug: menopause-workplace-visibility-constraint
 pubDate: 2026-04-03
 datePublished: 2026-04-03
 dateModified: 2026-06-02
-category: Research & Policy
+category: Disclosure & Measurement
 excerpt: Menopause workplace advocacy has successfully moved into the
   legislative mainstream, yet a critical disconnect remains. While new
   frameworks rely on formal disclosure and manager escalation to trigger

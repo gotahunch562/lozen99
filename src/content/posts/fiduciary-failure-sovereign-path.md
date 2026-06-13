@@ -4,7 +4,7 @@ slug: fiduciary-failure-sovereign-path
 pubDate: 2026-06-08
 datePublished: 2026-06-08
 dateModified: 2026-06-11
-category: AI Governance
+category: AI Governance & Workforce Risk
 excerpt: Authorizing extensive automated platforms while remaining blind to the
   concurrent liquidation of core human architecture moves past passive oversight
   and crosses into willful blindness under regulatory scrutiny. This final

@@ -5,7 +5,7 @@ slug: cfo-ny-menopause-leave-bill-risk
 pubDate: 2026-05-29
 datePublished: 2026-05-29
 dateModified: 2026-06-09
-category: CFO Resources
+category: AI Governance & Workforce Risk
 excerpt: >-
   New York Menopause Leave Mandate Exposure:
 

@@ -4,7 +4,7 @@ slug: menopause-workplace-research-systems-gap
 pubDate: 2026-04-09
 datePublished: 2026-04-09
 dateModified: 2026-06-02
-category: Research & Policy
+category: Disclosure & Measurement
 excerpt: 'The announcement of a new menopause workplace research center
   highlights a significant structural gap: "workplace impact" is being treated
   as an extension of health research rather than a function of organizational

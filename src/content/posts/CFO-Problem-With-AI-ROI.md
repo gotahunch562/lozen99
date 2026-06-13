@@ -4,7 +4,7 @@ slug: cfo-problem-with-ai-roi
 pubDate: 2026-06-03
 datePublished: 2026-06-03
 dateModified: 2026-06-03
-category: CFO Resources
+category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 4
 excerpt: Recent reporting on tokenmaxxing makes the cost problem harder to

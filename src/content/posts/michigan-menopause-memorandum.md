@@ -4,7 +4,7 @@ slug: michigan-menopause-memorandum
 pubDate: 2026-04-01
 datePublished: 2026-04-01
 dateModified: 2026-06-02
-category: Legislative Analysis
+category: Legislation & Policy
 excerpt: "Michigan’s landmark menopause study confirms a crisis of silence. With
   16,500 women potentially exiting the state’s workforce annually, the data
   reveals a profound disconnect: the infrastructure being built is the very same

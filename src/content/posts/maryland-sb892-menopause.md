@@ -4,7 +4,7 @@ slug: maryland-sb892-menopause
 pubDate: 2026-04-16
 datePublished: 2026-04-16
 dateModified: 2026-06-06
-category: Legislative Analysis
+category: Legislation & Policy
 excerpt: "Maryland SB892: The Limits of Menopause Mandates. The legislation
   improves training. It expands coverage. It strengthens the clinical system at
   the point of care. But it does not alter the condition that governs entry into

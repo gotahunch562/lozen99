@@ -6,7 +6,7 @@ slug: the-name-standard-ai-governance
 pubDate: 2026-06-12
 datePublished: 2026-06-12
 dateModified: 2026-06-12
-category: AI Governance
+category: AI Governance & Workforce Risk
 excerpt: When AI-assisted work leaves an organization, it does not leave under
   the name of the large language model. It leaves under the name of a person.
   The Name Standard℠ defines what must be true before AI-assisted output can

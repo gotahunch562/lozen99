@@ -4,7 +4,7 @@ slug: cfo-benefits-spend
 pubDate: 2026-05-27
 datePublished: 2026-05-23
 dateModified: 2026-05-23
-category: CFO Resources
+category: AI Governance & Workforce Risk
 excerpt: Health benefit costs are rising and CFO dashboards show low
   utilization. Low utilization may not mean low need. It may mean the
   highest-risk employees never entered the measurable system. Lozen Advisory

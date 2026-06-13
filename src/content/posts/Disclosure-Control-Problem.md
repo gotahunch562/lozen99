@@ -5,7 +5,7 @@ slug: ai-productivity-vs-governance
 pubDate: 2026-06-06
 datePublished: 2026-06-06
 dateModified: 2026-06-06
-category: Corporate Boards
+category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 5
 excerpt: LLM tool usage is not proof. Output volume is not proof. When an

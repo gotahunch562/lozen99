@@ -4,7 +4,7 @@ slug: disclosure-day-workplace-disclosure-record-creation
 pubDate: 2026-05-16
 datePublished: 2026-05-16
 dateModified: 2026-06-01
-category: Performance & Career
+category: Women, Work & Leadership
 excerpt: Steven Spielberg’s Disclosure Day gives the word disclosure a cultural
   moment. At work, disclosure is not only revelation. It is record creation.
   This article examines why employees may remain silent even when support
