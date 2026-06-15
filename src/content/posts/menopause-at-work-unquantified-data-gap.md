@@ -1,9 +1,9 @@
 ---
-title: "Menopause at Work: The Data Employers Do Not See"
+title: The 73-Point HR Data Gap & Invisible Menopause Attrition
 slug: menopause-at-work-unquantified-data-gap
 pubDate: 2026-04-23
 datePublished: 2026-04-23
-dateModified: 2026-06-03
+dateModified: 2026-06-15
 category: Disclosure & Measurement
 homepageSection: menopause-at-work
 excerpt: Standard HR metrics from leave requests to benefit engagement capture
@@ -11,16 +11,16 @@ excerpt: Standard HR metrics from leave requests to benefit engagement capture
   who views visibility as a professional liability. This analysis explores the
   "73-point perception gap"
 description: Employers measure benefit utilization but miss the decision not to
-  utilize. Discover why the 73-point data gap and the Power User Trap℠ leave
-  organizations blind to the true cost of Invisible Attrition℠.
+  utilize. Discover why the 73-point HR data gap leaves CFOs blind to the true
+  cost of Invisible Attrition℠
 metaDescription: Employers measure benefit utilization but miss the decision not
   to utilize. Discover why the 73-point data gap and the Power User Trap℠ leave
   organizations blind to the true cost of Invisible Attrition℠.
 image:
   url: /src/images/blog/73-point-menopause-data-perception-gap.webp
-  alt: "Menopause data gap between HR confidence and disclosure reality"
+  alt: Menopause data gap between HR confidence and disclosure reality
 heroImage: /src/images/blog/73-point-menopause-data-perception-gap.webp
-heroAlt: "Menopause data gap between HR confidence and disclosure reality"
+heroAlt: Menopause data gap between HR confidence and disclosure reality
 tags:
   - Research & Policy
   - Workplace Disclosure
@@ -34,7 +34,7 @@ Employers making decisions about menopause support are working from available da
 
 ---
 
-## What the Data Shows
+## What the Workforce Data Shows
 
 A global survey by Korn Ferry Institute in partnership with Vira Health, covering more than 8,000 women, makes the workforce impact precise.
 
@@ -78,7 +78,7 @@ Two different data failures. One never captured. One captured and misinterpreted
 
 ---
 
-## The Collection-Condition Problem
+## The Collection-Condition Problem in HR Data
 
 Every tool in the standard employer model activates on the same condition: the woman must produce an initiating act that creates a record. More awareness, more frameworks, and more support options do not change that condition.
 
@@ -88,7 +88,7 @@ The population least likely to engage is the population carrying the highest org
 
 ---
 
-## What This Means for the CFO
+## What This Hidden Attrition Cost Means for the CFO
 
 The data is not missing. It was never created.
 
