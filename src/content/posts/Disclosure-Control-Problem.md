@@ -1,10 +1,11 @@
 ---
-title: Are AI Productivity Claims A Disclosure-Control Problem?
+title: "Tool Use Is Not Proof: The AI Disclosure-Control Challenge"
+seo_title: "General Counsel Risk: Substantiating AI Productivity Claims"
 subtitle: Can AI Work Product Withstand Scrutiny?
 slug: ai-productivity-vs-governance
 pubDate: 2026-06-06
 datePublished: 2026-06-06
-dateModified: 2026-06-06
+dateModified: 2026-06-15
 category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 5
@@ -93,7 +94,7 @@ In each case the organization could not substantiate how the work was produced, 
 
 ---
 
-## Quarterly Governance Is Not Ready For AI Speed
+## Why Quarterly AI Governance Fails AI Speed Test
 
 Many organizations are governing AI with systems built for slower work. A committee meets. A policy is approved. A training module is completed. A dashboard shows adoption. Meanwhile, AI-assisted work is happening continuously across teams using different models, prompts, data inputs, and review standards.
 
@@ -103,7 +104,7 @@ The Power User Trap℠ operates precisely here. The [employees absorbing the ver
 
 ---
 
-## The Disclosure-Control Question
+## The Disclosure-Control Question for General Counsel
 
 This is the General Counsel problem.
 
