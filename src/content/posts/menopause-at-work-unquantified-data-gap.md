@@ -1,6 +1,7 @@
 ---
 title: "The 73-Point Data Gap: Quantifying Invisible Attrition in Senior Leadership"
-seo_title: The 73-Point HR Data Gap & Invisible Menopause Attrition
+seo_title: Menopause Benefits and Retention Risk
+subtitle: A Guide to Human Capital Metrics
 slug: menopause-at-work-unquantified-data-gap
 pubDate: 2026-04-23
 datePublished: 2026-04-23
