@@ -1,5 +1,7 @@
 ---
-title: "AI ROI Failure: The Hidden Cost of Human Verification"
+title: "The CFO Squeeze: Unpredictable Token Spend and the Real Cost of AI
+  Verification"
+seo_title: "AI ROI Failure: The Hidden Cost of Human Verification"
 slug: cfo-problem-with-ai-roi
 pubDate: 2026-06-03
 datePublished: 2026-06-03
