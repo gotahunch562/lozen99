@@ -1,5 +1,5 @@
 ---
-title: The CFO Problem With AI ROI
+title: "AI ROI Failure: The Hidden Cost of Human Verification"
 slug: cfo-problem-with-ai-roi
 pubDate: 2026-06-03
 datePublished: 2026-06-03
