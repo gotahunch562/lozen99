@@ -3,7 +3,7 @@ title: The CFO Problem With AI ROI
 slug: cfo-problem-with-ai-roi
 pubDate: 2026-06-03
 datePublished: 2026-06-03
-dateModified: 2026-06-03
+dateModified: 2026-06-15
 category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 4
@@ -11,9 +11,9 @@ excerpt: Recent reporting on tokenmaxxing makes the cost problem harder to
   ignore. Companies pushed employees to use AI as proof of adoption, and in some
   cases even tracked high token consumption as a success signal. Now the bill is
   arriving.
-description: AI ROI is becoming harder to defend when savings underperform,
-  usage costs become harder to forecast, and human verification labor is
-  excluded from the model.
+description: AI ROI is becoming harder to defend. Savings underperform, token
+  costs are unpredictable, and human verification labor is excluded from the
+  financial model.
 image:
   url: /src/images/blog/dollarfloat.avif
   alt: dollars floating away on water
@@ -27,9 +27,7 @@ tags:
 draft: false
 isFeatured: false
 ---
-AI Return-On-Investment (ROI) is becoming harder to quantify, and the problem is not that AI has no value, it is a matter of time and hindsight.
-
-The problem is that many ROI models are built around the easiest parts of the AI story to count: tool adoption, output volume, time to generate, and vendor-promised productivity gains. Conventional wisdom treats those numbers as evidence that the investment is working. In contrast, the harder parts are arriving later, and they are not in the model.
+AI Return-On-Investment (ROI) is becoming harder to quantify and the problem is not that AI doesn't have value in the Enterprise. The issue is that many ROI models are built around the easiest parts of the AI story to count: tool adoption, output volume, time to generate, and vendor-promised productivity gains. Conventional wisdom treats those numbers as evidence that the investment is working. In contrast, the harder parts are arriving later, and they are not in the model.
 
 The CFO problem with AI ROI is not just one problem, it is three problems converging in the same space: 
 
@@ -47,7 +45,7 @@ A Bain & Company survey reported by Bloomberg found that 40% of companies were s
 
 If AI generates more output but requires more review, the gross speed gain is not the net savings. If AI reduces drafting time but increases senior verification time, the labor did not disappear. It moved into a more expensive layer.
 
-## The Cost Side Is Becoming Less Predictable
+## Unpredictable AI Token Costs & The CFO Squeeze
 
 The Information reported that Anthropic customers, including [ServiceNow, are facing difficulty predicting what they will pay this year.](https://www.theinformation.com/newsletters/applied-ai/anthropic-costs-unpredictable) ServiceNow said it had consumed its full-year budget for Anthropic AI tools before the year was out.
 
@@ -63,7 +61,7 @@ Tokenmaxxing exposes the CFO flaw in AI ROI. It treats AI consumption as if it w
 
  Reuters Breakingviews has also described corporate AI sticker shock as companies confront tokenmaxxing, usage-based pricing, and AI bills that are harder to forecast. The ServiceNow discussion is part of the same pattern: AI spend is becoming behavioral, metered, and harder to control.
 
-## The Human Governance Layer Still Has to Be Priced
+## The Hidden Cost of AI ROI: Pricing Human Verification
 
 If a tool produces a draft in two minutes but a senior employee spends twenty minutes verifying, correcting, and contextualizing it, the ROI calculation cannot stop at the two-minute output. AI externalizes execution while internalizing judgment. If finance counts the first, without measuring the second, the return calculation is incomplete.
 
