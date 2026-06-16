@@ -21,8 +21,8 @@ heroImage: /src/images/blog/decision-debt-lozen-advisory-1.avif
 heroAlt: woman ceo sitting in an office flooded with money floating on top
 tags:
   - AI Governance
-draft: true
-isFeatured: false
+draft: false
+isFeatured: true
 ---
 The software industry has long understood technical debt. Teams move quickly, accept shortcuts, and defer cleanup. The code works, but the cost of maintaining, explaining, or changing it increases over time. [AI is now producing a different kind of debt.](/invisible-attrition/stable-performance-as-risk/) It is generating operational decisions at a volume and speed that most companies cannot substantiate after the fact.
 
@@ -54,10 +54,10 @@ Decision debt thrives in three specific governance gaps: ++**telemetry, temporal
 
 **The Substantiation Gap** becomes acute when a regulator, auditor, or board member asks the organization to substantiate an AI-assisted decision. 
 
-1. What was the basis for the decision? 
-2. Was the prompt preserved? 
-3. Was the source data accurate? 
-4. Was an exception made? 
+1. What was the basis for the decision?
+2. Was the prompt preserved?
+3. Was the source data accurate?
+4. Was an exception made?
 
 If the company cannot answer those questions with records, it has not merely failed to explain the AI system; it has failed to substantiate its own action.
 
@@ -81,4 +81,3 @@ The defining question for enterprise AI is not whether machines can move faster 
 
 **[Request a briefing on AI decision debt and governance exposure.](/ai-workforce-materiality-briefing/)**
 
-  
