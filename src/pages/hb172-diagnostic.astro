@@ -1,0 +1,798 @@
+---
+/**
+ * Diagnostic — HB 172 Name Standard℠ Scorecard
+ * Place at: src/pages/ai-legislation-tracker/briefings/hb172-diagnostic.astro
+ *
+ * Uses BaseLayout, Lozen token system (Tenor Sans, DM Sans, navy/teal/yellow),
+ * translated from Lovable's diagnostic.tsx.
+ *
+ * TODO (Supabase dynamic routing): Rename to [slug]-diagnostic.astro and
+ * replace the `diag` const with a fetch:
+ *   const { slug } = Astro.params;
+ *   const { data: diag } = await supabase
+ *     .from('diagnostics').select('*, dimensions(*)')
+ *     .eq('slug', slug).single();
+ *   if (!diag) return Astro.redirect('/404');
+ */
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+// ── Types ─────────────────────────────────────────────────────────────────────
+type Severity = "explicit" | "limited" | "ambiguous" | "absent";
+
+interface Dimension {
+  n:          string;
+  name:       string;
+  verdict:    string;
+  severity:   Severity;
+  icon:       string;   // key into icons map
+  prompt:     string;
+  evaluation: string;
+}
+
+// ── Diagnostic data (static — replace with Supabase fetch for dynamic routing)
+const diag = {
+  ref:           "HB-172",
+  country:       "United States",
+  state:         "Alabama",
+  statute:       "Alabama HB 172",
+  method:        "Name Standard℠ · 6 dimensions",
+  verdict:       "Structurally deficient",
+  posture:       "Compliance via internal controls",
+  riskLevel:     "medium",
+  status:        "Enacted",
+  operativeDate: "October 1, 2024",
+  briefingUrl:   "/ai-legislation-tracker/briefings/hb172-executive-briefing",
+
+  // § 01 Scale key
+  scaleKey: [
+    {
+      level:    "explicit" as Severity,
+      label:    "Explicit",
+      risk:     "Low risk",
+      body:     "The legislation specifically defines and structurally guarantees this condition for the human.",
+    },
+    {
+      level:    "limited" as Severity,
+      label:    "Limited",
+      risk:     "Medium risk",
+      body:     "The condition exists but is constrained by narrow scope, conditions, or bureaucracy.",
+    },
+    {
+      level:    "ambiguous" as Severity,
+      label:    "Ambiguous",
+      risk:     "High risk",
+      body:     "Relies on vague phrasing, leaving the human with ceremonial responsibility but no clear mechanism.",
+    },
+    {
+      level:    "absent" as Severity,
+      label:    "Absent",
+      risk:     "Critical risk",
+      body:     "The legislation completely fails to provide this condition. Human accountability is impossible.",
+    },
+  ],
+
+  // § 02 Six dimensions
+  dimensions: [
+    {
+      n:          "01",
+      name:       "Time",
+      verdict:    "Unclear",
+      severity:   "ambiguous" as Severity,
+      icon:       "clock",
+      prompt:     "Identifies when the legislation operates — effective dates, election windows, enforcement timing, reporting periods.",
+      evaluation: "The law operates strictly within a rigid 90-day pre-election window, leaving timelines outside this scope completely unaddressed and giving humans a constrained window to intervene.",
+    },
+    {
+      n:          "02",
+      name:       "Authority",
+      verdict:    "Deficient",
+      severity:   "absent" as Severity,
+      icon:       "gavel",
+      prompt:     "Identifies who has power to act, enforce, interpret, certify, investigate, or halt the conduct covered by the legislation.",
+      evaluation: "The legislation completely fails to designate a specific, empowered human authority within the organization with the structural power to halt the distribution of deceptive media.",
+    },
+    {
+      n:          "03",
+      name:       "Information",
+      verdict:    "Deficient",
+      severity:   "absent" as Severity,
+      icon:       "fileSearch",
+      prompt:     "Identifies what facts, records, disclosures, notices, technical evidence, or source materials must exist before the legislation can be applied.",
+      evaluation: "While it mandates disclaimers on synthetic media, it requires "reasonable knowledge" without defining what technical source materials the reviewing human must have access to prior to distribution.",
+    },
+    {
+      n:          "04",
+      name:       "Review Capacity",
+      verdict:    "Deficient",
+      severity:   "absent" as Severity,
+      icon:       "eye",
+      prompt:     "Identifies whether the responsible actor has the legal, technical, operational, or domain capacity to evaluate the conduct or output at issue.",
+      evaluation: "The law mandates human accountability for distribution but provides no structural provision enabling the human to technically verify whether the media is AI-generated in the first place.",
+    },
+    {
+      n:          "05",
+      name:       "Documentation",
+      verdict:    "Deficient",
+      severity:   "absent" as Severity,
+      icon:       "clipboard",
+      prompt:     "Identifies whether the legislation creates a durable record, audit trail, notice requirement, certification, filing, report, or other proof of action.",
+      evaluation: "There is no mandated mechanism for the human to document their oversight, log decisions regarding the media, or prove their compliance with the statute.",
+    },
+    {
+      n:          "06",
+      name:       "Refusal Rights",
+      verdict:    "Unclear",
+      severity:   "ambiguous" as Severity,
+      icon:       "shieldOff",
+      prompt:     "Identifies whether a person or institution can decline, halt, contest, escalate, or refuse reliance on the system, output, or conduct without penalty.",
+      evaluation: "The law creates criminal exposure for distribution but fails to explicitly protect a human employee's right to refuse to distribute flagged media without facing internal corporate retaliation.",
+    },
+  ] satisfies Dimension[],
+
+  // § 03 Board summary controls
+  controls: [
+    { k: "Identification",      v: "Detect synthetic political media before distribution." },
+    { k: "Verification",        v: "Confirm source material, provenance, and reviewer identity." },
+    { k: "Disclaimer integrity",v: "Preserve required disclosures through every downstream channel." },
+    { k: "Escalation",          v: "A named human with authority to halt distribution on demand." },
+    { k: "Documentation",       v: "Durable audit trail of who reviewed, when, and on what basis." },
+    { k: "Refusal protection",  v: "Internal policy shielding employees who decline to distribute." },
+  ],
+};
+
+// ── Severity styles (maps to Lozen policy tokens) ─────────────────────────────
+const severityMeta: Record<Severity, {
+  label:      string;
+  dotClass:   string;
+  chipClass:  string;
+  textClass:  string;
+  barClass:   string;
+}> = {
+  explicit:  { label: "Explicit",  dotClass: "diag-dot--explicit",  chipClass: "diag-chip--explicit",  textClass: "diag-chip-text--explicit",  barClass: "diag-bar--explicit"  },
+  limited:   { label: "Limited",   dotClass: "diag-dot--limited",   chipClass: "diag-chip--limited",   textClass: "diag-chip-text--limited",   barClass: "diag-bar--limited"   },
+  ambiguous: { label: "Ambiguous", dotClass: "diag-dot--ambiguous", chipClass: "diag-chip--ambiguous", textClass: "diag-chip-text--ambiguous", barClass: "diag-bar--ambiguous" },
+  absent:    { label: "Absent",    dotClass: "diag-dot--absent",    chipClass: "diag-chip--absent",    textClass: "diag-chip-text--absent",    barClass: "diag-bar--absent"    },
+};
+
+// ── Score summary counts ──────────────────────────────────────────────────────
+const counts = diag.dimensions.reduce(
+  (acc, d) => { acc[d.severity]++; return acc; },
+  { explicit: 0, limited: 0, ambiguous: 0, absent: 0 } as Record<Severity, number>
+);
+const deficientCount = counts.absent + counts.ambiguous;
+
+// ── SVG icons (inline) ────────────────────────────────────────────────────────
+const icons: Record<string, string> = {
+  landmark:  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>`,
+  bookmark:  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>`,
+  arrowLeft: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>`,
+  arrowUpRight:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>`,
+  fileText:  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+  alert:     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>`,
+  // Dimension icons
+  clock:     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+  gavel:     `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 12.5-8 8a2.119 2.119 0 0 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/></svg>`,
+  fileSearch:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><circle cx="11.5" cy="14.5" r="2.5"/><polyline points="13.25 16.25 15 18"/></svg>`,
+  eye:       `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>`,
+  clipboard: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>`,
+  shieldOff: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.69 14a6.9 6.9 0 0 0 .31-2V5l-8-3-3.16 1.18"/><path d="M4.73 4.73 4 5v7c0 6 8 10 8 10a20.29 20.29 0 0 0 5.62-4.38"/><line x1="2" y1="2" x2="22" y2="22"/></svg>`,
+};
+
+// Scale dot style helper (for the score bar)
+const scaleBarColors: Record<Severity, string> = {
+  explicit:  "var(--lozen-policy-teal-900)",
+  limited:   "var(--lozen-policy-gold-500)",
+  ambiguous: "var(--lozen-policy-caramel-600)",
+  absent:    "var(--lozen-policy-red-900)",
+};
+---
+
+<BaseLayout
+  title={`Diagnostic — ${diag.ref} Human-in-the-Loop Scorecard | Governance Desk`}
+  description="Name Standard℠ diagnostic of Alabama HB 172: does the statute structurally protect the human in the loop across Time, Authority, Information, Review Capacity, Documentation, and Refusal Rights?"
+  ogType="article"
+>
+
+  <!-- ── Utility bar ──────────────────────────────────────────────── -->
+  <div class="diag-util-bar">
+    <div class="diag-container diag-util-bar__inner">
+      <div class="diag-util-bar__left">
+        <span class="diag-util-icon" set:html={icons.landmark} />
+        <span>Enterprise Briefing</span>
+        <span class="diag-sep">/</span>
+        <span class="diag-util-bar__loc">{diag.country} · {diag.state}</span>
+        <span class="diag-sep">/</span>
+        <span class="diag-util-bar__loc">Diagnostic</span>
+      </div>
+      <div class="diag-util-bar__right">
+        <span>Ref. {diag.ref}</span>
+        <span class="diag-sep">·</span>
+        <span>Page 02 / 02</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Masthead ─────────────────────────────────────────────────── -->
+  <header class="diag-masthead">
+    <div class="diag-container diag-masthead__inner">
+      <div class="diag-masthead__brand">
+        <div class="diag-logo" aria-hidden="true">
+          <span set:html={icons.bookmark} />
+        </div>
+        <div>
+          <div class="diag-masthead__name">Governance Desk</div>
+          <div class="diag-masthead__sub">Regulatory Intelligence · Name Standard&#8480; Diagnostic</div>
+        </div>
+      </div>
+      <div class="diag-masthead__actions">
+        <a href={diag.briefingUrl} class="diag-btn diag-btn--outline">
+          <span set:html={icons.arrowLeft} />Back to briefing
+        </a>
+        <button class="diag-btn diag-btn--navy">
+          <span set:html={icons.fileText} />Export diagnostic
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Hero ─────────────────────────────────────────────────────── -->
+  <section class="diag-section diag-section--white">
+    <div class="diag-container">
+      <div class="diag-hero__grid">
+
+        <!-- Left: main content -->
+        <div class="diag-hero__main">
+          <div class="diag-badge-row">
+            <span class="diag-badge diag-badge--medium">
+              <span class="diag-bdot diag-bdot--medium"></span>Medium risk
+            </span>
+            <span class="diag-badge diag-badge--enacted">Enacted</span>
+            <span class="diag-badge diag-badge--neutral">Operative · {diag.operativeDate}</span>
+            <span class="diag-badge diag-badge--standard">Name Standard&#8480;</span>
+          </div>
+
+          <h1 class="diag-hero__title">
+            Does HB 172 actually protect the
+            <span class="diag-hero__title-accent"> human in the loop</span>?
+          </h1>
+
+          <p class="diag-hero__lead">
+            The Name Standard&#8480; diagnostic scores whether legislation moves beyond ceremonial
+            compliance to structurally guarantee humans the <em>time, authority, information,
+            capacity, documentation, and refusal rights</em> required to be accountable for
+            AI-assisted output.
+          </p>
+
+          <div class="diag-meta-row">
+            {[
+              { k: "Statute",  v: diag.statute  },
+              { k: "Method",   v: diag.method   },
+              { k: "Verdict",  v: diag.verdict  },
+              { k: "Posture",  v: diag.posture  },
+            ].map(m => (
+              <div class="diag-meta-item">
+                <div class="diag-meta-item__label">{m.k}</div>
+                <div class="diag-meta-item__value">{m.v}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Right: score summary card -->
+        <aside>
+          <div class="diag-score-card">
+            <div class="diag-score-card__header">
+              <span class="diag-eyebrow">Diagnostic score</span>
+              <span class="diag-eyebrow">6 dimensions</span>
+            </div>
+
+            <div class="diag-score-card__body">
+              <div class="diag-score-main">
+                <span class="diag-score-num">{deficientCount} / 6</span>
+                <span class="diag-score-label">deficient</span>
+              </div>
+
+              <!-- Segmented bar -->
+              <div class="diag-score-bar" role="img" aria-label="Score breakdown bar">
+                {diag.dimensions.map(d => (
+                  <div
+                    class="diag-score-bar__seg"
+                    style={`background: ${scaleBarColors[d.severity]}`}
+                    title={`${d.name} · ${severityMeta[d.severity].label}`}
+                  />
+                ))}
+              </div>
+
+              <!-- Count grid -->
+              <dl class="diag-score-grid">
+                {(["explicit", "limited", "ambiguous", "absent"] as Severity[]).map(s => (
+                  <div class={`diag-score-cell ${severityMeta[s].chipClass}`}>
+                    <span class="diag-score-cell__left">
+                      <span class={`diag-bdot ${severityMeta[s].dotClass}`}></span>
+                      <span class="diag-score-cell__name">{severityMeta[s].label}</span>
+                    </span>
+                    <span class="diag-score-cell__count">{counts[s]}</span>
+                  </div>
+                ))}
+              </dl>
+            </div>
+
+            <p class="diag-score-card__note">
+              Accountability is not structurally guaranteed by the statute. Compliance depends on internal controls.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── § 01 Evaluation Scale ────────────────────────────────────── -->
+  <section class="diag-section diag-section--cream">
+    <div class="diag-container diag-section-inner">
+      <div class="diag-section-header">
+        <div>
+          <div class="diag-eyebrow">§ 01 · Evaluation scale</div>
+          <h2 class="diag-section__title">How to read the scorecard</h2>
+          <p class="diag-section__deck">
+            Each of the six dimensions is rated against a four-step scale. Color and label encode the
+            same signal — pick whichever is faster to scan in a board pack.
+          </p>
+        </div>
+      </div>
+
+      <div class="diag-scale-grid">
+        {diag.scaleKey.map(s => (
+          <div class="diag-scale-card">
+            <div class="diag-scale-card__top">
+              <span class={`diag-bdot diag-bdot--lg ${severityMeta[s.level].dotClass}`}></span>
+              <span class="diag-scale-card__label">{s.label}</span>
+            </div>
+            <div class={`diag-scale-card__risk ${severityMeta[s.level].textClass}`}>{s.risk}</div>
+            <p class="diag-scale-card__body">{s.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── § 02 Six-Dimension Evaluation ────────────────────────────── -->
+  <section class="diag-section diag-section--white">
+    <div class="diag-container diag-section-inner">
+      <div class="diag-section-header">
+        <div>
+          <div class="diag-eyebrow">§ 02 · Diagnostic profile</div>
+          <h2 class="diag-section__title">Six-dimension evaluation</h2>
+          <p class="diag-section__deck">
+            Alabama Materially Deceptive Election Media Law — HB 172, scored dimension by dimension.
+          </p>
+        </div>
+        <div class="diag-section-header__meta">Name Standard&#8480; · v1</div>
+      </div>
+
+      <ol class="diag-dim-list">
+        {diag.dimensions.map(dim => {
+          const s = severityMeta[dim.severity];
+          return (
+            <li class="diag-dim-item">
+              <article class="diag-dim-article">
+
+                <!-- Left: dimension identity -->
+                <div class="diag-dim-left">
+                  <div class="diag-dim-ident">
+                    <div class="diag-dim-icon" set:html={icons[dim.icon]} />
+                    <div>
+                      <div class="diag-eyebrow diag-eyebrow--xs">Dimension {dim.n}</div>
+                      <h3 class="diag-dim-name">{dim.name}</h3>
+                    </div>
+                  </div>
+                  <div class="diag-dim-chips">
+                    <span class={`diag-chip ${s.chipClass}`}>
+                      <span class={`diag-bdot ${s.dotClass}`}></span>
+                      <span class={s.textClass}>{s.label}</span>
+                    </span>
+                    <span class="diag-chip diag-chip--verdict">{dim.verdict}</span>
+                  </div>
+                </div>
+
+                <!-- Right: prompt + evaluation -->
+                <div class="diag-dim-right">
+                  <div class="diag-eyebrow diag-eyebrow--xs">What it tests</div>
+                  <p class="diag-dim-prompt">{dim.prompt}</p>
+
+                  <div class="diag-dim-eval">
+                    <div class="diag-eyebrow diag-eyebrow--xs">Law evaluation</div>
+                    <p class="diag-dim-eval-text">{dim.evaluation}</p>
+                  </div>
+                </div>
+
+              </article>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  </section>
+
+  <!-- ── § 03 Board-Level Risk Summary ────────────────────────────── -->
+  <section class="diag-section diag-section--navy">
+    <div class="diag-container">
+      <div class="diag-board-grid">
+
+        <!-- Left: heading + posture tag -->
+        <div class="diag-board-left">
+          <div class="diag-eyebrow diag-eyebrow--light">§ 03 · Board-level risk summary</div>
+          <h2 class="diag-board-title">Result of deficit</h2>
+          <div class="diag-board-tag">
+            <span set:html={icons.alert} />
+            Compliance dependent on internal controls
+          </div>
+        </div>
+
+        <!-- Right: summary + controls grid -->
+        <div class="diag-board-right">
+          <p class="diag-board-lead">
+            Human accountability is <span class="diag-board-accent">not structurally guaranteed</span> by
+            the statute. Compliance depends on whether the organization has internal controls capable of
+            identifying synthetic political media, verifying source material, preserving disclaimers,
+            escalating risk, and stopping distribution before exposure activates.
+          </p>
+
+          <div class="diag-controls-grid">
+            {diag.controls.map(c => (
+              <div class="diag-control-cell">
+                <div class="diag-control-cell__label">{c.k}</div>
+                <p class="diag-control-cell__body">{c.v}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer nav ───────────────────────────────────────────────── -->
+  <section class="diag-section diag-section--white">
+    <div class="diag-container">
+      <div class="diag-footer-nav">
+        <a href={diag.briefingUrl} class="diag-btn diag-btn--outline diag-btn--lg">
+          <span set:html={icons.arrowLeft} />Page 1 · Executive briefing
+        </a>
+        <div class="diag-footer-nav__actions">
+          <button class="diag-btn diag-btn--outline diag-btn--lg">Map deficits to controls</button>
+          <button class="diag-btn diag-btn--navy diag-btn--lg">
+            Share diagnostic<span set:html={icons.arrowUpRight} />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style is:global>
+/* ══════════════════════════════════════════════════════════════════════════════
+   DIAGNOSTIC PAGE — diag- scoped styles
+   Lozen token system. Same brief- patterns extended for the scorecard layout.
+══════════════════════════════════════════════════════════════════════════════ */
+
+.diag-container {
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+/* Sections */
+.diag-section { border-bottom: 1px solid var(--color-base-200); }
+.diag-section--white { background: #ffffff; }
+.diag-section--cream { background: var(--color-base-50); }
+.diag-section--navy {
+  background: linear-gradient(135deg,
+    color-mix(in oklch, var(--color-base-950) 97%, transparent) 0%,
+    color-mix(in oklch, var(--lozen-policy-teal-900) 85%, transparent) 60%,
+    var(--color-base-900) 100%);
+  color: var(--color-base-50);
+}
+.diag-section-inner { padding-block: 5rem; }
+
+/* ── Utility bar ─────────────────────────────────────────────────────────── */
+.diag-util-bar { background: var(--color-base-50); border-bottom: 1px solid var(--color-base-200); }
+.diag-util-bar__inner {
+  display: flex; align-items: center; justify-content: space-between; padding-block: 0.6rem;
+  font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-base-500);
+}
+.diag-util-bar__left, .diag-util-bar__right { display: flex; align-items: center; gap: 0.5rem; }
+.diag-util-bar__right { display: none; }
+@media (min-width: 768px) { .diag-util-bar__right { display: flex; } }
+.diag-util-bar__loc { color: var(--color-base-800); }
+.diag-sep { color: var(--color-base-300); }
+.diag-util-icon { display: flex; color: var(--color-base-400); }
+.diag-util-icon svg { width: 14px; height: 14px; }
+
+/* ── Masthead ────────────────────────────────────────────────────────────── */
+.diag-masthead { background: #ffffff; border-bottom: 1px solid var(--color-base-200); }
+.diag-masthead__inner {
+  display: flex; align-items: center; justify-content: space-between; padding-block: 1.25rem;
+}
+.diag-masthead__brand { display: flex; align-items: center; gap: 0.75rem; }
+.diag-logo {
+  width: 2.25rem; height: 2.25rem; display: flex; align-items: center; justify-content: center;
+  background: var(--color-base-950); border-radius: 4px; flex-shrink: 0; color: var(--color-accent-400);
+}
+.diag-logo svg { width: 16px; height: 16px; }
+.diag-masthead__name { font-family: var(--font-display); font-size: 1.05rem; font-weight: 400; letter-spacing: -0.01em; color: var(--color-base-900); line-height: 1; }
+.diag-masthead__sub  { font-size: 0.72rem; color: var(--color-base-500); margin-top: 3px; }
+.diag-masthead__actions { display: flex; align-items: center; gap: 0.5rem; }
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.diag-btn {
+  display: inline-flex; align-items: center; gap: 0.375rem;
+  border-radius: 6px; padding: 0.5rem 0.875rem;
+  font-family: var(--font-sans); font-size: 0.78rem; font-weight: 600;
+  cursor: pointer; transition: background 0.15s, opacity 0.15s;
+  border: 1px solid transparent; text-decoration: none; line-height: 1; white-space: nowrap;
+}
+.diag-btn svg { width: 14px; height: 14px; }
+.diag-btn--outline { border-color: var(--color-base-300); background: #ffffff; color: var(--color-base-800); }
+.diag-btn--outline:hover { background: var(--color-base-100); }
+.diag-btn--navy { background: var(--color-base-950); color: var(--color-base-50); border-color: var(--color-base-950); }
+.diag-btn--navy:hover { opacity: 0.88; }
+.diag-btn--lg { padding: 0.75rem 1.25rem; font-size: 0.875rem; }
+
+/* ── Hero grid ───────────────────────────────────────────────────────────── */
+.diag-hero__grid {
+  display: grid; grid-template-columns: 1fr; gap: 3rem; padding-block: 4rem 4.5rem;
+}
+@media (min-width: 1024px) { .diag-hero__grid { grid-template-columns: 2fr 1fr; padding-block: 5rem; } }
+
+/* Badges */
+.diag-badge-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.diag-badge {
+  display: inline-flex; align-items: center; gap: 0.375rem;
+  border-radius: 9999px; padding: 0.3rem 0.75rem;
+  font-family: var(--font-sans); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid transparent;
+}
+.diag-bdot { display: inline-block; border-radius: 50%; flex-shrink: 0; width: 6px; height: 6px; }
+.diag-bdot--lg { width: 10px; height: 10px; }
+
+/* Severity dots */
+.diag-bdot--explicit  { background: var(--lozen-policy-teal-900); }
+.diag-bdot--limited   { background: var(--lozen-policy-gold-500); }
+.diag-bdot--ambiguous { background: var(--lozen-policy-caramel-600); }
+.diag-bdot--absent    { background: var(--lozen-policy-red-900); }
+
+/* Severity chips */
+.diag-chip {
+  display: inline-flex; align-items: center; gap: 0.375rem;
+  border-radius: 9999px; padding: 0.3rem 0.75rem;
+  font-family: var(--font-sans); font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid transparent;
+}
+.diag-chip--explicit  { background: var(--lozen-policy-teal-soft);    border-color: var(--lozen-policy-aqua-300);  }
+.diag-chip--limited   { background: var(--lozen-policy-gold-soft);    border-color: var(--lozen-policy-gold-500);  }
+.diag-chip--ambiguous { background: var(--lozen-policy-caramel-soft); border-color: var(--lozen-policy-caramel-600); }
+.diag-chip--absent    { background: var(--lozen-policy-red-soft);     border-color: var(--lozen-policy-red-900);   }
+.diag-chip--verdict   { background: var(--color-base-100); border-color: var(--color-base-300); color: var(--color-base-600); }
+
+.diag-chip-text--explicit  { color: var(--lozen-policy-teal-900); }
+.diag-chip-text--limited   { color: var(--lozen-policy-caramel-600); }
+.diag-chip-text--ambiguous { color: var(--lozen-policy-caramel-600); }
+.diag-chip-text--absent    { color: var(--lozen-policy-red-900); }
+
+/* Badge variants for hero row */
+.diag-badge--medium   { background: var(--lozen-policy-caramel-soft); border-color: var(--lozen-policy-gold-500); color: var(--lozen-policy-caramel-600); }
+.diag-bdot--medium    { background: var(--lozen-policy-gold-500); }
+.diag-badge--enacted  { background: var(--lozen-status-enacted-bg); border-color: var(--lozen-status-enacted-border); color: var(--lozen-status-enacted-text); }
+.diag-badge--neutral  { background: var(--color-base-100); border-color: var(--color-base-300); color: var(--color-base-600); }
+.diag-badge--standard { background: var(--lozen-policy-teal-soft); border-color: var(--lozen-policy-aqua-300); color: var(--lozen-policy-teal-900); }
+
+/* Hero title */
+.diag-hero__title {
+  margin-top: 1.5rem;
+  font-family: var(--font-display); font-size: clamp(2rem, 5.5vw, 3.75rem);
+  font-weight: 400; letter-spacing: -0.03em; line-height: 1.04;
+  color: var(--color-base-950); text-wrap: balance;
+}
+.diag-hero__title-accent { color: var(--lozen-policy-teal-900); }
+.diag-hero__lead {
+  margin-top: 1.5rem; font-size: clamp(1rem, 1.2vw, 1.1rem);
+  line-height: 1.78; color: var(--color-base-600); max-width: 42rem;
+}
+
+/* Meta row */
+.diag-meta-row { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 1.25rem 2.5rem; }
+.diag-meta-item { border-left: 2px solid var(--color-base-300); padding-left: 1rem; }
+.diag-meta-item__label { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-base-500); }
+.diag-meta-item__value { margin-top: 0.2rem; font-family: var(--font-display); font-size: 1.05rem; font-weight: 400; letter-spacing: -0.01em; color: var(--color-base-900); }
+
+/* ── Score card ──────────────────────────────────────────────────────────── */
+.diag-score-card {
+  position: sticky; top: 1.5rem;
+  border: 1px solid var(--color-base-200); border-top: 3px solid var(--lozen-policy-teal-900);
+  border-radius: 10px; background: var(--color-base-50); padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.diag-score-card__header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-bottom: 1rem; border-bottom: 1px solid var(--color-base-200);
+}
+.diag-score-card__body { margin-top: 1.25rem; }
+.diag-score-main { display: flex; align-items: baseline; gap: 0.5rem; }
+.diag-score-num {
+  font-family: var(--font-display); font-size: 3rem; font-weight: 400;
+  letter-spacing: -0.03em; line-height: 1; color: var(--color-base-950);
+}
+.diag-score-label { font-size: 0.875rem; color: var(--color-base-500); }
+
+/* Segmented bar */
+.diag-score-bar {
+  margin-top: 1rem; display: flex; height: 8px; width: 100%;
+  overflow: hidden; border-radius: 9999px; background: var(--color-base-200);
+  gap: 2px;
+}
+.diag-score-bar__seg { flex: 1; height: 100%; border-radius: 2px; }
+
+/* Score count grid */
+.diag-score-grid {
+  margin-top: 1.25rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.625rem;
+}
+.diag-score-cell {
+  display: flex; align-items: center; justify-content: space-between;
+  border-radius: 6px; border: 1px solid var(--color-base-200);
+  background: #ffffff; padding: 0.5rem 0.75rem; font-size: 0.75rem;
+}
+.diag-score-cell__left { display: flex; align-items: center; gap: 0.5rem; }
+.diag-score-cell__name { color: var(--color-base-600); }
+.diag-score-cell__count { font-family: var(--font-sans); font-weight: 700; color: var(--color-base-900); }
+.diag-score-card__note {
+  margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--color-base-200);
+  font-size: 0.78rem; line-height: 1.6; color: var(--color-base-500);
+}
+
+/* ── Section typography ──────────────────────────────────────────────────── */
+.diag-eyebrow {
+  font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-base-500);
+}
+.diag-eyebrow--xs    { font-size: 0.62rem; }
+.diag-eyebrow--light { color: color-mix(in oklch, var(--color-base-50) 60%, transparent); }
+
+.diag-section-header {
+  display: flex; flex-direction: column; gap: 1.5rem;
+  justify-content: space-between; align-items: flex-start; margin-bottom: 3rem;
+}
+@media (min-width: 1024px) { .diag-section-header { flex-direction: row; align-items: flex-end; } }
+.diag-section-header__meta {
+  font-family: var(--font-sans); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-base-400); white-space: nowrap;
+}
+.diag-section__title {
+  font-family: var(--font-display); font-size: clamp(1.65rem, 3.5vw, 2.75rem);
+  font-weight: 400; letter-spacing: -0.025em; line-height: 1.1;
+  color: var(--color-base-950); margin-top: 0.5rem; text-wrap: balance;
+}
+.diag-section__deck { margin-top: 0.75rem; font-size: 1rem; line-height: 1.72; color: var(--color-base-600); max-width: 38rem; }
+
+/* ── § 01 Scale grid ─────────────────────────────────────────────────────── */
+.diag-scale-grid {
+  display: grid; grid-template-columns: 1fr;
+  border: 1px solid var(--color-base-200); border-radius: 10px;
+  overflow: hidden; gap: 1px; background: var(--color-base-200);
+}
+@media (min-width: 640px)  { .diag-scale-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .diag-scale-grid { grid-template-columns: repeat(4, 1fr); } }
+.diag-scale-card { background: #ffffff; padding: 1.5rem; }
+.diag-scale-card__top { display: flex; align-items: center; gap: 0.625rem; }
+.diag-scale-card__label { font-family: var(--font-display); font-size: 1.15rem; font-weight: 400; letter-spacing: -0.01em; color: var(--color-base-900); }
+.diag-scale-card__risk { margin-top: 0.5rem; font-family: var(--font-sans); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+.diag-scale-card__body { margin-top: 0.75rem; font-size: 0.875rem; line-height: 1.65; color: var(--color-base-600); }
+
+/* Severity text colors for scale cards */
+.diag-chip-text--explicit  { color: var(--lozen-policy-teal-900); }
+.diag-chip-text--limited   { color: var(--lozen-policy-caramel-600); }
+.diag-chip-text--ambiguous { color: var(--lozen-policy-caramel-600); }
+.diag-chip-text--absent    { color: var(--lozen-policy-red-900); }
+
+/* ── § 02 Dimension list ─────────────────────────────────────────────────── */
+.diag-dim-list {
+  list-style: none; padding: 0; margin: 0;
+  border: 1px solid var(--color-base-200); border-radius: 10px;
+  overflow: hidden; gap: 1px; background: var(--color-base-200);
+  display: flex; flex-direction: column;
+}
+.diag-dim-item { background: #ffffff; }
+.diag-dim-article {
+  display: grid; grid-template-columns: 1fr; gap: 1.5rem; padding: 1.75rem;
+}
+@media (min-width: 1024px) {
+  .diag-dim-article { grid-template-columns: 3fr 9fr; gap: 2.5rem; padding: 2rem; }
+}
+
+/* Left column */
+.diag-dim-ident { display: flex; align-items: flex-start; gap: 0.875rem; }
+.diag-dim-icon {
+  width: 2.5rem; height: 2.5rem; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid var(--color-base-200); background: var(--color-base-50);
+  color: var(--lozen-policy-teal-900); border-radius: 6px;
+}
+.diag-dim-icon svg { width: 18px; height: 18px; }
+.diag-dim-name {
+  font-family: var(--font-display); font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 400; letter-spacing: -0.015em; line-height: 1.2;
+  color: var(--color-base-950); margin-top: 2px;
+}
+.diag-dim-chips { margin-top: 1rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+
+/* Right column */
+.diag-dim-prompt { margin-top: 0.5rem; font-size: 0.9rem; line-height: 1.65; color: var(--color-base-600); }
+.diag-dim-eval {
+  margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--color-base-200);
+}
+.diag-dim-eval-text {
+  margin-top: 0.5rem;
+  font-family: var(--font-display); font-size: clamp(1rem, 1.6vw, 1.2rem);
+  font-weight: 400; letter-spacing: -0.01em; line-height: 1.5; color: var(--color-base-900);
+}
+
+/* ── § 03 Board summary ──────────────────────────────────────────────────── */
+.diag-board-grid {
+  display: grid; grid-template-columns: 1fr; gap: 3rem; padding-block: 5rem;
+}
+@media (min-width: 1024px) { .diag-board-grid { grid-template-columns: 4fr 8fr; } }
+
+.diag-board-title {
+  font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  font-weight: 400; letter-spacing: -0.025em; line-height: 1.1;
+  color: var(--color-base-50); margin-top: 0.5rem; text-wrap: balance;
+}
+.diag-board-tag {
+  margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem;
+  border: 1px solid color-mix(in oklch, var(--color-base-50) 20%, transparent);
+  background: color-mix(in oklch, var(--color-base-50) 10%, transparent);
+  border-radius: 9999px; padding: 0.4rem 0.875rem;
+  font-family: var(--font-sans); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: color-mix(in oklch, var(--color-base-50) 85%, transparent);
+}
+.diag-board-tag svg { width: 14px; height: 14px; }
+
+.diag-board-lead {
+  font-family: var(--font-display); font-size: clamp(1.1rem, 2vw, 1.45rem);
+  font-weight: 400; letter-spacing: -0.01em; line-height: 1.5;
+  color: var(--color-base-50);
+}
+.diag-board-accent { color: var(--color-accent-400); }
+
+.diag-controls-grid {
+  margin-top: 2.5rem; display: grid; grid-template-columns: 1fr;
+  gap: 1px; border-radius: 8px; overflow: hidden;
+  background: color-mix(in oklch, var(--color-base-50) 15%, transparent);
+}
+@media (min-width: 640px)  { .diag-controls-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .diag-controls-grid { grid-template-columns: repeat(3, 1fr); } }
+.diag-control-cell {
+  background: color-mix(in oklch, var(--color-base-950) 90%, var(--lozen-policy-teal-900));
+  padding: 1.25rem;
+}
+.diag-control-cell__label {
+  font-family: var(--font-sans); font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: color-mix(in oklch, var(--color-base-50) 55%, transparent);
+}
+.diag-control-cell__body {
+  margin-top: 0.5rem; font-size: 0.875rem; line-height: 1.6;
+  color: color-mix(in oklch, var(--color-base-50) 82%, transparent);
+}
+
+/* ── Footer nav ──────────────────────────────────────────────────────────── */
+.diag-footer-nav {
+  display: flex; flex-direction: column; gap: 1.25rem;
+  align-items: flex-start; justify-content: space-between; padding-block: 3rem;
+}
+@media (min-width: 1024px) { .diag-footer-nav { flex-direction: row; align-items: center; } }
+.diag-footer-nav__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+</style>
