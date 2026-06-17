@@ -1,5 +1,6 @@
 ---
-title: LLM Generation Is Fast. Governance Is Not.
+title: LLM Generation Is Fast. Governance Is Not
+seo_title: AI Generation Is Fast. Governance Is Not
 slug: ai-generation-fast-governance-slow
 pubDate: 2026-06-02
 datePublished: 2026-06-02
@@ -12,8 +13,8 @@ excerpt: Coherence is a presentation feature; truth is a verification outcome.
   Read how this speed illusion shifts the labor burden entirely into human
   judgment, trapping your top performers and creating unpriced key-person risk.
 description: The governance burden behind AI output is human and unmeasured.
-  Discover how hidden verification strain drives institutional knowledge loss
-  and unpriced key-person risk.
+  Discover how hidden verification labor drives institutional knowledge loss and
+  unpriced key-person risk.
 image:
   url: /src/images/blog/late-governance.webp
   alt: 'The endless papers floating in the water perfectly represent the phrase:
