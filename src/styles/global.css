@@ -3277,3 +3277,73 @@ a .lozen-tracker-status-badge:focus-visible {
 }
 
 
+
+/* Standard internal page hero
+   Use for main non-homepage utility/index pages.
+   Homepage, article pages, and intentional landing pages may use separate templates. */
+.lozen-internal-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    var(--color-base-200),
+    #ffffff 48%,
+    var(--color-base-100)
+  );
+}
+
+.lozen-internal-hero__wrapper {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .lozen-internal-hero__wrapper {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+}
+
+.lozen-internal-hero__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .lozen-internal-hero__grid {
+    grid-template-columns: 0.72fr 1fr;
+    align-items: end;
+  }
+}
+
+.lozen-internal-hero__eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--lozen-page-hero-eyebrow-size);
+  font-weight: var(--lozen-page-hero-eyebrow-weight);
+  letter-spacing: var(--lozen-page-hero-eyebrow-letter-spacing);
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--color-base-500);
+}
+
+.lozen-internal-hero__title {
+  margin-top: 1.25rem;
+  font-family: var(--font-display);
+  font-size: var(--lozen-page-hero-title-size);
+  font-weight: var(--lozen-page-hero-title-weight);
+  letter-spacing: var(--lozen-page-hero-title-letter-spacing);
+  line-height: var(--lozen-page-hero-title-line-height);
+  color: var(--color-base-950);
+  text-transform: none;
+}
+
+.lozen-internal-hero__deck {
+  max-width: 42rem;
+  font-family: var(--font-sans);
+  font-size: var(--lozen-page-hero-deck-size);
+  font-weight: var(--lozen-page-hero-deck-weight);
+  letter-spacing: var(--lozen-page-hero-deck-letter-spacing);
+  line-height: var(--lozen-page-hero-deck-line-height);
+  color: var(--color-base-700);
+}
