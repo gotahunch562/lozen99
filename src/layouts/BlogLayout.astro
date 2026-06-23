@@ -275,7 +275,7 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
       grid-template-columns: minmax(0, 1fr);
       gap: 2.5rem;
       margin-inline: auto;
-      max-width: 64rem;
+      max-width: var(--lozen-prose-content-width);
     }
 
     .lozen-blog-article-shell {
@@ -298,11 +298,11 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
     }
 
     .lozen-blog-prose :where(p, ul, ol, blockquote) {
-      max-width: 54rem;
+      max-width: var(--lozen-prose-content-width);
     }
 
     .lozen-blog-prose :where(h2, h3, h4) {
-      max-width: 56rem;
+      max-width: var(--lozen-prose-content-width);
     }
 
     .lozen-blog-prose :where(blockquote) {
@@ -424,11 +424,11 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
 
     @media (min-width: 1280px) {
       .lozen-blog-article-layout {
-        grid-template-columns: minmax(0, 64rem) 13rem;
+        grid-template-columns: minmax(0, var(--lozen-prose-content-width)) 13rem;
         gap: 3rem;
         align-items: start;
         justify-content: center;
-        max-width: 82rem;
+        max-width: calc(var(--lozen-prose-content-width) + 16rem);
       }
 
       .lozen-blog-inline-meta {
@@ -443,9 +443,9 @@ const tags = (frontmatter.tags ?? []).map((tag) => {
 
     @media (min-width: 1536px) {
       .lozen-blog-article-layout {
-        grid-template-columns: minmax(0, 66rem) 13rem;
+        grid-template-columns: minmax(0, var(--lozen-prose-content-width)) 13rem;
         gap: 4rem;
-        max-width: 86rem;
+        max-width: calc(var(--lozen-prose-content-width) + 17rem);
       }
     }
 

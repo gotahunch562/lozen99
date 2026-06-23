@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import InternalPageHero from "@/components/fundations/sections/InternalPageHero.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
@@ -42,35 +43,11 @@ const description = "Downloadable tools and resources for women executives navig
 ---
 
 <BaseLayout title={title} description={description}>
-  <section class="bg-gradient-to-t from-base-200 to-white">
-    <Wrapper variant="standard" class="py-24 lg:py-32">
-      <div class="max-w-3xl">
-        <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-        >
-          Tools &amp; Resources
-        </Text>
-
-        <Text
-          tag="h1"
-          variant="displayXL"
-          class="mt-8 uppercase font-display text-base-900"
-        >
-          Tools &amp; Resources
-        </Text>
-
-        <Text
-          tag="p"
-          variant="textBase"
-          class="mt-4 text-base-600 text-balance"
-        >
-          Practical frameworks and reference materials from Lozen Advisory, available for immediate download.
-        </Text>
-      </div>
-    </Wrapper>
-  </section>
+  <InternalPageHero
+    eyebrow="Tools & Resources"
+    title="Tools & Resources"
+    deck="Frameworks, briefings, and resources from Lozen Advisory for evaluating workforce risk, AI governance, and organizational capacity."
+  />
 
   <section>
     <Wrapper variant="standard" class="py-12 lg:py-20">
