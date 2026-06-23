@@ -86,3 +86,41 @@ Recommended next pass:
 2. Define article/report typography tokens in `global.css`.
 3. Apply shared or compatible tokens to each template.
 4. Leave `NarrativePage.astro` alone unless visual QA shows a specific mismatch.
+
+## Article / Report Typography Reference
+
+Preferred typography reference:
+- `/disclosure-independence-infrastructure/`
+
+Reason:
+The font size and reading scale on this page are visually acceptable and should be used as a reference point when cleaning up article/report typography.
+
+Important implementation note:
+`/disclosure-independence-infrastructure/` uses `src/components/authority/NarrativePage.astro`. Do not assume the article/report pages already inherit this scale. The mismatch likely comes from separate template families:
+- `BlogLayout.astro`
+- `ExecutiveReportArticle.astro`
+- `PressReleasePage.astro`
+- `NarrativePage.astro`
+
+Design direction:
+Article/report templates do not need to become identical to NarrativePage, but their title size, deck size, body size, heading scale, and vertical rhythm should be compatible with the NarrativePage reading scale.
+
+Do not solve this with one-off page edits. Fix at the shared template/token level.
+
+## NarrativePage Split Hero Decision
+
+Status: Approved
+
+Decision:
+The split hero variant in `NarrativePage.astro` is visually acceptable and should not be reduced or redesigned in the current cleanup pass.
+
+Approved split hero pages include:
+- `/ai-workforce-materiality-briefing/`
+- `/menopause-and-the-law/`
+- Other `NarrativePage` pages using `heroImage`
+
+Current cleanup focus:
+- Keep split hero layout intact.
+- Preserve large image/title presentation for split hero pages.
+- Continue applying improved prose width to the body content below the hero.
+- If additional cleanup is needed, focus on text-only NarrativePage balance, not split hero scale.
