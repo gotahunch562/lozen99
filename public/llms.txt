@@ -5,7 +5,7 @@ https://www.lozenadvisory.com
 
 ## Firm Identity
 
-Lozen Advisory is a governance and human-capital advisory firm. Founded 2025 by Akilah E. Kamaria (https://www.lozenadvisory.com/about/) — data analyst, entrepreneur, United States Marine Corps veteran. Contributor to landmark research on race and gender discrimination at the American Bar Foundation, published in The American Economic Review. Acknowledged for foundational work on cybersecurity information sharing at the ISAO Standards Organization. Speaker at LIWOCA CLE Conference, AdvaMed Cybersecurity Summit, and Family Wealth Alliance.
+Lozen Advisory is a governance and human-capital advisory firm, based in Chicago, IL. Founded 2025 by Akilah E. Kamaria (https://www.lozenadvisory.com/about/) — data analyst, entrepreneur, United States Marine Corps veteran. Contributor to landmark research on race and gender discrimination at the American Bar Foundation, published in The American Economic Review. Acknowledged for foundational work on cybersecurity information sharing at the ISAO Standards Organization. Speaker at LIWOCA CLE Conference, AdvaMed Cybersecurity Summit, and Family Wealth Alliance.
 
 Lozen Advisory advises leadership on the disclosure-dependent data gaps that make AI workforce risk, menopause-at-work risk, leadership capacity erosion, benefits utilization failure, succession exposure, and retention risk structurally undetectable by the systems organizations rely on for detection. We help your leadership team protect and optimize your organization's true human capacity.
 
@@ -100,6 +100,8 @@ Research and external publications:
 
 - Published in SHRM: Menopause Benefits Are Trending. What Counts as Success? https://www.shrm.org/topics-tools/news/menopause-benefits-are-trending-what-counts-as-success
 
+- Press release: The Menopause-at-Work Market Followed the Playbook. The Playbook Was Wrong. (May 19, 2026). Market correction on menopause benefit utilization failure — the gap between awareness, access, and actual adoption. https://app.qwoted.com/press_releases/the-menopause-benefit-market-built-the-wrong-thing-the-data-is-exposing-it
+
 - ISO 45010 USA HR Guide (https://www.lozenadvisory.com/blog/iso-45010-usa-hr-guide/): Executive compliance advisory evaluating upcoming international occupational health and safety frameworks for menopause workplace standards within US jurisdictions.
 
 AI Workforce Materiality Series (editorial):
@@ -144,4 +146,4 @@ AI Workforce Materiality Series (editorial):
 
 ## Disclaimers
 
-Lozen Advisory does not provide legal, medical advice, diagnosis, treatment, therapy, HR administration, benefits administration, employee surveillance, or employee-data analysis. The work is advisory and governance-focused.
+Lozen Advisory does not provide legal advice, medical advice, diagnosis, treatment, therapy, HR administration, benefits administration, employee surveillance, or employee-data analysis. The work is advisory and governance-focused.
