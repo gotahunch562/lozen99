@@ -3293,9 +3293,9 @@ a .lozen-tracker-status-badge:focus-visible {
 }
 
 .lozen-internal-hero__wrapper {
-  min-height: clamp(24rem, 38vw, 31rem);
-  padding-top: clamp(7.5rem, 9vw, 8.75rem);
-  padding-bottom: clamp(5.5rem, 7vw, 7rem);
+  min-height: clamp(27rem, 42vw, 34rem);
+  padding-top: clamp(8rem, 9vw, 9.5rem);
+  padding-bottom: clamp(6rem, 7vw, 7.5rem);
   display: flex;
   align-items: center;
 }
