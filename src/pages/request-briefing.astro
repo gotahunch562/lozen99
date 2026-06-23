@@ -1,6 +1,7 @@
 ---
 // Fundations
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import InternalPageHero from "@/components/fundations/sections/InternalPageHero.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
@@ -16,33 +17,11 @@ const description = "Request a Lozen Advisory briefing on disclosure-dependent w
 
 ---
 <BaseLayout title={title} description={description}>
-  <section class="bg-gradient-to-t from-base-200 to-white">
-    <Wrapper variant="standard" class="py-24 lg:py-32">
-      <div class="max-w-3xl">
-        <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-        >
-          Business Advisory
-        </Text>
-        <Text
-          tag="h1"
-          variant="displayXL"
-          class="mt-8 uppercase font-display text-base-900"
-        >
-          Request a Briefing
-        </Text>
-        <Text
-          tag="p"
-          variant="textBase"
-          class="mt-4 text-base-600 text-balance"
-        >
-          You have a question about what is happening inside your organization. Start here.
-        </Text>
-      </div>
-    </Wrapper>
-  </section>
+  <InternalPageHero
+    eyebrow="Request Briefing"
+    title="Request a Briefing"
+    deck="Request a Lozen Advisory briefing on AI governance, workforce materiality, retention risk, or related advisory topics."
+  />
   <section>
     <Wrapper variant="standard" class="py-12">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
