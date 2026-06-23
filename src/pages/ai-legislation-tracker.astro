@@ -9,49 +9,64 @@ const description =
 
 <BaseLayout title={title} description={description} hideNavigation={true}>
   <main class="bg-base-50 text-base-950">
-    <section class="bg-[#0b2e33] text-white">
-     <div class="mx-auto max-w-7xl px-4 pb-28 pt-24 sm:px-6 sm:pb-32 sm:pt-28 lg:px-8 lg:pb-40 lg:pt-32 xl:pb-44">
-        <div class="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(320px,0.46fr)] lg:items-center">
+    <section class="bg-lozen-blue-950 text-white">
+     <div class="mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-32 lg:px-8 lg:pb-24 lg:pt-36">
+        <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(260px,320px)] lg:items-center">
           <div>
-            <p class="border-l-2 border-[#f2d300] pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#9fd8dd]">
+            <p class="border-l-2 border-[#f2d300] pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#f2d300]">
              The Name Standard℠ Governance Maps
             </p>
 
            <h1 class="mt-6 max-w-4xl lozen-type-page-title text-white">
-              Has your board built oversight for AI —<br />
-              or just assumed the old processes cover it?
+              Has your board built oversight for AI —
             </h1>
 
-            <p class="mt-6 max-w-4xl font-sans text-base leading-7 text-[#cfe8ea] sm:text-[1.0625rem] sm:leading-8">
+            <p class="mt-3 max-w-4xl lozen-type-page-title-compact text-base-200">
+              or just assumed the old processes cover it?
+            </p>
+
+            <p class="mt-6 max-w-4xl font-sans text-lg leading-8 text-base-200 sm:text-xl sm:leading-9">
               Most AI rules name an entity: a provider, sponsor, agency, or covered organization — not a person.
             </p>
 
-            <p class="mt-5 max-w-4xl font-sans text-base leading-7 text-[#cfe8ea] sm:text-[1.0625rem] sm:leading-8">
+            <p class="mt-5 max-w-4xl font-sans text-lg leading-8 text-base-200 sm:text-xl sm:leading-9">
               Can management identify the person whose name is already on every AI-assisted decision — the one who would have to answer for it?
             </p>
 
-            <p class="mt-5 max-w-4xl font-sans text-base leading-7 text-[#cfe8ea] sm:text-[1.0625rem] sm:leading-8">
+            <p class="mt-5 max-w-4xl font-sans text-lg leading-8 text-base-200 sm:text-xl sm:leading-9">
               The Name Standard℠ tests whether that person actually exists.
             </p>
+
+            <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <a
+                href="#legislation-index"
+                class="lozen-btn-bevel-yellow inline-flex items-center justify-center rounded-full px-6 py-3 font-sans text-sm font-semibold text-lozen-blue-950 transition"
+              >
+                Explore the legislation index
+              </a>
+
+              <a
+                href="/ai-workforce-materiality-briefing/"
+                class="font-sans text-sm font-semibold text-[#f2d300] underline-offset-4 hover:underline"
+              >
+                Request a governance briefing →
+              </a>
+            </div>
           </div>
 
-         <aside class="border-2 border-[#f2d300] bg-[#f2d300] p-6 shadow-2xl lg:p-7">
-            <p class="border-l-2 border-[#0b2e33] pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#3a2f00]">
+         <aside class="relative overflow-hidden rounded-2xl border border-base-300 bg-white p-7 shadow-2xl ring-1 ring-base-950/5 lg:p-8">
+            <span aria-hidden="true" class="absolute inset-x-0 top-0 h-1 bg-[#f2d300]"></span>
+
+            <p class="border-l-2 border-[#f2d300] pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#857400]">
               Nasdaq Governance Pulse
             </p>
 
-            <div class="mt-5 border-2 border-[#0b2e33] bg-[#0b2e33] p-5">
-              <p class="font-display text-[3.75rem] font-normal leading-none tracking-[-0.045em] text-[#a7a9ff] sm:text-[4.5rem]">
-                Nearly 20%
-              </p>
+            <p class="lozen-stat-figure mt-7 text-center">
+              20%
+            </p>
 
-              <p class="mt-4 font-sans text-sm leading-6 text-white">
-                of surveyed organizations say AI is not being discussed at the board level.
-              </p>
-            </div>
-
-            <p class="mt-5 font-sans text-xs leading-5 text-[#3a2f00]">
-              Source: Nasdaq, 3rd Annual Global Governance Pulse. AI LegiRisk is a Lozen Advisory GRC diagnostic. It is not legal advice.
+            <p class="mt-5 font-sans text-sm leading-6 text-base-700">
+              Nearly 20% of surveyed organizations say AI is not being discussed at the board level.
             </p>
           </aside>
         </div>
@@ -72,82 +87,76 @@ const description =
         </div>
 
         <div class="grid gap-5 lg:grid-cols-3">
-          <article class="overflow-hidden rounded-2xl border border-base-300 bg-white shadow-xl ring-1 ring-base-950/5">
-            <div class="bg-[#f2d300] px-6 py-5">
-              <p class="font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#3a2f00]">
-                Report pathway
-              </p>
-              <h3 class="mt-2 font-display text-[1.7rem] font-normal uppercase leading-[1.05] tracking-[-0.03em] text-[#3a2f00]">
-                Board Executive Briefing
-              </h3>
-            </div>
-            <p class="px-6 py-5 font-sans text-sm leading-6 text-base-700">
+          <article class="overflow-hidden rounded-2xl border border-base-300 bg-white p-6 shadow-xl ring-1 ring-base-950/5 sm:p-7">
+            <p class="border-l-2 border-[#f2d300] pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#857400]">
+              Report pathway
+            </p>
+            <h3 class="mt-3 font-display text-[1.7rem] font-normal uppercase leading-[1.05] tracking-[-0.03em] text-lozen-blue-950">
+              Board Executive Briefing
+            </h3>
+            <p class="mt-4 font-sans text-sm leading-6 text-base-700">
               Frames what directors should be prepared to see, ask, and evidence when AI rules create governance exposure.
             </p>
           </article>
 
-          <article class="overflow-hidden rounded-2xl border border-base-300 bg-white shadow-xl ring-1 ring-base-950/5">
-            <div class="bg-[#1497a3] px-6 py-5">
-              <p class="font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#d8f3f5]">
-                Report pathway
-              </p>
-              <h3 class="mt-2 font-display text-[1.7rem] font-normal uppercase leading-[1.05] tracking-[-0.03em] text-white">
-                Name Standard℠ Diagnostic
-              </h3>
-            </div>
-            <p class="px-6 py-5 font-sans text-sm leading-6 text-base-700">
+          <article class="overflow-hidden rounded-2xl border border-base-300 bg-white p-6 shadow-xl ring-1 ring-base-950/5 sm:p-7">
+            <p class="border-l-2 border-[#f2d300] pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#857400]">
+              Report pathway
+            </p>
+            <h3 class="mt-3 font-display text-[1.7rem] font-normal uppercase leading-[1.05] tracking-[-0.03em] text-lozen-blue-950">
+              Name Standard℠ Diagnostic
+            </h3>
+            <p class="mt-4 font-sans text-sm leading-6 text-base-700">
               Evaluates whether the rule creates real individual accountability or only procedural oversight.
             </p>
           </article>
 
-          <article class="overflow-hidden rounded-2xl border border-base-300 bg-white shadow-xl ring-1 ring-base-950/5">
-            <div class="bg-[#a7a9ff] px-6 py-5">
-              <p class="font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#2a2b6b]">
-                Report pathway
-              </p>
-              <h3 class="mt-2 font-display text-[1.7rem] font-normal uppercase leading-[1.05] tracking-[-0.03em] text-[#2a2b6b]">
-                Enterprise Governance Analysis
-              </h3>
-            </div>
-            <p class="px-6 py-5 font-sans text-sm leading-6 text-base-700">
+          <article class="overflow-hidden rounded-2xl border border-base-300 bg-white p-6 shadow-xl ring-1 ring-base-950/5 sm:p-7">
+            <p class="border-l-2 border-[#f2d300] pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#857400]">
+              Report pathway
+            </p>
+            <h3 class="mt-3 font-display text-[1.7rem] font-normal uppercase leading-[1.05] tracking-[-0.03em] text-lozen-blue-950">
+              Enterprise Governance Analysis
+            </h3>
+            <p class="mt-4 font-sans text-sm leading-6 text-base-700">
               Maps the operating burden behind AI governance, documentation, review, and implementation.
             </p>
           </article>
         </div>
 
-      <div class="mt-8 rounded-2xl border border-[#f2d300]/70 bg-[#0b2e33] p-6 shadow-xl ring-1 ring-[#f2d300]/25 sm:p-10">
+      <div class="mx-auto mt-8 max-w-3xl rounded-xl bg-lozen-blue-950 p-4 shadow-lg ring-1 ring-white/10 sm:p-6">
           <img
           src="/images/lozen-name-standard-illustration-v4.svg"
           alt="The Name Standard℠ architecture."
-          class="mx-auto block w-full max-w-5xl"
+          class="block h-auto w-full"
           loading="lazy"
             />
       </div>
     
     </section>
 
-    <section class="bg-[#eeeeff]">
+    <section class="bg-base-50">
       <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div class="mb-6 max-w-3xl">
-          <p class="border-l-2 border-[#a7a9ff] pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#5b5dc4]">
+          <p class="border-l-2 border-[#f2d300] pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#857400]">
             Public accountability signal
           </p>
-          <h2 class="mt-3 font-display text-[2rem] font-normal uppercase leading-[1.05] tracking-[-0.035em] text-[#2a2b6b] sm:text-[2.55rem]">
+          <h2 class="mt-3 font-display text-[2rem] font-normal uppercase leading-[1.05] tracking-[-0.035em] text-lozen-blue-950 sm:text-[2.55rem]">
             Name Standard℠ governance maps
           </h2>
 
-          <p class="mt-4 font-sans text-base leading-7 text-[#3f4080]">
+          <p class="mt-4 font-sans text-base leading-7 text-base-700">
             Toggle between the United States and global views to see how selected AI
             laws and policy frameworks are categorized by public accountability signal.
           </p>
         </div>
 
         <div
-          class="overflow-hidden rounded-2xl border border-[#a7a9ff] bg-white shadow-xl"
+          class="overflow-hidden rounded-2xl border border-base-300 bg-white shadow-xl ring-1 ring-base-950/5"
           data-map-tabs
         >
           <div
-            class="flex bg-[#2a2b6b]"
+            class="flex bg-lozen-blue-950"
             role="tablist"
             aria-label="AI LegiRisk map views"
           >
@@ -164,7 +173,7 @@ const description =
             </button>
 
             <button
-              class="map-tab-button flex-1 border-r border-white/10 px-5 py-4 font-sans text-sm font-semibold uppercase tracking-[0.12em] text-[#b3b4e6] sm:flex-none"
+              class="map-tab-button flex-1 border-r border-white/10 px-5 py-4 font-sans text-sm font-semibold uppercase tracking-[0.12em] text-base-300 sm:flex-none"
               type="button"
               role="tab"
               id="map-tab-global"
@@ -226,7 +235,7 @@ const description =
       </div>
     </section>
 
-    <section class="bg-base-100">
+    <section id="legislation-index" class="bg-base-100">
       <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div class="mb-6 max-w-3xl">
           <h2 class="font-display text-[2rem] font-normal uppercase leading-[1.05] tracking-[-0.035em] text-base-950 sm:text-[2.55rem]">
@@ -249,18 +258,18 @@ const description =
   <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
     <div class="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(280px,0.42fr)] lg:items-end">
       <div>
-        <p class="border-l-2 border-[#3a2f00] pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#3a2f00]">
+        <p class="border-l-2 border-lozen-blue-950 pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-lozen-blue-950">
           Governance readiness
         </p>
 
-        <h2 class="mt-4 max-w-3xl font-sans text-base font-medium leading-7 tracking-normal text-[#1a1500] sm:text-lg sm:leading-8">
+        <h2 class="mt-4 max-w-3xl font-sans text-base font-medium leading-7 tracking-normal text-lozen-blue-950 sm:text-lg sm:leading-8">
           Does your team possess the explicit capacity, information, and formal right of refusal to legally and professionally sign off on AI-assisted corporate output?
         </h2>
       </div>
 
       <div class="lg:text-right">
         <a
-          class="inline-flex items-center justify-center rounded-full border-2 border-[#1a1500] bg-[#1a1500] px-6 py-3.5 font-sans text-sm font-semibold text-[#f2d300] shadow-sm transition hover:bg-[#0b2e33]"
+          class="lozen-btn-bevel-navy inline-flex items-center justify-center rounded-full px-6 py-3.5 font-sans text-sm font-semibold text-[#f2d300] transition"
           href="/ai-workforce-materiality-briefing/"
         >
           Request governance readiness briefing
@@ -289,11 +298,11 @@ const description =
           currentTab.setAttribute("aria-selected", String(isSelected));
 
           if (isSelected) {
-            currentTab.classList.remove("text-[#b3b4e6]");
+            currentTab.classList.remove("text-base-300");
             currentTab.classList.add("text-white");
           } else {
             currentTab.classList.remove("text-white");
-            currentTab.classList.add("text-[#b3b4e6]");
+            currentTab.classList.add("text-base-300");
           }
         });
 
@@ -313,7 +322,7 @@ const description =
 
   .map-tab-button.is-active,
   .map-tab-button:hover {
-    background: #1f2080;
+    background: var(--color-lozen-blue-800);
   }
 
   #datawrapper-vis-UDISR img {
@@ -321,5 +330,52 @@ const description =
     width: 100%;
     height: auto;
     border: 0;
+  }
+
+  /* Beveled CTA buttons: a top-to-bottom gradient plus an inset top
+     highlight, inset bottom shadow, and soft outer drop shadow — gives
+     the button real edge/depth instead of a flat color fill. */
+  .lozen-btn-bevel-yellow {
+    background: linear-gradient(180deg, #f4da26 0%, #f2d300 55%, #ceb300 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.55),
+      inset 0 -2px 1px rgba(0, 0, 0, 0.12),
+      0 2px 4px rgba(6, 23, 47, 0.25);
+  }
+
+  .lozen-btn-bevel-yellow:hover {
+    background: linear-gradient(180deg, #f7e158 0%, #f4da26 55%, #d9bc00 100%);
+  }
+
+  .lozen-btn-bevel-navy {
+    background: linear-gradient(180deg, var(--color-lozen-blue-900) 0%, var(--color-lozen-blue-950) 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      inset 0 -2px 1px rgba(0, 0, 0, 0.35),
+      0 2px 4px rgba(6, 23, 47, 0.35);
+  }
+
+  .lozen-btn-bevel-navy:hover {
+    background: linear-gradient(180deg, var(--color-lozen-blue-800) 0%, var(--color-lozen-blue-900) 100%);
+  }
+
+  /* Hero stat figure: true brand yellow (#f2d300) as the fill, not a
+     darkened version of it — darkening shifts the hue toward gold/olive,
+     which is exactly what we don't want. A thin navy outline (via
+     text-shadow, so it works without -webkit-text-stroke support) gives
+     it definition against the white card instead of dimming the color. */
+  .lozen-stat-figure {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 5.5vw, 4.5rem);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    color: #f2d300;
+    text-shadow:
+      -1.5px -1.5px 0 var(--color-lozen-blue-950),
+       1.5px -1.5px 0 var(--color-lozen-blue-950),
+      -1.5px  1.5px 0 var(--color-lozen-blue-950),
+       1.5px  1.5px 0 var(--color-lozen-blue-950);
+    text-wrap: balance;
   }
 </style>
