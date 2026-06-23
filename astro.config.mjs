@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import { serializeSitemapItem } from "./src/lib/seo/sitemapLastmod.mjs";
 import mdx from "@astrojs/mdx";
 import vercel from "@astrojs/vercel";
+import react from "@astrojs/react";
 
 export default defineConfig({
   site: "https://www.lozenadvisory.com",
@@ -15,5 +16,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [sitemap({ serialize: serializeSitemapItem }), mdx()],
+  integrations: [sitemap({ serialize: serializeSitemapItem }), mdx(), react()],
 });
