@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import InternalPageHero from "@/components/fundations/sections/InternalPageHero.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
@@ -11,41 +12,11 @@ const description = "Review Lozen Advisory’s terms of service for website use,
 ---
 
 <BaseLayout title={title} description={description}>
-  <section class="bg-gradient-to-t from-base-200 to-white">
-    <Wrapper variant="standard" class="py-24 lg:py-32">
-      <div class="max-w-3xl">
-        <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-        >
-          Legal
-        </Text>
-
-        <Text
-          tag="h1"
-          variant="displayXL"
-          class="mt-8 uppercase font-display text-base-900"
-        >
-          Terms of Service
-        </Text>
-
-        <Text
-          tag="p"
-          variant="textBase"
-          class="mt-4 text-base-600 text-balance"
-        >
-          These Terms of Service govern access to and use of the Lozen Advisory
-          website, content, briefings, advisory services, resources, and related
-          communications.
-        </Text>
-
-        <Text tag="p" variant="textSM" class="mt-6 text-base-500">
-          Effective date: {effectiveDate}
-        </Text>
-      </div>
-    </Wrapper>
-  </section>
+  <InternalPageHero
+    eyebrow="Terms"
+    title="Terms of Service"
+    deck="The terms that govern use of the Lozen Advisory website and related materials."
+  />
 
   <section>
     <Wrapper variant="narrow" class="py-12 lg:py-20">
