@@ -195,11 +195,11 @@ const mobileValueClass = "lozen-tracker-mobile-value";
 
   <main class="lozen-tracker-page">
     <section class="lozen-tracker-hero">
-      <Wrapper variant="standard" class="py-14 sm:py-20 lg:py-28">
+      <Wrapper variant="standard" class="pt-40 pb-16 sm:pt-44 sm:pb-20 lg:pt-48 lg:pb-24">
         <div
-          class="grid gap-8 lg:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.55fr)] lg:items-end lg:gap-12"
+          class="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(300px,0.5fr)] lg:items-end lg:gap-12"
         >
-          <div class="max-w-5xl">
+          <div class="max-w-4xl">
             <p
               class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-700"
             >
@@ -207,17 +207,17 @@ const mobileValueClass = "lozen-tracker-mobile-value";
             </p>
 
             <h1
-              class="mt-6 max-w-5xl font-display text-4xl font-normal uppercase leading-[1.02] tracking-[-0.04em] text-base-950 sm:mt-8 sm:text-5xl lg:text-6xl"
+              class="lozen-tracker-hero-title mt-6 max-w-4xl font-display font-normal uppercase text-base-950 sm:mt-8"
             >
               Menopause Legislation Tracker 2026
             </h1>
 
-            <p class="mt-6 max-w-3xl font-sans text-base leading-7 text-base-700 sm:mt-7 sm:text-lg sm:leading-8">
+            <p class="mt-7 max-w-3xl font-sans text-base leading-7 text-base-700 sm:mt-8 sm:text-lg sm:leading-8">
               A federal-and-state audit of menopause legislation by the pathway each bill establishes, the action required before that pathway activates, the data it can collect, and the populations left unmeasured.
             </p>
 
             <p
-              class="mt-7 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500 sm:mt-8"
+              class="mt-8 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500 sm:mt-9"
             >
               Last updated: June 4, 2026
             </p>
@@ -951,4 +951,27 @@ const mobileValueClass = "lozen-tracker-mobile-value";
       </Wrapper>
     </section>
   </main>
+
+<style>
+  .lozen-tracker-hero-title {
+    font-size: clamp(2.25rem, 3.4vw, 3rem);
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  @media (min-width: 1280px) {
+    .lozen-tracker-hero-title {
+      font-size: clamp(2.75rem, 3.3vw, 3.15rem);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .lozen-tracker-hero-title {
+      font-size: clamp(2.25rem, 10vw, 3rem);
+      line-height: 1.06;
+    }
+  }
+</style>
+
 </BaseLayout>
