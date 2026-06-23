@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import InternalPageHero from "@/components/fundations/sections/InternalPageHero.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
@@ -11,41 +12,11 @@ const description = "Read Lozen Advisory’s privacy policy, including how websi
 ---
 
 <BaseLayout title={title} description={description}>
-  <section class="bg-gradient-to-t from-base-200 to-white">
-    <Wrapper variant="standard" class="py-24 lg:py-32">
-      <div class="max-w-3xl">
-        <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-        >
-          Legal
-        </Text>
-
-        <Text
-          tag="h1"
-          variant="displayXL"
-          class="mt-8 uppercase font-display text-base-900"
-        >
-          Privacy Policy
-        </Text>
-
-        <Text
-          tag="p"
-          variant="textBase"
-          class="mt-4 text-base-600 text-balance"
-        >
-          This Privacy Policy explains how Lozen Advisory LLC collects, uses,
-          stores, and protects information submitted through this website and
-          related advisory intake channels.
-        </Text>
-
-        <Text tag="p" variant="textSM" class="mt-6 text-base-500">
-          Effective date: {effectiveDate}
-        </Text>
-      </div>
-    </Wrapper>
-  </section>
+  <InternalPageHero
+    eyebrow="Privacy"
+    title="Privacy Policy"
+    deck="How Lozen Advisory handles information submitted through this website."
+  />
 
   <section>
     <Wrapper variant="narrow" class="py-12 lg:py-20">
