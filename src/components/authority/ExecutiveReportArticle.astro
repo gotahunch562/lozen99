@@ -15,6 +15,9 @@ interface Props {
   reportNumber: string;
   ogImage?: string;
   ogImageAlt?: string;
+  heroImage?: string;
+  heroImageAlt?: string;
+  heroImagePosition?: string;
   previousReport?: ReportLink;
   nextReport?: ReportLink;
   ctaTitle?: string;
@@ -29,6 +32,9 @@ const {
   reportNumber,
   ogImage = "/images/unrecorded-talent-infrastructure-gap.webp",
   ogImageAlt = "A diagnostic visualization of corporate retention infrastructure and the data gaps that remain outside formal reporting systems.",
+  heroImage,
+  heroImageAlt = "",
+  heroImagePosition = "center center",
   previousReport,
   nextReport,
   ctaTitle = "Schedule an Invisible Attrition℠ Retention Risk Audit →",
@@ -37,6 +43,13 @@ const {
 
 const seriesTitle = "The Architecture of Invisible Attrition℠ — Executive Report Series";
 const seriesHref = "/architecture-of-invisible-attrition-series";
+const hasHeroImage = Boolean(heroImage);
+const heroClass = hasHeroImage
+  ? "executive-report__hero executive-report__hero--split"
+  : "executive-report__hero";
+const heroShellClass = hasHeroImage
+  ? "executive-report__shell executive-report__hero-shell executive-report__hero-shell--split"
+  : "executive-report__shell executive-report__hero-shell";
 ---
 
 <BaseLayout
@@ -48,8 +61,9 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
   jsonLd={articleJsonLd}
 >
   <article class="executive-report">
-    <header class="executive-report__hero">
-      <div class="executive-report__shell executive-report__hero-shell">
+    <header class={heroClass}>
+      <div class={heroShellClass}>
+        <div class="executive-report__hero-copy">
         <a href="/blog" class="executive-report__back">← Back to Research</a>
 
         <div class="executive-report__meta" aria-label="Report metadata">
@@ -69,6 +83,21 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
           {previousReport && <a href={previousReport.href}>Previous: {previousReport.label}</a>}
           {nextReport && <a href={nextReport.href}>Next: {nextReport.label}</a>}
         </nav>
+        </div>
+
+        {
+          heroImage && (
+            <figure class="executive-report__hero-figure">
+              <img
+                src={heroImage}
+                alt={heroImageAlt}
+                loading="eager"
+                decoding="async"
+                style={`object-position: ${heroImagePosition};`}
+              />
+            </figure>
+          )
+        }
       </div>
     </header>
 
@@ -117,6 +146,26 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
     padding-bottom: 2.65rem;
   }
 
+  .executive-report__hero--split {
+    border-bottom-color: color-mix(in oklch, var(--color-base-500) 28%, var(--color-base-950));
+    background: linear-gradient(135deg, var(--color-base-950) 0%, var(--color-base-900) 58%, #020a17 100%);
+    color: white;
+  }
+
+  .executive-report__hero-shell--split {
+    display: grid;
+    grid-template-columns: minmax(0, 0.96fr) minmax(21rem, 0.78fr);
+    min-height: clamp(28rem, 46vw, 39rem);
+    gap: clamp(2rem, 5vw, 4.75rem);
+    align-items: center;
+    padding-top: clamp(6.25rem, 9vw, 8rem);
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+  }
+
+  .executive-report__hero-copy {
+    width: min(100%, 56rem);
+  }
+
   .executive-report__back {
     display: inline-flex;
     color: var(--color-base-600);
@@ -130,6 +179,15 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
   .executive-report__back:hover,
   .executive-report__back:focus-visible {
     color: var(--color-base-800);
+  }
+
+  .executive-report__hero--split .executive-report__back {
+    color: color-mix(in oklch, var(--color-base-100) 76%, white);
+  }
+
+  .executive-report__hero--split .executive-report__back:hover,
+  .executive-report__hero--split .executive-report__back:focus-visible {
+    color: var(--color-base-100);
   }
 
   .executive-report__meta {
@@ -151,6 +209,15 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
     color: var(--color-base-900);
   }
 
+  .executive-report__hero--split .executive-report__meta {
+    color: color-mix(in oklch, var(--color-base-100) 78%, white);
+  }
+
+  .executive-report__hero--split .executive-report__meta span:first-child {
+    border-left-color: color-mix(in oklch, var(--color-base-300) 62%, transparent);
+    color: white;
+  }
+
   .executive-report h1 {
     max-width: 62rem;
     margin: 1.15rem 0 0;
@@ -162,6 +229,10 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
     letter-spacing: var(--lozen-article-hero-title-letter-spacing);
   }
 
+  .executive-report__hero--split h1 {
+    color: white;
+  }
+
   .executive-report__deck {
     max-width: 52rem;
     margin: 1rem 0 0;
@@ -169,6 +240,40 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
     font-family: var(--font-sans);
     font-size: var(--lozen-page-hero-deck-size);
     line-height: var(--lozen-page-hero-deck-line-height);
+  }
+
+  .executive-report__hero--split .executive-report__deck {
+    color: color-mix(in oklch, var(--color-base-100) 76%, white);
+  }
+
+  .executive-report__hero--split .executive-report__series-nav a {
+    color: color-mix(in oklch, var(--color-base-100) 84%, white);
+  }
+
+  .executive-report__hero--split .executive-report__series-nav a:hover,
+  .executive-report__hero--split .executive-report__series-nav a:focus-visible {
+    color: white;
+    border-color: white;
+  }
+
+  .executive-report__hero-figure {
+    position: relative;
+    overflow: hidden;
+    min-height: clamp(22rem, 38vw, 34rem);
+    border: 1px solid color-mix(in oklch, var(--color-base-300) 18%, transparent);
+    border-radius: 1.25rem;
+    background: color-mix(in oklch, var(--color-base-900) 72%, black);
+    box-shadow:
+      0 28px 80px rgba(0, 0, 0, 0.36),
+      0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  }
+
+  .executive-report__hero-figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    object-fit: cover;
   }
 
   .executive-report__series-nav {
@@ -202,7 +307,7 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
   }
 
   .executive-report__body {
-    width: min(100%, 60rem);
+    width: min(100%, var(--lozen-prose-content-width));
     margin-inline: auto;
   }
 
@@ -336,6 +441,17 @@ const seriesHref = "/architecture-of-invisible-attrition-series";
     .executive-report__hero-shell {
       padding-top: 1.5rem;
       padding-bottom: 2.35rem;
+    }
+
+    .executive-report__hero-shell--split {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      padding-top: 5.75rem;
+      padding-bottom: 2.75rem;
+    }
+
+    .executive-report__hero-figure {
+      min-height: 18rem;
     }
 
     .executive-report__meta {
