@@ -76,7 +76,7 @@
   /* Standard internal page and article layout scale. */
   --lozen-article-content-width: 60rem;
 
-  /* Standard internal page hero scale, modeled on the accepted Blog hero. */
+  /* Standard internal page hero typography scale. */
   --lozen-page-hero-eyebrow-size: 0.75rem;
   --lozen-page-hero-eyebrow-weight: 700;
   --lozen-page-hero-eyebrow-letter-spacing: 0.16em;
@@ -3279,8 +3279,8 @@ a .lozen-tracker-status-badge:focus-visible {
 
 
 /* Standard internal page hero
-   Use for main non-homepage utility/index pages.
-   Homepage, article pages, and intentional landing pages may use separate templates. */
+   Approved for normal non-homepage utility/index pages.
+   Homepage, NarrativePage, article/report, and special-format pages use separate templates. */
 .lozen-internal-hero {
   position: relative;
   overflow: hidden;
