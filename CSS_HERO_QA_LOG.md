@@ -39,3 +39,17 @@ Next candidates to evaluate against this standard:
 - `/retention-calculator/`
 - `/menopause-legislation-tracker/`
 - `/women-lawyers-conference/`
+
+## Approved additional page
+
+`/news-press/` has also been fixed and now matches the standard internal hero direction.
+
+Approved standard set now includes:
+
+- `/about-ai/`
+- `/faq/`
+- `/request-briefing/`
+- `/privacy-policy/`
+- `/terms-of-service/`
+- `/tools-resources/`
+- `/news-press/`
