@@ -1,6 +1,7 @@
 ---
 // Foundations
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import InternalPageHero from "@/components/fundations/sections/InternalPageHero.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 // Icons
@@ -129,33 +130,11 @@ const description = "Answers to common questions about Lozen Advisory, strategic
 ---
 
 <BaseLayout title={title} description={description}>
-  <section class="bg-gradient-to-t from-base-200 to-white">
-    <Wrapper variant="standard" class="py-24 lg:py-32">
-      <div class="max-w-3xl">
-        <Text
-          tag="span"
-          variant="textSM"
-          class="pl-4 font-medium uppercase border-l text-base-900 font-display border-accent-500"
-        >
-          Support
-        </Text>
-        <Text
-          tag="h1"
-          variant="displayXL"
-          class="mt-8 uppercase font-display text-base-900 text-balance"
-        >
-          Frequently Asked Questions
-        </Text>
-        <Text
-          tag="p"
-          variant="textBase"
-          class="mt-4 text-base-600 text-balance"
-        >
-          Common questions about Lozen Advisory services, frameworks, and how the work is structured.
-        </Text>
-      </div>
-    </Wrapper>
-  </section>
+  <InternalPageHero
+    eyebrow="FAQ"
+    title="Frequently Asked Questions"
+    deck="Answers to common questions about Lozen Advisory, strategic briefings, research, and advisory work."
+  />
   <section>
     <Wrapper variant="standard" class="py-12 lg:py-24">
       <div class="space-y-24 gap-8 lg:gap-1 divide-y divide-base-200">
