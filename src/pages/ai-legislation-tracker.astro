@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import AILegislationWorkflow from "@/components/ai-tracker/AILegislationWorkflow.jsx";
+import { createDatasetJsonLd } from "@/lib/seo/jsonLd";
 
 const title = "Governance Maps:AI LegiRisk | Lozen Advisory";
 const description =
@@ -11,9 +12,33 @@ const pageDates = {
   dateModified: "2026-06-23",
 };
 
+const trackerJsonLd = createDatasetJsonLd({
+  name: title,
+  description,
+  href: "/ai-legislation-tracker/",
+  datePublished: pageDates.datePublished,
+  dateModified: pageDates.dateModified,
+  creatorName: "Lozen Advisory LLC",
+  keywords: [
+    "AI legislation",
+    "AI governance",
+    "AI accountability",
+    "AI LegiRisk",
+    "Name Standard",
+    "board governance",
+    "human accountability",
+    "enterprise AI risk",
+  ],
+});
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="/ai-legislation-tracker/"
+  dateModified={pageDates.dateModified}
+  jsonLd={trackerJsonLd}
+>
   <main class="bg-base-50 text-base-950">
     <section class="lozen-tracker-hero">
       <div class="mx-auto max-w-7xl px-4 pt-40 pb-16 sm:px-6 sm:pt-44 sm:pb-20 lg:px-8 lg:pt-48 lg:pb-24">
