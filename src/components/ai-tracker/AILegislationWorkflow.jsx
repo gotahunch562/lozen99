@@ -14,7 +14,7 @@ const lozenGridTheme = themeQuartz
   .withParams({
     accentColor: "#0f172a",
     backgroundColor: "#ffffff",
-    borderColor: "rgba(15, 23, 42, 0.14)",
+    borderColor: "rgba(71, 85, 105, 0.3)"
     browserColorScheme: "light",
     columnBorder: true,
     fontFamily:
