@@ -58,7 +58,7 @@ const trackerRows = [
     "nameStandardSignal": "Explicit human review required; human reconsideration right",
     "liveDate": "Jan 1, 2027",
     "sourceUrl": "https://leg.colorado.gov/bills/sb26-189",
-    "updateNote": "Legislative update: Colorado repealed and replaced the prior Colorado AI Act / CAIA before it took effect."
+    "updateNote": "Legislative update: June 2026. Colorado repealed and replaced the prior Colorado AI Act / CAIA before it took effect."
   },
   {
     "id": "canada-directive-on-automated-decision-making",
