@@ -648,11 +648,12 @@ export default function AILegislationWorkflow() {
     <span>Name Standard℠ Signal:</span> {selectedRow.nameStandardSignal}
   </p>
 
-  {selectedRow.updateNote ? (
-    <p>
-      <span>Update Note:</span> {selectedRow.updateNote}
-    </p>
-  ) : null}
+{selectedRow.updateNote ? (
+  <div>
+    <dt>Update Note</dt>
+    <dd>{selectedRow.updateNote}</dd>
+  </div>
+) : null}
 
   <p>
     <span>Source:</span>{" "}
