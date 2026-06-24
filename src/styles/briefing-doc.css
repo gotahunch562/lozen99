@@ -1,0 +1,1145 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Inter+Tight:ital,wght@0,400..800;1,400..800&family=JetBrains+Mono:wght@400..800&display=swap");
+
+/*
+  AI LegiRisk Briefing Document System
+
+  Current scope:
+  - Board Executive Briefing
+  - Name Standard℠ Blueprint
+  - Enterprise Governance Analysis
+
+  Design standard:
+  - One-column report layout.
+  - Centered report body.
+  - Accessible 18px body baseline for board / executive readers.
+  - No sidebar reserve.
+  - No At-a-glance card system.
+  - No related-report card system.
+  - Enterprise Question uses a thick bordered block, not a filled dark block.
+  - Enterprise exposure content supports a two-column architecture:
+    left = operating model + management examination;
+    right = control visibility questions.
+  - Visual style should read as a Lozen Advisory governance-intelligence artifact,
+    not a law-firm memo.
+*/
+
+:root {
+  --briefing-font-display: "Fraunces", Georgia, serif;
+  --briefing-font-body: "Inter Tight", Arial, sans-serif;
+  --briefing-font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+  --briefing-page-max: 82rem;
+
+  --briefing-ink: #06172f;
+  --briefing-ink-strong: #031022;
+  --briefing-muted: #14294a;
+  --briefing-muted-2: #425873;
+
+  --briefing-paper: #ffffff;
+  --briefing-paper-warm: #fbfaf6;
+  --briefing-surface: #ffffff;
+  --briefing-surface-muted: #f7f9fc;
+  --briefing-editorial-surface: #fbfaf6;
+
+  --briefing-navy: #06172f;
+  --briefing-navy-2: #0b1f3d;
+
+  --briefing-border: #d8e1ee;
+  --briefing-border-strong: #bdcadb;
+  --briefing-rule-soft: rgba(6, 23, 47, 0.14);
+  --briefing-rule-warm: rgba(90, 58, 26, 0.28);
+
+  --briefing-accent: #0b1f3d;
+  --briefing-accent-dark: #06172f;
+  --briefing-bronze: #5a3a1a;
+
+  --briefing-shadow-flat: 0 1px 0 rgba(6, 23, 47, 0.06);
+}
+
+/* Page shell */
+
+.briefing-document {
+  min-height: 100vh;
+  background: var(--briefing-paper);
+  color: var(--briefing-ink);
+  font-family: var(--briefing-font-body);
+  font-size: 18px;
+  line-height: 1.64;
+  letter-spacing: -0.005em;
+}
+
+.briefing-document * {
+  box-sizing: border-box;
+}
+
+.briefing-document a {
+  color: inherit;
+  text-decoration-color: rgba(6, 23, 47, 0.28);
+  text-underline-offset: 0.22em;
+}
+
+.briefing-document a:hover {
+  color: var(--briefing-accent-dark);
+  text-decoration-color: var(--briefing-accent);
+}
+
+/* Layout */
+
+.briefing-page {
+  width: min(100%, var(--briefing-page-max));
+  margin: 0 auto;
+  padding: 5.75rem 32px 4.25rem;
+}
+
+.briefing-page-grid {
+  display: block;
+}
+
+.briefing-main {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Masthead */
+
+.briefing-masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--briefing-rule-soft);
+  padding-bottom: 1.05rem;
+  margin-bottom: 2.75rem;
+}
+
+.briefing-masthead-name {
+  margin: 0;
+  font-family: var(--briefing-font-display);
+  font-variation-settings: "opsz" 72, "SOFT" 18, "WONK" 0;
+  font-size: 1.125rem;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  color: var(--briefing-ink-strong);
+}
+
+.briefing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.briefing-doc-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 2.35rem;
+  border: 1px solid var(--briefing-border-strong);
+  background: transparent;
+  color: var(--briefing-ink);
+  padding: 0.58rem 0.85rem;
+  font-family: var(--briefing-font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.briefing-doc-action:hover {
+  border-color: var(--briefing-accent);
+}
+
+.briefing-doc-action.is-primary {
+  border-color: var(--briefing-accent);
+  background: var(--briefing-accent);
+  color: #ffffff;
+}
+
+.briefing-doc-action.is-close {
+  border-color: var(--briefing-border);
+  color: var(--briefing-muted-2);
+}
+
+.briefing-doc-action svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Utility bar */
+
+.briefing-util-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: 1px solid var(--briefing-border);
+  background: var(--briefing-surface);
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 2.15rem;
+}
+
+.briefing-util-position {
+  font-family: var(--briefing-font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--briefing-muted-2);
+  padding-left: 0.6rem;
+  border-left: 1px solid var(--briefing-border);
+}
+
+/* Typography */
+
+.briefing-document h1,
+.briefing-document h2,
+.briefing-document h3,
+.briefing-doc-header-title,
+.briefing-section-title,
+.briefing-card-title {
+  font-family: var(--briefing-font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0;
+  color: var(--briefing-ink-strong);
+}
+
+.briefing-doc-header-title {
+  margin: 0;
+  max-width: 64rem;
+  font-size: clamp(3.25rem, 5.65vw, 5.85rem);
+  font-weight: 640;
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+}
+
+.briefing-section-title {
+  margin: 0;
+  font-size: clamp(1.7rem, 2.25vw, 2.35rem);
+  font-weight: 620;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.briefing-section-title-only {
+  max-width: 52rem;
+}
+
+.briefing-card-title {
+  margin: 0.45rem 0 0;
+  font-size: 1.18rem;
+  font-weight: 620;
+  line-height: 1.18;
+  letter-spacing: -0.012em;
+}
+
+.briefing-summary-lead,
+.briefing-body,
+.briefing-clean-list li,
+.briefing-question-list li,
+.briefing-doc-header-summary p,
+.briefing-doc-header-gap p,
+.briefing-conclusion-flat-text p {
+  font-size: 1rem;
+  line-height: 1.64;
+}
+
+.briefing-summary-lead {
+  margin: 0;
+  max-width: 64rem;
+  font-family: var(--briefing-font-body);
+  font-weight: 400;
+  color: var(--briefing-muted);
+}
+
+.briefing-body {
+  margin: 0;
+  color: var(--briefing-muted);
+}
+
+.briefing-body-small {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--briefing-muted);
+}
+
+.briefing-eyebrow,
+.briefing-section-number,
+.briefing-meta {
+  font-family: var(--briefing-font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.briefing-eyebrow,
+.briefing-section-number {
+  margin: 0 0 0.75rem;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  letter-spacing: 0.14em;
+  color: var(--briefing-accent-dark);
+}
+
+.briefing-section-number {
+  color: var(--briefing-muted-2);
+}
+
+.briefing-meta {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--briefing-muted-2);
+}
+
+/* Report header */
+
+.briefing-doc-header {
+  margin-bottom: 2.45rem;
+  padding-bottom: 2.15rem;
+  border-bottom: 1px solid var(--briefing-rule-soft);
+}
+
+.briefing-doc-header-summary {
+  margin-top: 1.35rem;
+}
+
+.briefing-doc-header-summary p {
+  margin: 0;
+  max-width: 66rem;
+  color: var(--briefing-muted);
+  font-size: 1.08rem;
+  line-height: 1.68;
+}
+
+.briefing-doc-header-summary-with-icon {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.95rem;
+  align-items: start;
+}
+
+.briefing-summary-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  margin-top: 0.2rem;
+  color: var(--briefing-bronze);
+}
+
+.briefing-summary-icon svg {
+  width: 1.65rem;
+  height: 1.65rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.briefing-doc-header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: 1.65rem;
+}
+
+.briefing-doc-header-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 13.5rem;
+  padding: 0.1rem 1.65rem 0.1rem 0;
+  margin-right: 1.65rem;
+  border-right: 1px solid var(--briefing-rule-soft);
+}
+
+.briefing-doc-header-meta-item:last-child {
+  border-right: 0;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.briefing-doc-header-meta-label {
+  font-family: var(--briefing-font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--briefing-muted-2);
+}
+
+.briefing-doc-header-meta-value {
+  font-size: 1.03rem;
+  font-weight: 760;
+  line-height: 1.35;
+  color: var(--briefing-ink);
+}
+
+.briefing-doc-header-meta-sub {
+  display: block;
+  max-width: 22rem;
+  margin-top: 0.2rem;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  color: var(--briefing-muted-2);
+}
+
+.briefing-doc-header-gap {
+  margin-top: 1.2rem;
+  padding-top: 1.05rem;
+  border-top: 1px solid var(--briefing-border);
+}
+
+.briefing-doc-header-gap p {
+  margin: 0.35rem 0 0;
+  max-width: 66rem;
+  color: var(--briefing-muted);
+}
+
+/* Enterprise Question / bordered question block */
+
+.briefing-hero,
+.briefing-hero-flat {
+  display: block;
+  margin-bottom: 2.15rem;
+}
+
+.briefing-hero-flat > div {
+  max-width: none;
+}
+
+.briefing-question-card,
+.briefing-question {
+  border: 3px solid var(--briefing-navy);
+  background: var(--briefing-paper);
+  color: var(--briefing-ink);
+  padding: 2rem 2.2rem;
+}
+
+.briefing-question-card .briefing-eyebrow,
+.briefing-question .briefing-eyebrow {
+  color: var(--briefing-muted-2);
+}
+
+.briefing-question blockquote,
+.briefing-question-card blockquote,
+.briefing-question-card p:last-child {
+  margin: 0;
+  max-width: 68rem;
+  font-family: var(--briefing-font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0;
+  font-size: clamp(1.85rem, 2.75vw, 2.75rem);
+  font-weight: 620;
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+  color: var(--briefing-ink-strong);
+}
+
+/* Sections */
+
+.briefing-section {
+  border-top: 1px solid var(--briefing-border-strong);
+  padding-top: 1.35rem;
+  margin-top: 2rem;
+}
+
+.briefing-primary-gap {
+  margin-top: 2.25rem;
+  margin-bottom: 2.35rem;
+}
+
+.briefing-primary-gap .briefing-section-title {
+  max-width: 50rem;
+  font-size: clamp(1.9rem, 2.65vw, 2.85rem);
+}
+
+.briefing-exposure-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  gap: 4.75rem;
+  align-items: start;
+  border-top: 1px solid var(--briefing-rule-soft);
+  padding-top: 2.35rem;
+  margin-top: 2.6rem;
+}
+
+.briefing-exposure-column {
+  min-width: 0;
+}
+
+.briefing-exposure-column .briefing-section-title {
+  margin-bottom: 1.25rem;
+}
+
+.briefing-exposure-kicker {
+  margin: 0 0 1rem;
+  font-family: var(--briefing-font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--briefing-bronze);
+}
+
+.briefing-exposure-title {
+  margin: 0 0 1.35rem;
+  font-family: var(--briefing-font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0;
+  font-size: clamp(1.5rem, 1.85vw, 2rem);
+  font-weight: 630;
+  line-height: 1.12;
+  letter-spacing: -0.018em;
+  color: var(--briefing-ink-strong);
+}
+
+.briefing-exposure-subhead {
+  margin: 1.45rem 0 0.85rem;
+  font-family: var(--briefing-font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--briefing-muted-2);
+}
+
+.briefing-source-note {
+  margin-top: 1.25rem;
+  padding: 1rem 1.15rem;
+  border-left: 2px solid var(--briefing-border-strong);
+  background: var(--briefing-surface-muted);
+}
+
+.briefing-source-note p {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--briefing-muted);
+}
+
+/* Lists */
+
+.briefing-clean-list,
+.briefing-dash-list,
+.briefing-control-list,
+.briefing-question-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.briefing-clean-list {
+  gap: 0.75rem;
+}
+
+.briefing-clean-list li {
+  border-top: 1px solid var(--briefing-border);
+  padding-top: 0.75rem;
+  color: var(--briefing-muted);
+}
+
+.briefing-clean-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.briefing-dash-list {
+  gap: 0.95rem;
+}
+
+.briefing-dash-list li {
+  display: grid;
+  grid-template-columns: 1.35rem minmax(0, 1fr);
+  gap: 0.7rem;
+  color: var(--briefing-muted);
+  font-size: 1.03rem;
+  line-height: 1.62;
+}
+
+.briefing-dash-list li::before {
+  content: "—";
+  color: var(--briefing-bronze);
+  font-weight: 700;
+}
+
+.briefing-control-list,
+.briefing-question-list {
+  gap: 0.95rem;
+}
+
+.briefing-control-list li,
+.briefing-question-list li {
+  position: relative;
+  border: 0;
+  border-left: 3px solid rgba(90, 58, 26, 0.42);
+  background: transparent;
+  padding: 0.12rem 0 0.12rem 1.2rem;
+  color: var(--briefing-muted);
+  font-size: 1.03rem;
+  line-height: 1.62;
+}
+
+.briefing-question-list {
+  counter-reset: briefing-question;
+}
+
+.briefing-question-list li::before {
+  counter-increment: briefing-question;
+  content: "Q" counter(briefing-question);
+  display: inline-block;
+  margin-right: 0.6rem;
+  font-family: var(--briefing-font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--briefing-muted-2);
+}
+
+.briefing-control-list li::before {
+  content: none;
+}
+
+/* Cards */
+
+.briefing-card {
+  border: 1px solid var(--briefing-border);
+  background: var(--briefing-surface);
+  padding: 1.15rem;
+  box-shadow: var(--briefing-shadow-flat);
+}
+
+.briefing-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.briefing-card-grid.is-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.briefing-card-grid.is-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Enterprise relevance legacy section */
+
+.briefing-enterprise-relevance {
+  margin-inline: calc(50% - 50vw);
+  padding: 4.8rem max(32px, calc((100vw - var(--briefing-page-max)) / 2 + 32px)) 4.9rem;
+  border-top: 0;
+  background: var(--briefing-navy);
+  color: #ffffff;
+}
+
+.briefing-enterprise-relevance .briefing-eyebrow,
+.briefing-enterprise-relevance .briefing-section-number {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.briefing-enterprise-relevance .briefing-section-title,
+.briefing-enterprise-relevance .briefing-card-title {
+  color: #ffffff;
+}
+
+.briefing-enterprise-relevance .briefing-summary-lead,
+.briefing-enterprise-relevance .briefing-body-small {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.briefing-enterprise-relevance .briefing-summary-lead {
+  max-width: 60rem;
+  margin-bottom: 2.85rem;
+  font-size: 1.15rem;
+  line-height: 1.58;
+}
+
+.briefing-enterprise-relevance .briefing-card-grid {
+  gap: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.briefing-enterprise-relevance .briefing-card {
+  min-height: 9.5rem;
+  border: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  padding: 1.65rem 1.9rem 0 1.9rem;
+  box-shadow: none;
+}
+
+.briefing-enterprise-relevance .briefing-card:last-child {
+  border-right: 0;
+}
+
+/* Conclusion / close briefing standard */
+
+.briefing-conclusion-flat {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  border-top: 1px solid var(--briefing-rule-soft);
+  border-bottom: 1px solid var(--briefing-rule-soft);
+  background: var(--briefing-paper);
+  padding: 2.6rem 0;
+  margin-top: 0;
+}
+
+.briefing-conclusion-flat-text p {
+  margin: 1rem 0 0;
+  max-width: 62rem;
+  color: var(--briefing-muted);
+}
+
+.briefing-conclusion-flat-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.briefing-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  border: 1px solid var(--briefing-border-strong);
+  background: transparent;
+  color: var(--briefing-ink);
+  padding: 0.8rem 1.2rem;
+  font-family: var(--briefing-font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.briefing-cta-button.is-primary {
+  border-color: var(--briefing-navy);
+  background: var(--briefing-navy);
+  color: #ffffff;
+}
+
+.briefing-cta-button.is-secondary {
+  border-color: var(--briefing-border);
+  background: #ffffff;
+  color: var(--briefing-ink);
+}
+
+.briefing-cta-button:hover {
+  transform: translateY(-1px);
+}
+
+/* Footer */
+
+.briefing-footer-note {
+  border-top: 1px solid var(--briefing-border);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.briefing-footer-note .briefing-body-small {
+  max-width: 72rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--briefing-muted-2);
+}
+
+/*
+  Page nav remains available for multi-page reports such as Name Standard℠.
+  Enterprise should not render bottom page nav after the slug cleanup.
+*/
+
+.briefing-page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: 1px solid var(--briefing-border);
+  background: var(--briefing-surface-muted);
+  padding: 0.75rem 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.briefing-page-jump {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.briefing-page-jump a {
+  font-family: var(--briefing-font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--briefing-ink);
+  text-decoration: none;
+  padding: 0.45rem 0.72rem;
+  border: 1px solid var(--briefing-border);
+  background: var(--briefing-surface);
+}
+
+.briefing-page-jump a.is-active {
+  background: var(--briefing-accent);
+  border-color: var(--briefing-accent);
+  color: #ffffff;
+}
+
+.briefing-page-nav-meta {
+  font-family: var(--briefing-font-mono);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--briefing-muted-2);
+}
+
+/* Visibility helpers */
+
+.print-only {
+  display: none;
+}
+
+.screen-only {
+  display: block;
+}
+
+/* Print behavior */
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0;
+  }
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    min-width: 0;
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .briefing-document {
+    min-height: auto;
+    background: #ffffff !important;
+    color: var(--briefing-ink);
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+
+  .briefing-page {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0.58in 0.62in 0.52in;
+  }
+
+  .briefing-page-grid,
+  .briefing-main,
+  .briefing-hero,
+  .briefing-hero-flat {
+    display: block;
+  }
+
+  .briefing-masthead {
+    margin-bottom: 0.28in;
+    padding-bottom: 0.12in;
+  }
+
+  .briefing-masthead-name {
+    font-size: 11pt;
+  }
+
+  .briefing-doc-header {
+    margin-bottom: 0.22in;
+    padding-bottom: 0.18in;
+  }
+
+  .briefing-doc-header-title,
+  .briefing-document h1,
+  .briefing-title {
+    max-width: none;
+    font-size: 25pt;
+    line-height: 1.02;
+    letter-spacing: -0.018em;
+  }
+
+  .briefing-document h2,
+  .briefing-section-title {
+    font-size: 16pt;
+    line-height: 1.08;
+  }
+
+  .briefing-document h3,
+  .briefing-card-title {
+    font-size: 12pt;
+    line-height: 1.18;
+  }
+
+  .briefing-doc-header-summary p,
+  .briefing-summary-lead,
+  .briefing-body,
+  .briefing-body-small,
+  .briefing-clean-list li,
+  .briefing-question-list li {
+    font-size: 9.8pt;
+    line-height: 1.46;
+  }
+
+  .briefing-eyebrow,
+  .briefing-section-number,
+  .briefing-doc-header-meta-label,
+  .briefing-util-position,
+  .briefing-page-nav-meta {
+    font-size: 7pt;
+    letter-spacing: 0.11em;
+  }
+
+  .briefing-doc-header-meta {
+    gap: 0.18in;
+    margin-top: 0.12in;
+  }
+
+  .briefing-doc-header-meta-value {
+    font-size: 9.8pt;
+  }
+
+  .briefing-question,
+  .briefing-question-card {
+    margin: 0.18in 0 0.2in;
+    padding: 0.14in;
+    border: 2px solid var(--briefing-navy);
+  }
+
+  .briefing-question blockquote,
+  .briefing-question-card blockquote,
+  .briefing-question-card p:last-child {
+    font-family: var(--briefing-font-body);
+    font-size: 13pt;
+    line-height: 1.28;
+    letter-spacing: -0.005em;
+  }
+
+  .briefing-exposure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.28in;
+    margin-top: 0.24in;
+    padding-top: 0.16in;
+  }
+
+  .briefing-section {
+    margin-top: 0.28in;
+    padding-top: 0.18in;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .briefing-clean-list,
+  .briefing-question-list {
+    gap: 0.08in;
+  }
+
+  .briefing-question-list li {
+    padding: 0.11in 0.14in 0.11in 0.42in;
+  }
+
+  .briefing-question-list li::before {
+    top: 0.12in;
+    left: 0.14in;
+    font-size: 7pt;
+  }
+
+  .briefing-card,
+  .briefing-source-note {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .briefing-card-grid,
+  .briefing-card-grid.is-three,
+  .briefing-card-grid.is-four {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.08in;
+  }
+
+  .briefing-enterprise-relevance {
+    margin-inline: 0;
+    padding: 0.28in 0;
+    border-top: 1px solid var(--briefing-border-strong);
+    background: #ffffff !important;
+    color: var(--briefing-ink);
+  }
+
+  .briefing-enterprise-relevance .briefing-eyebrow,
+  .briefing-enterprise-relevance .briefing-section-number,
+  .briefing-enterprise-relevance .briefing-section-title,
+  .briefing-enterprise-relevance .briefing-card-title,
+  .briefing-enterprise-relevance .briefing-summary-lead,
+  .briefing-enterprise-relevance .briefing-body-small {
+    color: var(--briefing-ink) !important;
+  }
+
+  .briefing-enterprise-relevance .briefing-summary-lead {
+    margin-bottom: 0.18in;
+    font-size: 9.8pt;
+  }
+
+  .briefing-enterprise-relevance .briefing-card {
+    min-height: auto;
+    border: 1px solid var(--briefing-border);
+    padding: 0.12in;
+  }
+
+  .briefing-conclusion-flat {
+    display: block;
+    margin-top: 0.28in;
+    padding: 0.18in 0;
+    border-top: 1px solid var(--briefing-border-strong);
+    border-bottom: 1px solid var(--briefing-border-strong);
+    background: transparent;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .briefing-footer-note {
+    margin-top: 0.14in;
+    padding-top: 0.1in;
+  }
+
+  .briefing-footer-note .briefing-body-small {
+    font-size: 8pt;
+    line-height: 1.35;
+  }
+
+  .briefing-actions,
+  .briefing-util-bar,
+  .briefing-doc-action,
+  .briefing-conclusion-flat-actions,
+  .briefing-page-nav,
+  button,
+  nav,
+  .site-header,
+  .site-footer,
+  .no-print,
+  .screen-only {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  a[href]::after {
+    content: "";
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 980px) {
+  .briefing-page {
+    padding: 4.5rem 24px 3.5rem;
+  }
+
+  .briefing-masthead {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .briefing-actions {
+    justify-content: flex-start;
+  }
+
+  .briefing-doc-header-title {
+    max-width: none;
+  }
+
+  .briefing-card-grid,
+  .briefing-card-grid.is-three,
+  .briefing-card-grid.is-four {
+    grid-template-columns: 1fr;
+  }
+
+  .briefing-enterprise-relevance {
+    padding-block: 3.5rem;
+  }
+
+  .briefing-enterprise-relevance .briefing-card {
+    border-right: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1.35rem 0;
+  }
+
+  .briefing-enterprise-relevance .briefing-card:first-child {
+    border-top: 0;
+  }
+
+  .briefing-conclusion-flat,
+  .briefing-exposure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .briefing-question,
+  .briefing-question-card {
+    padding: 1.45rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .briefing-document {
+    font-size: 17px;
+  }
+
+  .briefing-page {
+    padding-inline: 18px;
+  }
+
+  .briefing-util-bar {
+    display: block;
+  }
+
+  .briefing-doc-header-meta {
+    gap: 1rem;
+  }
+
+  .briefing-doc-header-meta-item {
+    min-width: 100%;
+  }
+
+  .briefing-doc-header-title {
+    font-size: clamp(2.35rem, 13vw, 3.45rem);
+  }
+
+  .briefing-question blockquote,
+  .briefing-question-card blockquote,
+  .briefing-question-card p:last-child {
+    font-size: clamp(1.7rem, 8vw, 2.35rem);
+  }
+}
