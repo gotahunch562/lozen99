@@ -7,34 +7,22 @@ const description =
   "Tracking AI legislation, accountability signals, and governance exposure for Board of Directors. Strengthen your impact in the boardroom.";
 ---
 
-<BaseLayout title={title} description={description} hideNavigation={true}>
+<BaseLayout title={title} description={description}>
   <main class="bg-base-50 text-base-950">
-    <section class="bg-lozen-blue-950 text-white">
-     <div class="mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-32 lg:px-8 lg:pb-24 lg:pt-36">
-        <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(260px,320px)] lg:items-center">
-          <div>
-            <p class="border-l-2 border-[#f2d300] pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#f2d300]">
-             The Name Standard℠ Governance Maps
+    <section class="lozen-tracker-hero">
+      <div class="mx-auto max-w-7xl px-4 pt-40 pb-16 sm:px-6 sm:pt-44 sm:pb-20 lg:px-8 lg:pt-48 lg:pb-24">
+        <div class="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(300px,0.5fr)] lg:items-center lg:gap-12">
+          <div class="max-w-4xl">
+            <p class="border-l border-accent-500 pl-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-700">
+              The Name Standard℠ Governance Maps
             </p>
 
-           <h1 class="mt-6 max-w-4xl lozen-type-page-title text-white">
-              Has your board built oversight for AI —
+            <h1 class="lozen-ai-tracker-hero-title mt-6 max-w-4xl font-display font-normal uppercase text-base-950 sm:mt-8">
+              Has your board built oversight for AI — or just assumed the old processes cover it?
             </h1>
 
-            <p class="mt-3 max-w-4xl lozen-type-page-title-compact text-base-200">
-              or just assumed the old processes cover it?
-            </p>
-
-            <p class="mt-6 max-w-4xl font-sans text-lg leading-8 text-base-200 sm:text-xl sm:leading-9">
-              Most AI rules name an entity: a provider, sponsor, agency, or covered organization — not a person.
-            </p>
-
-            <p class="mt-5 max-w-4xl font-sans text-lg leading-8 text-base-200 sm:text-xl sm:leading-9">
-              Can management identify the person whose name is already on every AI-assisted decision — the one who would have to answer for it?
-            </p>
-
-            <p class="mt-5 max-w-4xl font-sans text-lg leading-8 text-base-200 sm:text-xl sm:leading-9">
-              The Name Standard℠ tests whether that person actually exists.
+            <p class="mt-7 max-w-3xl font-sans text-base leading-7 text-base-700 sm:mt-8 sm:text-lg sm:leading-8">
+              Most AI rules name an entity: a provider, sponsor, agency, or covered organization — not a person. Can management identify the person whose name is already on every AI-assisted decision — the one who would have to answer for it? The Name Standard℠ tests whether that person actually exists.
             </p>
 
             <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
@@ -47,25 +35,29 @@ const description =
 
               <a
                 href="/ai-workforce-materiality-briefing/"
-                class="font-sans text-sm font-semibold text-[#f2d300] underline-offset-4 hover:underline"
+                class="font-sans text-sm font-semibold text-accent-700 underline-offset-4 hover:underline"
               >
                 Request a governance briefing →
               </a>
             </div>
           </div>
 
-         <aside class="relative overflow-hidden rounded-2xl border border-base-300 bg-white p-7 shadow-2xl ring-1 ring-base-950/5 lg:p-8">
-            <span aria-hidden="true" class="absolute inset-x-0 top-0 h-1 bg-[#f2d300]"></span>
+          <aside class="lozen-tracker-insight-card p-5 sm:p-6 lg:rounded-3xl">
+            <div
+              aria-hidden="true"
+              class="absolute inset-x-0 top-0 h-1 bg-accent-500"
+            >
+            </div>
 
-            <p class="border-l-2 border-[#f2d300] pl-4 font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-[#857400]">
+            <p class="font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-500">
               Nasdaq Governance Pulse
             </p>
 
-            <p class="lozen-stat-figure mt-7 text-center">
+            <p class="mt-5 font-display text-[4.5rem] font-normal leading-none tracking-[-0.06em] text-base-950 sm:text-[5.5rem] lg:text-[6rem]">
               20%
             </p>
 
-            <p class="mt-5 font-sans text-sm leading-6 text-base-700">
+            <p class="mt-4 font-sans text-sm leading-6 text-base-700">
               Nearly 20% of surveyed organizations say AI is not being discussed at the board level.
             </p>
           </aside>
@@ -316,6 +308,27 @@ const description =
 </script>
 
 <style>
+  .lozen-ai-tracker-hero-title {
+    font-size: clamp(2.25rem, 3.4vw, 3rem);
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  @media (min-width: 1280px) {
+    .lozen-ai-tracker-hero-title {
+      font-size: clamp(2.75rem, 3.3vw, 3.15rem);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .lozen-ai-tracker-hero-title {
+      font-size: clamp(2.25rem, 10vw, 3rem);
+      line-height: 1.06;
+    }
+  }
+
+
   .map-tab-button {
     background: transparent;
   }
