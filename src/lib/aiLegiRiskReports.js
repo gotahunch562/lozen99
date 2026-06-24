@@ -1,4 +1,49 @@
-import { supabase, hasSupabaseConfig } from "./supabaseClient";
+const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+
+const hasSupabaseConfig = Boolean(supabaseUrl && supabaseAnonKey);
+
+const supabaseHeaders = {
+  apikey: supabaseAnonKey || "",
+  Authorization: `Bearer ${supabaseAnonKey || ""}`,
+  "Content-Type": "application/json",
+};
+
+function buildRestUrl(table, params) {
+  const url = new URL(`${supabaseUrl}/rest/v1/${table}`);
+
+  Object.entries(params).forEach(([key, value]) => {
+    url.searchParams.set(key, value);
+  });
+
+  return url.toString();
+}
+
+async function fetchSingleRow(table, params) {
+  if (!hasSupabaseConfig) {
+    console.warn("Supabase config missing. AI LegiRisk report not loaded.");
+    return null;
+  }
+
+  const response = await fetch(buildRestUrl(table, params), {
+    method: "GET",
+    headers: supabaseHeaders,
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    console.error(`Supabase REST error for ${table}:`, response.status, errorText);
+    return null;
+  }
+
+  const rows = await response.json();
+
+  if (!Array.isArray(rows) || rows.length === 0) {
+    return null;
+  }
+
+  return rows[0];
+}
 
 export function formatJurisdiction(law) {
   return law.region || law.jurisdiction || "Jurisdiction not specified";
@@ -29,71 +74,26 @@ export function compactDate(law) {
 export async function getAiLegiRiskReportBySlug(slug) {
   if (!slug) return null;
 
-  if (!hasSupabaseConfig) {
-    console.warn("Supabase config missing. AI LegiRisk report not loaded.");
-    return null;
-  }
-
-  const { data: record, error: recordError } = await supabase
-    .from("ai_legislation_records")
-    .select(`
-      id,
-      slug,
-      law_code,
-      rule_name,
-      short_name,
-      jurisdiction,
-      region,
-      country,
-      status,
-      sector_scope,
-      impact_area,
-      name_standard_signal,
-      effective_date,
-      live_date_label,
-      source_url,
-      source_label,
-      verified_summary,
-      is_published
-    `)
-    .eq("slug", slug)
-    .eq("is_published", true)
-    .maybeSingle();
-
-  if (recordError) {
-    console.error("Error loading AI legislation record:", recordError);
-    return null;
-  }
+  const record = await fetchSingleRow("ai_legislation_records", {
+    select:
+      "id,slug,law_code,rule_name,short_name,jurisdiction,region,country,status,sector_scope,impact_area,name_standard_signal,effective_date,live_date_label,source_url,source_label,verified_summary,is_published",
+    slug: `eq.${slug}`,
+    is_published: "eq.true",
+    limit: "1",
+  });
 
   if (!record) {
     console.warn(`No published AI legislation record found for slug: ${slug}`);
     return null;
   }
 
-  const { data: profile, error: profileError } = await supabase
-    .from("enterprise_blueprint_profiles")
-    .select(`
-      enterprise_exposure,
-      primary_governance_gap,
-      enterprise_question,
-      operating_model_exposure,
-      governance_cadence_analysis,
-      vendor_embedded_ai_exposure,
-      evidentiary_record_analysis,
-      control_visibility_question_1,
-      control_visibility_question_2,
-      recurring_cost_question,
-      next_step_line,
-      is_published
-    `)
-    .eq("legislation_record_id", record.id)
-    .eq("is_published", true)
-    .maybeSingle();
-
-  if (profileError) {
-    console.error("Error loading Enterprise Blueprint profile:", profileError);
-    return null;
-  }
+  const profile = await fetchSingleRow("enterprise_blueprint_profiles", {
+    select:
+      "enterprise_exposure,primary_governance_gap,enterprise_question,operating_model_exposure,governance_cadence_analysis,vendor_embedded_ai_exposure,evidentiary_record_analysis,control_visibility_question_1,control_visibility_question_2,recurring_cost_question,next_step_line,is_published",
+    legislation_record_id: `eq.${record.id}`,
+    is_published: "eq.true",
+    limit: "1",
+  });
 
   if (!profile) {
     console.warn(`No published Enterprise Blueprint profile found for slug: ${slug}`);
