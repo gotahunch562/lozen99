@@ -1,4 +1,4 @@
-import { supabase, hasSupabaseConfig } from "@/lib/supabaseClient";
+import { supabase, hasSupabaseConfig } from "./supabaseClient";
 
 export function formatJurisdiction(law) {
   return law.region || law.jurisdiction || "Jurisdiction not specified";
@@ -34,7 +34,7 @@ export async function getAiLegiRiskReportBySlug(slug) {
     return null;
   }
 
-  const { data, error } = await supabase
+  const { data: record, error: recordError } = await supabase
     .from("ai_legislation_records")
     .select(`
       id,
@@ -54,73 +54,88 @@ export async function getAiLegiRiskReportBySlug(slug) {
       source_url,
       source_label,
       verified_summary,
-      enterprise_blueprint_profiles (
-        enterprise_exposure,
-        primary_governance_gap,
-        enterprise_question,
-        operating_model_exposure,
-        governance_cadence_analysis,
-        vendor_embedded_ai_exposure,
-        evidentiary_record_analysis,
-        control_visibility_question_1,
-        control_visibility_question_2,
-        recurring_cost_question,
-        next_step_line
-      )
+      is_published
     `)
     .eq("slug", slug)
     .eq("is_published", true)
     .maybeSingle();
 
-  if (error) {
-    console.error("Error loading AI LegiRisk report:", error);
+  if (recordError) {
+    console.error("Error loading AI legislation record:", recordError);
     return null;
   }
 
-  if (!data) return null;
+  if (!record) {
+    console.warn(`No published AI legislation record found for slug: ${slug}`);
+    return null;
+  }
 
-  const enterpriseProfile = Array.isArray(data.enterprise_blueprint_profiles)
-    ? data.enterprise_blueprint_profiles[0]
-    : data.enterprise_blueprint_profiles;
+  const { data: profile, error: profileError } = await supabase
+    .from("enterprise_blueprint_profiles")
+    .select(`
+      enterprise_exposure,
+      primary_governance_gap,
+      enterprise_question,
+      operating_model_exposure,
+      governance_cadence_analysis,
+      vendor_embedded_ai_exposure,
+      evidentiary_record_analysis,
+      control_visibility_question_1,
+      control_visibility_question_2,
+      recurring_cost_question,
+      next_step_line,
+      is_published
+    `)
+    .eq("legislation_record_id", record.id)
+    .eq("is_published", true)
+    .maybeSingle();
 
-  if (!enterpriseProfile) return null;
+  if (profileError) {
+    console.error("Error loading Enterprise Blueprint profile:", profileError);
+    return null;
+  }
+
+  if (!profile) {
+    console.warn(`No published Enterprise Blueprint profile found for slug: ${slug}`);
+    return null;
+  }
 
   return {
     law: {
-      id: data.id,
-      slug: data.slug,
-      law_code: data.law_code,
-      law_name: data.rule_name,
-      short_name: data.short_name,
-      jurisdiction: data.jurisdiction,
-      region: data.region,
-      country: data.country,
-      status: data.status,
-      sector_scope: data.sector_scope,
-      impact_area: data.impact_area,
-      name_standard_signal: data.name_standard_signal,
-      effective_date: data.effective_date,
-      live_date_label: data.live_date_label,
-      source_url: data.source_url,
-      source_label: data.source_label,
-      verified_summary: data.verified_summary,
+      id: record.id,
+      slug: record.slug,
+      law_code: record.law_code,
+      law_name: record.rule_name,
+      short_name: record.short_name,
+      jurisdiction: record.jurisdiction,
+      region: record.region,
+      country: record.country,
+      status: record.status,
+      sector_scope: record.sector_scope,
+      impact_area: record.impact_area,
+      name_standard_signal: record.name_standard_signal,
+      effective_date: record.effective_date,
+      live_date_label: record.live_date_label,
+      source_url: record.source_url,
+      source_label: record.source_label,
+      verified_summary: record.verified_summary,
     },
 
     profile: {
-      enterprise_exposure_signal: enterpriseProfile.enterprise_exposure,
-      primary_governance_gap: enterpriseProfile.primary_governance_gap,
-      enterprise_question: enterpriseProfile.enterprise_question,
-      enterprise_verdict: enterpriseProfile.operating_model_exposure,
+      enterprise_exposure_signal: profile.enterprise_exposure,
+      primary_governance_gap: profile.primary_governance_gap,
+      enterprise_question: profile.enterprise_question,
+      enterprise_verdict: profile.operating_model_exposure,
 
-      enterprise_signal_1: enterpriseProfile.governance_cadence_analysis,
-      enterprise_signal_2: enterpriseProfile.vendor_embedded_ai_exposure,
-      enterprise_signal_3: enterpriseProfile.evidentiary_record_analysis,
+      enterprise_signal_1: profile.governance_cadence_analysis,
+      enterprise_signal_2: profile.vendor_embedded_ai_exposure,
+      enterprise_signal_3: profile.evidentiary_record_analysis,
 
-      enterprise_question_1: enterpriseProfile.control_visibility_question_1,
-      enterprise_question_2: enterpriseProfile.control_visibility_question_2,
-      enterprise_question_3: enterpriseProfile.recurring_cost_question,
+      enterprise_question_1: profile.control_visibility_question_1,
+      enterprise_question_2: profile.control_visibility_question_2,
+      enterprise_question_3: profile.recurring_cost_question,
 
-      next_step_line: enterpriseProfile.next_step_line,
+      next_step_line: profile.next_step_line,
     },
   };
 }
