@@ -595,7 +595,7 @@ export default function AILegislationWorkflow() {
           pagination={true}
           paginationPageSize={10}
           paginationPageSizeSelector={[10, 20, 50]}
-          rowSelection="single"
+          rowSelection={{ mode: "singleRow" }}
           suppressCellFocus={false}
           tooltipShowDelay={250}
           onRowClicked={handleRowClicked}
