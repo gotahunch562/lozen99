@@ -1020,16 +1020,16 @@ export default function AILegislationWorkflow() {
             transform 160ms ease;
         }
 
-        .report-pathway-card:hover {
-          border-color: rgba(15, 23, 42, 0.24);
-          border-left-color: #d9bc00;
-          background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-          box-shadow:
-            inset 0 1px 0 rgba(255, 255, 255, 1),
-            0 2px 4px rgba(15, 23, 42, 0.06),
-            0 18px 38px rgba(15, 23, 42, 0.14);
-          transform: translateY(-3px);
-        }
+       .report-pathway-card:hover {
+        border-color: rgba(13, 148, 136, 0.35);
+         border-left-color: #d9bc00;
+         background: linear-gradient(180deg, #ffffff 0%, #f0fdfa 100%);
+         box-shadow:
+         inset 0 1px 0 rgba(255, 255, 255, 1),
+          0 2px 4px rgba(13, 148, 136, 0.1),
+          0 18px 38px rgba(13, 148, 136, 0.18);
+         transform: translateY(-3px);
+      }
 
         .report-pathway-card:active {
           box-shadow:
