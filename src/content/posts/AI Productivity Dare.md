@@ -1,6 +1,7 @@
 ---
 title: The AI Productivity Dare
-subtitle: Why Reducing Headcount Is Not an LLM Governance Strategy
+seo_title: Why Reducing Headcount Is Not an AI Governance Strategy
+subtitle: Why Reducing Headcount Is Not an AI Governance Strategy
 slug: ai-productivity-dare
 pubDate: 2026-06-05
 datePublished: 2026-06-05
@@ -21,10 +22,16 @@ tags:
   - Power User Trap
   - Tacere
   - Invisible Attrition
+  - AI Accountability
+  - AI Workforce Risk
 draft: false
-isFeatured: false
+isFeatured: true
 ---
-## When AI Adoption Replaces LLM Governance
+**Market Update — June 23, 2026:** New workforce data reinforces the risk identified in this article. Adaptavist’s 2,500-person survey across the UK, US, Canada, Germany, and Spain found that one-third of knowledge workers are considering moving to a different industry because of AI concerns, while more than one-third said AI has made them think about retiring earlier. Separately, Jeff Bezos argued at VivaTech 2026 that AI may create labor scarcity rather than eliminate the need for human labor.
+
+These signals are not contradictory. They point to the same governance problem: AI adoption may [increase demand for judgment and human capacity](/blog/corporate-ai-relocation-services/) at the same time it makes experienced workers less willing to remain inside these organizations. The risk is not only whether AI replaces tasks, the risk is whether companies destabilize the people who make AI output usable, defensible, and institutionally safe.
+
+## When AI Adoption Replaces Governance
 
 In January, Snowflake CIO Mike Blandina cut his engineering team to its year-end headcount target — ten months early. He described it as a "provocative way" to force AI tool adoption. His logic was direct: remove enough people, and the team will either use the tools or fail.
 
