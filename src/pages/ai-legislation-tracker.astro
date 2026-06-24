@@ -217,26 +217,30 @@ const trackerJsonLd = createDatasetJsonLd({
             </button>
           </div>
 
-          <div
-            class="map-tab-panel min-h-[430px] bg-white"
-            role="tabpanel"
-            id="map-panel-us"
-            aria-labelledby="map-tab-us"
-            data-map-panel="us"
-          >
-            <iframe
-              title="The Name Standard℠ AI LegiRisk USA"
-              aria-label="Choropleth map"
-              id="datawrapper-chart-UDISR"
-              src="https://datawrapper.dwcdn.net/UDISR/1/"
-              scrolling="no"
-              frameborder="0"
-              width="100%"
-              height="430"
-              data-external="1"
-              class="block w-full border-0"
-            ></iframe>
-          </div>
+<div
+  class="map-tab-panel bg-white"
+  role="tabpanel"
+  id="map-panel-us"
+  aria-labelledby="map-tab-us"
+  data-map-panel="us"
+>
+  <div style="min-height:527px" id="datawrapper-vis-UDISR">
+    <script
+      type="text/javascript"
+      defer
+      src="https://datawrapper.dwcdn.net/UDISR/embed.js"
+      charset="utf-8"
+      data-target="#datawrapper-vis-UDISR"
+    ></script>
+
+    <noscript>
+      <img
+        src="https://datawrapper.dwcdn.net/UDISR/full.png"
+        alt="A choropleth map of the United States evaluating state-level AI legislation against The Name Standard℠ framework. The map categories states into tiers based on human accountability requirements."
+      />
+    </noscript>
+  </div>
+</div>
 
           <div
             class="map-tab-panel min-h-[477px] bg-white"
