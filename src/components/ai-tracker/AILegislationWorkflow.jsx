@@ -52,12 +52,13 @@ const trackerRows = [
     "id": "colorado-sb-26-189-admt",
     "ruleName": "Colorado SB 26-189 (ADMT)",
     "region": "Colorado, USA",
-    "status": "Signed into law (On hold due to court)",
+    "status": "Signed into law",
     "sectorScope": "Private",
     "impactArea": "To regulate automated decision-making technology (ADMT) that materially influences consequential decisions",
-    "nameStandardSignal": "Explicit human review required; Human reconsideration right",
+    "nameStandardSignal": "Explicit human review required; human reconsideration right",
     "liveDate": "Jan 1, 2027",
-    "sourceUrl": "https://leg.colorado.gov/bills/sb26-189"
+    "sourceUrl": "https://leg.colorado.gov/bills/sb26-189",
+    "updateNote": "Legislative update: Colorado repealed and replaced the prior Colorado AI Act / CAIA before it took effect."
   },
   {
     "id": "canada-directive-on-automated-decision-making",
