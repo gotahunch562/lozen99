@@ -761,7 +761,7 @@ export default function AILegislationWorkflow() {
         </div>
       ) : null}
 
-      <style>{`
+   <style>{`
         .ai-legislation-workflow {
           position: relative;
           min-height: 640px;
@@ -839,40 +839,41 @@ export default function AILegislationWorkflow() {
           pointer-events: none;
         }
 
-.bottom-sheet {
-  position: relative;
-  width: min(1120px, calc(100vw - 2rem));
-  max-height: min(76vh, 720px);
-  overflow-y: auto;
-  border: 1px solid rgba(15, 23, 42, 0.16);
-  border-top: 6px solid #f2d300;
-  border-radius: 1.35rem;
-  background: #ffffff;
-  box-shadow:
-    0 30px 100px rgba(15, 23, 42, 0.28),
-    0 14px 38px rgba(15, 23, 42, 0.16),
-    0 0 0 1px rgba(15, 23, 42, 0.06),
-    0 0 0 4px rgba(242, 211, 0, 0.12);
-  color: #0f172a;
-  padding: 0;
-  pointer-events: auto;
-  transform: translate3d(var(--popup-x, 0), var(--popup-y, 0), 0);
-}
+        .bottom-sheet {
+          position: relative;
+          width: min(1120px, calc(100vw - 2rem));
+          max-height: min(76vh, 720px);
+          overflow-y: auto;
+          border: 1px solid rgba(15, 23, 42, 0.16);
+          border-top: 6px solid #f2d300;
+          border-radius: 1.35rem;
+          background: #ffffff;
+          box-shadow:
+            0 30px 100px rgba(15, 23, 42, 0.28),
+            0 14px 38px rgba(15, 23, 42, 0.16),
+            0 0 0 1px rgba(15, 23, 42, 0.06),
+            0 0 0 4px rgba(242, 211, 0, 0.12);
+          color: #0f172a;
+          padding: 0;
+          pointer-events: auto;
+          transform: translate3d(var(--popup-x, 0), var(--popup-y, 0), 0);
+        }
 
         .bottom-sheet.is-dragging {
           box-shadow:
             0 34px 110px rgba(15, 23, 42, 0.32),
             0 16px 44px rgba(15, 23, 42, 0.18),
-            0 0 0 1px rgba(15, 23, 42, 0.08);
+            0 0 0 1px rgba(15, 23, 42, 0.08),
+            0 0 0 4px rgba(242, 211, 0, 0.16);
         }
 
-       .popup-panel-header {
-        position: relative;
-        background: linear-gradient(180deg, rgba(15, 23, 42, 0.035), rgba(15, 23, 42, 0));
-        border-bottom: 1px solid rgba(15, 23, 42, 0.12);
-        cursor: grab;
-        padding: 1.35rem 1.35rem 1.25rem;
-        user-select: none;
+        .popup-panel-header {
+          position: relative;
+          background: linear-gradient(180deg, rgba(15, 23, 42, 0.035), rgba(15, 23, 42, 0));
+          border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+          cursor: grab;
+          padding: 1.35rem 1.35rem 1.25rem;
+          user-select: none;
         }
 
         .popup-panel-header.is-dragging,
@@ -994,25 +995,48 @@ export default function AILegislationWorkflow() {
           margin-top: 0.8rem;
         }
 
- .report-pathway-card {
-  display: grid;
-  align-content: start;
-  gap: 0.7rem;
-  min-height: 132px;
-  border: 1px solid rgba(15, 23, 42, 0.14);
-  border-left: 3px solid #f2d300;
-  border-radius: 1rem;
-  background: #ffffff;
-  ...
-}
+        .report-pathway-card {
+          display: grid;
+          align-content: start;
+          gap: 0.7rem;
+          min-height: 132px;
+          border: 1px solid rgba(15, 23, 42, 0.12);
+          border-left: 3px solid #f2d300;
+          border-radius: 1rem;
+          background: linear-gradient(180deg, #ffffff 0%, #fbfbfc 100%);
+          color: #0f172a;
+          cursor: pointer;
+          font: inherit;
+          padding: 1rem;
+          text-align: left;
+          box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.9),
+            0 1px 2px rgba(15, 23, 42, 0.04),
+            0 10px 24px rgba(15, 23, 42, 0.07);
+          transition:
+            background 160ms ease,
+            border-color 160ms ease,
+            box-shadow 160ms ease,
+            transform 160ms ease;
+        }
 
-     .report-pathway-card:hover {
-  border-color: rgba(15, 23, 42, 0.28);
-  border-left-color: #d9bc00;
-  background: #f8fafc;
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
-  transform: translateY(-1px);
-}
+        .report-pathway-card:hover {
+          border-color: rgba(15, 23, 42, 0.24);
+          border-left-color: #d9bc00;
+          background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+          box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 1),
+            0 2px 4px rgba(15, 23, 42, 0.06),
+            0 18px 38px rgba(15, 23, 42, 0.14);
+          transform: translateY(-3px);
+        }
+
+        .report-pathway-card:active {
+          box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.8),
+            0 1px 2px rgba(15, 23, 42, 0.05);
+          transform: translateY(0);
+        }
 
         .report-pathway-card strong {
           color: #0f172a;
