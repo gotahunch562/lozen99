@@ -5,7 +5,7 @@ subtitle: Why Reducing Headcount Is Not an AI Governance Strategy
 slug: ai-productivity-dare
 pubDate: 2026-06-05
 datePublished: 2026-06-05
-dateModified: 2026-06-09
+dateModified: 2026-06-23
 category: AI Governance & Workforce Risk
 excerpt: Language models simulate coherence, not truth. When executives
   eliminate human capacity to prove AI ROI, they don't eliminate the work, they
