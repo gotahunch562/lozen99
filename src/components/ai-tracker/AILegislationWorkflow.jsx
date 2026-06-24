@@ -639,31 +639,37 @@ export default function AILegislationWorkflow() {
                       {selectedRow.region} · {selectedRow.status} · {selectedRow.liveDate}
                     </p>
 
-                    <div className="popup-facts" aria-label="Selected rule details">
-                      <p>
-                        <span>Sector Scope:</span> {selectedRow.sectorScope}
-                      </p>
+     <div className="popup-facts" aria-label="Selected rule details">
+  <p>
+    <span>Sector Scope:</span> {selectedRow.sectorScope}
+  </p>
 
-                      <p>
-                        <span>Name Standard℠ Signal:</span> {selectedRow.nameStandardSignal}
-                      </p>
+  <p>
+    <span>Name Standard℠ Signal:</span> {selectedRow.nameStandardSignal}
+  </p>
 
-                      <p>
-                        <span>Source:</span>{" "}
-                        {selectedRow.sourceUrl ? (
-                          <a
-                            className="source-link"
-                            href={selectedRow.sourceUrl}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            {getSourceHost(selectedRow.sourceUrl)}
-                          </a>
-                        ) : (
-                          "Source pending"
-                        )}
-                      </p>
-                    </div>
+  {selectedRow.updateNote ? (
+    <p>
+      <span>Update Note:</span> {selectedRow.updateNote}
+    </p>
+  ) : null}
+
+  <p>
+    <span>Source:</span>{" "}
+    {selectedRow.sourceUrl ? (
+      <a
+        className="source-link"
+        href={selectedRow.sourceUrl}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {getSourceHost(selectedRow.sourceUrl)}
+      </a>
+    ) : (
+      "Source pending"
+    )}
+  </p>
+</div>
                   </div>
                 </div>
 
