@@ -1,8 +1,7 @@
 ---
-// Fundations
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { createWebPageJsonLd } from "@/lib/seo/jsonLd";
-// Landing
+
 import Hero from "@/components/landing/Hero.astro";
 import BenefitsUtilizationSection from "@/components/landing/BenefitsUtilizationSection.astro";
 import IntelligenceAnalysisSection from "@/components/landing/IntelligenceAnalysisSection.astro";
@@ -14,8 +13,9 @@ import BlogPreviewSection from "@/components/landing/BlogPreviewSection.astro";
 
 const title = "Lozen Advisory | Menopause at Work & Leadership Advisory";
 const description =
-   "Strategic advisory for leadership. We identify disclosure-dependence gaps in retention, AI governance, performance risk, and menopause benefits utilization.";
+  "Strategic advisory for leadership. We identify disclosure-dependence gaps in retention, AI governance, performance risk, and menopause benefits utilization.";
 const canonical = "https://www.lozenadvisory.com/";
+const dateModified = "2026-06-26";
 
 const pageJsonLd = createWebPageJsonLd({
   title,
@@ -30,6 +30,7 @@ const pageJsonLd = createWebPageJsonLd({
   title={title}
   description={description}
   canonical={canonical}
+  dateModified={dateModified}
   jsonLd={pageJsonLd}
 >
   <Hero />
