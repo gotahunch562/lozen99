@@ -1,33 +1,32 @@
-```astro
 ---
-// Foundations
+
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const proofCards = [
-  {
-    title: "Human Attribution",
-    description:
-      "Identifies whether AI legislation, governance policy, or enterprise workflow assigns accountability to a named human role — or leaves responsibility at the entity level.",
-  },
-  {
-    title: "Board Evidence",
-    description:
-      "Translates AI legal developments into the questions directors should ask management and the evidence executives should be prepared to produce.",
-  },
-  {
-    title: "Agent Accountability",
-    description:
-      "Evaluates where agentic AI begins to function as an operational actor without a clear owner, supervisor, escalation path, or authority to stop the system.",
-  },
-  {
-    title: "Governance Readiness",
-    description:
-      "Turns AI legislation into board-ready intelligence: oversight questions, human-accountability signals, vendor exposure, and unresolved enterprise risk.",
-    linkText: "AI Legislation Tracker",
-    href: "https://www.lozenadvisory.com/ai-legislation-tracker/",
-  },
+{
+title: "Human Attribution",
+description:
+"Identifies whether AI legislation, governance policy, or enterprise workflow assigns accountability to a named human role — or leaves responsibility at the entity level.",
+},
+{
+title: "Board Evidence",
+description:
+"Translates AI legal developments into the questions directors should ask management and the evidence executives should be prepared to produce.",
+},
+{
+title: "Agent Accountability",
+description:
+"Evaluates where agentic AI begins to function as an operational actor without a clear owner, supervisor, escalation path, or authority to stop the system.",
+},
+{
+title: "Governance Readiness",
+description:
+"Turns AI legislation into board-ready intelligence: oversight questions, human-accountability signals, vendor exposure, and unresolved enterprise risk.",
+linkText: "AI Legislation Tracker",
+href: "/ai-legislation-tracker/",
+},
 ];
----
+--
 
 <section class="bg-white">
   <Wrapper variant="standard" class="py-10 sm:py-12 lg:py-16">
@@ -39,62 +38,63 @@ const proofCards = [
           Advisory Foundation
         </p>
 
-        <h2
-          class="mt-5 max-w-4xl font-display text-[2.2rem] font-normal leading-[1.06] tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-[2.65rem] lg:text-[3rem]"
-        >
-          <a
-            href="/blog/the-name-standard-ai-governance/"
-            class="text-inherit no-underline transition-colors hover:text-accent-700 focus-visible:text-accent-700"
-          >
-            The Name Standard℠
-          </a>
-        </h2>
+```
+    <h2
+      class="mt-5 max-w-4xl font-display text-[2.2rem] font-normal leading-[1.06] tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-[2.65rem] lg:text-[3rem]"
+    >
+      <a
+        href="/blog/the-name-standard-ai-governance/"
+        class="text-inherit no-underline transition-colors hover:text-accent-700 focus-visible:text-accent-700"
+      >
+        The Name Standard℠
+      </a>
+    </h2>
 
-        <p class="mt-6 max-w-4xl font-sans text-base leading-8 text-base-700 sm:text-[1.0625rem] sm:leading-8 lg:mt-7">
-          Corporate boards are being asked to oversee AI systems that increasingly act inside enterprise workflows, shape decisions, and create records. The governance gap is no longer limited to whether a company has an AI policy. The harder question is whether the organization can identify the human actor responsible for AI-assisted decisions, outputs, escalation, and evidence.
-        </p>
+    <p class="mt-6 max-w-4xl font-sans text-base leading-8 text-base-700 sm:text-[1.0625rem] sm:leading-8 lg:mt-7">
+      Corporate boards are being asked to oversee AI systems that increasingly act inside enterprise workflows, shape decisions, and create records. The governance gap is no longer limited to whether a company has an AI policy. The harder question is whether the organization can identify the human actor responsible for AI-assisted decisions, outputs, escalation, and evidence.
+    </p>
 
-        <p class="mt-5 max-w-4xl font-sans text-base leading-8 text-base-700 sm:text-[1.0625rem] sm:leading-8">
-          The Name Standard℠ is Lozen Advisory's framework for evaluating whether accountability is traceable to a responsible human or institutional actor. It helps boards distinguish between laws, policies, and workflows that assign responsibility to a named role and those that leave accountability at the entity level. Applied through Lozen's AI Legislation Tracker, the framework turns emerging AI legislation into board-ready intelligence: what directors should ask, what management should evidence, where human attribution is required, and where enterprise exposure remains unresolved.
-        </p>
-      </div>
+    <p class="mt-5 max-w-4xl font-sans text-base leading-8 text-base-700 sm:text-[1.0625rem] sm:leading-8">
+      The Name Standard℠ is Lozen Advisory's framework for evaluating whether accountability is traceable to a responsible human or institutional actor. It helps boards distinguish between laws, policies, and workflows that assign responsibility to a named role and those that leave accountability at the entity level. Applied through Lozen's AI Legislation Tracker, the framework turns emerging AI legislation into board-ready intelligence: what directors should ask, what management should evidence, where human attribution is required, and where enterprise exposure remains unresolved.
+    </p>
+  </div>
 
-      <div class="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 xl:grid-cols-4">
-        {
-          proofCards.map((card) => (
-            <article class="group relative overflow-hidden rounded-2xl border border-base-300 bg-white p-5 shadow-sm ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-base-50 hover:shadow-md sm:p-6 lg:rounded-3xl">
-              <div
-                aria-hidden="true"
-                class="absolute inset-x-0 top-0 h-1 bg-accent-500"
-              >
-              </div>
+  <div class="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 xl:grid-cols-4">
+    {
+      proofCards.map((card) => (
+        <article class="group relative overflow-hidden rounded-2xl border border-base-300 bg-white p-5 shadow-sm ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-base-50 hover:shadow-md sm:p-6 lg:rounded-3xl">
+          <div
+            aria-hidden="true"
+            class="absolute inset-x-0 top-0 h-1 bg-accent-500"
+          />
 
-              <div class="mb-5 h-9 w-px bg-accent-500 sm:mb-6 sm:h-10"></div>
+          <div class="mb-5 h-9 w-px bg-accent-500 sm:mb-6 sm:h-10" />
 
-              <h3 class="max-w-sm font-display text-[1.45rem] font-normal leading-[1.14] tracking-[-0.02em] text-base-950 sm:text-[1.55rem]">
-                {card.title}
-              </h3>
+          <h3 class="max-w-sm font-display text-[1.45rem] font-normal leading-[1.14] tracking-[-0.02em] text-base-950 sm:text-[1.55rem]">
+            {card.title}
+          </h3>
 
-              <p class="mt-4 font-sans text-[0.975rem] leading-8 text-base-700 sm:mt-5">
-                {card.description}
-                {card.href && card.linkText && (
-                  <>
-                    {" "}
-                    <a
-                      href={card.href}
-                      class="font-semibold text-base-950 underline decoration-accent-500 decoration-1 underline-offset-4 transition-colors hover:text-accent-700"
-                    >
-                      {card.linkText}
-                    </a>
-                    .
-                  </>
-                )}
-              </p>
-            </article>
-          ))
-        }
-      </div>
-    </div>
+          <p class="mt-4 font-sans text-[0.975rem] leading-8 text-base-700 sm:mt-5">
+            {card.description}
+            {card.href && card.linkText && (
+              <>
+                {" "}
+                <a
+                  href={card.href}
+                  class="font-semibold text-base-950 underline decoration-accent-500 decoration-1 underline-offset-4 transition-colors hover:text-accent-700"
+                >
+                  {card.linkText}
+                </a>
+                .
+              </>
+            )}
+          </p>
+        </article>
+      ))
+    }
+  </div>
+</div>
+```
+
   </Wrapper>
 </section>
-```
