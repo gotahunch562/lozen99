@@ -5,7 +5,7 @@ subtitle: The Case for The Name Standard℠
 slug: the-name-standard-ai-governance
 pubDate: 2026-06-12
 datePublished: 2026-06-12
-dateModified: 2026-06-12
+dateModified: 2026-06-26
 category: AI Governance & Workforce Risk
 excerpt: When AI-assisted work leaves an organization, it does not leave under
   the name of the large language model. It leaves under the name of a person.
@@ -28,30 +28,56 @@ tags:
 draft: false
 isFeatured: true
 ---
-When AI-assisted work leaves an organization, it does not leave under the name of the large language model.
+When AI-assisted work product leaves an organization, it does not leave under the name of the large language model (LLM).
 
-It leaves under the name of an employee, manager, lawyer, analyst, executive, risk officer, compliance lead, or institution.
+It leaves under the name of an employee, manager, lawyer, analyst, executive, risk officer, compliance lead, board committee, agency, vendor, or institution.
 
-That is why [human oversight cannot remain a vague governance principle](/blog/ai-generation-fast-governance-slow/). If a person’s name, approval, signature, professional judgment, or institutional authority attaches to AI-assisted output, there must be a standard for what that attachment means. Lozen Advisory calls this the Name Standard℠.
+That is why [human oversight cannot remain a vague governance principle](/blog/ai-generation-fast-governance-slow/). If a person’s name, approval, signature, professional judgment, or institutional authority attaches to AI-assisted output, there must be a standard for what that attachment means.
+
+Lozen Advisory calls this the **Name Standard℠**.
 
 ## When the AI gets it wrong, whose name is on it?
 
-The Name Standard℠ defines what must be true, before AI-assisted output can carry a person’s name, authority, professional judgment, or institutional sign-off.
+The Name Standard℠ defines what must be true before AI-assisted output can carry a person’s name, authority, professional judgment, or institutional sign-off.
 
-It asks whether the person responsible for this output had the time, authority, information, review capacity, documentation, and refusal rights necessary to make oversight real. Without those conditions, [accountability becomes ceremonial.](https://www.theregister.com/ai-and-ml/2026/06/12/kpmgs-ai-report-turns-into-a-demo-of-ai-hallucinations/5255029) The name on the output will belong to a human being, while the governance behind it is weak or nonexistent.
+It asks whether the person, or institution, responsible for the output had the time, authority, information, review capacity, documentation, escalation path, and refusal rights necessary to make oversight real.
 
-## 5 questions GRC professionals should ask.
+Without those conditions, [accountability becomes ceremonial](https://www.theregister.com/ai-and-ml/2026/06/12/kpmgs-ai-report-turns-into-a-demo-of-ai-hallucinations/5255029). The name on the output belongs to a human being, while the governance behind it may be weak, undocumented, or nonexistent.
 
-Evaluate your organization's alignment with The Name Standard℠ and clarify your responsibilities:
+This problem becomes sharper as organizations move from AI-assisted drafting to agentic AI workflows. A guardrail may limit what an AI system can do. The Name Standard℠ asks who is responsible when it does it.
 
-1. **What specific criteria must be met before an employee can legally or professionally sign off on this AI-assisted output?**
-2. **Does our team have the formal right of refusal if they believe an AI-generated asset is inaccurate, biased, or non-compliant?**
-3. **How do we document the human review process to prove that oversight was active and comprehensive, rather than just a ceremonial rubber stamp?**
-4. **Are we allocating sufficient time and providing the necessary source data for professionals to genuinely verify the AI's complex calculations or assertions?**
-5. **Where does the liability fall if an AI-assisted output bearing an executive's or institution's signature causes a compliance or legal failure?**
+If an AI agent drafts, ranks, escalates, approves, negotiates, denies, recommends, or acts inside an enterprise workflow, the boardroom question is not only whether the system had controls. The question is whether the organization can identify the human, or institutional actor, responsible for authorization, supervision, escalation, override, and documentation.
 
-*If your organization is currently running AI pilots without a documented Name Standard workflow, your named Senior Managers are exposed. Contact Lozen Advisory for a private, Sovereign Capacity Briefing.* ***[Request the briefing.](/ai-workforce-materiality-briefing/)***
+## The boardroom problem is evidence
 
-**The Name Standard℠** is a service mark of Lozen Advisory LLC.
+Boards are being asked to oversee AI systems, AI agents, AI vendors, AI-generated records, AI-influenced disclosures, and AI-related legislation before many organizations have a repeatable evidence model for human accountability.
 
-© 2026 Lozen Advisory LLC. All rights reserved. No part of this publication or the underlying framework may be reproduced, distributed, or transmitted in any form or by any means without the prior written permission of the publisher.
+[That gap is now visible in boardroom discussions.](https://www.nasdaq.com/articles/governance/ai-is-changing-how-boards-govern) AI agents are no longer being treated as tools; they are being described as employee-like actors, operating inside enterprise workflows. As that shift occurs, AI risk is being pushed into existing board structures, especially audit committees, while vendor systems, AI-generated records, proxy interpretation, and AI investment discipline are all becoming part of the same oversight problem.
+
+The common thread is evidence. Boards need to know who is accountable, what was reviewed, what was escalated, what was documented, and where responsibility remains unresolved.
+
+> Who authorized the agent, who supervises it, who can stop it, who documents its behavior, and who is accountable when it acts?
+
+## Five questions GRC and governance leaders should ask
+
+[Evaluate your organization’s alignment](/ai-legislation-tracker/) with the Name Standard℠ by asking:
+
+1. **Who can attach their name, judgment, or authority to AI-assisted output?**
+2. **Can that person refuse, override, escalate, or delay its use?**
+3. **What evidence shows that human review was real, not ceremonial?**
+4. **Did the reviewer have the time, source material, and context to verify the output?**
+5. **Who is accountable if the output causes legal, regulatory, financial, reputational, or governance failure?**
+
+## Why this matters for corporate boards
+
+Boards are increasingly being asked to oversee AI use, AI legislation, AI vendors, AI-generated records, and AI agents without a consistent evidence model for human accountability.
+
+That is the gap the Name Standard℠ is designed to address.
+
+Human oversight is not enough if no one can explain who reviewed the output, what authority they had, what evidence they relied on, whether they could refuse the output, and how the decision was documented.
+
+If an organization is running AI pilots, AI-assisted reporting, vendor-enabled AI systems or workflows, or agentic AI processes without a documented Name Standard℠ process, the people and institutions whose names carry the output may be left with accountability the governance record does not support.
+
+**Prepare your board for AI accountability questions before the next meeting.**
+
+Lozen AI LegiRisk helps boards, general counsel, corporate secretaries, and risk leaders translate AI laws into the questions directors should ask, the evidence management should produce, the committee issues that should be escalated, and the accountability gaps that remain unresolved.  [Request Briefing](/request-briefing/)
