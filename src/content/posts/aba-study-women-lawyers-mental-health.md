@@ -1,159 +1,149 @@
 ---
-title: 'ABA 2026 Study: Women Lawyers & the Disclosure Gap'
+title: "ABA 2026 Study: Women Lawyers & The Disclosure Gap"
+seo_title: Women Lawyers, Wellness & The Disclosure Gap
+subtitle: The Profession Still Has a Measurement Problem
 slug: aba-study-women-lawyers-mental-health
-pubDate: &id001 2026-04-15
-datePublished: *id001
-dateModified: 2026-05-05
+pubDate: 2026-04-15
+datePublished: 2026-04-15
+dateModified: 2026-06-26
 category: Women, Work & Leadership
-excerpt: The American Bar Association will release its national study on women lawyers and mental wellness in August 2026. The data will be cited, the findings will circulate, and the conversation will follow. The legal profession will treat it as a starting point.
-description: The ABA 2026 study measures reported data. Learn why non-disclosure is a strategic choice for women leaders protecting their career trajectory.
-metaDescription: The ABA 2026 study measures reported data. Learn why non-disclosure is a strategic choice for women leaders protecting their career trajectory.
+excerpt: The American Bar Association will release its national study on women
+  lawyers and mental wellness in August 2026. The data will be cited, the
+  findings will circulate, and the conversation will follow. The legal
+  profession will treat it as a starting point.
+description: The ABA 2026 study measures wellness data. Learn why non-disclosure
+  is a strategic choice for women lawyers protecting their career trajectory.
+metaDescription: The ABA 2026 study measures reported data. Learn why
+  non-disclosure is a strategic choice for women leaders protecting their career
+  trajectory.
 image:
   url: /src/images/blog/LozenAdvisoryLegalBlog.webp
-  alt: "Gold scales of justice on braided red, gold, and navy ropes"
+  alt: Gold scales of justice on braided red, gold, and navy ropes
 heroImage: /src/images/blog/LozenAdvisoryLegalBlog.webp
-heroAlt: "Gold scales of justice on braided red, gold, and navy ropes"
+heroAlt: Gold scales of justice on braided red, gold, and navy ropes
 tags:
-- Legal Profession
+  - Workplace Disclosure
+  - Invisible Attrition
+  - Tacere
+  - Legal Profession
 spineDestination: menopause-support-women-lawyers
 draft: false
 isFeatured: false
 ---
-The American Bar Association will release its national study on women lawyers and mental wellness in August 2026. The data will be cited, the findings will circulate, and the conversation will follow. The profession will treat it as a starting point. You are not starting. You are already inside the condition the data will attempt to describe.
+## The ABA Study Is Asking the Right Question. 
 
-If you are a woman lawyer navigating [perimenopause](/blog/women-lawyers-leadership-perimenopause/) or other health conditions inside a legal practice, you knew before the study was commissioned. You knew when you took the deposition with the migraine you did not mention. You knew when you billed the hours and did not ask for the adjustment. The ABA will document what is happening to women in this profession. What it cannot document is everything you decided, privately, before the study had a way to capture it, and why that gap exists is the subject of our Invisible Attrition℠ framework.
+The American Bar Association Commission on Women in the Profession is leading a national study on the mental wellness of women lawyers. The study examines how stress, bias, and systemic barriers affect [women across the legal profession.](/blog/women-lawyers-leadership-perimenopause/) Full findings are expected in August 2026.
 
-That is where this article begins.
+That matters.
 
+But the study will not describe a future problem. It will describe the conditions women lawyers are already working inside.
 
+The question is not whether women lawyers are struggling. Many are. The harder question is whether the profession has built systems that allow women to surface those pressures before they leave, step back, move in-house, or quietly disappear from leadership pipelines.
 
----
+Right now, many firms are still measuring the wrong thing.
 
+## Editorial update · June 2026
 
+Since this article was first published, new UK research has reinforced the same pattern. *[Pressure Points: Mapping Women’s Wellbeing in Law*,](https://solicitornews.co.uk/wp-content/uploads/2026/06/Pressure-Points-Mapping-Womens-Wellbeing-in-Law-June-2026.pdf) a June 2026 report from Next 100 Years, supported by LawCare, RPC, and Goodbody Wellness Company, surveyed more than 500 women in the legal sector.
 
-## **The ABA Study on Women Lawyers' Mental Health**
+The report found that half of respondents considered their current working pattern unsustainable for their long-term health. It also found that 67 percent had considered moving jobs or taking a career break because of health and wellbeing issues, and 85 percent had experienced health and wellbeing issues that affected their work in the past five years.
 
-The [American Bar Association Commission on Women](https://www.americanbar.org/groups/diversity/women/initiatives_awards/mental-wellness-women/) in the Profession is leading a national study examining how stress, bias, and professional pressure affect women lawyers across the profession. Full findings are expected in August 2026.
+That report does not replace [the forthcoming ABA study.](https://www.americanbar.org/groups/diversity/women/initiatives_awards/mental-wellness-women/) It sharpens the context for reading it.
 
-The study signals something the profession is ready to acknowledge: the mental wellness of women lawyers is not a fringe concern. It is central to retention, leadership continuity, and the long-term health of the profession. It will also produce data the profession cannot ignore, alongside actionable strategies, toolkits, and policy guidance.
+The issue is not simply whether women lawyers experience stress, burnout, anxiety, menopause symptoms, fertility-related pressures, autoimmune conditions, grief, exhaustion, or other health-related challenges. The governance question is whether the legal profession’s work model makes those pressures safe to surface, measurable by firms, or addressable before women leave.
 
-Still, data moves at institutional speed. The study will describe the conditions you are operating in right now. It will not change them before you have to make the next decision.
+## The profession rewards silence
 
+Law has long rewarded a particular model of availability: visible, uninterrupted, and total.
 
+The lawyer who never signals cost. The partner who absorbs pressure without showing strain. The associate who treats endurance as proof of commitment. The leader who keeps producing, even when the work model is becoming unsustainable.
 
----
+Women lawyers have entered that work structure and excelled inside it. But **the infrastructure did not structurally adjust** as women entered the profession in greater numbers. It still often assumes that the person performing the work has no competing obligations, no health condition that requires management, no caregiving load, and no professional penalty attached to asking for support.
 
+That is not how women experience the profession.
 
+The result is not always open crisis. More often, it is private containment.
 
-## **What the Profession Was Built to Reward**
+A woman lawyer manages symptoms, exhaustion, caregiving, treatment, anxiety, brain fog, grief, or burnout without naming it. She declines a leadership role without explaining why. She stops reaching for partnership. She moves in-house. She changes firms. She frames the decision as lifestyle, timing, or personal preference because that is safer than sharing her personal struggles.
 
-That next decision is made inside a profession that has never fully accounted for her.
+The exit looks voluntary. The calculation behind it may not be.
 
-Women make up over 56 percent of J.D. students at ABA-accredited law schools. By age 50, women make up only 27 percent of practicing lawyers. Only 23.7 percent of equity partners are women. You already know this is not about ambition or preparation.
+## Disclosure is not neutral
 
-The legal profession was built around a model of availability: total, visible, uninterrupted. The partner who bills the most. The associate who stays latest. The lawyer who never signals cost, never surfaces need, and performs endurance as fluently as legal argument. That model was not designed with women in mind, and it has not structurally changed as women have entered it. It was designed around the assumption that the person performing it had no competing obligations and no condition that required management or accommodation.
+Most workplace support systems require some form of disclosure. A lawyer has to tell someone what is happening. HR, a supervisor, a practice group leader, a management committee, or a formal accommodation process becomes the access point.
 
-Women lawyers have entered that model and excelled inside it, often by carrying more than the model was ever designed to account for. The expectation did not adjust. The performance standard did not move. What moved was the amount a woman lawyer was required to absorb invisibly in order to be seen as meeting it.
+That sounds neutral. It is not.
 
-That absorption does not follow a schedule. Perimenopause, surgical menopause, and the autoimmune conditions that affect women at nearly four times the rate of men do not wait for a convenient moment in a woman lawyer's career. They arrive when partnership decisions are being made, when client relationships are at their deepest, when professional visibility is at its highest, and when the cost of disclosure is most consequential. The profession does not pause for any of it. The billing expectations do not adjust. The management committee does not ask.
+In a profession where reputation is currency, disclosure has a professional cost. The concern is not only whether a firm has a policy. The concern is what happens after a woman uses it.
 
-And the woman navigating it understands, without being told, that the cost of disclosure will be paid in a currency the profession uses every day: perception, opportunity, trajectory. So she chooses silence.
+Will she be seen differently? Will clients be reassigned? Will leadership opportunities narrow? Will her judgment, stamina, or ambition be questioned? Will the issue reappear later in a performance conversation?
 
+Women lawyers do not need to be told these risks exist. They watch how firms respond to other women. Then they make a calculation.
 
+That calculation is the missing data point. [Visibility has a price.](/billable-hour-visibility-tax/)
 
----
+When access to support requires exposure, utilization cannot be treated as a proxy for need. Low use of resources does not mean low need. It may mean the women who most need support have correctly concluded that using the system is too risky.
 
+That is the measurement problem.
 
+## This is Invisible Attrition℠
 
-## **Why Women Lawyers Choose Silence: The Disclosure Calculation**
+Lozen Advisory calls this pattern [Invisible Attrition℠](/invisible-attrition/): the unmeasured erosion of leadership and performance capacity before traditional retention metrics detect risk.
 
-The Romans had a word for that silence. *Tacere.* (tah-CHEH-reh.)
+Invisible Attrition℠ is not just about who leaves. It is about what happens before the departure appears in the data.
 
-Not the silence of someone with nothing to say. Tacere is the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk. Disclosure, in this context, means telling someone in your firm what you are managing, whether through a formal accommodation request, a conversation with a supervisor, or an interaction with HR. The calculation is not about whether disclosure is permitted. It is about what disclosure costs.
+A senior lawyer stops pursuing leadership. A partner gives up a role that would have expanded her influence. A high-performing associate decides the partnership track is not worth the health cost. A woman moves to a lower-visibility role and explains it in language the firm can easily accept.
 
-You have been doing this precisely. You have watched what happens when a woman in your firm signals need, and you know exactly what the cost is and how long it follows her. The PIP that appears six months later. The client relationship quietly reassigned. The partnership track that closes without a conversation. So when the migraine comes and the brief is due, you manage it privately. When the brain fog is bad and the partner meeting is in an hour, you prepare twice as hard and say nothing. That is not weakness or avoidance. You read the room correctly, and you acted on what you found.
+The firm records a voluntary move.
 
-The data confirms what she already knew. A 2021 NIH study of nearly 3,000 licensed attorneys found that 40.9 percent will not discuss well-being concerns with their employer for fear it will negatively impact their careers. That number includes women lawyers who are still performing, still billing, and still indispensable to their clients. The fear is not of being seen as weak. It is of being seen differently, and knowing exactly what that difference costs in a profession that has been measuring your legitimacy since the first day you walked in.
+But the real issue may be structural.
 
-She was never silent. She decided.
+The profession sees the decision after it has already been translated into acceptable terms. It rarely sees the [pressure that produced the decision.](/blog/menopause-law-invisible-cost/)
 
-That decision was made inside a profession that built support systems she cannot safely use.
+## What the ABA study may not capture
 
+The ABA study is important. It will give the profession a stronger evidence base and a public language for a problem many women already understand privately.
 
+But any study of reported experience has a built-in limitation: it can only measure what people are willing and able to report.
 
----
+That matters in law.
 
+If women lawyers are already managing professional risk through silence, the full scope of the issue will not appear in surveys, HR data, accommodation requests, wellness program usage, or exit interviews.
 
+The women most affected may also be the least visible to the systems designed to count them.
 
-## **Why Women Lawyers Leave the Profession**
+That does not make the research weak. It means the profession needs to read the findings with the disclosure gap in mind.
 
-The well-being infrastructure built over the past decade is real: employee assistance programs, mental health leave policies, formal accommodation channels. These represent genuine institutional effort. Yet nearly every one of them requires disclosure to access.
+The ABA report may confirm the pressure. The harder work is understanding what the pressure causes women lawyers not to say.
 
-That requirement is treated as neutral. It is not. Neutrality without context produces measurement error. Disclosure-dependent systems assume the population most affected will engage with them, although in a hierarchical and intense profession where reputation is currency and performance is never fully separate from perception, disclosure carries professional cost. When access requires exposure, utilization cannot be treated as a proxy for need. The population most affected is the least likely to appear in the data because the collection condition was never met.
+## The real question for firms
 
-The same NIH study found that 24.2 percent of women were considering leaving the profession due to mental health problems, burnout, or stress, compared to 17.4 percent of men. It also found that perceived likelihood of promotion was less relevant to whether women stayed than it was for men, because many women had already concluded the opportunity was unlikely to come. The calculation goes deeper than fear. It reaches all the way to expectation.
+The next phase of this conversation should not be limited to wellness programming.
 
-That expectation is what containment is built on.
+The real question is whether firms can identify leadership and retention risk before women have to disclose private information or leave in order to be counted.
 
+That requires a different lens.
 
+It requires firms to ask:
 
----
+1. Are women stepping back from leadership before they exit?
+2. Are high-performing women moving into lower-visibility roles?
+3. Are accommodation systems being used, or avoided?
+4. Are voluntary exits masking preventable structural pressure?
+5. Are women being asked to sustain a model of work that was never built around their actual lives?
+6. Those are not soft questions. They are workforce risk questions.
 
+## Where Lozen Advisory fits
 
+Lozen Advisory works on the gap between what institutions think they are measuring and what their systems fail to detect.
 
-## **What Containment Looks Like for Women Lawyers**
+For women lawyers, that gap is often created by disclosure-dependent design. The firm has resources. The lawyer knows they exist. But using them may create professional exposure. So she manages privately until the cost becomes too high.
 
-You are not in collapse. You are in containment.
+That is not a resilience failure.  It is a design failure.
 
-You decline a leadership role without explanation while maintaining full billing expectations. You manage perimenopause and brain fog without accommodation, working harder in private to protect your performance from critique. You are managing more than anyone around you knows, and you have been doing it long enough that it has started to feel like the job. What it is costing you does not appear in any system your firm uses to evaluate you.
+The forthcoming ABA study will give the profession more data. The **June 2026 *Pressure Points* report** has already added another signal. But the core issue is already visible.
 
-This is what our analysis of Invisible Attrition℠ identifies: the unmeasured erosion of leadership and performance capacity that occurs before traditional retention metrics detect risk. Invisible Attrition℠ is not a retention problem. It is a classification problem. A senior partner takes a lateral role and calls it a lifestyle decision. Another moves in-house and frames it as work-life balance. A third steps back from leadership without explanation at a moment that looks, from the outside, like personal timing. Each departure is recorded as voluntary. The calculation behind each one is something else entirely.
+When the safest professional choice is silence, the data will understate the condition it is trying to measure.
 
-The exits look voluntary. The calculations behind them do not.
-
-
-
----
-
-
-
-## **What the ABA Report on Women Lawyers Is Likely to Confirm**
-
-The findings will measure reported experience. They will not capture non-disclosure behavior. The study cannot reach the full population, because the women lawyers who practiced Tacere produced no data point in the systems it relied on. No initiating act, no claim, no request. The collection condition was never met, so the data was never created.
-
-The profession has been studying this problem for years with genuine intent, and intent is not the issue. Systems do not require intent. They require incentive and opportunity. The incentive structure inside law firms rewards visible endurance and seamless availability. The opportunity to exit quietly, without formal record, exists at every career stage. Those two conditions produce the pattern the ABA will document in August 2026, and they do not resolve when the study publishes.
-
-What the report cannot address is the calculated decision shaping how women lawyers respond to those pressures in real time. That decision operates before the exit data exists. Increased awareness of well-being resources does not change it. When visibility carries professional consequences inside fast-paced and stressful legal environments, many women choose private containment over institutional accommodation, and no toolkit resolves that while the incentive structure producing it remains intact.
-
-The infrastructure exists. The calculus remains.
-
-
-
----
-
-
-
-## **Strategic Containment Is Not the Same as Managing Alone**
-
-That is the variable she controls.
-
-What matters is the difference between practicing Tacere strategically and managing without any resource at all. They are not the same, though they can look identical from the outside. Strategic containment means you have made a deliberate decision about what to protect and how. Managing without support means the decision is being made by default, and the cost accumulates accordingly.
-
-The question is not whether you are strong enough to disclose. You have already demonstrated that you are capable of carrying far more than you should have to. The question is what is available to you that does not require exposure to access.
-
-
-
----
-
-
-
-## **Where Lozen Advisory Fits for Women Lawyers**
-
-[Lozen Advisory’s support for women lawyers](/menopause-support-women-lawyers/) helps women protect what they have built and sustain leadership capacity when disclosure is not an option.
-
-The work does not address the health condition. It addresses the strategic decisions a woman in leadership faces while managing one. When to adjust workload architecture. How to protect institutional relationships that depend on her presence. What succession signaling does and does not cost her. How to make decisions about her position that do not require disclosing what she is managing.
-
-That is not clinical work. It is strategic advisory work that happens to occur in proximity to a health condition. It does not rely on visibility to function, and it exists entirely outside the employment relationship, which means it sits outside the calculation that governs everything else.
-
-The [MAPS Blueprint℠](/booking/) is where to start. If you are navigating perimenopause, surgical menopause, or a health condition inside a legal practice and you have decided not to disclose it, that decision is not the problem. What comes next is the question.
+**Lozen Advisory provides strategic advisory for organizations evaluating disclosure-dependent gaps in leadership, retention, and workforce-risk systems.** [Request a briefing](/request-briefing/)
 
