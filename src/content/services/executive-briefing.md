@@ -7,7 +7,7 @@ duration: "Focused advisory"
 image:
   url: "/src/images/services/executivebriefing.webp"
   alt: "Executive advisory discussion in a private setting"
-metaDescription: "Advisory session for leadership teams evaluating accountability for AI-generated corporate output and attrition-risk.
+metaDescription: "Advisory session for leadership teams evaluating accountability for AI-generated corporate output and attrition-risk."
 ---
 
 A focused advisory session for leadership teams evaluating whether AI-assisted corporate output can be reviewed, verified, escalated, refused, and formally signed off under a clear accountability model.
