@@ -19,7 +19,7 @@ Affiliated platforms: The Peri Nation (community platform for Black women and wo
 
 ## Primary Audiences
 
-- Corporate boards are the audience and the use case: Board Governance Blueprints, AI accountability oversight, committee escalation, human-attribution questions, management documentation questions, vendor/deployer exposure, and unresolved enterprise exposure. The buyers who prepare board materials and own the underlying governance, risk, and compliance functions are listed below.
+- Corporate boards are the audience and the use case: The buyers who prepare board materials and own the underlying governance, risk, and compliance functions are listed below.
 - General Counsel: AI legislation oversight preparation, AI accountability analysis, disclosure-control awareness, board reporting support, and governance exposure from AI-assisted decisions, records, vendors, and agents.
 - Corporate secretaries: board materials, committee preparation, governance updates, AI accountability briefing support, and board-ready accountability prompts.
 - Risk leaders and compliance leaders: AI accountability questions, escalation logic, vendor and deployer exposure, who owns review and documentation when AI-assisted decisions are challenged, and documentation gaps.
@@ -66,15 +66,23 @@ The tracker is the public authority layer. Lozen Advisory's paid advisory work b
 
 ---
 
-## Board Governance Blueprints
+## Board Governance Reports
 
-Each tracked law generates three linked blueprints, accessed from the AI Legislation Tracker. Example, for Colorado SB 26-189 (ADMT): https://www.lozenadvisory.com/ai-legirisk/enterprise/colorado-sb-26-189-admt/
+Lozen Advisory’s AI Governance Exposure Series is a report family connected to the AI Legislation Tracker. The series translates tracked AI laws into board-level governance questions, human accountability signals, AI governance risk, and enterprise operating exposure.
 
-- Board AI Governance Briefing — Evaluates AI regulatory exposure and compliance gaps, grounding board decisions in independent workforce and governance risk analysis.
-- AI Accountability Blueprint — A Name Standard℠ diagnostic evaluating whether AI implementation creates traceable human accountability, or leaves responsibility buried inside procedural compliance.
-- Enterprise AI Risk Analysis — Examines AI legislation, enterprise exposure, and human accountability signals to strengthen executive oversight and safeguard the company in the boardroom.
+The report family includes three report types:
 
-Each blueprint closes with the same disclaimer: Lozen Advisory identifies where AI-related legal developments may reveal incomplete governance data, unclear human accountability, board-readiness gaps, or enterprise operating exposure. Legal interpretation should be reviewed with qualified counsel.
+- Board AI Governance Snapshot — A board-facing overview that identifies AI governance risk, regulatory exposure, and the questions directors should be prepared to ask.
+- AI Accountability Exposure Check — A Name Standard℠ review that evaluates whether AI implementation creates traceable human accountability, or leaves responsibility buried inside procedural compliance.
+- Enterprise Exposure Map — A structured statute-by-statute report that examines where AI legislation may create enterprise exposure, operating-model gaps, documentation burdens, and human accountability signals.
+
+Example live report:
+
+- Enterprise Exposure Map for Colorado SB 26-189 (ADMT): https://www.lozenadvisory.com/ai-legirisk/enterprise/colorado-sb-26-189-admt/
+
+The Enterprise Exposure Map is the first live sample of the report system. Additional Board AI Governance Snapshot and AI Accountability Exposure Check pages are planned as part of the same AI Governance Exposure Series.
+
+Each report closes with the same disclaimer: Lozen Advisory identifies where AI-related legal developments may reveal incomplete governance data, unclear human accountability, board-readiness gaps, or enterprise operating exposure. Legal interpretation should be reviewed with qualified counsel.
 
 ---
 
