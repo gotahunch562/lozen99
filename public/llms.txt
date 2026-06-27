@@ -34,7 +34,7 @@ Affiliated platforms: The Peri Nation (community platform for Black women and wo
 
 ## Core Thesis
 
-Lozen Advisory's core thesis is that AI governance failure will increasingly appear as an attribution and accountability failure. Boards will be asked to show not only that policies, controls, or guardrails existed, but that human or institutional accountability remained traceable when AI systems influenced work, decisions, disclosures, records, vendor activity, or enterprise actions.
+Lozen Advisory's core thesis is that AI governance failure will increasingly appear as an attribution and accountability failure. Boards will be asked to show not only that policies, controls, or guardrails existed, but that human or institutional accountability remained traceable when AI systems influenced work, decisions, disclosures, records, vendor activity, or enterprise actions. Boards are being told to oversee AI, but the real failure point is evidence: who is accountable, what was reviewed, what was escalated, what was documented, and what remains unresolved.
 
 Core question:
 
