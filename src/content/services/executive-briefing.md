@@ -1,21 +1,25 @@
 ---
-title: "Executive Briefing"
-description: "A focused advisory session for leadership teams evaluating AI investment, workforce-risk visibility, institutional capacity exposure, or a hidden issue before it becomes a visible crisis."
-shortDescription: "A focused advisory session for leadership teams evaluating AI investment, workforce-risk visibility, institutional capacity exposure, or a hidden issue before it becomes a visible crisis."
+title: "Governance Readiness Briefing"
+description: "A focused advisory session for leadership teams evaluating whether AI-generated corporate output can be reviewed, verified, escalated, refused, and formally signed off under a clear accountability model."
+shortDescription: "A focused advisory session for leadership teams evaluating AI investment, workforce-risk, institutional capacity exposure, and leadership attrition risk"
 priceFrom: "Leadership Session"
 duration: "Focused advisory"
 image:
   url: "/src/images/services/executivebriefing.webp"
   alt: "Executive advisory discussion in a private setting"
-metaDescription: "Executive briefings for leaders assessing disclosure-dependent workforce risk, invisible attrition, benefits utilization, and succession exposure."
+metaDescription: "Advisory session for leadership teams evaluating accountability for AI-generated corporate output and attrition-risk.
 ---
 
-The Executive Briefing is a focused advisory session for leadership teams that need clarity quickly.
+A focused advisory session for leadership teams evaluating whether AI-assisted corporate output can be reviewed, verified, escalated, refused, and formally signed off under a clear accountability model.
 
-Clients use this briefing when an issue is already visible enough to require attention, but not yet clear enough to support confident decision-making. That issue may be low menopause benefits utilization, concern about women leaders leaving without warning, questions about leadership pipeline fragility, uncertainty around AI governance, or pressure to explain whether current workforce data is giving leadership a complete view.
+Service Details
 
-This is not a general education session.
+The Governance Readiness Briefing is designed for leadership teams that need clarity before AI-assisted work becomes a board, legal, operational, or reputational exposure.
 
-Lozen Advisory brings the analysis into the decision room. The briefing clarifies what the organization currently measures, what it cannot measure under its existing architecture, and where false assurance may be forming.
+Clients use this briefing when AI tools are already influencing corporate output, but the organization has not yet established whether the people expected to approve that output have the capacity, information, authority, and formal right of refusal required to do so responsibly.
 
-The purpose is to help leadership understand the exposure before the organization is forced to respond under pressure.
+This is not a general AI education session.
+
+Lozen Advisory brings the accountability question into the decision room. The briefing clarifies what the organization currently asks people to sign off on, what evidence supports that approval, where AI-assisted work may be creating undocumented reliance, and whether human accountability remains traceable under the Name Standard℠.
+
+The purpose is to help leadership determine whether current governance structures can support defensible sign-off, or whether the organization is relying on human review without giving people the conditions required to exercise judgment.
