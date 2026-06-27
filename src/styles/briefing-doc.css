@@ -3,7 +3,7 @@
 /*
   AI LegiRisk Briefing Document System
 
-  Scope: Board Executive Briefing, Name Standard(SM) Blueprint, Enterprise Governance Analysis.
+  Scope: Board AI Governance Snapshot, AI Accountability Exposure Check, Enterprise Exposure Map.
   All three share this one system. Variants differ in content, not in tokens or components.
 
   Type: Tenor Sans (display/headings, single weight — never request bold on it) and
@@ -688,7 +688,7 @@
 }
 
 /* Cards (kept for now — confirm whether Board Executive Briefing / Name Standard
-   actually use these; they're unused in Enterprise Governance Analysis) */
+   actually use these; they're unused in Enterprise Exposure Map) */
 
 .briefing-card {
   border: 1px solid var(--briefing-border);
@@ -864,7 +864,7 @@
 
 /*
   Page nav remains available for multi-page reports such as Name Standard(SM).
-  Enterprise Governance Analysis should not render bottom page nav.
+  Enterprise Exposure Map should not render bottom page nav.
 */
 
 .briefing-page-nav {

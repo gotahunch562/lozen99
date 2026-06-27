@@ -422,12 +422,12 @@ const reportPathways = [
   },
   {
     id: "name-standard",
-    name: "Name Standard℠ Diagnostic",
+    name: "AI Accountability Exposure Check",
     description: "Does the rule create real individual accountability or only procedural oversight?",
   },
   {
     id: "enterprise",
-    name: "Enterprise Governance Analysis",
+    name: "Enterprise Exposure Map",
     description: "What must be built, documented, maintained, or evidenced?",
   },
 ];

@@ -4,11 +4,11 @@ const REPORTS = [
     hrefPrefix: "/ai-legirisk/board",
   },
   {
-    title: "Name Standard℠ Diagnostic",
+    title: "AI Accountability Exposure Check",
     hrefPrefix: "/ai-legirisk/name-standard",
   },
   {
-    title: "Enterprise Governance Analysis",
+    title: "Enterprise Exposure Map",
     hrefPrefix: "/ai-legirisk/enterprise",
   },
 ];
