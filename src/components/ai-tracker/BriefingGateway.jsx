@@ -1,6 +1,6 @@
 const REPORTS = [
   {
-    title: "Board Executive Briefing",
+    title: "Board AI Governance Snapshot",
     hrefPrefix: "/ai-legirisk/board",
   },
   {

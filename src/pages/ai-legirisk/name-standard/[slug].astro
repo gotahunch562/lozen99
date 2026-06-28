@@ -1,0 +1,192 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import "@/styles/briefing-doc.css";
+import {
+  getAiLegiRiskAccountabilityCheckBySlug,
+  formatJurisdiction,
+  formatSignal,
+  compactDate,
+} from "@/lib/aiLegiRiskReports";
+
+export const prerender = false;
+
+const slug = Astro.params.slug;
+const report = await getAiLegiRiskAccountabilityCheckBySlug(slug);
+
+if (!report) {
+  return Astro.redirect("/404/");
+}
+
+const { law, profile } = report;
+
+/*
+  Report naming standard
+
+  reportTitleName:
+  - Use for the large report H1.
+  - Prefers the full law/report name unless the full name is missing.
+
+  shortDisplayName:
+  - Use for compact report labels, footer labels, nav labels, CTA copy, and short references.
+  - Prefers the short name.
+*/
+const reportTitleName = law.law_name || law.short_name || "AI legislation record";
+const shortDisplayName = law.short_name || law.law_name || "AI legislation record";
+
+const trackerUrl = "/ai-legislation-tracker/";
+const advisoryBriefingUrl = "/ai-workforce-materiality-briefing/";
+
+const title = `AI Accountability Exposure Check — ${shortDisplayName} | Lozen Advisory`;
+const description = `Name Standard accountability review for ${law.law_name || shortDisplayName}. This report identifies the human attribution signal, review question, and accountability exposure raised by the legislation.`;
+
+const accountabilitySignals = [
+  profile.accountability_signal_1,
+  profile.accountability_signal_2,
+  profile.accountability_signal_3,
+].filter(Boolean);
+
+const attributionQuestions = [
+  profile.attribution_question_1,
+  profile.attribution_question_2,
+  profile.attribution_question_3,
+].filter(Boolean);
+---
+
+<BaseLayout title={title} description={description} ogType="article" hideNavigation={true} hideFooter={true}>
+  <article class="briefing-document">
+    <div class="briefing-page">
+      <header class="briefing-masthead">
+        <div>
+          <p class="briefing-masthead-name">Lozen Advisory LLC</p>
+        </div>
+
+        <div class="briefing-actions">
+          <button class="briefing-doc-action" type="button" onclick="window.print()">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3v12" />
+              <path d="M7 10l5 5 5-5" />
+              <path d="M5 21h14" />
+            </svg>
+            Export PDF
+          </button>
+
+          <button class="briefing-doc-action" type="button" onclick="navigator.share ? navigator.share({ title: document.title, url: window.location.href }) : navigator.clipboard.writeText(window.location.href)">
+            <svg viewBox="0 0 24 24">
+              <circle cx="18" cy="5" r="3" />
+              <circle cx="6" cy="12" r="3" />
+              <circle cx="18" cy="19" r="3" />
+              <path d="M8.6 13.5l6.8 4" />
+              <path d="M15.4 6.5l-6.8 4" />
+            </svg>
+            Share with board
+          </button>
+
+          <a class="briefing-doc-action is-close" href={trackerUrl}>
+            <svg viewBox="0 0 24 24">
+              <path d="M18 6 6 18" />
+              <path d="M6 6l12 12" />
+            </svg>
+            Close briefing
+          </a>
+        </div>
+      </header>
+
+      <div class="briefing-util-bar">
+        <span class="briefing-util-position">Page 1 · AI Accountability Exposure Check</span>
+      </div>
+
+      <div class="briefing-doc-header">
+        <h1 class="briefing-doc-header-title">{reportTitleName}</h1>
+
+        {law.verified_summary && (
+          <div class="briefing-doc-header-summary briefing-doc-header-summary-with-icon">
+            <span class="briefing-summary-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M9 18h6" />
+                <path d="M10 21h4" />
+                <path d="M8.5 14.5c-1.4-1.2-2.5-3-2.5-5.2A6 6 0 0 1 12 3a6 6 0 0 1 6 6.3c0 2.2-1.1 4-2.5 5.2-.8.7-1.3 1.4-1.5 2.2h-4c-.2-.8-.7-1.5-1.5-2.2Z" />
+              </svg>
+            </span>
+            <p>{law.verified_summary}</p>
+          </div>
+        )}
+
+        <div class="briefing-doc-header-meta">
+          <div class="briefing-doc-header-meta-item">
+            <span class="briefing-doc-header-meta-label">Jurisdiction</span>
+            <span class="briefing-doc-header-meta-value">{formatJurisdiction(law)}</span>
+          </div>
+
+          <div class="briefing-doc-header-meta-item">
+            <span class="briefing-doc-header-meta-label">Name Standard℠ Signal</span>
+            <span class="briefing-doc-header-meta-value">{formatSignal(profile.accountability_exposure_signal || law.name_standard_signal)}</span>
+          </div>
+
+          <div class="briefing-doc-header-meta-item">
+            <span class="briefing-doc-header-meta-label">Effective / operative date</span>
+            <span class="briefing-doc-header-meta-value">{compactDate(law)}</span>
+          </div>
+        </div>
+      </div>
+
+      {profile.primary_attribution_gap && (
+        <section class="briefing-primary-gap">
+          <p class="briefing-eyebrow">Primary attribution gap</p>
+          <h2 class="briefing-section-title">{profile.primary_attribution_gap}</h2>
+        </section>
+      )}
+
+      <section class="briefing-hero briefing-hero-flat">
+        <div class="briefing-question-card">
+          <p class="briefing-eyebrow">Accountability Question</p>
+          <blockquote>{profile.accountability_question}</blockquote>
+        </div>
+      </section>
+
+      <main class="briefing-main">
+        <section class="briefing-exposure-grid">
+          <div class="briefing-exposure-column">
+            <p class="briefing-exposure-kicker">Where accountability is assigned or obscured</p>
+            <h2 class="briefing-exposure-title">{profile.accountability_verdict}</h2>
+
+            <p class="briefing-exposure-subhead">Accountability signals</p>
+            <ol class="briefing-dash-list">
+              {accountabilitySignals.map((signal) => <li>{signal}</li>)}
+            </ol>
+          </div>
+
+          <div class="briefing-exposure-column">
+            <p class="briefing-exposure-kicker">Where human attribution should be tested</p>
+            <h2 class="briefing-exposure-title">Human attribution questions</h2>
+
+            <ol class="briefing-control-list">
+              {attributionQuestions.map((question) => <li>{question}</li>)}
+            </ol>
+          </div>
+        </section>
+
+        <section class="briefing-conclusion-flat">
+          <div class="briefing-conclusion-flat-text">
+            <p class="briefing-eyebrow">Next step</p>
+            <h2 class="briefing-section-title">Request Governance Readiness Briefing</h2>
+            <p>
+              {profile.next_step_line ||
+                `Lozen Advisory identifies where ${shortDisplayName} may create human-attribution gaps, symbolic review mechanisms, incomplete decision records, or unclear accountability paths before those issues become visible under pressure.`}
+            </p>
+          </div>
+
+          <div class="briefing-conclusion-flat-actions">
+            <a class="briefing-cta-button is-primary" href={advisoryBriefingUrl}>Request advisory briefing</a>
+            <a class="briefing-cta-button is-secondary" href={trackerUrl}>Close briefing</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="briefing-footer-note">
+        <p class="briefing-body-small">
+          AI LegiRisk is a Lozen Advisory governance exposure series. Lozen Advisory identifies where AI-related legal developments may reveal incomplete governance data, unclear human accountability, board-readiness gaps, or enterprise operating exposure. Legal interpretation should be reviewed with qualified counsel.
+        </p>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
