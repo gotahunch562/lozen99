@@ -16,8 +16,9 @@ excerpt: >+
   Artifacts look polished. Velocity improves. However, the person responsible
   for the work still has to determine whether the result can be trusted.
 
-description: Is your AI ROI overstated? Examine the AI human-capital exposure
-  facing CFOs, General Counsel, and boards.
+description: >
+  Corporate AI mandates can make adoption look like governance while hiding the
+  verification burden, judgment work, and accountability risk behind AI output.
 image:
   url: /src/images/blog/mandatory-ai-use-1.webp
   alt: Frustrated power user managing mandatory AI workload
