@@ -133,6 +133,7 @@ export interface DatasetJsonLdInput {
   dateModified?: string;
   license?: string;
   creatorName?: string;
+  about?: string | string[];
   distribution?: Array<{
     name: string;
     href: string;
@@ -802,6 +803,7 @@ export const createDatasetJsonLd = ({
   dateModified,
   license,
   creatorName = ORGANIZATION_NAME,
+  about,
   distribution = [],
 }: DatasetJsonLdInput): JsonLdObject => ({
   "@context": "https://schema.org",
@@ -820,6 +822,11 @@ export const createDatasetJsonLd = ({
   publisher: {
     "@id": `${SITE_URL}/#organization`,
   },
+  about: about
+    ? Array.isArray(about)
+      ? about.map((id) => ({ "@id": id }))
+      : { "@id": about }
+    : undefined,
   distribution: distribution.map((item) => ({
     "@type": "DataDownload",
     name: item.name,
