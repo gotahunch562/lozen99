@@ -99,17 +99,6 @@ export const ENACTED: LegislationRow[] = [
   },
   {
     jurisdiction: "Virginia",
-    bill: "SB258 / HB1173 \u2014 Protected Characteristic + Accommodation",
-    focus: "Workplace",
-    status: "Returned with substitute (study mandate) April 2026",
-    assumes: "A study is sufficient in place of a workplace framework",
-    cannotMeasure: "Legislature passed the framework. Governor substituted a study. A DOLI study was already underway. The record now contains two studies. Both measure the population that engages with formal systems. The population that does not disclose does not appear in either dataset.",
-    classification: "Dashboard Delay",
-    notes: "The workplace framework passed by the legislature was replaced with a study mandate due by July 1, 2028. An existing Department of Labor and Industry study was already in process when the substitute was issued. The second study does not add a new measurement instrument. It adds a second instance of the same instrument already producing the same structural gap.",
-    url: "https://lis.virginia.gov/bill-details/20261/SB258",
-  },
-  {
-    jurisdiction: "Virginia",
     bill: "SB790 \u2014 Insurance Coverage",
     focus: "Insurance",
     status: "Signed April 2026",
@@ -148,8 +137,8 @@ export const ENACTED: LegislationRow[] = [
     status: "Enacted 2024. Became law without the Governor's signature. Act 784. Effective August 1, 2024.",
     assumes: "Mandatory insurance coverage and Medicaid coverage for medically necessary menopause and perimenopause care removes the financial barrier to treatment. Prior authorization for HRT is prohibited.",
     cannotMeasure: "HB392 names women experiencing menopause and perimenopause as the population requiring coverage. Coverage activates when a licensed healthcare provider certifies medical necessity. Women managing symptoms without formal clinical engagement are named in the intent and excluded by the certification requirement. The prior authorization prohibition is meaningful for women already in the treatment pipeline. It has no reach before the first clinical encounter.",
-    classification: "Dashboard Delay",
     notes: "Louisiana enacted insurance coverage and Medicaid coverage for menopause care in 2024, ahead of most states in this tracker. The Medicaid provision extends coverage to lower-income women, but eligibility requires enrollment in the Louisiana Medicaid program and a licensed provider certification of medical necessity. Two gatekeeping conditions precede the coverage. The prior authorization prohibition removes a third barrier for women already past both.",
+    classification: "Dashboard Delay",
     url: "https://legis.la.gov/legis/BillInfo.aspx?i=246077",
   },
 ];
@@ -319,6 +308,16 @@ export const DID_NOT_PASS: FailedRow[] = [
     notes: "AB1940 passed the Labor and Employment Committee 7-0 on March 18, 2026. The author withdrew the bill on April 13, 2026. Near-unanimous committee support followed by voluntary withdrawal is analytically significant. The bill named the population. The author withdrew before the design could exclude them. Classification: Tacere. The population named in the findings never had the opportunity to be excluded by the activation condition because the bill did not become law.",
     url: "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB1940",
   },
+  {
+    jurisdiction: "Virginia",
+    bill: "SB258 / HB1173 — Protected Characteristic + Accommodation",
+    focus: "Workplace",
+    status: "Vetoed by Governor, May 19, 2026",
+    assumed: "Existing age- and gender-based protections under the Virginia Human Rights Act already cover menopause and perimenopause discrimination, making an explicit named category unnecessary without further study",
+    failureConfirms: "The General Assembly rejected the Governor's April substitute — which would have replaced the civil rights amendment with a study mandate — and re-passed the original bill in full. The Governor then vetoed it outright on May 19, 2026, stating that existing age and gender protections already cover this population. The veto rationale is itself the data point: a government official asserting implicit coverage exists for a population that has never been explicitly named, measured, or given a defined accommodation pathway. The DOLI study already underway prior to this bill continues on its own, unconnected timeline. The study this bill would have mandated — due July 1, 2028 — no longer exists in any form. No explicit framework. No bill-specific study. The only thing the veto adds to the record is the claim that none of this was necessary.",
+    notes: "This is the strongest version of the implicit-coverage pattern in the tracker. Washington's EO 26-01 and the California AB1940 withdrawal both involve a government actor asserting or implying that existing law already covers menopause-related discrimination. Virginia is the first instance of a sitting governor vetoing an explicit framework on those grounds, in the same action that also kills the fallback study. The legislature attempted the strongest available response — rejecting the substitute and forcing the original bill back to her desk — and the veto still held. There is no override vote on record at the reconvene session; the bill is dead for this session absent reintroduction.",
+    url: "https://lis.virginia.gov/bill-details/20261/SB258",
+  },
 ];
 
 export const ADVISORY: AdvisoryRow[] = [
@@ -355,4 +354,3 @@ export const ADVISORY: AdvisoryRow[] = [
       "EO 26-01 is analytically distinct from every other entry in this tracker. It does not create a new legal right. It acknowledges that the Washington Law Against Discrimination already requires reasonable accommodation for medically cognizable impairments — and directs state agencies to implement what existing law already obligated. That acknowledgment is the record. The order's whereas clauses state that 34% of people with menopause symptoms are not diagnosed, naming the undiagnosed population as the reason for the order while building a system that still activates on employee initiation and formal request. The liability carve-out in the order's final section — 'not intended to confer and does not confer any legal right or entitlement and shall not be used as a basis for legal challenges' — applies to government actors. Private employers in Washington carry no equivalent carve-out. The Governor's documented interpretation that menopause symptoms can constitute a medically cognizable impairment under the WLAD is now in the official state record, available as evidence of legislative intent in failure-to-accommodate claims against private employers. Section 5 of the order directs a review of professional licensing credits for menopause education across medicine, osteopathy, nursing, naturopathy, psychology, and surgery boards, with recommendations due to the Governor within twelve months. Once those recommendations publish, Washington will have a documented standard of care for provider training that feeds directly into misdiagnosis and clinical-instrument liability theories. The women the order was written for are identified in the whereas clauses and excluded by the activation condition. The liability carve-out insulates the state. It does not extend to private employers.",
   },
 ];
-
