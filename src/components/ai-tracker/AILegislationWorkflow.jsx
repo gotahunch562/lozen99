@@ -417,17 +417,17 @@ const trackerRows = [
 const reportPathways = [
   {
     id: "board",
-    name: "Board Executive Briefing",
-    description: "What should the board be prepared to see, ask, and evidence?",
+    name: "Board AI Governance Snapshot",
+    description: "A board-facing overview of the legislation, governance signal, and management questions.",
   },
   {
     id: "name-standard",
-    name: "AI Accountability Exposure Check",
+    name: "AI Accountability Check",
     description: "Does the rule create real individual accountability or only procedural oversight?",
   },
   {
     id: "enterprise",
-    name: "Enterprise Exposure Map",
+    name: "Enterprise Impact Map",
     description: "What must be built, documented, maintained, or evidenced?",
   },
 ];
@@ -717,12 +717,7 @@ export default function AILegislationWorkflow() {
                         type="button"
                         className="report-pathway-card"
                         onClick={() => {
-                          if (report.id === "enterprise") {
-                            window.location.href = `/ai-legirisk/enterprise/${selectedRow.id}/`;
-                            return;
-                          }
-
-                          chooseReport(report.id);
+                          window.location.href = `/ai-legirisk/${report.id}/${selectedRow.id}/`;
                         }}
                       >
                         <strong>{report.name}</strong>

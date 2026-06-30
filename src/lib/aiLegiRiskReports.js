@@ -9,6 +9,9 @@ const supabaseHeaders = {
   "Content-Type": "application/json",
 };
 
+const LAW_RECORD_SELECT =
+  "id,slug,law_code,rule_name,short_name,jurisdiction,region,country,status,sector_scope,impact_area,name_standard_signal,effective_date,live_date_label,source_url,source_label,verified_summary,is_published";
+
 function buildRestUrl(table, params) {
   const url = new URL(`${supabaseUrl}/rest/v1/${table}`);
 
@@ -45,6 +48,46 @@ async function fetchSingleRow(table, params) {
   return rows[0];
 }
 
+async function getPublishedLawRecordBySlug(slug) {
+  if (!slug) return null;
+
+  const record = await fetchSingleRow("ai_legislation_records", {
+    select: LAW_RECORD_SELECT,
+    slug: `eq.${slug}`,
+    is_published: "eq.true",
+    limit: "1",
+  });
+
+  if (!record) {
+    console.warn(`No published AI legislation record found for slug: ${slug}`);
+    return null;
+  }
+
+  return record;
+}
+
+function mapLawRecord(record) {
+  return {
+    id: record.id,
+    slug: record.slug,
+    law_code: record.law_code,
+    law_name: record.rule_name,
+    short_name: record.short_name,
+    jurisdiction: record.jurisdiction,
+    region: record.region,
+    country: record.country,
+    status: record.status,
+    sector_scope: record.sector_scope,
+    impact_area: record.impact_area,
+    name_standard_signal: record.name_standard_signal,
+    effective_date: record.effective_date,
+    live_date_label: record.live_date_label,
+    source_url: record.source_url,
+    source_label: record.source_label,
+    verified_summary: record.verified_summary,
+  };
+}
+
 export function formatJurisdiction(law) {
   return law.region || law.jurisdiction || "Jurisdiction not specified";
 }
@@ -71,21 +114,90 @@ export function compactDate(law) {
   }).format(date);
 }
 
-export async function getAiLegiRiskReportBySlug(slug) {
-  if (!slug) return null;
+export async function getAiLegiRiskBoardSnapshotBySlug(slug) {
+  const record = await getPublishedLawRecordBySlug(slug);
 
-  const record = await fetchSingleRow("ai_legislation_records", {
+  if (!record) return null;
+
+  const profile = await fetchSingleRow("board_snapshot_profiles", {
     select:
-      "id,slug,law_code,rule_name,short_name,jurisdiction,region,country,status,sector_scope,impact_area,name_standard_signal,effective_date,live_date_label,source_url,source_label,verified_summary,is_published",
-    slug: `eq.${slug}`,
+      "board_governance_signal,primary_board_issue,board_question,board_verdict,board_signal_1,board_signal_2,board_signal_3,management_question_1,management_question_2,management_question_3,next_step_line,is_published",
+    legislation_record_id: `eq.${record.id}`,
     is_published: "eq.true",
     limit: "1",
   });
 
-  if (!record) {
-    console.warn(`No published AI legislation record found for slug: ${slug}`);
+  if (!profile) {
+    console.warn(`No published Board Snapshot profile found for slug: ${slug}`);
     return null;
   }
+
+  return {
+    law: mapLawRecord(record),
+
+    profile: {
+      board_governance_signal: profile.board_governance_signal,
+      primary_board_issue: profile.primary_board_issue,
+      board_question: profile.board_question,
+      board_verdict: profile.board_verdict,
+
+      board_signal_1: profile.board_signal_1,
+      board_signal_2: profile.board_signal_2,
+      board_signal_3: profile.board_signal_3,
+
+      management_question_1: profile.management_question_1,
+      management_question_2: profile.management_question_2,
+      management_question_3: profile.management_question_3,
+
+      next_step_line: profile.next_step_line,
+    },
+  };
+}
+
+export async function getAiLegiRiskAccountabilityCheckBySlug(slug) {
+  const record = await getPublishedLawRecordBySlug(slug);
+
+  if (!record) return null;
+
+  const profile = await fetchSingleRow("accountability_exposure_profiles", {
+    select:
+      "accountability_exposure,primary_attribution_gap,accountability_question,accountability_verdict,name_standard_analysis,human_review_analysis,evidence_record_analysis,attribution_question_1,attribution_question_2,attribution_question_3,next_step_line,is_published",
+    legislation_record_id: `eq.${record.id}`,
+    is_published: "eq.true",
+    limit: "1",
+  });
+
+  if (!profile) {
+    console.warn(`No published Accountability Exposure profile found for slug: ${slug}`);
+    return null;
+  }
+
+  return {
+    law: mapLawRecord(record),
+
+    profile: {
+      accountability_exposure_signal: profile.accountability_exposure,
+      primary_attribution_gap: profile.primary_attribution_gap,
+      accountability_question: profile.accountability_question,
+      accountability_verdict: profile.accountability_verdict,
+
+      accountability_signal_1: profile.name_standard_analysis,
+      accountability_signal_2: profile.human_review_analysis,
+      accountability_signal_3: profile.evidence_record_analysis,
+
+      attribution_question_1: profile.attribution_question_1,
+      attribution_question_2: profile.attribution_question_2,
+      attribution_question_3: profile.attribution_question_3,
+
+      next_step_line: profile.next_step_line,
+    },
+  };
+}
+
+export async function getAiLegiRiskReportBySlug(slug) {
+  const record = await getPublishedLawRecordBySlug(slug);
+
+  if (!record) return null;
 
   const profile = await fetchSingleRow("enterprise_blueprint_profiles", {
     select:
@@ -101,25 +213,7 @@ export async function getAiLegiRiskReportBySlug(slug) {
   }
 
   return {
-    law: {
-      id: record.id,
-      slug: record.slug,
-      law_code: record.law_code,
-      law_name: record.rule_name,
-      short_name: record.short_name,
-      jurisdiction: record.jurisdiction,
-      region: record.region,
-      country: record.country,
-      status: record.status,
-      sector_scope: record.sector_scope,
-      impact_area: record.impact_area,
-      name_standard_signal: record.name_standard_signal,
-      effective_date: record.effective_date,
-      live_date_label: record.live_date_label,
-      source_url: record.source_url,
-      source_label: record.source_label,
-      verified_summary: record.verified_summary,
-    },
+    law: mapLawRecord(record),
 
     profile: {
       enterprise_exposure_signal: profile.enterprise_exposure,

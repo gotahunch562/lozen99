@@ -1,14 +1,14 @@
 const REPORTS = [
   {
-    title: "Board Executive Briefing",
+    title: "Board AI Governance Snapshot",
     hrefPrefix: "/ai-legirisk/board",
   },
   {
-    title: "AI Accountability Exposure Check",
+    title: "AI Accountability Check",
     hrefPrefix: "/ai-legirisk/name-standard",
   },
   {
-    title: "Enterprise Exposure Map",
+    title: "Enterprise Impact Map",
     hrefPrefix: "/ai-legirisk/enterprise",
   },
 ];
