@@ -9,19 +9,27 @@ const mediaEmail = "media@lozenadvisory.com";
 
 const releases = [
   {
+    date: "June 30, 2026",
+    category: "AI Governance",
+    headline: "Lozen Advisory Launches \"When AI Carries Your Name\" for Leaders Using AI at Work",
+    description:
+      "Lozen Advisory introduces the Name Standard℠ in a briefing for leaders using AI at work, focused on verification, human accountability, and reputation risk when AI-assisted work moves through a leader's name or authority.",
+    href: "/news-press/when-ai-carries-your-name/",
+  },
+  {
     date: "May 19, 2026",
     category: "Market Correction",
     headline: "The Menopause-at-Work Market Followed the Playbook. The Playbook Was Wrong.",
     description:
       "As PwC names menopause a defining women's health opportunity, Lozen Advisory issues a market correction on utilization failure and the false assumption that awareness equals adoption.",
-    href: "/news-press/menopause-market-correction",
+    href: "/news-press/menopause-market-correction/",
   },
 ];
 
 
 const title = "News & Press | Lozen Advisory";
-const description = "Press releases, media materials, and public statements from Lozen Advisory on menopause-at-work market failure and workforce governance.";
-const canonical = "https://www.lozenadvisory.com/news-press";
+const description = "Press releases, media materials, and public statements from Lozen Advisory on AI governance, algorithmic accountability, workforce governance, and market analysis.";
+const canonical = "https://www.lozenadvisory.com/news-press/";
 
 const collectionJsonLd = createCollectionPageJsonLd({
   title,
@@ -34,7 +42,7 @@ const collectionJsonLd = createCollectionPageJsonLd({
   })),
   breadcrumbs: [
     { name: "Home", href: "/" },
-    { name: "News & Press", href: "/news-press" },
+    { name: "News & Press", href: "/news-press/" },
   ],
 });
 ---
