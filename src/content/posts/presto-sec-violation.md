@@ -8,13 +8,20 @@ pubDate: 2026-07-01
 datePublished: 2026-07-01
 dateModified: 2026-07-01
 category: AI Governance & Workforce Risk
-excerpt: What the Presto Automation order reveals about AI accountability, human
-  intervention, and the Name Standard℠
-description: na
+excerpt: The SEC’s January 2025 enforcement action against Presto Automation
+  exposes the massive compliance gap between marketing "autonomous AI" and the
+  reality of relying on hidden human labor. By mapping Presto’s disclosure
+  failures to Lozen Advisory’s Name Standard℠ diagnostic framework, this
+  analysis breaks down why removing the visible worker while using offshore
+  agents is not true automation—and why corporate boards must maintain an
+  active, empowered, and documented human accountability layer.
+description: "The SEC’s Presto Automation order delivers a sharp governance
+  signal: all corporate AI requires a verified, active layer of human
+  accountability."
 image:
-  url: /src/images/blog/blog-placeholder-blue.svg
+  url: /src/images/blog/ai-the-name-standard.webp
   alt: na
-heroImage: /src/images/blog/blog-placeholder-blue.svg
+heroImage: /src/images/blog/ai-name-standard-2026.webp
 tags:
   - AI Governance
   - Name Standard
