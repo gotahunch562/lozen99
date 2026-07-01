@@ -33,7 +33,7 @@ isFeatured: false
 ---
 ## AI Accountability: Beyond Human-in-the-Loop
 
-This article uses the SEC's January 2025 enforcement action against Presto Automation as a case study in AI disclosure failure, and maps each violation to Lozen Advisory's Name Standard℠ diagnostic framework. The Presto action is not only an AI-washing case. It is a disclosure-control case about ownership, human intervention, and whether a company can describe an AI product as autonomous, specifically, as having eliminated human order taking, when a human-in-the-loop (HITL) workforce remains embedded in the operating model. 
+This article uses the SEC's January 2025 enforcement action against Presto Automation as a case study in AI accountability failure, and maps each violation to Lozen Advisory's Name Standard℠ diagnostic framework. The Presto action is not only an AI-washing case. It is a disclosure-control case about ownership, human intervention, and whether a company can describe an AI product as autonomous, specifically, as having eliminated human order taking, when a human-in-the-loop (HITL) workforce remains embedded in the operating model. 
 
 On January 14, 2025, the SEC announced settled charges against Presto Automation, Inc. for making materially false and misleading statements about Presto Voice, its drive-thru AI ordering product. The enforcement signal is direct: public-company AI claims now require disclosure controls that can verify the difference between what  the company says AI does, and which [human roles, vendors, or operational functions are actually involved](/blog/the-name-standard-ai-governance/) in making it work.
 
@@ -41,7 +41,7 @@ On January 14, 2025, the SEC announced settled charges against Presto Automation
 
 ## Presto Claimed the Technology and Erased the Humans
 
-[The SEC order identifies two false claims](https://www.sec.gov/enforcement-litigation/administrative-proceedings/33-11352-s) and a third structural failure.
+The SEC order identifies two false claims and a third structural failure.
 
 - **False claim one:** From November 2021 to September 2022, Presto described Presto Voice as "our technology" and "Presto's technology" while failing to disclose that every commercially deployed unit was powered by technology owned and operated by Hi Auto, a third-party supplier.
 - **False claim two:** After deploying its own proprietary technology in September 2022, Presto claimed Presto Voice "eliminates human order taking." The original version required human agent intervention on every order. A more advanced version, piloted June 2023, still required human intervention approximately 70 percent of the time. The agents were located primarily in the Philippines and India.
@@ -61,13 +61,13 @@ The Name Standard℠ asks a single governance question: when AI-assisted work mo
 
 Human-in-the-loop and human-on-the-loop describe placement — where a person sits in the workflow relative to AI output. They do not answer the attribution question. Before a human's name, judgment, or institutional sign-off is attached to AI-assisted output, [does that person have the capacity to verify it,](https://www.executiveaiskills.com/) the information required to evaluate it, the authority to reject it, the documentation to evidence it, and a formal escalation path if something is wrong?
 
-Placement is not accountability. The Name Standard℠ evaluates accountability.
+**Placement is not accountability. The Name Standard℠ evaluates accountability.**
 
 What follows is Lozen Advisory's diagnostic reading of the Presto order — not additional SEC findings — applied to show where a structured human accountability framework would have intervened.
 
 - **Pillar 1 — Time Allocation.** Does the responsible individual have the explicit operational hours required to verify complex synthetic outputs? In Presto's case, that means verifying AI-product claims, operational metrics, and human-intervention rates against actual workflow before filing. No one was formally assigned to do that. The claim that Presto Voice "eliminates human order taking" appeared in five registration statements over seven months [without a review cycle that caught the gap.](/blog/ai-decision-debt/)
 - **Pillar 2 — Review Capacity and Tools.** Does the reviewer possess the necessary diagnostic source data to actively validate the AI's assertions? Presto's reported non-intervention rates of 95 to 99 percent were never reconciled against actual operational data before filing. Executives raised the terminology problem internally — but no disclosure-control process required the company to resolve the gap between operational reality, internal warnings, and public claims before those claims reached investors.
-- **Pillar 3 — Information Access.** Is there a clear, uninhibited line of sight into content provenance and vendor-utilized foundation models? In this case, the equivalent question is whether anyone with disclosure responsibility had documented visibility into the supplier technology powering the product. Presto's reliance on Hi Auto — which owned and operated the AI technology powering every deployed unit — was never adequately disclosed. No one with disclosure responsibility had clear, documented visibility into that dependency or its materiality to investors.
+- **Pillar 3 — Information Access.** Is there a clear, uninhibited line of sight into content provenance and vendor-utilized foundation models? In this case, the equivalent question is whether anyone with disclosure responsibility had documented visibility into the supplier technology powering the product. Presto's reliance on Hi Auto — which owned and operated the AI technology powering every deployed unit — was never adequately disclosed. Did anyone with disclosure responsibility have clear, documented visibility into that dependency or its materiality to investors?
 - **Pillar 4 — Documentation Infrastructure.** Is the human validation process tangibly logged to provide clear internal compliance evidence during regulatory review? This is the third violation in the SEC order in explicit form. Presto had no established process for drafting, reviewing, or approving Commission filings, and no one was formally responsible for ensuring their accuracy. The order found an absence of disclosure controls and procedures — meaning no formal validation chain existed to produce or preserve a compliance record.
 - **Pillar 5 — Formal Right of Refusal.** Does the individual possess the institutional standing and explicit veto power to halt, escalate, or document non-compliant AI assets without fear of internal reprisal? Presto executives flagged the misleading terminology in October 2022 and again in January 2023. Those concerns produced internal discussion and no corrective action. There was no formal escalation path, no veto mechanism, and no institutional standing for the people who knew the claims were false to stop the filings.
 
@@ -81,7 +81,7 @@ The Presto order is board-relevant. It is an issuer disclosure enforcement actio
 
 For boards, audit committees, and disclosure teams, the question is not whether your company uses AI. It is whether the human-in-the-loop (HITL) layer behind your AI claims is active, documented, and empowered to act — or whether it exists only on paper.
 
-Presto's executives knew the claims were false. The problem was not awareness. It was the absence of any formal structure — time, tools, access, documentation, or veto authority — to translate that awareness into corrective disclosure. That absence is the third violation in the order: a violation of Exchange Act Rule 13a-15(a), which requires issuers to maintain disclosure controls and procedures. The order also found violations of Section 17(a)(2) of the Securities Act, Section 13(a) of the Exchange Act, and Rule 13a-11 for the misleading filings themselves.
+Presto's executives knew the claims were false. The problem was not awareness. **It was the absence of any formal structure — time, tools, access, documentation, or veto authority — to translate that awareness into corrective disclosure.** That absence is the third violation in the order: a violation of Exchange Act Rule 13a-15(a), which requires issuers to maintain disclosure controls and procedures. The order also found violations of Section 17(a)(2) of the Securities Act, Section 13(a) of the Exchange Act, and Rule 13a-11 for the misleading filings themselves.
 
 ---
 
@@ -91,7 +91,7 @@ The Presto case is powerful because the enforcement theory returns the human to 
 
 The company claimed AI eliminated the need for human order taking.
 
-The SEC found that the original version of Presto's proprietary AI required human intervention on every order. Even the more advanced version, piloted in June 2023, still required human agent involvement 70 percent of the time. Presto's own executives knew it throughout.
+The SEC found that the original version of Presto's proprietary AI required human intervention on every order. Even the more advanced version, piloted in June 2023, still required human agent involvement 70 percent of the time.
 
 That is the Name Standard℠ argument in enforcement form.
 
