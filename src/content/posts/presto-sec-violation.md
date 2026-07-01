@@ -1,6 +1,6 @@
 ---
 title: "What the SEC Presto Order Means for Human-in-the-Loop (HITL) AI Compliance "
-seo_title: The SEC Just Wrote Humans Back Into AI Disclosure
+seo_title: SEC Presto Order & Human-in-the-Loop AI Compliance
 subtitle: What the Presto Automation order reveals about AI accountability,
   human intervention, and the Name Standard℠
 slug: human-in-the-loop-sec-ai-disclosure
@@ -35,7 +35,7 @@ isFeatured: false
 
 This article uses the SEC's January 2025 enforcement action against Presto Automation as a case study in AI accountability failure, and maps each violation to Lozen Advisory's Name Standard℠ diagnostic framework. The Presto action is not only an AI-washing case. It is a disclosure-control case about ownership, human intervention, and whether a company can describe an AI product as autonomous, specifically, as having eliminated human order taking, when a human-in-the-loop (HITL) workforce remains embedded in the operating model. 
 
-On January 14, 2025, the SEC announced settled charges against Presto Automation, Inc. for making materially false and misleading statements about Presto Voice, its drive-thru AI ordering product. The enforcement signal is direct: public-company AI claims now require disclosure controls that can verify the difference between what  the company says AI does, and which [human roles, vendors, or operational functions are actually involved](/blog/the-name-standard-ai-governance/) in making it work.
+On January 14, 2025, the SEC announced settled charges against Presto Automation, Inc. for making materially false and misleading statements about Presto Voice, its drive-thru AI ordering product. The enforcement signal is direct: public-company AI claims now require disclosure controls that can verify the difference between what  the company says AI does, and which [human roles, vendors, or operational functions are actually involved](/blog/the-name-standard-ai-governance/) in making the AI work.
 
 ---
 
