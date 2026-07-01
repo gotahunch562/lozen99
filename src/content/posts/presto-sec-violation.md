@@ -30,7 +30,7 @@ tags:
 draft: true
 isFeatured: false
 ---
-
+## AI Accountability: Beyond Human-in-the-Loop
 
 This article uses the SEC's January 2025 enforcement action against Presto Automation as a case study in AI disclosure failure — and maps each violation to Lozen Advisory's Name Standard℠ diagnostic framework. The Presto action is not only an AI-washing case. It is a disclosure-control case about ownership, human intervention, and whether a company can describe an AI product as autonomous — specifically, as having eliminated human order taking — when a human-in-the-loop (HITL) workforce remains embedded in the operating model. On January 14, 2025, the SEC announced settled charges against Presto Automation, Inc. for making materially false and misleading statements about Presto Voice, its drive-thru AI ordering product, in filings and public statements from November 2021 through May 2023. The company consented to a cease-and-desist order without civil penalties, citing voluntary cooperation and corrective disclosures made after the Commission's investigation began. The enforcement signal is direct: public-company AI claims now require disclosure controls that can verify the difference between what the product is called, what the company says it does, and which human roles, vendors, or operational functions are actually involved in making it work.
 
@@ -58,11 +58,13 @@ Presto's own executives knew this from the beginning. On January 20, 2022 — mo
 
 That is the factual record. Here is what it means.
 
-The Name Standard℠ asks a single governance question: when AI-assisted work — including AI products that depend on human-in-the-loop (HITL) workflows — moves through a company's name, a product's name, or a human's professional authority, has the accountable human contribution been preserved, verified, and disclosed where material?
+The Name Standard℠ asks a single governance question: when AI-assisted work moves through a company's name, a product's name, or a human's professional authority, has the accountable human contribution been preserved, verified, and disclosed where material?
 
-A company can reduce on-site labor without eliminating human labor. It can remove the visible worker from the customer interface while relying on remote human workers, contractors, or offshore agents elsewhere in the workflow. That is not the elimination of human intervention. It is the relocation of human intervention — and the Name Standard℠ is built to catch exactly that distinction.
+Human-in-the-loop and human-on-the-loop describe placement — where a person sits in the workflow relative to AI output. They do not answer the attribution question. Before a human's name, judgment, or institutional sign-off is attached to AI-assisted output, does that person have the capacity to verify it, the information required to evaluate it, the authority to reject it, the documentation to evidence it, and a formal escalation path if something is wrong?
 
-Lozen Advisory's Name Standard℠ evaluates compliance across five pillars. What follows is Lozen's diagnostic reading of the Presto order — not additional SEC findings — applied to show where a structured human accountability framework would have intervened.
+Placement is not accountability. The Name Standard℠ evaluates accountability.
+
+What follows is Lozen Advisory's diagnostic reading of the Presto order — not additional SEC findings — applied to show where a structured human accountability framework would have intervened.
 
 **Pillar 1 — Time Allocation.** Does the responsible individual have the explicit operational hours required to verify complex synthetic outputs? In Presto's case, that means verifying AI-product claims, operational metrics, and human-intervention rates against actual workflow before filing. No one was formally assigned to do that. The claim that Presto Voice "eliminates human order taking" appeared in five registration statements over seven months without a review cycle that caught the gap.
 
@@ -74,7 +76,7 @@ Lozen Advisory's Name Standard℠ evaluates compliance across five pillars. What
 
 **Pillar 5 — Formal Right of Refusal.** Does the individual possess the institutional standing and explicit veto power to halt, escalate, or document non-compliant AI assets without fear of internal reprisal? Presto executives flagged the misleading terminology in October 2022 and again in January 2023. Those concerns produced internal discussion and no corrective action. There was no formal escalation path, no veto mechanism, and no institutional standing for the people who knew the claims were false to stop the filings.
 
-The Name Standard℠ does not ask whether AI is impressive. It asks whether the human accountability layer is active, documented, and empowered — or ceremonial. At Presto, it was absent across all five pillars.
+The Name Standard℠ does not ask whether AI is impressive. It asks whether the human accountability layer is active, documented, and empowered — or ceremonial.
 
 ---
 
