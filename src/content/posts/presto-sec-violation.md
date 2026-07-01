@@ -30,13 +30,7 @@ tags:
 draft: true
 isFeatured: false
 ---
-# The SEC Wrote Humans Back Into AI Disclosure
 
-## What the Presto Automation order reveals about AI accountability, human intervention, and the Name Standard℠
-
----
-
-## The SEC Did Not Just Find AI Washing
 
 This article uses the SEC's January 2025 enforcement action against Presto Automation as a case study in AI disclosure failure — and maps each violation to Lozen Advisory's Name Standard℠ diagnostic framework. The Presto action is not only an AI-washing case. It is a disclosure-control case about ownership, human intervention, and whether a company can describe an AI product as autonomous — specifically, as having eliminated human order taking — when a human-in-the-loop (HITL) workforce remains embedded in the operating model. On January 14, 2025, the SEC announced settled charges against Presto Automation, Inc. for making materially false and misleading statements about Presto Voice, its drive-thru AI ordering product, in filings and public statements from November 2021 through May 2023. The company consented to a cease-and-desist order without civil penalties, citing voluntary cooperation and corrective disclosures made after the Commission's investigation began. The enforcement signal is direct: public-company AI claims now require disclosure controls that can verify the difference between what the product is called, what the company says it does, and which human roles, vendors, or operational functions are actually involved in making it work.
 
