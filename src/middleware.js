@@ -6,29 +6,48 @@ export const onRequest = defineMiddleware(async (context, next) => {
 
   const forwardedFor = context.request.headers.get("x-forwarded-for") || "";
   const realIp = context.request.headers.get("x-real-ip") || "";
+  const vercelForwardedFor =
+    context.request.headers.get("x-vercel-forwarded-for") || "";
+
   const connectingIp =
-    context.request.headers.get("cf-connecting-ip") ||
+    vercelForwardedFor.split(",")[0].trim() ||
     realIp ||
     forwardedFor.split(",")[0].trim();
 
-  const isInvisibleAttritionPath =
-    url.pathname.startsWith("/invisible-attrition/");
+  const protectedPaths = [
+    "/invisible-attrition/",
+    "/ai-legislation-tracker/",
+  ];
+
+  const isProtectedPath = protectedPaths.some((path) =>
+    url.pathname.startsWith(path)
+  );
 
   const blockedIps = new Set([
     "156.249.3.130",
+    "45.206.82.92",
   ]);
 
+  const allowedGoodBots =
+    /googlebot|bingbot|slurp|duckduckbot|applebot|facebookexternalhit|linkedinbot|twitterbot/i;
+
   const badBotPattern =
-    /ahrefsbot|semrushbot|mj12bot|bytespider|petalbot|dotbot|dataforseobot|scrapy|python-requests|curl|wget/i;
+    /ahrefsbot|semrushbot|mj12bot|bytespider|petalbot|dotbot|dataforseobot|scrapy|python-requests|curl|wget|go-http-client|axios|node-fetch/i;
 
   const isBlockedIp = blockedIps.has(connectingIp);
+  const isGoodBot = allowedGoodBots.test(userAgent);
   const isBadBot = badBotPattern.test(userAgent);
 
-  if (isInvisibleAttritionPath && (isBlockedIp || isBadBot)) {
+  if (isGoodBot) {
+    return next();
+  }
+
+  if (isBlockedIp || (isProtectedPath && isBadBot)) {
     return new Response("Access denied", {
       status: 403,
       headers: {
         "Content-Type": "text/plain",
+        "X-Robots-Tag": "noindex, nofollow",
       },
     });
   }
