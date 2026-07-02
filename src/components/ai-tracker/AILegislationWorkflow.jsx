@@ -231,6 +231,22 @@ const trackerRows = [
     liveDate: "May 19, 2025",
     sourceUrl: "https://www.congress.gov/bill/119th-congress/senate-bill/146",
   },
+    {
+    id: "ai-agent-act-2026-discussion-draft",
+    ruleName: "AI AGENT Act of 2026 (Discussion Draft)",
+    region: "USA (Federal)",
+    status: "Discussion draft",
+    sectorScope: "Private",
+    impactArea:
+      "To create a federal framework for custodial user agents that can act on a user's behalf through documented, scope-limited, revocable delegation, FTC registration, provider duties, interoperability access, and technical standards.",
+    nameStandardSignal:
+      "Entity/provider accountability; delegated-agent records; no named human owner",
+    liveDate: "Discussion draft",
+    sourceUrl:
+      "https://www.warner.senate.gov/newsroom/press-releases/warner-unveils-discussion-draft-of-legislation-to-create-innovative-market-for-secure-artificial-intelligence-agents/",
+    updateNote:
+      "Name Standard℠ relevance: the draft supports delegated-agent accountability through authorization, revocation, records, provider responsibility, and enforcement, but does not name an internal human owner for enterprise oversight.",
+  },
   {
     id: "georgia-sb-444-health-insurance",
     ruleName: "Georgia SB 444 (Health Insurance)",
