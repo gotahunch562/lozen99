@@ -16,9 +16,7 @@ heroAlt: Readiness Is Not Compliance
 draft: true
 isFeatured: false
 ---
-# Four Pain Points Hiding Behind the Boardroom's AI Governance Gap
-
-Nasdaq's chief product officer closed a recent industry forum on AI and the boardroom with a line worth sitting with: the gap boards face isn't awareness anymore, it's readiness. Generic, templated governance language is turning from a safe default into a liability, and a board that doesn't shape its own narrative will find that narrative written by whoever gets there first.
+Nasdaq's chief product officer closed a recent industry forum on AI and the boardroom with a line worth sitting with: **the gap boards face isn't awareness anymore, it's readiness**. Generic, templated governance language is turning from a safe default into a liability, and a board that doesn't shape its own narrative will find that narrative written by whoever gets there first.
 
 That's a clean thesis. It's also not something a board can act on directly. "Be ready" is a posture. What actually creates exposure isn't a vague atmosphere of unreadiness — it's a small number of specific, recurring gaps, showing up across boardrooms right now as AI shifts from a tool a company uses into something closer to an operating layer the company runs on.
 
@@ -74,7 +72,7 @@ The FTC's recent enforcement sweeps illustrate how quickly smaller vendor relati
 
 ---
 
-## Where Lozen Sits
+## Lozen Identifies Governance Gaps
 
 Each of these gaps tempts a board toward the same reflex: ask counsel whether the company is compliant. That instinct isn't wrong, but it's answering a different question than the one that's actually exposed. A company can be fully compliant and still not be able to name the accountable person behind an agent's decision, still have an evidence trail that wouldn't survive scrutiny, still be carrying operating exposure no one is tracking. Compliance tells you whether a rule was followed. It doesn't tell you whether the governance underneath the rule would hold up if someone went looking.
 
