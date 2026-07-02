@@ -430,11 +430,63 @@ const trackerRows = [
   },
 ];
 
+
+const trackerLastUpdated = "July 2, 2026";
+
+const trackerStats = [
+  { label: "Records", value: trackerRows.length },
+  {
+    label: "In Force / Final",
+    value: trackerRows.filter((row) =>
+      /already in effect|signed into law|final regulations adopted/i.test(row.status),
+    ).length,
+  },
+  {
+    label: "Discussion Draft",
+    value: trackerRows.filter((row) => /discussion draft/i.test(row.status)).length,
+  },
+  {
+    label: "Voluntary Standards",
+    value: trackerRows.filter((row) => /voluntary standard/i.test(row.status)).length,
+  },
+  {
+    label: "Pending Signature",
+    value: trackerRows.filter((row) => /sent to governor/i.test(row.status)).length,
+  },
+];
+
+const nameStandardStats = [
+  {
+    label: "Documentation Only",
+    value: trackerRows.filter((row) =>
+      /documentation \/ record retention only/i.test(row.nameStandardSignal),
+    ).length,
+  },
+  {
+    label: "No Human Accountability",
+    value: trackerRows.filter((row) =>
+      /no human accountability mechanism found/i.test(row.nameStandardSignal),
+    ).length,
+  },
+  {
+    label: "Explicit Human Review",
+    value: trackerRows.filter((row) =>
+      /explicit human review required/i.test(row.nameStandardSignal),
+    ).length,
+  },
+  {
+    label: "Undefined Oversight",
+    value: trackerRows.filter((row) =>
+      /human oversight mentioned but undefined/i.test(row.nameStandardSignal),
+    ).length,
+  },
+];
+
 const reportPathways = [
   {
     id: "board",
     name: "Board AI Governance Snapshot",
-    description: "A board-facing overview of the legislation, governance signal, and management questions.",
+    description: "A board-facing overview of the legislation, human-accountability classification, and management questions.",
   },
   {
     id: "name-standard",
@@ -539,7 +591,7 @@ export default function AILegislationWorkflow() {
         autoHeight: true,
       },
       {
-        headerName: "Name Standard℠ Signal",
+        headerName: "Human Accountability Classification",
         field: "nameStandardSignal",
         flex: 1.25,
         minWidth: 260,
@@ -635,6 +687,32 @@ export default function AILegislationWorkflow() {
 
   return (
     <div className="ai-legislation-workflow">
+      <section className="ai-tracker-status-panel" aria-label="AI tracker status summary">
+        <div className="ai-tracker-status-heading">
+          <p className="ai-tracker-status-eyebrow">Tracker Status</p>
+          <p className="ai-tracker-updated">Last updated: {trackerLastUpdated}</p>
+        </div>
+
+        <div className="ai-tracker-status-row" aria-label="Legislative status counts">
+          {trackerStats.map((stat) => (
+            <div className="ai-tracker-status-stat" key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
+        </div>
+
+        <p className="ai-tracker-signal-copy">
+          <span>Human Accountability Classification:</span>{" "}
+          {nameStandardStats.map((stat, index) => (
+            <span key={stat.label}>
+              {index > 0 ? " · " : ""}
+              <strong>{stat.value}</strong> {stat.label}
+            </span>
+          ))}
+        </p>
+      </section>
+
       <div className="grid-shell" aria-label="AI legislation index">
         <AgGridReact
           theme={lozenGridTheme}
@@ -695,7 +773,7 @@ export default function AILegislationWorkflow() {
                       </p>
 
                       <p>
-                        <span>Name Standard℠ Signal:</span> {selectedRow.nameStandardSignal}
+                        <span>Human Accountability Classification:</span> {selectedRow.nameStandardSignal}
                       </p>
 
                       {selectedRow.updateNote ? (
@@ -784,7 +862,7 @@ export default function AILegislationWorkflow() {
                   </div>
 
                   <div>
-                    <dt>Name Standard℠ Signal</dt>
+                    <dt>Human Accountability Classification</dt>
                     <dd>{selectedRow.nameStandardSignal}</dd>
                   </div>
 
@@ -824,6 +902,141 @@ export default function AILegislationWorkflow() {
           position: relative;
           min-height: 640px;
           background: #ffffff;
+        }
+
+
+
+        .ai-tracker-status-panel {
+          display: grid;
+          gap: 0.75rem;
+          margin-bottom: 0.75rem;
+          border: 1px solid rgba(15, 23, 42, 0.12);
+          border-radius: 0.9rem;
+          background: #ffffff;
+          box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+          padding: 0.85rem 1rem;
+        }
+
+        .ai-tracker-status-heading {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+        }
+
+        .ai-tracker-status-eyebrow {
+          margin: 0;
+          color: rgba(15, 23, 42, 0.58);
+          font-size: 0.68rem;
+          font-weight: 800;
+          letter-spacing: 0.14em;
+          line-height: 1.35;
+          text-transform: uppercase;
+        }
+
+        .ai-tracker-updated {
+          margin: 0;
+          color: rgba(15, 23, 42, 0.62);
+          font-size: 0.68rem;
+          font-weight: 800;
+          letter-spacing: 0.11em;
+          line-height: 1.2;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+
+        .ai-tracker-status-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.45rem;
+        }
+
+        .ai-tracker-status-stat {
+          --status-pill-bg: #f8fafc;
+          --status-pill-text: #0f172a;
+          --status-pill-border: rgba(15, 23, 42, 0.16);
+
+          display: inline-flex;
+          align-items: baseline;
+          gap: 0.38rem;
+          border: 1px solid var(--status-pill-border);
+          border-left: 4px solid var(--status-pill-border);
+          border-radius: 999px;
+          background: var(--status-pill-bg);
+          color: var(--status-pill-text);
+          padding: 0.44rem 0.76rem;
+          box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.58),
+            0 1px 2px rgba(15, 23, 42, 0.06);
+        }
+
+        .ai-tracker-status-stat:nth-child(1) {
+          --status-pill-bg: #e8f3f4;
+          --status-pill-text: #005f73;
+          --status-pill-border: #0a9396;
+        }
+
+        .ai-tracker-status-stat:nth-child(2) {
+          --status-pill-bg: #ecf6dc;
+          --status-pill-text: #4f7f00;
+          --status-pill-border: #80b918;
+        }
+
+        .ai-tracker-status-stat:nth-child(3) {
+          --status-pill-bg: #fff6c7;
+          --status-pill-text: #7a6200;
+          --status-pill-border: #f2d300;
+        }
+
+        .ai-tracker-status-stat:nth-child(4) {
+          --status-pill-bg: #e9f5f6;
+          --status-pill-text: #007f8f;
+          --status-pill-border: #0a9396;
+        }
+
+        .ai-tracker-status-stat:nth-child(5) {
+          --status-pill-bg: #f1f5f9;
+          --status-pill-text: #263e5f;
+          --status-pill-border: #637b98;
+        }
+
+        .ai-tracker-status-stat strong {
+          color: var(--status-pill-text);
+          font-size: 1rem;
+          font-weight: 850;
+          letter-spacing: -0.03em;
+          line-height: 1;
+        }
+
+        .ai-tracker-status-stat span {
+          color: var(--status-pill-text);
+          font-size: 0.64rem;
+          font-weight: 850;
+          letter-spacing: 0.09em;
+          line-height: 1.2;
+          text-transform: uppercase;
+        }
+
+        .ai-tracker-signal-copy {
+          margin: 0;
+          border-top: 1px solid rgba(15, 23, 42, 0.08);
+          color: rgba(15, 23, 42, 0.68);
+          font-size: 0.78rem;
+          line-height: 1.55;
+          padding-top: 0.65rem;
+        }
+
+        .ai-tracker-signal-copy > span:first-child {
+          color: rgba(15, 23, 42, 0.58);
+          font-size: 0.68rem;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+
+        .ai-tracker-signal-copy strong {
+          color: #0f172a;
+          font-weight: 850;
         }
 
         .grid-shell {
@@ -1132,6 +1345,7 @@ export default function AILegislationWorkflow() {
         }
 
         @media (max-width: 820px) {
+
           .grid-shell {
             height: 680px;
           }
