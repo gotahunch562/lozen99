@@ -71,7 +71,7 @@ const articleJsonLd: JsonLdObject[] = [
     id: termSetId,
     terms: terms.map((term) => ({
       ...term,
-      termId: `${new URL(term.href, canonicalUrl).toString()}#term`,
+      termId: term.href.includes('#') ? new URL(term.href, canonicalUrl).toString() : `${new URL(term.href, canonicalUrl).toString()}#term`,
     })),
   }),
   ...terms.map((term) =>
@@ -79,7 +79,7 @@ const articleJsonLd: JsonLdObject[] = [
       name: term.name,
       description: term.description,
       href: term.href,
-      termId: `${new URL(term.href, canonicalUrl).toString()}#term`,
+      termId: term.href.includes('#') ? new URL(term.href, canonicalUrl).toString() : `${new URL(term.href, canonicalUrl).toString()}#term`,
       termSetId,
       keywords: [
         "Disclosure-Independent Governance",
