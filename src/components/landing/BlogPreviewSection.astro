@@ -6,19 +6,15 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import BlogCard from "@/components/blog/BlogCard.astro";
 // Content
 import { getCollection } from "astro:content";
-
 const allPosts = await getCollection("posts");
-
 const getSortDate = (post: any) => {
   const dateValue = post.data.datePublished || post.data.pubDate || post.data.dateModified;
   return dateValue ? new Date(dateValue).getTime() : 0;
 };
-
 const livePosts = allPosts
   .filter((post) => post.data.draft !== true && post.data.homepageSection === "menopause-at-work")
   .sort((a, b) => getSortDate(b) - getSortDate(a));
 ---
-
 <section class="bg-gradient-to-t from-base-200 via-base-100 to-white">
   <Wrapper variant="standard" class="py-10 sm:py-12 lg:py-16">
     <div class="mx-auto max-w-3xl text-center">
@@ -27,28 +23,20 @@ const livePosts = allPosts
       >
         insights
       </span>
-
       <h2
         class="mt-5 font-display text-[2.25rem] font-normal uppercase leading-[1.02] tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-[2.75rem] lg:text-[3.25rem]"
       >
         Menopause at Work
       </h2>
-
       <p
         class="mx-auto mt-4 max-w-2xl font-sans text-base leading-7 text-base-700 text-balance sm:text-[1.0625rem] sm:leading-8"
       >
-        Legislative analysis, Clinical reality, Workplace systems, & Self.
-        <br />
-        <span class="italic">
-          What do we write about? What matters to her.
-        </span>
+        Legislative analysis, Workplace systems, & Self.
       </p>
     </div>
-
     <div class="mt-8 grid grid-cols-1 gap-5 sm:mt-10 md:grid-cols-2">
       {livePosts.slice(0, 2).map((post) => <BlogCard post={post} />)} 
     </div>
-
     <Button
       isLink
       href="/blog"
