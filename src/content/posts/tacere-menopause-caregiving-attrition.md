@@ -15,7 +15,7 @@ heroImage: /src/images/blog/caregiving_and_menopause.webp
 heroAlt: "Business owner balancing menopause, caregiving, and executive responsibilities"
 tags:
 - Research & Policy
-spineDestination: disclosure-independence-infrastructure
+spineDestination: disclosure-independence-performance
 draft: false
 isFeatured: false
 ---
@@ -73,4 +73,4 @@ That decision is Tacere, and the organizational consequence of that decision, ac
 
 No system examined in this series is designed to capture it before it happens.
 
-[Read the Disclosure-Independent Performance Protection℠ infrastructure.](/disclosure-independence-infrastructure/)
+[Read the Disclosure-Independent Performance Protection℠ infrastructure.](/disclosure-independence-performance/)

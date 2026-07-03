@@ -46,7 +46,7 @@ Virginia's legislature passed menopause at work protections. The Governor substi
 
 The condition established across this series applies here with one material difference: the legislature passed the protection. The Governor substituted a study.
 
-That sequence is worth reading carefully before examining what it means, because it confirms something the series has been documenting since Day 1. When formal systems encounter the [perimenopause and menopause disclosure gap](/disclosure-independence-infrastructure), they do not resolve it. They document it.
+That sequence is worth reading carefully before examining what it means, because it confirms something the series has been documenting since Day 1. When formal systems encounter the [perimenopause and menopause disclosure gap](/disclosure-independence-performance), they do not resolve it. They document it.
 
 ## What the Legislature Passed
 

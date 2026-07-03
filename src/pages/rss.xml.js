@@ -31,7 +31,7 @@ const feedItems = [
   },
   {
     title: "Disclosure Independence Infrastructure",
-    path: "/disclosure-independence-infrastructure",
+    path: "/disclosure-independence-performance",
     description:
       "A Lozen Advisory analysis of why disclosure-dependent systems cannot fully measure workforce risk before a record is created.",
   },

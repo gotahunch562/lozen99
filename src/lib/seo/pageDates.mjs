@@ -43,7 +43,7 @@ const EXCLUDED_EXACT_PATHS = new Set([
   "/4s-sovereign-capacity-model/",
   "/sovereign-capacity-model/",
   "/why-lozen-advisory/",
-  "/disclosure-independence-infrastructure/",
+  "/disclosure-independence-performance/",
   "/disclosure-independence-work-infrastructure/",
   "/invisible-attrition/power-user-trap/",
   "/normal-blood-tests-feel-off/",

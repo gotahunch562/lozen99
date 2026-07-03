@@ -19,12 +19,7 @@
     },
     {
       "source": "/disclosure-independence-infrastructure/",
-      "destination": "/disclosure-independent-governance/",
-      "permanent": true
-    },
-    {
-      "source": "/disclosure-independence-work-infrastructure/",
-      "destination": "/disclosure-independent-governance/",
+      "destination": "/disclosure-independence-performance/",
       "permanent": true
     },
     {

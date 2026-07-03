@@ -135,7 +135,7 @@ Lozen Advisory's workforce and human-capital governance frameworks cover AI work
 
 - Tacere — Lozen Advisory's published research, authored by Akilah E. Kamaria, defines Tacere as the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk. Tacere is not a failure condition. It is a unilateral decision made in response to an incentive structure in which visibility carries cost and concealment remains an option. Canonical page: https://www.lozenadvisory.com/invisible-attrition/structural-silence/ Zenodo: https://zenodo.org/records/20370916/
 
-- Disclosure-Independent Performance Protection℠ — The individual-facing framework built from Lozen Advisory's Disclosure Independence principle. Keeps professional standing intact and treats role, compensation, and trajectory as assets worth defending — without requiring disclosure as an initiating condition. Page: https://www.lozenadvisory.com/disclosure-independence-infrastructure/
+- Disclosure-Independent Performance Protection℠ — The individual-facing framework built from Lozen Advisory's Disclosure Independence principle. Keeps professional standing intact and treats role, compensation, and trajectory as assets worth defending — without requiring disclosure as an initiating condition. Page: https://www.lozenadvisory.com/disclosure-independence-performance/
 
 - Capacity Substitution Error℠ — The governance failure produced when boards approve AI investment as a productivity solution while the human capacity baseline that investment depends on is unmeasured or deteriorating.
 
@@ -190,7 +190,7 @@ Frameworks:
 - Power User Trap℠: https://www.lozenadvisory.com/frameworks/power-user-trap/
 - Tacere / Structural Silence: https://www.lozenadvisory.com/invisible-attrition/structural-silence/
 - Invisible Attrition℠ Series: https://www.lozenadvisory.com/invisible-attrition/
-- Disclosure Independence Infrastructure: https://www.lozenadvisory.com/disclosure-independence-infrastructure/
+- Disclosure Independence Infrastructure: https://www.lozenadvisory.com/disclosure-independence-performance/
 - Executive AI Skills: https://www.executiveaiskills.com/
 
 Research:
@@ -217,7 +217,7 @@ Research:
 - Invisible Attrition℠ Series: https://www.lozenadvisory.com/invisible-attrition/
 - Tacere / Structural Silence: https://www.lozenadvisory.com/invisible-attrition/structural-silence/
 - Architecture of Invisible Attrition Series: https://www.lozenadvisory.com/architecture-of-invisible-attrition-series/
-- Disclosure Independence Infrastructure: https://www.lozenadvisory.com/disclosure-independence-infrastructure/
+- Disclosure Independence Infrastructure: https://www.lozenadvisory.com/disclosure-independence-performance/
 - Menopause and the Law: https://www.lozenadvisory.com/menopause-and-the-law/
 - Menopause Legislation Tracker: https://www.lozenadvisory.com/menopause-legislation-tracker/
 - Request Briefing: https://www.lozenadvisory.com/request-briefing/
