@@ -1,294 +1,923 @@
 ---
+/**
+ * CategoryHubLayout.astro
+ * Drop-in replacement for NarrativePage.
+ * Change one import line in your page — content stays untouched.
+ *
+ * Usage in disclosure-independent-governance.astro:
+ *   import CategoryHubLayout from "@/components/authority/CategoryHubLayout.astro";
+ *   <CategoryHubLayout ...same props... />
+ */
+
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-interface Category {
-  id: string;
-  title: string;
-  description: string;
-  icon?: string;
-  href: string;
-  featured?: boolean;
+interface RailItem {
+  label: string;
+  value: string;
 }
 
-interface Resource {
-  id: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  date?: string;
+interface RailLink {
+  label: string;
   href: string;
-  featured?: boolean;
+  description: string;
+}
+
+interface RailCta {
+  label: string;
+  title: string;
+  description: string;
+  href: string;
+  linkLabel: string;
+}
+
+interface RelatedItem {
+  label: string;
+  href: string;
+  description: string;
 }
 
 interface Props {
-  categoryName: string;
-  categoryTitle: string;
-  heroDescription: string;
-  heroImage?: string;
-  heroImageAlt?: string;
-  categoryColor?: "workplace" | "insurance" | "education" | "omnibus" | "advisory" | "military" | "veteran-care";
-  subcategories?: Category[];
-  featuredResources?: Resource[];
-  showStats?: boolean;
-  stats?: { label: string; value: string }[];
+  title: string;
+  seoTitle?: string;
+  description?: string;
+  metaDescription?: string;
+  canonical?: string;
+  eyebrow?: string;
+  typeLabel?: string;
+  dateLabel?: string;
+  textHeroLayout?: "wide" | "standard";
+  articleJsonLd?: Record<string, unknown>[];
+  railTitle?: string;
+  railItems?: RailItem[];
+  railLinks?: RailLink[];
+  railCta?: RailCta;
+  bottomCta?: RailCta;
+  relatedEyebrow?: string;
+  relatedTitle?: string;
+  relatedItems?: RelatedItem[];
 }
 
 const {
-  categoryName,
-  categoryTitle,
-  heroDescription,
-  heroImage,
-  heroImageAlt = "",
-  categoryColor = "advisory",
-  subcategories = [],
-  featuredResources = [],
-  showStats = true,
-  stats = [],
+  title,
+  seoTitle,
+  description,
+  metaDescription,
+  canonical,
+  eyebrow,
+  typeLabel,
+  dateLabel,
+  articleJsonLd,
+  railTitle = "Category Context",
+  railItems = [],
+  railLinks = [],
+  railCta,
+  bottomCta,
+  relatedEyebrow,
+  relatedTitle,
+  relatedItems = [],
 } = Astro.props;
 
-const badgeColorClass = `lozen-data-badge--focus-${categoryColor}`;
+const ogDescription = metaDescription ?? description;
 ---
 
 <BaseLayout
-  title={categoryTitle}
-  description={heroDescription}
-  ogImage={heroImage}
-  ogImageAlt={heroImageAlt}
+  title={seoTitle ?? title}
+  description={ogDescription}
+  canonical={canonical}
 >
-  <main class="bg-base-50">
-    <!-- Hero Section -->
-    <section class="border-b border-base-200 bg-gradient-to-b from-base-100 via-white to-base-50">
-      <div class="mx-auto w-full max-w-7xl px-8 py-12 lg:py-20">
-        <div class="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:gap-12 lg:items-center">
-          <!-- Hero Content -->
-          <div class="flex flex-col justify-center">
-            <!-- Eyebrow -->
-            <div class="inline-flex items-center gap-3 mb-6">
-              <span class="inline-flex h-2 w-2 rounded-full bg-accent-500"></span>
-              <span class="text-xs font-bold uppercase tracking-[0.18em] text-base-600">
-                Category Hub
-              </span>
-            </div>
+  {
+    articleJsonLd?.map((ld) => (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify(ld)}
+      />
+    ))
+  }
 
-            <!-- Title -->
-            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-medium uppercase leading-[1.02] tracking-tight text-base-950 mb-6">
-              {categoryTitle}
-            </h1>
+  <main class="chub-root">
 
-            <!-- Description -->
-            <p class="text-base sm:text-lg leading-relaxed text-base-700 mb-8 max-w-xl">
-              {heroDescription}
-            </p>
+    <!-- ─── HERO ─────────────────────────────────────────────── -->
+    <header class="chub-hero">
+      <div class="chub-hero__inner">
 
-            <!-- CTA Group -->
-            <div class="flex flex-wrap gap-4">
-              <a
-                href="#resources"
-                class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent-500 text-base-950 font-medium text-sm uppercase tracking-[0.12em] transition-all duration-300 hover:bg-accent-600 active:scale-95"
-              >
-                Explore Resources
-              </a>
-              <a
-                href="#categories"
-                class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-base-300 bg-white text-base-950 font-medium text-sm uppercase tracking-[0.12em] transition-all duration-300 hover:bg-base-50 hover:border-base-400"
-              >
-                Browse Topics
-              </a>
-            </div>
-          </div>
-
-          <!-- Hero Image -->
-          {
-            heroImage && (
-              <figure class="overflow-hidden rounded-2xl border border-base-200 bg-base-100 shadow-md lg:shadow-lg">
-                <img
-                  src={heroImage}
-                  alt={heroImageAlt}
-                  class="w-full h-auto object-cover aspect-square sm:aspect-auto lg:h-96"
-                  loading="eager"
-                  decoding="async"
-                />
-              </figure>
-            )
-          }
+        <!-- Meta row -->
+        <div class="chub-hero__meta">
+          {typeLabel && (
+            <span class="chub-type-badge">{typeLabel}</span>
+          )}
+          {eyebrow && (
+            <span class="chub-hero__eyebrow">{eyebrow}</span>
+          )}
+          {dateLabel && (
+            <span class="chub-hero__date">{dateLabel}</span>
+          )}
         </div>
-      </div>
-    </section>
 
-    <!-- Stats Section (Optional) -->
-    {
-      showStats && stats.length > 0 && (
-        <section class="bg-base-950 text-white border-b border-base-800">
-          <div class="mx-auto w-full max-w-7xl px-8 py-12 lg:py-16">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat) => (
-                <div class="flex flex-col">
-                  <span class="text-3xl sm:text-4xl font-display font-medium mb-2">
-                    {stat.value}
-                  </span>
-                  <span class="text-sm font-medium text-base-400 uppercase tracking-[0.1em]">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
+        <!-- Title -->
+        <h1 class="chub-hero__title">
+          <span class="chub-hero__title-accent" aria-hidden="true"></span>
+          {title}
+        </h1>
+
+        <!-- Description -->
+        {description && (
+          <p class="chub-hero__desc">{description}</p>
+        )}
+
+      </div>
+    </header>
+
+    <!-- ─── BODY: CONTENT + RAIL ─────────────────────────────── -->
+    <div class="chub-body">
+      <div class="chub-body__inner">
+
+        <!-- Article content (slot) -->
+        <article class="chub-article">
+          <div class="chub-prose">
+            <slot />
+          </div>
+        </article>
+
+        <!-- Sticky rail sidebar -->
+        <aside class="chub-rail">
+
+          {/* Category context metadata */}
+          {railItems.length > 0 && (
+            <div class="chub-rail__panel">
+              <h2 class="chub-rail__heading">{railTitle}</h2>
+              <dl class="chub-rail__meta">
+                {railItems.map((item) => (
+                  <div class="chub-rail__meta-row">
+                    <dt class="chub-rail__meta-label">{item.label}</dt>
+                    <dd class="chub-rail__meta-value">{item.value}</dd>
+                  </div>
+                ))}
+              </dl>
             </div>
-          </div>
-        </section>
-      )
-    }
+          )}
 
-    <!-- Subcategories Grid -->
-    {
-      subcategories.length > 0 && (
-        <section class="mx-auto w-full max-w-7xl px-8 py-12 lg:py-16" id="categories">
-          <div class="mb-12 lg:mb-16">
-            <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-medium uppercase leading-tight tracking-tight text-base-950 mb-3">
-              Explore Topics
-            </h2>
-            <p class="text-base text-base-700 max-w-2xl">
-              Dive deeper into specific areas within {categoryTitle.toLowerCase()}. Each topic features curated research, insights, and resources.
-            </p>
-          </div>
+          {/* Framework links */}
+          {railLinks.length > 0 && (
+            <div class="chub-rail__panel chub-rail__panel--links">
+              <h2 class="chub-rail__heading">Related Frameworks</h2>
+              <ul class="chub-rail__links">
+                {railLinks.map((link) => (
+                  <li class="chub-rail__link-item">
+                    <a href={link.href} class="chub-rail__link">
+                      <span class="chub-rail__link-label">{link.label}</span>
+                      <span class="chub-rail__link-desc">{link.description}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {subcategories.map((subcategory) => (
-              <a
-                href={subcategory.href}
-                class="group relative p-6 rounded-xl bg-white border border-base-200 transition-all duration-300 hover:shadow-lg hover:border-accent-400 active:scale-98"
-              >
-                {subcategory.featured && (
-                  <div class="absolute top-4 right-4">
-                    <span class={`lozen-data-badge ${badgeColorClass} text-xs`}>
-                      Featured
-                    </span>
-                  </div>
-                )}
-
-                <div class="mb-4 flex items-start gap-3">
-                  {subcategory.icon && (
-                    <span class="text-3xl">{subcategory.icon}</span>
-                  )}
-                  <h3 class="font-display text-lg sm:text-xl font-medium text-base-950 group-hover:text-accent-700 transition-colors duration-300">
-                    {subcategory.title}
-                  </h3>
-                </div>
-
-                <p class="text-sm text-base-600 leading-relaxed mb-4">
-                  {subcategory.description}
-                </p>
-
-                <div class="inline-flex items-center text-sm font-medium text-accent-700 group-hover:translate-x-1 transition-transform duration-300">
-                  Learn more
-                  <span class="ml-2">→</span>
-                </div>
+          {/* CTA card */}
+          {railCta && (
+            <div class="chub-rail__cta">
+              <p class="chub-rail__cta-eyebrow">{railCta.label}</p>
+              <h3 class="chub-rail__cta-title">{railCta.title}</h3>
+              <p class="chub-rail__cta-desc">{railCta.description}</p>
+              <a href={railCta.href} class="chub-rail__cta-link">
+                {railCta.linkLabel}
               </a>
-            ))}
-          </div>
-        </section>
-      )
-    }
+            </div>
+          )}
 
-    <!-- Featured Resources -->
-    {
-      featuredResources.length > 0 && (
-        <section class="mx-auto w-full max-w-7xl px-8 py-12 lg:py-16 border-t border-base-200" id="resources">
-          <div class="mb-12 lg:mb-16">
-            <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-medium uppercase leading-tight tracking-tight text-base-950 mb-3">
-              Featured Resources
-            </h2>
-            <p class="text-base text-base-700 max-w-2xl">
-              Start with our most impactful analysis, reports, and research in {categoryName}.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {featuredResources.map((resource, index) => (
-              <a
-                href={resource.href}
-                class="group relative rounded-xl overflow-hidden bg-white border border-base-200 transition-all duration-300 hover:shadow-lg hover:border-accent-400 active:scale-98 flex flex-col"
-              >
-                {resource.featured && index === 0 && (
-                  <div class="absolute top-6 left-6 z-10">
-                    <span class={`lozen-data-badge ${badgeColorClass} text-xs`}>
-                      Top Resource
-                    </span>
-                  </div>
-                )}
-
-                <div class="p-6 flex flex-col flex-1">
-                  <div class="mb-3 flex items-center justify-between">
-                    <span class="text-xs font-bold uppercase tracking-[0.14em] text-base-600 bg-base-100 px-3 py-1 rounded-md">
-                      {resource.category}
-                    </span>
-                    {resource.date && (
-                      <span class="text-xs text-base-500">{resource.date}</span>
-                    )}
-                  </div>
-
-                  <h3 class="font-display text-lg sm:text-xl font-medium text-base-950 mb-3 group-hover:text-accent-700 transition-colors duration-300 leading-tight">
-                    {resource.title}
-                  </h3>
-
-                  <p class="text-sm text-base-600 leading-relaxed flex-1 mb-4">
-                    {resource.excerpt}
-                  </p>
-
-                  <div class="inline-flex items-center text-sm font-medium text-accent-700 group-hover:translate-x-1 transition-transform duration-300">
-                    Read article
-                    <span class="ml-2">→</span>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
-      )
-    }
-
-    <!-- CTA Footer -->
-    <section class="bg-base-950 text-white border-t border-base-800">
-      <div class="mx-auto w-full max-w-7xl px-8 py-12 lg:py-16">
-        <div class="max-w-3xl">
-          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-medium uppercase leading-tight tracking-tight mb-4">
-            Explore Beyond {categoryTitle}
-          </h2>
-          <p class="text-base text-base-300 mb-8 leading-relaxed">
-            Discover how these insights connect to other categories, stay updated with our latest research, and subscribe to our curated briefings.
-          </p>
-          <div class="flex flex-wrap gap-4">
-            <a
-              href="/research"
-              class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent-500 text-base-950 font-medium text-sm uppercase tracking-[0.12em] transition-all duration-300 hover:bg-accent-600 active:scale-95"
-            >
-              Browse All Research
-            </a>
-            <a
-              href="/subscribe"
-              class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-base-700 bg-transparent text-white font-medium text-sm uppercase tracking-[0.12em] transition-all duration-300 hover:bg-base-900 hover:border-base-600"
-            >
-              Subscribe to Updates
-            </a>
-          </div>
-        </div>
+        </aside>
       </div>
-    </section>
+    </div>
+
+    <!-- ─── RELATED ───────────────────────────────────────────── -->
+    {relatedItems.length > 0 && (
+      <section class="chub-related">
+        <div class="chub-related__inner">
+          {relatedEyebrow && (
+            <p class="chub-related__eyebrow">{relatedEyebrow}</p>
+          )}
+          {relatedTitle && (
+            <h2 class="chub-related__title">{relatedTitle}</h2>
+          )}
+          <ul class="chub-related__grid">
+            {relatedItems.map((item) => (
+              <li>
+                <a href={item.href} class="chub-related__card">
+                  <span class="chub-related__card-label">{item.label}</span>
+                  <span class="chub-related__card-desc">{item.description}</span>
+                  <span class="chub-related__card-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )}
+
+    <!-- ─── BOTTOM CTA ────────────────────────────────────────── -->
+    {bottomCta && (
+      <section class="chub-bottom-cta">
+        <div class="chub-bottom-cta__inner">
+          <p class="chub-bottom-cta__label">{bottomCta.label}</p>
+          <h2 class="chub-bottom-cta__title">{bottomCta.title}</h2>
+          <p class="chub-bottom-cta__desc">{bottomCta.description}</p>
+          <a href={bottomCta.href} class="chub-bottom-cta__link">
+            {bottomCta.linkLabel}
+          </a>
+        </div>
+      </section>
+    )}
+
   </main>
 </BaseLayout>
 
 <style>
-  .lozen-data-badge {
+  /* ─── ROOT ─────────────────────────────────────────────────── */
+  .chub-root {
+    background: var(--color-base-50);
+  }
+
+  /* ─── HERO ─────────────────────────────────────────────────── */
+  .chub-hero {
+    background: var(--color-base-950);
+    border-bottom: 1px solid var(--color-base-800);
+  }
+
+  .chub-hero__inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: clamp(5rem, 9vw, 7.5rem) clamp(1.5rem, 4vw, 3rem) clamp(4rem, 7vw, 6rem);
+  }
+
+  /* Meta row */
+  .chub-hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .chub-type-badge {
     display: inline-flex;
     align-items: center;
-    padding: 0.375rem 0.75rem;
-    border-radius: 0.375rem;
-    border: 1px solid;
+    padding: 0.3rem 0.8rem;
+    background: var(--color-accent-500);
+    color: var(--color-base-950);
+    font-family: var(--font-sans);
     font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+
+  .chub-hero__eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
     font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-base-400);
+  }
+
+  .chub-hero__date {
+    margin-left: auto;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--color-base-500);
+  }
+
+  /* Title */
+  .chub-hero__title {
+    position: relative;
+    display: block;
+    padding-left: 1.75rem;
+    font-family: var(--font-display);
+    font-size: var(--lozen-page-hero-title-size);
+    font-weight: 400;
+    letter-spacing: var(--lozen-page-hero-title-letter-spacing);
+    line-height: var(--lozen-page-hero-title-line-height);
+    text-transform: uppercase;
+    color: #ffffff;
+    max-width: 52rem;
+  }
+
+  .chub-hero__title-accent {
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+    bottom: 0.1em;
+    width: 3px;
+    background: var(--color-accent-500);
+    border-radius: 1px;
+  }
+
+  /* Description */
+  .chub-hero__desc {
+    margin-top: 2rem;
+    max-width: 44rem;
+    padding-left: 1.75rem;
+    font-family: var(--font-sans);
+    font-size: var(--lozen-page-hero-deck-size);
+    font-weight: 400;
+    line-height: var(--lozen-page-hero-deck-line-height);
+    letter-spacing: var(--lozen-page-hero-deck-letter-spacing);
+    color: var(--color-base-300);
+  }
+
+  /* ─── BODY ──────────────────────────────────────────────────── */
+  .chub-body {
+    background: #ffffff;
+    border-bottom: 1px solid var(--color-base-200);
+  }
+
+  .chub-body__inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 4vw, 3rem);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  @media (min-width: 1024px) {
+    .chub-body__inner {
+      grid-template-columns: minmax(0, 1fr) 22rem;
+      gap: clamp(3rem, 5vw, 5rem);
+      align-items: start;
+    }
+  }
+
+  /* ─── ARTICLE PROSE ─────────────────────────────────────────── */
+  .chub-article {
+    min-width: 0;
+    padding: clamp(2.5rem, 5vw, 4rem) 0;
+  }
+
+  /* All prose styles are scoped via :global() so they apply inside the slot */
+  .chub-prose :global(p) {
+    margin-top: 1.45rem;
+    font-family: var(--font-sans);
+    font-size: var(--lozen-body-copy-large-size);
+    line-height: var(--lozen-body-copy-large-line-height);
+    color: var(--color-base-700);
+  }
+
+  .chub-prose :global(p:first-child) {
+    margin-top: 0;
+  }
+
+  .chub-prose :global(p strong) {
+    font-weight: 700;
+    color: var(--color-base-950);
+  }
+
+  .chub-prose :global(h2) {
+    margin-top: 3.5rem;
+    margin-bottom: 0;
+    font-family: var(--font-display);
+    font-size: var(--lozen-section-title-size);
+    font-weight: 400;
+    letter-spacing: var(--lozen-section-title-letter-spacing);
+    line-height: var(--lozen-section-title-line-height);
+    text-transform: uppercase;
+    color: var(--color-base-950);
+  }
+
+  .chub-prose :global(h2 + p) {
+    margin-top: 1.1rem;
+  }
+
+  .chub-prose :global(h3) {
+    margin-top: 2.25rem;
+    font-family: var(--font-display);
+    font-size: var(--lozen-subsection-title-size);
+    font-weight: 400;
+    letter-spacing: var(--lozen-subsection-title-letter-spacing);
+    line-height: var(--lozen-subsection-title-line-height);
+    color: var(--color-base-900);
+  }
+
+  .chub-prose :global(blockquote) {
+    margin: 2.25rem 0;
+    padding: 1.5rem 1.75rem;
+    border-left: 3px solid var(--color-accent-500);
+    background: var(--color-base-50);
+    border-radius: 0 6px 6px 0;
+  }
+
+  .chub-prose :global(blockquote p) {
+    margin-top: 0;
+    font-family: var(--font-display);
+    font-size: var(--lozen-pullquote-size);
+    font-weight: 400;
+    line-height: var(--lozen-pullquote-line-height);
+    color: var(--color-base-800);
+    font-style: normal;
+  }
+
+  .chub-prose :global(ul),
+  .chub-prose :global(ol) {
+    margin-top: 1.25rem;
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .chub-prose :global(ul li),
+  .chub-prose :global(ol li) {
+    font-family: var(--font-sans);
+    font-size: var(--lozen-body-copy-large-size);
+    line-height: 1.72;
+    color: var(--color-base-700);
+    padding-left: 0.5rem;
+  }
+
+  .chub-prose :global(ul li::marker) {
+    color: var(--color-accent-600);
+  }
+
+  .chub-prose :global(a) {
+    color: var(--color-accent-700);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-accent-300);
+    transition:
+      color 250ms ease,
+      border-color 250ms ease;
+  }
+
+  .chub-prose :global(a:hover) {
+    color: var(--color-base-950);
+    border-color: var(--color-base-950);
+  }
+
+  /* Framework vocabulary grid (from their page styles) */
+  .chub-prose :global(.lozen-framework-grid),
+  .chub-prose :global(.lozen-asset-grid) {
+    display: grid;
+    gap: 1rem;
+    margin: 1.8rem 0 2.1rem;
+  }
+
+  .chub-prose :global(.lozen-framework-grid) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chub-prose :global(.lozen-asset-grid) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .chub-prose :global(.lozen-framework-card),
+  .chub-prose :global(.lozen-asset-grid > article) {
+    border: 1px solid var(--color-base-200);
+    border-radius: 1.05rem;
+    background: var(--color-base-50);
+    padding: clamp(1.1rem, 2.2vw, 1.45rem);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 250ms ease, border-color 250ms ease;
+  }
+
+  .chub-prose :global(.lozen-framework-card:hover),
+  .chub-prose :global(.lozen-asset-grid > article:hover) {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-accent-400);
+  }
+
+  .chub-prose :global(.lozen-framework-card h3),
+  .chub-prose :global(.lozen-asset-grid h3) {
+    margin: 0;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: var(--lozen-card-title-size);
+    font-weight: var(--lozen-card-title-weight);
+    letter-spacing: var(--lozen-card-title-letter-spacing);
+    line-height: var(--lozen-card-title-line-height);
+  }
+
+  .chub-prose :global(.lozen-framework-card p),
+  .chub-prose :global(.lozen-asset-grid p) {
+    margin: 0.75rem 0 0;
+    font-size: 0.96rem;
+    line-height: 1.65;
+    color: var(--color-base-600);
+  }
+
+  .chub-prose :global(.lozen-framework-card a),
+  .chub-prose :global(.lozen-asset-grid a) {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  .chub-prose :global(.lozen-framework-card a:hover),
+  .chub-prose :global(.lozen-asset-grid a:hover) {
+    color: var(--color-accent-700);
+    border-bottom: none;
+  }
+
+  .chub-prose :global(.lozen-asset-grid__eyebrow) {
+    margin: 0 0 0.55rem !important;
+    color: var(--color-base-500) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 0.65rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.16em !important;
+    line-height: 1.3 !important;
+    text-transform: uppercase !important;
+  }
+
+  @media (max-width: 900px) {
+    .chub-prose :global(.lozen-framework-grid),
+    .chub-prose :global(.lozen-asset-grid) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  /* ─── RAIL ──────────────────────────────────────────────────── */
+  .chub-rail {
+    padding: clamp(2.5rem, 5vw, 4rem) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 1024px) {
+    .chub-rail {
+      position: sticky;
+      top: 6rem;
+      align-self: start;
+    }
+  }
+
+  .chub-rail__panel {
+    background: var(--color-base-50);
+    border: 1px solid var(--color-base-200);
+    border-radius: 10px;
+    padding: 1.35rem 1.5rem;
+  }
+
+  .chub-rail__panel--links {
+    background: #ffffff;
+  }
+
+  .chub-rail__heading {
+    margin: 0 0 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-base-500);
+  }
+
+  /* Metadata list */
+  .chub-rail__meta {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .chub-rail__meta-row {
+    padding: 0.7rem 0;
+    border-top: 1px solid var(--color-base-200);
+  }
+
+  .chub-rail__meta-row:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .chub-rail__meta-label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-base-500);
+    margin-bottom: 0.2rem;
+  }
+
+  .chub-rail__meta-value {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--color-base-800);
+  }
+
+  /* Framework links */
+  .chub-rail__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .chub-rail__link-item {
+    border-top: 1px solid var(--color-base-200);
+  }
+
+  .chub-rail__link-item:first-child {
+    border-top: none;
+  }
+
+  .chub-rail__link {
+    display: block;
+    padding: 0.8rem 0;
+    text-decoration: none;
+    border-bottom: none;
+    transition: none;
+  }
+
+  .chub-rail__link:hover .chub-rail__link-label {
+    color: var(--color-accent-700);
+  }
+
+  .chub-rail__link-label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--color-base-900);
+    transition: color 200ms ease;
+  }
+
+  .chub-rail__link-desc {
+    display: block;
+    margin-top: 0.2rem;
+    font-family: var(--font-sans);
+    font-size: 0.74rem;
+    line-height: 1.5;
+    color: var(--color-base-500);
+  }
+
+  /* Rail CTA card */
+  .chub-rail__cta {
+    background: var(--color-base-950);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .chub-rail__cta-eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent-500);
+    margin: 0;
+  }
+
+  .chub-rail__cta-title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #ffffff;
+  }
+
+  .chub-rail__cta-desc {
+    margin: 0.25rem 0 0.75rem;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: var(--color-base-300);
+  }
+
+  .chub-rail__cta-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 1.1rem;
+    background: var(--color-accent-500);
+    color: var(--color-base-950);
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 700;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    border-bottom: none;
+    transition: background 200ms ease;
+    align-self: flex-start;
+  }
+
+  .chub-rail__cta-link:hover {
+    background: var(--color-accent-400);
+    color: var(--color-base-950);
+    border-bottom: none;
+  }
+
+  /* ─── RELATED ───────────────────────────────────────────────── */
+  .chub-related {
+    background: var(--color-base-950);
+    border-top: 1px solid var(--color-base-800);
+  }
+
+  .chub-related__inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .chub-related__eyebrow {
+    margin: 0 0 0.75rem;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent-500);
+  }
+
+  .chub-related__title {
+    margin: 0 0 2.25rem;
+    font-family: var(--font-display);
+    font-size: var(--lozen-section-title-size);
+    font-weight: 400;
+    letter-spacing: var(--lozen-section-title-letter-spacing);
+    line-height: var(--lozen-section-title-line-height);
+    color: #ffffff;
     text-transform: uppercase;
   }
 
-  a:active {
-    transform: scale(0.98);
+  .chub-related__grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  @media (min-width: 768px) {
+    .chub-related__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .chub-related__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .chub-related__card {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 0.3rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--color-base-800);
+    text-decoration: none;
+    border-bottom: none;
+    transition: none;
+  }
+
+  .chub-related__card:hover .chub-related__card-label {
+    color: var(--color-accent-400);
+  }
+
+  .chub-related__card:hover .chub-related__card-arrow {
+    transform: translateX(4px);
+    color: var(--color-accent-500);
+  }
+
+  .chub-related__card-label {
+    font-family: var(--font-display);
+    font-size: var(--lozen-card-title-small-size);
+    font-weight: 400;
+    line-height: var(--lozen-card-title-small-line-height);
+    letter-spacing: var(--lozen-card-title-letter-spacing);
+    color: #ffffff;
+    transition: color 200ms ease;
+  }
+
+  .chub-related__card-desc {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--color-base-400);
+    padding-right: 1rem;
+  }
+
+  .chub-related__card-arrow {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: var(--color-base-500);
+    transition: transform 200ms ease, color 200ms ease;
+    align-self: end;
+    margin-top: 0.5rem;
+  }
+
+  /* ─── BOTTOM CTA ─────────────────────────────────────────────── */
+  .chub-bottom-cta {
+    background: var(--color-accent-500);
+    border-top: 1px solid var(--color-accent-400);
+  }
+
+  .chub-bottom-cta__inner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: clamp(3rem, 6vw, 4.5rem) clamp(1.5rem, 4vw, 3rem);
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .chub-bottom-cta__inner {
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 1rem 3rem;
+    }
+  }
+
+  .chub-bottom-cta__label {
+    grid-column: 1;
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-base-800);
+  }
+
+  .chub-bottom-cta__title {
+    grid-column: 1;
+    margin: 0.25rem 0 0;
+    font-family: var(--font-display);
+    font-size: var(--lozen-subsection-title-size);
+    font-weight: 400;
+    letter-spacing: var(--lozen-subsection-title-letter-spacing);
+    line-height: var(--lozen-subsection-title-line-height);
+    color: var(--color-base-950);
+    text-transform: uppercase;
+  }
+
+  .chub-bottom-cta__desc {
+    grid-column: 1;
+    margin: 0.75rem 0 0;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--color-base-800);
+    max-width: 44rem;
+  }
+
+  .chub-bottom-cta__link {
+    grid-column: 1;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-base-950);
+    color: #ffffff;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: none;
+    border-radius: 4px;
+    transition: background 200ms ease;
+    align-self: start;
+    justify-self: start;
+  }
+
+  @media (min-width: 768px) {
+    .chub-bottom-cta__label {
+      grid-column: 1;
+    }
+    .chub-bottom-cta__title {
+      grid-column: 1;
+    }
+    .chub-bottom-cta__desc {
+      grid-column: 1;
+    }
+    .chub-bottom-cta__link {
+      grid-column: 2;
+      grid-row: 1 / -1;
+      margin-top: 0;
+      align-self: center;
+      white-space: nowrap;
+    }
+  }
+
+  .chub-bottom-cta__link:hover {
+    background: var(--color-base-800);
+    border-bottom: none;
+    color: #ffffff;
   }
 </style>
