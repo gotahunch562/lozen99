@@ -420,13 +420,16 @@ const ogDescription = metaDescription ?? description;
   }
 
   .chub-prose :global(ul),
-  .chub-prose :global(ol) {
-    margin-top: 1.25rem;
-    padding-left: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+.chub-prose :global(ol) {
+  margin-top: 1.25rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.chub-prose :global(ul li),
+.chub-prose :global(ol li) {
+  margin-top: 0.5rem;
+}
 
   .chub-prose :global(ul li),
   .chub-prose :global(ol li) {
