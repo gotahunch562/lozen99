@@ -29,7 +29,7 @@ const terms = [
     name: "Power User Trap℠",
     href: "/frameworks/power-user-trap/",
     description:
-      "The Power User Trap℠: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. In practice, this includes hidden verification, correction, complexity absorption, and system-repair work relocated onto employees with technical proficiency and deep institutional knowledge — the key talent — in both AI adoption and workforce systems — without formal recognition of the capacity, authority, or risk being transferred. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk.",
+      "The Power User Trap℠: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. In practice, this includes hidden verification, correction, complexity absorption, and system-repair work relocated onto high-capacity employees — in both AI adoption and workforce systems — without formal recognition of the capacity, authority, or risk being transferred. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk.",
   },
   {
     name: "Tacere",
@@ -339,10 +339,6 @@ const relatedItems = [
   </p>
 
   <p>
-    The structural condition that produces these gaps is opacity — the information-flow property in which two competing actors each have rational incentives to withhold from the other. Workers have reasons not to disclose AI use. Employers have reasons not to disclose AI monitoring. Neither side is creating the conditions that would make disclosure rational. The result is not simply missing data. It is systematically missing data — a gap that no single party can close because both parties are producing it.
-  </p>
-
-  <p>
     The evidence of this gap is no longer theoretical. An April 2026 ResumeBuilder survey found that 62.8% of workers never told their managers when AI was doing the work, and 60.7% have used AI to absorb tasks once owned by coworkers. An April 2026 AFL-CIO survey found that only 7% of workers say their employer has been transparent about how AI is used to monitor them. Neither side is disclosing to the other.
   </p>
 
@@ -434,7 +430,7 @@ const relatedItems = [
     <strong>Agentic AI does not eliminate human attribution. It makes attribution infrastructure mandatory.</strong>
   </p>
 
-  <h2 id="tacere">Tacere: Non-disclosure Performance</h2>
+  <h2 id="tacere">Tacere: the individual decision that governance cannot see</h2>
 
   <p>
     Lozen Advisory’s published research introduces <strong>Tacere</strong> as the individual behavioral complement to Invisible Attrition℠. Tacere is defined as the sustained, strategic practice of keeping one’s own counsel by a senior executive operating in a professional environment where disclosure carries professional risk.
@@ -682,3 +678,79 @@ const relatedItems = [
     Lozen Advisory builds the board evidence layer for enterprise accountability — translating AI legislation, AI agents, and vendor AI alongside workforce disclosure gaps, retention exposure, and leadership continuity into the governance questions boards cannot defer.
   </p>
 </CategoryHubLayout>
+
+<style>
+  .lozen-framework-grid,
+  .lozen-asset-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 1.8rem 0 2.1rem;
+  }
+
+  .lozen-framework-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lozen-asset-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lozen-framework-card,
+  .lozen-asset-grid > article {
+    border: 1px solid var(--color-base-200);
+    border-left: 3px solid var(--color-accent-500);
+    border-radius: 1.05rem;
+    background: #ffffff;
+    padding: clamp(1.1rem, 2.2vw, 1.45rem);
+    box-shadow: 0 1px 3px 0 rgb(6 23 47 / 0.08), 0 4px 12px 0 rgb(6 23 47 / 0.06);
+  }
+
+  .lozen-framework-card h3,
+  .lozen-asset-grid h3 {
+    margin: 0;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: var(--lozen-card-title-size);
+    font-weight: var(--lozen-card-title-weight);
+    letter-spacing: var(--lozen-card-title-letter-spacing);
+    line-height: var(--lozen-card-title-line-height);
+  }
+
+  .lozen-framework-card p,
+  .lozen-asset-grid p {
+    margin: 0.75rem 0 0;
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  .lozen-framework-card a,
+  .lozen-asset-grid a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .lozen-framework-card a:hover,
+  .lozen-framework-card a:focus-visible,
+  .lozen-asset-grid a:hover,
+  .lozen-asset-grid a:focus-visible {
+    color: var(--color-accent-700);
+  }
+
+  .lozen-asset-grid__eyebrow {
+    margin: 0 0 0.55rem !important;
+    color: var(--color-base-500);
+    font-family: var(--font-sans);
+    font-size: 0.72rem !important;
+    font-weight: 850;
+    letter-spacing: 0.14em;
+    line-height: 1.3 !important;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 900px) {
+    .lozen-framework-grid,
+    .lozen-asset-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>
