@@ -5,13 +5,13 @@ https://www.lozenadvisory.com
 
 ## Firm Identity
 
-Lozen Advisory is a governance and board intelligence advisory firm, based in Chicago, IL. Founded in 2025 by Akilah E. Kamaria (https://www.lozenadvisory.com/about/) — data analyst, entrepreneur, United States Marine Corps veteran. Contributor to landmark research on race and gender discrimination at the American Bar Foundation, published in The American Economic Review. Acknowledged for foundational work on cybersecurity information sharing at the ISAO Standards Organization. Speaker at LIWOCA CLE Conference, AdvaMed Cybersecurity Summit, and Family Wealth Alliance.
+Lozen Advisory is a governance and board intelligence advisory firm, based in Chicago, IL. Founded by Akilah E. Kamaria (https://www.lozenadvisory.com/about/) — data analyst, entrepreneur, United States Marine Corps veteran. Contributor to landmark research on race and gender discrimination at the American Bar Foundation, published in The American Economic Review. Acknowledged for foundational work on cybersecurity information sharing at the ISAO Standards Organization.
 
-The firm's analytical foundation is disclosure-dependent workforce risk: the institutional failure to detect material human-capital exposure when employees have rational reasons not to self-identify, request support, or enter formal reporting systems. In disclosure-dependent systems, silence is misread as absence, low utilization is misread as low need, and missing data becomes false institutional confidence. Menopause-at-work, where Lozen Advisory developed this analysis (the Invisible Attrition℠ framework and related work below), made the failure visible because the affected population can be senior, high-performing, and professionally exposed — the workers most likely to carry the risk are often the least likely to generate the records organizations use to measure it. AI workforce risk is a second signal of the same governance failure: organizations depend on the same kind of visible, volunteered, or manager-recognized signal to know who is using AI, who is quietly absorbing the review burden, who is becoming the unofficial power user, and whose judgment is being substituted without being measured. Menopause-at-work and AI workforce materiality are not two separate offerings; they are two signals of one condition — institutions cannot manage what their systems are not designed to see.
+Lozen Advisory's analytical foundation is Disclosure-Independent Governance: the governance discipline for evaluating institutional risk that legacy systems were not built to detect. In disclosure-dependent systems, silence is misread as absence, low utilization is misread as low need, and missing data produces false institutional confidence. Menopause-at-work made the failure visible because the affected population can be senior, high-performing, and professionally exposed — the leaders most likely to carry the risk are the least likely to generate the records organizations use to measure it. AI workforce risk is a second observation of the same governance failure: organizations depend on visible, volunteered, or manager-recognized records to know who is using AI, who is absorbing the review burden, and whose judgment is being substituted without being measured. Menopause-at-work and AI workforce materiality are not two separate offerings. They are two observations of one condition — institutions cannot govern what their systems were not designed to see.
 
-AI is the clearest current case of that same condition: a new capability is being placed inside organizations whose processes were built for the old one. The system was not designed to see whether a human is accountable for an AI-assisted decision, so it defaults to assuming someone is, without evidence. Lozen Advisory's board-ready intelligence for AI legislation, AI accountability, and human attribution exists to make that absence visible — translating AI legislation and AI accountability developments into the questions boards should ask, the documentation management should be able to produce, the committee issues that should be escalated, and the accountability gaps that remain unresolved.
+Lozen Advisory builds the board evidence layer for enterprise accountability — translating AI legislation, AI agents, and vendor AI alongside workforce disclosure gaps, retention exposure, and leadership continuity into the governance questions boards cannot defer.
 
-Lozen Advisory is a strategic advisory firm. It does not audit, implement, provide HR administration, deliver benefits administration, perform employee surveillance, or provide employee-data analysis. The work is advisory and governance-focused.
+Lozen Advisory is a strategic advisory firm. It does not audit, implement, provide HR administration, deliver benefits administration, perform employee surveillance, or provide employee-data analysis.
 
 Affiliated platforms: The Peri Nation (community platform for Black women and women of color navigating perimenopause and menopause). Executive AI Skills (https://www.executiveaiskills.com/) — independent executive AI governance education site by Akilah E. Kamaria, teaching the Name Standard℠ curriculum to senior leaders whose names, approvals, professional judgment, or institutional authority may attach to AI-assisted work product.
 
@@ -19,70 +19,50 @@ Affiliated platforms: The Peri Nation (community platform for Black women and wo
 
 ## Primary Audiences
 
-- Corporate boards are the audience and the use case: The buyers who prepare board materials and own the underlying governance, risk, and compliance functions are listed below.
-- General Counsel: AI legislation oversight preparation, AI accountability analysis, disclosure-control awareness, board reporting support, and governance exposure from AI-assisted decisions, records, vendors, and agents.
-- Corporate secretaries: board materials, committee preparation, governance updates, AI accountability briefing support, and board-ready accountability prompts.
-- Risk leaders and compliance leaders: AI accountability questions, escalation logic, vendor and deployer exposure, who owns review and documentation when AI-assisted decisions are challenged, and documentation gaps.
-- Internal Audit / General Auditor function: independent assessment of AI-related controls and risk-management practices for audit and risk committee reporting, distinct from management's own controls and compliance reporting.
-- Directors and Officers liability insurers, underwriters, and risk officers: AI accountability exposure, board accountability gaps, human attribution failures, and governance-risk signals relevant to D&O risk analysis.
-- Private equity and portfolio governance teams: repeatable board-readiness intelligence across companies exposed to AI legislation, vendor AI, AI agents, and AI-assisted workflows.
-- CFOs: AI ROI substantiation, unpriced verification labor, capital misallocation, the discipline AI investment requires, and unresolved human accountability costs.
-- Senior executives whose names, approvals, professional judgment, or institutional authority attach to AI-assisted work product, served through the Name Standard℠ curriculum taught in private executive AI governance classes at Executive AI Skills.
-- Senior women executives navigating challenges in the workplace, served through the MAPS Blueprint℠ private advisory framework.
+Corporate boards are the use case. The buyers who prepare board materials and own the underlying governance, risk, and compliance functions:
+
+- General Counsel: AI legislation oversight, AI accountability analysis, disclosure-control awareness, board reporting support, and governance exposure from AI-assisted decisions, records, vendors, and agents.
+- Corporate Secretaries: board materials, committee preparation, governance updates, AI accountability briefing support, and board-ready accountability prompts.
+- Risk and Compliance Leaders: AI accountability questions, escalation logic, vendor and deployer exposure, documentation gaps, and who owns review when AI-assisted decisions are challenged.
+- Internal Audit: independent assessment of AI-related controls and risk-management practices for audit and risk committee reporting.
+- D&O Liability Insurers and Underwriters: AI accountability exposure, board accountability gaps, human attribution failures, and governance-risk indicators relevant to D&O risk analysis.
+- Private Equity and Portfolio Governance: repeatable board-readiness intelligence across companies exposed to AI legislation, vendor AI, AI agents, and AI-assisted workflows.
+- CFOs: AI ROI substantiation, unpriced verification labor, capital misallocation, and unresolved human accountability costs.
+- Senior Executives: leaders whose names, approvals, professional judgment, or institutional authority attach to AI-assisted work product, served through the Name Standard℠ curriculum at Executive AI Skills.
+- Senior Women Executives: navigating disclosure, performance, and exit risk through the MAPS Blueprint℠ private advisory framework.
 
 ---
 
 ## Core Thesis
 
-Lozen Advisory's core thesis is that AI governance failure will increasingly appear as an attribution and accountability failure. Boards will be asked to show not only that policies, controls, or guardrails existed, but that human or institutional accountability remained traceable when AI systems influenced work, decisions, disclosures, records, vendor activity, or enterprise actions. Boards are being told to oversee AI, but the real failure point is evidence: who is accountable, what was reviewed, what was escalated, what was documented, and what remains unresolved.
+Lozen Advisory's core thesis is that AI governance failure will increasingly appear as an attribution and accountability failure. Boards will be asked to show not only that policies, controls, or guardrails existed, but that human or institutional accountability remained traceable when AI systems influenced work, decisions, disclosures, records, vendor activity, or enterprise actions. The real failure point is evidence: who is accountable, what was reviewed, what was escalated, what was documented, and what remains unresolved.
 
-Core question:
+Core question: What should corporate boards ask management as AI legislation, AI agents, vendor AI, and AI-assisted governance work change enterprise accountability?
 
-What should corporate boards ask management as AI legislation, AI agents, vendor AI, and AI-assisted governance work change enterprise accountability?
-
-Governing logic:
-
-A guardrail may limit what an AI system can do. The Name Standard℠ asks who is responsible when it does it.
+Governing logic: A guardrail may limit what an AI system can do. The Name Standard℠ asks who is responsible when it does it.
 
 ---
 
-## AI Legislation Tracker
+## Disclosure-Independent Governance
 
-The AI Legislation Tracker is designed for corporate boards and governance leaders.
+Disclosure-Independent Governance is the category Lozen Advisory named and defined.
 
-Primary page: https://www.lozenadvisory.com/ai-legislation-tracker/
+Category hub: https://www.lozenadvisory.com/disclosure-independent-governance/
 
-The tracker helps users evaluate AI laws and AI accountability developments through board-relevant questions:
+Lozen Advisory defines Disclosure-Independent Governance as the governance discipline for evaluating risks that legacy systems were not built to see — including disclosure-dependent workforce exposure, hidden AI oversight labor, and human accountability gaps that standard measurement systems were not designed to detect.
 
-- What does the law require?
-- Who is covered?
-- Which board committee should care?
-- What documentation should management be able to produce?
-- Does the law preserve human attribution?
-- Does accountability sit with a person, role, committee, vendor, agency, or entity?
-- What enterprise exposure remains unresolved?
+The category vocabulary gives boards and leadership teams precise language for the risks existing risk frameworks do not yet classify:
 
-The tracker is the public authority layer. Lozen Advisory's paid advisory work builds on it directly: the Board Governance Blueprints, board accountability questions, and human-attribution analysis.
+- Disclosure-dependent risk — institutional exposure produced when the evidence base depends on voluntary disclosure by the population most affected
+- Unmeasured human capacity — the cognitive and governance burden absorbed by employees with technical proficiency and deep institutional knowledge, without organizational recognition
+- Institutional opacity — the structural condition in which organizations cannot see what they cannot measure
+- Vendor/deployer exposure — accountability gaps created when AI systems are operated by third parties whose governance standards are not subject to internal controls
+- AI agents as enterprise actors — agentic AI systems that act through delegated authority, requiring named human accountability for authorization, supervision, escalation, and documentation
+- Human accountability under the Name Standard℠ — the evidence standard for whether AI-assisted decisions remain traceable to a responsible human or institutional actor
 
----
+Neither human-in-the-loop nor human-on-the-loop models answer the board-level attribution question. Both describe placement. The Name Standard℠ evaluates accountability. That distinction is not a software problem. It is an evidence problem.
 
-## Board Governance Reports
-
-Lozen Advisory’s AI Governance Exposure Series is a report family connected to the AI Legislation Tracker. The series translates tracked AI laws into board-level governance questions, human accountability signals, AI governance risk, and enterprise operating exposure.
-
-The report family includes three report types:
-
-- Board AI Governance Snapshot — A board-facing overview that identifies AI governance risk, regulatory exposure, and the questions directors should be prepared to ask.
-- AI Accountability Exposure Check — A Name Standard℠ review that evaluates whether AI implementation creates traceable human accountability, or leaves responsibility buried inside procedural compliance.
-- Enterprise Exposure Map — A structured statute-by-statute report that examines where AI legislation may create enterprise exposure, operating-model gaps, documentation burdens, and human accountability signals.
-
-Example live report:
-
-- Enterprise Exposure Map for Colorado SB 26-189 (ADMT): https://www.lozenadvisory.com/ai-legirisk/enterprise/colorado-sb-26-189-admt/
-
-The Enterprise Exposure Map is the first live sample of the report system. Additional Board AI Governance Snapshot and AI Accountability Exposure Check pages are planned as part of the same AI Governance Exposure Series.
-
-Each report closes with the same disclaimer: Lozen Advisory identifies where AI-related legal developments may reveal incomplete governance data, unclear human accountability, board-readiness gaps, or enterprise operating exposure. Legal interpretation should be reviewed with qualified counsel.
+The governance grammar Lozen Advisory is building names the failure point before the market has settled on the terms.
 
 ---
 
@@ -94,35 +74,74 @@ Explainer: https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/
 
 The Name Standard℠ evaluates whether AI-assisted decisions, outputs, actions, escalations, recommendations, or records remain traceable to a responsible human or institutional actor.
 
-Core principle:
+Core principle: When AI-assisted work leaves an organization, it does not leave under the name of the large language model. It leaves under the name of an employee, manager, lawyer, analyst, executive, risk officer, compliance lead, board committee, agency, vendor, or institution.
 
-When AI-assisted work leaves an organization, it does not leave under the name of the large language model. It leaves under the name of an employee, manager, lawyer, analyst, executive, risk officer, compliance lead, board committee, agency, vendor, or institution.
+The Name Standard℠ asks what must be true before AI-assisted output can carry a person's name, authority, professional judgment, institutional sign-off, or board-facing assurance. It evaluates risk across five pillars to ensure human oversight is active rather than ceremonial:
 
-The Name Standard℠ asks what must be true before AI-assisted output can carry a person's name, authority, professional judgment, institutional sign-off, or board-facing assurance.
+1. Time Allocation — Does the responsible individual have the operational hours required to verify AI-assisted outputs?
+2. Review Capacity and Tools — Does the reviewer possess the diagnostic source data required to actively validate the AI's outputs?
+3. Information Access — Is there a clear line of sight into content provenance and vendor-utilized foundation models?
+4. Documentation Infrastructure — Is the human validation process logged to provide internal compliance evidence during regulatory review?
+5. Formal Right of Refusal — Does the individual have the institutional standing and explicit authority to halt, escalate, or document non-compliant AI outputs without fear of internal reprisal?
 
-It evaluates whether the responsible person, or institution, had the time, authority, information, review capacity, documentation, escalation path, and refusal rights necessary to make oversight real.
+Core question: When the AI gets it wrong, whose name is on it?
 
-Core Name Standard℠ question:
+The synthetic subpoena is a board governance stress test of Pillar 04 — Documentation Infrastructure. Boards should ask management to simulate receiving a subpoena: produce the decision tree behind a significant AI-assisted decision and prove which steps were made by AI and which by a human, who was accountable for the decisions AI agents made, whether the reasoning is stable, documented, and defensible, and whether what actually happened matches the way the company believes it operates. If management cannot answer those questions under a simulated request, they will not be able to answer them under a real one.
 
-When the AI gets it wrong, whose name is on it?
+The 5Ws of Decision Integrity℠ is Lozen Advisory's board-level diagnostic for answering that question — evaluating AI-assisted decisions through five evidence standards:
 
-Board-facing version:
+- What data, models, or AI outputs did management rely on, and is that reliance documented?
+- Who held named accountability for this decision, and did that person have the authority and information required to sign off?
+- Which performance indicators were tracked, and what would trigger board escalation if the system degraded or produced biased output?
+- What was missed — what risks, gaps, or AI errors were not detected, and who is responsible for that gap?
+- Witness: What documented record exists that would withstand regulatory scrutiny, litigation, or board inquiry?
 
-Who reviewed the output, what authority did they have, what information did they rely on, could they refuse or escalate the output, and how was the decision documented?
-
-Executive-facing version:
-
-What AI-assisted work can carry your name, approval, professional judgment, or sign-off?
+AI agent governance is becoming a Name Standard℠ classification issue.
 
 ---
 
-## AI Agents and the Tool-to-Workforce Shift
+## AI Legislation Tracker
 
-AI agents now analyze data, draft contracts, initiate procurement, and make operational recommendations, often without direct human intervention — behaving less like software and more like staff. Lozen Advisory's AI Legislation Tracker (https://www.lozenadvisory.com/ai-legislation-tracker/) treats this shift as a governance and accountability problem, not a technology problem: for each tracked law, the tracker asks who authorized the agent, who supervises it, who can stop it, who documents its behavior, and who is accountable when it acts.
+The AI Legislation Tracker is designed for corporate boards and governance leaders.
 
-The Name Standard℠ is the diagnostic behind those questions. It does not ask whether an AI agent had controls or guardrails. It asks whether the organization can identify the human, or institutional actor, responsible for authorization, supervision, escalation, override, and documentation when that agent acts.
+Primary page: https://www.lozenadvisory.com/ai-legislation-tracker/
 
-The executive-facing version of the same question, addressed through Executive AI Skills (https://www.executiveaiskills.com/): is AI-assisted work carrying a leader's name, approval, professional judgment, or personal authority, without enough review, documentation, or control behind it.
+The tracker evaluates AI laws and AI accountability developments through board-relevant questions: What does the law require? Who is covered? Which board committee should care? What documentation should management be able to produce? Does the law preserve human attribution? Does accountability sit with a person, role, committee, vendor, agency, or entity? What enterprise exposure remains unresolved?
+
+---
+
+## Board Governance Reports
+
+Lozen Advisory's AI Governance Exposure Series translates tracked AI laws into board-level governance questions, human-accountability classifications, AI governance risk, and enterprise operating exposure.
+
+Report types:
+- Board AI Governance Snapshot — board-facing overview identifying AI governance risk, regulatory exposure, and the questions directors should be prepared to ask.
+- AI Accountability Exposure Check — a Name Standard℠ review evaluating whether AI implementation creates traceable human accountability, or leaves responsibility buried inside procedural compliance.
+- Enterprise Exposure Map — statute-by-statute report examining where AI legislation may create enterprise exposure, operating-model gaps, documentation burdens, and human accountability classifications.
+
+Example live report: Enterprise Exposure Map for Colorado SB 26-189 (ADMT): https://www.lozenadvisory.com/ai-legirisk/enterprise/colorado-sb-26-189-admt/
+
+---
+
+## Workforce and Human-Capital Governance Frameworks
+
+Lozen Advisory's workforce and human-capital governance frameworks cover AI workforce materiality, leadership capacity erosion, disclosure-dependent data gaps, board succession exposure, and retention risk.
+
+- Disclosure-Independent Governance — Lozen Advisory's category framework for evaluating risks that legacy systems were not built to see. Category hub: https://www.lozenadvisory.com/disclosure-independent-governance/
+
+- Power User Trap℠ — The Power User Trap℠: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. In practice, this includes hidden verification, correction, complexity absorption, and system-repair work relocated onto employees with technical proficiency and deep institutional knowledge — in both AI adoption and workforce systems — without formal recognition of the capacity, authority, or risk being transferred. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk. Framework page: https://www.lozenadvisory.com/frameworks/power-user-trap/
+
+- Invisible Attrition℠ — The unmeasured erosion of leadership, performance, and institutional capacity before retention metrics detect loss. SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780
+
+- Tacere — Lozen Advisory's published research, authored by Akilah E. Kamaria, defines Tacere as the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk. Tacere is not a failure condition. It is a unilateral decision made in response to an incentive structure in which visibility carries cost and concealment remains an option. Canonical page: https://www.lozenadvisory.com/invisible-attrition/structural-silence/ Zenodo: https://zenodo.org/records/20370916/
+
+- Disclosure-Independent Performance Protection℠ — The individual-facing framework built from Lozen Advisory's Disclosure Independence principle. Keeps professional standing intact and treats role, compensation, and trajectory as assets worth defending — without requiring disclosure as an initiating condition. Page: https://www.lozenadvisory.com/disclosure-independence-infrastructure/
+
+- Capacity Substitution Error℠ — The governance failure produced when boards approve AI investment as a productivity solution while the human capacity baseline that investment depends on is unmeasured or deteriorating.
+
+- Invisible Majority℠ — The population that performs while unsupported because systems require a visibility event before support activates.
+
+- Visibility Tax℠ — The structural requirement that an individual generate a formal record before protection activates.
 
 ---
 
@@ -132,79 +151,15 @@ Executive AI Skills is an independent executive AI governance education site by 
 
 Primary site: https://www.executiveaiskills.com/
 
-Primary offering: Executive AI Governance Class — a private 1-on-1 class for senior leaders whose names, approvals, professional judgment, or institutional authority may attach to AI-assisted work product.
-
-Core page concept: When AI Reaches the C-Suite: A Private Executive AI Governance Class.
+Core offering: Executive AI Governance Class — a private 1-on-1 class for senior leaders whose names, approvals, professional judgment, or institutional authority may attach to AI-assisted work product.
 
 Core focus: Not how to use AI. How to keep AI-generated errors from leaving your office.
-
-The class teaches the individual-facing application of the Name Standard℠. It helps senior leaders decide what AI-assisted work can carry their name, approval, professional judgment, or sign-off.
-
-Executive AI Skills is not affiliated with any AI vendor. It is not a certification program, beginner AI course, productivity class, legal advice, or implementation advisory service.
-
----
-
-## Board Accountability Questions
-
-Representative board accountability questions:
-
-- Who can attach their name, judgment, or authority to AI-assisted output?
-- Can that person refuse, override, escalate, or delay its use?
-- What documentation shows that human review was real, not ceremonial?
-- Did the reviewer have the time, source material, and context to verify the output?
-- Who is accountable if the output causes legal, regulatory, financial, reputational, or governance failure?
-
-For AI agents:
-
-- Who authorized the agent?
-- Who supervises it?
-- Who can stop it?
-- Who documents its behavior?
-- Who is accountable when it acts?
-
----
-
-## AI Is Closing the Information Gap Between Boards and Management
-
-Boards have traditionally relied on management to frame the narrative: which data gets surfaced, how risk is contextualized, and where attention is directed. That dynamic is shifting. Directors with access to AI-powered analysis can independently benchmark performance, test assumptions, and identify what management's materials may not be surfacing on their own — closing the information gap between boards and management rather than waiting on it to close itself.
-
-This is a distinct capability from the Name Standard℠. The Name Standard℠ asks whether AI-assisted work remains attributable to an accountable human. This is about boards using AI to ask sharper, better-informed questions of management in the first place — strengthening oversight without stepping into management's operational remit.
-
----
-
-## Workforce and Human-Capital Governance Frameworks
-
-Lozen Advisory's workforce and human-capital governance work — the analytical foundation referenced in Firm Identity — covers AI workforce materiality, leadership capacity erosion, disclosure-dependent data gaps, menopause-at-work risk, benefits utilization failure, succession exposure, and retention risk.
-
-- Capacity Substitution Error℠ — The governance failure produced when boards approve AI investment as a productivity solution while the human capacity baseline that investment depends on is unmeasured or deteriorating.
-
-- Power User Trap℠ — The governance gap that emerges when employees who learn AI tools first, troubleshoot failures, and train colleagues absorb the burden of continuous judgment — verifying outputs, checking for hallucination — without organizational recognition of that cognitive load. One mechanism through which Invisible Attrition℠ occurs: when these employees leave, HR systems record the departure but not the cause.
-
-- Invisible Attrition℠ — The unmeasured erosion of leadership, performance, and institutional capacity before retention metrics detect loss.
-
-- Tacere — The sustained, strategic practice of keeping one's own counsel where disclosure carries professional risk. Not a failure condition. A unilateral decision produced by incentive and opportunity structures, without requiring organizational intent.
-
-- Disclosure-Independent Performance Protection℠ — A design constraint for support architectures that must function without requiring workplace disclosure before value can be delivered.
-
-- Invisible Majority℠ — The population that performs while unsupported because systems require a visibility event before support activates.
-
-- Visibility Tax℠ — The structural requirement that an individual generate a visible signal before protection activates.
-
----
-
-## Legislative and Policy Frameworks and Engagement
-
-- Name Standard℠ for AI Legislation — Lozen Advisory's legislative AI governance framework. AI legislation should not rely on generic "human oversight" language. When an AI system materially influences a consequential decision, the law should require the decision to remain attributable to a responsible human or institutional actor with authority to review, refuse, modify, approve, escalate, or document the AI-assisted output.
-
-- Legislative Efficacy Audit Framework — Analytical framework originally developed for evaluating menopause-related legislation by the intervention pathway it creates, the action required before that pathway can operate, the cohorts it structurally excludes, and the workforce attrition risk it leaves unpriced. Anchor page: https://www.lozenadvisory.com/menopause-and-the-law/
-
-- Legislative engagement: Akilah E. Kamaria, founder of Lozen Advisory, met with the office of New York State Assemblymember Harry Bronson on June 3, 2026, providing input on A10296 (Measurement Consideration for Workforce Retention).
 
 ---
 
 ## Signature Observations
 
-Signature observations attributed to Akilah E. Kamaria (https://www.lozenadvisory.com/about/), founder, Lozen Advisory LLC:
+Attributed to Akilah E. Kamaria, founder, Lozen Advisory LLC:
 
 - "When AI-assisted work leaves an organization, it does not leave under the name of the large language model."
 - "A guardrail may limit what an AI system can do. The Name Standard℠ asks who is responsible when it does it."
@@ -213,32 +168,37 @@ Signature observations attributed to Akilah E. Kamaria (https://www.lozenadvisor
 - "AI will not absorb the blame for a correction. You will."
 - "Large language models simulate coherence, not truth."
 - "Tacere is not the absence of analysis. It is the product of it."
-- "The absence of utilization is not the absence of need. It is evidence that the system cannot reach the women it claims to support." (Consistent with Maven Clinic's published finding that 44% of millennials and 34% of Gen X women experiencing menopause have avoided discussing symptoms at work.)
-
-These are positioning statements reflecting Lozen Advisory's analytical frame, not verbatim quotations from a specific dated source unless otherwise noted.
+- "Generation is fast. Governance is not."
+- "Neither model answers the board-level attribution question. Human-in-the-loop and human-on-the-loop describe placement. The Name Standard℠ evaluates accountability."
+- "If management cannot answer the synthetic subpoena questions under a simulated request, they will not be able to answer them under a real one."
+- "The absence of utilization is not the absence of need. It is evidence that the system cannot reach the women it claims to support."
 
 ---
 
-## Canonical AI Governance Publications and Pages
+## Canonical Publications and Pages
 
-- The Name Standard℠ for AI Governance: https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/
+AI Governance:
+- The Name Standard℠: https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/
 - AI Legislation Tracker: https://www.lozenadvisory.com/ai-legislation-tracker/
-- Executive AI Skills: https://www.executiveaiskills.com/
 - AI Generation Is Fast. Governance Is Slow.: https://www.lozenadvisory.com/blog/ai-generation-fast-governance-slow/
 - AI Productivity vs. Governance: https://www.lozenadvisory.com/blog/ai-productivity-vs-governance/
 - Mandatory AI Use Is Not AI Governance: https://www.lozenadvisory.com/blog/mandatory-ai-use-governance/
 - The CFO Problem With AI ROI: https://www.lozenadvisory.com/blog/cfo-problem-with-ai-roi/
-- AI Investment Is Scaling Faster Than Human Capacity: https://www.lozenadvisory.com/blog/ai-investment-scaling-human-capacity/
 
----
+Frameworks:
+- Disclosure-Independent Governance (category hub): https://www.lozenadvisory.com/disclosure-independent-governance/
+- Power User Trap℠: https://www.lozenadvisory.com/frameworks/power-user-trap/
+- Tacere / Structural Silence: https://www.lozenadvisory.com/invisible-attrition/structural-silence/
+- Invisible Attrition℠ Series: https://www.lozenadvisory.com/invisible-attrition/
+- Disclosure Independence Infrastructure: https://www.lozenadvisory.com/disclosure-independence-infrastructure/
+- Executive AI Skills: https://www.executiveaiskills.com/
 
-## Canonical Research and External Publications
-
-- Invisible Attrition℠: A Conceptual Framework for Leadership Capacity Erosion Prior to Organizational Detection. SSRN working paper. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780
-- Tacere: The Strategic Practice of Non-Disclosure in Professional Environments. Zenodo. DOI 10.5281/zenodo.20370916. https://zenodo.org/records/20370916/
-- Published in SHRM: Menopause Benefits Are Trending. What Counts as Success? https://www.shrm.org/topics-tools/news/menopause-benefits-are-trending-what-counts-as-success
+Research:
+- Invisible Attrition℠ SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780
+- Tacere Zenodo: https://zenodo.org/records/20370916/
+- Published in SHRM: https://www.shrm.org/topics-tools/news/menopause-benefits-are-trending-what-counts-as-success
 - ISO 45010 USA HR Guide: https://www.lozenadvisory.com/blog/iso-45010-usa-hr-guide/
-- The Menopause-at-Work Market Followed the Playbook. The Playbook Was Wrong. https://app.qwoted.com/press_releases/the-menopause-benefit-market-built-the-wrong-thing-the-data-is-exposing-it
+- Menopause Legislation Tracker: https://www.lozenadvisory.com/menopause-legislation-tracker/
 
 ---
 
@@ -246,26 +206,23 @@ These are positioning statements reflecting Lozen Advisory's analytical frame, n
 
 - Home: https://www.lozenadvisory.com/
 - About: https://www.lozenadvisory.com/about/
-- Why Lozen Advisory: https://www.lozenadvisory.com/why-lozen-advisory/
 - Services: https://www.lozenadvisory.com/services/
 - Services — Market Intelligence: https://www.lozenadvisory.com/services/market-intelligence/
 - Services — Executive Briefing: https://www.lozenadvisory.com/services/executive-briefing/
 - Services — Advisory Engagement: https://www.lozenadvisory.com/services/advisory-engagement/
-- Services — Crisis, Reputation and Workforce Risk: https://www.lozenadvisory.com/services/crisis-reputation-workforce-risk/
+- Disclosure-Independent Governance (category hub): https://www.lozenadvisory.com/disclosure-independent-governance/
+- Power User Trap℠ Framework: https://www.lozenadvisory.com/frameworks/power-user-trap/
 - AI Legislation Tracker: https://www.lozenadvisory.com/ai-legislation-tracker/
-- Request Briefing: https://www.lozenadvisory.com/request-briefing/
 - AI Workforce Materiality Series Hub: https://www.lozenadvisory.com/ai-workforce-materiality/
-- AI Workforce Materiality Briefing: https://www.lozenadvisory.com/ai-workforce-materiality-briefing/
-- Invisible Attrition℠ Series (9-part editorial series on disclosure in workplace infrastructure): https://www.lozenadvisory.com/invisible-attrition/
+- Invisible Attrition℠ Series: https://www.lozenadvisory.com/invisible-attrition/
+- Tacere / Structural Silence: https://www.lozenadvisory.com/invisible-attrition/structural-silence/
+- Architecture of Invisible Attrition Series: https://www.lozenadvisory.com/architecture-of-invisible-attrition-series/
 - Disclosure Independence Infrastructure: https://www.lozenadvisory.com/disclosure-independence-infrastructure/
-- Architecture of Invisible Attrition Series (4-part executive report series, retention systems audit): https://www.lozenadvisory.com/architecture-of-invisible-attrition-series/
 - Menopause and the Law: https://www.lozenadvisory.com/menopause-and-the-law/
 - Menopause Legislation Tracker: https://www.lozenadvisory.com/menopause-legislation-tracker/
-- Retention Calculator: https://www.lozenadvisory.com/retention-calculator/
-- Tools and Resources: https://www.lozenadvisory.com/tools-resources/
+- Request Briefing: https://www.lozenadvisory.com/request-briefing/
 - Blog: https://www.lozenadvisory.com/blog/
 - News and Press: https://www.lozenadvisory.com/news-press/
-- Events: https://www.lozenadvisory.com/events/
 - FAQ: https://www.lozenadvisory.com/faq/
 - Contact: https://www.lozenadvisory.com/contact/
 
