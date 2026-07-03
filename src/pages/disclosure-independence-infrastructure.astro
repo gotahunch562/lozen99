@@ -1,756 +1,180 @@
 ---
-import CategoryHubLayout from "@/components/authority/CategoryHubLayout.astro";
-import {
-  createDefinedTermJsonLd,
-  createDefinedTermSetJsonLd,
-  type JsonLdObject,
-} from "@/lib/seo/jsonLd";
+import NarrativePage from "@/components/authority/NarrativePage.astro";
 
-const pageTitle = "Disclosure-Independent Governance";
-const seoTitle = "Disclosure-Independent Governance: AI & Workforce Risk | Lozen Advisory";
-const description =
-  "Legacy systems miss hidden risks. Lozen Advisory provides disclosure-independent governance for silent workforce attrition and human-in-the-loop AI gaps.";
-const canonicalUrl = "https://www.lozenadvisory.com/disclosure-independent-governance/";
-const datePublished = "2026-07-03";
-const dateModified = "2026-07-03";
+const seoTitle = "Disclosure-Independent Performance Protection℠: The Infrastructure Women in Leadership Actually Need | Lozen Advisory";
+const pageTitle = "Disclosure-Independent Performance Protection℠: The Infrastructure Women in Leadership Actually Need";
+const description = "Disclosure Independence is the structural design principle behind Lozen Advisory's Disclosure-Independent Performance Protection℠ framework for women in leadership.";
+const canonicalUrl = "https://www.lozenadvisory.com/disclosure-independence-infrastructure/";
+const heroImage = "/images/authority/disclosure-independence-hero.webp";
+const heroImageAlt = "A silhouetted woman standing at an office window looking out over a city skyline.";
 
-const termSetId = `${canonicalUrl}#defined-term-set`;
-const termSetDescription =
-  "Legacy systems miss hidden risks. Lozen Advisory provides disclosure-independent governance for silent workforce attrition and human-in-the-loop AI gaps.";
-
-const terms = [
-  {
-    name: "Disclosure-Independent Governance",
-    href: "/disclosure-independent-governance/",
-    description:
-      "Lozen Advisory’s category framework for evaluating risks that depend on non-disclosure, hidden labor, undocumented human review, or untraceable accountability.",
+const articleJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: pageTitle,
+  description,
+  url: canonicalUrl,
+  datePublished: "2026-04-13",
+  dateModified: "2026-05-30",
+  keywords:
+    "Disclosure Independence, Disclosure-Independent Performance Protection, disclosure-independent infrastructure, Tacere, women in leadership, menopause at work",
+  author: {
+    "@type": "Person",
+    name: "Akilah E. Kamaria",
   },
-  {
-    name: "Power User Trap℠",
-    href: "/frameworks/power-user-trap/",
-    description:
-      "The Power User Trap℠: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. In practice, this includes hidden verification, correction, complexity absorption, and system-repair work relocated onto high-capacity employees — in both AI adoption and workforce systems — without formal recognition of the capacity, authority, or risk being transferred. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk.",
+  image: `https://www.lozenadvisory.com${heroImage}`,
+  publisher: {
+    "@type": "Organization",
+    name: "Lozen Advisory",
+    url: "https://www.lozenadvisory.com",
   },
-  {
-    name: "Tacere",
-    href: "/disclosure-independent-governance/#tacere",
-    description:
-      "Lozen Advisory’s published research, authored by Akilah E. Kamaria, introduces Tacere as the sustained, strategic practice of keeping one’s own counsel by a senior executive operating in a professional environment where disclosure carries professional risk. Tacere is not a failure condition. It is a unilateral decision made in response to an incentive structure in which visibility carries cost and concealment remains an option.",
-  },
-  {
-    name: "The Name Standard℠",
-    href: "/blog/the-name-standard-ai-governance/",
-    description:
-      "Lozen Advisory’s human-attribution standard for determining whether AI-assisted decisions remain traceable to a responsible human or institutional actor.",
-  },
-  {
-    name: "Invisible Attrition℠",
-    href: "/invisible-attrition/",
-    description:
-      "Lozen Advisory’s framework for leadership capacity erosion before organizational detection.",
-  },
-  {
-    name: "Capacity Substitution Error℠",
-    href: "/blog/talent-attrition-cfo-risk/",
-    description:
-      "Lozen Advisory’s framework for the mistake of treating AI adoption as a substitute for human capacity while continuing to rely on unmeasured human judgment, review, and accountability.",
-  },
-  {
-    name: "Disclosure-Independent Performance Protection℠",
-    href: "/disclosure-independence-infrastructure/",
-    description:
-      "The individual-facing framework built from Lozen Advisory’s Disclosure Independence principle. Disclosure-Independent Performance Protection℠ keeps her professional standing intact and treats her role, her compensation, and her trajectory as assets worth defending — without requiring her to name a condition or crisis before protection can begin. What her employer sees is the output. Lozen Advisory holds the rest.",
-  },
-  {
-    name: "The 5Ws of Decision Integrity℠",
-    href: "/disclosure-independent-governance/#5ws-decision-integrity",
-    description:
-      "A Lozen Advisory framework for evaluating AI-assisted decisions through five evidence questions: What data or AI outputs were relied upon? Who held ultimate human accountability? Which metrics measured AI performance, bias, and drift? What was missed, overlooked, or hallucinated? And what telemetry, logs, or audit trails serve as witness evidence to support the final decision?",
-  },
-];
-
-const articleJsonLd: JsonLdObject[] = [
-  createDefinedTermSetJsonLd({
-    name: "Disclosure-Independent Governance by Lozen Advisory",
-    description: termSetDescription,
-    href: "/disclosure-independent-governance/",
-    id: termSetId,
-    terms: terms.map((term) => ({
-      ...term,
-      termId: term.href.includes('#') ? new URL(term.href, canonicalUrl).toString() : `${new URL(term.href, canonicalUrl).toString()}#term`,
-    })),
-  }),
-  ...terms.map((term) =>
-    createDefinedTermJsonLd({
-      name: term.name,
-      description: term.description,
-      href: term.href,
-      termId: term.href.includes('#') ? new URL(term.href, canonicalUrl).toString() : `${new URL(term.href, canonicalUrl).toString()}#term`,
-      termSetId,
-      keywords: [
-        "Disclosure-Independent Governance",
-        "Lozen Advisory",
-        "AI governance",
-        "human accountability",
-        "board evidence",
-        "5Ws of Decision Integrity",
-        "AI decision accountability",
-      ],
-    }),
-  ),
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": `${canonicalUrl}#webpage`,
-    name: pageTitle,
-    headline: pageTitle,
-    description,
-    url: canonicalUrl,
-    datePublished,
-    dateModified,
-    author: {
-      "@type": "Person",
-      name: "Akilah E. Kamaria",
-    },
-    creator: {
-      "@id": "https://www.lozenadvisory.com/#organization",
-    },
-    publisher: {
-      "@id": "https://www.lozenadvisory.com/#organization",
-    },
-    about: {
-      "@id": termSetId,
-    },
-    mainEntity: {
-      "@id": termSetId,
-    },
-    citation: [
-      "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780",
-      "https://zenodo.org/records/20370916",
-    ],
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "@id": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780#scholarly-article",
-    name: "Invisible Attrition℠: A Conceptual Framework for Leadership Capacity Erosion Prior to Organizational Detection",
-    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780",
-    author: {
-      "@type": "Person",
-      name: "Akilah E. Kamaria",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "SSRN",
-    },
-    identifier: "10.2139/ssrn.6397780",
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "@id": "https://zenodo.org/records/20370916#scholarly-article",
-    name: "Tacere: The Strategic Practice of Non-Disclosure in Professional Environments",
-    url: "https://zenodo.org/records/20370916",
-    author: {
-      "@type": "Person",
-      name: "Akilah E. Kamaria",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Zenodo",
-    },
-    identifier: "10.5281/zenodo.20370916",
-  },
-];
-
-const railItems = [
-  { label: "Category", value: "Disclosure-Independent Governance" },
-  { label: "Defined by", value: "Lozen Advisory" },
-  { label: "Primary frameworks", value: "Name Standard℠, Power User Trap℠, Invisible Attrition℠, Tacere" },
-  { label: "Primary applications", value: "AI governance, board evidence, retention risk, leadership continuity" },
-  { label: "Research anchors", value: "SSRN, Zenodo" },
-];
-
-const railLinks = [
-  {
-    label: "Power User Trap℠",
-    href: "/frameworks/power-user-trap/",
-    description: "Lozen Advisory framework for hidden verification and system-repair burden.",
-  },
-  {
-    label: "Tacere",
-    href: "/invisible-attrition/structural-silence/",
-    description: "The strategic practice of non-disclosure in professional environments.",
-  },
-  {
-    label: "The Name Standard℠",
-    href: "/blog/the-name-standard-ai-governance/",
-    description: "Lozen Advisory standard for traceable human attribution in AI governance.",
-  },
-  {
-    label: "Invisible Attrition℠",
-    href: "/invisible-attrition/",
-    description: "Lozen Advisory framework for leadership capacity erosion before detection.",
-  },
-  {
-    label: "AI Legislation Tracker",
-    href: "/ai-legislation-tracker/",
-    description: "Board-facing AI legislation intelligence and accountability classifications.",
-  },
-  {
-    label: "Menopause Legislation Tracker",
-    href: "/menopause-legislation-tracker/",
-    description: "Legislative intelligence on disclosure-dependent workforce policy design.",
-  },
-];
-
-const relatedItems = [
-  {
-    label: "Power User Trap℠ by Lozen Advisory",
-    href: "/frameworks/power-user-trap/",
-    description: "How hidden verification and system-repair work becomes unmeasured capacity exposure.",
-  },
-  {
-    label: "Tacere",
-    href: "/invisible-attrition/structural-silence/",
-    description: "The strategic practice of non-disclosure that disclosure-dependent governance systems are not designed to detect or address.",
-  },
-  {
-    label: "The Name Standard℠",
-    href: "/blog/the-name-standard-ai-governance/",
-    description: "A human-attribution standard for AI-assisted decisions, approvals, outputs, and sign-off.",
-  },
-  {
-    label: "AI Legislation Tracker",
-    href: "/ai-legislation-tracker/",
-    description: "AI legislation intelligence for board evidence, human accountability, and enterprise exposure.",
-  },
-  {
-    label: "Menopause Legislation Tracker",
-    href: "/menopause-legislation-tracker/",
-    description: "A tracker for policy intelligence around menopause at work and disclosure-dependent design.",
-  },
-];
+};
 ---
 
-<CategoryHubLayout
+<NarrativePage
   title={pageTitle}
   seoTitle={seoTitle}
   description={description}
   metaDescription={description}
   canonical={canonicalUrl}
-  eyebrow="Lozen Advisory Category"
-  typeLabel="Category Hub"
-  dateLabel="Updated July 3, 2026"
-  textHeroLayout="wide"
+  eyebrow="Ambition was never the problem"
+  ogImage={heroImage}
+  ogImageAlt={heroImageAlt}
+  heroImage={heroImage}
+  heroImageAlt={heroImageAlt}
+  heroImagePosition="center center"
   articleJsonLd={articleJsonLd}
-  railTitle="Category Context"
-  railItems={railItems}
-  railLinks={railLinks}
-  railCta={{
-    label: "Advisory response",
-    title: "Governance Readiness Briefing",
-    description:
-      "For leadership teams evaluating hidden workforce risk, human accountability, and defensible sign-off on AI-assisted corporate output.",
-    href: "/request-briefing/",
-    linkLabel: "Request Briefing →",
-  }}
   bottomCta={{
-    label: "Next step",
-    title: "Request a Governance Readiness Briefing",
-    description:
-      "Evaluate whether current systems can detect hidden workforce risk, preserve human accountability, and support defensible sign-off on AI-assisted corporate output.",
-    href: "/request-briefing/",
-    linkLabel: "Request Briefing →",
+    title: "She was never silent. She decided.",
+    href: "/booking",
+    linkLabel: "Begin Here →",
   }}
-  relatedEyebrow="Frameworks and Data Assets"
-  relatedTitle="Continue through the Lozen Advisory architecture"
-  relatedItems={relatedItems}
 >
   <p>
-    Lozen Advisory defines <strong>Disclosure-Independent Governance</strong> as the governance discipline for evaluating risks that legacy systems were not built to see.
+    Women in senior roles, women building careers inside demanding and competitive environments, women who have spent years delivering at a level that would be remarkable if they were men, have never lacked ambition. What they have lacked is infrastructure that does not require them to disclose a private constraint before protection activates. This is not a theoretical gap. Women across industries and career levels are describing the same pattern in real time: performing past capacity, absorbing costs that never enter any organizational system, staying until the body stops cooperating and the exit arrives as a surprise to everyone except her. The pattern repeats across companies, industries, and years because the structural condition producing it has not changed. Corporate systems are disclosure-dependent by design. They were built to respond to what gets reported; they have no architecture for what does not.
   </p>
 
   <p>
-    Organizations are entering an era where major business decisions are being made from incomplete evidence. Workforce systems often miss what employees cannot safely disclose. AI governance systems often miss who reviewed, verified, escalated, or refused AI-assisted output. In both cases, the institution treats invisible labor, silence, and undocumented accountability as if they are operationally neutral. They are not.
+    Employee benefit systems designed to support women eventually run into the same wall. The benefit or accommodation requires a request, and the support requires an act of disclosure that, for a senior executive, is not a decision without consequence. When disclosure carries career risk, the benefit goes unused, the accommodation goes unfiled, and the system registers silence as stability. The infrastructure was built for the woman who raises her hand. It was not built for the woman who has decided, accurately and rationally, that raising her hand is not in her interest.
+  </p>
+
+  <h2>When Disclosure Does Not Protect Women</h2>
+
+  <p>
+    The systems that exist were not built for women. They were built for organizations. Every one assumes the same initiating act: a woman who names her condition, submits a request, and generates a record.
+  </p>
+
+  <p>
+    Accommodation frameworks activate when a request is filed. Clinical pathways open when a condition is named. Workplace protections apply when a disclosure is made. Benefit programs respond when a woman self-identifies. The support activates when the record exists, and without the record, the system has nothing to act on.
+  </p>
+
+  <p>
+    For the woman whose professional environment makes that initiating act a liability, the system does not activate. She has ambition. She does not have infrastructure.
+  </p>
+
+  <p>
+    But even when women do disclose, the structure does not resolve. Staying is not the problem. The structure allows a senior executive to remain in her role while deferring the cost of caring for her health in order to protect her position. The cost does not disappear; it compounds while her output is sustained and her health deteriorates. This is not a failure of individual decision-making. It is a structural outcome. The system recognizes her presence and her output, but it does not create or provide the conditions required to sustain both.
+  </p>
+
+  <p>
+    In early 2026, two senior women executives at a major technology company departed for health reasons within hours of each other. Both had publicly acknowledged they had deprioritized their own health for the role. They both had access to resources that represent the upper limit of what exists. The structure produced this outcome anyway. Everything looked fine from the outside until they were gone, with nothing visible in between. That pattern, where what others can see reflects full output while the conditions sustaining it erode, is the structural problem this work was built to solve.
+  </p>
+
+  <h2>The Disclosure Calculation Is Not Abstract</h2>
+
+  <p>
+    For many women, the calculation about disclosure is not theoretical. It is historical.
+  </p>
+
+  <p>
+    Black women have never operated in environments where naming a health condition was a neutral act. The professional environment for Black women in senior roles in hierarchical and intense, market-moving environments carries a specific and documented weight: a longer history of having competence questioned, authority undermined, and any sign of vulnerability used as confirmation of a narrative that was already running. The decision not to disclose is not made in the abstract. It is made inside that history, with full awareness of what will be done with it and who will do it.
+  </p>
+
+  <p>
+    That is not a menopause problem. It is a structural condition that menopause intersects. The disclosure-independent framework was not built as an accommodation for that reality. It was built because that reality confirmed what the governance analysis already showed: any framework that requires disclosure to function will fail the women for whom disclosure carries the highest cost.
   </p>
 
   <blockquote>
     <p>
-      What risk is the organization harboring because the current system was not designed to detect complex interdependencies and emergent technology threats?
+      Any framework that requires disclosure to function will fail the women for whom disclosure carries the highest cost.
+    </p>
+  </blockquote>
+
+  <h2>Silence and Disclosure at Work</h2>
+
+  <p>
+    There is a Latin word for the decision that precedes the data point that never exists. Tacere. To be silent. To withhold. To leave unmentioned.
+  </p>
+
+  <p>
+    Not the silence of someone who has nothing to say. But the silence of someone who has decided.
+  </p>
+
+  <div class="narrative-callout">
+    <p>
+      <strong>Tacere</strong> <em>(tah-CHEH-reh)</em> is the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk.
+    </p>
+  </div>
+
+  <p>
+    It is not hiding. It is a calculation made with full awareness of what is being managed and full understanding of what visibility would risk. Women have been practicing it in professional environments long before perimenopause arrived. The menopause transition does not create the condition; it intensifies it during the years when leadership responsibility is highest and the cost of any perceived vulnerability is most consequential.
+  </p>
+
+  <p>
+    The system measures what she discloses. Tacere is the discipline that keeps the self intact while the role continues. Disclosure-Independent Performance Protection℠ is built to operate in its presence.
+  </p>
+
+  <h2>Where Disclosure Independence Began</h2>
+
+  <p>
+    The Peri Nation identified this before it had a policy context. The work of building frameworks for women navigating perimenopause and menopause ran immediately into the same wall: every intervention that required disclosure excluded the women who needed it most. That was not a design oversight. It was a structural condition. The clinical system, the organizational system, and the legal system all operate on the same logic: risk and need become visible when they are reported. What is not reported does not exist in the data, does not trigger review, and does not generate a point of entry for anything to be addressed.
+  </p>
+
+  <p>
+    For the woman who cannot disclose without consequence, the gap between what she is managing and what the organization sees is not a personal problem. It is a governance failure. The systems designed to detect and manage organizational risk cannot see the risk because it is disclosure-dependent. Leadership capacity erodes, continuity degrades, and when departure eventually comes it is recorded as personal reasons. The organization loses.
+  </p>
+
+  <p>
+    That is the structural problem the principle of Disclosure Independence was built to name. Not the symptom. The architecture.
+  </p>
+
+  <p>
+    I built The Peri Nation and Lozen Advisory because of my daughter. Not in the way people expect, and not as a soft origin story meant to make the work more palatable. I built it because the cliff was already visible. An infinite number of women before her had fallen off the disclosure cliff because there was no barrier to stop them.
+  </p>
+
+  <h2>What Disclosure Independence Means</h2>
+
+  <p>
+    Disclosure Independence is not a privacy policy. It is not a confidentiality promise. It is a structural design principle.
+  </p>
+
+  <p>
+    Disclosure Independence means measurement and protection should not require her to name a crisis or health condition before the system can recognize risk. It is the foundational premise that protection should not depend on the individual initiating the act that may later be used against her.
+  </p>
+
+  <p>
+    Disclosure-Independent Performance Protection℠ is the individual-facing framework built from that principle. The work is built around two things: keeping her professional standing intact and treating her role, her compensation, and her trajectory as assets worth defending. What her employer sees is the output. Lozen Advisory holds the rest.
+  </p>
+
+  <p>
+    Disclosure Independence infrastructure is the organizational architecture that applies the same principle to workforce measurement. It asks whether systems can detect exposure without relying only on disclosure, self-reporting, benefit utilization, claims activity, complaints, performance decline, or exit. That organizational application is distinct from the individual framework, but it begins from the same premise: what is never disclosed may never become data.
+  </p>
+
+  <p>
+    This is the Lozen Advisory way because it was the only infrastructure that could reach the full population the work was built for. She is the woman who already knew the penalty of disclosure and did not take the day off. She is also the woman who disclosed and kept delivering while absorbing the cost, because naming a health condition does not eliminate the professional consequence. Each of them arrived at the same place: performing at full capacity while managing what the organization was designed to obscure.
+  </p>
+
+  <blockquote>
+    <p>
+      All of those women are the same woman.
     </p>
   </blockquote>
 
   <p>
-    Disclosure-Independent Governance gives leaders a vocabulary for the risks legacy systems do not yet classify: disclosure-dependent risk, unmeasured human capacity, institutional opacity, vendor/deployer exposure, AI agents as enterprise actors, and human accountability under the Name Standard℠.
+    She has ambition. She needed infrastructure.
   </p>
 
-  <h2>The disclosure gap across workforce and AI governance</h2>
-
-  <p>
-    Disclosure-Independent Governance connects two risks that may look unrelated at first: <strong>menopause at work</strong> and <strong>undocumented AI decision-making</strong>.
-  </p>
-
-  <p>
-    In menopause-at-work, the missing evidence may be silent self-management, non-use of benefits, suppressed disclosure, informal accommodation, or leadership attrition before detection.
-  </p>
-
-  <p>
-    In AI governance, the missing evidence may be undocumented human review, unclear sign-off authority, hidden verification labor, vendor-embedded AI, or AI-generated records without traceable accountability.
-  </p>
-
-  <p>
-    Both expose the same governance failure: organizations are making decisions from incomplete evidence while treating the missing layer as operationally neutral.
-  </p>
-
-  <p>
-    It is not neutral.
-  </p>
-
-  <p>
-    When leaders cannot see the hidden labor, silence, judgment, review work, or accountability structure holding a system together, they cannot accurately govern retention risk, AI adoption, board evidence, compliance exposure, or institutional capacity.
-  </p>
-
-  <h2>Why legacy governance processes miss the risk</h2>
-
-  <p>
-    Legacy governance systems were built around visible processes, formal roles, declared issues, and documented decisions.
-  </p>
-
-  <p>
-    That architecture is not sufficient for a workplace and AI environment shaped by:
-  </p>
-
-  <ul>
-    <li>AI-assisted output</li>
-    <li>Human-in-the-loop review</li>
-    <li>Human-on-the-loop monitoring</li>
-    <li>Vendor-deployed AI systems</li>
-    <li>AI-generated corporate records</li>
-    <li>Silent self-management</li>
-    <li>Non-disclosure</li>
-    <li>Informal workarounds</li>
-    <li>Unmeasured verification labor</li>
-    <li>Leadership capacity erosion before detection</li>
-  </ul>
-
-  <p>
-    Disclosure-Independent Governance does not wait for a person to disclose, a failure to become visible, or a crisis to create a record. It asks whether the organization has enough evidence to govern the risk before the board is held accountable for a risk it could not see.
-  </p>
-
-  <p>
-    The evidence of this gap is no longer theoretical. An April 2026 ResumeBuilder survey found that 62.8% of workers never told their managers when AI was doing the work, and 60.7% have used AI to absorb tasks once owned by coworkers. An April 2026 AFL-CIO survey found that only 7% of workers say their employer has been transparent about how AI is used to monitor them. Neither side is disclosing to the other.
-  </p>
-
-  <p>
-    When workers hide AI use and employers hide AI monitoring simultaneously, performance data no longer reliably reflects human capability. Promotion decisions, development investments, and capacity assessments are made from a record that neither party constructed honestly. That is not a culture problem. That is a governance architecture problem.
-  </p>
-
-  <h2>Pillar One: Invisible Attrition℠</h2>
-
-  <p>
-    Lozen Advisory’s work on <strong>Invisible Attrition℠</strong> examines leadership capacity erosion before organizational detection.
-  </p>
-
-  <p>
-    This is especially visible in menopause-at-work, where organizations often rely on women to self-manage symptoms, workload, disclosure risk, stigma, and career consequences without producing data the organization can accurately interpret.
-  </p>
-
-  <p>
-    Low benefits utilization does not necessarily mean low need. Stable performance does not necessarily mean stable capacity. Silence does not necessarily mean absence of risk.
-  </p>
-
-  <p>
-    Disclosure-Independent Governance evaluates the gap between what the organization can measure and what the workforce may be absorbing without disclosure.
-  </p>
-
-  <ul>
-    <li>Retention risk that does not appear in exit data until after loss</li>
-    <li>Leadership pipeline fragility masked by continued performance</li>
-    <li>Benefits designs that require disclosure before support can activate</li>
-    <li>Workforce issues treated as individual health matters despite operational consequences</li>
-    <li>Data systems that confuse non-use with non-need</li>
-  </ul>
-
-  <p>
-    The governance question is not only whether support exists. The question is whether the organization can detect risk when the people most affected have rational reasons not to disclose it. Boards cannot govern a leadership continuity risk that management’s measurement systems were not designed to surface.
-  </p>
-
-  <h2>Pillar Two: The Name Standard℠</h2>
-
-  <p>
-    Lozen Advisory’s work on undocumented AI decision-making examines what happens when AI-assisted systems influence corporate output, but human accountability remains unclear, informal, or unsupported.
-  </p>
-
-  <p>
-    AI governance has produced two dominant placement models. Human-in-the-loop places a person in the decision process before output or action is finalized. Human-on-the-loop places a person in a monitoring position, with the ability to intervene after or during operation. Both are workflow design positions.
-  </p>
-
-  <p>
-    Neither model answers the board-level attribution question.
-  </p>
-
-  <p>
-    The real question is not where the human sits in the workflow. The question is whether the human has the capacity, information, authority, documentation, escalation path, and formal right of refusal required before their name, judgment, or institutional sign-off is attached to AI-assisted output.
-  </p>
-
-  <p>
-    <strong>Human-in-the-loop and human-on-the-loop models describe placement. The Name Standard℠ evaluates accountability.</strong>
-  </p>
-
-  <p>
-    That distinction is not a software problem. It is an evidence problem. Workflow design frameworks and responsible AI process checklists can define where a human is positioned. They cannot answer whether the accountability attached to that position was real, supported, or defensible when the output is later scrutinized.
-  </p>
-
-  <p>
-    The worker side of this problem compounds the employer side. When employees conceal AI use — not out of bad faith, but because disclosure carries career risk, competitive disadvantage, or fear of being seen as less capable — the organization loses the ability to distinguish human judgment from AI-assisted output. A sign-off that looks like human review may reflect AI generation the reviewer did not disclose. An output that looks like human analysis may be AI-drafted work a high performer quietly corrected before submission.
-  </p>
-
-  <p>
-    Disclosure-Independent Governance addresses both sides of the silence: the worker who does not disclose and the employer whose systems were not built to detect what was not disclosed.
-  </p>
-
-  <p>
-    <strong>The Name Standard℠, developed by Lozen Advisory, evaluates whether AI-assisted decisions, approvals, outputs, escalations, and sign-off remain traceable to a responsible human or institutional actor.</strong>
-  </p>
-
-  <p>
-    This matters when companies rely on AI tools, AI agents, vendor systems, automated workflows, or AI-generated records without a clear evidence model for who reviewed what, what was escalated, what was refused, and what remains unresolved.
-  </p>
-
-  <p>
-    The governance question is not only whether a human was present. The question is whether accountability was real, supported, and traceable.
-  </p>
-
-  <p>
-    AI agent governance is becoming a Name Standard℠ issue. Not because agents are people, but because agents act through delegated authority. The question becomes: whose authority is the agent exercising, who authorized the scope, who can revoke it, and who owns the consequences?
-  </p>
-
-  <p>
-    <strong>Agentic AI does not eliminate human attribution. It makes attribution infrastructure mandatory.</strong>
-  </p>
-
-  <h2 id="tacere">Tacere: the individual decision that governance cannot see</h2>
-
-  <p>
-    Lozen Advisory’s published research introduces <strong>Tacere</strong> as the individual behavioral complement to Invisible Attrition℠. Tacere is defined as the sustained, strategic practice of keeping one’s own counsel by a senior executive operating in a professional environment where disclosure carries professional risk.
-  </p>
-
-  <p>
-    Tacere is not a failure condition. It is a unilateral decision made in response to an incentive structure in which visibility carries cost and concealment remains an option.
-  </p>
-
-  <p>
-    The existing literature treats non-disclosure as a gap in psychological safety, legal literacy, or organizational support. Tacere establishes that assumption is structurally incomplete. The individual who has accurately assessed the available conditions and determined that disclosure remains professionally untenable is not experiencing a gap in psychological safety. She is exercising a sovereign function over her own information.
-  </p>
-
-  <p>
-    This has a direct governance implication. Systems built to activate in response to a disclosed condition — accommodation frameworks, wellness programs, clinical pathways, benefit programs — cannot reach the individual who has already decided, on a rational basis, not to disclose. The gap between what those systems can see and what is actually present in the workforce is not a measurement problem that better data collection will close.
-  </p>
-
-  <p>
-    Disclosure-Independent Governance is designed to address that gap. The governance architecture must function in the presence of Tacere, not in opposition to it.
-  </p>
-
-  <h2>The Power User Trap℠</h2>
-
-  <p>
-    <a href="/frameworks/power-user-trap/"><strong>Power User Trap℠ by Lozen Advisory</strong></a>: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk.
-  </p>
-
-  <p>
-    This mechanism appears across both workforce and AI governance.
-  </p>
-
-  <p>
-    In workforce systems, power users may continue absorbing complexity, mentoring, institutional memory, emotional labor, and informal problem-solving while the organization reads their continued output as stability.
-  </p>
-
-  <p>
-    In AI adoption, power users may become the people who verify AI output, correct errors, repair workflows, identify hallucinations, train colleagues, and prevent failure, even when that work is not formally assigned, measured, staffed, or governed.
-  </p>
-
-  <p>
-    The Power User Trap℠ is a Disclosure-Independent Governance problem because the organization may believe it has gained efficiency while actually relocating risk into unmeasured human capacity.
-  </p>
-
-  <h2>The governance failure that disclosure-dependent systems share</h2>
-
-  <p>
-    The shared failure is not lack of effort. It is lack of evidence.
-  </p>
-
-  <p>
-    In menopause-at-work, the organization may have policies, benefits, surveys, and wellness resources, yet still fail to see the leaders quietly managing risk without disclosure.
-  </p>
-
-  <p>
-    In AI governance, the organization may have policies, inventories, vendors, and review processes, yet still fail to see where human accountability is unsupported, undocumented, or merely assumed.
-  </p>
-
-  <p>
-    Both conditions create false assurance. False assurance forms when leadership believes a system is governed because a process exists, while the real risk sits outside the process’s field of vision.
-  </p>
-
-  <p>
-    Disclosure-Independent Governance is designed to identify that gap.
-  </p>
-
-  <p>
-    The mutual opacity now documented in AI disclosure research is the same structural condition Lozen Advisory has studied in workforce risk: when the people most affected have rational reasons not to disclose, and the organization has no evidence standard that functions without disclosure, the gap between what is recorded and what is real grows wider — invisibly, until it forces a response.
-  </p>
-
-  <h2>Defined terms: Lozen Advisory’s governance vocabulary</h2>
-
-  <p>
-    Lozen Advisory’s governance vocabulary names the mechanisms, failure points, and accountability gaps that existing risk frameworks do not yet classify. These are not content categories. They are infrastructure terms.
-  </p>
-
-  <div class="lozen-accordion" aria-label="Lozen Advisory governance vocabulary">
-    {terms.map((term, index) => (
-      <details class="lozen-accordion__item" open={index === 0}>
-        <summary class="lozen-accordion__header">
-          <span class="lozen-accordion__name">{term.name}</span>
-          <span class="lozen-accordion__chevron" aria-hidden="true"></span>
-        </summary>
-        <div class="lozen-accordion__body">
-          <p class="lozen-accordion__desc">{term.description}</p>
-        </div>
-      </details>
-    ))}
-  </div>
-
-  <p>
-    Together, these concepts form Lozen Advisory’s governance architecture for evaluating institutional risk that disclosure-dependent systems cannot see. They were developed by Akilah E. Kamaria and are published under Lozen Advisory LLC.
-  </p>
-
-  <h2>Evidence-based governance questions for workforce and AI risk</h2>
-
-  <p>
-    Disclosure-Independent Governance helps boards and leadership teams move beyond surface assurance and ask evidence-based questions.
-  </p>
-
-  <h3>Workforce risk questions</h3>
-
-  <ul>
-    <li>What risks are we treating as absent because they have not been disclosed?</li>
-    <li>Where are we relying on continued performance as proof of capacity?</li>
-    <li>Which benefits or policies require disclosure before the organization can see need?</li>
-    <li>What leadership pipeline risk may be forming before exit data records it?</li>
-    <li>Where are women absorbing institutional pressure without creating a formal record?</li>
-  </ul>
-
-  <h3>AI governance questions</h3>
-
-  <ul>
-    <li>Who has authority to approve, escalate, suspend, or refuse AI-assisted output?</li>
-    <li>What evidence shows that human review is real, supported, and documented?</li>
-    <li>Where is AI adoption creating hidden verification or correction labor?</li>
-    <li>Which AI use cases create board-level accountability questions?</li>
-    <li>What AI-generated records, summaries, analyses, or recommendations may become part of the organization’s evidentiary trail?</li>
-    <li>Where does the company preserve named human or institutional accountability under the Name Standard℠?</li>
-  </ul>
-
-  <p>
-    The purpose is not to add more oversight language. The purpose is to determine whether management can produce the evidence boards need to govern the risk.
-  </p>
-
-  <h2>Why disclosure-dependent governance is insufficient now</h2>
-
-  <p>
-    The governance conditions that make this category necessary are intensifying.
-  </p>
-
-  <p>
-    AI systems influence decisions. AI agents act inside workflows. Vendor systems embed AI into enterprise processes. Corporate records may be drafted, summarized, analyzed, or interpreted by AI tools. At the same time, workforce risks continue to move through silence, self-management, non-use, and delayed detection.
-  </p>
-
-  <p>
-    The organization may be more automated, more documented, and more data-rich than ever, while still lacking evidence of the conditions that matter most.
-  </p>
-
-  <p>
-    Emerging workforce data confirms the scale of this gap. When workers conceal AI use because disclosure carries risk, and employers fail to disclose how AI monitors workers, organizations face a compounding evidence problem: the performance record reflects neither real human capacity nor honest AI involvement. Retention decisions, promotion decisions, and development investments are misallocated when the underlying performance record cannot distinguish human capability from AI-assisted output.
-  </p>
-
-  <p>
-    Disclosure-Independent Governance gives leadership teams a way to evaluate that gap before it becomes a board issue, legal exposure, retention issue, disclosure issue, or public accountability exposure.
-  </p>
-
-  <h2>How Lozen Advisory applies this category: frameworks and data assets</h2>
-
-  <p>
-    Disclosure-Independent Governance is the category hub. Lozen Advisory’s frameworks and data assets apply that category to specific board, workforce, and AI governance questions.
-  </p>
-
-  <div class="lozen-asset-grid" aria-label="Lozen Advisory governance intelligence assets">
-    <article>
-      <p class="lozen-asset-grid__eyebrow">Data asset</p>
-      <h3><a href="/menopause-legislation-tracker/">Menopause Legislation Tracker</a></h3>
-      <p>Legislative intelligence around menopause at work, disclosure-dependent policy design, workforce risk, and retention exposure.</p>
-    </article>
-
-    <article>
-      <p class="lozen-asset-grid__eyebrow">Data asset</p>
-      <h3><a href="/ai-legislation-tracker/">AI Legislation Tracker</a></h3>
-      <p>AI legislation intelligence for human accountability, board evidence, AI governance readiness, and enterprise exposure.</p>
-    </article>
-
-    <article>
-      <p class="lozen-asset-grid__eyebrow">Future data asset</p>
-      <h3>Proxy AI Governance Tracker</h3>
-      <p>A planned Lozen Advisory data asset for AI-readable governance disclosure, proxy statements, board evidence, and human-attribution classifications.</p>
-    </article>
-  </div>
-
-  <h2>Who uses Disclosure-Independent Governance</h2>
-
-  <p>
-    Disclosure-Independent Governance is designed for leadership teams and advisors responsible for institutional risk, accountability, workforce visibility, and AI governance.
-  </p>
-
-  <ul>
-    <li>Boards and board committees</li>
-    <li>General Counsel</li>
-    <li>Corporate Secretaries</li>
-    <li>Chief Risk Officers</li>
-    <li>Chief Compliance Officers</li>
-    <li>Internal audit leaders</li>
-    <li>Human capital and workforce strategy leaders</li>
-    <li>CFOs evaluating AI ROI and workforce capacity</li>
-    <li>D&amp;O insurance and governance-risk stakeholders</li>
-    <li>Executives responsible for AI adoption, vendor oversight, or corporate records</li>
-  </ul>
-
-  <p>
-    <span id="5ws-decision-integrity"></span>To maintain robust human-in-the-loop oversight and counter automation bias, organizations must evaluate AI-assisted work through The 5Ws of Decision Integrity℠:
-  </p>
-
-  <ul>
-    <li><strong>What</strong> data, models, or AI outputs did management rely on, and is that reliance documented?</li>
-    <li><strong>Who</strong> held named accountability for this decision, and did that person have the authority and information required to sign off?</li>
-    <li><strong>Which</strong> performance signals were tracked, and what would trigger board escalation if the system degraded or produced biased output?</li>
-    <li><strong>What was missed</strong> — what risks, gaps, or AI errors were not detected, and who is responsible for that gap?</li>
-    <li><strong>Witness:</strong> What documented record exists that would withstand regulatory scrutiny, litigation, or board inquiry?</li>
-  </ul>
-
-  <p>
-    The 5Ws of Decision Integrity℠ is a Lozen Advisory framework.
-  </p>
-
-  <h2 id="published-research-foundations">Published Research Foundations</h2>
-
-  <p>
-    Disclosure-Independent Governance is grounded in Lozen Advisory’s published research on Invisible Attrition℠, Tacere, and Disclosure-Independent Performance Protection℠.
-  </p>
-
-  <p>
-    Akilah E. Kamaria’s SSRN paper, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780" rel="noopener noreferrer">“Invisible Attrition℠: A Conceptual Framework for Leadership Capacity Erosion Prior to Organizational Detection”</a>, establishes the workforce-risk foundation for this category: leadership capacity can erode before organizational systems detect loss.
-  </p>
-
-  <p>
-    The Zenodo preprint, <a href="https://zenodo.org/records/20370916" rel="noopener noreferrer">“Tacere: The Strategic Practice of Non-Disclosure in Professional Environments”</a>, extends that foundation by defining strategic non-disclosure as a governance condition rather than a mere communications, culture, or psychological-safety problem. The record also introduces <a href="/disclosure-independence-infrastructure/"><strong>Disclosure-Independent Performance Protection℠</strong></a> — the individual-facing framework that keeps her professional standing intact and treats her role, her compensation, and her trajectory as assets worth defending, without requiring her to name a condition or crisis before protection can begin — as the individual structural response to Tacere.
-  </p>
-
-  <p>
-    Together, these published records establish the research basis for Lozen Advisory’s Disclosure-Independent Governance framework: institutions need standards that can evaluate risk without depending on disclosure, visible distress, formal utilization, or after-the-fact detection.
-  </p>
-
-  <h2>How Lozen Advisory advises on Disclosure-Independent Governance</h2>
-
-  <p>
-    Lozen Advisory helps leadership teams evaluate whether current governance systems can detect the risks they are now being asked to oversee.
-  </p>
-
-  <p>
-    That work may involve menopause-at-work, retention risk, leadership continuity, AI governance, AI legislation intelligence, human accountability, board evidence, vendor/deployer exposure, or AI-assisted corporate output.
-  </p>
-
-  <p>
-    The common thread is Disclosure-Independent Governance.
-  </p>
-
-  <p>
-    Disclosure-Independent Governance is a category Lozen Advisory named and defined. The vocabulary, frameworks, and research infrastructure described on this page — Invisible Attrition℠, Tacere, The Name Standard℠, Power User Trap℠, and Disclosure-Independent Performance Protection℠ — are Lozen Advisory’s contribution to the governance architecture for institutional risk that disclosure-dependent systems cannot see.
-  </p>
-
   <p>
-    Lozen Advisory builds the board evidence layer for enterprise accountability — translating AI legislation, AI agents, and vendor AI alongside workforce disclosure gaps, retention exposure, and leadership continuity into the governance questions boards cannot defer.
+    Lozen Advisory Disclosure-Independent Performance Protection℠ was built for her.
   </p>
-</CategoryHubLayout>
-
-<style>
-  .lozen-framework-grid,
-  .lozen-asset-grid {
-    display: grid;
-    gap: 1rem;
-    margin: 1.8rem 0 2.1rem;
-  }
-
-  .lozen-framework-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lozen-asset-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .lozen-framework-card,
-  .lozen-asset-grid > article {
-    border: 1px solid var(--color-base-200);
-    border-left: 3px solid var(--color-accent-500);
-    border-radius: 1.05rem;
-    background: #ffffff;
-    padding: clamp(1.1rem, 2.2vw, 1.45rem);
-    box-shadow: 0 1px 3px 0 rgb(6 23 47 / 0.08), 0 4px 12px 0 rgb(6 23 47 / 0.06);
-  }
-
-  .lozen-framework-card h3,
-  .lozen-asset-grid h3 {
-    margin: 0;
-    color: var(--color-base-950);
-    font-family: var(--font-display);
-    font-size: var(--lozen-card-title-size);
-    font-weight: var(--lozen-card-title-weight);
-    letter-spacing: var(--lozen-card-title-letter-spacing);
-    line-height: var(--lozen-card-title-line-height);
-  }
-
-  .lozen-framework-card p,
-  .lozen-asset-grid p {
-    margin: 0.75rem 0 0;
-    font-size: 0.96rem;
-    line-height: 1.65;
-  }
-
-  .lozen-framework-card a,
-  .lozen-asset-grid a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .lozen-framework-card a:hover,
-  .lozen-framework-card a:focus-visible,
-  .lozen-asset-grid a:hover,
-  .lozen-asset-grid a:focus-visible {
-    color: var(--color-accent-700);
-  }
-
-  .lozen-asset-grid__eyebrow {
-    margin: 0 0 0.55rem !important;
-    color: var(--color-base-500);
-    font-family: var(--font-sans);
-    font-size: 0.72rem !important;
-    font-weight: 850;
-    letter-spacing: 0.14em;
-    line-height: 1.3 !important;
-    text-transform: uppercase;
-  }
-
-  @media (max-width: 900px) {
-    .lozen-framework-grid,
-    .lozen-asset-grid {
-      grid-template-columns: minmax(0, 1fr);
-    }
-  }
-</style>
+</NarrativePage>
