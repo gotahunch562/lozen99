@@ -77,6 +77,8 @@ That is a different problem, and it requires a different kind of access.
 
 ---
 
+To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance](/disclosure-independent-governance/).
+
 ## References
 
 Catalyst. (2026, January 29). *Caregiving pressures top factor pushing women out of the workforce, Catalyst finds.*
