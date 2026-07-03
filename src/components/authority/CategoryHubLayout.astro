@@ -10,6 +10,7 @@
  */
 
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import InternalPageHero from "@/components/fundations/sections/InternalPageHero.astro";
 
 interface RailItem {
   label: string;
@@ -97,35 +98,11 @@ const ogDescription = metaDescription ?? description;
   <main class="chub-root">
 
     <!-- ─── HERO ─────────────────────────────────────────────── -->
-    <header class="chub-hero">
-      <div class="chub-hero__inner">
-
-        <!-- Meta row -->
-        <div class="chub-hero__meta">
-          {typeLabel && (
-            <span class="chub-type-badge">{typeLabel}</span>
-          )}
-          {eyebrow && (
-            <span class="chub-hero__eyebrow">{eyebrow}</span>
-          )}
-          {dateLabel && (
-            <span class="chub-hero__date">{dateLabel}</span>
-          )}
-        </div>
-
-        <!-- Title -->
-        <h1 class="chub-hero__title">
-          <span class="chub-hero__title-accent" aria-hidden="true"></span>
-          {title}
-        </h1>
-
-        <!-- Description -->
-        {description && (
-          <p class="chub-hero__desc">{description}</p>
-        )}
-
-      </div>
-    </header>
+    <InternalPageHero
+      eyebrow={[typeLabel, eyebrow].filter(Boolean).join(' · ')}
+      title={title}
+      deck={description ?? ''}
+    />
 
     <!-- ─── BODY: CONTENT + RAIL ─────────────────────────────── -->
     <div class="chub-body">
@@ -237,100 +214,9 @@ const ogDescription = metaDescription ?? description;
     background: var(--color-base-50);
   }
 
-  /* ─── HERO ─────────────────────────────────────────────────── */
-  .chub-hero {
-    background: var(--color-base-950);
-    border-bottom: 1px solid var(--color-base-800);
-  }
-
-  .chub-hero__inner {
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: clamp(5rem, 9vw, 7.5rem) clamp(1.5rem, 4vw, 3rem) clamp(4rem, 7vw, 6rem);
-  }
-
-  /* Meta row */
-  .chub-hero__meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.75rem 1.25rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .chub-type-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.3rem 0.8rem;
-    background: var(--color-accent-500);
-    color: var(--color-base-950);
-    font-family: var(--font-sans);
-    font-size: 0.65rem;
-    font-weight: 800;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    border-radius: 2px;
-  }
-
-  .chub-hero__eyebrow {
-    font-family: var(--font-sans);
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--color-base-400);
-  }
-
-  .chub-hero__date {
-    margin-left: auto;
-    font-family: var(--font-sans);
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    color: var(--color-base-500);
-  }
-
-  /* Title */
-  .chub-hero__title {
-    position: relative;
-    display: block;
-    padding-left: 1.75rem;
-    font-family: var(--font-display);
-    font-size: var(--lozen-page-hero-title-size);
-    font-weight: 400;
-    letter-spacing: var(--lozen-page-hero-title-letter-spacing);
-    line-height: var(--lozen-page-hero-title-line-height);
-    text-transform: uppercase;
-    color: #ffffff;
-    max-width: 52rem;
-  }
-
-  .chub-hero__title-accent {
-    position: absolute;
-    left: 0;
-    top: 0.15em;
-    bottom: 0.1em;
-    width: 3px;
-    background: var(--color-accent-500);
-    border-radius: 1px;
-  }
-
-  /* Description */
-  .chub-hero__desc {
-    margin-top: 2rem;
-    max-width: 44rem;
-    padding-left: 1.75rem;
-    font-family: var(--font-sans);
-    font-size: var(--lozen-page-hero-deck-size);
-    font-weight: 400;
-    line-height: var(--lozen-page-hero-deck-line-height);
-    letter-spacing: var(--lozen-page-hero-deck-letter-spacing);
-    color: var(--color-base-300);
-  }
-
   /* ─── BODY ──────────────────────────────────────────────────── */
   .chub-body {
-    background: #ffffff;
+    background: var(--color-base-50);
     border-bottom: 1px solid var(--color-base-200);
   }
 
