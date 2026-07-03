@@ -1,259 +1,195 @@
 ---
 // Fundations
 import Text from "@/components/fundations/elements/Text.astro";
-import Button from "@/components/fundations/elements/Button.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import MailerLiteSignup from "@/components/forms/MailerLiteSignup.astro";
 
-const megaMenuSections = [
+const footerSections = [
   {
-    title: "Frameworks",
-    description: "Core Lozen Advisory architecture.",
+    title: "Company",
     links: [
-      {
-        href: "/disclosure-independent-governance/",
-        label: "Disclosure-Independent Governance",
-        description:
-          "Lozen Advisory’s category framework for risks legacy systems were not built to see.",
-      },
-      {
-        href: "/frameworks/power-user-trap/",
-        label: "Power User Trap℠",
-        description:
-          "A Lozen Advisory framework for hidden verification, correction, and system-repair burden.",
-      },
-      {
-        href: "/invisible-attrition/",
-        label: "Invisible Attrition℠",
-        description:
-          "Lozen Advisory’s framework for leadership capacity erosion before organizational detection.",
-      },
-      {
-        href: "/ai-workforce-materiality/",
-        label: "AI Workforce Materiality",
-        description:
-          "A series on AI adoption, hidden labor, Power User Trap℠ exposure, and human-capital materiality risk.",
-      },
+      { label: "What We Do", href: "/services/" },
+      { label: "About", href: "/about/" },
+      { label: "About AI Use", href: "/about-ai/" },
+      { label: "Contact", href: "/contact/" },
+      { label: "FAQ", href: "/faq/" },
     ],
   },
   {
     title: "Research",
-    description: "Focused research destinations.",
+    links: [
+      { label: "Blog", href: "/blog/" },
+      { label: "Resource Library", href: "/blog/archive/" },
+      { label: "News & Press", href: "/news-press/" },
+      { label: "Menopause and the Law", href: "/menopause-and-the-law/" },
+      { label: "Events", href: "/events/" },
+    ],
+  },
+  {
+    title: "Frameworks",
     links: [
       {
-        href: "/ai-legislation-tracker/",
+        label: "Disclosure-Independent Governance",
+        href: "/disclosure-independent-governance/",
+      },
+      { label: "Power User Trap℠", href: "/frameworks/power-user-trap/" },
+      { label: "Invisible Attrition℠", href: "/invisible-attrition/" },
+      {
+        label: "AI Workforce Materiality",
+        href: "/ai-workforce-materiality/",
+      },
+      { label: "Retention Risk Analysis", href: "/retention-risk-analysis/" },
+    ],
+  },
+  {
+    title: "Data Assets",
+    links: [
+      {
         label: "AI Legislation Tracker",
-        description:
-          "AI legislation intelligence for human accountability, board evidence, and enterprise exposure.",
+        href: "/ai-legislation-tracker/",
       },
       {
-        href: "/menopause-legislation-tracker/",
         label: "Menopause Legislation Tracker",
-        description: "A governance audit of disclosure-dependent policy design.",
+        href: "/menopause-legislation-tracker/",
       },
+      { label: "Tools & Downloads", href: "/tools-resources/" },
+      { label: "Retention Calculator", href: "/retention-calculator/" },
       {
-        href: "/menopause-and-the-law/",
-        label: "Menopause and the Law",
-        description:
-          "Legislative and workplace analysis on menopause policy, disclosure, and workforce risk.",
-      },
-      {
-        href: "https://www.executiveaiskills.com/",
         label: "AI Evaluation Training",
-        description: "Not how to use AI. How to keep AI-generated errors from leaving your office.",
+        href: "https://www.executiveaiskills.com/",
         external: true,
       },
     ],
   },
-  {
-    title: "Access",
-    description: "Secondary paths into the site.",
-    links: [
-      {
-        href: "/services/",
-        label: "Services",
-        description: "Advisory paths for governance readiness, market intelligence, and institutional risk.",
-      },
-      {
-        href: "/request-briefing/",
-        label: "Governance Readiness Briefing",
-        description:
-          "Request a focused briefing on human accountability, hidden workforce risk, and AI-assisted output.",
-      },
-      {
-        href: "/about-ai/",
-        label: "About AI Use",
-        description: "How Lozen Advisory uses AI as a company and preserves human accountability.",
-      },
-      {
-        href: "/events/",
-        label: "Events",
-        description: "Speaking engagements and public appearances.",
-      },
-      {
-        href: "/faq/",
-        label: "FAQ",
-        description: "Common questions about Lozen Advisory and advisory paths.",
-      },
-    ],
-  },
+];
+const utilityLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy/" },
+  { label: "Terms of Service", href: "/terms-of-service/" },
+  { label: "Request Briefing", href: "/request-briefing/" },
 ];
 ---
 
-<div id="megamenu" class="absolute inset-x-0 top-full z-40 hidden">
-  <Wrapper variant="standard" class="py-1">
-    <div
-      class="max-h-[calc(100vh-7.25rem)] overflow-y-auto rounded-2xl border border-base-200 bg-white shadow-2xl outline-4 outline-base-500/5 lg:rounded-3xl"
+<footer class="relative w-full overflow-hidden bg-base-950 lg:p-6">
+  <div class="absolute inset-0 overflow-hidden lg:m-4 lg:rounded-3xl">
+    <video
+      class="size-full object-cover object-center opacity-80"
+      autoplay
+      muted
+      loop
+      playsinline
     >
-      <div class="grid grid-cols-3 divide-x divide-base-200">
+      <source src="/videos/car3.mp4" type="video/mp4" />
+    </video>
+
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 bg-base-950/68"
+    >
+    </div>
+
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 bg-gradient-to-r from-base-950/86 via-base-950/52 to-base-950/76"
+    >
+    </div>
+  </div>
+
+  <Wrapper
+    variant="standard"
+    class="relative z-10 flex flex-col gap-8 py-10 sm:py-12 lg:min-h-[20rem] lg:py-12"
+  >
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-14">
+      <div class="max-w-xl">
+        <a
+          href="/"
+          aria-label="Go to Lozen Advisory home page"
+          class="font-display text-lg font-normal tracking-[-0.01em] text-white transition-colors hover:text-accent-300"
+        >
+          Lozen Advisory
+        </a>
+
+        <Text
+          tag="p"
+          variant="textSM"
+          class="mt-5 max-w-md font-sans leading-7 text-white/78"
+        >
+          Strategic counsel for the era of algorithmic accountability. Lozen Advisory examines disclosure-independent governance, human accountability, AI workforce risk, retention risk, menopause at work, and board evidence.
+        </Text>
+
+        <div class="mt-6 max-w-md">
+          <Text
+            tag="p"
+            variant="textSM"
+            class="mb-3 font-sans font-semibold uppercase tracking-[0.12em] text-white"
+          >
+            Join the email list
+          </Text>
+
+          <MailerLiteSignup
+            formId="footer-mailerlite-signup"
+            group="footer"
+            theme="dark"
+            compact
+            buttonLabel="Subscribe"
+            successMessage="Thank you. You are subscribed."
+          />
+        </div>
+      </div>
+
+      <nav
+        aria-label="Footer navigation"
+        class="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4 lg:gap-x-8"
+      >
         {
-          megaMenuSections.map((section) => (
+          footerSections.map((section) => (
             <div>
-              <div class="border-b border-[#dfe7ee] bg-[#06172f] px-5 py-3.5">
-                <Text
-                  tag="h3"
-                  variant="textSM"
-                  class="font-sans text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-white"
-                >
-                  {section.title}
-                </Text>
+              <Text
+                tag="h3"
+                variant="textSM"
+                class="font-sans font-semibold uppercase tracking-[0.14em] text-white"
+              >
+                {section.title}
+              </Text>
 
-                <Text
-                  tag="p"
-                  variant="textSM"
-                  class="mt-1.5 font-sans text-[0.82rem] leading-5 text-white/70"
-                >
-                  {section.description}
-                </Text>
-              </div>
-
-              <ul class="space-y-0.5 p-3">
-                {
-                  section.links.map((link) => (
-                    <li>
-                      <a
-                        href={link.href}
-                        target={link.external ? "_blank" : undefined}
-                        rel={link.external ? "noopener noreferrer" : undefined}
-                        class="group block rounded-xl px-3 py-2 no-underline transition-colors duration-200 hover:bg-base-50 focus-visible:bg-base-50"
-                      >
-                        <Text
-                          tag="h4"
-                          variant="textSM"
-                          class="font-sans text-[0.73rem] font-semibold uppercase tracking-[0.09em] text-base-950 transition-colors duration-200 group-hover:text-accent-700"
-                        >
-                          {link.label}
-                        </Text>
-
-                        <Text
-                          tag="p"
-                          variant="textSM"
-                          class="mt-1 font-sans text-[0.9rem] leading-5 text-base-600"
-                        >
-                          {link.description}
-                        </Text>
-                      </a>
-                    </li>
-                  ))
-                }
+              <ul class="mt-4 space-y-2.5">
+                {section.links.map((item) => (
+                  <li>
+                    <a
+                      href={item.href}
+                      target={item.external ? "_blank" : undefined}
+                      rel={item.external ? "noopener noreferrer" : undefined}
+                      class="inline-flex font-sans text-sm leading-5 text-white/72 transition-colors hover:text-accent-300"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           ))
         }
-      </div>
+      </nav>
+    </div>
 
-      <div class="border-t border-base-200 bg-base-50 px-5 py-3.5">
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <Text
-              tag="h3"
-              variant="textSM"
-              class="font-sans text-[0.82rem] font-semibold uppercase tracking-[0.14em] text-base-950"
-            >
-              Strategic counsel for the era of algorithmic accountability.
-            </Text>
+    <div class="border-t border-white/12 pt-5">
+      <div class="flex flex-col justify-between gap-4 md:flex-row md:items-center">
+        <Text tag="p" variant="textSM" class="font-sans text-white/68">
+          &copy; {new Date().getFullYear()} Lozen Advisory LLC. All rights reserved.
+        </Text>
 
-            <Text
-              tag="p"
-              variant="textSM"
-              class="mt-1 font-sans text-[0.9rem] leading-5 text-base-600"
-            >
-              Request a briefing on Disclosure-Independent Governance.
-            </Text>
-          </div>
-
-          <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button isLink size="xs" variant="accent" href="/request-briefing/">
-              Request Briefing
-            </Button>
-
-            <Button isLink size="xs" variant="muted" href="/tools-resources/">
-              Tools & Downloads
-            </Button>
-          </div>
+        <div class="flex flex-wrap gap-x-5 gap-y-2">
+          {
+            utilityLinks.map((link) => (
+              <a
+                href={link.href}
+                class="font-sans text-xs text-white/68 transition-colors hover:text-accent-300"
+              >
+                {link.label}
+              </a>
+            ))
+          }
         </div>
       </div>
     </div>
   </Wrapper>
-</div>
-
-<script is:inline>
-  const initMegaMenu = () => {
-    const megamenuTrigger = document.getElementById("megamenu-trigger");
-    const megamenu = document.getElementById("megamenu");
-
-    if (!megamenuTrigger || !megamenu) return;
-
-    let isMegaOpen = false;
-
-    function openMegaMenu() {
-      megamenu.classList.remove("hidden");
-      megamenuTrigger.setAttribute("aria-expanded", "true");
-      isMegaOpen = true;
-    }
-
-    function closeMegaMenu() {
-      megamenu.classList.add("hidden");
-      megamenuTrigger.setAttribute("aria-expanded", "false");
-      isMegaOpen = false;
-    }
-
-    megamenuTrigger.addEventListener("click", (event) => {
-      event.stopPropagation();
-
-      if (isMegaOpen) {
-        closeMegaMenu();
-      } else {
-        openMegaMenu();
-      }
-    });
-
-    document.addEventListener("click", (event) => {
-      const target = event.target;
-
-      if (
-        isMegaOpen &&
-        target instanceof Node &&
-        !megamenu.contains(target) &&
-        !megamenuTrigger.contains(target)
-      ) {
-        closeMegaMenu();
-      }
-    });
-
-    megamenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMegaMenu);
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && isMegaOpen) {
-        closeMegaMenu();
-      }
-    });
-  };
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initMegaMenu);
-  } else {
-    initMegaMenu();
-  }
-</script>
+</footer>
