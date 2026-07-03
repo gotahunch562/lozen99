@@ -363,16 +363,17 @@ const ogDescription = metaDescription ?? description;
   .chub-prose :global(.lozen-framework-card),
   .chub-prose :global(.lozen-asset-grid > article) {
     border: 1px solid var(--color-base-200);
+    border-left: 3px solid var(--color-accent-500);
     border-radius: 1.05rem;
-    background: var(--color-base-50);
+    background: #ffffff;
     padding: clamp(1.1rem, 2.2vw, 1.45rem);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 1px 3px 0 rgb(6 23 47 / 0.08), 0 4px 12px 0 rgb(6 23 47 / 0.06);
     transition: box-shadow 250ms ease, border-color 250ms ease;
   }
 
   .chub-prose :global(.lozen-framework-card:hover),
   .chub-prose :global(.lozen-asset-grid > article:hover) {
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 16px 0 rgb(6 23 47 / 0.14);
     border-color: var(--color-accent-400);
   }
 
