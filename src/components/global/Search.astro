@@ -15,7 +15,91 @@ const normalizeSlug = (value: string) =>
 
 const livePosts = posts.filter((post) => post.data.draft !== true);
 
+const staticPages = [
+  {
+    title: "Disclosure-Independent Governance",
+    description:
+      "Lozen Advisory’s category framework for risks legacy systems were not built to see, including non-disclosure, hidden labor, undocumented AI review, and untraceable accountability.",
+    meta: "Lozen Advisory Framework",
+    url: "/disclosure-independent-governance/",
+    type: "Framework",
+  },
+  {
+    title: "Power User Trap℠",
+    description:
+      "Lozen Advisory’s framework for identifying hidden verification, correction, complexity, and system-repair work relocated onto high-capacity employees.",
+    meta: "Lozen Advisory Framework",
+    url: "/frameworks/power-user-trap/",
+    type: "Framework",
+  },
+  {
+    title: "Invisible Attrition℠",
+    description:
+      "Lozen Advisory’s framework for leadership capacity erosion before organizational detection.",
+    meta: "Lozen Advisory Framework",
+    url: "/invisible-attrition/",
+    type: "Framework",
+  },
+  {
+    title: "AI Legislation Tracker",
+    description:
+      "AI legislation intelligence for human accountability, board evidence, enterprise exposure, and governance readiness.",
+    meta: "Data Asset",
+    url: "/ai-legislation-tracker/",
+    type: "Data Asset",
+  },
+  {
+    title: "Menopause Legislation Tracker",
+    description:
+      "A governance audit of disclosure-dependent menopause policy design and workforce-risk visibility.",
+    meta: "Data Asset",
+    url: "/menopause-legislation-tracker/",
+    type: "Data Asset",
+  },
+  {
+    title: "AI Workforce Materiality",
+    description:
+      "Lozen Advisory analysis on AI adoption, hidden labor, Power User Trap℠ exposure, and human-capital materiality risk.",
+    meta: "Research Hub",
+    url: "/ai-workforce-materiality/",
+    type: "Research",
+  },
+  {
+    title: "Menopause and the Law",
+    description:
+      "Legislative and workplace analysis on menopause policy, disclosure-dependent design, and workforce risk.",
+    meta: "Research Hub",
+    url: "/menopause-and-the-law/",
+    type: "Research",
+  },
+  {
+    title: "Governance Readiness Briefing",
+    description:
+      "Request a focused briefing on human accountability, hidden workforce risk, and AI-assisted corporate output.",
+    meta: "Advisory Service",
+    url: "/request-briefing/",
+    type: "Service",
+  },
+  {
+    title: "Services",
+    description:
+      "Advisory paths for governance readiness, market intelligence, and institutional risk.",
+    meta: "Advisory Services",
+    url: "/services/",
+    type: "Service",
+  },
+  {
+    title: "About AI Use",
+    description:
+      "How Lozen Advisory uses AI as a company while preserving human accountability, source review, and final advisory responsibility.",
+    meta: "Company Transparency",
+    url: "/about-ai/",
+    type: "Page",
+  },
+];
+
 const searchItems = [
+  ...staticPages,
   ...livePosts.map((post) => ({
     title: post.data.title,
     description: post.data.description || "",
@@ -26,7 +110,7 @@ const searchItems = [
           day: "numeric",
         })
       : "",
-    url: `/blog/${normalizeSlug(post.data.slug || post.slug || post.id)}`,
+    url: `/blog/${normalizeSlug(post.data.slug || post.slug || post.id)}/`,
     type: "Article",
   })),
 ];
@@ -72,7 +156,7 @@ const searchItems = [
         <input
           type="text"
           id="searchInput"
-          placeholder="Search everything..."
+          placeholder="Search Lozen frameworks, data assets, and analysis..."
           class="w-full rounded-lg border border-base-200 bg-base-50 px-4 py-3 text-base-900 placeholder:text-base-400 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 transition-all duration-200"
         />
       </div>
