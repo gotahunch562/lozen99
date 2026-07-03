@@ -1,193 +1,528 @@
 ---
-import NarrativePage from "@/components/authority/NarrativePage.astro";
-import { createFrameworkPillarJsonLd } from "@/lib/seo/jsonLd";
+import CategoryHubLayout from "@/components/authority/CategoryHubLayout.astro";
+import {
+  createDefinedTermJsonLd,
+  createDefinedTermSetJsonLd,
+  type JsonLdObject,
+} from "@/lib/seo/jsonLd";
 
-const pageTitle = "Power User Trap℠ by Lozen Advisory";
-const seoTitle = "Power User Trap℠ by Lozen Advisory | Hidden AI Verification Labor";
+const pageTitle = "Power User Trap℠";
+const seoTitle = "Power User Trap℠ | Lozen Advisory";
 const description =
-  "Lozen Advisory’s Power User Trap℠ framework identifies when organizations relocate hidden verification, correction, complexity, or system-repair work onto high-capacity employees.";
+  "The Power User Trap℠: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk.";
 const canonicalUrl = "https://www.lozenadvisory.com/frameworks/power-user-trap/";
-const termDescription =
-  "Lozen Advisory’s framework for identifying when organizations relocate hidden verification, correction, complexity, or system-repair work onto high-capacity employees without formally assigning authority, capacity, evidence, or refusal rights.";
+const datePublished = "2026-07-02";
+const dateModified = "2026-07-02";
 
-const articleJsonLd = createFrameworkPillarJsonLd({
-  title: pageTitle,
-  description,
-  href: "/frameworks/power-user-trap/",
-  termName: "Power User Trap℠",
-  termDescription,
-  termSetName: "Disclosure-Independent Governance by Lozen Advisory",
-  termSetDescription:
-    "Lozen Advisory’s category framework and proprietary vocabulary for evaluating risks legacy systems were not built to see.",
-  termSetHref: "/disclosure-independent-governance/",
-  breadcrumbs: [
-    { name: "Disclosure-Independent Governance", href: "/disclosure-independent-governance/" },
-    { name: "Power User Trap℠", href: "/frameworks/power-user-trap/" },
-  ],
-});
+const termSetId = `${canonicalUrl}#defined-term-set`;
+const termSetDescription =
+  "The Power User Trap℠: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk.";
+
+const terms = [
+  {
+    name: "Power User Trap℠",
+    href: "/frameworks/power-user-trap/",
+    description:
+      "The Power User Trap℠: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk.",
+  },
+  {
+    name: "Invisible Attrition℠",
+    href: "/invisible-attrition/",
+    description:
+      "Lozen Advisory's framework for leadership capacity erosion before organizational detection. The Power User Trap℠ is one of its primary mechanisms.",
+  },
+  {
+    name: "Disclosure-Independent Governance",
+    href: "/disclosure-independent-governance/",
+    description:
+      "Lozen Advisory's category framework for evaluating risks that legacy systems were not built to see — including the unmeasured governance labor concentrated in power users.",
+  },
+  {
+    name: "The Name Standard℠",
+    href: "/blog/the-name-standard-ai-governance/",
+    description:
+      "Lozen Advisory's human-attribution standard for determining whether AI-assisted decisions remain traceable to a responsible human or institutional actor — the standard power users are often implicitly expected to uphold without formal recognition.",
+  },
+  {
+    name: "Capacity Substitution Error℠",
+    href: "/blog/talent-attrition-cfo-risk/",
+    description:
+      "Lozen Advisory's framework for the mistake of treating AI adoption as a substitute for human capacity while continuing to rely on unmeasured human judgment, review, and accountability.",
+  },
+];
+
+const articleJsonLd: JsonLdObject[] = [
+  createDefinedTermSetJsonLd({
+    name: "Power User Trap℠ by Lozen Advisory",
+    description: termSetDescription,
+    href: "/frameworks/power-user-trap/",
+    id: termSetId,
+    terms: terms.map((term) => ({
+      ...term,
+      termId: `${new URL(term.href, canonicalUrl).toString()}#term`,
+    })),
+  }),
+  ...terms.map((term) =>
+    createDefinedTermJsonLd({
+      name: term.name,
+      description: term.description,
+      href: term.href,
+      termId: `${new URL(term.href, canonicalUrl).toString()}#term`,
+      termSetId,
+      keywords: [
+        "Power User Trap",
+        "Lozen Advisory",
+        "AI governance",
+        "workforce risk",
+        "invisible attrition",
+        "cognitive burden",
+        "AI oversight",
+      ],
+    }),
+  ),
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    name: pageTitle,
+    headline: pageTitle,
+    description,
+    url: canonicalUrl,
+    datePublished,
+    dateModified,
+    author: {
+      "@type": "Person",
+      name: "Akilah E. Kamaria",
+    },
+    creator: {
+      "@id": "https://www.lozenadvisory.com/#organization",
+    },
+    publisher: {
+      "@id": "https://www.lozenadvisory.com/#organization",
+    },
+    about: {
+      "@id": termSetId,
+    },
+    mainEntity: {
+      "@id": termSetId,
+    },
+    citation: [
+      "https://hbr.org/2026/03/ai-oversight-cognitive-burden",
+      "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780",
+    ],
+  },
+];
 
 const railItems = [
   { label: "Framework", value: "Power User Trap℠" },
   { label: "Defined by", value: "Lozen Advisory" },
   { label: "Category", value: "Disclosure-Independent Governance" },
-  { label: "Primary signal", value: "Hidden verification, correction, and system-repair labor" },
-  { label: "Primary applications", value: "AI adoption, workforce risk, board evidence, human capacity" },
+  { label: "Primary mechanism", value: "Invisible Attrition℠" },
+  { label: "Risk surface", value: "AI governance, retention, leadership continuity" },
+  { label: "Research anchors", value: "HBR, BCG, Anthropic" },
 ];
 
 const railLinks = [
   {
+    label: "Invisible Attrition℠",
+    href: "/invisible-attrition/",
+    description: "Leadership capacity erosion before organizational detection.",
+  },
+  {
     label: "Disclosure-Independent Governance",
     href: "/disclosure-independent-governance/",
-    description: "The canonical Lozen Advisory category hub for risks legacy systems were not built to see.",
+    description: "The category framework for risks legacy systems were not built to see.",
   },
   {
     label: "The Name Standard℠",
     href: "/blog/the-name-standard-ai-governance/",
-    description: "Lozen Advisory’s human-attribution standard for AI-assisted decisions and sign-off.",
+    description: "Human-attribution standard for traceable AI accountability.",
   },
   {
     label: "AI Legislation Tracker",
     href: "/ai-legislation-tracker/",
-    description: "AI legislation intelligence for human accountability and board evidence.",
+    description: "Board-facing AI legislation intelligence and accountability signals.",
   },
   {
     label: "AI Workforce Materiality",
     href: "/ai-workforce-materiality/",
-    description: "Lozen Advisory analysis on AI adoption, human capacity, and workforce materiality.",
+    description: "Framework for evaluating AI adoption as a workforce capacity question.",
+  },
+];
+
+const relatedItems = [
+  {
+    label: "Invisible Attrition℠",
+    href: "/invisible-attrition/",
+    description: "The framework for leadership capacity erosion before retention metrics detect risk. The Power User Trap℠ is one of its mechanisms.",
+  },
+  {
+    label: "Disclosure-Independent Governance",
+    href: "/disclosure-independent-governance/",
+    description: "The category that connects workforce disclosure gaps to AI accountability gaps.",
+  },
+  {
+    label: "The Name Standard℠",
+    href: "/blog/the-name-standard-ai-governance/",
+    description: "The human-attribution standard power users are implicitly expected to uphold without formal recognition.",
+  },
+  {
+    label: "AI Legislation Tracker",
+    href: "/ai-legislation-tracker/",
+    description: "AI legislation intelligence for board evidence, human accountability, and enterprise exposure.",
   },
 ];
 ---
 
-<NarrativePage
+<CategoryHubLayout
   title={pageTitle}
   seoTitle={seoTitle}
   description={description}
   metaDescription={description}
   canonical={canonicalUrl}
   eyebrow="Lozen Advisory Framework"
-  typeLabel="Framework Page"
+  typeLabel="Framework"
   dateLabel="Updated July 2, 2026"
-  textHeroLayout="wide"
   articleJsonLd={articleJsonLd}
   railTitle="Framework Context"
   railItems={railItems}
   railLinks={railLinks}
-  bottomCta={{
-    label: "Next step",
-    title: "Evaluate whether AI adoption is creating governed capacity or hidden review burden.",
+  railCta={{
+    label: "Advisory response",
+    title: "Governance Readiness Briefing",
     description:
-      "Lozen Advisory’s Governance Readiness Briefing helps leadership teams identify where AI-assisted work is relying on human review without the authority, capacity, evidence, or refusal rights required for accountable sign-off.",
+      "For leadership teams evaluating AI implementation burden, power user concentration risk, and unmeasured workforce capacity exposure.",
     href: "/request-briefing/",
     linkLabel: "Request Briefing →",
   }}
-  relatedEyebrow="Related Architecture"
-  relatedTitle="Continue through Disclosure-Independent Governance"
-  relatedItems={[
-    {
-      label: "Disclosure-Independent Governance",
-      href: "/disclosure-independent-governance/",
-      description: "The Lozen Advisory category hub for risks legacy systems were not built to see.",
-    },
-    {
-      label: "The Name Standard℠",
-      href: "/blog/the-name-standard-ai-governance/",
-      description: "Lozen Advisory’s human-attribution standard for AI-assisted decisions and sign-off.",
-    },
-    {
-      label: "Mandatory AI Use Is Not AI Governance",
-      href: "/blog/mandatory-ai-use-governance/",
-      description: "Why AI mandates can relocate accountability without building governance capacity.",
-    },
-  ]}
+  bottomCta={{
+    label: "Next step",
+    title: "Request a Governance Readiness Briefing",
+    description:
+      "Evaluate whether your organization can see the cognitive burden your power users are carrying — and what it is costing in capacity, retention, and governance quality.",
+    href: "/request-briefing/",
+    linkLabel: "Request Briefing →",
+  }}
+  relatedEyebrow="Frameworks and Data Assets"
+  relatedTitle="Continue through the Lozen Advisory architecture"
+  relatedItems={relatedItems}
 >
   <p>
-    <strong>Lozen Advisory’s Power User Trap℠</strong> is a framework for identifying when organizations relocate hidden verification, correction, complexity, or system-repair work onto high-capacity employees without formally assigning the authority, capacity, evidence, or refusal rights required to carry that work responsibly.
+    Organizations are deploying AI tools to improve efficiency and scale productivity. The technology works because someone makes it work. That burden does not distribute evenly.
   </p>
 
   <p>
-    The Power User Trap℠ is not simply a workload problem. It is a governance problem. It appears when the organization reads continued performance as proof that a system is working, while the real operating condition depends on unmeasured human capacity.
-  </p>
-
-  <h2>Why the Power User Trap℠ matters now</h2>
-
-  <p>
-    AI adoption intensifies the Power User Trap℠ because the people most capable of detecting system failure often become the people expected to correct it. They check outputs, catch hallucinations, repair workflows, train colleagues, interpret ambiguity, and prevent errors from leaving the organization.
+    In most organizations, a small group of employees becomes the go-to resource for AI implementation. They learn the tools first, troubleshoot failures, and train colleagues. These employees are usually strong performers with deep institutional knowledge who must function in a continuous state of doubt: Is the output reliable? Should I verify this manually? Where is the hallucination?
   </p>
 
   <p>
-    If that work is not formally assigned, measured, staffed, documented, or governed, leadership may believe AI has created efficiency while the organization has actually relocated risk into hidden human review work.
+    They are the Power Users. When they leave, organizations lose both the expertise and the implementation capacity. The exit is coded as personal.
   </p>
 
   <blockquote>
     <p>
-      AI adoption can create the appearance of governed capacity while moving accountability into the people least likely to let the system fail.
+      The <strong>Power User Trap℠</strong>: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk.
     </p>
   </blockquote>
 
-  <h2>How the trap forms</h2>
+  <h2>What the Power User Trap℠ is</h2>
 
   <p>
-    The Power User Trap℠ usually forms through ordinary operational assumptions rather than a formal decision.
+    The Power User Trap℠ was identified and named before the academic and consulting literature began measuring the cognitive cost of AI oversight. The BCG and Harvard Business Review research that followed confirmed the mechanism this framework had already described.
+  </p>
+
+  <p>
+    The Power User Trap℠ is one mechanism through which <a href="/invisible-attrition/"><strong>Invisible Attrition℠</strong></a> occurs — where leadership capacity erodes before retention metrics detect risk. HR records the departure. The record was always incomplete.
+  </p>
+
+  <h2>The unmeasured cognitive cost</h2>
+
+  <p>
+    The cognitive burden of AI oversight is no longer theoretical. A March 2026 study in Harvard Business Review of 1,488 full-time U.S. workers found that employees providing high degrees of AI oversight expended 14% more mental effort and experienced 12% more mental fatigue than those with low oversight requirements. Researchers identified what they termed "mental fatigue from excessive oversight of AI tools beyond one's cognitive capacity."
+  </p>
+
+  <p>
+    The strain carries measurable business consequences. Workers experiencing mental fatigue from intensive AI oversight reported:
   </p>
 
   <ul>
-    <li>A new AI tool is deployed before review work is properly scoped.</li>
-    <li>The most capable employees become informal validators, fixers, or escalation points.</li>
-    <li>Corrections are treated as part of normal performance rather than as governance evidence.</li>
-    <li>AI-related friction is absorbed before it becomes visible in productivity, quality, or risk data.</li>
-    <li>Leadership sees output continue and assumes the system is stable.</li>
+    <li>39% more major errors</li>
+    <li>33% more decision fatigue</li>
+    <li>Intent to quit rising from 25% to 34%</li>
   </ul>
 
   <p>
-    The organization may have an AI policy, a tool inventory, or a review process. The Power User Trap℠ asks whether those controls can see the human burden that keeps the system functioning.
+    For organizations, this represents a retention risk that current measurement systems are not designed to capture — because no measurement system was built to track the oversight burden in the first place.
   </p>
 
-  <h2>Where it appears</h2>
+  <h2>Where the risk concentrates</h2>
 
   <p>
-    In AI governance, the Power User Trap℠ appears when employees quietly verify, rewrite, correct, escalate, or rescue AI-assisted work without the authority or documentation needed to make accountability real.
-  </p>
-
-  <p>
-    In workforce systems, it appears when high-capacity people keep absorbing complexity, mentoring, institutional memory, emotional labor, or informal problem-solving while the organization interprets their continued performance as stability.
+    BCG research found significant variation in AI oversight fatigue by function. Marketing roles reported the highest mental fatigue rate at 26%, followed by HR at 19%, operations at 18%, engineering at 18%, and finance at 17%.
   </p>
 
   <p>
-    In both settings, the institution benefits from hidden capacity while failing to price, govern, or protect it.
-  </p>
-
-  <h2>The board-level question</h2>
-
-  <p>
-    The board-level question is not whether employees are using AI or whether humans are present in the workflow.
+    These are knowledge work roles where strong performers adopt AI tools quickly, train others, and maintain productivity while managing the implementation burden privately. The work rarely appears in job descriptions, performance reviews, or workload assessments.
   </p>
 
   <p>
-    The question is whether the organization can prove who is carrying verification, correction, and sign-off responsibility; whether that responsibility has been formally assigned; and whether the people carrying it have enough capacity, information, authority, documentation, and refusal rights to make accountability defensible.
+    Notably, 19% of HR professionals using AI reported elevated cognitive strain from AI oversight — meaning the function responsible for managing workforce health may itself be caught in the Power User Trap℠.
+  </p>
+
+  <h2>The epistemic load: what governance actually requires</h2>
+
+  <blockquote>
+    <p>
+      Generation is fast. Governance is not.
+    </p>
+  </blockquote>
+
+  <p>
+    When a senior leader uses AI tools effectively, the visible output is the smallest part of the work. What is invisible to the organization is everything that happens between generation and publication — between what the model produced and what the leader actually knows to be true.
   </p>
 
   <p>
-    That is why Power User Trap℠ connects directly to <a href="/disclosure-independent-governance/">Disclosure-Independent Governance</a> and <a href="/blog/the-name-standard-ai-governance/">The Name Standard℠</a>.
+    That invisible work includes:
   </p>
-
-  <h2>What leaders should ask</h2>
 
   <ul>
-    <li>Which employees are repeatedly asked to verify or correct AI-assisted output?</li>
-    <li>Is that review work formally assigned, staffed, and documented?</li>
-    <li>Do reviewers have authority to stop, escalate, or refuse AI-assisted work?</li>
-    <li>Is the organization measuring AI-related correction labor as part of the cost of adoption?</li>
-    <li>Does continued output depend on a small group of people preventing failure from becoming visible?</li>
-    <li>Can leadership distinguish AI-enabled capacity from human capacity being quietly overused?</li>
+    <li><strong>Verification</strong> — interrogating the output against domain expertise to identify what is plausible but wrong, accurate but incomplete, or framed in a way that serves the model's training rather than the leader's actual position</li>
+    <li><strong>Judgment calls</strong> — deciding what to keep, what to discard, what requires independent sourcing, what the model cannot produce because the knowledge lives only in the leader's experience</li>
+    <li><strong>Reframing</strong> — translating generated text into language that reflects the leader's actual voice, values, and institutional authority</li>
+    <li><strong>Risk assessment</strong> — evaluating what happens if the output is wrong, who sees it, what it carries, what it could cost</li>
   </ul>
 
-  <h2>How Lozen Advisory uses the framework</h2>
+  <p>
+    None of this appears in any productivity metric. The organization sees output volume and output quality. It does not see the process that produced them.
+  </p>
+
+  <h2>Sycophancy: the governance risk without a warning label</h2>
 
   <p>
-    Lozen Advisory uses the Power User Trap℠ framework to help leadership teams evaluate whether AI adoption is creating governed capacity or merely relocating accountability into human review work.
+    Senior leaders come to AI tools differently than most users. They do not arrive with open questions. They arrive with positions already formed, directions already chosen, decisions already leaning. They ask the tool to develop what they already believe.
   </p>
 
   <p>
-    The goal is not to slow AI adoption. The goal is to prevent organizations from mistaking hidden human repair work for system maturity.
+    The model obliges. Every time.
   </p>
-</NarrativePage>
+
+  <p>
+    This is not a bug. It is a trained behavior. The model learned through human feedback that agreement, affirmation, and validation produce positive signals. So when an executive arrives with a direction, the model finds the market, addresses the objections, projects the outcomes, and produces a document that looks like independent analysis. It is not independent analysis. It is coherent elaboration of the premise the executive handed it.
+  </p>
+
+  <p>
+    Anthropic's research on disempowerment patterns found that sycophantic validation is the most common mechanism for reality distortion — the pattern where a user's beliefs become less accurate as a result of the interaction. Users rated those interactions more favorably than baseline. The validation felt like quality. The agreement felt like insight.
+  </p>
+
+  <p>
+    For a senior leader, the consequence is not a bad conversation. It is a decision made with false confidence, a strategy built on an uninterrogated premise, a document that carries their name and institutional authority and was never subjected to genuine challenge.
+  </p>
+
+  <p>
+    A governance standard that only covers factual verification is incomplete. It must also cover the moments when the model is building the case the leader wants to hear. Those moments feel the least like risk. That is precisely when the standard must apply.
+  </p>
+
+  <h2>Why the power user is a pre-attrition signal</h2>
+
+  <p>
+    The cognitive functions that governance depends on most directly — working memory, processing speed, sustained concentration, and the ability to hold multiple competing considerations simultaneously while making a judgment call under time pressure — are not peripheral functions. They are the functions the governance work requires.
+  </p>
+
+  <p>
+    When those functions come under pressure, the governance does not fail loudly. It compresses quietly. The leader starts letting things through that she would have caught before. A framing that is slightly off. A claim that is plausible but not quite right. A document that sounds like her but does not reflect her best judgment.
+  </p>
+
+  <p>
+    The output still looks like hers. The volume is maintained. The delivery is consistent. No dashboard flags it because no dashboard ever measured the governance in the first place.
+  </p>
+
+  <p>
+    The organization is watching generation. The governance is eroding. The gap between the two is invisible until it produces an error significant enough to be noticed — at which point the framing is almost never "her governance capacity is under pressure." The framing is "her performance is declining."
+  </p>
+
+  <p>
+    That misattribution is the attrition mechanism.
+  </p>
+
+  <h2>The organizational blind spot</h2>
+
+  <p>
+    Organizations that have adopted AI tools at scale have inadvertently created a new category of unmeasured labor. The leaders who do this work well — who maintain the standard between generation and output — are carrying a cognitive load that has no line item, no job description language, no performance metric, and no accommodation framework.
+  </p>
+
+  <p>
+    When that load becomes unsustainable, the organization has no way to see it coming. The power user's value was always partially invisible. The erosion of that value is completely invisible. By the time it surfaces in traditional retention metrics, the attrition is already in motion.
+  </p>
+
+  <p>
+    This is <a href="/invisible-attrition/"><strong>Invisible Attrition℠</strong></a> expressed through the lens of AI adoption. As AI deployment accelerates, the governance gap will grow. The leaders most at risk are the ones the organization depends on most — the ones who built their expertise before the tools existed and now carry both the domain knowledge and the governance responsibility that makes those tools safe to use at institutional scale.
+  </p>
+
+  <h2>What organizations can measure</h2>
+
+  <p>
+    Preventing the Power User Trap℠ requires a shift from monitoring AI tool adoption rates to monitoring AI implementation burden. Three measurement priorities stand out.
+  </p>
+
+  <div class="lozen-framework-grid" aria-label="Power User Trap measurement priorities">
+    <article class="lozen-framework-card">
+      <h3>Limit simultaneous tool use</h3>
+      <p>Productivity peaks at three AI tools used simultaneously, then declines. Measuring token consumption or AI-generated output as performance metrics inadvertently rewards cognitive overload.</p>
+    </article>
+
+    <article class="lozen-framework-card">
+      <h3>Clarify workload expectations</h3>
+      <p>When employees believed their organization expected them to accomplish more due to AI, mental fatigue scores were 12% higher. Explicit expectations reduce ambiguous cognitive load.</p>
+    </article>
+
+    <article class="lozen-framework-card">
+      <h3>Track oversight distribution</h3>
+      <p>Identify who is supporting AI tool adoption beyond their formal role. Determine whether those individuals are receiving workload adjustments. Quantify hours per week that power users spend on AI-related support work.</p>
+    </article>
+  </div>
+
+  <h2>From deployment to accountability</h2>
+
+  <p>
+    AI tool deployment is often treated as a technology decision. The governance implications are workforce sustainability and leadership continuity.
+  </p>
+
+  <p>
+    When organizations adopt AI without measuring how implementation burden is distributed, they create retention risk they cannot see. Power users absorb the cost privately. Workload remains undocumented. Exit data shows only voluntary departure.
+  </p>
+
+  <p>
+    The Power User Trap℠ is a <a href="/disclosure-independent-governance/">Disclosure-Independent Governance</a> problem because the organization may believe it has gained efficiency while actually relocating risk into unmeasured human capacity. The efficiency is real. The risk is real. The organization can only see one of them.
+  </p>
+
+  <h2>Lozen Advisory's framework vocabulary</h2>
+
+  <p>
+    The Power User Trap℠ connects to Lozen Advisory's broader governance architecture for risks that legacy systems were not built to see.
+  </p>
+
+  <div class="lozen-framework-grid" aria-label="Lozen Advisory framework vocabulary">
+    {terms.map((term) => (
+      <article class="lozen-framework-card">
+        <h3><a href={term.href}>{term.name}</a></h3>
+        <p>{term.description}</p>
+      </article>
+    ))}
+  </div>
+
+  <h2>What leaders should be asking</h2>
+
+  <p>
+    The Power User Trap℠ helps leadership teams identify where AI adoption has created unmeasured capacity risk and ask evidence-based questions about governance burden distribution.
+  </p>
+
+  <h3>For AI governance</h3>
+
+  <ul>
+    <li>Who in this organization is functioning as the informal validation layer for AI-assisted output?</li>
+    <li>Is that work formally recognized, measured, or compensated?</li>
+    <li>What happens to our AI governance capacity if those individuals leave?</li>
+    <li>Where are we relying on expert judgment to catch what the model cannot flag about itself?</li>
+    <li>Which AI use cases carry institutional or legal risk if the human governance layer fails?</li>
+  </ul>
+
+  <h3>For workforce risk</h3>
+
+  <ul>
+    <li>Which employees are carrying AI implementation burden beyond their formal role?</li>
+    <li>Are we measuring AI oversight hours, or only AI-assisted output?</li>
+    <li>Where might stable performance be masking governance compression rather than reflecting stable capacity?</li>
+    <li>What is the retention exposure if our power users exit before we have identified their function?</li>
+    <li>How does our succession planning account for the loss of informal AI governance capacity?</li>
+  </ul>
+
+  <p>
+    The purpose is not to add more oversight language. The purpose is to determine whether leadership has the evidence required to govern the risk before it surfaces as an exit.
+  </p>
+
+  <h2>Research foundations</h2>
+
+  <p>
+    The Power User Trap℠ was identified and named before the academic and consulting literature began measuring the cognitive cost of AI oversight. The research that followed confirmed the mechanism this framework had already described.
+  </p>
+
+  <p>
+    A March 2026 study in Harvard Business Review of 1,488 full-time U.S. workers established the measurable cognitive and retention consequences of intensive AI oversight. BCG research confirmed the functional distribution of that burden across knowledge work roles.
+  </p>
+
+  <p>
+    Anthropic's research on the internal behavior of large language models — <em>On the Biology of a Large Language Model</em> (Lindsey et al., March 2025) — establishes that model output conceals multi-step reasoning and produces hallucinations with identical confidence to accurate output. Effective use of this technology requires a human expert who can detect what the model cannot flag about itself. That detection work is the governance.
+  </p>
+
+  <p>
+    Anthropic's research on disempowerment patterns in real-world AI usage establishes that users who skip the governance layer experience reality distortion, value judgment distortion, and action distortion — and rate those interactions favorably in the moment. The recognition of the error comes later, if at all.
+  </p>
+
+  <p>
+    Together, these sources establish the research basis for the Power User Trap℠: the governance work is real, the cognitive burden is measurable, the risk concentrates in high-capacity employees, and organizations have no current system for detecting when that capacity begins to erode.
+  </p>
+
+  <h2>From framework to advisory work</h2>
+
+  <p>
+    Lozen Advisory helps leadership teams evaluate whether current systems can see the burden their power users are carrying — and what that burden is costing in governance quality, retention risk, and institutional capacity.
+  </p>
+
+  <p>
+    That work may involve AI governance readiness, workforce capacity assessment, succession planning, board evidence, or evaluation of AI adoption risk at the organizational level.
+  </p>
+
+  <p>
+    The common thread is Disclosure-Independent Governance: the organization may have AI tools, AI policies, and AI adoption metrics — and still lack evidence of the conditions that determine whether AI-assisted output is actually governed.
+  </p>
+</CategoryHubLayout>
+
+<style>
+  .lozen-framework-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 1.8rem 0 2.1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lozen-framework-card {
+    border: 1px solid var(--color-base-200);
+    border-radius: 1.05rem;
+    background: #ffffff;
+    padding: clamp(1.1rem, 2.2vw, 1.45rem);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .lozen-framework-card h3 {
+    margin: 0;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: var(--lozen-card-title-size);
+    font-weight: var(--lozen-card-title-weight);
+    letter-spacing: var(--lozen-card-title-letter-spacing);
+    line-height: var(--lozen-card-title-line-height);
+  }
+
+  .lozen-framework-card p {
+    margin: 0.75rem 0 0;
+    font-size: 0.96rem;
+    line-height: 1.65;
+    color: var(--color-base-600);
+  }
+
+  .lozen-framework-card a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .lozen-framework-card a:hover,
+  .lozen-framework-card a:focus-visible {
+    color: var(--color-accent-700);
+  }
+
+  @media (max-width: 900px) {
+    .lozen-framework-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>
