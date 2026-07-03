@@ -506,12 +506,17 @@ const relatedItems = [
     Lozen Advisory’s governance vocabulary names the mechanisms, failure points, and accountability gaps that existing risk frameworks do not yet classify. These are not content categories. They are infrastructure terms.
   </p>
 
-  <div class="lozen-framework-grid" aria-label="Lozen Advisory category vocabulary">
-    {terms.map((term) => (
-      <article class="lozen-framework-card">
-        <h3><a href={term.href}>{term.name}</a></h3>
-        <p>{term.description}</p>
-      </article>
+  <div class="lozen-accordion" aria-label="Lozen Advisory governance vocabulary">
+    {terms.map((term, index) => (
+      <details class="lozen-accordion__item" open={index === 0}>
+        <summary class="lozen-accordion__header">
+          <span class="lozen-accordion__name">{term.name}</span>
+          <span class="lozen-accordion__chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="lozen-accordion__body">
+          <p class="lozen-accordion__desc">{term.description}</p>
+        </div>
+      </details>
     ))}
   </div>
 
