@@ -30,17 +30,28 @@ const AI_WORKFORCE_BASELINE_LASTMOD = "2026-05-31";
 
 const EXPLICIT_PAGE_DATES = new Map([
   ["/ai-workforce-materiality-briefing/", "2026-05-31"],
-  ["/disclosure-independence-infrastructure/", "2026-05-30"],
+  ["/disclosure-independent-governance/", "2026-07-02"],
+  ["/frameworks/power-user-trap/", "2026-07-02"],
   ["/news-press/menopause-market-correction/", "2026-05-19"],
   ["/voluntary-benefit-disclosure-gap/", "2026-04-27"],
   ["/", "2026-06-27"],
-  ["/sovereign-capacity-model/", "2026-06-11"],
   ["/menopause-and-the-law/", "2026-06-06"],
 ]);
 
 const EXCLUDED_EXACT_PATHS = new Set([
   "/blog/archive/",
+  "/4s-sovereign-capacity-model/",
+  "/sovereign-capacity-model/",
+  "/why-lozen-advisory/",
+  "/disclosure-independence-infrastructure/",
   "/disclosure-independence-work-infrastructure/",
+  "/invisible-attrition/power-user-trap/",
+  "/normal-blood-tests-feel-off/",
+  "/menopause-support-women-lawyers/",
+  "/billable-hour-visibility-tax/",
+  "/leadership-pipeline-manager-drain/",
+  "/succession-planning-retention-risk-data-gap/",
+  "/voluntary-benefit-disclosure-gap/",
 ]);
 
 const EXCLUDED_PATH_PATTERNS = [

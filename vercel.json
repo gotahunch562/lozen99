@@ -4,7 +4,62 @@
   "redirects": [
     {
       "source": "/4s-sovereign-capacity-model/",
-      "destination": "/sovereign-capacity-model/",
+      "destination": "/disclosure-independent-governance/",
+      "permanent": true
+    },
+    {
+      "source": "/sovereign-capacity-model/",
+      "destination": "/disclosure-independent-governance/",
+      "permanent": true
+    },
+    {
+      "source": "/why-lozen-advisory/",
+      "destination": "/disclosure-independent-governance/",
+      "permanent": true
+    },
+    {
+      "source": "/disclosure-independence-infrastructure/",
+      "destination": "/disclosure-independent-governance/",
+      "permanent": true
+    },
+    {
+      "source": "/disclosure-independence-work-infrastructure/",
+      "destination": "/disclosure-independent-governance/",
+      "permanent": true
+    },
+    {
+      "source": "/invisible-attrition/power-user-trap/",
+      "destination": "/frameworks/power-user-trap/",
+      "permanent": true
+    },
+    {
+      "source": "/normal-blood-tests-feel-off/",
+      "destination": "/menopause-and-the-law/",
+      "permanent": true
+    },
+    {
+      "source": "/menopause-support-women-lawyers/",
+      "destination": "/blog/aba-study-women-lawyers-mental-health/",
+      "permanent": true
+    },
+    {
+      "source": "/billable-hour-visibility-tax/",
+      "destination": "/blog/aba-study-women-lawyers-mental-health/",
+      "permanent": true
+    },
+    {
+      "source": "/leadership-pipeline-manager-drain/",
+      "destination": "/retention-risk-analysis/",
+      "permanent": true
+    },
+    {
+      "source": "/succession-planning-retention-risk-data-gap/",
+      "destination": "/retention-risk-analysis/",
+      "permanent": true
+    },
+    {
+      "source": "/voluntary-benefit-disclosure-gap/",
+      "destination": "/menopause-and-the-law/",
       "permanent": true
     }
   ]
