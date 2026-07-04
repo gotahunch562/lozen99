@@ -33,9 +33,9 @@ isFeatured: false
 ---
 ## AI Accountability: Beyond Human-in-the-Loop
 
-This article uses the SEC's January 2025 enforcement action against Presto Automation as a case study in AI accountability failure, and maps each violation to Lozen Advisory's Name Standard℠ diagnostic framework. The Presto action is not only an AI-washing case. It is a disclosure-control case about ownership, human intervention, and whether a company can describe an AI product as autonomous, specifically, as having eliminated human order taking, when a human-in-the-loop (HITL) workforce remains embedded in the operating model. 
+This article uses the SEC's January 2025 enforcement action against Presto Automation as a case study in AI accountability failure, and maps each violation to Lozen Advisory's Name Standard℠ diagnostic framework. The Presto action is not only an AI-washing case. It is a disclosure-control case about ownership, human intervention, and whether a company can describe an AI product as autonomous, specifically, as having eliminated human order taking, when a human-in-the-loop (HITL) workforce remains embedded in the operating model.
 
-On January 14, 2025, the SEC announced settled charges against Presto Automation, Inc. for making materially false and misleading statements about Presto Voice, its drive-thru AI ordering product. The enforcement signal is direct: public-company AI claims now require disclosure controls that can verify the difference between what  the company says AI does, and which [human roles, vendors, or operational functions are actually involved](/blog/the-name-standard-ai-governance/) in making the AI work.
+On January 14, 2025, the SEC announced settled charges against Presto Automation, Inc. for making materially false and misleading statements about Presto Voice, its drive-thru AI ordering product. The enforcement signal is direct: public-company AI claims now require disclosure controls that can verify the difference between what the company says AI does, and which [human roles, vendors, or operational functions are actually involved](/blog/the-name-standard-ai-governance/) in making the AI work.
 
 ---
 
@@ -49,7 +49,7 @@ The SEC order identifies two false claims and a third structural failure.
 
 The performance data Presto reported compounded the misrepresentation. The "automated order completion" and "non-intervention" rates of 95 to 99 percent measured orders completed without *restaurant staff* involvement, not without any human involvement. The offshore agents were excluded from the count entirely. When Presto later disclosed a system-wide non-intervention rate of 85 percent, that figure still used the same definition: no restaurant staff involvement. The actual rate of orders completed without any human involvement was lower, and at the original-version locations, where human agent intervention was required on every order, it was effectively zero.
 
-Presto's own executives knew this from the beginning. On January 20, 2022, months before Presto began making autonomous-product claims,  a Presto executive messaged another explaining that *"with HITL [humans in the loop*], *accuracy is not a major concern"* and "*can even get to 95% or more with humans.*" The following day, the same executive wrote that Presto would *"only be transitioning to our own Presto solution when we've nailed the HITL [humans in the loop] and have comparable accuracy / latency.*" Executives knew the reported accuracy figures were HITL-dependent. In October 2022 a senior executive warned internally not to use "*automation rate with customers because it infers no supervision which isn't true.*" In January 2023 another raised the alarm that the company was "*telling investors Presto AI is running 95%+ accuracy without disclosing AI is doing NONE of the work and all orders are processed by humans*." No corrective disclosure followed until after the Commission's investigation began.
+Presto's own executives knew this from the beginning. On January 20, 2022, months before Presto began making autonomous-product claims, a Presto executive messaged another explaining that *"with HITL [humans in the loop*], *accuracy is not a major concern"* and "*can even get to 95% or more with humans.*" The following day, the same executive wrote that Presto would *"only be transitioning to our own Presto solution when we've nailed the HITL [humans in the loop] and have comparable accuracy / latency.*" Executives knew the reported accuracy figures were HITL-dependent. In October 2022 a senior executive warned internally not to use "*automation rate with customers because it infers no supervision which isn't true.*" In January 2023 another raised the alarm that the company was "*telling investors Presto AI is running 95%+ accuracy without disclosing AI is doing NONE of the work and all orders are processed by humans*." No corrective disclosure followed until after the Commission's investigation began.
 
 *Full findings: [SEC Order, File No. 3-22413 (Jan. 14, 2025)](https://www.sec.gov/files/litigation/admin/2025/33-11352.pdf)*
 
@@ -77,9 +77,19 @@ The Name Standard℠ does not ask whether AI is impressive. It asks whether the 
 
 ## The Governance Signal for Boards
 
-The Presto order is board-relevant. It is an issuer disclosure enforcement action — which means disclosure controls, AI claim accuracy, investor materiality, and human accountability are the questions boards and audit committees are responsible for. [The five pillars of the Name Standard℠ are the diagnostic](/ai-legislation-tracker/). The Presto order illustrates what can happen when none of them are in place.
+The Presto order is board-relevant. It is an issuer disclosure enforcement action — which means disclosure controls, AI claim accuracy, investor materiality, and human accountability are the questions boards and audit committees are responsible for. The five pillars of the Name Standard℠ are the diagnostic — examined in full in Lozen Advisory's [Disclosure-Independent Governance](/disclosure-independent-governance/) category framework, which maps these accountability failures to the board evidence problem AI adoption is creating across enterprises. The Presto order illustrates what can happen when none of them are in place.
 
 For boards, audit committees, and disclosure teams, the question is not whether your company uses AI. It is whether the human-in-the-loop (HITL) layer behind your AI claims is active, documented, and empowered to act — or whether it exists only on paper.
+
+The 5Ws of Decision Integrity℠ — Lozen Advisory's board-level diagnostic — translates that question into five evidence standards boards can apply to any significant AI-assisted decision or AI product claim:
+
+- **What** data, models, or AI outputs did management rely on, and is that reliance documented?
+- **Who** held named accountability for this decision, and did that person have the authority and information required to sign off?
+- **Which** performance indicators were tracked, and what would trigger board escalation if the system degraded or produced misleading output?
+- **What was missed** — what risks, gaps, or AI errors were not detected, and who is responsible for that gap?
+- **Witness:** What documented record exists that would withstand regulatory scrutiny, litigation, or board inquiry?
+
+At Presto, none of these questions had a documented answer. That absence is what the SEC found.
 
 Presto's executives knew the claims were false. The problem was not awareness. **It was the absence of any formal structure — time, tools, access, documentation, or veto authority — to translate that awareness into corrective disclosure.** That absence is the third violation in the order: a violation of Exchange Act Rule 13a-15(a), which requires issuers to maintain disclosure controls and procedures. The order also found violations of Section 17(a)(2) of the Securities Act, Section 13(a) of the Exchange Act, and Rule 13a-11 for the misleading filings themselves.
 
