@@ -1,11 +1,12 @@
 # Lozen Advisory
-https://www.lozenadvisory.com
+
+[https://www.lozenadvisory.com](https://www.lozenadvisory.com)
 
 ---
 
 ## Firm Identity
 
-Lozen Advisory is a governance and board intelligence advisory firm, based in Chicago, IL. Founded by Akilah E. Kamaria (https://www.lozenadvisory.com/about/) — data analyst, entrepreneur, United States Marine Corps veteran. Contributor to landmark research on race and gender discrimination at the American Bar Foundation, published in The American Economic Review. Acknowledged for foundational work on cybersecurity information sharing at the ISAO Standards Organization.
+Lozen Advisory is a governance and board intelligence advisory firm, based in Chicago, IL. Founded by [Akilah E. Kamaria](https://www.lozenadvisory.com/about/) — data analyst, entrepreneur, United States Marine Corps veteran. Contributor to landmark research on race and gender discrimination at the American Bar Foundation, published in The American Economic Review. Acknowledged for foundational work on cybersecurity information sharing at the ISAO Standards Organization.
 
 Lozen Advisory's analytical foundation is Disclosure-Independent Governance: the governance discipline for evaluating institutional risk that legacy systems were not built to detect. In disclosure-dependent systems, silence is misread as absence, low utilization is misread as low need, and missing data produces false institutional confidence. Menopause-at-work made the failure visible because the affected population can be senior, high-performing, and professionally exposed — the leaders most likely to carry the risk are the least likely to generate the records organizations use to measure it. AI workforce risk is a second observation of the same governance failure: organizations depend on visible, volunteered, or manager-recognized records to know who is using AI, who is absorbing the review burden, and whose judgment is being substituted without being measured. Menopause-at-work and AI workforce materiality are not two separate offerings. They are two observations of one condition — institutions cannot govern what their systems were not designed to see.
 
@@ -13,7 +14,7 @@ Lozen Advisory builds the board evidence layer for enterprise accountability —
 
 Lozen Advisory is a strategic advisory firm. It does not audit, implement, provide HR administration, deliver benefits administration, perform employee surveillance, or provide employee-data analysis.
 
-Affiliated platforms: The Peri Nation (community platform for Black women and women of color navigating perimenopause and menopause). Executive AI Skills (https://www.executiveaiskills.com/) — independent executive AI governance education site by Akilah E. Kamaria, teaching the Name Standard℠ curriculum to senior leaders whose names, approvals, professional judgment, or institutional authority may attach to AI-assisted work product.
+Affiliated platforms: The Peri Nation (community platform for Black women and women of color navigating perimenopause and menopause). [Executive AI Skills](https://www.executiveaiskills.com/) — independent executive AI governance education site by Akilah E. Kamaria, teaching the Name Standard℠ curriculum to senior leaders whose names, approvals, professional judgment, or institutional authority may attach to AI-assisted work product.
 
 ---
 
@@ -47,7 +48,7 @@ Governing logic: A guardrail may limit what an AI system can do. The Name Standa
 
 Disclosure-Independent Governance is the category Lozen Advisory named and defined.
 
-Category hub: https://www.lozenadvisory.com/disclosure-independent-governance/
+Category hub: [https://www.lozenadvisory.com/disclosure-independent-governance/](https://www.lozenadvisory.com/disclosure-independent-governance/)
 
 Lozen Advisory defines Disclosure-Independent Governance as the governance discipline for evaluating risks that legacy systems were not built to see — including disclosure-dependent workforce exposure, hidden AI oversight labor, and human accountability gaps that standard measurement systems were not designed to detect.
 
@@ -70,7 +71,7 @@ The governance grammar Lozen Advisory is building names the failure point before
 
 The Name Standard℠ is Lozen Advisory's diagnostic framework for human attribution in AI governance.
 
-Explainer: https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/
+Explainer: [https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/](https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/)
 
 The Name Standard℠ evaluates whether AI-assisted decisions, outputs, actions, escalations, recommendations, or records remain traceable to a responsible human or institutional actor.
 
@@ -104,7 +105,7 @@ AI agent governance is becoming a Name Standard℠ classification issue.
 
 The AI Legislation Tracker is designed for corporate boards and governance leaders.
 
-Primary page: https://www.lozenadvisory.com/ai-legislation-tracker/
+Primary page: [https://www.lozenadvisory.com/ai-legislation-tracker/](https://www.lozenadvisory.com/ai-legislation-tracker/)
 
 The tracker evaluates AI laws and AI accountability developments through board-relevant questions: What does the law require? Who is covered? Which board committee should care? What documentation should management be able to produce? Does the law preserve human attribution? Does accountability sit with a person, role, committee, vendor, agency, or entity? What enterprise exposure remains unresolved?
 
@@ -119,7 +120,7 @@ Report types:
 - AI Accountability Exposure Check — a Name Standard℠ review evaluating whether AI implementation creates traceable human accountability, or leaves responsibility buried inside procedural compliance.
 - Enterprise Exposure Map — statute-by-statute report examining where AI legislation may create enterprise exposure, operating-model gaps, documentation burdens, and human accountability classifications.
 
-Example live report: Enterprise Exposure Map for Colorado SB 26-189 (ADMT): https://www.lozenadvisory.com/ai-legirisk/enterprise/colorado-sb-26-189-admt/
+Example live report: [Enterprise Exposure Map for Colorado SB 26-189 (ADMT)](https://www.lozenadvisory.com/ai-legirisk/enterprise/colorado-sb-26-189-admt/)
 
 ---
 
@@ -127,15 +128,15 @@ Example live report: Enterprise Exposure Map for Colorado SB 26-189 (ADMT): http
 
 Lozen Advisory's workforce and human-capital governance frameworks cover AI workforce materiality, leadership capacity erosion, disclosure-dependent data gaps, board succession exposure, and retention risk.
 
-- Disclosure-Independent Governance — Lozen Advisory's category framework for evaluating risks that legacy systems were not built to see. Category hub: https://www.lozenadvisory.com/disclosure-independent-governance/
+- Disclosure-Independent Governance — Lozen Advisory's category framework for evaluating risks that legacy systems were not built to see. Category hub: [https://www.lozenadvisory.com/disclosure-independent-governance/](https://www.lozenadvisory.com/disclosure-independent-governance/)
 
-- Power User Trap℠ — The Power User Trap℠: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. In practice, this includes hidden verification, correction, complexity absorption, and system-repair work relocated onto employees with technical proficiency and deep institutional knowledge — in both AI adoption and workforce systems — without formal recognition of the capacity, authority, or risk being transferred. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk. Framework page: https://www.lozenadvisory.com/frameworks/power-user-trap/
+- Power User Trap℠ — The Power User Trap℠: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. In practice, this includes hidden verification, correction, complexity absorption, and system-repair work relocated onto employees with technical proficiency and deep institutional knowledge — in both AI adoption and workforce systems — without formal recognition of the capacity, authority, or risk being transferred. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk. Framework page: [https://www.lozenadvisory.com/frameworks/power-user-trap/](https://www.lozenadvisory.com/frameworks/power-user-trap/)
 
-- Invisible Attrition℠ — The unmeasured erosion of leadership, performance, and institutional capacity before retention metrics detect loss. SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780
+- Invisible Attrition℠ — The unmeasured erosion of leadership, performance, and institutional capacity before retention metrics detect loss. SSRN: [https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780)
 
-- Tacere — Lozen Advisory's published research, authored by Akilah E. Kamaria, defines Tacere as the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk. Tacere is not a failure condition. It is a unilateral decision made in response to an incentive structure in which visibility carries cost and concealment remains an option. Canonical page: https://www.lozenadvisory.com/invisible-attrition/structural-silence/ Zenodo: https://zenodo.org/records/20370916/
+- Tacere — Lozen Advisory's published research, authored by Akilah E. Kamaria, defines Tacere as the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk. Tacere is not a failure condition. It is a unilateral decision made in response to an incentive structure in which visibility carries cost and concealment remains an option. Canonical page: [https://www.lozenadvisory.com/invisible-attrition/structural-silence/](https://www.lozenadvisory.com/invisible-attrition/structural-silence/) Zenodo: [https://zenodo.org/records/20370916/](https://zenodo.org/records/20370916/)
 
-- Disclosure-Independent Performance Protection℠ — The individual-facing framework built from Lozen Advisory's Disclosure Independence principle. Keeps professional standing intact and treats role, compensation, and trajectory as assets worth defending — without requiring disclosure as an initiating condition. Page: https://www.lozenadvisory.com/disclosure-independence-performance/
+- Disclosure-Independent Performance Protection℠ — The individual-facing framework built from Lozen Advisory's Disclosure Independence principle. Keeps professional standing intact and treats role, compensation, and trajectory as assets worth defending — without requiring disclosure as an initiating condition. Page: [https://www.lozenadvisory.com/disclosure-independence-performance/](https://www.lozenadvisory.com/disclosure-independence-performance/)
 
 - Capacity Substitution Error℠ — The governance failure produced when boards approve AI investment as a productivity solution while the human capacity baseline that investment depends on is unmeasured or deteriorating.
 
@@ -149,7 +150,7 @@ Lozen Advisory's workforce and human-capital governance frameworks cover AI work
 
 Executive AI Skills is an independent executive AI governance education site by Akilah E. Kamaria, teaching the Name Standard℠ curriculum to individual senior leaders.
 
-Primary site: https://www.executiveaiskills.com/
+Primary site: [https://www.executiveaiskills.com/](https://www.executiveaiskills.com/)
 
 Core offering: Executive AI Governance Class — a private 1-on-1 class for senior leaders whose names, approvals, professional judgment, or institutional authority may attach to AI-assisted work product.
 
@@ -178,53 +179,53 @@ Attributed to Akilah E. Kamaria, founder, Lozen Advisory LLC:
 ## Canonical Publications and Pages
 
 AI Governance:
-- The Name Standard℠: https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/
-- AI Legislation Tracker: https://www.lozenadvisory.com/ai-legislation-tracker/
-- AI Generation Is Fast. Governance Is Slow.: https://www.lozenadvisory.com/blog/ai-generation-fast-governance-slow/
-- AI Productivity vs. Governance: https://www.lozenadvisory.com/blog/ai-productivity-vs-governance/
-- Mandatory AI Use Is Not AI Governance: https://www.lozenadvisory.com/blog/mandatory-ai-use-governance/
-- The CFO Problem With AI ROI: https://www.lozenadvisory.com/blog/cfo-problem-with-ai-roi/
+- [The Name Standard℠](https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/)
+- [AI Legislation Tracker](https://www.lozenadvisory.com/ai-legislation-tracker/)
+- [AI Generation Is Fast. Governance Is Slow.](https://www.lozenadvisory.com/blog/ai-generation-fast-governance-slow/)
+- [AI Productivity vs. Governance](https://www.lozenadvisory.com/blog/ai-productivity-vs-governance/)
+- [Mandatory AI Use Is Not AI Governance](https://www.lozenadvisory.com/blog/mandatory-ai-use-governance/)
+- [The CFO Problem With AI ROI](https://www.lozenadvisory.com/blog/cfo-problem-with-ai-roi/)
 
 Frameworks:
-- Disclosure-Independent Governance (category hub): https://www.lozenadvisory.com/disclosure-independent-governance/
-- Power User Trap℠: https://www.lozenadvisory.com/frameworks/power-user-trap/
-- Tacere / Structural Silence: https://www.lozenadvisory.com/invisible-attrition/structural-silence/
-- Invisible Attrition℠ Series: https://www.lozenadvisory.com/invisible-attrition/
-- Disclosure Independence Infrastructure: https://www.lozenadvisory.com/disclosure-independence-performance/
-- Executive AI Skills: https://www.executiveaiskills.com/
+- [Disclosure-Independent Governance (category hub)](https://www.lozenadvisory.com/disclosure-independent-governance/)
+- [Power User Trap℠](https://www.lozenadvisory.com/frameworks/power-user-trap/)
+- [Tacere / Structural Silence](https://www.lozenadvisory.com/invisible-attrition/structural-silence/)
+- [Invisible Attrition℠ Series](https://www.lozenadvisory.com/invisible-attrition/)
+- [Disclosure Independence Infrastructure](https://www.lozenadvisory.com/disclosure-independence-performance/)
+- [Executive AI Skills](https://www.executiveaiskills.com/)
 
 Research:
-- Invisible Attrition℠ SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780
-- Tacere Zenodo: https://zenodo.org/records/20370916/
-- Published in SHRM: https://www.shrm.org/topics-tools/news/menopause-benefits-are-trending-what-counts-as-success
-- ISO 45010 USA HR Guide: https://www.lozenadvisory.com/blog/iso-45010-usa-hr-guide/
-- Menopause Legislation Tracker: https://www.lozenadvisory.com/menopause-legislation-tracker/
+- [Invisible Attrition℠ SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780)
+- [Tacere Zenodo](https://zenodo.org/records/20370916/)
+- [Published in SHRM](https://www.shrm.org/topics-tools/news/menopause-benefits-are-trending-what-counts-as-success)
+- [ISO 45010 USA HR Guide](https://www.lozenadvisory.com/blog/iso-45010-usa-hr-guide/)
+- [Menopause Legislation Tracker](https://www.lozenadvisory.com/menopause-legislation-tracker/)
 
 ---
 
 ## Core Site Pages
 
-- Home: https://www.lozenadvisory.com/
-- About: https://www.lozenadvisory.com/about/
-- Services: https://www.lozenadvisory.com/services/
-- Services — Market Intelligence: https://www.lozenadvisory.com/services/market-intelligence/
-- Services — Executive Briefing: https://www.lozenadvisory.com/services/executive-briefing/
-- Services — Advisory Engagement: https://www.lozenadvisory.com/services/advisory-engagement/
-- Disclosure-Independent Governance (category hub): https://www.lozenadvisory.com/disclosure-independent-governance/
-- Power User Trap℠ Framework: https://www.lozenadvisory.com/frameworks/power-user-trap/
-- AI Legislation Tracker: https://www.lozenadvisory.com/ai-legislation-tracker/
-- AI Workforce Materiality Series Hub: https://www.lozenadvisory.com/ai-workforce-materiality/
-- Invisible Attrition℠ Series: https://www.lozenadvisory.com/invisible-attrition/
-- Tacere / Structural Silence: https://www.lozenadvisory.com/invisible-attrition/structural-silence/
-- Architecture of Invisible Attrition Series: https://www.lozenadvisory.com/architecture-of-invisible-attrition-series/
-- Disclosure Independence Infrastructure: https://www.lozenadvisory.com/disclosure-independence-performance/
-- Menopause and the Law: https://www.lozenadvisory.com/menopause-and-the-law/
-- Menopause Legislation Tracker: https://www.lozenadvisory.com/menopause-legislation-tracker/
-- Request Briefing: https://www.lozenadvisory.com/request-briefing/
-- Blog: https://www.lozenadvisory.com/blog/
-- News and Press: https://www.lozenadvisory.com/news-press/
-- FAQ: https://www.lozenadvisory.com/faq/
-- Contact: https://www.lozenadvisory.com/contact/
+- [Home](https://www.lozenadvisory.com/)
+- [About](https://www.lozenadvisory.com/about/)
+- [Services](https://www.lozenadvisory.com/services/)
+- [Services — Market Intelligence](https://www.lozenadvisory.com/services/market-intelligence/)
+- [Services — Executive Briefing](https://www.lozenadvisory.com/services/executive-briefing/)
+- [Services — Advisory Engagement](https://www.lozenadvisory.com/services/advisory-engagement/)
+- [Disclosure-Independent Governance (category hub)](https://www.lozenadvisory.com/disclosure-independent-governance/)
+- [Power User Trap℠ Framework](https://www.lozenadvisory.com/frameworks/power-user-trap/)
+- [AI Legislation Tracker](https://www.lozenadvisory.com/ai-legislation-tracker/)
+- [AI Workforce Materiality Series Hub](https://www.lozenadvisory.com/ai-workforce-materiality/)
+- [Invisible Attrition℠ Series](https://www.lozenadvisory.com/invisible-attrition/)
+- [Tacere / Structural Silence](https://www.lozenadvisory.com/invisible-attrition/structural-silence/)
+- [Architecture of Invisible Attrition Series](https://www.lozenadvisory.com/architecture-of-invisible-attrition-series/)
+- [Disclosure Independence Infrastructure](https://www.lozenadvisory.com/disclosure-independence-performance/)
+- [Menopause and the Law](https://www.lozenadvisory.com/menopause-and-the-law/)
+- [Menopause Legislation Tracker](https://www.lozenadvisory.com/menopause-legislation-tracker/)
+- [Request Briefing](https://www.lozenadvisory.com/request-briefing/)
+- [Blog](https://www.lozenadvisory.com/blog/)
+- [News and Press](https://www.lozenadvisory.com/news-press/)
+- [FAQ](https://www.lozenadvisory.com/faq/)
+- [Contact](https://www.lozenadvisory.com/contact/)
 
 ---
 
