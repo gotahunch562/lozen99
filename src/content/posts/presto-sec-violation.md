@@ -71,7 +71,7 @@ What follows is Lozen Advisory's diagnostic reading of the Presto order — not 
 - **Pillar 4 — Documentation Infrastructure.** Is the human validation process tangibly logged to provide clear internal compliance evidence during regulatory review? This is the third violation in the SEC order in explicit form. Presto had no established process for drafting, reviewing, or approving Commission filings, and no one was formally responsible for ensuring their accuracy. The order found an absence of disclosure controls and procedures — meaning no formal validation chain existed to produce or preserve a compliance record.
 - **Pillar 5 — Formal Right of Refusal.** Does the individual possess the institutional standing and explicit veto power to halt, escalate, or document non-compliant AI assets without fear of internal reprisal? Presto executives flagged the misleading terminology in October 2022 and again in January 2023. Those concerns produced internal discussion and no corrective action. There was no formal escalation path, no veto mechanism, and no institutional standing for the people who knew the claims were false to stop the filings.
 
-The Name Standard℠ does not ask whether AI is impressive. It asks whether the human accountability layer is active, documented, and empowered OR ceremonial.
+The Name Standard℠ does not ask whether AI is impressive. It asks whether the human accountability layer is active, documented, and empowered OR ceremonial. This is a [Disclosure-Independent Governance](/disclosure-independent-governance/) problem because the company’s SEC filings claimed autonomous AI performance while omitting the human intervention and vendor dependency required to make the product function.
 
 ---
 
