@@ -34,7 +34,7 @@ Disclosure means:
 - A private fact becomes visible. 
 - Something previously withheld enters.
 
-At work, however, [disclosure is not only revelation.](https://www.lozenadvisory.com/disclosure-independence-infrastructure/) It is HR record creation.
+At work, however, [disclosure is not only revelation.](https://www.lozenadvisory.com/disclosure-independence-performance/) It is HR record creation.
 
 ## The Workplace Turns Disclosure Into a HR Record
 

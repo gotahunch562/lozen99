@@ -95,6 +95,8 @@ The governance question it surfaces is direct: when your most stable senior lead
 
 ---
 
+To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance](/disclosure-independent-governance/).
+
 ## References
 
 Edmondson, A. C. (1999). Psychological safety and learning behavior in work teams. *Administrative Science Quarterly, 44*(2), 350–383.

@@ -121,6 +121,8 @@ AI adoption changes how work moves. It also changes where judgment accumulates. 
 
 ---
 
+The Power User Trap℠ is a [Disclosure-Independent Governance](/disclosure-independent-governance/) problem because the organization may believe it has gained efficiency while actually relocating risk into unmeasured human capacity.
+
 ## References
 
 Novak, K. (2025, December 11). When change champions burn out. *20Forty Newsletter,* Issue 242.

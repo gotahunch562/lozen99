@@ -3,18 +3,34 @@
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const primaryLinks = [
-  { href: "/services", label: "What We Do" },
-  { href: "/booking", label: "MAPS Blueprint" },
-  { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
-  { href: "/news-press", label: "News & Press" },
+  { href: "/services/", label: "What We Do" },
+  {
+    href: "/disclosure-independent-governance/",
+    label: "Disclosure-Independent Governance",
+  },
+  { href: "/frameworks/power-user-trap/", label: "Power User Trap℠" },
+  { href: "/ai-legislation-tracker/", label: "AI Legislation Tracker" },
+  { href: "/menopause-legislation-tracker/", label: "Menopause Legislation Tracker" },
+  { href: "/about/", label: "About" },
+  { href: "/about-ai/", label: "About AI Use" },
+  { href: "/blog/", label: "Blog" },
+  { href: "/news-press/", label: "News & Press" },
+  { href: "/contact/", label: "Contact" },
+  { href: "/request-briefing/", label: "Request Briefing" },
 ];
 
-const currentPath = Astro.url.pathname;
+const normalizePath = (path: string) =>
+  path.length > 1 ? path.replace(/\/+$/, "") : path;
 
-const isActiveLink = (href: string) =>
-  currentPath === href || currentPath.startsWith(`${href}/`);
+const currentPath = normalizePath(Astro.url.pathname);
+
+const isActiveLink = (href: string) => {
+  const normalizedHref = normalizePath(href);
+  return (
+    currentPath === normalizedHref ||
+    currentPath.startsWith(`${normalizedHref}/`)
+  );
+};
 ---
 
 <div

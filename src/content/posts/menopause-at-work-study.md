@@ -56,7 +56,7 @@ That signal is the barrier the study does not measure and the frameworks it will
 
 What she needs is not a program or a policy. It is a private, structured way to assess what is happening to her performance, protect what she has built, and sustain her capacity through a transition privately. She needs an advisor whose obligation runs exclusively to her: not to her firm's retention metrics, not to an HR dashboard, not to any reporting relationship she did not choose.
 
-That is a different kind of service, that requires a different kind of expertise. It requires that the advisor understand something the organizational model is not built to accommodate. That for some women, the most important feature of support is discretion and privacy. That is [why Lozen Advisory exists.](/why-lozen-advisory/)
+That is a different kind of service, that requires a different kind of expertise. It requires that the advisor understand something the organizational model is not built to accommodate. That for some women, the most important feature of support is discretion and privacy. That is [why Lozen Advisory exists.](/disclosure-independent-governance/)
 
 ### What the Fall 2026 Research Will and Won't Change
 

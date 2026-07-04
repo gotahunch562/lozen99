@@ -52,7 +52,7 @@ A bill designed to help women would land the hardest on small businesses which m
 
 Here is the pathway the bill requires for utilization: a woman must name her condition, file a request, generate documentation, and move through an approval process.
 
-For a [senior executive in a market-moving environment](/disclosure-independence-infrastructure/), being seen as someone whose capacity is in question is a dealbreaker. The data confirms this is not a fringe concern; stigma is real. In a global survey of more than 8,000 women, only 27% had spoken with senior leadership about their situation. In a parallel survey of 898 working women, 97% concealed or downplayed their condition at work.
+For a [senior executive in a market-moving environment](/disclosure-independence-performance/), being seen as someone whose capacity is in question is a dealbreaker. The data confirms this is not a fringe concern; stigma is real. In a global survey of more than 8,000 women, only 27% had spoken with senior leadership about their situation. In a parallel survey of 898 working women, 97% concealed or downplayed their condition at work.
 
 The women the bills are designed to help are the women least likely to engage the infrastructure they create.
 

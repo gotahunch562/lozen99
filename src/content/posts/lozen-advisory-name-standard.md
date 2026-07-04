@@ -56,6 +56,9 @@ Boards are being asked to oversee AI systems, AI agents, AI vendors, AI-generate
 
 The common thread is evidence. Boards need to know who is accountable, what was reviewed, what was escalated, what was documented, and where responsibility remains unresolved.
 
+The Name Standard℠ sits within Lozen Advisory’s broader [Disclosure-Independent Governance](/disclosure-independent-governance/) architecture for evaluating whether human accountability is real, supported, and traceable.
+
+
 > Who authorized the agent, who supervises it, who can stop it, who documents its behavior, and who is accountable when it acts?
 
 ## Five questions GRC and governance leaders should ask

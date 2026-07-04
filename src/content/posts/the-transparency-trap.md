@@ -41,7 +41,7 @@ Ambitious women leaders in their 40s and 50s are quietly managing demanding biol
 
 This corporate pressure has created what researchers call the **"menopause penalty"** — a pattern where a woman's health status and earnings erode in the years following a menopause diagnosis, whether or not she ever asks for support. Landmark economic research published in the National Bureau of Economic Research **[working paper on The Menopause Penalty](https://www.nber.org/papers/w33621)** shows that a menopause diagnosis leads to a 10% reduction in a woman's earnings by the fourth year after diagnosis, driven by reduced hours or full exit from the workforce. Workforce reporting from the Society for Human Resource Management points to the same structural pressure: women are being pushed out by the unmanaged physical toll coupled with systemic corporate stigma.
 
-Let’s correct the narrative. This is not an HR benefits conversation; it is an executive power conversation about the terms of disclosure and the need for [Disclosure-Independent Performance Protection℠ infrastructure](/disclosure-independence-infrastructure/).
+Let’s correct the narrative. This is not an HR benefits conversation; it is an executive power conversation about the terms of disclosure and the need for [Disclosure-Independent Performance Protection℠ infrastructure](/disclosure-independence-performance/).
 
 ## Disclosure Is a Decision, Not a Requirement
 

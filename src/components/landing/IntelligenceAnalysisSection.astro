@@ -1,7 +1,6 @@
 ---
 // Foundations
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-
 const frameworkCards = [
   {
     eyebrow: "Pillar Framework",
@@ -15,13 +14,12 @@ const frameworkCards = [
     eyebrow: "Executive Reports",
     title: "The Architecture of Invisible Attrition℠",
     description:
-      "A report series examining how benefits utilization, billable-hour systems, succession planning, and leadership pipeline data fail when risk remains disclosure-dependent.",
+      "A report series examining how retention data, succession systems, and leadership pipeline metrics fail when risk remains disclosure-dependent.",
     href: "/architecture-of-invisible-attrition-series",
     cta: "View the report series",
   },
 ];
 ---
-
 <section class="bg-base-50">
   <Wrapper variant="standard" class="py-12 sm:py-14 lg:py-20">
     <div class="mx-auto max-w-6xl">
@@ -34,19 +32,16 @@ const frameworkCards = [
           >
             Invisible Attrition℠
           </p>
-
           <h2
             class="mt-5 max-w-4xl font-display text-[2.25rem] font-normal uppercase leading-[1.02] tracking-[-0.035em] text-base-950 sm:mt-6 sm:text-[2.75rem] lg:text-[3.25rem]"
           >
-            Intelligence Analysis
+            Board-ready Intelligence
           </h2>
         </div>
-
         <p class="max-w-md font-sans text-base leading-7 text-base-700 sm:text-[1.0625rem] sm:leading-8 lg:pb-1">
-          Understand how disclosure-dependent systems fail before standard retention metrics detect risk.
+          Evaluate how disclosure-dependent systems fail before standard retention metrics detect risk.
         </p>
       </div>
-
       <div class="mt-10 grid gap-4 sm:mt-12 lg:grid-cols-2 lg:gap-5">
         {
           frameworkCards.map((card) => (
@@ -57,15 +52,12 @@ const frameworkCards = [
               <p class="font-sans text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-accent-700">
                 {card.eyebrow}
               </p>
-
               <h3 class="mt-5 font-display text-[1.65rem] font-normal uppercase leading-tight tracking-[-0.025em] text-base-950 sm:text-[1.9rem]">
                 {card.title}
               </h3>
-
               <p class="mt-4 max-w-2xl font-sans text-[0.9375rem] leading-7 text-base-700 sm:mt-5 sm:text-base">
                 {card.description}
               </p>
-
               <span class="mt-7 inline-flex font-sans text-sm font-semibold text-accent-700 transition-all duration-300 group-hover:translate-x-1 group-hover:text-base-950 sm:mt-8">
                 {card.cta} →
               </span>

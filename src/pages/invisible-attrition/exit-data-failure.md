@@ -87,6 +87,8 @@ If it cannot, the attrition they are measuring is not the attrition they are exp
 
 ---
 
+To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance](/disclosure-independent-governance/).
+
 ## References
 
 Work Institute. (2025). *2025 Retention Report: Employee retention truths in today's workplace.* Based on 123,297 exit interviews conducted 2019 to 2024 across 175 companies.

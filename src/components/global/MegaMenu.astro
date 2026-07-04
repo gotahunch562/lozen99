@@ -10,43 +10,64 @@ const megaMenuSections = [
     description: "Core Lozen Advisory architecture.",
     links: [
       {
-        href: "/invisible-attrition",
-        label: "Invisible Attrition℠ Series",
-        description: "A research-grounded 6 part editorial series examining disclosure in the workplace infrastructure and the effects.",
+        href: "/disclosure-independent-governance/",
+        label: "Disclosure-Independent Governance",
+        description:
+          "Lozen Advisory’s category framework for risks legacy systems were not built to see.",
       },
-     
+      {
+        href: "/frameworks/power-user-trap/",
+        label: "Power User Trap℠",
+        description:
+          "A Lozen Advisory framework for hidden verification, correction, and system-repair burden.",
+      },
+      {
+        href: "/invisible-attrition/",
+        label: "Invisible Attrition℠",
+        description:
+          "Lozen Advisory’s framework for leadership capacity erosion before organizational detection.",
+      },
       {
         href: "/ai-workforce-materiality/",
         label: "AI Workforce Materiality",
         description:
-          "A series on AI adoption, hidden labor, Power User Trap℠ exposure, and human-capital materiality risk.",
+          "Analysis on AI adoption, hidden labor, Power User Trap℠ exposure, and human-capital materiality risk.",
       },
     ],
   },
   {
-    title: "Research",
-    description: "Focused research destinations.",
+    title: "Data Assets",
+    description: "Trackers and governance intelligence assets.",
     links: [
       {
-        href: "/disclosure-independence-infrastructure",
-        label: "Disclosure Infrastructure",
+        href: "/ai-legislation-tracker/",
+        label: "AI Legislation Tracker",
         description:
-          "The structural design principle behind Disclosure-Independent Performance Protection℠ for women in leadership.",
+          "AI legislation intelligence for human accountability, board evidence, and enterprise exposure.",
       },
       {
-        href: "/menopause-legislation-tracker",
+        href: "/menopause-legislation-tracker/",
         label: "Menopause Legislation Tracker",
-        description: "A governance audit of disclosure-dependent policy design.",
+        description:
+          "A governance audit of disclosure-dependent policy design.",
       },
       {
-        href: "/retention-calculator",
-        label: "Retention Calculator",
-        description: "Estimate the replacement cost of women in leadership.",
+        href: "/menopause-and-the-law/",
+        label: "Menopause and the Law",
+        description:
+          "Legislative and workplace analysis on menopause policy, disclosure, and workforce risk.",
+      },
+      {
+        href: "/tools-resources/",
+        label: "Tools & Downloads",
+        description:
+          "Resources and downloads connected to Lozen Advisory’s governance frameworks.",
       },
       {
         href: "https://www.executiveaiskills.com/",
         label: "AI Evaluation Training",
-        description: "Not how to use AI. How to keep AI-generated errors from leaving your office.",
+        description:
+          "Not how to use AI. How to keep AI-generated errors from leaving your office.",
         external: true,
       },
     ],
@@ -56,30 +77,32 @@ const megaMenuSections = [
     description: "Secondary paths into the site.",
     links: [
       {
-        href: "/why-lozen-advisory",
-        label: "Why Lozen Advisory",
-        description: "The firm’s positioning, method, and advisory frame.",
+        href: "/services/",
+        label: "Services",
+        description:
+          "Advisory paths for governance readiness, market intelligence, and institutional risk.",
       },
       {
-        href: "/events",
+        href: "/request-briefing/",
+        label: "Governance Readiness Briefing",
+        description:
+          "Request a focused briefing on human accountability, hidden workforce risk, and AI-assisted output.",
+      },
+      {
+        href: "/about-ai/",
+        label: "About AI Use",
+        description:
+          "How Lozen Advisory uses AI as a company and preserves human accountability.",
+      },
+      {
+        href: "/events/",
         label: "Events",
         description: "Speaking engagements and public appearances.",
       },
       {
-        href: "/faq",
+        href: "/faq/",
         label: "FAQ",
         description: "Common questions about Lozen Advisory and advisory paths.",
-      },
-      {
-        href: "/booking",
-        label: "MAPS Blueprint℠",
-        description:
-          "Private 90-minute advisory session for an upcoming evaluation moment.",
-      },
-      {
-        href: "/menopause-support-women-lawyers",
-        label: "For Women Lawyers",
-        description: "Private performance protection for women in law.",
       },
     ],
   },
@@ -156,7 +179,7 @@ const megaMenuSections = [
               variant="textSM"
               class="font-sans text-[0.82rem] font-semibold uppercase tracking-[0.14em] text-base-950"
             >
-              Discover how we can help?
+              Strategic counsel for the era of algorithmic accountability.
             </Text>
 
             <Text
@@ -164,16 +187,16 @@ const megaMenuSections = [
               variant="textSM"
               class="mt-1 font-sans text-[0.9rem] leading-5 text-base-600"
             >
-              Request a briefing on disclosure-dependent workforce risk.
+              Request a briefing on Disclosure-Independent Governance.
             </Text>
           </div>
 
           <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button isLink size="xs" variant="accent" href="/ai-workforce-materiality-briefing/">
+            <Button isLink size="xs" variant="accent" href="/request-briefing/">
               Request Briefing
             </Button>
 
-            <Button isLink size="xs" variant="muted" href="/tools-resources">
+            <Button isLink size="xs" variant="muted" href="/tools-resources/">
               Tools & Downloads
             </Button>
           </div>
@@ -239,7 +262,7 @@ const megaMenuSections = [
   };
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initMegaMenu, { once: true });
+    document.addEventListener("DOMContentLoaded", initMegaMenu);
   } else {
     initMegaMenu();
   }

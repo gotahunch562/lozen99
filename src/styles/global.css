@@ -208,10 +208,11 @@
 
 .lozen-type-page-title {
   font-family: var(--font-display);
-  font-size: var(--lozen-article-chapter-number-size);
+  font-size: var(--lozen-page-hero-title-size);
   font-weight: var(--lozen-page-hero-title-weight);
   letter-spacing: var(--lozen-page-hero-title-letter-spacing);
   line-height: var(--lozen-page-hero-title-line-height);
+  text-transform: none;
   text-wrap: balance;
 }
 

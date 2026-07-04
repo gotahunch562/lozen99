@@ -83,6 +83,8 @@ The board-level risk question the pillar poses holds here: if your current syste
 
 ---
 
+To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance](/disclosure-independent-governance/).
+
 ## References
 
 Gallup. (2024). *42% of employee turnover is preventable but often ignored.*

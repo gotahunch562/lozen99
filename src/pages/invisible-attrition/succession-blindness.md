@@ -97,6 +97,8 @@ Invisible Attrition℠ provides the classification framework that makes these go
 
 ---
 
+To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance](/disclosure-independent-governance/).
+
 ## References
 
 McKinsey and Company and LeanIn.Org. (2025). *Women in the Workplace 2025.* 124 organizations, approximately 3 million employees.

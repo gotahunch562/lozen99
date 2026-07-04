@@ -25,7 +25,7 @@ heroImage: /src/images/blog/visibility_constraint_v3.webp
 heroAlt: "Magnifying glass over blurred office building showing measurement limits"
 tags:
   - Research & Policy
-spineDestination: disclosure-independence-infrastructure
+spineDestination: disclosure-independence-performance
 draft: false
 isFeatured: false
 ---
@@ -61,7 +61,7 @@ This creates a gap between what is managed and what is measured.
 
 The legal framework functions as designed. It captures what enters it but misses a portion that does not. This is the condition underlying menopause at work policies: systems measure participation, while a significant share of the impact of those policies remain outside of the mechanisms required to observe it. This gap is Invisible Attrition℠: the impact that remains operationally present while absent from the systems used to measure it, and does not register in retention metrics until the exit occurs.
 
-[Read the Disclosure-Independent Performance Protection℠ infrastructure.](/disclosure-independence-infrastructure/)
+[Read the Disclosure-Independent Performance Protection℠ infrastructure.](/disclosure-independence-performance/)
 
 ## Commission a Strategic Briefing
 

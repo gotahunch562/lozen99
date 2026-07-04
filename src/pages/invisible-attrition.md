@@ -150,3 +150,5 @@ By the time exit registers as the first observable signal, the capacity loss has
 You are not mismanaging your capacity. You are operating inside a system that reads sustained performance as stability and does not register the cost of how that performance is being maintained.
 
 To learn how Lozen Advisory can help you navigate at work without disclosure, [contact us today.](https://www.lozenadvisory.com/contact)
+
+To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance](/disclosure-independent-governance/).

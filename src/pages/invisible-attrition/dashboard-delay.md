@@ -89,6 +89,8 @@ The damage is not visible on the dashboard. It is visible in the departure that 
 
 ---
 
+To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance](/disclosure-independent-governance/).
+
 ## References
 
 Tonello, M. and Jones, A. (2025). *AI Risk Disclosures in the S&P 500: Reputation, Cybersecurity, and Regulation.* Harvard Law School Forum on Corporate Governance. The Conference Board and ESGAUGE.
