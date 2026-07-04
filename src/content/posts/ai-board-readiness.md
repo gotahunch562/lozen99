@@ -1,7 +1,8 @@
 ---
 title: "Four AI Governance Gaps Boards Are Missing Right Now "
 seo_title: ai-governance-board-readiness
-subtitle: ai board readiness
+subtitle: 81% of boards are discussing AI. Only 8% have adopted an approved AI
+  tool for their governance work.
 slug: ai-governance-board-readiness
 pubDate: 2026-07-04
 datePublished: 2026-07-04
@@ -22,13 +23,15 @@ heroAlt: Readiness Is Not Compliance
 draft: true
 isFeatured: false
 ---
----
+Nasdaq's 3rd Annual Global Governance Pulse a survey of 701 board members, executives, and governance professionals  puts numbers behind what most directors already sense. Ninety-six percent expect sustained or increasing scrutiny on boards over the next 12 months. AI and machine learning more than doubled as a top organizational concern year-over-year, rising from 19% to 40%. **And 81% of boards are actively discussing AI — but only 8% have adopted an approved AI governance tool for their own work.** The head of Nasdaq's governance solutions put the gap plainly: **the problem boards face isn't awareness anymore, it's readiness**.
 
-Nasdaq's chief product officer closed a recent industry forum on AI and the boardroom with a line worth sitting with: **the gap boards face isn't awareness anymore, it's readiness**. Generic, templated governance language is turning from a safe default into a liability, and a board must now shape and define itself for managing the future of AI embedded organizations. Board readiness is the maxim of the day.
+Generic, templated governance language is turning from a safe default into a liability, and a board must now shape and define itself for managing the future of AI embedded organizations. Board readiness is the maxim of the day.
 
-That's a clean thesis. However it is not something a board can act on directly. "Be ready" is a posture. What actually creates exposure isn't a vague atmosphere of unreadiness — it's a small number of specific, recurring gaps, showing up across boardrooms right now as AI shifts from a tool a company uses, into something closer to an operating layer the company runs on.
+That 73-point gap between discussing AI and being equipped to govern it is not a posture problem. What actually creates exposure isn't a vague atmosphere of unreadiness — it's a small number of specific, recurring gaps, showing up across boardrooms right now as AI shifts from a tool a company uses into something closer to an operating layer the company runs on.
 
 None of these four gaps are compliance failures. A board can follow every applicable rule and still have all four failures. That's exactly why they're easy to miss, and expensive to find out in a crisis.
+
+
 
 ---
 
@@ -64,7 +67,7 @@ AI use generates a lot of material that was never meant to become part of the of
 
 The pain point isn't "are we using AI in a way that's against the rules." It's: if someone — a regulator, a plaintiff's attorney, an activist investor — went looking for the record behind a decision, would what they find support the story the company tells about how that decision was made, or contradict it?
 
-That is the synthetic subphttps://claude.ai/disclosure-independent-governance/oena test. [Disclosure-Independent Governance](https://claude.ai/disclosure-independent-governance/) frames it as the Documentation Infrastructure question — whether the human validation process is tangibly logged before someone external goes looking, not reconstructed after.
+That is the synthetic subpoena test. [Disclosure-Independent Governance](/disclosure-independent-governance/) frames it as the Documentation Infrastructure question — whether the human validation process is tangibly logged before someone external goes looking, not reconstructed after.
 
 Joonko's CEO Ilit Raz raised $27 million from investors by claiming the company ran an advanced AI recruiting platform. The SEC went looking. What they found contradicted the story entirely — the platform was largely non-existent, running parallel to a DOJ criminal indictment for wire and securities fraud. GitLab faces investor litigation alleging that internal data about AI product adoption and revenue viability didn't match what the company told the market. The discovery problem isn't hypothetical. It is the mechanism by which AI governance failures become legal events.
 
