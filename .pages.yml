@@ -29,7 +29,7 @@ content:
       field: create
     operations:
       delete: false
-view:
+    view:
       primary: title
       fields: [title, dateModified, category, draft]
       sort: [dateModified, pubDate, title]
