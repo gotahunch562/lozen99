@@ -29,9 +29,9 @@ content:
       field: create
     operations:
       delete: false
-    view:
+view:
       primary: title
-      fields: [title, seo_title, subtitle, pubDate, dateModified, category, isFeatured, draft]
+      fields: [title, dateModified, category, draft]
       sort: [dateModified, pubDate, title]
       search: [title, seo_title, subtitle, description, excerpt, category, tags]
       default:
