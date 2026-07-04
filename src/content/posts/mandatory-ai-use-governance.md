@@ -5,7 +5,7 @@ subtitle: Large Language Models Simulate Coherence, Not Truth
 slug: mandatory-ai-use-governance
 pubDate: 2026-05-31
 datePublished: 2026-05-31
-dateModified: 2026-06-29
+dateModified: 2026-07-03
 category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 1
@@ -119,7 +119,7 @@ Mandatory AI utilization must never be confused with governed AI utilization. Go
 
 Those are entirely different questions.
 
-> AI governance begins where adoption metrics stop.
+> AI governance begins where adoption metrics stop. That gap is a [Disclosure-Independent Governance](/disclosure-independent-governance/) problem: the organization may have AI policies, adoption metrics, and usage mandates while still lacking evidence of who is absorbing verification labor, where accountability sits, and what risks remain invisible.
 
 ## The Materiality Question Set
 
@@ -132,10 +132,4 @@ Series Context
 *This article opens Lozen Advisory’s [AI Workforce Materiality](/ai-workforce-materiality/) series, which examines how corporate AI adoption creates human-capital exposure when companies measure tool use before they measure the human judgment required to make AI output usable.*
 
 - **Next:** [AI Investment Is Scaling Faster Than Human Capacity] turns from mandatory use to capital allocation, asking whether organizations are funding AI faster than the workforce systems required to convert that investment into durable operating value.
-
-### Secure a Strategic Briefing
-
-AI adoption is a governance issue, not an IT project. Lozen Advisory conducts private, 60-minute Strategic Briefings for corporate boards, General Counsel, and CFOs. 
-
-[Commission a Strategic Briefing](/ai-workforce-materiality-briefing/)
 
