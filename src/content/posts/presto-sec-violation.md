@@ -6,7 +6,7 @@ subtitle: What the Presto Automation order reveals about AI accountability,
 slug: human-in-the-loop-sec-ai-disclosure
 pubDate: 2026-07-01
 datePublished: 2026-07-01
-dateModified: 2026-07-01
+dateModified: 2026-07-03
 category: AI Governance & Workforce Risk
 excerpt: The SEC’s January 2025 enforcement action against Presto Automation
   exposes the massive compliance gap between marketing "autonomous AI" and the
