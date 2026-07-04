@@ -8,9 +8,12 @@ https://www.lozenadvisory.com/ -->
   var sc_invisible = 1;
   var sc_security = "54211339";
 </script>
-<script
-  type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js"
-  async
-></script>
+<script is:inline>
+  window.addEventListener("load", () => {
+    const statcounterScript = document.createElement("script");
+    statcounterScript.src = "https://www.statcounter.com/counter/counter.js";
+    statcounterScript.async = true;
+    document.body.appendChild(statcounterScript);
+  });
+</script>
 <!-- End of Statcounter Code -->
