@@ -29,7 +29,7 @@ tags:
 draft: true
 isFeatured: false
 ---
-Congressman Jay Obernolte (R-CA) and Congresswoman Lori Trahan (D-MA) released The Great American Artificial Intelligence Act discussion draft. The draft is not a bill about frontier AI development, in actuality, it is a bill about **evidence**. Sections 101 through 123 build a documentation-and-verification architecture for large frontier developers: written frameworks, pre-deployment risk reports, critical safety incident filings, and independent audits. Sections 241 through 257 build a parallel evidence architecture for workforce impact: AI-attributed layoff disclosures, occupational forecasts, and federal survey data on AI adoption. Both halves of the bill are asking the same underlying question from opposite directions:  **what happened, and can it be proven?**
+Congressman Jay Obernolte (R-CA) and Congresswoman Lori Trahan (D-MA) released a discussion draft of the Great American AI Act. The draft is not a bill about frontier AI development, in actuality, it is a bill about **evidence**. Sections 101 through 123 build a documentation-and-verification architecture for large frontier developers: written frameworks, pre-deployment risk reports, critical safety incident filings, and independent audits. Sections 241 through 257 build a parallel evidence architecture for workforce impact: AI-attributed layoff disclosures, occupational forecasts, and federal survey data on AI adoption. Both halves of the bill are asking the same underlying question from opposite directions:  **what happened, and can it be proven?**
 
 ## Why this matters to boards
 
