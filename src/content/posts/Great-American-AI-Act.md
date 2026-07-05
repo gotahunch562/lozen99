@@ -22,8 +22,6 @@ image:
 heroImage: /src/images/blog/blog-placeholder-blue.svg
 heroAlt: picture
 tags:
-  - AI Governance
-  - Name Standard
   - AI Accountability
   - Board Governance
 draft: true
