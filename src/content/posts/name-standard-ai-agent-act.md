@@ -23,7 +23,7 @@ tags:
   - AI Governance
   - Name Standard
   - Board Governance
-draft: true
+draft: false
 isFeatured: false
 ---
 On June 29, 2026, Senator Mark R. Warner (D-VA) released a discussion draft of the Artificial Intelligence Access, Gatekeeper Exchange, and Nondiscriminatory Transfer Act — the AI AGENT Act — proposing a federal framework for AI agents that act on a person's behalf online. The draft creates a new legal category, the "custodial user agent," and builds registration, documented delegation, record-keeping, and revocation requirements around it, administered by the Federal Trade Commission.
