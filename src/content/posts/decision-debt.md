@@ -11,9 +11,9 @@ excerpt: Technical debt slows software down, but decision debt exposes the
   than organizations can document, verify, or explain them, unpriced risk
   accumulates. Discover why closing the gap between machine speed and human
   accountability is the defining governance challenge for corporate boards.
-description: AI risk debt can increase the likelihood of operational failures
-  and reputational damage. Organizations accumulate governance risks when AI
-  speed of output outpaces human decision making.
+description: Organizations accumulate governance risks when AI speed of output
+  outpaces human decision making. AI risk debt increase the likelihood of
+  operational failures and reputational damage.
 image:
   url: /src/images/blog/decision-debt-lozen-advisory.avif
   alt: woman ceo sitting in an office flooded with money floating on top
@@ -23,6 +23,7 @@ tags:
   - AI Governance
   - Human Oversight
   - AI Workforce Risk
+  - Board Governance
 draft: false
 isFeatured: true
 ---
