@@ -7,12 +7,10 @@ pubDate: 2026-07-05
 datePublished: 2026-07-05
 dateModified: 2026-07-05
 category: AI Governance & Workforce Risk
-excerpt: The Great American AI Act discussion draft builds a rigorous
-  documentation and verification architecture for AI developers. However, for
-  executives tasked with board reporting, compliance metrics alone fail to
-  answer who is internally accountable before deployment. This analysis maps the
-  Name Standard℠ to the bill's provisions, providing leadership with a framework
-  to translate statutory evidence into operational accountability.
+excerpt: "The Great American AI Act discussion draft builds a documentation and
+  verification architecture for AI developers and workforce impact. The Name
+  Standard℠ asks the board-level question the draft leaves open: who is
+  accountable for interpreting the evidence before deployment?"
 description: Discover how the Name Standard℠ helps executives translate the
   Great American AI Act's governance evidence layer into clear board-level
   accountability.
@@ -29,11 +27,11 @@ tags:
 draft: true
 isFeatured: false
 ---
-Congressman Jay Obernolte (R-CA) and Congresswoman Lori Trahan (D-MA) released a discussion draft of the Great American AI Act. The draft is not a bill about frontier AI development, in actuality, it is a bill about **evidence**. Sections 101 through 123 build a documentation-and-verification architecture for large frontier developers: written frameworks, pre-deployment risk reports, critical safety incident filings, and independent audits. Sections 241 through 257 build a parallel evidence architecture for workforce impact: AI-attributed layoff disclosures, occupational forecasts, and federal survey data on AI adoption. Both halves of the bill are asking the same underlying question from opposite directions:  **what happened, and can it be proven?**
+Congressman Jay Obernolte (R-CA) and Congresswoman Lori Trahan (D-MA) released a discussion draft of the Great American AI Act. Although the draft is framed around frontier AI governance, its board-facing significance is evidence, it discusses: what must be documented, verified, reported, audited, and measured. Sections 101 through 123 build a documentation-and-verification architecture for large frontier developers: written frameworks, pre-deployment risk reports, critical safety incident filings, and independent audits. Sections 241 through 257 build a parallel evidence architecture for workforce impact: AI-attributed layoff disclosures, occupational forecasts, and federal survey data on AI adoption. Both halves of the bill are asking the same underlying question from opposite directions:  **what happened, and can it be proven?** That is one of the questions the [Name Standard℠ was built to ask](/disclosure-independent-governance/), and it sits directly underneath this bill's compliance architecture rather than inside it.
 
 ## Why this matters to boards
 
-Boards sitting above a large frontier developer, or above a company whose workforce is being reshaped by AI adoption, will increasingly be handed the *outputs* this bill requires: a frontier AI framework to approve, an [Independent Verification Organization (IVO) audit](https://www.house.mn.gov/comm/docs/2fshFN09g0WvUrdtb_BA0g.pdf) report to receive, a critical safety incident report to respond to, a WARN Act disclosure to sign off on. The bill is thorough about what must be produced and by when. It is comparatively silent on who inside the organization is accountable for interpreting that evidence and acting on it before the next report is due. That is [the question the Name Standard℠ was built to ask,](/disclosure-independent-governance/) and it sits directly underneath this bill's compliance architecture rather than inside it.
+Boards sitting above a large frontier developer, or above a company whose workforce is being reshaped by AI adoption, will increasingly be handed the outputs this bill requires: a frontier AI framework to approve, an [Independent Verification Organization (IVO) oversight model](https://www.house.mn.gov/comm/docs/2fshFN09g0WvUrdtb_BA0g.pdf) to understand, a critical safety incident report to respond to, and a WARN Act disclosure to oversee or review as part of workforce-risk reporting. 
 
 ## Mapping the Name Standard℠ to the GAAIA discussion draft
 
