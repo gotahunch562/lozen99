@@ -1,6 +1,6 @@
 ---
-title: "Four AI Governance Gaps Boards Are Missing Right Now"
-seo_title: "Four AI Governance Gaps Boards Are Missing Right Now"
+title: Four AI Governance Gaps Boards Are Missing Right Now
+seo_title: Four AI Governance Gaps Boards Are Missing Right Now
 subtitle: Most boards are talking about AI. Only 8% have adopted an approved AI
   tool for their governance work.
 slug: board-ai-governance-blind-spots
@@ -20,8 +20,8 @@ image:
   alt: Futuristic corporate board meeting at dusk
 heroImage: /src/images/blog/futuristic-corporate-meeting-at-dusk-1.avif
 heroAlt: Futuristic corporate board meeting at dusk
-draft: true
-isFeatured: false
+draft: false
+isFeatured: true
 ---
 Nasdaq's 3rd Annual Global Governance Pulse puts numbers behind what most directors already sense. Based on responses from more than 700 board members, CEOs, executives, and governance professionals, the survey found that nearly 20% report AI is not being discussed at the board level, while only 8% say their boards are actively using organization-approved AI tools. In other words, most boards are talking about AI, but very few have approved tools for their own governance work. The head of Nasdaq's governance solutions put the gap plainly: **the problem boards face isn't awareness anymore, it's readiness**.
 
