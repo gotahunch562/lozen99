@@ -44,7 +44,6 @@ interface Props {
   canonical?: string;
   eyebrow?: string;
   typeLabel?: string;
-  dateLabel?: string;
   textHeroLayout?: "wide" | "standard";
   articleJsonLd?: Record<string, unknown>[];
   railTitle?: string;
@@ -65,7 +64,6 @@ const {
   canonical,
   eyebrow,
   typeLabel,
-  dateLabel,
   articleJsonLd,
   railTitle = "Category Context",
   railItems = [],
@@ -108,9 +106,7 @@ const ogDescription = metaDescription ?? description;
           {eyebrow && (
             <span class="chub-hero__eyebrow">{eyebrow}</span>
           )}
-          {dateLabel && (
-            <span class="chub-hero__date">{dateLabel}</span>
-          )}
+
         </div>
 
         <!-- Title -->
@@ -278,15 +274,6 @@ const ogDescription = metaDescription ?? description;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--color-base-400);
-  }
-
-  .chub-hero__date {
-    margin-left: auto;
-    font-family: var(--font-sans);
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    color: var(--color-base-500);
   }
 
   .chub-hero__title {
