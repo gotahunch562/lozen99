@@ -15,14 +15,13 @@ description: A Lozen Advisory mapping of how the Name Standard℠ applies to the
   and records requirements for board secretaries, governance officers, and
   reporting executives.
 image:
-  url: /src/images/blog/blog-placeholder-blue.svg
+  url: /src/images/blog/name-standardsm-maps-to-the-ai-agent-act.avif
   alt: picture
-heroImage: /src/images/blog/blog-placeholder-blue.svg
+heroImage: /src/images/blog/name-standardsm-maps-to-the-ai-agent-act.avif
 heroAlt: picture
 tags:
   - AI Governance
   - Name Standard
-  - AI Accountability
   - Board Governance
 draft: true
 isFeatured: false
