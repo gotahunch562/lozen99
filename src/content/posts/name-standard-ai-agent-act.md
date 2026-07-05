@@ -52,4 +52,6 @@ Measured against the Name Standard℠, this **[AI AGENT Act**](https://www.warne
 
 For board secretaries and governance officers, that asymmetry is the real takeaway, not the checklist. A certification, a data-security policy, and a real-time log can all exist correctly and still leave the board's real question unanswered: when a delegated AI agent acts, who inside this organization can explain, verify, stop, and own that action? For four of five pillars, this draft does not yet answer it — which means that answer has to come from your own governance structure, not the statute.
 
+For the board-level argument on why the Act’s behavioral duties cannot be evidentiary enforced — including sycophancy, confabulation, and drift — see The AI Agent Act: The Board Evidence Gap in AI Loyalty.
+
 For the full framework behind this mapping, see [The Name Standard℠](/blog/the-name-standard-ai-governance/). Board-facing teams evaluating whether their AI governance structure has a Name Standard℠ gap can [request a Governance Readiness Briefing](/request-briefing/).
