@@ -1,6 +1,8 @@
 ---
-title: How the Name Standard℠ Maps to the Great American AI Act's Board Readiness
+title: How the Name Standard℠ Maps to the Great American AI Act
 seo_title: "Great American AI Act: AI Governance Evidence for Board Reporting"
+subtitle: A Name Standard℠ mapping of documentation, verification, revocation,
+  and human accountability requirements.
 slug: great-american-ai-act-name-standard
 pubDate: 2026-07-05
 datePublished: 2026-07-05
