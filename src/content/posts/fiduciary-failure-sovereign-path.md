@@ -6,6 +6,12 @@ pubDate: 2026-06-08
 datePublished: 2026-06-08
 dateModified: 2026-07-04
 category: AI Governance & Workforce Risk
+excerpt: Authorizing AI investment while remaining blind to the concurrent
+  erosion of the human capacity those systems depend on crosses into willful
+  blindness under regulatory scrutiny. This analysis provides executive
+  leadership with a diagnostic framework for evaluating fiduciary exposure and
+  identifying where AI investment depends on human capacity the organization has
+  not measured, priced, protected, or governed.
 description: Evaluate D&O exposure under the Caremark doctrine and identify
   where AI investments rely on human capacity the organization has not measured
   or protected.
@@ -67,7 +73,7 @@ The board that authorizes AI investment under these conditions is not ignorant. 
 
 ---
 
-## The Fiduciary Protocol: Questions for Leadership
+## Fiduciary Evaluation: Questions for Leadership
 
 Executive leadership teams, Chief Legal Officers, and governing boards can use the following diagnostic questions to evaluate exposure:
 
