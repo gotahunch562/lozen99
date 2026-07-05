@@ -13,21 +13,18 @@ excerpt: "Corporate boards are accelerating AI capital allocation on the premise
   establishes the Capacity Substitution Error℠ — the concurrency of AI
   investment and leadership capacity erosion that standard governance
   instruments cannot see."
-description: Discover why concurrent AI capital expenditure and Invisible
-  Attrition℠ create a structural board blind spot. Map structural capacity risk
-  beneath technology scaling and unmeasured key talent.
+description: Discover how boards trigger the Capacity Substitution Error℠ by
+  approving AI productivity solutions while the human capacity that investment
+  depends on silently deteriorates.
 image:
   url: /src/images/blog/capacity-attrition-1.avif
   alt: woman walking down stairs paper flying
 heroImage: /src/images/blog/capacity-attrition.avif
 heroAlt: woman walking down stairs paper flying
 tags:
-  - Workplace Disclosure
-  - Disclosure Independence
   - Invisible Attrition
-  - Tacere
-  - Power User Trap
-  - Research & Policy
+  - Board Governance
+  - Capacity Substitution Error
 draft: false
 isFeatured: false
 ---
