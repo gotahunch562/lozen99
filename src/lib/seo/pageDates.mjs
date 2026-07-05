@@ -30,11 +30,12 @@ const AI_WORKFORCE_BASELINE_LASTMOD = "2026-05-31";
 
 const EXPLICIT_PAGE_DATES = new Map([
   ["/ai-workforce-materiality-briefing/", "2026-05-31"],
-  ["/disclosure-independent-governance/", "2026-07-03"],
-  ["/frameworks/power-user-trap/", "2026-07-03"],
+  ["/disclosure-independent-governance/", "2026-07-04"],
+  ["/frameworks/power-user-trap/", "2026-07-04"],
+  ["/frameworks/committee-ownership-map/", "2026-07-04"],
   ["/news-press/menopause-market-correction/", "2026-05-19"],
   ["/voluntary-benefit-disclosure-gap/", "2026-04-27"],
-  ["/", "2026-07-03"],
+  ["/", "2026-07-04"],
   ["/menopause-and-the-law/", "2026-06-06"],
 ]);
 
