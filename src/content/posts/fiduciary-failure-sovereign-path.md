@@ -1,5 +1,6 @@
 ---
-title: Fiduciary Failure and the Sovereign Path
+title: Fiduciary Failure and the Board Governance Gap
+seo_title: Fiduciary Failure and the Board Governance Gap
 slug: fiduciary-failure-sovereign-path
 pubDate: 2026-06-08
 datePublished: 2026-06-08
@@ -10,9 +11,9 @@ description: Evaluate D&O exposure under the Caremark doctrine and identify
   or protected.
 image:
   url: /src/images/blog/the-sovereign-path.avif
-  alt: satisfy fiduciary obligations with paperwork
+  alt: man at desk working to satisfy fiduciary obligations paperwork
 heroImage: /src/images/blog/the-sovereign-path-1.avif
-heroAlt: satisfy fiduciary obligations with paperwork
+heroAlt: man at desk working to satisfy fiduciary obligations paperwork
 tags:
   - Invisible Attrition
   - Workplace Disclosure
