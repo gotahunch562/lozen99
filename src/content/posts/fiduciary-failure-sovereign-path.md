@@ -45,15 +45,15 @@ When reporting mechanisms treat specialized departures as routine headcount even
 
 ---
 
-## Disclosure-Independent Governance
+## Disclosure-Independent Governance℠
 
-[Disclosure-Independent Governance](/disclosure-independent-governance/) is Lozen Advisory's category framework for evaluating institutional risk that legacy measurement systems were not built to detect. The fiduciary exposure described above is a governance architecture problem — not a technology problem, not a talent problem, and not a compliance problem. It is a board evidence problem.
+[Disclosure-Independent Governance℠](/disclosure-independent-governance/) is Lozen Advisory’s methodology for identifying systemic risks that legacy measurement systems are structurally blind to. The fiduciary exposure described above is a governance architecture problem — not a technology problem, not a talent problem, and not a compliance problem. It is a board evidence problem.
 
 Four Lozen Advisory frameworks apply directly to the diagnostic:
 
 **[Capacity Substitution Error℠](/blog/talent-attrition-cfo-risk/)** — The board approves AI investment as a capacity solution while the human capacity baseline that investment depends on is unmeasured or deteriorating. Technology is priced as an asset. Human retention is treated as an optimized expense. The balance sheet illusion accumulates.
 
-**[Tacere](/invisible-attrition/structural-silence/)** — The individual whose capacity is eroding has correctly calculated that disclosure carries professional risk greater than the cost of quiet departure. The board never receives the signal because the signal was never generated. This is not a psychological safety failure. It is a rational response to an incentive structure that disclosure-dependent monitoring cannot penetrate.
+**[Tacere](/invisible-attrition/structural-silence/)** — The individual whose capacity is eroding has correctly calculated that disclosure carries professional risk greater than the cost of quiet departure. The board never receives a record because the condition was never disclosed. This is not a psychological safety failure. It is a rational response to an incentive structure that disclosure-dependent monitoring cannot penetrate.
 
 **[The Power User Trap℠](/frameworks/power-user-trap/)** — AI adoption concentrates verification, correction, escalation, and accountability burdens inside a small group of employees with technical proficiency and deep institutional knowledge. The organization reads their continued output as proof that AI adoption is working. The governance function absorbing that burden is invisible, uncompensated, and one departure away from collapse.
 
