@@ -6,14 +6,14 @@ pubDate: 2026-07-05
 datePublished: 2026-07-05
 dateModified: 2026-07-05
 category: AI Governance & Workforce Risk
-excerpt: The AI Agent Act establishes behavioral duties for AI agents — loyalty,
+excerpt: The AI Agent Act establishes behavioral duties for AI agents loyalty,
   privacy, portability. What it does not establish is the evidentiary
   infrastructure to prove those duties were honored when something goes wrong.
   That gap is not an oversight. It is the structural limit of legislation that
   regulates intent without requiring proof.
 description: The AI Agent Act mandates AI loyalty but lacks the evidentiary
   infrastructure to prove it. Discover why this creates a severe accountability
-  gap for corporate boards.
+  and governance gap for corporate boards.
 image:
   url: /src/images/blog/ai-agent-act-draft-compliance.avif
   alt: "woman on computer AI AGENT ACT: LOYALTY DUTY ANALYSIS"
@@ -45,7 +45,7 @@ The agent that validates a flawed investment thesis, confirms a mistaken belief,
 
 If the agent produces confident misinformation in the user's interest, the loyalty duty and the harm are indistinguishable. The agent was faithful and the output was wrong and the user relied on it.
 
-The Act does not establish an accuracy standard. It does not require the agent to flag uncertainty, disclose its confidence level, or produce any record that the output was generated rather than retrieved. A user who acts on AI-generated misinformation and suffers harm has, under the Act's framing, received loyal service.
+The [AI Agent Act](https://www.warner.senate.gov/wp-content/uploads/2026/06/DRAFT.AI_AGENT_Act_onepager.v2.pdf) does not establish an accuracy standard. It does not require the agent to flag uncertainty, disclose its confidence level, or produce any record that the output was generated rather than retrieved. A user who acts on AI-generated misinformation and suffers harm has, under the Act's framing, received loyal service.
 
 ---
 
