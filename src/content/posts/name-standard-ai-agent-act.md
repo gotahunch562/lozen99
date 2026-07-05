@@ -16,9 +16,9 @@ description: A Lozen Advisory mapping of how the Name Standard℠ applies to the
   reporting executives.
 image:
   url: /src/images/blog/name-standardsm-maps-to-the-ai-agent-act.avif
-  alt: picture
+  alt: "Board secretary mapping of the Name Standard℠ to the AI AGENT Act "
 heroImage: /src/images/blog/name-standardsm-maps-to-the-ai-agent-act.avif
-heroAlt: picture
+heroAlt: "Board secretary mapping of the Name Standard℠ to the AI AGENT Act "
 tags:
   - AI Governance
   - Name Standard
