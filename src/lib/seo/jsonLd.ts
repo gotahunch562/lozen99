@@ -202,7 +202,7 @@ const DEFAULT_AUTHOR_NAME = "Akilah E. Kamaria";
 const DEFAULT_FRAMEWORK_TERM_SET_ID = `${SITE_URL}/#lozen-frameworks`;
 const DEFAULT_FRAMEWORK_TERM_SET_NAME = "Lozen Advisory Frameworks";
 const DEFAULT_FRAMEWORK_TERM_SET_DESCRIPTION =
-  "A set of proprietary analytical frameworks developed by Lozen Advisory to describe disclosure-dependent workforce measurement gaps, retention risk, and leadership capacity erosion.";
+  "Proprietary analytical frameworks developed by Lozen Advisory for disclosure-dependent workforce risk, AI governance accountability, board evidence, human attribution, and leadership capacity erosion — the governance architecture for institutional risk that legacy systems were not built to detect.";
 
 const compact = <T>(items: Array<T | false | null | undefined>): T[] =>
   items.filter(Boolean) as T[];
