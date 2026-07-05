@@ -1,9 +1,9 @@
 ---
 title: "Four AI Governance Gaps Boards Are Missing Right Now "
-seo_title: ai-governance-board-readiness
+seo_title: "Four AI Governance Gaps Boards Are Missing Right Now "
 subtitle: 81% of boards are discussing AI. Only 8% have adopted an approved AI
   tool for their governance work.
-slug: ai-governance-board-readiness
+slug: board-ai-governance-blind-spots
 pubDate: 2026-07-04
 datePublished: 2026-07-04
 dateModified: 2026-07-04
@@ -16,16 +16,16 @@ description: "4 specific AI governance gaps showing up in boardrooms right now:
   data currency, accountability diffusion, evidence trails, and operating
   exposure. None require a rule violation to create real risk."
 image:
-  url: /src/images/blog/blog-placeholder-blue.svg
-  alt: Readiness Is Not Compliance
-heroImage: /src/images/blog/tender-path-hero.avif
-heroAlt: Readiness Is Not Compliance
+  url: /src/images/blog/futuristic-corporate-meeting-at-dusk.avif
+  alt: Futuristic corporate board meeting at dusk
+heroImage: /src/images/blog/futuristic-corporate-meeting-at-dusk-1.avif
+heroAlt: Futuristic corporate board meeting at dusk
 draft: true
 isFeatured: false
 ---
-Nasdaq's 3rd Annual Global Governance Pulse a survey of 701 board members, executives, and governance professionals  puts numbers behind what most directors already sense. Ninety-six percent expect sustained or increasing scrutiny on boards over the next 12 months. AI and machine learning more than doubled as a top organizational concern year-over-year, rising from 19% to 40%. **And 81% of boards are actively discussing AI — but only 8% have adopted an approved AI governance tool for their own work.** The head of Nasdaq's governance solutions put the gap plainly: **the problem boards face isn't awareness anymore, it's readiness**.
+Nasdaq's 3rd Annual Global Governance Pulse a survey of 701 board members, executives, and governance professionals  puts numbers behind what most directors already sense. Ninety-six percent expect sustained or increasing scrutiny on boards over the next 12 months. AI and machine learning more than doubled as a top organizational concern year-over-year, rising from 19% to 40%. **And, 81% of boards are actively discussing AI — but only 8% have adopted an approved AI governance tool for their own work.** The head of Nasdaq's governance solutions put the gap plainly: **the problem boards face isn't awareness anymore, it's readiness**.
 
-Generic, templated governance language is turning from a safe default into a liability, and a board must now shape and define itself for managing the future of AI embedded organizations. Board readiness is the maxim of the day.
+Generic, templated governance language is turning from a safe default into an active liability, and a board must now shape and define itself for managing the future of AI embedded organizations. Board readiness is the maxim of the day.
 
 That 73-point gap between discussing AI and being equipped to govern it is not a posture problem. What actually creates exposure isn't a vague atmosphere of unreadiness — it's a small number of specific, recurring gaps, showing up across boardrooms right now as AI shifts from a tool a company uses into something closer to an operating layer the company runs on.
 
@@ -51,11 +51,11 @@ The board isn't unaware that AI is in use. It's looking at data that was accurat
 
 Traditional accountability models — RACI charts, committee charters, approval workflows — were built around people. They assign responsibility cleanly when a human does the work, makes the recommendation, and signs their name to it. They get murky fast when an AI system is doing the drafting, the ranking, the escalating, or the recommending, and a human is only confirming a decision the system has already substantially made.
 
-The question this creates isn't "did we follow the rule." It's: when this output causes a problem, who is the accountable person, and did that person actually have the authority, time, and information to exercise real judgment — or did they just sign something that was already decided?
+The question this creates isn't "did we follow the rule." It's: when this output causes a problem, who is the accountable person, and did that person actually have the authority, time, and information to exercise real judgment, or did they just sign something that was already decided?
 
-Enforcement is already answering that question for companies that can't. Delphia (USA) Inc. claimed to use machine learning to transform client personal data into investable capital. The SEC found the company did not possess the algorithm or capability to process that data — meaning no accountable person could have verified the capability claim before it reached investors. Global Predictions Inc. marketed itself as the "first regulated AI financial advisor." Someone signed off on that language. The SEC found it unsubstantiated. AppLovin now faces a federal securities fraud class action alleging that AI-driven advertising software capability claims were overstated at the board level. In each case, the governance failure wasn't that AI was used. It was that no accountable person with the authority, time, and information to verify the claim was required to do so before it was made.
+Enforcement is already answering that question for companies that can't. Delphia (USA) Inc. claimed to use machine learning to transform client personal data into investable capital. The SEC found the company did not possess the algorithm or capability to process that data, meaning no accountable person could have verified the capability claim before it reached investors. Global Predictions Inc. marketed itself as the "first regulated AI financial advisor." Someone signed off on that language. The SEC found it unsubstantiated. AppLovin now faces a federal securities fraud class action alleging that AI-driven advertising software capability claims were overstated at the board level. In each case, the governance failure wasn't that AI was used. It was that no accountable person with the authority, time, and information to verify the claim was required to do so before it was made.
 
-Most organizations cannot answer the ownership question with evidence today. That gap doesn't show up until someone asks it under pressure — and increasingly, that someone is a regulator or a plaintiff's attorney. The ownership gap — the absence of a named, accountable human behind AI-assisted output — is the central accountability problem [Disclosure-Independent Governance](/disclosure-independent-governance/) classifies: when organizations have AI policies, AI adoption metrics, and AI governance language, and still cannot identify the human responsible for what the AI did.
+Most organizations cannot answer the ownership question with evidence today. That gap doesn't show up until someone asks it under pressure, and increasingly, that someone is a regulator or a plaintiff's attorney. The ownership gap, the absence of a named, accountable human behind AI-assisted output,  is the central accountability problem [Disclosure-Independent Governance](/disclosure-independent-governance/) classifies: when organizations have AI policies, AI adoption metrics, and AI governance language, and still cannot identify the human responsible for what the AI did.
 
 ---
 
@@ -65,11 +65,11 @@ Most organizations cannot answer the ownership question with evidence today. Tha
 
 AI use generates a lot of material that was never meant to become part of the official record — draft summaries, alternate versions, prompts, parallel notes that are more complete than the minutes a company actually adopts. Without a consistent, defensible policy for what gets kept, what gets deleted, and on what schedule, that material sits there as a liability with no upside: it doesn't make the company's decisions any better, and it gives a future challenger more to search through than they would have had otherwise.
 
-The pain point isn't "are we using AI in a way that's against the rules." It's: if someone — a regulator, a plaintiff's attorney, an activist investor — went looking for the record behind a decision, would what they find support the story the company tells about how that decision was made, or contradict it?
+The pain point isn't "are we using AI in a way that's against the rules." It's: if someone, a regulator, a plaintiff's attorney, an activist investor, went looking for the record behind a decision, would what they find support the story the company tells about how that decision was made, or contradict it?
 
-That is the synthetic subpoena test. [Disclosure-Independent Governance](/disclosure-independent-governance/) frames it as the Documentation Infrastructure question — whether the human validation process is tangibly logged before someone external goes looking, not reconstructed after.
+That is the synthetic subpoena test. [Disclosure-Independent Governance](/disclosure-independent-governance/) frames it as the Documentation Infrastructure question, whether the human validation process is tangibly logged before someone external goes looking, not reconstructed after.
 
-Joonko's CEO Ilit Raz raised $27 million from investors by claiming the company ran an advanced AI recruiting platform. The SEC went looking. What they found contradicted the story entirely — the platform was largely non-existent, running parallel to a DOJ criminal indictment for wire and securities fraud. GitLab faces investor litigation alleging that internal data about AI product adoption and revenue viability didn't match what the company told the market. The discovery problem isn't hypothetical. It is the mechanism by which AI governance failures become legal events.
+Joonko's CEO Ilit Raz raised $27 million from investors by claiming the company ran an advanced AI recruiting platform. The SEC went looking. What they found contradicted the story entirely, the platform was largely non-existent, running parallel to a DOJ criminal indictment for wire and securities fraud. GitLab faces investor litigation alleging that internal data about AI product adoption and revenue viability didn't match what the company told the market. The discovery problem isn't hypothetical. It is the mechanism by which AI governance failures become legal events.
 
 ---
 
@@ -79,15 +79,15 @@ Joonko's CEO Ilit Raz raised $27 million from investors by claiming the company 
 
 The risk surface around AI is no longer just the large model providers everyone has already vetted. It's the smaller vendors handling one narrow process, the ongoing compute cost that can exceed the upfront investment, and disclosure language that's technically accurate but increasingly easy for outside systems to compare against every peer filing and flag as thin. None of that requires a rule violation to become a real problem. It just requires nobody owning the job of watching it continuously.
 
-Boards are used to organizing attention around discrete decisions — approve the investment, review the policy, sign off on the vendor. This kind of exposure doesn't announce itself at a decision point. It accumulates quietly until it's discovered, usually by someone outside the company.
+Boards are used to organizing attention around discrete decisions; approve the investment, review the policy, sign off on the vendor. This kind of exposure doesn't announce itself at a decision point. It accumulates quietly until it's discovered, usually by someone outside the company.
 
-[The FTC's recent enforcement sweeps](https://www.ftc.gov/news-events/news/press-releases/2026/01/ftc-secures-settlement-banning-growth-cave-defendants-marketing-selling-business-opportunities) illustrate how quickly smaller vendor relationships become board-level problems. Growth Cave and Workado sold AI-driven business income schemes that failed to perform — enforcement actions that began with consumer marketing claims and escalated into formal FTC resolutions. IntelliVision Technologies was penalized for grossly misrepresenting the accuracy of AI-powered consumer tracking software. None of these started as board-level events. They accumulated in the vendor and marketing layer until regulators arrived. The board that wasn't watching the narrow-process vendors is the board that finds out about the exposure in a headline.
+[The FTC's recent enforcement sweeps](https://www.ftc.gov/news-events/news/press-releases/2026/01/ftc-secures-settlement-banning-growth-cave-defendants-marketing-selling-business-opportunities) illustrate how quickly smaller vendor relationships become board-level problems. Growth Cave and Workado sold AI-driven business income schemes that failed to perform and led to enforcement actions that began with consumer marketing claims. IntelliVision Technologies was penalized for grossly misrepresenting the accuracy of AI-powered consumer tracking software. None of these started as board-level events. They accumulated in the vendor and marketing layer until regulators arrived. The board that did not have small vendors on their radar is the board that finds out about the exposure in a headline.
 
 ---
 
 ## Lozen Identifies AI Governance Gaps
 
-Each of these gaps tempts a board toward the same reflex: ask counsel whether the company is compliant. That instinct isn't wrong, but it's answering a different question than the one that's actually exposed. A company can be fully compliant and still not be able to name the accountable person behind an agent's decision, still have an evidence trail that wouldn't survive scrutiny, still be carrying operating exposure no one is tracking. Compliance tells you whether a rule was followed. It doesn't tell you whether the governance underneath the rule would hold up if someone went looking.
+Each of these gaps causes a board to ask reflexively toward the same action: ask General Counsel whether the company is compliant. That instinct isn't wrong, but it's answering a different question than the one that's actually exposed. A company can be fully compliant, and still not be able to name the accountable person behind an agent's decision, still have an evidence trail that wouldn't survive scrutiny, still be carrying operating exposure no one is tracking. Compliance tells you whether a rule was followed. It doesn't tell you whether the governance underneath the rule would hold up if someone went looking.
 
 That's the lane Lozen Advisory works in:
 
@@ -113,8 +113,8 @@ Neither tool will tell a board it's compliant. That was never the job. The job i
 
 **Want to see where your own board's record currently stands?**
 
-[Explore the Disclosure-Independent Governance framework →](https://claude.ai/disclosure-independent-governance/)
+[Explore the Disclosure-Independent Governance framework →](/disclosure-independent-governance/)
 
-[Explore the AI Legislation Tracker →](https://www.lozenadvisory.com/ai-legislation-tracker/)
+[Explore the AI Legislation Tracker →](/ai-legislation-tracker/)
 
-[Request a governance readiness briefing →](https://www.lozenadvisory.com/ai-workforce-materiality-briefing/)
+[Request a governance readiness briefing →](/ai-workforce-materiality-briefing/)
