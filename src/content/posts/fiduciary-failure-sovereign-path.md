@@ -3,27 +3,21 @@ title: Fiduciary Failure and the Sovereign Path
 slug: fiduciary-failure-sovereign-path
 pubDate: 2026-06-08
 datePublished: 2026-06-08
-dateModified: 2026-06-11
+dateModified: 2026-07-04
 category: AI Governance & Workforce Risk
-excerpt: Authorizing extensive automated platforms while remaining blind to the
-  concurrent liquidation of core human architecture moves past passive oversight
-  and crosses into willful blindness under regulatory scrutiny. This final
-  installment provides executive leadership with a diagnostic protocol for
-  reclaiming institutional sovereignty and satisfying fiduciary obligations.
-description: Evaluate corporate director and officer (D&O) exposure under the
-  Caremark doctrine. Apply the Sovereign Capacity Model to identify where AI
-  investment depends on human capacity the organization has not measured,
-  priced, protected, or governed.
+description: Evaluate D&O exposure under the Caremark doctrine and identify
+  where AI investments rely on human capacity the organization has not measured
+  or protected.
 image:
   url: /src/images/blog/the-sovereign-path.avif
   alt: satisfy fiduciary obligations with paperwork
 heroImage: /src/images/blog/the-sovereign-path-1.avif
 heroAlt: satisfy fiduciary obligations with paperwork
 tags:
-  - Legal Profession
-  - Research & Policy
   - Invisible Attrition
   - Workplace Disclosure
+  - Board Governance
+  - Human-Capital Exposure
 draft: false
 isFeatured: false
 ---
