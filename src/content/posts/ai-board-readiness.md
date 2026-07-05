@@ -39,7 +39,7 @@ None of these four gaps are compliance failures. A board can follow every applic
 
 Most board reporting software was built for a world that moved on a predictable cadence: collect data, prepare a deck, review it at the meeting, wait for the next one. AI doesn't move on that cadence. Risk, vendor exposure, and decision-making inside the company can shift meaningfully in the weeks between board meetings, while the dashboard in front of directors still reflects the last snapshot.
 
-The board isn't unaware that AI is in use. It's looking at data that was accurate when it was pulled and is no longer a reliable picture of where the exposure actually sits. That's not a disclosure problem or a compliance gap — it's a data-currency problem, and it's invisible until something happens between meetings that nobody flags in time.
+The board isn't unaware that AI is in use. It's looking at data that was accurate when it was pulled and is no longer a reliable picture of where the exposure actually sits. That's not a disclosure problem or a compliance gap — it's a data-currency problem, and it's invisible until something happens.
 
 ---
 
@@ -53,7 +53,7 @@ The question this creates isn't "did we follow the rule." It's: when this output
 
 Enforcement is already answering that question for companies that can't. The SEC charged Delphia (USA) Inc. and Global Predictions Inc. with making false and misleading statements about their purported use of AI; Delphia agreed to pay a $225,000 civil penalty, and Global Predictions agreed to pay a $175,000 civil penalty. For a board-facing governance team, the lesson is not simply that the claims were false. It is that AI capability claims need a named verification owner before they reach investors, customers, or the board. AppLovin has disclosed securities and shareholder derivative complaints alleging materially false and misleading statements regarding its advertising solutions and financial growth, including claims tied to its AI-enabled advertising platform. Across these examples, the governance concern is not simply that AI was used or claimed. It is whether a named person with authority, time, and information verified the claim before it was made.
 
-Most organizations cannot answer the ownership question with evidence today. That gap doesn't show up until someone asks it under pressure, and increasingly, that someone is a regulator or a plaintiff's attorney. The ownership gap — the absence of a named, accountable human behind AI-assisted output — is the central accountability problem [Disclosure-Independent Governance℠](/disclosure-independent-governance/) classifies: when organizations have AI policies, AI adoption metrics, and AI governance language, and still cannot identify the human responsible for what the AI did.
+Most organizations cannot answer the ownership question with evidence today. That gap doesn't show up until someone asks it under pressure, and increasingly, that someone is a regulator or a plaintiff's attorney. The ownership gap — the absence of a named, accountable human behind AI-assisted output — is the central accountability problem Disclosure-Independent Governance℠ classifies: when organizations have AI policies, AI adoption metrics, and AI governance language, and still cannot identify the human responsible for what the AI did.
 
 ---
 
@@ -65,7 +65,7 @@ AI use generates a lot of material that was never meant to become part of the of
 
 The pain point isn't "are we using AI in a way that's against the rules." It's: if someone — a regulator, a plaintiff's attorney, an activist investor — went looking for the record behind a decision, would what they find support the story the company tells about how that decision was made, or contradict it?
 
-That is the synthetic subpoena test. [Disclosure-Independent Governance℠](/disclosure-independent-governance/) frames it as the Documentation Infrastructure question: whether the human validation process is tangibly logged before someone external goes looking, not reconstructed after.
+That is the synthetic subpoena test. Disclosure-Independent Governance℠ frames it as the Documentation Infrastructure question: whether the human validation process is tangibly logged before someone external goes looking, not reconstructed after.
 
 Joonko's former CEO, Ilit Raz, faced SEC and DOJ actions after allegedly making false claims about the company's AI recruiting technology and customer base while raising investor funds. GitLab has faced investor litigation alleging that internal data about AI product adoption and revenue viability did not match public statements about the company's AI-related growth story. The discovery problem isn't hypothetical. It is the mechanism by which AI governance failures become legal events.
 
