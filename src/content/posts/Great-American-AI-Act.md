@@ -27,13 +27,13 @@ tags:
 draft: true
 isFeatured: false
 ---
-Congressman Jay Obernolte (R-CA) and Congresswoman Lori Trahan (D-MA) released a discussion draft of the Great American AI Act. Although the draft is framed around frontier AI governance, its board-facing significance is evidence: what must be documented, verified, reported, audited, and measured.
+Congressman Jay Obernolte (R-CA) and Congresswoman Lori Trahan (D-MA) released a discussion draft of the Great American AI Act (GAAIA). Although the draft is framed around frontier AI governance, its board-facing significance is evidence: what must be documented, verified, reported, audited, and measured.
 
 For Lozen Advisory, that places the draft squarely inside [Disclosure-Independent Governance](/disclosure-independent-governance/): the governance discipline for evaluating risks that legacy reporting systems were not built to see. The [Name Standard℠](/blog/the-name-standard-ai-governance/) is the part of that discipline that asks whether evidence can be traced to a responsible human or institutional actor.
 
 Sections 101 through 123 build a documentation-and-verification architecture for large frontier developers: written frameworks, pre-deployment risk reports, critical safety incident filings, independent audits, and model documentation templates. Sections 241 through 257 build a parallel evidence architecture for workforce impact: AI-attributed layoff disclosures, occupational forecasts, and federal survey data on AI adoption. Both halves of the bill are asking the same underlying question from opposite directions: **what happened, and can it be proven?**
 
-## Why this matters to boards
+## Why GIAAIA matters to corporate boards?
 
 Boards sitting above a large frontier developer, or above a company whose workforce is being reshaped by AI adoption, will increasingly be handed the outputs this bill requires: a frontier AI framework to approve, an Independent Verification Organization (IVO) audit report to understand, a critical safety incident report to respond to, and a WARN Act disclosure to review as part of workforce-risk oversight.
 
