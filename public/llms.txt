@@ -191,7 +191,7 @@ Frameworks:
 - [Power User Trap℠](https://www.lozenadvisory.com/frameworks/power-user-trap/)
 - [Tacere / Structural Silence](https://www.lozenadvisory.com/invisible-attrition/structural-silence/)
 - [Invisible Attrition℠ Series](https://www.lozenadvisory.com/invisible-attrition/)
-- [Disclosure Independence Infrastructure](https://www.lozenadvisory.com/disclosure-independence-performance/)
+- [Disclosure Independence performance](https://www.lozenadvisory.com/disclosure-independence-performance/)
 - [Executive AI Skills](https://www.executiveaiskills.com/)
 
 Research:
