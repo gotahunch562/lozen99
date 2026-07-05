@@ -7,7 +7,7 @@ slug: great-american-ai-act-name-standard
 pubDate: 2026-07-05
 datePublished: 2026-07-05
 dateModified: 2026-07-05
-category: AI Governance & Workforce Risk
+category: GRC
 excerpt: "The Great American AI Act discussion draft builds a documentation and
   verification architecture for AI developers and workforce impact. The Name
   Standard℠ asks the board-facing question the draft leaves open: who is
@@ -29,7 +29,7 @@ isFeatured: false
 ---
 Congressman Jay Obernolte (R-CA) and Congresswoman Lori Trahan (D-MA) released a discussion draft of the Great American AI Act (GAAIA). Although the draft is framed around frontier AI governance, its board-facing significance is evidence: what must be documented, verified, reported, audited, and measured.
 
-For Lozen Advisory, that places the draft squarely inside [Disclosure-Independent Governance](/disclosure-independent-governance/): the governance discipline for evaluating risks that legacy reporting systems were not built to see. The Name Standard℠ is the part of that discipline that asks whether evidence can be traced to a responsible human or institutional actor.
+For Lozen Advisory, that places the draft squarely inside [Disclosure-Independent Governance℠](/disclosure-independent-governance/) — Lozen Advisory’s methodology for identifying systemic risks that legacy measurement systems are structurally blind to. The Name Standard℠ is the part of that methodology that asks whether evidence can be traced to a responsible human or institutional actor.
 
 Sections 101 through 123 build a documentation-and-verification architecture for large frontier developers: written frameworks, pre-deployment risk reports, critical safety incident filings, independent audits, and model documentation templates. Sections 241 through 257 build a parallel evidence architecture for workforce impact: AI-attributed layoff disclosures, occupational forecasts, and federal survey data on AI adoption. Both halves of the bill are asking the same underlying question from opposite directions: **what happened, and can it be proven?**
 
