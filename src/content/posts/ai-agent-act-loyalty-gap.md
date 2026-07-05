@@ -1,12 +1,13 @@
 ---
-title: "The AI Agent Act Has a Loyalty Problem"
+title: "The AI Agent Act: The Board Evidence Gap in AI Loyalty"
+seo_title: "The AI Agent Act: The Board Evidence Gap in AI Loyalty"
 slug: ai-agent-act-loyalty-gap
 pubDate: 2026-07-05
 datePublished: 2026-07-05
 dateModified: 2026-07-05
 category: AI Governance & Workforce Risk
 excerpt: "The AI Agent Act establishes behavioral duties for AI agents — loyalty, privacy, portability. What it does not establish is the evidentiary infrastructure to prove those duties were honored when something goes wrong. That gap is not an oversight. It is the structural limit of legislation that regulates intent without requiring proof."
-description: "The AI Agent Act establishes behavioral duties but no evidentiary infrastructure. Loyalty, sycophancy, confabulation, and drift create accountability gaps the Name Standard℠ is built to close."
+description: "The AI Agent Act mandates AI loyalty but lacks the evidentiary infrastructure to prove it. Discover why this creates a severe accountability gap for corporate boards."
 tags:
   - AI Governance
   - Board Evidence
