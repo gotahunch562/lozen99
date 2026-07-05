@@ -6,18 +6,27 @@ pubDate: 2026-07-05
 datePublished: 2026-07-05
 dateModified: 2026-07-05
 category: AI Governance & Workforce Risk
-excerpt: "The AI Agent Act establishes behavioral duties for AI agents — loyalty, privacy, portability. What it does not establish is the evidentiary infrastructure to prove those duties were honored when something goes wrong. That gap is not an oversight. It is the structural limit of legislation that regulates intent without requiring proof."
-description: "The AI Agent Act mandates AI loyalty but lacks the evidentiary infrastructure to prove it. Discover why this creates a severe accountability gap for corporate boards."
+excerpt: The AI Agent Act establishes behavioral duties for AI agents — loyalty,
+  privacy, portability. What it does not establish is the evidentiary
+  infrastructure to prove those duties were honored when something goes wrong.
+  That gap is not an oversight. It is the structural limit of legislation that
+  regulates intent without requiring proof.
+description: The AI Agent Act mandates AI loyalty but lacks the evidentiary
+  infrastructure to prove it. Discover why this creates a severe accountability
+  gap for corporate boards.
+image:
+  url: /src/images/blog/blog-placeholder-blue.svg
+  alt: test
+heroImage: /src/images/blog/blog-placeholder-blue.svg
+heroAlt: test
 tags:
   - AI Governance
-  - Board Evidence
   - Name Standard
-  - AI Agents
-  - Research & Policy
-draft: false
+  - AI Accountability
+  - GRC
+draft: true
 isFeatured: false
 ---
-
 The AI Agent Act opens digital markets to consumer-empowering AI intermediaries. It establishes a framework in which agents act with a duty of loyalty to their user, protect user data, and allow users to move freely between platforms. The intent is clear. The enforcement architecture is not.
 
 [Disclosure-Independent Governance℠](/disclosure-independent-governance/) names the structural condition the Act is navigating without acknowledging: when the evidence base depends on the system behaving as intended, and the system has no obligation to produce proof that it did, the duty exists in policy but not in record. What cannot be documented cannot be governed. The loyalty duty and the evidentiary gap are not separate problems.
@@ -50,7 +59,7 @@ The agent at signing may have been loyal, accurate, and privacy-protective. The 
 
 ## The Name Standard℠ Problem Is the Deepest One
 
-If the agent acts with delegated user authority — making purchases, signing agreements, submitting information, initiating transactions — the [Name Standard℠](/blog/the-name-standard-ai-governance/) question becomes precise: who is accountable when the agent gets it wrong?
+If the agent acts with delegated user authority — making purchases, signing agreements, submitting information, initiating transactions — the [Name Standard℠](https://claude.ai/blog/the-name-standard-ai-governance/) question becomes precise: who is accountable when the agent gets it wrong?
 
 The user authorized the agent. The platform executed the action. The model produced the output. The Act distributes loyalty duties without distributing accountability for failure. When the agent acts correctly, the duty is honored. When the agent acts incorrectly, the accountability chain is empty.
 
@@ -64,10 +73,12 @@ The portability provision matters. Users who can freely change agents preserve t
 
 The problem is not the duties. The problem is that duties without evidentiary infrastructure produce paper compliance. A board that approves deployment of AI agents operating under the Act's framework has a new question to answer — not whether the agents are loyal, but whether the organization can prove they were.
 
-That proof does not exist in the Act. It has to be built. The [5Ws of Decision Integrity℠](/disclosure-independent-governance/#5ws-decision-integrity) is the board-level diagnostic for building it: what the agent relied on, who authorized the scope, which performance indicators tracked fidelity to user intent, what errors or drift went undetected, and what documented record would survive a challenge.
+That proof does not exist in the Act. It has to be built. The [5Ws of Decision Integrity℠](https://claude.ai/disclosure-independent-governance/#5ws-decision-integrity) is the board-level diagnostic for building it: what the agent relied on, who authorized the scope, which performance indicators tracked fidelity to user intent, what errors or drift went undetected, and what documented record would survive a challenge.
 
 ---
 
 The AI Agent Act is a governance architecture problem dressed as a consumer protection bill. The behavioral duties are real. The evidentiary gap is real. Boards that deploy AI agents under this framework inherit the gap between the two.
 
-[Request a Governance Readiness Briefing →](/request-briefing/)
+For the statutory mapping of the Name Standard℠ to the Act’s specific provisions — pillar by pillar — see [How the Name Standard℠ Maps to the AI AGENT Act](https://claude.ai/blog/name-standard-ai-agent-act/). For the broader board governance context in which this legislation lands, see [Four AI Governance Gaps Boards Are Missing Right Now](https://claude.ai/blog/board-ai-governance-blind-spots/).
+
+[Request a Governance Readiness Briefing →](https://claude.ai/request-briefing/)
