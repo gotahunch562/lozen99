@@ -1,6 +1,6 @@
 ---
 title: "Decision Debt: The Hidden Liability Inside AI Speed"
-seo_title: AI Risk Debt Can Increase the Likelihood of Compliance Issues
+seo_title: AI Decision Debt Is Accumulating. Most Boards Cannot See It.
 slug: ai-decision-debt
 pubDate: 2026-06-15
 datePublished: 2026-06-15
@@ -40,7 +40,7 @@ The central problem is the [delta between generation speed and verification spee
 
 AI decision debt often begins as a record problem. When an AI system routes an inquiry or flags a vendor risk, it alters the company’s operational record. If the company cannot reconstruct why a decision was made, what information shaped it, or what human reviewed it, the system is not operating under meaningful control. Unexplainable machine choices are not automated efficiency; they are undocumented corporate actions. The organization may have acted, but it has not preserved the proof needed to show that the action was lawful, reasonable, consistent, or governed.
 
-## The Power User Trap℠: How Employee Productivity Mask AI Performance Risks
+## The Power User Trap℠: Employee Productivity Mask AI Performance Risks
 
 This debt is often hidden because competent employees absorb it before it becomes visible. When an AI system makes a flawed recommendation, a senior employee may catch the error, override the system, correct the classification, or quietly repair the workflow. The organization sees continuity and productivity. But the correction layer is not measured.
 
