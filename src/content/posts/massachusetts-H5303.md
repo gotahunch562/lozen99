@@ -30,7 +30,7 @@ tags:
   - Research & Policy
   - Legislative Analysis
 draft: false
-isFeatured: true
+isFeatured: false
 ---
 Massachusetts is moving H5303, *An Act Expanding Access to Perimenopause and Menopause Care*, through the Joint Committee on Health Care Financing. The bill requires hormone replacement therapy coverage across the state employee plan, MassHealth, and four private insurance chapters, with a parity clause barring insurers from applying prior authorization or step therapy to HRT more restrictively than to any other clinically appropriate hormonal drug.
 
