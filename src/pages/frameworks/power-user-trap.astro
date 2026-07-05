@@ -421,21 +421,34 @@ const relatedItems = [
     Preventing the Power User Trap℠ requires a shift from monitoring AI tool adoption rates to monitoring AI implementation burden. Three measurement priorities stand out.
   </p>
 
-  <div class="lozen-framework-grid" aria-label="Power User Trap measurement priorities">
-    <article class="lozen-framework-card">
-      <h3>Limit simultaneous tool use</h3>
-      <p>Productivity peaks at three AI tools used simultaneously, then declines. Measuring token consumption or AI-generated output as performance metrics inadvertently rewards cognitive overload.</p>
-    </article>
-
-    <article class="lozen-framework-card">
-      <h3>Clarify workload expectations</h3>
-      <p>When employees believed their organization expected them to accomplish more due to AI, mental fatigue scores were 12% higher. Explicit expectations reduce ambiguous cognitive load.</p>
-    </article>
-
-    <article class="lozen-framework-card">
-      <h3>Track oversight distribution</h3>
-      <p>Identify who is supporting AI tool adoption beyond their formal role. Determine whether those individuals are receiving workload adjustments. Quantify hours per week that power users spend on AI-related support work.</p>
-    </article>
+  <div class="lozen-accordion" aria-label="Power User Trap measurement priorities">
+    <details class="lozen-accordion__item" open>
+      <summary class="lozen-accordion__header">
+        <span class="lozen-accordion__name">Limit simultaneous tool use</span>
+        <span class="lozen-accordion__chevron" aria-hidden="true"></span>
+      </summary>
+      <div class="lozen-accordion__body">
+        <p class="lozen-accordion__desc">Productivity peaks at three AI tools used simultaneously, then declines. Measuring token consumption or AI-generated output as performance metrics inadvertently rewards cognitive overload.</p>
+      </div>
+    </details>
+    <details class="lozen-accordion__item">
+      <summary class="lozen-accordion__header">
+        <span class="lozen-accordion__name">Clarify workload expectations</span>
+        <span class="lozen-accordion__chevron" aria-hidden="true"></span>
+      </summary>
+      <div class="lozen-accordion__body">
+        <p class="lozen-accordion__desc">When employees believed their organization expected them to accomplish more due to AI, mental fatigue scores were 12% higher. Explicit expectations reduce ambiguous cognitive load.</p>
+      </div>
+    </details>
+    <details class="lozen-accordion__item">
+      <summary class="lozen-accordion__header">
+        <span class="lozen-accordion__name">Track oversight distribution</span>
+        <span class="lozen-accordion__chevron" aria-hidden="true"></span>
+      </summary>
+      <div class="lozen-accordion__body">
+        <p class="lozen-accordion__desc">Identify who is supporting AI tool adoption beyond their formal role. Determine whether those individuals are receiving workload adjustments. Quantify hours per week that power users spend on AI-related support work.</p>
+      </div>
+    </details>
   </div>
 
   <h2>Why AI deployment without oversight measurement creates retention risk</h2>
@@ -458,12 +471,17 @@ const relatedItems = [
     The Power User Trap℠ connects to Lozen Advisory's broader governance architecture for risks that legacy systems were not built to see.
   </p>
 
-  <div class="lozen-framework-grid" aria-label="Lozen Advisory framework vocabulary">
-    {terms.map((term) => (
-      <article class="lozen-framework-card">
-        <h3><a href={term.href}>{term.name}</a></h3>
-        <p>{term.description}</p>
-      </article>
+  <div class="lozen-accordion" aria-label="Lozen Advisory framework vocabulary">
+    {terms.map((term, index) => (
+      <details class="lozen-accordion__item" open={index === 0}>
+        <summary class="lozen-accordion__header">
+          <span class="lozen-accordion__name">{term.name}</span>
+          <span class="lozen-accordion__chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="lozen-accordion__body">
+          <p class="lozen-accordion__desc">{term.description}</p>
+        </div>
+      </details>
     ))}
   </div>
 
@@ -511,53 +529,3 @@ const relatedItems = [
     Large organizations can build dashboards and flood search. What they cannot do quickly is create coherent category language that names the failure point before the market has settled on the terms. The Power User Trap℠ is that kind of term.
   </p>
 </CategoryHubLayout>
-
-<style>
-  .lozen-framework-grid {
-    display: grid;
-    gap: 1rem;
-    margin: 1.8rem 0 2.1rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lozen-framework-card {
-    border: 1px solid var(--color-base-200);
-    border-radius: 1.05rem;
-    background: #ffffff;
-    padding: clamp(1.1rem, 2.2vw, 1.45rem);
-    box-shadow: var(--shadow-sm);
-  }
-
-  .lozen-framework-card h3 {
-    margin: 0;
-    color: var(--color-base-950);
-    font-family: var(--font-display);
-    font-size: var(--lozen-card-title-size);
-    font-weight: var(--lozen-card-title-weight);
-    letter-spacing: var(--lozen-card-title-letter-spacing);
-    line-height: var(--lozen-card-title-line-height);
-  }
-
-  .lozen-framework-card p {
-    margin: 0.75rem 0 0;
-    font-size: 0.96rem;
-    line-height: 1.65;
-    color: var(--color-base-600);
-  }
-
-  .lozen-framework-card a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .lozen-framework-card a:hover,
-  .lozen-framework-card a:focus-visible {
-    color: var(--color-accent-700);
-  }
-
-  @media (max-width: 900px) {
-    .lozen-framework-grid {
-      grid-template-columns: minmax(0, 1fr);
-    }
-  }
-</style>
