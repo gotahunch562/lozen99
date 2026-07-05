@@ -1,13 +1,11 @@
 ---
 title: How the Name Standard℠ Maps to the Great American AI Act
 seo_title: "Great American AI Act: AI Governance Evidence for Board Reporting"
-subtitle: A Name Standard℠ mapping of documentation, verification, revocation,
-  and human accountability requirements.
 slug: great-american-ai-act-name-standard
 pubDate: 2026-07-05
 datePublished: 2026-07-05
 dateModified: 2026-07-05
-category: GRC
+category: AI Governance & Workforce Risk
 excerpt: "The Great American AI Act discussion draft builds a documentation and
   verification architecture for AI developers and workforce impact. The Name
   Standard℠ asks the board-facing question the draft leaves open: who is
@@ -17,17 +15,20 @@ description: A Lozen Advisory mapping of how the Name Standard℠ applies to the
   incident reporting, and workforce evidence provisions for board-facing
   governance teams.
 image:
-  url: /src/images/blog/blog-placeholder-blue.svg
-  alt: picture
-heroImage: /src/images/blog/blog-placeholder-blue.svg
-heroAlt: picture
+  url: /src/images/blog/name-standardsm-maps-to-the-great-american-ai-act-1.avif
+  alt: male executive mapping of how the Name Standard℠ applies to the Great
+    American AI Act
+heroImage: /src/images/blog/name-standardsm-maps-to-the-great-american-ai-act.avif
+heroAlt: male executive mapping of how the Name Standard℠ applies to the Great
+  American AI Act
 tags:
   - AI Accountability
   - Board Governance
-draft: true
+  - Internal Audit
+draft: false
 isFeatured: false
 ---
-Congressman Jay Obernolte (R-CA) and Congresswoman Lori Trahan (D-MA) released a discussion draft of the Great American AI Act (GAAIA). Although the draft is framed around frontier AI governance, its board-facing significance is evidence: what must be documented, verified, reported, audited, and measured.
+Congressman Jay Obernolte (R-CA) and Congresswoman Lori Trahan (D-MA) released a discussion draft of the Great American AI Act (GAAIA) in June 2026. Although the draft is framed around frontier AI governance, its board-facing significance is evidence: what must be documented, verified, reported, audited, and measured.
 
 For Lozen Advisory, that places the draft squarely inside [Disclosure-Independent Governance℠](/disclosure-independent-governance/) — Lozen Advisory’s methodology for identifying systemic risks that legacy measurement systems are structurally blind to. The Name Standard℠ is the part of that methodology that asks whether evidence can be traced to a responsible human or institutional actor.
 
@@ -59,4 +60,4 @@ A framework can be written, reviewed, and audited. A deployment report can be fi
 
 Sec. 113 creates anti-retaliation protection for employees and independent contractors who lawfully report violations of federal AI law. In the Name Standard℠ mapping, that matters because whistleblower protection is not the same as pre-deployment refusal authority. The draft protects a reporting pathway, but it does not appear to establish a named internal role with standing authority to pause, restrict, or reject deployment before the risk materializes.
 
-For the full framework behind this mapping, see [The Name Standard℠](/blog/the-name-standard-ai-governance/). Board-facing teams evaluating whether their AI governance structure has a Name Standard℠ gap can [request a Governance Readiness Briefing](/request-briefing/).
+***For the full framework behind this mapping, see [The Name Standard℠](/blog/the-name-standard-ai-governance/). Board-facing teams evaluating whether their AI governance structure has a Name Standard℠ gap can [request a Governance Readiness Briefing](/request-briefing/).***
