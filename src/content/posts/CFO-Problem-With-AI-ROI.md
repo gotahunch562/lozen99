@@ -5,7 +5,7 @@ seo_title: "AI ROI Failure: The Hidden Cost of Human Verification"
 slug: cfo-problem-with-ai-roi
 pubDate: 2026-06-03
 datePublished: 2026-06-03
-dateModified: 2026-06-15
+dateModified: 2026-07-04
 category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 4
@@ -35,7 +35,7 @@ The CFO problem with AI ROI is not just one problem, it is three problems conver
 
 1. Expected savings are underperforming
 2. Actual costs are becoming harder to control
-3. [human verification labor is still missing](/retention-calculator/) from the calculation
+3. [human verification labor is still missing from the calculation](/disclosure-independent-governance/)
 
 > AI ROI is being squeezed from both sides before the human governance layer is even priced.
 
@@ -67,7 +67,7 @@ Tokenmaxxing exposes the CFO flaw in AI ROI. It treats AI consumption as if it w
 
 If a tool produces a draft in two minutes but a senior employee spends twenty minutes verifying, correcting, and contextualizing it, the ROI calculation cannot stop at the two-minute output. AI externalizes execution while internalizing judgment. If finance counts the first, without measuring the second, the return calculation is incomplete.
 
-This is where the [Power User Trap℠](/invisible-attrition/power-user-trap/) becomes a finance issue. The power user is the employee through whom AI becomes usable inside real work: learning the failure modes, supplying institutional context, catching plausible errors, and translating machine output into something the organization can rely on.
+This is where the [Power User Trap℠](/frameworks/power-user-trap/) becomes a finance issue. The power user is the employee through whom AI becomes usable inside real work: learning the failure modes, supplying institutional context, catching plausible errors, and translating machine output into something the organization can rely on.
 
 Gartner warned CFOs in 2026 not to mistake AI deployment for value creation. That warning is the correct finance posture, deployment is not the same as durable operating value.
 
