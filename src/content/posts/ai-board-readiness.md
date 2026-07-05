@@ -27,7 +27,7 @@ Nasdaq's 3rd Annual Global Governance Pulse a survey of 701 board members, execu
 
 Generic, templated governance language is turning from a safe default into an active liability, and a board must now shape and define itself for managing the future of AI embedded organizations. Board readiness is the maxim of the day.
 
-That 73-point gap between discussing AI and being equipped to govern it is not a posture problem. What actually creates exposure isn't a vague atmosphere of unreadiness — it's a small number of specific, recurring gaps, showing up across boardrooms right now as AI shifts from a tool a company uses into something closer to an operating layer the company runs on.
+That 73-point gap between discussing AI and being equipped to govern it is not a posture problem. What actually creates exposure isn't a vague atmosphere of unreadiness — it's a small number of specific, recurring gaps, showing up across boardrooms right now as AI shifts from a tool a company uses into something closer to an operating layer the company runs on. [Disclosure-Independent Governance℠](/disclosure-independent-governance/) is the methodology for identifying those gaps before they become board-level events.
 
 None of these four gaps are compliance failures. A board can follow every applicable rule and still have all four failures. That's exactly why they're easy to miss, and expensive to find out in a crisis.
 
