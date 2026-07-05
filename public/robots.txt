@@ -11,21 +11,21 @@ User-agent: facebookexternalhit
 Allow: /
 
 User-agent: GPTBot
-Disallow: /invisible-attrition/
+Allow: /
 
 User-agent: ClaudeBot
-Disallow: /invisible-attrition/
+Allow: /
 
 User-agent: anthropic-ai
-Disallow: /invisible-attrition/
+Allow: /
 
 User-agent: PerplexityBot
-Disallow: /invisible-attrition/
+Allow: /
 
 User-agent: Meta-ExternalAgent
-Disallow: /invisible-attrition/
+Allow: /
 
 User-agent: Google-Extended
-Disallow: /invisible-attrition/
+Allow: /
 
 Sitemap: https://www.lozenadvisory.com/sitemap-index.xml
