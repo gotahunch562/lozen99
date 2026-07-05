@@ -4,7 +4,7 @@ seo_title: Fiduciary Failure and the Board Governance Gap
 slug: fiduciary-failure-sovereign-path
 pubDate: 2026-06-08
 datePublished: 2026-06-08
-dateModified: 2026-07-04
+dateModified: 2026-07-05
 category: AI Governance & Workforce Risk
 excerpt: Authorizing AI investment while remaining blind to the concurrent
   erosion of the human capacity those systems depend on crosses into willful
