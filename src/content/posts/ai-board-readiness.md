@@ -85,36 +85,4 @@ Boards are used to organizing attention around discrete decisions; approve the i
 
 ---
 
-## Lozen Identifies AI Governance Gaps
-
-Each of these gaps causes a board to ask reflexively toward the same action: ask General Counsel whether the company is compliant. That instinct isn't wrong, but it's answering a different question than the one that's actually exposed. A company can be fully compliant, and still not be able to name the accountable person behind an agent's decision, still have an evidence trail that wouldn't survive scrutiny, still be carrying operating exposure no one is tracking. Compliance tells you whether a rule was followed. It doesn't tell you whether the governance underneath the rule would hold up if someone went looking.
-
-That's the lane Lozen Advisory works in:
-
-> Lozen Advisory does not advise boards on legal compliance. Lozen Advisory identifies where AI  implementations reveal incomplete data, unclear human accountability, weak evidence trails, or unmanaged operating exposure.
-
-In practice, that's specific tools pointed at specific pain points. The **Name Standard℠** framework is built directly for the ownership problem, it tests whether a real, accountable person exists behind every AI-assisted output, with the authority, time, and documented evidence to make that accountability more than ceremonial.
-
-The **5Ws of Decision Integrity℠** — Lozen Advisory's board-level diagnostic, gives boards a five-question evidence standard that ties all four gaps together:
-
-- **What** data, models, or AI outputs did management rely on, and is that reliance documented?
-- **Who** held named accountability for this decision, and did that person have the authority and information required to sign off?
-- **Which** performance indicators were tracked, and what would trigger board escalation if the system produced misleading output?
-- **What was missed**: what risks, gaps, or AI errors were not detected, and who is responsible for that gap?
-- **Witness:** What documented record exists that would withstand regulatory scrutiny, litigation, or board inquiry?
-
-Across the enforcement cases examined here — Delphia, Global Predictions, AppLovin, Joonko, GitLab — none of these questions had a documented answer that held up under scrutiny. That is the pattern the 5Ws is designed to surface before it becomes an enforcement event.
-
-The **AI Legislation Tracker** is built for all four gaps translating AI legislation, as it develops, into the governance questions a board should be asking, the evidence management should already be producing, and the operating exposure that's accumulating before it becomes a headline.
-
-Neither tool will tell a board it's compliant. That was never the job. The job is making sure that when the question gets asked by counsel, by a regulator, by an investor, by a plaintiff's attorney, the company already knows the answer, with evidence behind it, instead of finding out in real time alongside everyone else.
-
----
-
-**Want to see where your own board's record currently stands?**
-
-[Explore the Disclosure-Independent Governance framework →](/disclosure-independent-governance/)
-
-[Explore the AI Legislation Tracker →](/ai-legislation-tracker/)
-
-[Request a governance readiness briefing →](/ai-workforce-materiality-briefing/)
+[Request a Governance Readiness Briefing →](/request-briefing/)
