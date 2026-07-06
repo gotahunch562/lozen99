@@ -31,7 +31,7 @@ const AI_WORKFORCE_BASELINE_LASTMOD = "2026-05-31";
 const EXPLICIT_PAGE_DATES = new Map([
   ["/ai-workforce-materiality-briefing/", "2026-05-31"],
   ["/retention-risk-analysis/", "2026-07-06"],
-  ["/disclosure-independent-governance/", "2026-07-05"],
+  ["/disclosure-independent-governance/", "2026-07-06"],
   ["/frameworks/power-user-trap/", "2026-07-04"],
   ["/frameworks/committee-ownership-map/", "2026-07-04"],
   ["/disclosure-independence-performance/", "2026-07-04"],
