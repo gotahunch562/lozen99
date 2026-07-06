@@ -1,5 +1,5 @@
 ---
-title: Four AI Governance Gaps Boards Are Missing Right Now
+title: 4 AI Governance Gaps Boards Are Missing Right Now
 seo_title: Four AI Governance Gaps Boards Are Missing Right Now
 subtitle: Most boards are talking about AI. Only 8% have adopted an approved AI
   tool for their governance work.
