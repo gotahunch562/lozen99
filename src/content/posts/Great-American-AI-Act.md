@@ -51,6 +51,8 @@ The [Great American Artificial Intelligence Act](https://obernolte.house.gov/sit
 | **Documentation infrastructure** | Model documentation templates — Sec. 123 | NIST’s pilot template standardizes what gets documented, including model name, developer identity, release date, training data cutoff, supported languages, terms of service, technical guidelines, and performance metrics. This creates infrastructure for capturing evidence, not infrastructure for assigning accountability for what the evidence shows. |
 | **Formal right of refusal** | Internal pause, restriction, remediation, or rejection authority | No section of the discussion draft appears to establish this as an internal governance right. Sec. 113 protects employees and contractors from retaliation after lawful reporting of AI-law violations. That is not the same as giving a named internal actor standing authority to pause, restrict, or reject deployment before harm occurs. |
 
+Lozen Advisory applies this same Name Standard℠ mapping to other AI legislation. For the AI AGENT Act analysis, see [How the Name Standard℠ Maps to the AI AGENT Act](https://www.lozenadvisory.com/blog/great-american-ai-act-name-standard/)
+
 
 ## The Lozen Advisory view
 
