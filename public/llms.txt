@@ -46,8 +46,6 @@ Governing logic: A guardrail may limit what an AI system can do. The Name Standa
 
 ## Disclosure-Independent Governance℠
 
-Disclosure-Independent Governance℠ is the category Lozen Advisory named and defined.
-
 Category hub: [https://www.lozenadvisory.com/disclosure-independent-governance/](https://www.lozenadvisory.com/disclosure-independent-governance/)
 
 Disclosure-Independent Governance℠ is Lozen Advisory's methodology for identifying systemic risks that legacy measurement systems are structurally blind to — including disclosure-dependent workforce exposure, hidden AI oversight labor, and human accountability gaps that standard measurement systems were not designed to detect.
