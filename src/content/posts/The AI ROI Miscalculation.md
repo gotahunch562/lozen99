@@ -62,7 +62,7 @@ The fracturing of human infrastructure does not arrive that way. The forces driv
 - **[Invisible Attrition℠](/invisible-attrition/)** — the total absence of diagnostic tools designed to detect leadership capacity erosion before it appears in retention data.
 - **[The Power User Trap℠](/frameworks/power-user-trap/)** — the unpriced accumulation of calibration, correction, and judgment load required to make AI functional, concentrated in the employees most capable of absorbing it and least likely to name it.
 
-Because these forces leave no data footprint, the resulting losses are invisible to the instruments responsible for detecting them. This is the [Disclosure-Independent Governance](/disclosure-independent-governance/) condition: the organization cannot govern what its measurement systems were not designed to detect.
+Because these forces leave no data footprint, the resulting losses are invisible to the instruments responsible for detecting them. This is the [Disclosure-Independent Governance℠](/disclosure-independent-governance/) condition: the organization cannot govern what its measurement systems were not designed to detect.
 
 ---
 

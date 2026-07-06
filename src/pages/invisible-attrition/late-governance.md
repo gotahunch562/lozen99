@@ -83,7 +83,7 @@ The board-level risk question the pillar poses holds here: if your current syste
 
 ---
 
-To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance](/disclosure-independent-governance/).
+To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance℠](/disclosure-independent-governance/).
 
 ## References
 

@@ -36,7 +36,7 @@ The institutional blind spot is symmetrical. One side consistently overstates wh
 
 > *One side overstates what technology can replace. The other underprices what the institution is losing. Specialized institutional memory, regulatory navigation, and strategic execution cannot be simulated by software licenses or recovered once the human capabilities are gone.*
 
-This is a [Disclosure-Independent Governance](/disclosure-independent-governance/) problem: the organization cannot govern what its measurement systems were not designed to detect.
+This is a [Disclosure-Independent Governance℠](/disclosure-independent-governance/) problem: the organization cannot govern what its measurement systems were not designed to detect.
 
 Two structural mechanisms produce this concurrency. Both operate beneath the threshold of standard governance detection. Both generate exits that are coded as personal. And both accelerate when AI adoption intensifies.
 

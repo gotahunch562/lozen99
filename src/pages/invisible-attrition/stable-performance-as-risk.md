@@ -95,7 +95,7 @@ The governance question it surfaces is direct: when your most stable senior lead
 
 ---
 
-To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance](/disclosure-independent-governance/).
+To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance℠](/disclosure-independent-governance/).
 
 ## References
 

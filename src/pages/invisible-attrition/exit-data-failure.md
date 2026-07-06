@@ -87,7 +87,7 @@ If it cannot, the attrition they are measuring is not the attrition they are exp
 
 ---
 
-To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance](/disclosure-independent-governance/).
+To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance℠](/disclosure-independent-governance/).
 
 ## References
 

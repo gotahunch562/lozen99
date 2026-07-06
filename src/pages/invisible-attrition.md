@@ -151,4 +151,4 @@ You are not mismanaging your capacity. You are operating inside a system that re
 
 To learn how Lozen Advisory can help you navigate at work without disclosure, [contact us today.](https://www.lozenadvisory.com/contact)
 
-To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance](/disclosure-independent-governance/).
+To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance℠](/disclosure-independent-governance/).

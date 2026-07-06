@@ -93,7 +93,7 @@ Invisible Attrition℠ provides the classification architecture for that kind of
 
 ---
 
-To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance](/disclosure-independent-governance/).
+To evaluate these invisible operational exposures, organizations must implement a [framework for Disclosure-Independent Governance℠](/disclosure-independent-governance/).
 
 ## References
 

@@ -119,7 +119,7 @@ Mandatory AI utilization must never be confused with governed AI utilization. Go
 
 Those are entirely different questions.
 
-> AI governance begins where adoption metrics stop. That gap is a [Disclosure-Independent Governance](/disclosure-independent-governance/) problem: the organization may have AI policies, adoption metrics, and usage mandates while still lacking evidence of who is absorbing verification labor, where accountability sits, and what risks remain invisible.
+> AI governance begins where adoption metrics stop. That gap is a [Disclosure-Independent Governance℠](/disclosure-independent-governance/) problem: the organization may have AI policies, adoption metrics, and usage mandates while still lacking evidence of who is absorbing verification labor, where accountability sits, and what risks remain invisible.
 
 ## The Materiality Question Set
 

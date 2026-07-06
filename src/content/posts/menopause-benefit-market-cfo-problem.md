@@ -49,7 +49,7 @@ The commercial case for menopause benefits is easy to understand. The affected p
 
 But [menopause legislation](/menopause-legislation-tracker/) and the market has moved faster than the measurement case. PwC noted that utilization remains limited and attributed this partly to employees not knowing the benefit exists. That explanation may be partly true. However, menopause benefits introduce a separate problem that awareness campaigns cannot solve.
 
-A woman can know the benefit exists and still avoid it. She can need support and still decide that using it would create professional information she does not want her employer, manager, or vendor ecosystem to hold. That is not an education gap. It is a collection-condition problem, the structural condition [Disclosure-Independent Governance](/disclosure-independent-governance/) is built to classify: the governance architecture fails when the evidence base depends on a disclosure the affected population has decided not to make.
+A woman can know the benefit exists and still avoid it. She can need support and still decide that using it would create professional information she does not want her employer, manager, or vendor ecosystem to hold. That is not an education gap. It is a collection-condition problem, the structural condition [Disclosure-Independent Governance℠](/disclosure-independent-governance/) is built to classify: the governance architecture fails when the evidence base depends on a disclosure the affected population has decided not to make.
 
 When an employee must search for a menopause resource, request leave, or use a menopause-coded pathway before the system can count her, the data point is created only after she decides to enter. When she does not enter, the data point is never generated.
 
@@ -65,7 +65,7 @@ That is why the market keeps moving even when utilization is weak. The product i
 
 Reassurance becomes fragile when the program still depends on an employee initiating access. The employer may buy a retention solution, the vendor may report participation, and the benefits team may point to program availability. None of those measures proves the benefit reached the population the purchase was meant to help.
 
-The vendor measures users. The employer needs to understand the non-users. When the population most material to retention and succession risk is also the population most likely to avoid the pathway, the gap between those two groups is where the business case weakens and where the measurement system was never designed to look. That is the [Disclosure-Independent Governance](/disclosure-independent-governance/) gap.
+The vendor measures users. The employer needs to understand the non-users. When the population most material to retention and succession risk is also the population most likely to avoid the pathway, the gap between those two groups is where the business case weakens and where the measurement system was never designed to look. That is the [Disclosure-Independent Governance℠](/disclosure-independent-governance/) gap.
 
 ---
 
