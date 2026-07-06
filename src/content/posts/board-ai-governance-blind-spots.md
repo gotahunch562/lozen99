@@ -1,13 +1,13 @@
 ---
-title: "Four AI Governance Gaps Boards Are Missing Right Now"
-seo_title: "Four AI Governance Gaps Boards Are Missing Right Now"
+title: Four AI Governance Gaps Boards Are Missing Right Now
+seo_title: Four AI Governance Gaps Boards Are Missing Right Now
 subtitle: Most boards are talking about AI. Only 8% have adopted an approved AI
   tool for their governance work.
 slug: board-ai-governance-blind-spots
 pubDate: 2026-07-05
 datePublished: 2026-07-05
 dateModified: 2026-07-05
-category: AI Governance
+category: AI Governance & Workforce Risk
 excerpt: Generic, templated governance language is turning from a safe default
   into a liability. Here are the four specific, recurring gaps showing up across
   boardrooms right now — and why a company can follow every applicable rule and
