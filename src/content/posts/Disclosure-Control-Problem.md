@@ -5,7 +5,7 @@ subtitle: Can AI Work Product Withstand Scrutiny?
 slug: ai-productivity-vs-governance
 pubDate: 2026-06-06
 datePublished: 2026-06-06
-dateModified: 2026-06-15
+dateModified: 2026-07-06
 category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 5
