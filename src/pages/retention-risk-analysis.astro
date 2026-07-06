@@ -1,106 +1,231 @@
 ---
-import NarrativePage from "@/components/authority/NarrativePage.astro";
+import CategoryHubLayout from "@/components/authority/CategoryHubLayout.astro";
+import {
+  createWebPageJsonLd,
+  type JsonLdObject,
+} from "@/lib/seo/jsonLd";
 
-const title = "Retention Risk Analysis";
-
+const pageTitle = "Retention Risk Analysis";
 const seoTitle = "Retention Risk Analysis: Quantifying the 213% Replacement Cost";
-
-const description =
-  "Retention risk analysis is usually built from the records an organization already has: performance data, engagement signals, HR cases, benefits utilization, survey responses, and recorded attrition patterns. Those inputs may be accurate. However, they only describe the people and conditions that entered the system.";
-
+const description = "Retention risk analysis is structurally incomplete when it depends on disclosure. Lozen Advisory's disclosure-independent approach identifies leadership capacity erosion before it appears as attrition, succession gaps, or unexplained loss.";
 const metaDescription = "Analyze retention exposure before departure data appears. Identify disclosure-dependent gaps affecting senior talent, succession, and replacement cost.";
+const canonicalUrl = "https://www.lozenadvisory.com/retention-risk-analysis/";
+const datePublished = "2026-01-01";
+const dateModified = "2026-07-05";
 
-const canonical = "https://www.lozenadvisory.com/retention-risk-analysis";
-
-const heroImage = "/images/authority/retention-risk-analysis.webp";
-
-const pageJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: seoTitle,
-  description: metaDescription,
-  url: canonical,
-  image: `https://www.lozenadvisory.com${heroImage}`,
-  publisher: {
-    "@type": "Organization",
-    name: "Lozen Advisory",
-    url: "https://www.lozenadvisory.com",
+const articleJsonLd: JsonLdObject[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    name: seoTitle,
+    description: metaDescription,
+    url: canonicalUrl,
+    datePublished,
+    dateModified,
+    author: {
+      "@type": "Person",
+      name: "Akilah E. Kamaria",
+    },
+    creator: {
+      "@id": "https://www.lozenadvisory.com/#organization",
+    },
+    publisher: {
+      "@id": "https://www.lozenadvisory.com/#organization",
+    },
+    about: {
+      "@type": "Thing",
+      name: "Retention Risk Analysis",
+      description: "Disclosure-independent evaluation of leadership capacity erosion before it appears in standard retention metrics.",
+    },
   },
-};
+];
+
+const railItems = [
+  { label: "Category", value: "Disclosure-Independent Governance℠" },
+  { label: "Primary framework", value: "Invisible Attrition℠" },
+  { label: "Connected frameworks", value: "Tacere, Power User Trap℠, Capacity Substitution Error℠" },
+  { label: "Applied to", value: "Senior talent, succession planning, leadership pipeline, AI adoption capacity" },
+  { label: "Research anchors", value: "SSRN, Zenodo" },
+];
+
+const railLinks = [
+  {
+    label: "Disclosure-Independent Governance℠",
+    href: "/disclosure-independent-governance/",
+    description: "The methodology for identifying systemic risks that legacy measurement systems are structurally blind to.",
+  },
+  {
+    label: "Invisible Attrition℠",
+    href: "/invisible-attrition/",
+    description: "The unmeasured erosion of leadership capacity before organizational detection.",
+  },
+  {
+    label: "Tacere",
+    href: "/invisible-attrition/structural-silence/",
+    description: "The individual decision not to disclose in environments where disclosure carries professional risk.",
+  },
+  {
+    label: "Power User Trap℠",
+    href: "/frameworks/power-user-trap/",
+    description: "Hidden AI governance burden concentrated in the employees most at risk of Invisible Attrition℠.",
+  },
+  {
+    label: "Committee Ownership Map",
+    href: "/frameworks/committee-ownership-map/",
+    description: "Board committee evidentiary obligations for retention and AI governance risk.",
+  },
+];
+
+const relatedItems = [
+  {
+    label: "Disclosure-Independent Governance℠",
+    href: "/disclosure-independent-governance/",
+    description: "The governing methodology for retention risk that standard measurement systems cannot detect.",
+  },
+  {
+    label: "Invisible Attrition℠",
+    href: "/invisible-attrition/",
+    description: "The framework for leadership capacity erosion before retention metrics detect loss.",
+  },
+  {
+    label: "Power User Trap℠",
+    href: "/frameworks/power-user-trap/",
+    description: "Where AI adoption creates the same invisible retention exposure in a different form.",
+  },
+  {
+    label: "Committee Ownership Map",
+    href: "/frameworks/committee-ownership-map/",
+    description: "The board committee framework for evidentiary retention oversight.",
+  },
+];
 ---
 
-<NarrativePage
-  title={title}
+<CategoryHubLayout
+  title={pageTitle}
   seoTitle={seoTitle}
-  description={description}
+  description={metaDescription}
   metaDescription={metaDescription}
-  canonical={canonical}
-  eyebrow="Workforce Risk"
-  typeLabel="Retention Risk Analysis"
-  heroImage={heroImage}
-  heroImageAlt="Integrated retention risk analysis framework showing performance data, engagement signals, attrition patterns, and risk segmentation."
-  articleJsonLd={pageJsonLd}
-  bottomCta={{
-    label: "Strategic Briefing",
-    title:
-      "Organizations do not need more employee disclosure to evaluate this risk.",
+  canonical={canonicalUrl}
+  eyebrow="Disclosure-Independent Governance℠"
+  typeLabel="Retention Risk"
+  articleJsonLd={articleJsonLd}
+  railTitle="Framework Context"
+  railItems={railItems}
+  railLinks={railLinks}
+  railCta={{
+    label: "Advisory response",
+    title: "Retention Risk Briefing",
     description:
-      "They need a system-level analysis of where retention exposure exists outside their current measurement infrastructure. Lozen Advisory works with leadership teams to identify where workforce risk is forming before it appears as attrition, succession gaps, performance drift, or unexplained leadership loss.",
-    href: "/request-briefing",
-    linkLabel: "Request a Retention Risk Briefing →",
+      "For boards and leadership teams evaluating where retention exposure exists outside standard measurement infrastructure.",
+    href: "/request-briefing/",
+    linkLabel: "Request Briefing →",
   }}
+  bottomCta={{
+    label: "Next step",
+    title: "Request a Retention Risk Briefing",
+    description:
+      "Organizations do not need more employee disclosure to evaluate this risk. They need a system-level analysis of where retention exposure exists outside current measurement infrastructure.",
+    href: "/request-briefing/",
+    linkLabel: "Request Briefing →",
+  }}
+  relatedEyebrow="Frameworks and Data Assets"
+  relatedTitle="Continue through the Lozen Advisory architecture"
+  relatedItems={relatedItems}
 >
   <h2>Replacement Cost Exposure</h2>
 
-  <p><strong>$426,000</strong></p>
-
   <p>
-    At up to 213% of annual salary, a single $200,000 senior departure carries an estimated replacement cost of approximately $426,000.
+    <strong>$426,000.</strong> At up to 213% of annual salary, a single $200,000 senior departure carries an estimated replacement cost of approximately $426,000. That calculation usually begins after the loss is already visible.
   </p>
 
   <p>
-    But that calculation usually begins after the loss is already visible.
+    The more consequential number is not the replacement cost. It is the cost of the erosion that preceded the exit — reduced leadership availability, hidden strain, missed succession readiness, performance masking, and quiet withdrawal from future-facing roles — none of which appeared in any record before the departure was filed.
   </p>
 
-  <h2>The risk sits outside the record.</h2>
+  <h2>Why standard retention risk analysis is structurally incomplete</h2>
 
   <p>
-    A workforce attrition risk assessment can only evaluate what has been measured. It cannot evaluate the population that never generated a signal, never filed a request, never used a benefit, never appeared in a case record, and never disclosed the constraint affecting performance capacity.
-  </p>
-
-  <p>
-    In performance-driven environments, that absence is often misread as stability. But absence of signal is not proof of absence of risk. It may simply mean the system was never activated.
+    Retention risk analysis is usually built from the records an organization already has: performance data, engagement scores, HR cases, benefits utilization, survey responses, and recorded attrition patterns. Those inputs may be accurate. They only describe the people and conditions that entered the system.
   </p>
 
   <p>
-    Most employee attrition cost models calculate loss after departure. They estimate replacement cost, recruiting time, lost productivity, onboarding expense, client disruption, and institutional knowledge loss. Those costs matter. Also, they usually arrive after the organization has already lost the person.
+    A workforce attrition model can only evaluate what has been measured. It cannot evaluate the population that never generated a record, never filed a request, never used a benefit, never appeared in a case, and never disclosed the constraint affecting their performance capacity. In performance-driven environments, that absence is misread as stability. Absence of record is not proof of absence of risk. It may simply mean the system was never activated.
   </p>
 
   <p>
-    Specifically, standard models often miss the erosion that occurred before the exit was recorded: reduced ambition, declining leadership availability, hidden strain, performance masking, missed succession readiness, or quiet withdrawal from future-facing roles.
+    This is the structural condition <a href="/disclosure-independent-governance/">Disclosure-Independent Governance℠</a> is built to address: Lozen Advisory's methodology for identifying systemic risks that legacy measurement systems are structurally blind to. Retention risk that depends on disclosure to become visible is retention risk that the organization will not see until it is too late.
   </p>
 
-  <h2>The data is not necessarily wrong. It is structurally incomplete.</h2>
+  <h2>Invisible Attrition℠: the erosion before detection</h2>
 
   <p>
-    Lozen Advisory examines this problem through Invisible Attrition℠: the erosion of leadership capacity before traditional organizational systems detect risk. This matters for companies evaluating retention exposure, succession planning, benefits ROI, leadership pipeline health, and regrettable loss.
+    Lozen Advisory examines this problem through <a href="/invisible-attrition/">Invisible Attrition℠</a>: the unmeasured erosion of leadership, performance, and institutional capacity before retention metrics detect loss. This matters for boards evaluating retention exposure, succession planning, benefits ROI, leadership pipeline health, and regrettable loss.
   </p>
-
-  <h3>No case.</h3>
 
   <p>
-    No HR escalation appears because no formal process was triggered.
+    Invisible Attrition℠ does not begin with the departure. It begins with the conditions that precede it — conditions the organization's measurement infrastructure was not designed to surface. By the time the exit appears in retention data, the capacity has already been eroding for months. The departure is not the event. It is the record of an event that already happened.
   </p>
-
-  <h3>No claim.</h3>
 
   <p>
-    No benefits signal appears because the platform was never entered.
+    Three things standard retention analysis does not see:
   </p>
 
-  <h3>No warning.</h3>
+  <ul>
+    <li><strong>No case.</strong> No HR escalation appears because no formal process was triggered.</li>
+    <li><strong>No claim.</strong> No benefits record appears because the platform was never entered.</li>
+    <li><strong>No warning.</strong> The cost moves through performance, ambition, succession availability, and eventual exit — none of it logged.</li>
+  </ul>
+
+  <h2>Tacere: the individual decision that produces the gap</h2>
 
   <p>
-    The cost moves through performance, ambition, succession availability, and eventual exit.
+    The absence of records is not accidental. <a href="/invisible-attrition/structural-silence/">Tacere</a> — Lozen Advisory's published research — defines the structural mechanism: the sustained, strategic practice of keeping one's own counsel by a senior executive operating in a professional environment where disclosure carries professional risk. Tacere is not a failure condition. It is a rational decision made in response to an incentive structure where visibility carries cost and concealment remains an option.
   </p>
-</NarrativePage>
+
+  <p>
+    When the affected population has calculated, correctly, that disclosure is professionally untenable, the organization's disclosure-dependent measurement systems will show exactly what they were designed to show: nothing. The retention risk the board is governing does not exist in the record. It exists in the decision not to create one.
+  </p>
+
+  <h2>The Power User Trap℠ and AI adoption retention risk</h2>
+
+  <p>
+    AI adoption is producing a parallel retention exposure through a different mechanism. <a href="/frameworks/power-user-trap/">The Power User Trap℠</a> describes employees operating in continuous doubt — constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. In practice, this concentrates hidden verification, correction, and system-repair labor onto the employees with the most technical proficiency and deepest institutional knowledge.
+  </p>
+
+  <p>
+    These are the same employees most at risk of Invisible Attrition℠. The organization reads their continued output as productivity. It does not see the governance burden they are absorbing, the capacity that is eroding underneath, or the succession exposure accumulating when they exit.
+  </p>
+
+  <p>
+    The Capacity Substitution Error℠ names the capital misallocation this creates: boards approve AI investment as a productivity solution while the human capacity baseline that investment depends on is unmeasured or deteriorating. The retention risk is not visible in the AI adoption metrics. It is visible only when it surfaces as an exit.
+  </p>
+
+  <h2>Board succession exposure</h2>
+
+  <p>
+    Boards plan succession from disclosed data. When leaders manage risk privately — through Tacere — the succession plan has no data point for the conditions that led to departure. What the board encounters as an abrupt exit was, for the departing leader, a considered and deliberate decision made over months. The board planned for continuity it could not actually see.
+  </p>
+
+  <p>
+    The Compensation, Nominating and Governance Committee's evidentiary obligation is specific: not an engagement survey, which only measures what employees are willing to disclose, but an <a href="/invisible-attrition/">Invisible Attrition℠</a> review of leadership pipeline risk — whether the succession plan is built from disclosed data or from the full population at risk. See the <a href="/frameworks/committee-ownership-map/">Committee Ownership Map</a> for the full evidentiary framework.
+  </p>
+
+  <h2>What a disclosure-independent retention risk analysis evaluates</h2>
+
+  <p>
+    Lozen Advisory's retention risk analysis is not built from the records the organization already has. It evaluates the conditions that produce records — and the conditions that prevent them.
+  </p>
+
+  <p>
+    A disclosure-independent retention risk analysis asks: where is the organization depending on employee disclosure to activate protection systems that senior talent has rational reasons not to use? Where is AI adoption concentrating governance burden on the employees most likely to exit quietly? Where is leadership pipeline data being read as succession readiness when it was built from a structurally incomplete baseline?
+  </p>
+
+  <p>
+    These are not questions the organization's current measurement infrastructure can answer. They require a different analytical frame — one that begins from <a href="/disclosure-independent-governance/">Disclosure-Independent Governance℠</a> rather than from the data already on hand.
+  </p>
+
+  <p>
+    Organizations do not need more employee disclosure to evaluate this risk. They need a system-level analysis of where retention exposure exists outside their current measurement infrastructure.
+  </p>
+</CategoryHubLayout>
