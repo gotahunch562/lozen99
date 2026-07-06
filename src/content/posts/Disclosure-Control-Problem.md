@@ -1,5 +1,5 @@
 ---
-title: "Tool Use Is Not Proof: The AI Disclosure-Control Challenge"
+title: "Shadow AI : The AI Disclosure-Control Challenge"
 seo_title: "General Counsel Risk: Substantiating AI Productivity Claims"
 subtitle: Can AI Work Product Withstand Scrutiny?
 slug: ai-productivity-vs-governance
