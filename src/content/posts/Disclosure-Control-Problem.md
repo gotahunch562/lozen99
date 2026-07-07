@@ -49,7 +49,7 @@ That changes the risk frame. Shadow AI is not merely a junior-employee complianc
 
 The same study found that 76.5% of employees recognize security or data-privacy risks in unapproved AI use, yet usage remains widespread. Nearly one in three employees said they would keep using AI tools even if banned and risking disciplinary action, rising to 37.1% among decision-makers. That is not ignorance. It is an incentive structure.
 
-An [Okta-commissioned survey](https://www.okta.com/newsroom/articles/ai-agents-at-work-2026-agentic-enterprise-security/) shows the same disclosure-control problem from another angle:
+An Okta-commissioned survey shows the same disclosure-control problem from another angle:
 
 - 90% of executives were confident in their organization's visibility into AI tools
 - 52% of knowledge workers admitted using unapproved tools
@@ -61,7 +61,7 @@ When an employee or executive uses an unapproved tool and says nothing, because 
 
 At that point, the problem is not that someone used the wrong tool. The problem is that the organization may be relying on a record it cannot reconstruct, because the record was never created.
 
-This is where the [Name Standard℠](/blog/the-name-standard-ai-governance/) becomes operational. If AI-assisted work entered the record, the governance question is not only whether the tool was approved. The question is whether the organization can identify who relied on AI, what was generated, what was reviewed, what was corrected, what was refused, and whose authority attached to the final output.
+This is where the Name Standard℠ becomes operational. If AI-assisted work entered the record, the governance question is not only whether the tool was approved. The question is whether the organization can identify who relied on AI, what was generated, what was reviewed, what was corrected, what was refused, and whose authority attached to the final output.
 
 ---
 
@@ -69,7 +69,7 @@ This is where the [Name Standard℠](/blog/the-name-standard-ai-governance/) bec
 
 A near miss is not implementation noise. It is evidence that AI-assisted work could have entered the business record without a hint of compliance.
 
-In most organizations, [the employee who caught the error was the power user:](/blog/ai-productivity-dare/) the person most fluent in the tool's failure modes, most capable of recognizing when output required correction before reliance. That labor is not measured, has no line item, and does not appear in the productivity dashboard. But it is the reason the near miss was a near miss and not a material error.
+In most organizations, [the employee who caught the error was the power user:](/frameworks/power-user-trap/) the person most fluent in the tool's failure modes, most capable of recognizing when output required correction before reliance. That labor is not measured, has no line item, and does not appear in the productivity dashboard. But it is the reason the near miss was a near miss and not a material error.
 
 If the organization cannot say who had authority to stop the output, who documented what happened, and whether that employee's judgment was the only control between generation and reliance, it does not have AI governance. It has an AI policy with gaps in it, and a narrow group of employees quietly filling them.
 
