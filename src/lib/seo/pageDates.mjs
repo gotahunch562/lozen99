@@ -33,7 +33,7 @@ const EXPLICIT_PAGE_DATES = new Map([
   ["/retention-risk-analysis/", "2026-07-06"],
   ["/disclosure-independent-governance/", "2026-07-06"],
   ["/frameworks/power-user-trap/", "2026-07-07"],
-  ["/frameworks/committee-ownership-map/", "2026-07-04"],
+  ["/frameworks/committee-ownership-map/", "2026-07-07"],
   ["/disclosure-independence-performance/", "2026-07-04"],
   ["/news-press/menopause-market-correction/", "2026-05-19"],
   ["/voluntary-benefit-disclosure-gap/", "2026-04-27"],
