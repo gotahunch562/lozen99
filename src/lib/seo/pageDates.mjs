@@ -32,13 +32,13 @@ const EXPLICIT_PAGE_DATES = new Map([
   ["/ai-workforce-materiality-briefing/", "2026-05-31"],
   ["/retention-risk-analysis/", "2026-07-06"],
   ["/disclosure-independent-governance/", "2026-07-06"],
-  ["/frameworks/power-user-trap/", "2026-07-04"],
+  ["/frameworks/power-user-trap/", "2026-07-07"],
   ["/frameworks/committee-ownership-map/", "2026-07-04"],
   ["/disclosure-independence-performance/", "2026-07-04"],
   ["/news-press/menopause-market-correction/", "2026-05-19"],
   ["/voluntary-benefit-disclosure-gap/", "2026-04-27"],
   ["/", "2026-07-05"],
-  ["/menopause-and-the-law/", "2026-06-06"],
+  ["/menopause-and-the-law/", "2026-06-07"],
 ]);
 
 const EXCLUDED_EXACT_PATHS = new Set([
