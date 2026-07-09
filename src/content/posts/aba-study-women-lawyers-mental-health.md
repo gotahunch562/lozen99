@@ -18,9 +18,9 @@ metaDescription: The ABA 2026 study measures reported data. Learn why
   trajectory.
 image:
   url: /src/images/blog/womenlawyerconference.avif
-  alt: Gold scales of justice on braided red, gold, and navy ropes
+  alt: woman lawyer with arms folded
 heroImage: /src/images/blog/womenlawfirm.avif
-heroAlt: Gold scales of justice on braided red, gold, and navy ropes
+heroAlt: womem lawyer partners and associates
 tags:
   - Workplace Disclosure
   - Invisible Attrition
