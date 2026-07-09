@@ -7,6 +7,28 @@ const posts = defineCollection({
     base: "./src/content/posts",
     pattern: "**/*.{md,mdx}",
   }),
+  schema: ({ image }) =>
+    z
+      .object({
+        title: z.string(),
+        description: z.string().optional(),
+        excerpt: z.string().optional(),
+        metaDescription: z.string().optional(),
+        seo_title: z.string().optional(),
+        pubDate: z.coerce.date(),
+        datePublished: z.coerce.date().optional(),
+        dateModified: z.coerce.date().optional(),
+        category: z.string().optional(),
+        tags: z.array(z.string()).optional(),
+        draft: z.boolean().optional(),
+        image: z
+          .object({
+            url: image(),
+            alt: z.string().optional(),
+          })
+          .optional(),
+      })
+      .passthrough(),
 });
 
 const services = defineCollection({
