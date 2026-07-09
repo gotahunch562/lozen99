@@ -36,6 +36,20 @@ const services = defineCollection({
     base: "./src/content/services",
     pattern: "**/*.{md,mdx}",
   }),
+  schema: ({ image }) =>
+    z
+      .object({
+        title: z.string(),
+        description: z.string().optional(),
+        excerpt: z.string().optional(),
+        image: z
+          .object({
+            url: image(),
+            alt: z.string().optional(),
+          })
+          .optional(),
+      })
+      .passthrough(),
 });
 
 const news = defineCollection({
