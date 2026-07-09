@@ -1,6 +1,5 @@
 ---
 // Assets
-import { Image } from "astro:assets";
 // Fundations
 import Text from "@/components/fundations/elements/Text.astro";
 
@@ -37,7 +36,8 @@ const { title, description, url, image, imageAlt, pubDate } = {
   >
   </a>
 
-  <Image
+  <img decoding="async" loading="lazy" 
+    
     src={image}
     alt={imageAlt}
     width={1000}
