@@ -1,20 +1,22 @@
 ---
-import { getCollection } from "astro:content";
+export const prerender = true;
+
+import { getCollection, render } from "astro:content";
 import PressReleasePage from "@/components/press/PressReleasePage.astro";
 
 export async function getStaticPaths() {
   const releases = await getCollection("news");
 
   return releases.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
-const canonical = new URL(`/news-press/${entry.slug}/`, Astro.site).href;
+const canonical = new URL(`/news-press/${entry.id}/`, Astro.site).href;
 
 const publishedDateIso = entry.data.pubDate.toISOString();
 
