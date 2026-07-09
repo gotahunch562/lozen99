@@ -5,7 +5,7 @@ subtitle: The Profession Still Has a Measurement Problem
 slug: aba-study-women-lawyers-mental-health
 pubDate: 2026-04-15
 datePublished: 2026-04-15
-dateModified: 2026-06-26
+dateModified: 2026-07-09
 category: Women, Work & Leadership
 excerpt: The American Bar Association will release its national study on women
   lawyers and mental wellness in August 2026. The data will be cited, the
@@ -17,10 +17,10 @@ metaDescription: The ABA 2026 study measures reported data. Learn why
   non-disclosure is a strategic choice for women leaders protecting their career
   trajectory.
 image:
-  url: /src/images/blog/LozenAdvisoryLegalBlog.webp
-  alt: Gold scales of justice on braided red, gold, and navy ropes
-heroImage: /src/images/blog/LozenAdvisoryLegalBlog.webp
-heroAlt: Gold scales of justice on braided red, gold, and navy ropes
+  url: /src/images/blog/womenlawyerconference.avif
+  alt: woman lawyer with arms folded
+heroImage: /src/images/blog/womenlawfirm.avif
+heroAlt: womem lawyer partners and associates
 tags:
   - Workplace Disclosure
   - Invisible Attrition
@@ -30,7 +30,7 @@ spineDestination: menopause-support-women-lawyers
 draft: false
 isFeatured: false
 ---
-## The ABA Study Is Asking the Right Question. 
+## The ABA Study Is Asking the Right Question.
 
 The American Bar Association Commission on Women in the Profession is leading a national study on the mental wellness of women lawyers. The study examines how stress, bias, and systemic barriers affect [women across the legal profession.](/blog/women-lawyers-leadership-perimenopause/) Full findings are expected in August 2026.
 
@@ -146,4 +146,3 @@ The forthcoming ABA study will give the profession more data. The **June 2026 *P
 When the safest professional choice is silence, the data will understate the condition it is trying to measure.
 
 **Lozen Advisory provides strategic advisory for organizations evaluating disclosure-dependent gaps in leadership, retention, and workforce-risk systems.** [Request a briefing](/request-briefing/)
-
