@@ -5,7 +5,7 @@ subtitle: The Profession Still Has a Measurement Problem
 slug: aba-study-women-lawyers-mental-health
 pubDate: 2026-04-15
 datePublished: 2026-04-15
-dateModified: 2026-06-26
+dateModified: 2026-07-09
 category: Women, Work & Leadership
 excerpt: The American Bar Association will release its national study on women
   lawyers and mental wellness in August 2026. The data will be cited, the
@@ -17,9 +17,9 @@ metaDescription: The ABA 2026 study measures reported data. Learn why
   non-disclosure is a strategic choice for women leaders protecting their career
   trajectory.
 image:
-  url: /src/images/blog/LozenAdvisoryLegalBlog.webp
+  url: /src/images/blog/womenlawyerconference.avif
   alt: Gold scales of justice on braided red, gold, and navy ropes
-heroImage: /src/images/blog/LozenAdvisoryLegalBlog.webp
+heroImage: /src/images/blog/womenlawfirm.avif
 heroAlt: Gold scales of justice on braided red, gold, and navy ropes
 tags:
   - Workplace Disclosure
@@ -30,7 +30,7 @@ spineDestination: menopause-support-women-lawyers
 draft: false
 isFeatured: false
 ---
-## The ABA Study Is Asking the Right Question. 
+## The ABA Study Is Asking the Right Question.
 
 The American Bar Association Commission on Women in the Profession is leading a national study on the mental wellness of women lawyers. The study examines how stress, bias, and systemic barriers affect [women across the legal profession.](/blog/women-lawyers-leadership-perimenopause/) Full findings are expected in August 2026.
 
