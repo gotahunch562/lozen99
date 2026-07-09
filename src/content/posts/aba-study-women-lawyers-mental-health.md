@@ -18,9 +18,9 @@ metaDescription: The ABA 2026 study measures reported data. Learn why
   trajectory.
 image:
   url: /src/images/blog/womenlawyerconference.avif
-  alt: woman lawyer with arms folded
+  alt: Gold scales of justice on braided red, gold, and navy ropes
 heroImage: /src/images/blog/womenlawfirm.avif
-heroAlt: womem lawyer partners and associates
+heroAlt: Gold scales of justice on braided red, gold, and navy ropes
 tags:
   - Workplace Disclosure
   - Invisible Attrition
@@ -146,3 +146,4 @@ The forthcoming ABA study will give the profession more data. The **June 2026 *P
 When the safest professional choice is silence, the data will understate the condition it is trying to measure.
 
 **Lozen Advisory provides strategic advisory for organizations evaluating disclosure-dependent gaps in leadership, retention, and workforce-risk systems.** [Request a briefing](/request-briefing/)
+
