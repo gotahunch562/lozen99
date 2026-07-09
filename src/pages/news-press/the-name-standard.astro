@@ -1,0 +1,62 @@
+---
+import PressReleasePage from "@/components/press/PressReleasePage.astro";
+
+const title = "Lozen Advisory Launches The Name Standard℠, a Human-Attribution Standard for AI Governance";
+const description =
+  "New human-attribution standard helps corporate boards evaluate whether AI-assisted decisions remain traceable to a responsible human or institutional actor.";
+const metaDescription =
+  "Lozen Advisory launches The Name Standard℠, a human-attribution standard within its Disclosure-Independent Governance℠ methodology, helping boards and executive teams close AI accountability gaps.";
+const canonical = "https://www.lozenadvisory.com/news-press/the-name-standard/";
+const image = "/images/news/The-Name-Standard.jpg";
+const imageAlt = "AI governance process flow for The Name Standard framework.";
+const imageCaption = "AI governance framework image. Credit: Lozen Advisory LLC.";
+const publishedDate = "July 8, 2026";
+const publishedDateIso = "2026-07-14";
+const mediaEmail = "media@lozenadvisory.com";
+const learnMoreUrl = "https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/";
+---
+
+<PressReleasePage
+  title={title}
+  description={description}
+  metaDescription={metaDescription}
+  canonical={canonical}
+  image={image}
+  imageAlt={imageAlt}
+  imageCaption={imageCaption}
+  publishedDate={publishedDate}
+  publishedDateIso={publishedDateIso}
+  category="AI Governance"
+  mediaEmail={mediaEmail}
+>
+  <p>Lozen Advisory today announced the publication of <strong>The Name Standard℠</strong>, a human-attribution standard within the firm's Disclosure-Independent Governance℠ methodology, designed to help corporate boards and executive teams evaluate whether AI-assisted decisions remain traceable to a responsible human or institutional actor.</p>
+
+  <p>While standard enterprise roadmaps heavily fund technical data governance, they frequently leave a fundamental board question unresolved: who remains accountable when AI shapes the decision record?</p>
+
+  <blockquote>"The Name Standard℠ fixes this problem by demarcating technology ownership from human accountability," said Akilah E. Kamaria, founder of Lozen Advisory. "A company may have an AI policy, an approved vendor tool, an implementation roadmap, or a generic 'human-in-the-loop' workflow and still lack verifiable evidence for agentic AI-assisted work."</blockquote>
+
+  <h2>The Growing Enterprise Governance Problem</h2>
+
+  <p>Corporate AI adoption has entered a phase where speed outpaces verification, creating board-level accountability blind spots. Corporate governance fails when organizations assign IT ownership without explicitly naming human responsibility.</p>
+
+  <p>The Name Standard℠ targets critical operational exposures:</p>
+
+  <ol>
+    <li><strong>Lack of Verifiable Evidence:</strong> Standard workflows log machine use but fail to capture human review, corrections, escalations, refusals, or sign-offs.</li>
+    <li><strong>Shadow AI and Agentic AI Scope:</strong> Unapproved AI use and autonomous AI agents make it harder for corporate boards to trace how AI shaped decisions, outputs, or corporate records.</li>
+    <li><strong>Regulatory and Litigation Pressure:</strong> The AI AGENT Act, The Great American AI Act discussion draft, AI hiring litigation, and the Workday AI bias lawsuit place growing attention on documentation, accountability, and behavioral duties.</li>
+  </ol>
+
+  <h2>About Lozen Advisory</h2>
+
+  <p>Lozen Advisory is a board intelligence and governance advisory firm focused on AI accountability, human attribution, decision integrity, and enterprise governance exposure. The firm helps corporate boards and executive teams identify governance blind spots that traditional risk tracking may fail to surface, including AI-assisted decision accountability, agentic AI oversight, workforce disclosure gaps, retention exposure, and leadership continuity risk.</p>
+
+  <p>Through proprietary methodologies including Disclosure-Independent Governance℠ and The Name Standard℠, Lozen Advisory translates complex governance, workforce, and AI risk signals into the board-level questions institutions need to ask today. To learn more about The Name Standard℠, visit <a href={learnMoreUrl} target="_blank" rel="noopener noreferrer">the Lozen Advisory blog</a>.</p>
+
+  <hr />
+
+  <p><strong>Media Contact</strong><br />
+  Lozen Advisory LLC<br />
+  <a href={`mailto:${mediaEmail}`}>{mediaEmail}</a><br />
+  <a href="/">lozenadvisory.com</a></p>
+</PressReleasePage>
