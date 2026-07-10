@@ -25,7 +25,7 @@ tags:
   - AI Workforce Risk
   - Board Governance
 draft: false
-isFeatured: true
+isFeatured: false
 ---
 The software industry has long understood technical debt. Teams move quickly, accept shortcuts, and defer cleanup. The code works, but the cost of maintaining, explaining, or changing it increases over time. AI is now producing a different kind of debt. It is generating operational decisions at a volume and speed that most companies cannot substantiate after the fact. It is called "Decision Debt."
 
