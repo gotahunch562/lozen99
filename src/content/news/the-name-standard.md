@@ -37,4 +37,4 @@ Through proprietary methodologies including Disclosure-Independent Governance℠
 **Media Contact**  
 Lozen Advisory LLC  
 [media@lozenadvisory.com](mailto:media@lozenadvisory.com)  
-[lozenadvisory.com](/)
+[[lozenadvisory.com](/)](https://www.lozenadvisory.com/news-press/)
