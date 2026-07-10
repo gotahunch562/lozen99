@@ -5,7 +5,7 @@ subtitle: The Case for The Name Standard℠
 slug: the-name-standard-ai-governance
 pubDate: 2026-06-12
 datePublished: 2026-06-12
-dateModified: 2026-06-26
+dateModified: 2026-07-10
 category: AI Governance & Workforce Risk
 excerpt: When AI-assisted work leaves an organization, it does not leave under
   the name of the large language model. It leaves under the name of a person.
@@ -21,10 +21,10 @@ image:
 heroImage: /src/images/blog/the-name-standard-ai-governance-lozen-advisory-llc-1.avif
 heroAlt: The Name Standard℠ signature is an example of AI governance
 tags:
-  - Legal Profession
-  - Invisible Attrition
-  - Legislative Analysis
-  - Research & Policy
+  - AI Governance
+  - Human Oversight
+  - AI Accountability
+  - Board Governance
 draft: false
 isFeatured: true
 ---
@@ -38,7 +38,7 @@ Lozen Advisory calls this the **Name Standard℠**.
 
 ## When the AI gets it wrong, whose name is on it?
 
-The Name Standard℠ defines what must be true before AI-assisted output can carry a person’s name, authority, professional judgment, or institutional sign-off.
+[The Name Standard℠ defines what must be true](/disclosure-independent-governance/) before AI-assisted output can carry a person’s name, authority, professional judgment, or institutional sign-off.
 
 It asks whether the person, or institution, responsible for the output had the time, authority, information, review capacity, documentation, escalation path, and refusal rights necessary to make oversight real.
 
@@ -56,20 +56,33 @@ Boards are being asked to oversee AI systems, AI agents, AI vendors, AI-generate
 
 The common thread is evidence. Boards need to know who is accountable, what was reviewed, what was escalated, what was documented, and where responsibility remains unresolved.
 
-The Name Standard℠ sits within Lozen Advisory’s broader [Disclosure-Independent Governance℠](/disclosure-independent-governance/) architecture for evaluating whether human accountability is real, supported, and traceable.
-
+The Name Standard℠ sits within Lozen Advisory’s broader [Disclosure-Independent Governance℠](/disclosure-independent-governance/) methodology for evaluating whether AI-related work remains traceable to a responsible human or institutional actor.
 
 > Who authorized the agent, who supervises it, who can stop it, who documents its behavior, and who is accountable when it acts?
 
 ## Five questions GRC and governance leaders should ask
 
-[Evaluate your organization’s alignment](/ai-legislation-tracker/) with the Name Standard℠ by asking:
+[Evaluate your organization’s alignment](https://www.lozenadvisory.com/frameworks/committee-ownership-map/) with the Name Standard℠ by asking:
 
 1. **Who can attach their name, judgment, or authority to AI-assisted output?**
 2. **Can that person refuse, override, escalate, or delay its use?**
 3. **What evidence shows that human review was real, not ceremonial?**
 4. **Did the reviewer have the time, source material, and context to verify the output?**
 5. **Who is accountable if the output causes legal, regulatory, financial, reputational, or governance failure?**
+
+## Responsibility without authority is not governance
+
+[The Mayo Clinic AI lawsuit](https://www.mprnews.org/story/2026/07/09/lawsuit-alleges-mayo-clinic-cut-corners-with-ai) shows why the Name Standard℠ is not limited to signatures, approvals, or final output. It also applies to the person inside the organization who is expected to identify AI risk before the system advances.
+
+The complaint alleges that Traci Tamiko Eto, Mayo Clinic’s former Director of Research Operations, raised concerns that patient-data de-identification processes connected to the Mayo Clinic Platform had not been properly reviewed through Mayo’s IRB process. According to the complaint, a senior IRB leader did not challenge the substance of her concern, but resisted revisiting the issue because it would jeopardize the pace of ongoing research projects and compromise Mayo’s competitive advantage.
+
+That is a Name Standard℠ problem: responsibility without authority.
+
+A human reviewer who can identify AI risk but cannot slow, challenge, refuse, document, or escalate the system is not functioning as a governance control. They are functioning as an accountability surface.
+
+The complaint also describes alleged pressure around IRB review, informed-consent waivers, review-panel assignment, software-device use, patient-data privacy, and the MAYA digital assistant study. In the MAYA allegations, the complaint says Eto reported mischaracterized outcomes, deleted unfavorable results, use of an unsanctioned software device, safety and data-security concerns, and efforts to disguise a 67% error rate.
+
+For boards, general counsel, compliance leaders, and audit committees, the evidence question is direct: when a named human is responsible for AI compliance, does that person have the authority to interrupt deployment momentum?
 
 ## Why this matters for corporate boards
 
@@ -78,8 +91,6 @@ Boards are increasingly being asked to oversee AI use, AI legislation, AI vendor
 That is the gap the Name Standard℠ is designed to address.
 
 Human oversight is not enough if no one can explain who reviewed the output, what authority they had, what evidence they relied on, whether they could refuse the output, and how the decision was documented.
-
-If an organization is running AI pilots, AI-assisted reporting, vendor-enabled AI systems or workflows, or agentic AI processes without a documented Name Standard℠ process, the people and institutions whose names carry the output may be left with accountability the governance record does not support.
 
 **Prepare your board for AI accountability questions before the next meeting.**
 
