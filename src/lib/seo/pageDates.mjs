@@ -39,6 +39,7 @@ const EXPLICIT_PAGE_DATES = new Map([
   ["/news-press/the-name-standard/", "2026-07-13"],
   ["/voluntary-benefit-disclosure-gap/", "2026-04-27"],
   ["/news-press/when-ai-carries-your-name/", "2026-07-10"],
+  ["/news-press/", "2026-07-10"],
   ["/", "2026-07-05"],
   ["/menopause-and-the-law/", "2026-06-07"],
 ]);
