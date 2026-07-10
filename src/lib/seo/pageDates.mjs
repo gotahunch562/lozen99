@@ -36,7 +36,9 @@ const EXPLICIT_PAGE_DATES = new Map([
   ["/frameworks/committee-ownership-map/", "2026-07-08"],
   ["/disclosure-independence-performance/", "2026-07-04"],
   ["/news-press/menopause-market-correction/", "2026-05-19"],
+  ["/news-press/the-name-standard/", "2026-07-13"],
   ["/voluntary-benefit-disclosure-gap/", "2026-04-27"],
+  ["/news-press/when-ai-carries-your-name/", "2026-07-10"],
   ["/", "2026-07-05"],
   ["/menopause-and-the-law/", "2026-06-07"],
 ]);
