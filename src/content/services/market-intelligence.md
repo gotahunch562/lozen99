@@ -5,7 +5,7 @@ shortDescription: "Research and analysis on disclosure-dependent workforce risk,
 priceFrom: "Research & Analysis"
 duration: "Organizational advisory"
 image:
-  url: "/src/images/services/serviceplaceholder.webp"
+  url: "/src/images/services/marketintelligence.webp"
   alt: "Professional advisory conversation in an executive office"
 metaDescription: "Market intelligence on disclosure-dependent workforce risk, retention exposure, benefits utilization gaps, and leadership continuity signals."
 ---

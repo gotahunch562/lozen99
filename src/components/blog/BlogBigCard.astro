@@ -1,7 +1,7 @@
 
 ---
-// Assets
 import { Image } from "astro:assets";
+// Assets
 // Fundations
 import Text from "@/components/fundations/elements/Text.astro";
 import Button from "@/components/fundations/elements/Button.astro";
@@ -20,7 +20,7 @@ const url = `/blog/${normalizeSlug(post.data.slug || post.slug || post.id)}`;
 <article
   class="relative p-8 overflow-hidden shadow-2xl rounded-3xl bg-base-900 lg:p-20 outline-4 outline-base-500/10"
 >
-  <Image
+  <Image width={1200} height={630}  loading="lazy" 
     src={post.data.image.url}
     alt={post.data.image.alt}
     class="absolute inset-0 object-cover size-full"

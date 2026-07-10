@@ -11,7 +11,7 @@ const seoTitle = "Services | Lozen Advisory";
 
 const description = "Strategic counsel for the era of algorithmic accountability.";
 
-const canonical = "https://www.lozenadvisory.com/services";
+const canonical = "https://www.lozenadvisory.com/services/";
 
 const serviceOrder = [
   "Market Intelligence",
@@ -38,7 +38,7 @@ const services = serviceEntries
   })
   .map((service) => ({
     title: service.data.title,
-    href: `/services/${service.id}`,
+    href: `/services/${service.id}/`,
     description: service.data.shortDescription || service.data.description,
     image: service.data.image?.url || servicePlaceholder,
     imageAlt: service.data.image?.alt || `${service.data.title} service image`,
@@ -66,10 +66,9 @@ const pageJsonLd = createServiceJsonLd({
   eyebrow="Services"
   articleJsonLd={pageJsonLd}
 >
-
- <p>
-  Lozen Advisory works with leadership teams when utilization is low, retention risk is unclear, succession exposure is underestimated, or a workforce or AI governance issue is beginning to carry operational, reputational, or board-level weight. We advise on the infrastructure questions those conditions reveal: what the current system can and cannot detect, where human accountability must remain traceable under the Name Standard℠, and what a disclosure-independent design would require.
-</p>
+  <p>
+    Lozen Advisory works with leadership teams when utilization is low, retention risk is unclear, succession exposure is underestimated, or a workforce or AI governance issue is beginning to carry operational, reputational, or board-level weight. We advise on the infrastructure questions those conditions reveal: what the current system can and cannot detect, where human accountability must remain traceable under the Name Standard℠, and what a disclosure-independent design would require.
+  </p>
 
   <p class="service-thesis">
     The absence of data is not the absence of risk.
@@ -93,7 +92,6 @@ const pageJsonLd = createServiceJsonLd({
     </div>
   </section>
 
-
   <section class="service-cards" aria-label="Services">
     <div class="service-cards__heading">
       <h2>Services</h2>
@@ -108,6 +106,8 @@ const pageJsonLd = createServiceJsonLd({
                 <Image
                   src={service.image}
                   alt={service.imageAlt}
+                  width={1200}
+                  height={675}
                   class="service-card__image"
                   loading="lazy"
                 />
@@ -140,7 +140,6 @@ const pageJsonLd = createServiceJsonLd({
     line-height: var(--lozen-section-title-line-height) !important;
     text-wrap: balance;
   }
-
 
   .service-scope {
     margin: 3rem 0 0;
@@ -195,7 +194,7 @@ const pageJsonLd = createServiceJsonLd({
     line-height: 1.82 !important;
   }
 
-.service-cards {
+  .service-cards {
     position: relative;
     left: 50%;
     width: min(calc(100vw - 3rem), 78rem);
@@ -307,8 +306,6 @@ const pageJsonLd = createServiceJsonLd({
   }
 
   @media (max-width: 760px) {
-
-
     .service-scope__grid {
       grid-template-columns: minmax(0, 1fr);
       gap: 1rem;

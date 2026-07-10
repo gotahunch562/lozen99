@@ -1,11 +1,14 @@
 ---
+// Assets
+import { Image } from "astro:assets";
+
 // Fundations
 import Text from "@/components/fundations/elements/Text.astro";
 
 const service = Astro.props.service;
 
 const { title, description, url, eyebrow, duration, image } = {
-  url: "/services/" + service.id,
+  url: "/services/" + service.id + "/",
   title: service.data.title,
   description: service.data.shortDescription || service.data.description,
   eyebrow: service.data.priceFrom,
@@ -13,14 +16,8 @@ const { title, description, url, eyebrow, duration, image } = {
   image: service.data.image,
 };
 
-const imageCandidate = image?.url ?? image?.src ?? image;
-const imageSrc =
-  typeof imageCandidate === "string"
-    ? imageCandidate
-    : imageCandidate?.src || "/images/services/serviceplaceholder.webp";
-
-const imageAlt =
-  image?.alt || `${title} service image`;
+const imageAsset = image?.url ?? image;
+const imageAlt = image?.alt || `${title} service image`;
 ---
 
 <article class="group">
@@ -30,16 +27,19 @@ const imageAlt =
     aria-label={`View service: ${title}`}
     class="block no-underline"
   >
-    <div
-      class="relative aspect-[4/3] overflow-hidden bg-base-100"
-    >
-      <img
-        src={imageSrc}
-        alt={imageAlt}
-        class="size-full object-cover transition-transform duration-500 group-hover:scale-105"
-        loading="lazy"
-        decoding="async"
-      />
+    <div class="relative aspect-[4/3] overflow-hidden bg-base-100">
+      {
+        imageAsset && (
+          <Image
+            src={imageAsset}
+            alt={imageAlt}
+            width={1200}
+            height={900}
+            class="size-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+        )
+      }
 
       <div
         aria-hidden="true"

@@ -3,58 +3,75 @@ import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
 const posts = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/posts" }),
+  loader: glob({
+    base: "./src/content/posts",
+    pattern: "**/*.{md,mdx}",
+  }),
   schema: ({ image }) =>
-    z.object({
-      title: z.string(),
-      seo_title: z.string().optional(),
-      subtitle: z.string().optional(),
-      slug: z.string().optional(),
-      pubDate: z.coerce.date(),
-      datePublished: z.coerce.date().optional(),
-      dateModified: z.coerce.date().optional(),
-      category: z.string().optional(),
-      seriesKey: z.string().optional(),
-      seriesOrder: z.coerce.number().int().positive().optional(),
-      homepageSection: z.enum(["menopause-at-work"]).optional(),
-      description: z.string(),
-      excerpt: z.string().optional(),
-      metaDescription: z.string().optional(),
-      image: z.object({
-        url: image(),
-        alt: z.string(),
-      }),
-      heroImage: image().optional(),
-      heroAlt: z.string().optional(),
-      tags: z.array(z.string()).optional().default([]),
-      spineDestination: z.string().optional(),
-      draft: z.boolean().optional().default(false),
-      isFeatured: z.boolean().optional().default(false),
-    }),
+    z
+      .object({
+        title: z.string(),
+        description: z.string().optional(),
+        excerpt: z.string().optional(),
+        metaDescription: z.string().optional(),
+        seo_title: z.string().optional(),
+        pubDate: z.coerce.date(),
+        datePublished: z.coerce.date().optional(),
+        dateModified: z.coerce.date().optional(),
+        category: z.string().optional(),
+        tags: z.array(z.string()).optional(),
+        draft: z.boolean().optional(),
+        image: z
+          .object({
+            url: image(),
+            alt: z.string().optional(),
+          })
+          .optional(),
+      })
+      .passthrough(),
 });
 
 const services = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/services" }),
+  loader: glob({
+    base: "./src/content/services",
+    pattern: "**/*.{md,mdx}",
+  }),
   schema: ({ image }) =>
-    z.object({
-      title: z.string(),
-      shortDescription: z.string(),
-      description: z.string(),
-      metaDescription: z.string().optional(),
-      category: z.string().optional(),
-      image: z
-        .object({
-          url: image(),
-          alt: z.string(),
-        })
-        .optional(),
-      priceFrom: z.string().optional(),
-      duration: z.string().optional(),
-      isFeatured: z.boolean().optional().default(false),
-    }),
+    z
+      .object({
+        title: z.string(),
+        description: z.string().optional(),
+        excerpt: z.string().optional(),
+        image: z
+          .object({
+            url: image(),
+            alt: z.string().optional(),
+          })
+          .optional(),
+      })
+      .passthrough(),
+});
+
+const news = defineCollection({
+  loader: glob({
+    base: "./src/content/news",
+    pattern: "**/*.{md,mdx}",
+  }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    metaDescription: z.string().optional(),
+    pubDate: z.coerce.date(),
+    category: z.string().default("Press Release"),
+    releaseLabel: z.string().default("For Immediate Release"),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
+    imageCaption: z.string().optional(),
+  }),
 });
 
 export const collections = {
   posts,
   services,
+  news,
 };
