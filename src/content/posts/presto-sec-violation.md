@@ -1,28 +1,28 @@
 ---
-title: "What the SEC Presto Order Means for Human-in-the-Loop (HITL) AI Compliance "
+title: "What the SEC Presto Order Means for Human-in-the-Loop (HITL) AI Compliance"
 seo_title: SEC Presto Order & Human-in-the-Loop AI Compliance
 subtitle: What the Presto Automation order reveals about AI accountability,
   human intervention, and the Name Standard℠
 slug: human-in-the-loop-sec-ai-disclosure
 pubDate: 2026-07-01
 datePublished: 2026-07-01
-dateModified: 2026-07-03
+dateModified: 2026-07-10
 category: AI Governance & Workforce Risk
 excerpt: The SEC’s January 2025 enforcement action against Presto Automation
-  exposes the massive compliance gap between marketing "autonomous AI" and the
+  exposes the compliance gap between marketing "autonomous AI" and the
   reality of relying on hidden human labor. By mapping Presto’s disclosure
-  failures to Lozen Advisory’s Name Standard℠ diagnostic framework, this
-  analysis breaks down why removing the visible worker while using offshore
-  agents is not true automation—and why corporate boards must maintain an
-  active, empowered, and documented human accountability layer.
+  failures to Lozen Advisory’s Name Standard℠ and Disclosure-Independent
+  Governance℠ methodology, this analysis shows why corporate boards need an
+  active, empowered, documented human accountability layer and clear committee
+  ownership for AI claims.
 description: The SEC’s Presto order exposes the risk of hiding human-in-the-loop
-  (HITL) labor. See how this compliance failure maps to the Name Standard℠
-  framework.
+  (HITL) labor. See how this compliance failure maps to the Name Standard℠,
+  Disclosure-Independent Governance℠, and board committee ownership.
 image:
   url: /src/images/blog/ai-the-name-standard.webp
-  alt: Human-in-the-Loop concept with man ceo
+  alt: Human accountability and AI governance concept for the Name Standard
 heroImage: /src/images/blog/ai-name-standard-2026.webp
-heroAlt: Human-in-the-Loop concept with woman cso
+heroAlt: Human accountability and board-level AI governance concept
 tags:
   - AI Governance
   - Name Standard
@@ -33,9 +33,9 @@ isFeatured: false
 ---
 ## AI Accountability: Beyond Human-in-the-Loop
 
-This article uses the SEC's January 2025 enforcement action against Presto Automation as a case study in AI accountability failure, and maps each violation to Lozen Advisory's Name Standard℠ diagnostic framework. The Presto action is not only an AI-washing case. It is a disclosure-control case about ownership, human intervention, and whether a company can describe an AI product as autonomous, specifically, as having eliminated human order taking, when a human-in-the-loop (HITL) workforce remains embedded in the operating model.
+This article uses the SEC's January 2025 enforcement action against Presto Automation as a case study in AI accountability failure, and maps each violation to Lozen Advisory's Name Standard℠ within the firm's [Disclosure-Independent Governance℠](/disclosure-independent-governance/) methodology. The Presto action is not only an AI-washing case. It is a disclosure-control case about ownership, human intervention, and whether a company can describe an AI product as autonomous, specifically, as having eliminated human order taking, when a human-in-the-loop (HITL) workforce remains embedded in the operating model.
 
-On January 14, 2025, the SEC announced settled charges against Presto Automation, Inc. for making materially false and misleading statements about Presto Voice, its drive-thru AI ordering product. The enforcement signal is direct: public-company AI claims now require disclosure controls that can verify the difference between what the company says AI does, and which [human roles, vendors, or operational functions are actually involved](/blog/the-name-standard-ai-governance/) in making the AI work.
+On January 14, 2025, the SEC announced settled charges against Presto Automation, Inc. for making materially false and misleading statements about Presto Voice, its drive-thru AI ordering product. The enforcement signal is direct: public-company AI claims now require disclosure controls that can verify the difference between what the company says AI does, and which [human roles, vendors, or operational functions are actually involved](/blog/the-name-standard-ai-governance/) in making the AI work. For corporate boards, that verification problem also creates a [committee ownership](/frameworks/committee-ownership-map/) problem: someone must know which board body owns the AI claim, the vendor dependency, the human review layer, and the escalation path.
 
 ---
 
@@ -71,13 +71,13 @@ What follows is Lozen Advisory's diagnostic reading of the Presto order — not 
 - **Pillar 4 — Documentation Infrastructure.** Is the human validation process tangibly logged to provide clear internal compliance evidence during regulatory review? This is the third violation in the SEC order in explicit form. Presto had no established process for drafting, reviewing, or approving Commission filings, and no one was formally responsible for ensuring their accuracy. The order found an absence of disclosure controls and procedures — meaning no formal validation chain existed to produce or preserve a compliance record.
 - **Pillar 5 — Formal Right of Refusal.** Does the individual possess the institutional standing and explicit veto power to halt, escalate, or document non-compliant AI assets without fear of internal reprisal? Presto executives flagged the misleading terminology in October 2022 and again in January 2023. Those concerns produced internal discussion and no corrective action. There was no formal escalation path, no veto mechanism, and no institutional standing for the people who knew the claims were false to stop the filings.
 
-The Name Standard℠ does not ask whether AI is impressive. It asks whether the human accountability layer is active, documented, and empowered OR ceremonial. This is a [Disclosure-Independent Governance℠](/disclosure-independent-governance/) problem because the company’s SEC filings claimed autonomous AI performance while omitting the human intervention and vendor dependency required to make the product function.
+The Name Standard℠ does not ask whether AI is impressive. It asks whether the human accountability layer is active, documented, and empowered or ceremonial. This is a [Disclosure-Independent Governance℠](/disclosure-independent-governance/) problem because the company’s SEC filings claimed autonomous AI performance while omitting the human intervention and vendor dependency required to make the product function.
 
 ---
 
 ## The Governance Signal for Boards
 
-The Presto order is board-relevant. It is an issuer disclosure enforcement action — which means disclosure controls, AI claim accuracy, investor materiality, and human accountability are the questions boards and audit committees are responsible for. The five pillars of the Name Standard℠ are the diagnostic — examined in full in Lozen Advisory's [Disclosure-Independent Governance℠](/disclosure-independent-governance/) category framework, which maps these accountability failures to the board evidence problem AI adoption is creating across enterprises. The Presto order illustrates what can happen when none of them are in place.
+The Presto order is board-relevant. It is an issuer disclosure enforcement action — which means disclosure controls, AI claim accuracy, investor materiality, and human accountability are the questions boards and audit committees are responsible for. The five pillars of the Name Standard℠ are the diagnostic — examined in full in Lozen Advisory's [Disclosure-Independent Governance℠](/disclosure-independent-governance/) category framework, which maps these accountability failures to the board evidence problem AI adoption is creating across enterprises. The [Committee Ownership Map](/frameworks/committee-ownership-map/) extends that question by asking which board body owns AI-assisted decision accountability, vendor reliance, escalation duties, and evidence of human sign-off. The Presto order illustrates what can happen when none of them are in place.
 
 For boards, audit committees, and disclosure teams, the question is not whether your company uses AI. It is whether the human-in-the-loop (HITL) layer behind your AI claims is active, documented, and empowered to act — or whether it exists only on paper.
 
