@@ -20,11 +20,15 @@ const heroImageAlt =
 interface PlannedSeriesItem {
   number: string;
   seriesOrder: number;
-  title: string;
-  summary: string;
+  fallbackTitle: string;
+  fallbackSummary: string;
 }
 
-interface SeriesItem extends PlannedSeriesItem {
+interface SeriesItem {
+  number: string;
+  seriesOrder: number;
+  title: string;
+  summary: string;
   status: "published" | "forthcoming";
   publishLabel: string;
   href?: string;
@@ -36,43 +40,43 @@ const plannedSeriesItems: PlannedSeriesItem[] = [
   {
     number: "01",
     seriesOrder: 1,
-    title: "Mandatory AI Use Is Not AI Governance",
-    summary:
+    fallbackTitle: "Article 01",
+    fallbackSummary:
       "How AI adoption mandates can hide verification burden, judgment work, and accountability risk behind AI output.",
   },
   {
     number: "02",
     seriesOrder: 2,
-    title: "AI Investment Is Scaling Faster Than Human Capacity",
-    summary:
+    fallbackTitle: "Article 02",
+    fallbackSummary:
       "Why AI investment can outpace the human review capacity required to make adoption operationally durable.",
   },
   {
     number: "03",
     seriesOrder: 3,
-    title: "LLM Generation Is Fast. Governance Is Not.",
-    summary:
+    fallbackTitle: "Article 03",
+    fallbackSummary:
       "The governance layer between machine-generated output and operational reliance.",
   },
   {
     number: "04",
     seriesOrder: 4,
-    title: "The Missing Cost Base in AI ROI",
-    summary:
+    fallbackTitle: "Article 04",
+    fallbackSummary:
       "How unpriced verification, correction, review, and workflow repair can distort AI ROI.",
   },
   {
     number: "05",
     seriesOrder: 5,
-    title: "AI Productivity Claims Are Becoming a Disclosure-Control Problem",
-    summary:
+    fallbackTitle: "Article 05",
+    fallbackSummary:
       "Why shadow AI, substantiation, formal records, and productivity claims are becoming governance evidence issues.",
   },
   {
     number: "06",
     seriesOrder: 6,
-    title: "Human Capital Materiality Readiness Before the 10-K",
-    summary:
+    fallbackTitle: "Human Capital Materiality Readiness Before the 10-K",
+    fallbackSummary:
       "How boards and reporting leaders can examine AI-related workforce exposure before it becomes a disclosure problem.",
   },
 ];
@@ -138,7 +142,10 @@ const seriesItems: SeriesItem[] = plannedSeriesItems.map((item) => {
 
   if (!matchingPost) {
     return {
-      ...item,
+      number: item.number,
+      seriesOrder: item.seriesOrder,
+      title: item.fallbackTitle,
+      summary: item.fallbackSummary,
       status: "forthcoming",
       publishLabel: "Forthcoming",
     };
@@ -146,9 +153,15 @@ const seriesItems: SeriesItem[] = plannedSeriesItems.map((item) => {
 
   const slug = normalizeSlug(matchingPost.data.slug || matchingPost.id);
   const publishedDate = matchingPost.data.datePublished || matchingPost.data.pubDate;
+  const postTitle = matchingPost.data.title || item.fallbackTitle;
+  const postSummary =
+    matchingPost.data.excerpt || matchingPost.data.description || item.fallbackSummary;
 
   return {
-    ...item,
+    number: item.number,
+    seriesOrder: item.seriesOrder,
+    title: postTitle,
+    summary: postSummary,
     status: "published",
     publishLabel: publishedDate
       ? `Published: ${formatPublishedDate(publishedDate)}`
@@ -337,7 +350,7 @@ const seriesJsonLd = createCreativeWorkSeriesJsonLd({
   <section class="series-roadmap" aria-label="Series roadmap">
     <div class="series-roadmap__intro">
       <h2>Series Roadmap</h2>
-      <p>Current sequence for this series. Articles are linked automatically when published with the matching series metadata.</p>
+      <p>Completed sequence for this series. Published article titles and summaries are pulled from each post’s frontmatter.</p>
     </div>
 
     <div class="series-accordion">
