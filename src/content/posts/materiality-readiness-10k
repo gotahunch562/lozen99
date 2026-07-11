@@ -1,0 +1,132 @@
+---
+title: "Human Capital Materiality Readiness Before the 10-K"
+description: "AI adoption is breaking the workforce data boards rely on for human capital disclosure — before those gaps reach the 10-K."
+metaDescription: "AI productivity metrics exclude verification labor, retention data misses governance capacity loss, and performance records can't distinguish human judgment from AI-assisted output. Here's what boards need to examine before annual disclosure."
+pubDate: 2026-07-10
+category: "AI Governance"
+draft: false
+seriesKey: "ai-workforce-materiality"
+seriesOrder: 6
+slug: "human-capital-materiality-readiness-10k"
+image: "/images/blog/human-capital-materiality-readiness-10k.jpg"
+imageAlt: "Board governance readiness review for AI-related human capital materiality."
+imageCaption: "AI workforce materiality governance image. Credit: Lozen Advisory LLC."
+---
+
+# Human Capital Materiality Readiness Before the 10-K
+
+Human capital materiality does not begin when a company drafts its 10-K.
+
+It begins earlier, when workforce systems start producing incomplete evidence: AI productivity metrics that do not show verification labor, retention data that records exits after capacity has already eroded, and performance data that cannot distinguish human capability from AI-assisted output.
+
+By the time those risks appear in annual reporting, the governance opportunity may already have passed.
+
+---
+
+## What the SEC Requires — and What AI Is Breaking
+
+Since 2020, the SEC has required public companies to disclose human capital resources material to understanding the business. The rule does not prescribe specific metrics. It requires disclosure of whatever a reasonable investor would consider important to understanding how the company manages its workforce.
+
+That was a manageable disclosure problem when human capital data was relatively stable — headcount, turnover, training investment, compensation structure. The underlying systems produced readable data. The board reviewed it. Counsel determined what was material. The 10-K reflected it.
+
+AI adoption has broken that chain at the source.
+
+The underlying systems are no longer producing readable data. Productivity metrics that were built to measure human output now measure a combination of human judgment and AI generation that the system cannot separate. Retention data records when people leave but not whether the institutional knowledge required to verify AI output left with them. Performance data reflects completed work but cannot show whether the human who signed off had the time, tools, and authority to evaluate what the AI produced.
+
+The board is reviewing data that was accurate when the systems were built and is no longer a reliable picture of the workforce's actual capacity, risk exposure, or readiness.
+
+---
+
+## Three Specific Failures
+
+**AI productivity metrics that exclude verification labor.**
+
+When a company reports that AI has increased output by a measurable percentage, that figure typically counts what was produced. It does not count the human time required to verify it. In regulated industries, in legal and compliance functions, in financial reporting, verification is not optional — it is the governance control. A productivity metric that excludes verification labor is not reporting efficiency. It is reporting volume while concealing the cost and capacity required to make that volume reliable.
+
+The Mayo Clinic lawsuit filed July 6, 2026 makes this failure concrete in a healthcare context. Traci Tamiko Eto, the clinic's former Director of Research Operations, alleged that her supervisor dismissed concerns about bypassed institutional review board (IRB) processes because additional review "would jeopardize the pace of ongoing research projects" and "compromise Mayo's competitive advantage." The IRB review is verification labor. When that labor was excluded from the institution's operational calculation, the output continued — but the governance control that made the output trustworthy had been removed. The productivity metric would not have shown that.
+
+The same failure appeared in the SEC's Presto Automation enforcement action. Presto reported non-intervention rates of 95 to 99 percent — but those figures excluded offshore human agents who were entering orders in the Philippines and India. The metric counted output without counting the labor required to produce it. The result was a disclosure that looked like efficiency data and was actually concealment.
+
+This is the data problem Article 02 in this series identified at the capital level: AI investment is scaling faster than human capacity. The human capital data failure is what makes that gap invisible until it becomes a disclosure problem.
+
+**Retention data that records exits after capacity has already eroded.**
+
+Standard retention reporting captures when an employee leaves. It does not capture what leaves with them. In an AI-assisted workflow, the humans who understand the limits of the system — who know when the model is wrong, when the output needs escalation, when the verification step cannot be skipped — are not interchangeable with the humans who replaced them.
+
+When those people leave, the organization's actual capacity to govern its AI output declines before any system records it. The retention data shows a number. The number does not show that the verification layer just got thinner.
+
+In the Mayo Clinic case, Eto oversaw a team of 36 employees responsible for the institution's human research protection and IRB operations. The lawsuit alleges she was demoted, stripped of leadership responsibilities, and ultimately fired after raising AI compliance concerns. Her departure would appear in retention data as a single director-level exit. It represented the loss of the governance function responsible for ensuring AI research met federal standards — and a signal to 36 staff members about what happens to people who raise compliance concerns.
+
+**Performance data that cannot distinguish human from AI-assisted output.**
+
+Performance systems were designed to evaluate human work. They are increasingly evaluating the combination of human judgment and AI generation as a single output, with no record of which decisions the human made, what the AI produced, and where the human's role was substantive versus confirmatory.
+
+That creates a board-level evidence problem. If a regulator, investor, or plaintiff asks what the responsible human actually did — what they reviewed, what they approved, what they had the capacity to evaluate — the performance record may not be able to answer. The human is named. The accountability is not documented.
+
+The Mayo Clinic lawsuit alleges that a study of MAYA, the clinic's AI-powered digital assistant, mischaracterized patient outcomes, deleted unfavorable data, and used unauthorized software. Ten separate whistleblower complaints raised similar concerns, including allegations that researchers sought to conceal a 67 percent error rate. The study was approved and exempted from IRB inspection. The performance record would show an approved research output. It would not show that the humans who signed off had suppressed contradictory findings rather than evaluated them.
+
+This is the disclosure-control problem Article 05 identified from the GC's perspective. At the human capital level, it means the workforce data that should substantiate accountability claims does not contain the evidence required to support them.
+
+---
+
+## Why the Governance Window Closes Before the 10-K
+
+Annual reporting is a rear-view mirror. By the time human capital risks appear in a 10-K — through a material weakness finding, an SEC comment letter, a restatement, or investor scrutiny of workforce disclosures — the decisions that created those risks are already in the past.
+
+The board that learns about verification labor gaps from an annual disclosure cycle is the board that has been approving AI productivity claims without a reliable basis for months or years. The board that learns about retention risk at the point of exit has already lost the institutional knowledge required to course-correct.
+
+Readiness means having the governance data before it becomes a disclosure problem — not after.
+
+The three data failures above are not disclosure failures yet. They are governance failures that will become disclosure failures if the board cannot answer, with evidence, the questions a reasonable investor would ask: What is the actual human capacity behind your AI-assisted output? What does your workforce verification layer look like? How do you know the humans named as accountable had what they needed to exercise real judgment?
+
+---
+
+## What the Name Standard℠ Adds to Human Capital Readiness
+
+The Name Standard℠ was built for exactly the gap between human capital data and human capital accountability.
+
+It tests whether the humans named as accountable behind AI-assisted output actually had the capacity, information, authority, documentation, and escalation path required to make that accountability real — not ceremonial.
+
+The Mayo Clinic case illustrates what happens when the fifth pillar is missing. The Name Standard℠ requires a Formal Right of Refusal: the institutional standing and explicit authority to halt, escalate, or document non-compliant AI assets without fear of internal reprisal. Eto had the title, the mandate, and the compliance expertise. The lawsuit alleges she did not have the protected escalation path. When she reported concerns to Mayo's legal department, she was excluded from leadership meetings and targeted for removal. The governance function she represented was not empowered — it was eliminated.
+
+The Presto Automation enforcement action produced the same finding at the corporate disclosure level. Presto executives flagged the misleading AI terminology internally in October 2022 and again in January 2023. No corrective action followed because no formal process existed to require it. The SEC's third violation in the order was the absence of disclosure controls and procedures — no one formally responsible for ensuring the company's filings were accurate.
+
+Both cases show the same failure: the human who knew was not empowered to act, and the organization had no formal structure requiring the knowledge to reach the governance decision.
+
+Applied to human capital readiness, the Name Standard℠ asks five questions before the 10-K drafting process begins:
+
+Do workforce productivity metrics separate AI-generated volume from verified, human-reviewed output?
+
+Does the organization know which roles carry verification responsibility for AI-assisted work — and whether those roles are adequately staffed?
+
+When a human approves AI output, is there a record showing they had the time, tools, and access required to evaluate it?
+
+When key employees in verification or oversight roles leave, does the organization track what governance capacity departed with them?
+
+Can the board produce, on request, the evidence trail showing human accountability behind AI-assisted decisions — not a description of the process, but the actual record?
+
+If the answer to any of those questions is unclear, the organization is carrying human capital risk that its current data cannot see — and that its next annual filing will not be able to explain.
+
+---
+
+## Readiness Is a Pre-Filing Question
+
+The AI Workforce Materiality Briefing is designed for boards and audit committees that want to answer these questions before they become disclosure events.
+
+It identifies where current workforce data is producing incomplete evidence, where the accountability record behind AI-assisted output cannot be substantiated, and where the gap between what the organization can disclose and what a reasonable investor would want to know is widening.
+
+The goal is not to prepare the disclosure. The goal is to close the governance gap before the disclosure requirement arrives.
+
+---
+
+[Request the AI Workforce Materiality Briefing →](https://www.lozenadvisory.com/ai-workforce-materiality-briefing/)
+
+---
+
+*This is Article 06 in Lozen Advisory's series on AI governance, human accountability, and enterprise readiness.*
+
+*← [Article 05: AI Productivity Claims Are Becoming a Disclosure-Control Problem](https://www.lozenadvisory.com/blog/ai-productivity-vs-governance/)*
+
+---
+
+*Sources: Eto v. Mayo Clinic, U.S. District Court for the District of Minnesota (filed July 6, 2026). SEC v. Presto Automation Inc., File No. 3-22413 (January 14, 2025). Reporting via [MPR News](https://www.mprnews.org/story/2026/07/09/lawsuit-alleges-mayo-clinic-cut-corners-with-ai), [Becker's Hospital Review](https://www.beckershospitalreview.com/healthcare-information-technology/ai/mayo-faces-lawsuit-over-ai-oversight-retaliation/), and [Minnesota Lawyer](https://minnlawyer.com/2026/07/10/mayo-clinic-ai-compliance-retaliation-lawsuit/).*
