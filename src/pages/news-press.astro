@@ -1,4 +1,5 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import InternalPageHero from "@/components/fundations/sections/InternalPageHero.astro";
 import Text from "@/components/fundations/elements/Text.astro";
@@ -7,36 +8,25 @@ import { createCollectionPageJsonLd } from "@/lib/seo/jsonLd";
 
 const mediaEmail = "media@lozenadvisory.com";
 
-const releases = [
-  {
-    date: "July 14, 2026",
-    category: "AI Governance",
-    headline: "Lozen Advisory Launches The Name Standard℠, a Human-Attribution Standard for AI Governance",
-    description:
-      "Lozen Advisory publishes The Name Standard℠, a human-attribution standard within its Disclosure-Independent Governance℠ methodology, helping corporate boards evaluate whether AI-assisted decisions remain traceable to a responsible human or institutional actor.",
-    href: "/news-press/the-name-standard/",
-  },
-  {
-    date: "June 30, 2026",
-    category: "AI Governance",
-    headline: "Lozen Advisory Launches \"When AI Carries Your Name\" for Leaders Using AI at Work",
-    description:
-      "Lozen Advisory introduces the Name Standard℠ in a briefing for leaders using AI at work, focused on verification, human accountability, and reputation risk when AI-assisted work moves through a leader's name or authority.",
-    href: "/news-press/when-ai-carries-your-name/",
-  },
-  {
-    date: "May 19, 2026",
-    category: "Market Correction",
-    headline: "The Menopause-at-Work Market Followed the Playbook. The Playbook Was Wrong.",
-    description:
-      "As PwC names menopause a defining women's health opportunity, Lozen Advisory issues a market correction on utilization failure and the false assumption that awareness equals adoption.",
-    href: "/news-press/menopause-market-correction/",
-  },
-];
+const newsEntries = await getCollection("news");
 
+const releases = newsEntries
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .map((entry) => ({
+    date: entry.data.pubDate.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }),
+    category: entry.data.category || "Press Release",
+    headline: entry.data.title,
+    description: entry.data.description,
+    href: `/news-press/${entry.id}/`,
+  }));
 
 const title = "News & Press | Lozen Advisory";
-const description = "Press releases, media materials, and public statements from Lozen Advisory on AI governance, algorithmic accountability, workforce governance, and market analysis.";
+const description =
+  "Press releases, media materials, and public statements from Lozen Advisory on AI governance, algorithmic accountability, workforce governance, and market analysis.";
 const canonical = "https://www.lozenadvisory.com/news-press/";
 
 const collectionJsonLd = createCollectionPageJsonLd({
@@ -62,21 +52,18 @@ const collectionJsonLd = createCollectionPageJsonLd({
   jsonLd={collectionJsonLd}
 >
   <main class="bg-base-50">
-
     <InternalPageHero
-    eyebrow="Newsroom"
-    title="News & Press"
-    deck="Press releases and media materials from Lozen Advisory. For media inquiries, contact media@lozenadvisory.com."
-  />
+      eyebrow="Newsroom"
+      title="News & Press"
+      deck={`Press releases and media materials from Lozen Advisory. For media inquiries, contact ${mediaEmail}.`}
+    />
 
     <section class="py-16 lg:py-24">
       <Wrapper variant="standard">
-
         <div class="divide-y divide-base-200">
           {releases.map((release) => (
             <article class="py-10 first:pt-0">
               <div class="grid gap-6 lg:grid-cols-[0.72fr_1fr] lg:items-start">
-
                 <div>
                   <Text
                     tag="p"
@@ -85,6 +72,7 @@ const collectionJsonLd = createCollectionPageJsonLd({
                   >
                     {release.date}
                   </Text>
+
                   <Text
                     tag="p"
                     variant="textXS"
@@ -119,14 +107,11 @@ const collectionJsonLd = createCollectionPageJsonLd({
                     <span aria-hidden="true">→</span>
                   </a>
                 </div>
-
               </div>
             </article>
           ))}
         </div>
-
       </Wrapper>
     </section>
-
   </main>
 </BaseLayout>
