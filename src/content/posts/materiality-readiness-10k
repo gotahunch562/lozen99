@@ -1,16 +1,35 @@
 ---
-title: "Human Capital Materiality Readiness Before the 10-K"
-description: "AI adoption is breaking the workforce data boards rely on for human capital disclosure — before those gaps reach the 10-K."
-metaDescription: "AI productivity metrics exclude verification labor, retention data misses governance capacity loss, and performance records can't distinguish human judgment from AI-assisted output. Here's what boards need to examine before annual disclosure."
+title: Human Capital Materiality Readiness Before the 10-K
+seo_title: What Boards Need to Examine Before AI Workforce Risk Reaches the 10-K
+subtitle: What Boards Need to Examine Before AI Workforce Risk Reaches the 10-K
+slug: human-capital-materiality-readiness-10k
 pubDate: 2026-07-10
-category: "AI Governance"
-draft: true
-seriesKey: "ai-workforce-materiality"
+datePublished: 2026-07-10
+dateModified: 2026-07-10
+category: AI Governance & Workforce Risk
+seriesKey: ai-workforce-materiality
 seriesOrder: 6
-slug: "human-capital-materiality-readiness-10k"
-image: "/images/blog/human-capital-materiality-readiness-10k.jpg"
-imageAlt: "Board governance readiness review for AI-related human capital materiality."
-imageCaption: "AI workforce materiality governance image. Credit: Lozen Advisory LLC."
+excerpt: AI adoption is breaking the workforce data boards rely on for human
+  capital disclosure. Verification labor is excluded, retention data misses
+  governance capacity loss, and performance records can't distinguish human
+  judgment from AI-assisted output — before any of it reaches the 10-K.
+description: When boards rely on AI productivity metrics that exclude
+  verification labor, retention data that misses governance capacity loss, and
+  performance records that can't distinguish human from AI-assisted output,
+  the disclosure gap is already forming. Lozen Advisory examines what readiness
+  requires before the filing deadline.
+image:
+  url: /src/images/blog/human-capital-materiality-readiness-10k.avif
+  alt: Board governance review for AI-related human capital materiality risk
+heroImage: /src/images/blog/human-capital-materiality-readiness-10k-hero.avif
+heroAlt: Board governance review for AI-related human capital materiality risk
+tags:
+  - AI Governance
+  - Workforce Risk
+  - Name Standard
+
+draft: true
+isFeatured: false
 ---
 
 # Human Capital Materiality Readiness Before the 10-K
