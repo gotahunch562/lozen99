@@ -8,6 +8,11 @@ import { createCollectionPageJsonLd } from "@/lib/seo/jsonLd";
 
 const mediaEmail = "media@lozenadvisory.com";
 
+const title = "News & Press | Lozen Advisory";
+const description =
+  "Press releases, media materials, and public statements from Lozen Advisory on AI governance, algorithmic accountability, workforce governance, and market analysis.";
+const canonical = "https://www.lozenadvisory.com/news-press/";
+
 const newsEntries = await getCollection("news");
 
 const releases = newsEntries
@@ -23,11 +28,6 @@ const releases = newsEntries
     description: entry.data.description,
     href: `/news-press/${entry.id}/`,
   }));
-
-const title = "News & Press | Lozen Advisory";
-const description =
-  "Press releases, media materials, and public statements from Lozen Advisory on AI governance, algorithmic accountability, workforce governance, and market analysis.";
-const canonical = "https://www.lozenadvisory.com/news-press/";
 
 const collectionJsonLd = createCollectionPageJsonLd({
   title,
@@ -61,55 +61,57 @@ const collectionJsonLd = createCollectionPageJsonLd({
     <section class="py-16 lg:py-24">
       <Wrapper variant="standard">
         <div class="divide-y divide-base-200">
-          {releases.map((release) => (
-            <article class="py-10 first:pt-0">
-              <div class="grid gap-6 lg:grid-cols-[0.72fr_1fr] lg:items-start">
-                <div>
-                  <Text
-                    tag="p"
-                    variant="textSM"
-                    class="font-sans font-semibold uppercase tracking-[0.18em] text-base-500"
-                  >
-                    {release.date}
-                  </Text>
+          {
+            releases.map((release) => (
+              <article class="py-10 first:pt-0">
+                <div class="grid gap-6 lg:grid-cols-[0.72fr_1fr] lg:items-start">
+                  <div>
+                    <Text
+                      tag="p"
+                      variant="textSM"
+                      class="font-sans font-semibold uppercase tracking-[0.18em] text-base-500"
+                    >
+                      {release.date}
+                    </Text>
 
-                  <Text
-                    tag="p"
-                    variant="textXS"
-                    class="mt-1 font-sans font-semibold uppercase tracking-[0.14em] text-base-600"
-                  >
-                    {release.category}
-                  </Text>
+                    <Text
+                      tag="p"
+                      variant="textXS"
+                      class="mt-1 font-sans font-semibold uppercase tracking-[0.14em] text-base-600"
+                    >
+                      {release.category}
+                    </Text>
+                  </div>
+
+                  <div>
+                    <Text
+                      tag="h2"
+                      variant="displaySM"
+                      class="font-display font-normal tracking-[-0.03em] text-base-950"
+                    >
+                      {release.headline}
+                    </Text>
+
+                    <Text
+                      tag="p"
+                      variant="textBase"
+                      class="mt-4 font-sans leading-7 text-base-700"
+                    >
+                      {release.description}
+                    </Text>
+
+                    <a
+                      href={release.href}
+                      class="mt-6 inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-[0.1em] text-base-800 transition-colors hover:text-base-950"
+                    >
+                      Read the full release
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  </div>
                 </div>
-
-                <div>
-                  <Text
-                    tag="h2"
-                    variant="displaySM"
-                    class="font-display font-normal tracking-[-0.03em] text-base-950"
-                  >
-                    {release.headline}
-                  </Text>
-
-                  <Text
-                    tag="p"
-                    variant="textBase"
-                    class="mt-4 font-sans leading-7 text-base-700"
-                  >
-                    {release.description}
-                  </Text>
-
-                  <a
-                    href={release.href}
-                    class="mt-6 inline-flex items-center gap-2 font-sans text-sm font-semibold uppercase tracking-[0.1em] text-base-800 transition-colors hover:text-base-950"
-                  >
-                    Read the full release
-                    <span aria-hidden="true">→</span>
-                  </a>
-                </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))
+          }
         </div>
       </Wrapper>
     </section>
