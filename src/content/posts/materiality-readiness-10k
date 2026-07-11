@@ -4,7 +4,7 @@ description: "AI adoption is breaking the workforce data boards rely on for huma
 metaDescription: "AI productivity metrics exclude verification labor, retention data misses governance capacity loss, and performance records can't distinguish human judgment from AI-assisted output. Here's what boards need to examine before annual disclosure."
 pubDate: 2026-07-10
 category: "AI Governance"
-draft: false
+draft: true
 seriesKey: "ai-workforce-materiality"
 seriesOrder: 6
 slug: "human-capital-materiality-readiness-10k"
