@@ -138,7 +138,7 @@ The goal is not to draft the disclosure. The goal is to close the governance gap
 
 *This is Article 06 in Lozen Advisory’s series on [AI Workforce Materiality](/ai-workforce-materiality/), human accountability, and enterprise readiness.*
 
-*← [Article 05: AI Productivity Claims Are Becoming a Disclosure-Control Problem](https://chatgpt.com/blog/ai-productivity-vs-governance/)*
+*← [Article 05: AI Productivity Claims Are Becoming a Disclosure-Control Problem](/blog/ai-productivity-vs-governance/)*
 
 ---
 
