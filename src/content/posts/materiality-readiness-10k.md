@@ -50,7 +50,7 @@ Productivity systems built to measure human output now measure a blend of AI gen
 
 The board may still be reviewing familiar data. The problem is that the data may no longer describe the company’s actual workforce capacity, risk exposure, or readiness.
 
-This is the same evidence gap Lozen Advisory examines through [AI Workforce Materiality](https://chatgpt.com/ai-workforce-materiality/): AI adoption does not eliminate human-capital risk. It can concentrate it.
+This is the same evidence gap Lozen Advisory examines through [AI Workforce Materiality](/ai-workforce-materiality/): AI adoption does not eliminate human-capital risk. It can concentrate it.
 
 ---
 
@@ -74,7 +74,7 @@ In an AI-assisted workflow, the people who understand the limits of the system a
 
 In the Mayo lawsuit, Eto allegedly oversaw a 36-person team responsible for human research protection and IRB operations. The complaint alleges she was stripped of leadership responsibilities and later terminated after raising AI compliance concerns. In a retention report, that may appear as one director-level exit. In governance terms, it may represent the loss of a human accountability function.
 
-That is the [Power User Trap℠](https://chatgpt.com/frameworks/power-user-trap/) in a regulated setting: the people who make AI systems usable, reviewable, and defensible can become the informal control layer.
+That is the [Power User Trap℠](/frameworks/power-user-trap/) in a regulated setting: the people who make AI systems usable, reviewable, and defensible can become the informal control layer.
 
 ### 3. Performance data that cannot distinguish human judgment from AI-assisted output
 
@@ -86,7 +86,7 @@ The Mayo lawsuit alleges that a study of MAYA, Mayo’s AI-powered digital assis
 
 If those allegations are proven, the issue is not only that an AI tool produced unreliable results. The issue is that the accountability record behind the approved output was compromised.
 
-This is the same disclosure-control problem Lozen Advisory examined in [AI productivity claims and governance](https://chatgpt.com/blog/ai-productivity-vs-governance/): companies need evidence showing what AI did, what humans verified, and what the organization can substantiate.
+This is the same disclosure-control problem Lozen Advisory examined in [AI productivity claims and governance](/blog/ai-productivity-vs-governance/): companies need evidence showing what AI did, what humans verified, and what the organization can substantiate.
 
 ---
 
@@ -114,7 +114,7 @@ If the answer is unclear, the company may be carrying human capital risk that it
 
 ## What the Name Standard℠ Adds
 
-The [Name Standard℠](https://chatgpt.com/blog/the-name-standard-ai-governance/) addresses the gap between human capital data and human accountability.
+The [Name Standard℠](/blog/the-name-standard-ai-governance/) addresses the gap between human capital data and human accountability.
 
 It tests whether the people named as responsible for AI-assisted output actually had the capacity, information, authority, documentation, escalation path, and refusal rights required to make that accountability real.
 
@@ -134,11 +134,11 @@ It examines where workforce data is producing incomplete evidence, where AI-assi
 
 The goal is not to draft the disclosure. The goal is to close the governance gap before the disclosure requirement arrives.
 
-[Request the AI Workforce Materiality Briefing →](https://chatgpt.com/ai-workforce-materiality-briefing/)
+[Request the AI Workforce Materiality Briefing →](/ai-workforce-materiality-briefing/)
 
 ---
 
-*This is Article 06 in Lozen Advisory’s series on [AI Workforce Materiality](https://chatgpt.com/ai-workforce-materiality/), human accountability, and enterprise readiness.*
+*This is Article 06 in Lozen Advisory’s series on [AI Workforce Materiality](/ai-workforce-materiality/), human accountability, and enterprise readiness.*
 
 *← [Article 05: AI Productivity Claims Are Becoming a Disclosure-Control Problem](https://chatgpt.com/blog/ai-productivity-vs-governance/)*
 
