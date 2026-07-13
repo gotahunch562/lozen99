@@ -5,7 +5,7 @@ subtitle: Large Language Models Simulate Coherence, Not Truth
 slug: mandatory-ai-use-governance
 pubDate: 2026-05-31
 datePublished: 2026-05-31
-dateModified: 2026-07-03
+dateModified: 2026-07-13
 category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 1
@@ -81,7 +81,7 @@ In the broader corporate ecosystem, these errors will not surface as cleanly as 
 
 The true operational risk is no longer only whether an organization has drafted an AI policy. Recent moves from Cisco, ServiceNow, and Microsoft show that **AI agent governance**, **AI agent identity**, and **enterprise AI agent management** are becoming active enterprise concerns.
 
-When AI agents can update records, route tickets, schedule meetings, or trigger workflow actions, the governance question shifts from use to authority. [Whose authority did the agent exercise?](https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/) Who approved that delegation? What evidence shows the organization retained control?
+When AI agents can update records, route tickets, schedule meetings, or trigger workflow actions, the governance question shifts from use to authority. [Whose authority did the agent exercise?](/blog/the-name-standard-ai-governance/) Who approved that delegation? What evidence shows the organization retained control?
 
 ## Large Language Models Simulate Coherence, Not Truth
 
@@ -97,7 +97,7 @@ It removes labor from the visible act of producing a draft and packs it into the
 
 ## The Power User Becomes the Control Layer
 
-This systemic exposure is where Lozen Advisory identifies the [Power User Trap℠](/invisible-attrition/power-user-trap/).
+This systemic exposure is where Lozen Advisory identifies the [Power User Trap℠](/frameworks/power-user-trap/).
 
 The power user is not merely an employee who uses AI frequently. The power user is the human architecture through whom AI becomes operationally viable for the business. She is the professional who:
 
@@ -131,5 +131,5 @@ Series Context
 
 *This article opens Lozen Advisory’s [AI Workforce Materiality](/ai-workforce-materiality/) series, which examines how corporate AI adoption creates human-capital exposure when companies measure tool use before they measure the human judgment required to make AI output usable.*
 
-- **Next:** [AI Investment Is Scaling Faster Than Human Capacity] turns from mandatory use to capital allocation, asking whether organizations are funding AI faster than the workforce systems required to convert that investment into durable operating value.
+- **Next:** [[AI Investment Is Scaling Faster Than Human Capacity](/blog/ai-investment-scaling-human-capacity/)] topic urns from mandatory use to capital allocation, asking whether organizations are funding AI faster than the workforce systems required to convert that investment into durable operating value.
 
