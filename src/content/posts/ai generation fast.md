@@ -4,7 +4,7 @@ seo_title: AI Generation Is Fast. Governance Is Not
 slug: ai-generation-fast-governance-slow
 pubDate: 2026-06-02
 datePublished: 2026-06-02
-dateModified: 2026-06-17
+dateModified: 2026-07-13
 category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 3
@@ -53,7 +53,7 @@ Most organizations are measuring the easier half of AI adoption by relying on so
 
 ## LLM Output Still Requires a Human Decision
 
-Every artifact an LLM generates still requires a human decision before it becomes institutional work product. The speed of generation creates a false impression that the task is complete; however, someone still has to read what the tool produced, determine whether it reflects what the organization knows and can substantiate, assess the risk it carries, and decide whether it can move forward under the organization's brand. Conventional wisdom treats faster output as productivity. In contrast, the data governance required before that output can move forward has not gotten faster at all.
+[Every artifact an LLM generates still requires a human decision](/disclosure-independent-governance/) before it becomes institutional work product. The speed of generation creates a false impression that the task is complete; however, someone still has to read what the tool produced, determine whether it reflects what the organization knows and can substantiate, assess the risk it carries, and decide whether it can move forward under the organization's brand. Conventional wisdom treats faster output as productivity. In contrast, the data governance required before that output can move forward has not gotten faster at all.
 
 As established in [Mandatory AI Use Is Not AI Governance](/blog/mandatory-ai-use-governance/), forced adoption is ignoring a risk framework. Measuring adoption is not the same as measuring governed value, and that distinction is where the investment case begins to separate from the operating reality.
 
@@ -83,7 +83,7 @@ That burden has a name. A March 2026 BCG and Harvard Business Review study of ne
 
 ## The Power User Is Where the System Stabilizes
 
-This manual stabilization creates a [Power User Trap℠](/invisible-attrition/power-user-trap/) that directly threatens operational resilience. The power user is the person through whom AI becomes usable inside real work: learning the tool's failure modes, supplying organizational context the model cannot hold, recognizing when output sounds right but is wrong, and absorbing accountability for what moves forward.
+This manual stabilization creates a [Power User Trap℠](/frameworks/power-user-trap/) that directly threatens operational resilience. The power user is the person through whom AI becomes usable inside real work: learning the tool's failure modes, supplying organizational context the model cannot hold, recognizing when output sounds right but is wrong, and absorbing accountability for what moves forward.
 
 Leadership reads this as an adoption success signal. In contrast, the more precise reading is that the system is stabilizing through one person's judgment. The organization has not built AI capability; it has concentrated AI governance inside a single employee. The entire LLM governance industry is building infrastructure for the input and output layers. The human judgment layer in the middle, the verification, calibration, and accountability that converts AI output into institutional work, has no vendor, no framework, no audit log, and no budget line.
 
