@@ -1,10 +1,10 @@
 ---
 title: "Beyond the 10-K: Mitigating AI Governance & Workforce Risks"
 seo_title: Is AI Breaking Your Human Capital Data? | 10-K Readiness
-slug: is-ai-breaking-human-capital-data
-pubDate: 2026-07-10
-datePublished: 2026-07-10
-dateModified: 2026-07-10
+slug: ai-human-capital-data-10-k
+pubDate: 2026-07-12
+datePublished: 2026-07-12
+dateModified: 2026-07-12
 category: AI Governance & Workforce Risk
 seriesKey: ai-workforce-materiality
 seriesOrder: 6
@@ -27,7 +27,7 @@ tags:
   - Board Governance
   - Human-Capital Exposure
   - Workforce Materiality
-draft: true
+draft: false
 isFeatured: false
 ---
 # Human Capital Materiality Readiness Before the 10-K
@@ -44,7 +44,7 @@ By the time those risks appear in annual reporting, the governance opportunity m
 
 Since 2020, the SEC has required public companies to disclose human capital resources material to understanding the business. The rule does not prescribe a fixed set of metrics. It requires disclosure of what a reasonable investor would consider important to understanding how the company manages its workforce.
 
-AI adoption is making that disclosure problem harder.
+[AI adoption is making that disclosure problem harder.](https://www.lozenadvisory.com/disclosure-independent-governance/)
 
 Productivity systems built to measure human output now measure a blend of AI generation and human judgment. Retention systems record when people leave, but not whether the institutional knowledge required to verify AI output left with them. Performance systems show completed work, but not whether the person who signed off had the time, tools, authority, and source material required to evaluate the AI-assisted result.
 
