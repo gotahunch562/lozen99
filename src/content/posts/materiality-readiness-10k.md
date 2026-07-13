@@ -30,8 +30,6 @@ tags:
 draft: false
 isFeatured: false
 ---
-# Human Capital Materiality Readiness Before the 10-K
-
 Human capital materiality does not begin when a company drafts its 10-K.
 
 It begins earlier, when workforce systems start producing incomplete evidence: AI productivity metrics that omit verification labor, retention data that records exits after governance capacity has already eroded, and performance data that cannot distinguish human judgment from AI-assisted output.
