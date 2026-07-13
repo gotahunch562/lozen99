@@ -65,7 +65,7 @@ Gartner has projected that by 2027, half of companies that attributed customer s
 
 ## What Is the Price of Doubt?
 
-The organizations that struggled most were, by Careerminds' own account, making irreversible decisions without the full picture. What that report does not name is the verification labor accumulating inside the [Power User Trap℠](/invisible-attrition/power-user-trap/) — the informal, unmeasured human absorption that keeps AI output usable but carries no line item on the balance sheet and requires no disclosure event to exist.
+The organizations that struggled most were, by Careerminds' own account, making irreversible decisions without the full picture. What that report does not name is the verification labor accumulating inside [the Power User Trap℠](/frameworks/power-user-trap/) — the informal, unmeasured human absorption that keeps AI output usable but carries no line item on the balance sheet and requires no disclosure event to exist.
 
 > *Language models simulate coherence, not truth.*
 
