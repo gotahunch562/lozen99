@@ -15,10 +15,10 @@ description: Map the AI Accountability Agenda to Disclosure-Independent
   Governance℠. Get actionable AI governance evidence for corporate board
   reporting.
 image:
-  url: /src/images/blog/blog-placeholder-blue.svg
+  url: /src/images/blog/ai-accountability-agenda.avif
   alt: boardroom table with abstract document cards, one subtle AI node icon, and
     a highlighted human review checkpoint.
-heroImage: /src/images/blog/blog-placeholder-blue.svg
+heroImage: /src/images/blog/ai-accountability-agenda.avif
 heroAlt: boardroom table with abstract document cards, one subtle AI node icon,
   and a highlighted human review checkpoint.
 tags:
@@ -35,11 +35,13 @@ For Lozen Advisory, the governance significance is not that each proposal operat
 
 That places the agenda squarely inside [Disclosure-Independent Governance℠](/disclosure-independent-governance/): Lozen Advisory's methodology for identifying systemic risks that legacy measurement systems are structurally blind to.
 
-## Why this matters to board-facing AI governance teams
+## Why This Matters to Audit Chairs and AI Governance Teams?
 
 Board-facing teams are rarely asked only whether an AI policy exists. They are asked to produce evidence: what system was used, what data it touched, what decision it shaped, who reviewed it, who could override it, and whether the organization can prove that answer under scrutiny.
 
-The AI Accountability Agenda shows federal AI policy language moving toward that evidence layer. Its proposals focus on human appeal, human override, worker data limits, bias audits, data-center disclosure, and accountability for automated systems. Those are not abstract principles. They are operational evidence questions.
+In practice, that evidence burden is increasingly landing on the audit chair. As AI governance has moved up the board agenda, audit committees have become the default owners of AI risk oversight — absorbing questions about disclosure accuracy, vendor accountability, internal controls, and the evidence trail behind AI-assisted decisions. That is a significant expansion of the audit function, and it is happening faster than most committee charters have been updated to reflect it.
+
+The AI Accountability Agenda shows federal AI policy language moving toward that evidence layer. Its proposals focus on human appeal, human override, worker data limits, bias audits, data-center disclosure, and accountability for automated systems. Those are not abstract principles. They are operational evidence questions — and increasingly, they are audit committee questions.
 
 ## Mapping the AI Accountability Agenda to Lozen Advisory's governance frameworks
 
