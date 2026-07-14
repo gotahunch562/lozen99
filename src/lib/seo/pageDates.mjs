@@ -1,29 +1,402 @@
-python3 - <<'PY'
-from pathlib import Path
+import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { basename, extname, join, relative, sep } from "node:path";
 
-path = Path("src/lib/seo/pageDates.mjs")
-text = path.read_text(encoding="utf-8")
+export const SITE_URL = "https://www.lozenadvisory.com";
 
-old = '''const POSTS_DIR = join(process.cwd(), "src/content/posts");
-const SERVICES_DIR = join(process.cwd(), "src/content/services");
-const PAGES_DIR = join(process.cwd(), "src/pages");'''
-
-new = '''const POSTS_DIR = join(process.cwd(), "src/content/posts");
+const POSTS_DIR = join(process.cwd(), "src/content/posts");
 const SERVICES_DIR = join(process.cwd(), "src/content/services");
 const NEWS_DIR = join(process.cwd(), "src/content/news");
-const PAGES_DIR = join(process.cwd(), "src/pages");'''
+const PAGES_DIR = join(process.cwd(), "src/pages");
 
-if old not in text:
-    raise SystemExit("Could not find directory constants. No changes made.")
+const CONTENT_EXTENSIONS = new Set([".astro", ".md", ".mdx"]);
+const CONTENT_COLLECTION_EXTENSIONS = new Set([".md", ".mdx"]);
 
-text = text.replace(old, new, 1)
+const LASTMOD_FIELDS = [
+  "dateModified",
+  "datePublished",
+  "pubDate",
+  "publishDate",
+  "date",
+];
 
-marker = '''function buildStaticPageLastmodMap() {'''
+const AI_WORKFORCE_SERIES_KEY = "ai-workforce-materiality";
 
-news_function = '''function buildNewsLastmodMap() {
+const EXCLUDED_EXACT_PATHS = new Set([
+  "/blog/archive/",
+  "/4s-sovereign-capacity-model/",
+  "/sovereign-capacity-model/",
+  "/why-lozen-advisory/",
+  "/invisible-attrition/power-user-trap/",
+  "/normal-blood-tests-feel-off/",
+  "/menopause-support-women-lawyers/",
+  "/billable-hour-visibility-tax/",
+  "/leadership-pipeline-manager-drain/",
+  "/succession-planning-retention-risk-data-gap/",
+  "/voluntary-benefit-disclosure-gap/",
+]);
+
+const EXCLUDED_PATH_PATTERNS = [
+  /^\/tags?\/?$/i,
+  /^\/tags?\/[^/]+\/?$/i,
+  /^\/blog\/tags?\/?$/i,
+  /^\/blog\/tags?\/[^/]+\/?$/i,
+  /^\/categor(?:y|ies)\/?$/i,
+  /^\/categor(?:y|ies)\/[^/]+\/?$/i,
+  /^\/blog\/categor(?:y|ies)\/?$/i,
+  /^\/blog\/categor(?:y|ies)\/[^/]+\/?$/i,
+  /^\/authors?\/?$/i,
+  /^\/authors?\/[^/]+\/?$/i,
+  /^\/page\/\d+\/?$/i,
+];
+
+function toPosixPath(path) {
+  return path.split(sep).join("/");
+}
+
+function hasFileExtension(pathname) {
+  return /\/[^/?#]+\.[a-z0-9]{2,8}$/i.test(pathname);
+}
+
+export function normalizeSitePath(value) {
+  if (!value) return "/";
+
+  const rawValue = String(value).trim();
+  let pathname = rawValue;
+
+  if (rawValue.startsWith("http://") || rawValue.startsWith("https://")) {
+    try {
+      const url = new URL(rawValue);
+
+      if (url.origin !== SITE_URL) {
+        return "";
+      }
+
+      pathname = url.pathname;
+    } catch {
+      return "";
+    }
+  }
+
+  if (!pathname.startsWith("/")) pathname = `/${pathname}`;
+  if (pathname === "/") return pathname;
+  if (hasFileExtension(pathname)) return pathname;
+
+  return pathname.endsWith("/") ? pathname : `${pathname}/`;
+}
+
+export function normalizeSiteUrl(value) {
+  const pathname = normalizeSitePath(value);
+
+  if (!pathname) return "";
+
+  return `${SITE_URL}${pathname}`;
+}
+
+export function shouldExcludeSitemapUrl(value) {
+  const pathname = normalizeSitePath(value);
+
+  if (!pathname) return true;
+  if (EXCLUDED_EXACT_PATHS.has(pathname)) return true;
+
+  return EXCLUDED_PATH_PATTERNS.some((pattern) => pattern.test(pathname));
+}
+
+function getFrontmatter(fileContent) {
+  const match = fileContent.match(/^---\s*\n([\s\S]*?)\n---/);
+
+  return match ? match[1] : "";
+}
+
+function getField(frontmatter, fieldName) {
+  const pattern = new RegExp(`^${fieldName}:\\s*(.+?)\\s*$`, "m");
+  const match = frontmatter.match(pattern);
+
+  if (!match) return "";
+
+  return match[1].trim().replace(/^["']/, "").replace(/["']$/, "");
+}
+
+function getFirstField(frontmatter, fields) {
+  for (const fieldName of fields) {
+    const value = getField(frontmatter, fieldName);
+
+    if (value) return value;
+  }
+
+  return "";
+}
+
+function getLastmodFromFrontmatter(frontmatter) {
+  return getFirstField(frontmatter, LASTMOD_FIELDS);
+}
+
+function isDraft(frontmatter) {
+  return /^draft:\s*true\s*$/im.test(frontmatter);
+}
+
+function isNoindex(frontmatter) {
+  return (
+    /^sitemap:\s*false\s*$/im.test(frontmatter) ||
+    /^robots:\s*["']?noindex/im.test(frontmatter)
+  );
+}
+
+export function normalizeDate(value) {
+  if (!value) return "";
+
+  const cleanValue = String(value)
+    .trim()
+    .replace(/^&[A-Za-z0-9_-]+\s+/, "")
+    .replace(/^\*[A-Za-z0-9_-]+$/, "");
+
+  if (!cleanValue) return "";
+
+  const date = /^\d{4}-\d{2}-\d{2}$/.test(cleanValue)
+    ? new Date(`${cleanValue}T00:00:00.000Z`)
+    : new Date(cleanValue);
+
+  if (Number.isNaN(date.getTime())) return "";
+
+  return date.toISOString();
+}
+
+function normalizeReadableDate(value) {
+  if (!value) return "";
+
+  const date = new Date(`${String(value).trim()} UTC`);
+
+  if (Number.isNaN(date.getTime())) return "";
+
+  return date.toISOString();
+}
+
+function maxIsoDate(dates) {
+  const validDates = dates
+    .filter(Boolean)
+    .map(normalizeDate)
+    .filter(Boolean);
+
+  if (!validDates.length) return "";
+
+  return validDates.sort(
+    (a, b) => new Date(b).getTime() - new Date(a).getTime(),
+  )[0];
+}
+
+function walkFiles(dir) {
+  if (!existsSync(dir)) return [];
+
+  const entries = readdirSync(dir, { withFileTypes: true });
+  const files = [];
+
+  for (const entry of entries) {
+    const fullPath = join(dir, entry.name);
+
+    if (entry.isDirectory()) {
+      files.push(...walkFiles(fullPath));
+      continue;
+    }
+
+    files.push(fullPath);
+  }
+
+  return files;
+}
+
+function normalizeBlogSlug(slug) {
+  return String(slug || "")
+    .replace(/^\/+/, "")
+    .replace(/\/+$/, "")
+    .replace(/^blog\//, "")
+    .replace(/^posts\//, "")
+    .replace(/\.mdx?$/, "");
+}
+
+function blogUrlFromSlug(slug) {
+  const cleanSlug = normalizeBlogSlug(slug);
+
+  return cleanSlug ? `${SITE_URL}/blog/${cleanSlug}/` : "";
+}
+
+function pageFileToUrl(filePath) {
+  const relativePath = toPosixPath(relative(PAGES_DIR, filePath));
+  const extension = extname(relativePath);
+
+  if (!extension) return "";
+
+  const withoutExtension = relativePath.slice(0, -extension.length);
+  const pathParts = withoutExtension.split("/");
+
+  if (pathParts[pathParts.length - 1] === "index") {
+    pathParts.pop();
+  }
+
+  const routePath = pathParts.filter(Boolean).join("/");
+
+  return routePath ? `${SITE_URL}/${routePath}/` : `${SITE_URL}/`;
+}
+
+function isContentPageFile(filePath) {
+  const extension = extname(filePath);
+
+  if (!CONTENT_EXTENSIONS.has(extension)) return false;
+
+  const relativePath = toPosixPath(relative(PAGES_DIR, filePath));
+  const fileName = basename(filePath);
+  const pathParts = relativePath.split("/");
+
+  if (!relativePath || relativePath.startsWith("..")) return false;
+  if (fileName === "404.astro" || fileName === "500.astro") return false;
+  if (relativePath === "sitemap.xml.ts") return false;
+  if (relativePath === "rss.xml.js") return false;
+  if (pathParts.some((part) => part.startsWith("_"))) return false;
+
+  if (pathParts.some((part) => part.includes("[") || part.includes("]"))) {
+    return false;
+  }
+
+  if (pathParts[0] === "api") return false;
+
+  return true;
+}
+
+function getDateFromVisiblePageText(pageContent) {
+  const lastUpdatedMatch = pageContent.match(
+    /Last\s+updated:\s*([A-Za-z]+\s+\d{1,2},\s+\d{4})/i,
+  );
+
+  if (lastUpdatedMatch?.[1]) {
+    return normalizeReadableDate(lastUpdatedMatch[1]);
+  }
+
+  const statusDateMatch = pageContent.match(
+    /Current\s+legislative\s+status\s+as\s+of\s+([A-Za-z]+\s+\d{1,2},\s+\d{4})/i,
+  );
+
+  if (statusDateMatch?.[1]) {
+    return normalizeReadableDate(statusDateMatch[1]);
+  }
+
+  return "";
+}
+
+function getDateFromPageScript(pageContent) {
+  const dateModifiedMatch = pageContent.match(
+    /(?:const\s+dateModified\s*=|dateModified\s*:)\s*["'](\d{4}-\d{2}-\d{2})["']/,
+  );
+
+  if (dateModifiedMatch?.[1]) {
+    return normalizeDate(dateModifiedMatch[1]);
+  }
+
+  const datePublishedMatch = pageContent.match(
+    /(?:const\s+datePublished\s*=|datePublished\s*:)\s*["'](\d{4}-\d{2}-\d{2})["']/,
+  );
+
+  if (datePublishedMatch?.[1]) {
+    return normalizeDate(datePublishedMatch[1]);
+  }
+
+  const publishedDateIsoMatch = pageContent.match(
+    /publishedDateIso\s*=\s*["'](\d{4}-\d{2}-\d{2})["']/,
+  );
+
+  if (publishedDateIsoMatch?.[1]) {
+    return normalizeDate(publishedDateIsoMatch[1]);
+  }
+
+  return "";
+}
+
+function buildBlogMaps() {
+  const lastmodByUrl = new Map();
+  const blogLastmods = [];
+  const aiSeriesLastmods = [];
+
+  if (!existsSync(POSTS_DIR)) {
+    return {
+      lastmodByUrl,
+      latestBlogLastmod: "",
+      latestAiSeriesLastmod: "",
+    };
+  }
+
+  const files = walkFiles(POSTS_DIR).filter((filePath) =>
+    CONTENT_COLLECTION_EXTENSIONS.has(extname(filePath)),
+  );
+
+  for (const filePath of files) {
+    const file = basename(filePath);
+    const fileContent = readFileSync(filePath, "utf8");
+    const frontmatter = getFrontmatter(fileContent);
+
+    if (!frontmatter || isDraft(frontmatter) || isNoindex(frontmatter)) {
+      continue;
+    }
+
+    const slug = getField(frontmatter, "slug") || basename(file, extname(file));
+    const url = blogUrlFromSlug(slug);
+    const lastmod = normalizeDate(getLastmodFromFrontmatter(frontmatter));
+    const seriesKey = getField(frontmatter, "seriesKey");
+
+    if (url && lastmod) {
+      lastmodByUrl.set(url, lastmod);
+      blogLastmods.push(lastmod);
+    }
+
+    if (seriesKey === AI_WORKFORCE_SERIES_KEY && lastmod) {
+      aiSeriesLastmods.push(lastmod);
+    }
+  }
+
+  return {
+    lastmodByUrl,
+    latestBlogLastmod: maxIsoDate(blogLastmods),
+    latestAiSeriesLastmod: maxIsoDate(aiSeriesLastmods),
+  };
+}
+
+function buildServiceLastmodMap() {
   const lastmodByUrl = new Map();
 
-  if (!existsSync(NEWS_DIR)) return lastmodByUrl;
+  if (!existsSync(SERVICES_DIR)) return lastmodByUrl;
+
+  const files = walkFiles(SERVICES_DIR).filter((filePath) =>
+    CONTENT_COLLECTION_EXTENSIONS.has(extname(filePath)),
+  );
+
+  for (const filePath of files) {
+    const fileContent = readFileSync(filePath, "utf8");
+    const frontmatter = getFrontmatter(fileContent);
+
+    if (!frontmatter || isDraft(frontmatter) || isNoindex(frontmatter)) {
+      continue;
+    }
+
+    const relativePath = toPosixPath(relative(SERVICES_DIR, filePath));
+    const extension = extname(relativePath);
+    const slug = relativePath.slice(0, -extension.length);
+    const url = `${SITE_URL}/services/${slug}/`;
+    const lastmod = normalizeDate(getLastmodFromFrontmatter(frontmatter));
+
+    if (lastmod) {
+      lastmodByUrl.set(url, lastmod);
+    }
+  }
+
+  return lastmodByUrl;
+}
+
+function buildNewsMaps() {
+  const lastmodByUrl = new Map();
+  const newsLastmods = [];
+
+  if (!existsSync(NEWS_DIR)) {
+    return {
+      lastmodByUrl,
+      latestNewsLastmod: "",
+    };
+  }
 
   const files = walkFiles(NEWS_DIR).filter((filePath) =>
     CONTENT_COLLECTION_EXTENSIONS.has(extname(filePath)),
@@ -48,54 +421,88 @@ news_function = '''function buildNewsLastmodMap() {
 
     if (lastmod) {
       lastmodByUrl.set(url, lastmod);
+      newsLastmods.push(lastmod);
+    }
+  }
+
+  return {
+    lastmodByUrl,
+    latestNewsLastmod: maxIsoDate(newsLastmods),
+  };
+}
+
+function buildStaticPageLastmodMap() {
+  const lastmodByUrl = new Map();
+
+  if (!existsSync(PAGES_DIR)) return lastmodByUrl;
+
+  const files = walkFiles(PAGES_DIR).filter(isContentPageFile);
+
+  for (const filePath of files) {
+    const fileContent = readFileSync(filePath, "utf8");
+    const frontmatter = getFrontmatter(fileContent);
+
+    if (isDraft(frontmatter) || isNoindex(frontmatter)) continue;
+
+    const url = normalizeSiteUrl(pageFileToUrl(filePath));
+
+    if (!url || shouldExcludeSitemapUrl(url)) continue;
+
+    const lastmod =
+      normalizeDate(getLastmodFromFrontmatter(frontmatter)) ||
+      getDateFromPageScript(fileContent) ||
+      getDateFromVisiblePageText(fileContent);
+
+    if (lastmod) {
+      lastmodByUrl.set(url, lastmod);
     }
   }
 
   return lastmodByUrl;
 }
 
-'''
-
-if marker not in text:
-    raise SystemExit("Could not find static-page function. No changes made.")
-
-text = text.replace(marker, news_function + marker, 1)
-
-old = '''const blogDateData = buildBlogMaps();
+const blogDateData = buildBlogMaps();
 const serviceLastmodByUrl = buildServiceLastmodMap();
-const staticPageLastmodByUrl = buildStaticPageLastmodMap();'''
+const newsDateData = buildNewsMaps();
+const staticPageLastmodByUrl = buildStaticPageLastmodMap();
 
-new = '''const blogDateData = buildBlogMaps();
-const serviceLastmodByUrl = buildServiceLastmodMap();
-const newsLastmodByUrl = buildNewsLastmodMap();
-const staticPageLastmodByUrl = buildStaticPageLastmodMap();'''
+export function resolveLastmodForUrl(value) {
+  const url = normalizeSiteUrl(value);
+  const pathname = normalizeSitePath(value);
 
-if old not in text:
-    raise SystemExit("Could not find map initialization. No changes made.")
+  if (!url || shouldExcludeSitemapUrl(url)) return "";
 
-text = text.replace(old, new, 1)
+  if (blogDateData.lastmodByUrl.has(url)) {
+    return blogDateData.lastmodByUrl.get(url);
+  }
 
-old = '''  if (serviceLastmodByUrl.has(url)) {
+  if (serviceLastmodByUrl.has(url)) {
     return serviceLastmodByUrl.get(url);
   }
 
-  if (pathname === "/blog/") {'''
-
-new = '''  if (serviceLastmodByUrl.has(url)) {
-    return serviceLastmodByUrl.get(url);
+  if (newsDateData.lastmodByUrl.has(url)) {
+    return newsDateData.lastmodByUrl.get(url);
   }
 
-  if (newsLastmodByUrl.has(url)) {
-    return newsLastmodByUrl.get(url);
+  if (pathname === "/blog/") {
+    return blogDateData.latestBlogLastmod;
   }
 
-  if (pathname === "/blog/") {'''
+  if (pathname === "/ai-workforce-materiality/") {
+    return blogDateData.latestAiSeriesLastmod;
+  }
 
-if old not in text:
-    raise SystemExit("Could not find resolver insertion point. No changes made.")
+  if (pathname === "/news-press/") {
+    return newsDateData.latestNewsLastmod;
+  }
 
-text = text.replace(old, new, 1)
+  if (staticPageLastmodByUrl.has(url)) {
+    return staticPageLastmodByUrl.get(url);
+  }
 
-path.write_text(text, encoding="utf-8")
-print("Updated src/lib/seo/pageDates.mjs to scan src/content/news")
-PY
+  return "";
+}
+
+export function resolveDateForHref(href) {
+  return resolveLastmodForUrl(href);
+}
