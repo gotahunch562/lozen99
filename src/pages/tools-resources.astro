@@ -6,6 +6,16 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
 const resources = [
   {
+    label: "AI Governance Workbook",
+    title: "Human Accountability Trace (HAT)",
+    description:
+      "A governance workbook that tests whether your AI-assisted decisions are still traceable to an accountable human—and flags the ones that are not. Built on The Name Standard℠, HAT classifies decisions as Attributed, Nominally Attributed, Fragmented, Unattributed, or Non-Verifiable and summarizes exposure in a remediation dashboard.",
+    meta: "Excel workbook · Free download",
+    cta: "Download Workbook",
+    href: "/download/name-standard-human-accountability-trace-v8.xlsx",
+    download: true,
+  },
+  {
     label: "Conference Handout",
     title: "Performance Protection",
     description:
@@ -13,16 +23,6 @@ const resources = [
     meta: "8 pages · PDF · Free download",
     cta: "Download PDF",
     href: "/download/performance-protection-handout.pdf",
-    download: true,
-  },
-  {
-    label: "Self-Assessment Tool",
-    title: "Symptom Literacy Checklist",
-    description:
-      "A print-and-fill checklist covering the 12 symptom categories of perimenopause. Rate severity, track patterns over time, identify your top priorities, and bring structured data to your next provider appointment.",
-    meta: "10 pages · PDF · Free download",
-    cta: "Download PDF",
-    href: "/download/symptom-literacy-checklist.pdf",
     download: true,
   },
   {
@@ -36,11 +36,13 @@ const resources = [
     download: false,
   },
 ];
+
 const title = "Tools & Resources | Lozen Advisory";
 
-const description = "Downloadable tools and resources for women executives navigating performance, perimenopause, and career transitions.";
+const description =
+  "Download AI governance workbooks, workforce-risk tools, executive resources, and performance-protection materials from Lozen Advisory.";
 
-const dateModified = "2026-05-19";
+const dateModified = "2026-07-14";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -102,7 +104,11 @@ const dateModified = "2026-05-19";
 
       <div class="mt-12 rounded-3xl bg-base-950 p-6 shadow-2xl outline-4 outline-base-500/10 sm:p-8">
         <Text tag="p" variant="textBase" class="text-base-200">
-          The information in these documents is provided for educational purposes only. Lozen Advisory LLC is not a medical practice. Nothing here constitutes medical advice, diagnosis, or treatment. Consult a qualified healthcare provider before making any decisions about your health or treatment.
+          These tools and materials are provided for educational and
+          informational purposes only. They do not constitute legal, medical,
+          compliance, audit, or professional advice. Organizations and
+          individuals should evaluate their specific circumstances and consult
+          qualified professionals where appropriate.
         </Text>
       </div>
     </Wrapper>
