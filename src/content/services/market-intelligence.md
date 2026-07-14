@@ -1,4 +1,5 @@
 ---
+dateModified: 2026-05-19
 title: "Market Intelligence"
 description: "Research and analysis on disclosure-dependent workforce risk, benefits utilization gaps, menopause as an enterprise signal, AI implementation burden, and hidden retention exposure"
 shortDescription: "Research and analysis on disclosure-dependent workforce risk, benefits utilization gaps, menopause as an enterprise signal, AI implementation burden, and hidden retention exposure."

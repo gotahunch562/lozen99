@@ -1,4 +1,5 @@
 ---
+dateModified: 2026-07-10
 title: "Lozen Advisory Launches \"When AI Carries Your Name\" for Leaders Using AI at Work"
 description: "New Name Standard℠ framework helps leaders evaluate whether AI oversight is real before it fails, not after."
 metaDescription: "Lozen Advisory launches When AI Carries Your Name, an executive briefing for leaders using AI at work, introducing the Name Standard℠ for AI oversight, accountability, and verification."

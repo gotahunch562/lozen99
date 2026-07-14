@@ -1,4 +1,5 @@
 ---
+dateModified: 2026-05-19
 title: "The Menopause-at-Work Market Followed the Playbook. The Playbook Was Wrong."
 description: "As PwC names menopause a defining women's health opportunity, Lozen Advisory issues a market correction on utilization failure and the false assumption that awareness equals adoption."
 metaDescription: "The menopause-at-work market followed the playbook, but the playbook was wrong. An analytical critique of the market assumptions that blind corporate leadership."

@@ -1,4 +1,5 @@
 ---
+dateModified: 2026-05-19
 title: "Governance Readiness Briefing"
 description: "A focused advisory session for leadership teams evaluating whether AI-generated corporate output can be reviewed, verified, escalated, refused, and formally signed off under a clear accountability model."
 shortDescription: "A focused advisory session for leadership teams evaluating AI investment, workforce-risk, institutional capacity exposure, and leadership attrition risk"

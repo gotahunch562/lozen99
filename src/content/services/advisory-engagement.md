@@ -1,4 +1,5 @@
 ---
+dateModified: 2026-05-19
 title: Advisory Engagement
 shortDescription: Ongoing counsel on disclosure-independent infrastructure, the Capacity Substitution Error℠, benefits strategy, AI governance, retention risk, leadership continuity, and reputational exposure.
 description: Ongoing counsel on disclosure-independent infrastructure, the Capacity Substitution Error℠, benefits strategy, AI governance, retention risk, leadership continuity, and reputational exposure.
