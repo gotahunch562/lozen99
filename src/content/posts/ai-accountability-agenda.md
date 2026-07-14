@@ -26,7 +26,7 @@ tags:
   - Board Governance
   - AI Governance
   - Name Standard
-draft: true
+draft: false
 isFeatured: false
 ---
 Senator Edward J. Markey's *AI Accountability Agenda: Taking Power Back from Big Tech*, released on July 10, 2026 brings several AI policy proposals into one public framework. The agenda focuses on workers, children and teens, civil rights, healthcare, data-center impacts, and the distribution of AI-generated wealth.
