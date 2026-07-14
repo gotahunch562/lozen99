@@ -6,26 +6,30 @@ pubDate: 2026-07-14
 datePublished: 2026-07-14
 dateModified: 2026-07-14
 category: AI Governance & Workforce Risk
-excerpt: "The AI Accountability Agenda moves federal AI policy language toward worker appeal rights, human override, bias audits, data-center disclosure, and accountability for automated decisions. Disclosure-Independent Governance℠ maps that shift to the evidence questions board-facing teams will need to answer."
-description: "Map the AI Accountability Agenda to Disclosure-Independent Governance℠. Get actionable AI governance evidence for corporate board reporting."
+excerpt: The AI Accountability Agenda moves federal AI policy language toward
+  worker appeal rights, human override, bias audits, data-center disclosure, and
+  accountability for automated decisions. Disclosure-Independent Governance℠
+  maps that shift to the evidence questions board-facing teams will need to
+  answer.
+description: Map the AI Accountability Agenda to Disclosure-Independent
+  Governance℠. Get actionable AI governance evidence for corporate board
+  reporting.
 image:
   url: /src/images/blog/blog-placeholder-blue.svg
-  alt: picture
+  alt: boardroom table with abstract document cards, one subtle AI node icon, and
+    a highlighted human review checkpoint.
 heroImage: /src/images/blog/blog-placeholder-blue.svg
-heroAlt: picture
+heroAlt: boardroom table with abstract document cards, one subtle AI node icon,
+  and a highlighted human review checkpoint.
 tags:
+  - Legislative Analysis
+  - Board Governance
   - AI Governance
-  - Disclosure-Independent Governance
   - Name Standard
-  - Power User Trap
-  - Board Reporting
 draft: true
 isFeatured: false
 ---
-
-*AI Governance Evidence for Board Reporting — a Lozen Advisory legislative mapping series*
-
-Senator Edward J. Markey's AI Accountability Agenda brings several AI policy proposals into one public framework. The agenda focuses on workers, children and teens, civil rights, healthcare, data-center impacts, and the distribution of AI-generated wealth.
+Senator Edward J. Markey's *AI Accountability Agenda: Taking Power Back from Big Tech*, released on July 10, 2026 brings several AI policy proposals into one public framework. The agenda focuses on workers, children and teens, civil rights, healthcare, data-center impacts, and the distribution of AI-generated wealth.
 
 For Lozen Advisory, the governance significance is not that each proposal operates the same way. It is that the agenda repeatedly returns to the same structural problem: AI systems are shaping consequential decisions faster than legacy measurement systems can explain who had authority, what evidence existed, whether a human could intervene, and who owns the outcome.
 
@@ -39,14 +43,16 @@ The AI Accountability Agenda shows federal AI policy language moving toward that
 
 ## Mapping the AI Accountability Agenda to Lozen Advisory's governance frameworks
 
+
 | Agenda area | Lozen Advisory framework | Board-facing evidence question |
-|---|---|---|
+| ------------------------------------------ | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Workers and automated management** | **Power User Trap℠ + Name Standard℠** | When AI influences a work-related decision, who had authority to challenge it and did the worker have a documented path to human review? |
 | **Children and teens** | **Disclosure-Independent Governance℠ + Information Access** | Can the organization prove what the AI system retained, whether safety safeguards were operational, whether the system disclosed it was not human, and whether memory or engagement features were limited for minors? |
 | **Civil rights and algorithmic bias** | **Disclosure-Independent Governance℠** | Can the organization detect discriminatory impact before affected people have to complain, disclose harm, or sue? |
 | **Healthcare and human override** | **Name Standard℠** | Does a qualified human have standing authority to override an AI clinical recommendation without retaliation — and is that right documented before patient harm occurs? |
 | **Data centers and environmental impacts** | **Disclosure-Independent Governance℠** | Can the organization measure the energy, water, and community costs created by AI operations, or are those exposures outside the governance dashboard? |
 | **AI wealth and economic exposure** | **Disclosure-Independent Governance℠** | Are AI value creation and AI externalities being measured together, or is the organization tracking gains without tracking who absorbs the costs? |
+
 
 ## The human cost the agenda documents
 
