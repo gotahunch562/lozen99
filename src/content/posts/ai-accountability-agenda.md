@@ -56,7 +56,7 @@ In practice, that evidence burden is increasingly landing on the audit chair. As
 | **AI wealth and economic exposure** | **Disclosure-Independent Governance℠** | Are AI value creation and AI externalities being measured together, or is the organization tracking gains without tracking who absorbs the costs? |
 
 
-## The human cost the agenda documents
+## The Human Cost the Agenda Documents
 
 The AI Accountability Agenda is not abstract. Each section is anchored to a documented harm.
 
@@ -70,7 +70,7 @@ These are not edge cases. They are the pattern the agenda is designed to interru
 
 ## The Lozen Advisory view
 
-The Power User Trap℠ describes the governance failure that runs through all three of these cases. Organizations increasingly depend on specific humans — nurses, compliance officers, experienced workers — to catch what AI gets wrong. But those humans rarely have formal time allocation, documented authority, or protected escalation paths to act on what they know. The burden of AI verification falls on individuals while the organization treats that burden as invisible. When those individuals are fired, overruled, or automated out, the verification layer disappears — and the organization has no record showing it ever existed.
+[The Power User Trap℠ describes the governance failure](/frameworks/power-user-trap/) that runs through all three of these cases. Organizations increasingly depend on specific humans — nurses, compliance officers, experienced workers — to catch what AI gets wrong. But those humans rarely have formal time allocation, documented authority, or protected escalation paths to act on what they know. The burden of AI verification falls on individuals while the organization treats that burden as invisible. When those individuals are fired, overruled, or automated out, the verification layer disappears — and the organization has no record showing it ever existed.
 
 The Name Standard℠ addresses the accountability gap directly. It tests whether the humans named as responsible behind AI-assisted decisions actually had the capacity, information, authority, documentation, and formal right of refusal required to make that accountability real rather than ceremonial.
 
@@ -78,7 +78,7 @@ The healthcare row in the mapping table maps directly to current litigation expo
 
 The workplace row connects to the human capital materiality problem the broader Lozen Advisory series has tracked: when the humans who understand AI's limits leave or are removed, the organization's governance capacity erodes in ways that workforce data does not record. The fired delivery driver and the dismissed compliance officer are different in role and setting, but they expose the same governance question: what happens when the person closest to the AI risk has no protected path to human review, override, or escalation?
 
-## Where this fits
+## The Emerging  Legislative Pattern
 
 The AI Accountability Agenda is part of a larger shift in AI governance language. The emerging pattern is clear: laws and legislative proposals are moving toward evidence of human review, appeal rights, override authority, documentation, and measurable accountability.
 
