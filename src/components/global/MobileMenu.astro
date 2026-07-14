@@ -2,21 +2,41 @@
 // Fundations
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
-const primaryLinks = [
-  { href: "/services/", label: "What We Do" },
+type MobileLink = {
+  href: string;
+  label: string;
+  activePaths?: string[];
+};
+
+const primaryLinks: MobileLink[] = [
+  { href: "/services", label: "What We Do" },
+  { href: "/ai-legislation-tracker", label: "AILegiRisk Map" },
+  { href: "/about", label: "About" },
+  { href: "/blog", label: "Blog" },
+  { href: "/contact", label: "Contact" },
   {
-    href: "/disclosure-independent-governance/",
+    href: "/news-press",
+    label: "News & Press",
+    activePaths: ["/news-press/menopause-market-correction"],
+  },
+];
+
+const secondaryLinks: MobileLink[] = [
+  {
+    href: "/disclosure-independent-governance",
     label: "Disclosure-Independent Governance",
   },
-  { href: "/frameworks/power-user-trap/", label: "Power User Trap℠" },
-  { href: "/ai-legislation-tracker/", label: "AI Legislation Tracker" },
-  { href: "/menopause-legislation-tracker/", label: "Menopause Legislation Tracker" },
-  { href: "/about/", label: "About" },
-  { href: "/about-ai/", label: "About AI Use" },
-  { href: "/blog/", label: "Blog" },
-  { href: "/news-press/", label: "News & Press" },
-  { href: "/contact/", label: "Contact" },
-  { href: "/request-briefing/", label: "Request Briefing" },
+  { href: "/frameworks/power-user-trap", label: "Power User Trap℠" },
+  { href: "/menopause-and-the-law", label: "Menopause and the Law" },
+  { href: "/tools-resources", label: "Tools & Resources" },
+  { href: "/retention-calculator", label: "Retention Calculator" },
+  { href: "/download", label: "Downloads" },
+  { href: "/invisible-attrition", label: "Invisible Attrition℠" },
+  { href: "/ai-workforce-materiality", label: "AI Workforce Materiality" },
+  { href: "/menopause-legislation-tracker", label: "Menopause Legislation Tracker" },
+  { href: "/about-ai", label: "About AI Use" },
+  { href: "/events", label: "Events" },
+  { href: "/faq", label: "FAQ" },
 ];
 
 const normalizePath = (path: string) =>
@@ -24,13 +44,17 @@ const normalizePath = (path: string) =>
 
 const currentPath = normalizePath(Astro.url.pathname);
 
-const isActiveLink = (href: string) => {
+const isActivePath = (href: string) => {
   const normalizedHref = normalizePath(href);
   return (
     currentPath === normalizedHref ||
     currentPath.startsWith(`${normalizedHref}/`)
   );
 };
+
+const isActiveLink = (link: MobileLink) =>
+  isActivePath(link.href) ||
+  Boolean(link.activePaths?.some((path) => isActivePath(path)));
 ---
 
 <div
@@ -41,23 +65,65 @@ const isActiveLink = (href: string) => {
     <div
       class="max-h-[calc(100vh-6.5rem)] overflow-y-auto rounded-2xl border border-base-200 bg-white/95 shadow-2xl outline-4 outline-base-500/5 backdrop-blur-xl"
     >
-      <nav class="space-y-1 p-4 sm:p-6" aria-label="Mobile navigation">
-        {
-          primaryLinks.map((link) => (
-            <a
-              href={link.href}
-              aria-current={isActiveLink(link.href) ? "page" : undefined}
-              class:list={[
-                "block rounded-xl px-4 py-3 font-sans text-base font-semibold transition-colors duration-200",
-                isActiveLink(link.href)
-                  ? "bg-base-900 text-white"
-                  : "text-base-900 hover:bg-base-50 hover:text-accent-700",
-              ]}
-            >
-              {link.label}
-            </a>
-          ))
-        }
+      <nav class="space-y-5 p-4 sm:p-6" aria-label="Mobile navigation">
+        <div class="space-y-1">
+          {
+            primaryLinks.map((link) => (
+              <a
+                href={link.href}
+                aria-current={isActiveLink(link) ? "page" : undefined}
+                class:list={[
+                  "block rounded-xl px-4 py-3 font-sans text-base font-semibold transition-colors duration-200",
+                  isActiveLink(link)
+                    ? "bg-base-900 text-white"
+                    : "text-base-900 hover:bg-base-50 hover:text-accent-700",
+                ]}
+              >
+                {link.label}
+              </a>
+            ))
+          }
+        </div>
+
+        <div class="border-t border-base-200 pt-4">
+          <p class="px-4 pb-2 font-sans text-xs font-semibold uppercase tracking-[0.16em] text-base-500">
+            More
+          </p>
+
+          <div class="space-y-1">
+            {
+              secondaryLinks.map((link) => (
+                <a
+                  href={link.href}
+                  aria-current={isActiveLink(link) ? "page" : undefined}
+                  class:list={[
+                    "block rounded-xl px-4 py-3 font-sans text-sm font-semibold transition-colors duration-200",
+                    isActiveLink(link)
+                      ? "bg-base-900 text-white"
+                      : "text-base-800 hover:bg-base-50 hover:text-accent-700",
+                  ]}
+                >
+                  {link.label}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="border-t border-base-200 pt-4">
+          <a
+            href="/request-briefing/"
+            aria-current={isActivePath("/request-briefing") ? "page" : undefined}
+            class:list={[
+              "block rounded-xl px-4 py-3 text-center font-sans text-base font-semibold transition-colors duration-200",
+              isActivePath("/request-briefing")
+                ? "bg-base-900 text-white"
+                : "bg-accent-400 text-base-950 hover:bg-accent-300",
+            ]}
+          >
+            Request Briefing
+          </a>
+        </div>
       </nav>
     </div>
   </Wrapper>
