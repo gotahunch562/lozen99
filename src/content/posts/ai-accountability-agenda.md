@@ -37,11 +37,11 @@ That places the agenda squarely inside [Disclosure-Independent Governance℠](/d
 
 ## Why This Matters to Audit Chairs and AI Governance Teams?
 
-Board-facing teams are rarely asked only whether an AI policy exists. They are asked to produce evidence: what system was used, what data it touched, what decision it shaped, who reviewed it, who could override it, and whether the organization can prove that answer under scrutiny.
+According to Nasdaq’s *3rd Annual Global Governance Pulse*, only 8% of boards have adopted an approved AI tool for their governance work. That is the current state — policy discussion, not governance evidence. The AI Accountability Agenda signals where the question is going: what system was used, what data it touched, what decision it shaped, who reviewed it, who could override it, and whether the organization can prove that answer under scrutiny. That shift — from policy existence to governance evidence — is exactly what this legislation is designed to accelerate.
 
 In practice, that evidence burden is increasingly landing on the audit chair. As AI governance has moved up the board agenda, audit committees have become the default owners of AI risk oversight — absorbing questions about disclosure accuracy, vendor accountability, internal controls, and the evidence trail behind AI-assisted decisions. That is a significant expansion of the audit function, and it is happening faster than most committee charters have been updated to reflect it.
 
-[The AI Accountability Agenda](https://www.markey.senate.gov/news/press-releases/senator-markey-releases-the-ai-accountability-agenda-taking-power-back-from-big-tech) shows federal AI policy language moving toward that evidence layer. Its proposals focus on human appeal, human override, worker data limits, bias audits, data-center disclosure, and accountability for automated systems. Those are not abstract principles. They are operational evidence questions — and increasingly, they are audit committee questions.
+The AI Accountability Agenda shows federal AI policy language moving toward that evidence layer. Its proposals focus on human appeal, human override, worker data limits, bias audits, data-center disclosure, and accountability for automated systems. Those are not abstract principles. They are operational evidence questions — and increasingly, they are audit committee questions.
 
 ## Mapping the AI Accountability Agenda to Lozen Advisory's governance frameworks
 
@@ -58,7 +58,7 @@ In practice, that evidence burden is increasingly landing on the audit chair. As
 
 ## The Human Cost the Agenda Documents
 
-The AI Accountability Agenda is not abstract. Each section is anchored to a documented harm.
+[The AI Accountability Agenda is not abstract](https://www.markey.senate.gov/news/press-releases/senator-markey-releases-the-ai-accountability-agenda-taking-power-back-from-big-tech). Each section is anchored to a documented harm.
 
 In the workplace section, the agenda describes a 63-year-old Army veteran and delivery driver who received an automated email informing him he was fired. Throughout his employment, the company tracked his movements, harvested his data, and fed his performance to an algorithm that eventually decided he no longer measured up. When he tried to appeal, automated emails answered back. There was no human to appeal to.
 
@@ -84,4 +84,4 @@ The AI Accountability Agenda is part of a larger shift in AI governance language
 
 For board-facing teams, the question is not only what each proposal requires. The question is whether the organization can already produce evidence showing who reviews, who overrides, who documents, and who owns AI-assisted decisions — before a regulator, plaintiff, or whistleblower asks.
 
-For the full methodology behind this mapping, see [Disclosure-Independent Governance℠](/disclosure-independent-governance/). For the human-attribution framework, see [The Name Standard℠](/blog/the-name-standard-ai-governance/). For the workforce accountability framework, see [the Power User Trap℠](/frameworks/power-user-trap/). Board-facing teams evaluating whether their AI governance structure has a Disclosure-Independent Governance℠ gap can [request a Governance Readiness Briefing](/request-briefing/).
+Board-facing teams evaluating whether their AI governance structure has a Disclosure-Independent Governance℠ gap can [request a Governance Readiness Briefing](/request-briefing/).
