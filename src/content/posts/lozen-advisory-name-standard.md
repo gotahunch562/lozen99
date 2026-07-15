@@ -5,7 +5,7 @@ subtitle: The Case for The Name Standard℠
 slug: the-name-standard-ai-governance
 pubDate: 2026-06-12
 datePublished: 2026-06-12
-dateModified: 2026-07-10
+dateModified: 2026-07-14
 category: AI Governance & Workforce Risk
 excerpt: When AI-assisted work leaves an organization, it does not leave under
   the name of the large language model. It leaves under the name of a person.
@@ -56,11 +56,11 @@ Boards are being asked to oversee AI systems, AI agents, AI vendors, AI-generate
 
 The common thread is evidence. Boards need to know who is accountable, what was reviewed, what was escalated, what was documented, and where responsibility remains unresolved.
 
-The Name Standard℠ sits within Lozen Advisory’s broader [Disclosure-Independent Governance℠](/disclosure-independent-governance/) methodology for evaluating whether AI-related work remains traceable to a responsible human or institutional actor.
+The Name Standard℠ sits within Lozen Advisory’s broader [Disclosure-Independent Governance℠](/disclosure-independent-governance/) methodology for evaluating whether AI-related work remains traceable to a responsible human or institutional actor. **Apply The Name Standard℠ to a live AI-assisted workflow with Lozen Advisory’s free [Human Accountability Trace (HAT)](https:/download/name-standard-human-accountability-trace-v8.xlsx) workbook.**
 
 > Who authorized the agent, who supervises it, who can stop it, who documents its behavior, and who is accountable when it acts?
 
-## Five questions GRC and governance leaders should ask
+## 5 questions GRC and governance leaders should ask
 
 [Evaluate your organization’s alignment](https://www.lozenadvisory.com/frameworks/committee-ownership-map/) with the Name Standard℠ by asking:
 
@@ -92,6 +92,6 @@ That is the gap the Name Standard℠ is designed to address.
 
 Human oversight is not enough if no one can explain who reviewed the output, what authority they had, what evidence they relied on, whether they could refuse the output, and how the decision was documented.
 
-**Prepare your board for AI accountability questions before the next meeting.**
+### **Prepare your board for AI accountability questions before the next meeting.**
 
 Lozen AI LegiRisk helps boards, general counsel, corporate secretaries, and risk leaders translate AI laws into the questions directors should ask, the evidence management should produce, the committee issues that should be escalated, and the accountability gaps that remain unresolved.  [Request Briefing](/request-briefing/)
