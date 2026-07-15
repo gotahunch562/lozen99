@@ -1,30 +1,37 @@
 ---
-title: "Illinois Artificial Intelligence Safety Measures Act: The Audit Accountability Gap"
+title: "Illinois Artificial Intelligence Safety Measures Act: The Audit
+  Accountability Gap | Public Act 104-0538"
 seo_title: "Illinois AI Safety Measures Act: The Audit Accountability Gap"
 slug: illinois-artificial-intelligence-safety-measures-act
 pubDate: 2026-07-15
 datePublished: 2026-07-15
 dateModified: 2026-07-15
 category: AI Governance & Workforce Risk
-excerpt: Illinois SB 315 requires annual third-party audits of major frontier AI developers. The law creates substantial evidence, but it does not clearly identify who accepts residual risk and authorizes deployment.
-description: Illinois SB 315 mandates first-in-the-nation annual third-party AI audits. But who owns the risk when an audited model fails? Examining the law’s Name Standard℠ governance gap.
+excerpt: "Illinois SB 315 (Public Act 104-0538) requires annual third-party
+  audits of major frontier AI developers. The law creates substantial evidence,
+  but it does not clearly identify who accepts residual risk and authorizes
+  deployment. "
+description: Illinois SB 315 mandates first-in-the-nation annual third-party AI
+  audits. But who owns the risk when an audited model fails? Examining the law’s
+  Name Standard℠ governance gap.
 image:
   url: /src/images/blog/illinois-ai-safety-measures-act.avif
-  alt: independent AI audit report on a boardroom table with a highlighted accountability decision
+  alt: independent AI audit report on a boardroom table with a highlighted
+    accountability decision
 heroImage: /src/images/blog/illinois-ai-safety-measures-act.avif
-heroAlt: independent AI audit report on a boardroom table with a highlighted accountability decision
+heroAlt: independent AI audit report on a boardroom table with a highlighted
+  accountability decision
 tags:
   - Legislative Analysis
   - AI Governance
   - Board Governance
   - Name Standard
 draft: false
-isFeatured: false
+isFeatured: true
 ---
+Illinois Governor J.B. Pritzker approved Senate Bill 315,**** (Public Act 104-0538), the Artificial Intelligence Safety Measures Act, on July 6, 2026. The law establishes transparency, incident-reporting, internal-governance, and independent-audit requirements for developers of the largest frontier AI models.
 
-Illinois Governor J.B. Pritzker [approved Senate Bill 315, the Artificial Intelligence Safety Measures Act, on July 6, 2026](https://www.myjournalcourier.com/news/article/landmark-ai-bill-tightens-restrictions-development-22336105.php). The law establishes transparency, incident-reporting, internal-governance, and independent-audit requirements for developers of the largest frontier AI models.
-
-Its most consequential provision requires qualifying developers to retain an independent third party each year to audit compliance with the Act’s frontier AI framework requirements.
+Its most consequential provision **requires qualifying developers to retain an independent third party each year to audit compliance with the Act’s frontier AI framework requirements.**
 
 Illinois has moved the legislative model beyond developer disclosure. The audit must assess substantial compliance, material deviations, internal controls, and whether senior personnel have been designated and empowered to implement the required processes.
 
@@ -34,11 +41,11 @@ It does not fully answer the next governance question:
 
 > When the evidence identifies unresolved risk, who accepts that risk and authorizes deployment?
 
-The Illinois Artificial Intelligence Safety Measures Act strengthens verification. The remaining gap is named ownership of the decision made after verification.
+The Illinois Artificial Intelligence Safety Measures Act strengthens verification. The remaining gap is the defined, transparent ownership of the decision made after verification. This is the [verification gap the Name Standard℠ is designed to test.](/blog/the-name-standard-ai-governance/)
 
 ## What the Illinois Artificial Intelligence Safety Measures Act Requires
 
-The Act applies its principal obligations to large frontier developers with more than $500 million in annual gross revenue and frontier models trained above the statutory computing threshold.
+[The Act applies its principal obligations to large frontier developers](https://www.ilga.gov/legislation/PublicActs/View/104-0538) with more than $500 million in annual gross revenue and frontier models trained above the statutory computing threshold.
 
 Beginning January 1, 2028, a large frontier developer must write, implement, comply with, and publicly maintain a frontier AI framework addressing catastrophic-risk thresholds, assessments, mitigations, third-party evaluations, cybersecurity, critical safety incidents, internal governance, and risks created by extensive internal use.
 
@@ -50,7 +57,7 @@ Critical safety incidents generally must be reported to the Illinois Emergency M
 
 The Act takes effect January 1, 2027. The frontier AI framework requirements begin January 1, 2028. The annual audit requirement begins January 1, 2028, or 90 days after a developer first qualifies as a large frontier developer, whichever is later.
 
-## The Audit Tests Compliance, Not the Sufficiency of the Risk Threshold
+## The Audit Tests Compliance, Not Risk Threshold
 
 The annual audit is broader than a review of whether the developer followed a voluntary safety promise.
 
@@ -68,7 +75,7 @@ That is the first accountability distinction:
 
 **Compliance with the process is not the same as independent approval of the deployment decision.**
 
-## Senior Responsibility Is Not the Same as Residual-Risk Ownership
+## Responsibility Is Not the Same as Accountability
 
 Illinois requires the audit to assess whether senior personnel were designated and empowered to implement the statutory processes.
 
@@ -94,24 +101,24 @@ It may still lack a traceable record naming who accepted the remaining risk and 
 
 ## The Name Standard℠ Gap
 
-The [Name Standard℠](/blog/the-name-standard-ai-governance/) tests whether an AI-assisted decision remains traceable to a responsible human or institutional actor with the capacity, information, authority, documentation, and formal right of refusal required to own the outcome.
+The Name Standard℠ tests whether an AI-assisted decision remains traceable to a responsible human or institutional actor with the capacity, information, authority, documentation, and formal right of refusal required to own the outcome.
 
 SB 315 creates substantial evidence across that chain. It requires internal controls, senior-personnel accountability, audit findings, incident reporting, public summaries, and a signed auditor certification.
 
 The missing layer is narrower but consequential:
 
-- Who received the final audit findings?
-- Who determined whether a deviation was material?
-- Who approved the remediation?
-- Who had authority to delay deployment?
-- Who accepted unresolved catastrophic risk?
-- What record preserves that approval?
+1. Who received the final audit findings?
+2. Who determined whether a deviation was material?
+3. Who approved the remediation?
+4. Who had authority to delay deployment?
+5. Who accepted unresolved catastrophic risk?
+6. What record preserves that approval?
 
 The lead auditor’s name establishes responsibility for the audit opinion. It does not establish responsibility for the developer’s deployment decision.
 
 The designated senior personnel establish responsibility for implementation. They do not necessarily establish who authorized the company to proceed after reviewing unresolved findings.
 
-Without that final record, the company can prove that evidence was produced without proving who owned the decision made from it.
+Without that final record, the company can prove that evidence was produced, but does not have [proof of  a person who made the decision](/blog/ai-decision-debt/)
 
 ## The Committee Ownership Problem
 
