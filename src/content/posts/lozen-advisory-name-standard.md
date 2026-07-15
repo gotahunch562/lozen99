@@ -42,7 +42,7 @@ Lozen Advisory calls this the **Name Standard℠**.
 
 It asks whether the person, or institution, responsible for the output had the time, authority, information, review capacity, documentation, escalation path, and refusal rights necessary to make oversight real.
 
-Without those conditions, [accountability becomes ceremonial](https://www.theregister.com/ai-and-ml/2026/06/12/kpmgs-ai-report-turns-into-a-demo-of-ai-hallucinations/5255029). The name on the output belongs to a human being, while the governance behind it may be weak, undocumented, or nonexistent.
+Without those conditions, accountability becomes ceremonial. The name on the output belongs to a human being, while the governance behind it may be weak, undocumented, or nonexistent.
 
 This problem becomes sharper as organizations move from AI-assisted drafting to agentic AI workflows. A guardrail may limit what an AI system can do. The Name Standard℠ asks who is responsible when it does it.
 
