@@ -38,7 +38,7 @@ The CFO problem with AI ROI is now three problems converging in the same financi
 
 1. Expected savings are underperforming.
 2. AI costs are becoming harder to forecast and control.
-3. [Human verification labor remains missing from the calculation](https://chatgpt.com/disclosure-independent-governance/).
+3. [Human verification labor remains missing from the calculation](/disclosure-independent-governance/).
 
 > AI ROI is being squeezed from both sides before the human governance layer is even priced.
 
@@ -97,7 +97,7 @@ Token volume is not ROI.
 
 Deloitte has described AI as a structural change in enterprise cost behavior because token consumption introduces volatility into operating expenses, margins, forecasts, and capital planning. Unlike conventional software licenses, AI costs can change with model selection, prompt length, data retrieval, output volume, agent behavior, and employee usage.
 
-[More usage does not automatically mean more savings](https://chatgpt.com/blog/ai-generation-fast-governance-slow/). More complex usage can mean more expense, more monitoring, more review, and more correction.
+[More usage does not automatically mean more savings](/blog/ai-generation-fast-governance-slow/). More complex usage can mean more expense, more monitoring, more review, and more correction.
 
 But token spending is only the visible expense. The larger CFO problem is the cost that appears elsewhere.
 
@@ -111,7 +111,7 @@ The visible AI charge may only be the first cost.
 
 If a tool produces a draft in two minutes but a senior employee spends twenty minutes verifying, correcting, and contextualizing it, the ROI calculation cannot stop at the two-minute output. AI externalizes execution while internalizing judgment. If finance counts the first without measuring the second, the return calculation is incomplete.
 
-This is where the [Power User Trap℠](https://chatgpt.com/frameworks/power-user-trap/) becomes a finance issue.
+This is where the [Power User Trap℠](/frameworks/power-user-trap/) becomes a finance issue.
 
 The power user is the employee through whom AI becomes usable inside real work: learning the failure modes, supplying institutional context, catching plausible errors, and translating machine output into something the organization can rely on.
 
@@ -146,10 +146,10 @@ Before the next board meeting or budget cycle, the organization should be able t
 
 ## Series Context
 
-This article is part of Lozen Advisory’s [AI Workforce Materiality](https://chatgpt.com/ai-workforce-materiality/) series, examining the workforce, financial, governance, and disclosure consequences of enterprise AI adoption.
+This article is part of Lozen Advisory’s [AI Workforce Materiality](/ai-workforce-materiality/) series, examining the workforce, financial, governance, and disclosure consequences of enterprise AI adoption.
 
 # Commission a Strategic Briefing
 
 AI adoption is creating unpriced liability for CFOs, substantiation risk for General Counsel, and continuity exposure for boards. Lozen Advisory delivers private advisory on AI implementation risk, unmeasured verification strain, and the human-capital exposure organizations are building without measuring.
 
-[Commission a Strategic Briefing](https://chatgpt.com/ai-workforce-materiality-briefing/)
+[Commission a Strategic Briefing](/ai-workforce-materiality-briefing/)
