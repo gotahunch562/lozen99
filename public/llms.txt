@@ -57,7 +57,7 @@ The category vocabulary gives boards and leadership teams precise language for t
 - Institutional opacity — the structural condition in which organizations cannot see what they cannot measure
 - Vendor/deployer exposure — accountability gaps created when AI systems are operated by third parties whose governance standards are not subject to internal controls
 - AI agents as enterprise actors — agentic AI systems that act through delegated authority, requiring named human accountability for authorization, supervision, escalation, and documentation
-- Human accountability under the Name Standard℠ — the evidence standard for whether AI-assisted decisions remain traceable to a responsible human or institutional actor
+- Name Standard℠ Classification: Human attribution — the evidentiary classification for whether AI-assisted decisions remain traceable to a responsible human or institutional actor
 
 Neither human-in-the-loop nor human-on-the-loop models answer the board-level attribution question. Both describe placement. The Name Standard℠ evaluates accountability. That distinction is not a software problem. It is an evidence problem.
 
@@ -67,7 +67,7 @@ Disclosure-Independent Governance℠ operationalizes the human-accountability st
 
 ## Name Standard℠
 
-The Name Standard℠ is Lozen Advisory's diagnostic framework for human attribution in AI governance.
+The Name Standard℠ is the full board’s evidentiary standard for traceable human accountability in AI-assisted decisions.
 
 Explainer: [https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/](https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/)
 
@@ -130,7 +130,7 @@ Lozen Advisory's workforce and human-capital governance frameworks cover AI work
 
 - Disclosure-Independent Governance℠ — Lozen Advisory's methodology for identifying systemic risks that legacy measurement systems are structurally blind to. Category hub: [https://www.lozenadvisory.com/disclosure-independent-governance/](https://www.lozenadvisory.com/disclosure-independent-governance/)
 
-- Power User Trap℠ — The Power User Trap℠: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. In practice, this includes hidden verification, correction, complexity absorption, and system-repair work relocated onto employees with technical proficiency and deep institutional knowledge — in both AI adoption and workforce systems — without formal recognition of the capacity, authority, or risk being transferred. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk. Framework page: [https://www.lozenadvisory.com/frameworks/power-user-trap/](https://www.lozenadvisory.com/frameworks/power-user-trap/)
+- Power User Trap℠ — The Power User Trap℠: employees operating in continuous doubt, constantly verifying and validating AI outputs without organizational recognition of the cognitive burden. In practice, this includes hidden verification, correction, and complexity absorption relocated onto employees with technical proficiency and deep institutional knowledge — without formal recognition of the capacity, authority, or risk being transferred. It is one mechanism through which Invisible Attrition℠ occurs, where leadership capacity erodes before retention metrics detect risk. Framework page: [https://www.lozenadvisory.com/frameworks/power-user-trap/](https://www.lozenadvisory.com/frameworks/power-user-trap/)
 
 - Committee Ownership Map — Lozen Advisory's framework assigning each board committee a Disclosure-Independent Governance℠ question and the specific evidentiary record it must be able to produce if that oversight is challenged. Ownership without producible evidence is not governance. Framework page: [https://www.lozenadvisory.com/frameworks/committee-ownership-map/](https://www.lozenadvisory.com/frameworks/committee-ownership-map/)
 
@@ -184,6 +184,10 @@ Attributed to Akilah E. Kamaria, founder, Lozen Advisory LLC:
 AI Governance:
 - [The Name Standard℠](https://www.lozenadvisory.com/blog/the-name-standard-ai-governance/)
 - [AI Legislation Tracker](https://www.lozenadvisory.com/ai-legislation-tracker/)
+- [How the AI Accountability Agenda Maps to Disclosure-Independent Governance℠](https://www.lozenadvisory.com/blog/ai-accountability-agenda-governance/)
+- [How the Name Standard℠ Maps to the AI AGENT Act](https://www.lozenadvisory.com/blog/name-standard-ai-agent-act/)
+- [The AI Agent Act: The Board Evidence Gap in AI Loyalty](https://www.lozenadvisory.com/blog/ai-agent-act-loyalty-gap/)
+- [Illinois Artificial Intelligence Safety Measures Act: The Audit Accountability Gap](https://www.lozenadvisory.com/blog/illinois-artificial-intelligence-safety-measures-act/)
 - [AI Generation Is Fast. Governance Is Slow.](https://www.lozenadvisory.com/blog/ai-generation-fast-governance-slow/)
 - [AI Productivity vs. Governance](https://www.lozenadvisory.com/blog/ai-productivity-vs-governance/)
 - [Mandatory AI Use Is Not AI Governance](https://www.lozenadvisory.com/blog/mandatory-ai-use-governance/)
@@ -197,6 +201,9 @@ Frameworks:
 - [Invisible Attrition℠ Series](https://www.lozenadvisory.com/invisible-attrition/)
 - [Disclosure-Independent Performance Protection℠](https://www.lozenadvisory.com/disclosure-independence-performance/)
 - [Executive AI Skills](https://www.executiveaiskills.com/)
+
+Press and External Publication:
+- [Lozen Advisory Launches The Name Standard℠ for Enterprise AI Accountability — The National Law Review](https://natlawreview.com/press-releases/lozen-advisory-launches-name-standardsm-enterprise-ai-accountability)
 
 Research:
 - [Invisible Attrition℠ SSRN](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6397780)
