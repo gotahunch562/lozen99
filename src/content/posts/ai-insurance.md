@@ -33,7 +33,7 @@ AI accountability is no longer only a compliance question. It is becoming an ins
 
 Federal AI legislation remains incomplete, state laws vary by jurisdiction, and courts establish liability one dispute at a time. Insurers don't have to wait — they can decide what AI risks to cover, exclude, limit, or price.
 
-The emerging underwriting question won't be whether an organization says a human stayed in the loop. It will be whether the company can prove who authorized the AI use, who reviewed consequential output, who could stop the system, and who owned the decision when something went wrong — the human-attribution question addressed by the [Name Standard℠](/blog/the-name-standard-ai-governance/).
+The emerging underwriting question won't be whether an organization says there is a **Human-in-the-Loop (HITL)**, or **Human-on-the-Loop (HOTL)**. The question will be whether the company can prove who authorized the AI use, who reviewed consequential output, who could stop the system, and who owned the decision when something went wrong — the human-attribution question addressed by the [Name Standard℠](/blog/the-name-standard-ai-governance/).
 
 > **Insurers may become the first institutions to put a price on missing human attribution.**
 
