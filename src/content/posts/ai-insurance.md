@@ -24,7 +24,7 @@ tags:
   - AI Governance
   - Legal Risk
   - Board Governance
-draft: true
+draft: false
 isFeatured: false
 ---
 **Insurers may become the first institutions to put a price on missing human attribution.**
