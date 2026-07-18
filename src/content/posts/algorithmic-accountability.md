@@ -27,7 +27,7 @@ tags:
   - Name Standard
   - Legal Risk
   - AI Accountability
-draft: true
+draft: false
 isFeatured: false
 ---
 Enterprise AI accountability does not belong exclusively to law, business, technology, HR, audit, or risk. It exists in the space between them.
