@@ -110,9 +110,11 @@ Economic drift is a finance and workforce-capacity problem. It occurs when token
 
 Evidence drift is a legal, audit, and litigation-readiness problem, and it is the most consequential of the seven. Even where logs exist, the surviving record may no longer be sufficient to reproduce why a particular output occurred — a company may be able to show who used a system, when, and what response appeared, while remaining unable to show why that response was selected, what was omitted, or whether an upgrade changed the answer. That gap only widens as logs expire, models change, records are edited, source documents disappear, and employees leave.
 
-No single discipline is positioned to govern all seven forms of drift on its own, because each one crosses a different institutional boundary. Technology can monitor model behavior, but it may not be positioned to determine whether a changed workflow requires renewed legal approval. Legal can identify liability once a flawed output causes harm, but it typically has no visibility into whether a retrieval-side change — a new index, a swapped connector, a different ranking method — is what produced that output in the first place.
+## No Single Discipline Can Govern All 7 Forms of Drift 
 
-Finance can detect cost variance, but it may not see the hidden review labor that is keeping the system usable. Audit can test controls, but it may not be able to reproduce the operating environment that produced a challenged decision. And HR can see workforce effects, but it typically does not control the model, the permissions, the vendor contract, or the evidence-retention architecture behind them.
+No single discipline is positioned to govern all seven forms of drift on its own, because each one crosses a different institutional boundary. **Technology can monitor model behavior,** but it may not be positioned to determine whether a changed workflow requires renewed legal approval. **Legal can identify liability** once a flawed output causes harm, but it typically has no visibility into whether a retrieval-side change — a new index, a swapped connector, a different ranking method — is what produced that output in the first place.
+
+**Finance can detect cost variance,** but it may not see the hidden review labor that is keeping the system usable. Audit can test controls, but it may not be able to reproduce the operating environment that produced a challenged decision. And **HR can see workforce effects**, but it typically does not control the model, the permissions, the vendor contract, or the evidence-retention architecture behind them.
 
 The drift taxonomy is therefore itself evidence of the institutional problem. The object being governed is not one model or one software product; it is a changing enterprise environment in which technical systems, professional judgment, legal duties, financial assumptions, workforce capacity, and organizational authority all interact.
 
@@ -129,7 +131,7 @@ In practice, the evidence behind an AI-assisted decision tends to fall into one 
 
 Which category a given decision falls into is rarely known in advance. It is usually discovered only once someone needs the evidence and finds out whether it still exists.
 
-## AI Governance Retrofit for Already-Deployed Enterprise Systems
+## AI Governance Retrofit for Enterprise Systems
 
 This is the part that matters most commercially, because most enterprises have already deployed these systems. Already deployed, however, does not mean ungovernable; it means governance must be reconstructed around a live system rather than designed into a new one.
 
@@ -142,11 +144,11 @@ That reconstruction requires answering questions many organizations never asked 
 - What changes in models, permissions, data, configuration, or use should trigger a renewed approval?
 - If a dispute, audit, insurance claim, or regulatory inquiry arrives next year, can the organization reconstruct what happened well enough to defend the decision?
 
-The retrofit is harder and more awkward than building governance into a deployment from the beginning, since cost, ambiguity, reliance, hidden labor, and evidence loss may already have accumulated, and governance cannot erase what has already occurred. But harder does not mean impossible. The work now is to build accountability around a system already running: reconstructing authority, defining acceptable operating conditions, establishing material-change thresholds, preserving evidence, and identifying the humans whose judgment the organization is relying upon.
+The retrofit is harder and more awkward than building governance into a deployment from the beginning, since cost, ambiguity, reliance, hidden labor, and evidence loss may already have accumulated, and governance cannot erase what has already occurred. But harder does not mean impossible. 
 
-## Why Algorithmic Accountability Requires an Interdisciplinary Institutional Home
+## Why Algorithmic Accountability Needs An Interdisciplinary Methodology
 
-These questions point toward the need for an institutional home for algorithmic accountability: an interdisciplinary field of teaching, research, and practice situated between law and business, built around the governance of AI systems already operating across institutions. Its purpose would not be another broad discussion of AI ethics, nor a technical laboratory focused primarily on model development. It would instead take up the questions that fall between existing departments:
+These topics and questions in this article point toward the need for an interdisciplinary field of teaching, research, and practice situated between law and business, built around the governance of AI systems already operating across institutions. Its purpose would not be another broad discussion of AI ethics, nor a technical laboratory focused primarily on model development. It would instead take up the questions that fall between existing departments:
 
 - Human attribution
 - Professional reliance
@@ -159,8 +161,8 @@ These questions point toward the need for an institutional home for algorithmic 
 - Material system change
 - Accountability retrofit
 
-Such an institution would combine teaching, applied research, case analysis, executive education, and governance tools, examining live legislation, litigation, insurance practices, board oversight, enterprise deployment, and post-deployment evidence failures not as separate subjects but as parts of one accountability system. Law and business students will encounter these problems from different professional positions, often while advising the same organization: one evaluating liability, discrimination, evidentiary sufficiency, or professional responsibility, the other assessing implementation, cost, productivity, controls, or operational risk. Neither can understand the problem fully without understanding the other.
+The methodology could combine teaching, applied research, case analysis, executive education, and governance tools, examining live legislation, litigation, insurance practices, board oversight, enterprise deployment, and post-deployment evidence failures not as separate subjects but as parts of one accountability system. Law and business students will encounter these problems from different professional positions, often while advising the same organization: one evaluating liability, discrimination, evidentiary sufficiency, or professional responsibility, the other assessing implementation, cost, productivity, controls, or operational risk. Neither can understand the problem fully without understanding the other.
 
-This is the territory Lozen Advisory's executive AI governance curriculum was built to address: not simply how organizations adopt AI, but how they preserve human accountability when probabilistic systems enter consequential work. The failures are already moving between departments, from the courtroom to the boardroom, from HR to finance, from professional practice to the insurer's fine print. The teaching, research, and governance structures designed to address them must move the same way.
+This is the territory [Lozen Advisory's executive AI governance curriculum](https://www.executiveaiskills.com/) was built to address: not simply how organizations adopt AI, but how they preserve human accountability when probabilistic systems enter consequential work. The failures are already moving between departments, from the courtroom to the boardroom, from HR to finance, from professional practice to the insurer's fine print. The teaching, research, and governance structures designed to address them must move the same way.
 
 **Algorithmic accountability needs a room of its own.**
