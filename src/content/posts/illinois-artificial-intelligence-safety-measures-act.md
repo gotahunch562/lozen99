@@ -27,7 +27,7 @@ tags:
   - Board Governance
   - Name Standard
 draft: false
-isFeatured: true
+isFeatured: false
 ---
 Illinois Governor J.B. Pritzker approved Senate Bill 315, (Public Act 104-0538), the Artificial Intelligence Safety Measures Act, on July 6, 2026. The law establishes transparency, incident-reporting, internal-governance, and independent-audit requirements for developers of the largest frontier AI models.
 
