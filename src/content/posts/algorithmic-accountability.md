@@ -32,19 +32,19 @@ isFeatured: false
 ---
 Enterprise AI accountability does not belong exclusively to law, business, technology, HR, audit, or risk. It exists in the space between them.
 
-That may sound like a modest observation, but it is not. It helps explain why **enterprise AI governance** keeps failing at organizations that have already deployed these systems, and why the institutions studying them often see only fragments of the problem. That fragmentation starts with a basic category error: most organizations are still governing enterprise AI as though it were conventional software.
+That may sound like a modest observation, but it is not. It helps explain why **[enterprise AI governance](/disclosure-independent-governance/)** keeps failing at organizations that have already deployed these systems, and why the institutions studying them often see only fragments of the problem. That fragmentation starts with a basic category error: most organizations are still governing enterprise AI as though it were conventional software.
 
 ## Treating AI Like Software Undermines AI Governance
 
 Most enterprise AI governance still treats large language models the way organizations have traditionally treated software: as products to be procured, configured, secured, and monitored for defects. That instinct is understandable, but it is also incomplete, because the underlying object being governed does not behave like a product at all.
 
-Traditional software is machinery. An LLM environment is weather. A machine remains substantially stable until someone modifies it: change the code and the behavior changes, but leave it alone and it generally performs the same operation tomorrow that it performed today. An LLM environment does not hold still in the same way, since its behavior emerges from the ongoing interaction of the model, the retrieval systems feeding it, the enterprise data around it, user permissions, system configurations, surrounding workflows, individual prompts, provider-side updates, and simple time.
+**Traditional software is machinery. An LLM environment is weather.** A machine remains substantially stable until someone modifies it: change the code and the behavior changes, but leave it alone and it generally performs the same operation tomorrow that it performed today. An LLM environment does not hold still in the same way, since its behavior emerges from the ongoing interaction of the model, the retrieval systems feeding it, the enterprise data around it, user permissions, system configurations, surrounding workflows, individual prompts, provider-side updates, and simple time.
 
 As a result, an organization can keep using the same product name and the same license while the operating conditions surrounding the system change underneath it. No single internal modification or approval event is required for that shift to happen.
 
 Retrieved sources may change. Permissions may expand. The provider may update the model with limited visibility to the enterprise. Employees may gradually begin using the system for decisions it was never originally approved to influence.
 
-Governing this kind of environment as though it were a fixed executable product is the foundational mistake, and many of the accountability failures now appearing downstream follow directly from it.
+Governing this kind of environment as though it were a fixed executable product is the foundational mistake, and many of the accountability failures now appearing downstream follow directly from this mistake.
 
 ## Enterprise AI Accountability Failures Across Law, Business, and HR
 
@@ -68,7 +68,7 @@ None of that can be resolved through technical performance metrics alone. It req
 
 A law school tends to see professional responsibility, evidence, liability, discrimination, and contractual duty. A business school tends to see implementation, productivity, internal controls, workforce capacity, investment return, and operating risk. Technology teams, for their part, tend to see model performance, system architecture, access controls, and security. Each discipline is seeing something real, but none of them is seeing the whole enterprise problem, because the complete question sits between them — the same five questions above, none of which any single department owns.
 
-Answering that question well requires holding several forms of analysis together at once, rather than choosing one and setting the others aside. **The Name Standard℠**, for instance, addresses traceable human attribution in AI-assisted decisions, while **the Power User Trap℠** identifies the hidden verification burden absorbed by employees whose expertise is what keeps unreliable output from reaching the organization.
+Answering that question well requires holding several forms of analysis together at once, rather than choosing one and setting the others aside. **[The Name Standard℠**,](/blog/the-name-standard-ai-governance/) for instance, addresses traceable human attribution in AI-assisted decisions, while [**the Power User Trap℠**](/frameworks/power-user-trap/) identifies the hidden verification burden absorbed by employees whose expertise is what keeps unreliable output from reaching the organization.
 
 Caremark-style oversight questions, in turn, concern what boards and senior leaders are expected to know about consequential systems operating inside the enterprise, and insurance exclusions, affirmative coverage, and underwriting requirements determine whether the organization's transfer of risk truly corresponds to its real AI practices. System drift complicates whether a previously approved deployment remains meaningfully the same deployment, and evidence reconstruction becomes necessary precisely when the organization later needs to explain a decision made under operating conditions that were only partially preserved.
 
