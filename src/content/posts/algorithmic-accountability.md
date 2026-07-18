@@ -32,7 +32,7 @@ isFeatured: false
 ---
 Enterprise AI accountability does not belong exclusively to law, business, technology, HR, audit, or risk. It exists in the space between them.
 
-That may sound like a modest observation, but it is not. It helps explain why **[enterprise AI governance](/disclosure-independent-governance/)** keeps failing at organizations that have already deployed these systems, and why the institutions studying them often see only fragments of the problem. That fragmentation starts with a basic category error: most organizations are still governing enterprise AI as though it were conventional software.
+That may sound like a modest observation, but it is not. It helps explain why **[enterprise AI governance](/disclosure-independent-governance/)** keeps failing at organizations that have already deployed these systems, and why the parties studying them often see only fragments of the problem. That fragmentation starts with a basic category error: most organizations are still governing enterprise AI as though it were conventional software.
 
 ## Treating AI Like Software Undermines AI Governance
 
