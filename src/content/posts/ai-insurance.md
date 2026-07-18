@@ -31,7 +31,7 @@ isFeatured: false
 
 AI accountability is no longer only a compliance question. It is becoming an insurability question.
 
-Federal AI legislation remains incomplete, state laws vary by jurisdiction, and courts establish liability one dispute at a time. Insurers don't have to wait — they can decide what AI risks to cover, exclude, limit, or price, so a company can remain legally permitted to deploy an AI system while discovering the resulting exposure is hard to insure.
+Federal AI legislation remains incomplete, state laws vary by jurisdiction, and courts establish liability one dispute at a time. Insurers don't have to wait — they can decide what AI risks to cover, exclude, limit, or price.
 
 The emerging underwriting question won't be whether an organization says a human stayed in the loop. It will be whether the company can prove who authorized the AI use, who reviewed consequential output, who could stop the system, and who owned the decision when something went wrong — the human-attribution question addressed by the [Name Standard℠](/blog/the-name-standard-ai-governance/).
 
@@ -47,7 +47,7 @@ The emerging underwriting question won't be whether an organization says a human
 
 A single AI-related event can cross several of these at once — an AI-assisted employment decision implicating EPL coverage, a defective deliverable creating E&O exposure, a compromised agent producing a cyber claim, a board's oversight failure implicating D&O — while fitting none of them cleanly.
 
-A July 2026 report, *[Underwriting the Agent Economy: The Blueprint for an AI Insurance Stack](https://www.underwriting-agents.com/)*, argues that most of the industry's current AI-agent exposure sits silently inside conventional cyber, professional liability, and general liability policies — largely unpriced and invisible. It also finds a disconnect: nearly half of surveyed Lloyd's underwriters believed their policyholders managed AI risk adequately, while only one in five surveyed businesses reported a mature governance model for autonomous agents. That's not just a technology gap — it's an underwriting-information gap.
+A July 2026 report, *[Underwriting the Agent Economy: The Blueprint for an AI Insurance Stack](https://www.underwriting-agents.com/)*, argues that most of the industry's current AI-agent exposure sits silently inside conventional cyber, professional liability, and general liability policies — largely unpriced and invisible. It also finds a disconnect: nearly half of surveyed Lloyd's underwriters believed their policyholders managed AI risk adequately, while only one in five surveyed businesses reported a mature governance model for autonomous agents. **That's not just a technology gap — it's an underwriting-information gap.**
 
 ## Exclusions Are the First Price Signal
 
