@@ -1,7 +1,7 @@
 ---
 title: Algorithmic Accountability Needs a Room of Its Own
 seo_title: "Algorithmic Accountability: Governing Enterprise AI | Lozen Advisory"
-subtitle: Why governing enterprise AI requires an interdisciplinary institution
+subtitle: Why governing enterprise AI requires an interdisciplinary methodology
   between law and business
 slug: algorithmic-accountability-enterprise-ai-governance
 pubDate: 2026-07-18
