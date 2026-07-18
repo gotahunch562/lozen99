@@ -15,7 +15,7 @@ excerpt: Most enterprise AI governance treats large language models like
   while the product name stays exactly the same. Managing this new reality
   requires an entirely new approach to algorithmic accountability.
 description: Enterprise AI accountability spans law, business, and tech. Explore
-  the seven forms of AI drift and why no single discipline can own governance
+  the eight forms of AI drift and why no single discipline can own governance
   alone.
 image:
   url: /src/images/blog/algorithmic-accountability1.avif
@@ -74,13 +74,17 @@ Caremark-style oversight questions, in turn, concern what boards and senior lead
 
 Taken together, these address different links in the same accountability chain: authority, review capacity, oversight, risk transfer, system change, and proof. They are usually divided among separate professional disciplines, but in practice they describe one terrain. Nowhere is that more visible than in the concept of drift.
 
-## Seven Types of Enterprise AI Drift
+## Eight Types of Enterprise AI Drift
 
-The word *drift* is often used as though it describes a single technical event: changes in model inputs, performance, or expected outcomes over time. In an enterprise setting, AI drift is broader than that. It includes at least seven forms that materially affect governance.
+The word *drift* is often used as though it describes a single technical event: changes in model inputs, performance, or expected outcomes over time. In an enterprise setting, AI drift is broader than that. It includes at least eight forms that materially affect governance.
 
 That definition matters because the operating environment experienced by an employee is never the model alone. It is the combined effect of the model, the retrieval environment, the enterprise data, permissions, configuration, workflow, human behavior, and time. Each of those elements can change independently, and together they determine what the system can see, how it interprets a request, which information it retrieves, what answer it produces, how employees rely on it, and what evidence remains afterward.
 
 This is not simply a list of technical failure modes; it is a demonstration of why algorithmic accountability cannot be assigned to one existing department or academic discipline.
+
+### Content drift
+
+Approved language changes during AI-assisted design, development, formatting, or implementation, causing the published content to diverge from the authoritative source without a deliberate editorial decision.
 
 ### Model drift
 
@@ -108,11 +112,11 @@ Economic drift is a finance and workforce-capacity problem. It occurs when token
 
 ### Evidence drift
 
-Evidence drift is a legal, audit, and litigation-readiness problem, and it is the most consequential of the seven. Even where logs exist, the surviving record may no longer be sufficient to reproduce why a particular output occurred — a company may be able to show who used a system, when, and what response appeared, while remaining unable to show why that response was selected, what was omitted, or whether an upgrade changed the answer. That gap only widens as logs expire, models change, records are edited, source documents disappear, and employees leave.
+Evidence drift is a legal, audit, and litigation-readiness problem, and it is the most consequential of the eight. Even where logs exist, the surviving record may no longer be sufficient to reproduce why a particular output occurred — a company may be able to show who used a system, when, and what response appeared, while remaining unable to show why that response was selected, what was omitted, or whether an upgrade changed the answer. That gap only widens as logs expire, models change, records are edited, source documents disappear, and employees leave.
 
-## No Single Discipline Can Govern All 7 Forms of Drift
+## No Single Discipline Can Govern All 8 Forms of Drift
 
-No single discipline is positioned to govern all seven forms of drift on its own, because each one crosses a different institutional boundary. **Technology can monitor model behavior,** but it may not be positioned to determine whether a changed workflow requires renewed legal approval. **Legal can identify liability** once a flawed output causes harm, but it typically has no visibility into whether a retrieval-side change — a new index, a swapped connector, a different ranking method — is what produced that output in the first place.
+No single discipline is positioned to govern all eight forms of drift on its own, because each one crosses a different institutional boundary. **Technology can monitor model behavior,** but it may not be positioned to determine whether a changed workflow requires renewed legal approval. **Legal can identify liability** once a flawed output causes harm, but it typically has no visibility into whether a retrieval-side change — a new index, a swapped connector, a different ranking method — is what produced that output in the first place.
 
 **Finance can detect cost variance,** but it may not see the hidden review labor that is keeping the system usable. Audit can test controls, but it may not be able to reproduce the operating environment that produced a challenged decision. And **HR can see workforce effects**, but it typically does not control the model, the permissions, the vendor contract, or the evidence-retention architecture behind them.
 
