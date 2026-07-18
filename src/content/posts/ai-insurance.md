@@ -6,28 +6,27 @@ pubDate: 2026-07-18
 datePublished: 2026-07-18
 dateModified: 2026-07-18
 category: AI Governance & Workforce Risk
-excerpt: >-
-  Insurers may become the first institutions to put a price on missing human
-  attribution as AI risk moves into underwriting, exclusions, affirmative
+excerpt: Insurers may become the first institutions to put a price on missing
+  human attribution as AI risk moves into underwriting, exclusions, affirmative
   coverage, technical audits, and liability products.
-description: >-
-  The AI insurance market is turning governance evidence into an underwriting
-  issue. The Name Standard℠ tests whether human accountability behind
-  AI-assisted decisions is real and traceable.
+description: The AI insurance market is turning governance evidence into an
+  underwriting issue. The Name Standard℠ tests whether human accountability
+  behind AI-assisted decisions is real and traceable.
 image:
   url: /src/images/blog/ai-insurance-human-attribution.avif
-  alt: insurance underwriting documents and an unresolved AI accountability record on a boardroom table
+  alt: insurance underwriting documents and an unresolved AI accountability record
+    on a boardroom table
 heroImage: /src/images/blog/ai-insurance-human-attribution.avif
-heroAlt: insurance underwriting documents and an unresolved AI accountability record on a boardroom table
+heroAlt: insurance underwriting documents and an unresolved AI accountability
+  record on a boardroom table
 tags:
- 
   - Name Standard
   - AI Governance
- 
+  - Legal Risk
+  - Board Governance
 draft: true
 isFeatured: false
 ---
-
 **Insurers may become the first institutions to put a price on missing human attribution.**
 
 AI accountability is no longer only a compliance question. It is becoming an insurability question.
@@ -36,23 +35,25 @@ Federal AI legislation remains incomplete, state laws vary by jurisdiction, and 
 
 The emerging underwriting question won't be whether an organization says a human stayed in the loop. It will be whether the company can prove who authorized the AI use, who reviewed consequential output, who could stop the system, and who owned the decision when something went wrong — the human-attribution question addressed by the [Name Standard℠](/blog/the-name-standard-ai-governance/).
 
+> **Insurers may become the first institutions to put a price on missing human attribution.**
+
 ## AI Risk Is Already Embedded in Existing Policies
 
 "AI insurance" is not one standardized policy category. AI-related exposure may appear inside cyber insurance, technology errors and omissions, professional liability, employment practices liability, D&O insurance, commercial general liability, or other conventional lines. Carriers are also introducing separate AI liability products, affirmative AI endorsements, and AI performance insurance — and these don't insure the same thing:
 
-* **AI liability insurance** addresses covered third-party claims arising from an organization's use of AI.
-* **AI performance insurance** addresses the risk that an AI system fails to meet defined technical or contractual performance standards.
-* **Affirmative AI coverage** explicitly adds or confirms AI-related protection within an existing policy.
+- **AI liability insurance** addresses covered third-party claims arising from an organization's use of AI.
+- **AI performance insurance** addresses the risk that an AI system fails to meet defined technical or contractual performance standards.
+- **Affirmative AI coverage** explicitly adds or confirms AI-related protection within an existing policy.
 
 A single AI-related event can cross several of these at once — an AI-assisted employment decision implicating EPL coverage, a defective deliverable creating E&O exposure, a compromised agent producing a cyber claim, a board's oversight failure implicating D&O — while fitting none of them cleanly.
 
-A July 2026 report, [*Underwriting the Agent Economy: The Blueprint for an AI Insurance Stack*](https://www.underwriting-agents.com/), argues that most of the industry's current AI-agent exposure sits silently inside conventional cyber, professional liability, and general liability policies — largely unpriced and invisible. It also finds a disconnect: nearly half of surveyed Lloyd's underwriters believed their policyholders managed AI risk adequately, while only one in five surveyed businesses reported a mature governance model for autonomous agents. That's not just a technology gap — it's an underwriting-information gap.
+A July 2026 report, *[Underwriting the Agent Economy: The Blueprint for an AI Insurance Stack](https://www.underwriting-agents.com/)*, argues that most of the industry's current AI-agent exposure sits silently inside conventional cyber, professional liability, and general liability policies — largely unpriced and invisible. It also finds a disconnect: nearly half of surveyed Lloyd's underwriters believed their policyholders managed AI risk adequately, while only one in five surveyed businesses reported a mature governance model for autonomous agents. That's not just a technology gap — it's an underwriting-information gap.
 
 ## Exclusions Are the First Price Signal
 
 When insurers can't identify or quantify an emerging exposure, they often narrow coverage instead. Carriers have begun writing exclusions and seeking approval for endorsements that restrict AI-related liabilities within existing policies, rather than launching standalone products.
 
-The carrier doesn't need to prohibit AI deployment — it can simply put resulting losses outside the policy or behind a separately negotiated endorsement. That's how governance weakness becomes financially consequential: if an insured can't explain what an AI system was authorized to do, who controlled it, or whether meaningful human review existed, the carrier can't distinguish a controlled risk from an uncontrolled one. The absence of evidence becomes part of the risk.
+The carrier doesn't need to prohibit AI deployment — it can simply put resulting losses outside the policy or behind a separately negotiated endorsement. That's how [governance weakness becomes financially consequential:](/blog/cfo-problem-with-ai-roi/) if an insured can't explain what an AI system was authorized to do, who controlled it, or whether meaningful human review existed, the carrier can't distinguish a controlled risk from an uncontrolled one. The absence of evidence becomes part of the risk.
 
 ## Liability and Performance Insurance Both Require Better Evidence
 
@@ -72,13 +73,11 @@ The [Name Standard℠](/blog/the-name-standard-ai-governance/) tests exactly thi
 
 Exclusions, affirmative coverage, liability products, performance insurance, and audit evidence each address a different risk. But all of them depend on the same underlying evidence:
 
-* Who authorized the system's scope?
-* Who reviewed the output?
-* Who could stop deployment?
-* Who accepted unresolved risk?
+- Who authorized the system's scope?
+- Who reviewed the output?
+- Who could stop deployment?
+- Who accepted unresolved risk?
 
 The institutions that first attach a financial consequence to missing human attribution may not be legislatures or courts. They may be insurance carriers deciding what they will cover and what price an organization pays when accountability can't be traced.
-
-> **Insurers may become the first institutions to put a price on missing human attribution.**
 
 Board-facing teams preparing for regulatory, litigation, or insurance scrutiny of AI-assisted work can [request a Governance Readiness Briefing](/request-briefing/).
