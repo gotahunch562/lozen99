@@ -131,7 +131,7 @@ In practice, the evidence behind an AI-assisted decision tends to fall into one 
 
 Which category a given decision falls into is rarely known in advance. It is usually discovered only once someone needs the evidence and finds out whether it still exists.
 
-## AI Governance Retrofit for Enterprise Systems
+## AI Governance Retrofit for Enterprise AI
 
 This is the part that matters most commercially, because most enterprises have already deployed these systems. Already deployed, however, does not mean ungovernable; it means governance must be reconstructed around a live system rather than designed into a new one.
 
