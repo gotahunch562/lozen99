@@ -15,7 +15,7 @@ excerpt: Most enterprise AI governance treats large language models like
   while the product name stays exactly the same. Managing this new reality
   requires an entirely new approach to algorithmic accountability.
 description: Enterprise AI accountability spans law, business, and tech. Explore
-  the eight forms of AI drift and why no single discipline can own governance
+  the seven forms of AI drift and why no single discipline can own governance
   alone.
 image:
   url: /src/images/blog/algorithmic-accountability1.avif
@@ -68,7 +68,7 @@ None of that can be resolved through technical performance metrics alone. It req
 
 A law school tends to see professional responsibility, evidence, liability, discrimination, and contractual duty. A business school tends to see implementation, productivity, internal controls, workforce capacity, investment return, and operating risk. Technology teams, for their part, tend to see model performance, system architecture, access controls, and security. Each discipline is seeing something real, but none of them is seeing the whole enterprise problem, because the complete question sits between them — the same five questions above, none of which any single department owns.
 
-Answering that question well requires holding several forms of analysis together at once, rather than choosing one and setting the others aside. **[The Name Standard℠**,](/blog/the-name-standard-ai-governance/) for instance, addresses traceable human attribution in AI-assisted decisions, while [**the Power User Trap℠**](/frameworks/power-user-trap/) identifies the hidden verification burden absorbed by employees whose expertise is what keeps unreliable output from reaching the organization.
+Answering that question well requires holding several forms of analysis together at once, rather than choosing one and setting the others aside. **[The Name Standard℠**,](/blog/the-name-standard-ai-governance/) for instance, addresses traceable human attribution in AI-assisted decisions, while **[the Power User Trap℠](/frameworks/power-user-trap/)** identifies the hidden verification burden absorbed by employees whose expertise is what keeps unreliable output from reaching the organization.
 
 Caremark-style oversight questions, in turn, concern what boards and senior leaders are expected to know about consequential systems operating inside the enterprise, and insurance exclusions, affirmative coverage, and underwriting requirements determine whether the organization's transfer of risk truly corresponds to its real AI practices. System drift complicates whether a previously approved deployment remains meaningfully the same deployment, and evidence reconstruction becomes necessary precisely when the organization later needs to explain a decision made under operating conditions that were only partially preserved.
 
@@ -110,7 +110,7 @@ Economic drift is a finance and workforce-capacity problem. It occurs when token
 
 Evidence drift is a legal, audit, and litigation-readiness problem, and it is the most consequential of the seven. Even where logs exist, the surviving record may no longer be sufficient to reproduce why a particular output occurred — a company may be able to show who used a system, when, and what response appeared, while remaining unable to show why that response was selected, what was omitted, or whether an upgrade changed the answer. That gap only widens as logs expire, models change, records are edited, source documents disappear, and employees leave.
 
-## No Single Discipline Can Govern All 7 Forms of Drift 
+## No Single Discipline Can Govern All 7 Forms of Drift
 
 No single discipline is positioned to govern all seven forms of drift on its own, because each one crosses a different institutional boundary. **Technology can monitor model behavior,** but it may not be positioned to determine whether a changed workflow requires renewed legal approval. **Legal can identify liability** once a flawed output causes harm, but it typically has no visibility into whether a retrieval-side change — a new index, a swapped connector, a different ranking method — is what produced that output in the first place.
 
