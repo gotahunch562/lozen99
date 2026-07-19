@@ -38,6 +38,8 @@ That may sound like a modest observation, but it is not. It helps explain why **
 
 Most enterprise AI governance still treats large language models the way organizations have traditionally treated software: as products to be procured, configured, secured, and monitored for defects. That instinct is understandable, but it is also incomplete, because the underlying object being governed does not behave like a product at all.
 
+> Software performs functions. An LLM can participate in an evolving cognitive process around a human goal.
+
 **Traditional software is machinery. An LLM environment is weather.** A machine remains substantially stable until someone modifies it: change the code and the behavior changes, but leave it alone and it generally performs the same operation tomorrow that it performed today. An LLM environment does not hold still in the same way, since its behavior emerges from the ongoing interaction of the model, the retrieval systems feeding it, the enterprise data around it, user permissions, system configurations, surrounding workflows, individual prompts, provider-side updates, and simple time.
 
 As a result, an organization can keep using the same product name and the same license while the operating conditions surrounding the system change underneath it. No single internal modification or approval event is required for that shift to happen.
