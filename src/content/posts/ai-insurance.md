@@ -69,7 +69,7 @@ Whether coverage is affirmative, exclusionary, or embedded in a liability or per
 
 A nominal reviewer who sees only the final output and cannot delay the decision is not a meaningful control. That distinction matters twice: during underwriting, when the carrier evaluates whether human review reduces the likelihood or severity of loss, and after a claim, when the company must prove the control described in its application actually operated.
 
-The [Name Standard℠](/the-name-standard-ai-governance/) tests exactly this: whether responsibility remained traceable to a human or institutional actor with real capacity, information, authority, documentation, and a formal right of refusal.
+The [Name Standard℠](/blog/great-american-ai-act-name-standard/) tests exactly this: whether responsibility remained traceable to a human or institutional actor with real capacity, information, authority, documentation, and a formal right of refusal.
 
 ## Insurance Readiness Is Governance Readiness
 
