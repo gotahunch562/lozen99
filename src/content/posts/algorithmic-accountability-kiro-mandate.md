@@ -31,7 +31,7 @@ Traditional software is machinery. An LLM is closer to weather. That distinction
 
 Nasdaq's 3rd Annual Global Governance Pulse states that nearly 20% of boards report AI is not being discussed at all, while only 8% say their boards are actively using organization-approved AI tools for their own governance work. Incorporated in this statistic is a basic category error: **most organizations are still governing enterprise AI as though it were conventional software.**
 
-Algorithmic accountability is not primarily a question of whether an organization has a policy, an impact assessment, or a human somewhere in the process. It is whether authority, review, evidence, and refusal remain intact while a probabilistic system is functioning.
+[Algorithmic accountability is not primarily a question of whether an organization has a policy,](/blog/algorithmic-accountability-enterprise-ai-governance/) an impact assessment, or a human somewhere in the process. It is whether authority, review, evidence, and refusal remain intact while a probabilistic system is functioning.
 
 ## The Kiro Mandate: Scaling Probabilistic Agents in Production
 
@@ -134,7 +134,7 @@ Applied to the Kiro incident, the reported record produces a clear result:
 - **Did the formal approval checkpoint function?** No — the agent inherited permissions that bypassed it, and the stronger peer-review safeguard appeared only after the incident.
 - **Did any person have a practical refusal right in the moment?** No — the workflow contained no effective pause at the point where the task escalated.
 
-Amazon's explanation asks who opened the door. The Name Standard asks who chose who walked through it.
+Amazon's explanation asks who opened the door. [The Name Standard asks](/blog/the-name-standard-ai-governance/) who chose who walked through it.
 
 On that second question, no human actor is publicly shown to have exercised meaningful judgment over the specific action. Responsibility therefore does not stop with the engineer. It runs upstream to the leaders who mandated adoption, defined the operating model, and accepted a control structure in which autonomous action could occur without renewed human authority.
 
