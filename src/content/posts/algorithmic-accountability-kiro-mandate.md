@@ -25,13 +25,13 @@ isFeatured: false
 ---
 *A companion case study in capital decisions, evidence drift, and why LLMs are not software*
 
-Boards are not being asked to understand how a large language model works. They are being asked to sign off on the proposition that management has a governance methodology in place to detect problems when one arises. That is a narrower and more achievable ask — but only if the board understands what kind of system it is being asked to oversee.
+Boards are not being asked to understand how a large language model works. They are being asked to sign off on the proposition that management has a governance methodology in place to detect problems when one arises. That is a narrower and more achievable ask — but only [if the board understands what kind of system it is being asked to oversee.](/blog/board-ai-governance-blind-spots/)
 
 Traditional software is machinery. An LLM is closer to weather. That distinction is not a technical footnote for engineers. It is a governance category, and a director's oversight duty depends on knowing which category a given system falls into — because the tools a board would reasonably expect management to use to monitor one are the wrong tools for the other. Machinery fails in predictable ways. Weather does not.
 
 Nasdaq's 3rd Annual Global Governance Pulse states that nearly 20% of boards report AI is not being discussed at all, while only 8% say their boards are actively using organization-approved AI tools for their own governance work. Incorporated in this statistic is a basic category error: **most organizations are still governing enterprise AI as though it were conventional software.**
 
-Algorithmic accountability is not primarily a question of whether an organization has a policy, an impact assessment, or a human somewhere in the process. It is whether authority, review, evidence, and refusal remain intact while a probabilistic system is acting.
+Algorithmic accountability is not primarily a question of whether an organization has a policy, an impact assessment, or a human somewhere in the process. It is whether authority, review, evidence, and refusal remain intact while a probabilistic system is functioning.
 
 ## The Kiro Mandate: Scaling Probabilistic Agents in Production
 
