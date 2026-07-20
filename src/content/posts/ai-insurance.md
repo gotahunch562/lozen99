@@ -4,7 +4,7 @@ seo_title: "AI Insurance: Pricing the Human Attribution Gap"
 slug: ai-insurance-human-attribution-governance
 pubDate: 2026-07-18
 datePublished: 2026-07-18
-dateModified: 2026-07-18
+dateModified: 2026-07-20
 category: AI Governance & Workforce Risk
 excerpt: Insurers may become the first institutions to put a price on missing
   human attribution as AI risk moves into underwriting, exclusions, affirmative
@@ -47,13 +47,15 @@ The emerging underwriting question won't be whether an organization says there i
 
 A single AI-related event can cross several of these at once — an AI-assisted employment decision implicating EPL coverage, a defective deliverable creating E&O exposure, a compromised agent producing a cyber claim, a board's oversight failure implicating D&O — while fitting none of them cleanly.
 
-A July 2026 report, *[Underwriting the Agent Economy: The Blueprint for an AI Insurance Stack](https://www.underwriting-agents.com/)*, argues that most of the industry's current AI-agent exposure sits silently inside conventional cyber, professional liability, and general liability policies — largely unpriced and invisible. It also finds a disconnect: nearly half of surveyed Lloyd's underwriters believed their policyholders managed AI risk adequately, while only one in five surveyed businesses reported a mature governance model for autonomous agents. **That's not just a technology gap — it's an underwriting-information gap.**
+A July 2026 report, *[Underwriting the Agent Economy: The Blueprint for an AI Insurance Stack](https://www.underwriting-agents.com/)*, argues that most of the industry's current AI-agent exposure sits silently inside conventional cyber, professional liability, and general liability policies — largely unpriced and invisible.
+
+A separate LMA survey of its own market, published in April 2026 with Barnett Waddingham, illustrates why the exposure stays invisible even as governance activity accelerates. Based on 39 firms representing over 60% of Lloyd's market stamp capacity, the survey found that 93% of respondents now have, or are developing, a formal AI governance framework, and over 60% mandate human oversight of AI-generated outputs. But ownership of that governance is fragmented — 44% assign it to the Chief Technology Officer, while only 33% have established a dedicated AI governance committee. As Sanjiv Sharma, the LMA's Head of Actuarial and Exposure Management, put it: "There is no clear consensus across the market on where responsibility for AI governance should sit, with firms adopting a range of approaches across technology, risk and compliance functions." **That's not a technology gap. It's a majority of the market building governance frameworks without first settling who is actually accountable inside them.**
 
 ## Exclusions Are the First Price Signal
 
 When insurers can't identify or quantify an emerging exposure, they often narrow coverage instead. Carriers have begun writing exclusions and seeking approval for endorsements that restrict AI-related liabilities within existing policies, rather than launching standalone products.
 
-The carrier doesn't need to prohibit AI deployment — it can simply put resulting losses outside the policy or behind a separately negotiated endorsement. That's how [governance weakness becomes financially consequential:](/blog/cfo-problem-with-ai-roi/) if an insured can't explain what an AI system was authorized to do, who controlled it, or whether meaningful human review existed, the carrier can't distinguish a controlled risk from an uncontrolled one. The absence of evidence becomes part of the risk.
+The carrier doesn't need to prohibit AI deployment — it can simply put resulting losses outside the policy or behind a separately negotiated endorsement. That's how [governance weakness becomes financially consequential](/blog/cfo-problem-with-ai-roi/): if an insured can't explain what an AI system was authorized to do, who controlled it, or whether meaningful human review existed, the carrier can't distinguish a controlled risk from an uncontrolled one. The absence of evidence becomes part of the risk.
 
 ## Liability and Performance Insurance Both Require Better Evidence
 
@@ -67,7 +69,7 @@ Whether coverage is affirmative, exclusionary, or embedded in a liability or per
 
 A nominal reviewer who sees only the final output and cannot delay the decision is not a meaningful control. That distinction matters twice: during underwriting, when the carrier evaluates whether human review reduces the likelihood or severity of loss, and after a claim, when the company must prove the control described in its application actually operated.
 
-The [Name Standard℠](/blog/the-name-standard-ai-governance/) tests exactly this: whether responsibility remained traceable to a human or institutional actor with real capacity, information, authority, documentation, and a formal right of refusal.
+The [Name Standard℠](/the-name-standard-ai-governance/) tests exactly this: whether responsibility remained traceable to a human or institutional actor with real capacity, information, authority, documentation, and a formal right of refusal.
 
 ## Insurance Readiness Is Governance Readiness
 
