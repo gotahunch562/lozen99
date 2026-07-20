@@ -20,7 +20,7 @@ tags:
   - AI Governance
   - Board Governance
   - Disclosure Independence
-draft: true
+draft: false
 isFeatured: false
 ---
 *A companion case study in capital decisions, evidence drift, and why LLMs are not software*
