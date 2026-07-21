@@ -56,6 +56,11 @@
       "source": "/voluntary-benefit-disclosure-gap/",
       "destination": "/menopause-and-the-law/",
       "permanent": true
+    },
+    {
+      "source": "/blog/corporate-ai-relocation-services/",
+      "destination": "/blog/enterprise-ai-relocates-human-labor/",
+      "permanent": true
     }
   ]
 }
