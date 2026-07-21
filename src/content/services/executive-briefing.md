@@ -14,9 +14,9 @@ metaDescription: "Governance Readiness Briefing for boards and CFOs evaluating A
 
 ## Service Details
 
-For boards and executive teams who need to know whether human accountability behind AI-assisted decisions is real and traceable under the Name Standard℠ — not a general AI education session.
+Every board that has approved an AI governance framework will eventually be asked to prove it worked. The Governance Readiness Briefing is where you find out the answer before a regulator, an insurer, or a plaintiff's counsel asks the question first.
 
-The briefing reviews what the organization asks people to sign off on, what evidence supports that approval, whether it would satisfy a director's duty under the Caremark line of cases, and whether the AI investment was governed with the rigor of any other material one.
+This is not a general AI education session. In one focused engagement, you'll know exactly what the organization asks people to sign off on, what evidence actually supports that approval, whether it would satisfy a director's duty under the Caremark line of cases, and whether the AI investment was governed with the rigor of any other material one — tested against the Name Standard℠, not a self-reported policy statement.
 
 Delivered as a fixed-scope engagement, scoped to the number of governance questions, decision processes, and stakeholders involved.
 
