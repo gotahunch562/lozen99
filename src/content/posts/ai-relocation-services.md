@@ -26,7 +26,7 @@ tags:
 draft: false
 isFeatured: false
 ---
-Enterprise AI rarely eliminates work as cleanly as the business case suggests. It relocates that work into verification, quality assurance, exception handling, audit, and the continuous human judgment required to make automated output usable.
+Enterprise AI rarely eliminates work as cleanly as the business case suggests. It relocates that work into verification, quality assurance, exception handling, audit, and the [continuous human judgment](/frameworks/power-user-trap/) required to make automated output usable.
 
 ## AI relocates human labor. Vendors call it autonomous.
 
