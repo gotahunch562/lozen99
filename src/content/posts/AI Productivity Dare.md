@@ -29,7 +29,7 @@ isFeatured: true
 ---
 **Market Update — June 23, 2026:** New workforce data reinforces the risk identified in this article. Adaptavist’s 2,500-person survey across the UK, US, Canada, Germany, and Spain found that one-third of knowledge workers are considering moving to a different industry because of AI concerns, while more than one-third said AI has made them think about retiring earlier. Separately, Jeff Bezos argued at VivaTech 2026 that AI may create labor scarcity rather than eliminate the need for human labor.
 
-These signals are not contradictory. They point to the same governance problem: AI adoption may [increase demand for judgment and human capacity](/blog/corporate-ai-relocation-services/) at the same time it makes experienced workers less willing to remain inside these organizations. The risk is not only whether AI replaces tasks, the risk is whether companies destabilize the people who make AI output usable, defensible, and institutionally safe.
+These signals are not contradictory. They point to the same governance problem: AI adoption may [increase demand for judgment and human capacity](/blog/enterprise-ai-relocates-human-labor/) at the same time it makes experienced workers less willing to remain inside these organizations. The risk is not only whether AI replaces tasks, the risk is whether companies destabilize the people who make AI output usable, defensible, and institutionally safe.
 
 ## When AI Adoption Replaces Governance
 
