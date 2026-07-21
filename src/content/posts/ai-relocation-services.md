@@ -26,7 +26,9 @@ tags:
 draft: false
 isFeatured: false
 ---
-## Need to relocate human labor so the vendors can keep calling the system autonomous ?
+Enterprise AI rarely eliminates work as cleanly as the business case suggests. It relocates that work into verification, quality assurance, exception handling, audit, and the continuous human judgment required to make automated output usable.
+
+## AI relocates human labor. Vendors call it autonomous.
 
 If you want to evaluate different options, it helps to know a few details:
 
@@ -52,7 +54,5 @@ It has been relocated into the people responsible for checking, correcting, esca
 That is not autonomy.
 
 That is [labor displacement inside the workflow.](https://www.deloitte.com/us/en/services/consulting/articles/defensive-ux-responsible-gen-ai-framework.html)
-
-**A Lozen Advisory satire.**
 
 *The AI Workforce Materiality Briefing is a private governance advisory meeting for CFOs, General Counsel, and corporate boards. [Request the briefing.](/ai-workforce-materiality-briefing/)*
