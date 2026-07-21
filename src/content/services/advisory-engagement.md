@@ -14,13 +14,19 @@ eyebrow: Retained Advisory
 duration: Quarterly, monthly, or board-cycle cadence
 isFeatured: false
 ---
-The Governance Readiness Briefing answers a single question at a single point in time. The Advisory Engagement answers it on a recurring basis, for boards, board committees, General Counsel, Corporate Secretaries, Chief Risk and Compliance Officers, internal audit, and CFOs who need standing outside judgment rather than a one-time assessment.
+Board oversight of AI has never mattered more, and it rarely holds up to scrutiny on a single test. Lozen Advisory works alongside boards, board committees, General Counsel, and CFOs as a standing outside partner — reviewing AI-assisted decisions on the same cadence your board already meets, so no single incident ever has to carry the full weight of proving your governance was real.
 
-The work applies the Name Standard℠ across recurring decisions: authority, review, and evidence since the last engagement; whether the reporting system would satisfy a director's duty under Caremark; proxy and risk-factor disclosure language; and how D&O, cyber, and AI insurance products are pricing the organization's own governance evidence. The same standard extends to workforce risk — benefits strategy, the Power User Trap℠, retention, and leadership continuity.
+Boards that treat AI oversight as a one-time briefing are the ones that get caught flat-footed. Boards that build standing outside judgment into their governance cadence are the ones that can produce an answer the moment a director, an insurer, or a plaintiff's counsel asks for one.
+
+**Stay ahead of every AI-assisted decision.** We apply the Name Standard℠ to what's changed since the last engagement — every decision where authority, review, and evidence need to hold up, not just the one that already went wrong.
+
+**Withstand scrutiny before it arrives.** We test whether your reporting system would satisfy a director's duty under Caremark, review proxy and risk-factor disclosure language before it's filed, and track how D&O, cyber, and AI insurance products are pricing your own governance evidence.
+
+**Extend the standard beyond AI.** The same rigor applies to workforce risk — benefits strategy, the Power User Trap℠, retention, and leadership continuity — wherever accountability needs to be provable, not just assumed.
 
 ## What Shapes the Engagement
 
-Buyers are paying for recurring access to an accountability standard, external judgment, and governance continuity across decisions — not for the number of hours spent in a meeting. Scope reflects:
+You're paying for standing access to an accountability standard and outside judgment across every decision — not for hours in a room. Scope is set by:
 
 - Organizational and regulatory complexity
 - Number of committees or executive functions covered
@@ -32,6 +38,6 @@ Buyers are paying for recurring access to an accountability standard, external j
 
 ## Engagement Format
 
-Sessions are available as a 2-hour or half-day virtual meeting, or a full day of in-person engagement, held on a cadence aligned to board and audit committee cycles.
+Sessions run as a 2-hour or half-day virtual meeting, or a full day in person, on a cadence aligned to your board and audit committee cycles.
 
 See how Lozen Advisory can help your board stay ahead of every AI-assisted decision. [Get in touch.](/request-briefing/)
