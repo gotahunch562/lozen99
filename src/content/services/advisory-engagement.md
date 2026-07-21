@@ -1,5 +1,5 @@
 ---
-dateModified: 2026-07-20
+dateModified: 2026-07-21
 title: Advisory Engagement
 shortDescription: Ongoing counsel for boards, board committees, General Counsel, and CFOs on Algorithmic Accountability, Caremark oversight readiness, D&O and insurance exposure, and the Name Standard℠ applied across recurring AI-assisted decisions.
 description: Ongoing counsel for boards, board committees, General Counsel, and CFOs on Algorithmic Accountability, Caremark oversight readiness, D&O and insurance exposure, proxy and disclosure language review, and the Name Standard℠ applied across recurring AI-assisted decisions.
@@ -10,6 +10,7 @@ image:
   url: /src/images/services/client2.jpeg
   alt: "Strategic advisory meeting with executive stakeholders"
 priceFrom: Retained advisory
+eyebrow: Retained Advisory
 duration: Quarterly, monthly, or board-cycle cadence
 isFeatured: false
 ---
