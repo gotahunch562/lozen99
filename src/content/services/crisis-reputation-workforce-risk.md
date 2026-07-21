@@ -14,8 +14,8 @@ eyebrow: Exposure-Based Response
 duration: Immediate and sustained support
 isFeatured: false
 ---
-For boards and executive teams facing an AI-assisted incident, litigation, or insurance scrutiny where accountability cannot yet be proven.
+When an AI-assisted decision fails and the record can't prove who was accountable, speed and credibility both matter. Lozen Advisory works alongside boards and executive teams to reconstruct the record, get ahead of litigation, insurance, and board scrutiny, and mobilize at the pace the situation requires — for AI-assisted incidents, and for workforce disclosure failures involving benefits, retention, or leadership-continuity data.
 
-Engagements are scoped to the immediacy of the matter, the number of decisions and records requiring reconstruction, the stakeholders involved, and the level of board, legal, insurance, or communications support required. Also available for workforce disclosure failures involving benefits, retention, or leadership-continuity data.
+Engagements are scoped to the immediacy of the matter, the number of decisions and records requiring reconstruction, the stakeholders involved, and the level of board, legal, insurance, or communications support required.
 
 If you're facing this now, [reach out](/request-briefing/). We help boards and executive teams respond.
