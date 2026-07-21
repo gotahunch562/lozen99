@@ -78,7 +78,7 @@ const {
         <section class="service-page__mobile-cta" aria-label="Request a briefing">
           <p>Strategic Briefing</p>
           <h2>Discuss the governance question in front of you.</h2>
-          <a href="/request-briefing/">Request Briefing →</a>
+          <a href="/request-briefing/" class="service-page__brief-cta service-page__mobile-cta-link">Request Briefing →</a>
         </section>
       </article>
 
@@ -119,7 +119,7 @@ const {
   .service-page__shell {
     width: min(100%, 86rem);
     margin-inline: auto;
-    padding-inline: 1.25rem;
+    padding-inline: clamp(1.25rem, 5vw, 4.5rem);
   }
 
   .service-page__hero {
@@ -165,7 +165,7 @@ const {
     margin: 1.6rem 0 0;
     color: var(--color-base-700);
     font-family: var(--font-sans);
-    font-size: clamp(1.08rem, 2vw, 1.35rem);
+    font-size: clamp(1.15rem, 2.1vw, 1.45rem);
     line-height: 1.55;
   }
 
@@ -210,8 +210,8 @@ const {
   .service-page__body :global(li) {
     color: var(--color-base-700);
     font-family: var(--font-sans);
-    font-size: var(--lozen-body-copy-size, 1.05rem);
-    line-height: 1.75;
+    font-size: var(--lozen-body-copy-large-size);
+    line-height: var(--lozen-body-copy-large-line-height);
   }
 
   .service-page__body :global(p) {
@@ -312,21 +312,31 @@ const {
   }
 
   .service-page__brief-cta {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin: 1.2rem;
-    background: var(--color-accent-700);
-    padding: 0.95rem 1rem;
-    color: #fff;
+    border: 1px solid var(--color-accent-500);
+    border-radius: 999px;
+    background: var(--color-accent-500);
+    padding: 0.78rem 1.05rem;
+    color: var(--color-base-950);
     font-family: var(--font-sans);
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-size: var(--lozen-body-copy-small-size);
+    font-weight: 800;
     text-align: center;
     text-decoration: none;
+    transition:
+      background 180ms ease,
+      border-color 180ms ease,
+      transform 180ms ease;
   }
 
   .service-page__brief-cta:hover,
   .service-page__brief-cta:focus-visible {
-    background: var(--color-accent-800, var(--color-accent-700));
+    border-color: var(--color-accent-300);
+    background: var(--color-accent-300);
+    transform: translateY(-1px);
   }
 
   .service-page__related {
@@ -383,10 +393,8 @@ const {
     line-height: 1.15;
   }
 
-  .service-page__mobile-cta a {
-    color: var(--color-accent-700);
-    font-family: var(--font-sans);
-    font-weight: 700;
+  .service-page__mobile-cta-link {
+    margin: 1.2rem 0 0;
   }
 
   @media (max-width: 860px) {
