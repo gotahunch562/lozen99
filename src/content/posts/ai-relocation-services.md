@@ -1,18 +1,17 @@
 ---
-title: Looking for a Corporate AI Relocation Service?
-subtitle: A Lozen Advisory satire
-slug: corporate-ai-relocation-services
+title: Enterprise AI Does Not Replace Human Labor. It Relocates It.
+seo_title: Enterprise AI Does Not Replace Human Labor. It Relocates It.
+slug: enterprise-ai-relocates-human-labor
 pubDate: 2026-06-11
 datePublished: 2026-06-11
-dateModified: 2026-06-11
+dateModified: 2026-07-21
 category: AI Governance & Workforce Risk
 excerpt: "AI systems are accelerating output, transactions, discovery, and
   decision support. The market is beginning to answer with proof layers:
   citation checkers, provenance cards, agent spending logs, audit packets, and
   permission records. These are necessary. They are not sufficient."
-description: Discover why Enterprise AI doesn't eliminate human labor—it just
-  shifts it into verification, QA, and audit roles. A sharp satire from Lozen
-  Advisory.
+description: Enterprise AI does not replace human labor. It relocates the work
+  into verification, quality assurance, exception handling, and audit.
 image:
   url: /src/images/blog/corporate-ai-relocation-service.avif
   alt: The labor does not disappear. It moves.
