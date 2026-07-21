@@ -172,3 +172,9 @@ The methodology could combine teaching, applied research, case analysis, executi
 This is the territory [Lozen Advisory's executive AI governance curriculum](https://www.executiveaiskills.com/) was built to address: not simply how organizations adopt AI, but how they preserve human accountability when probabilistic systems enter consequential work. The failures are already moving between departments, from the courtroom to the boardroom, from HR to finance, from professional practice to the insurer's fine print. The teaching, research, and governance structures designed to address them must move the same way.
 
 **Algorithmic accountability needs a room of its own.**
+
+---
+
+## Governance Readiness Briefing
+
+Boards and executive teams evaluating whether human accountability remains traceable across AI-assisted work can use Lozen Advisory’s [Governance Readiness Briefing](/services/governance-readiness-briefing/) to identify evidence, ownership, and oversight gaps.

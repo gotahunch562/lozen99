@@ -110,3 +110,9 @@ When AI carries a company's name, humans cannot be treated as invisible if that 
 Presto wrote the humans out.
 
 The SEC wrote them back in.
+
+---
+
+## Crisis, Reputation, and Algorithmic Accountability Risk
+
+Organizations facing AI-related disclosure scrutiny, evidence failures, or reputational exposure can use Lozen Advisory’s [Crisis, Reputation, and Algorithmic Accountability Risk](/services/crisis-reputation-workforce-risk/) service to reconstruct what the record can prove and where accountability remained unresolved.

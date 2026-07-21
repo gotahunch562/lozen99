@@ -139,3 +139,9 @@ Before the next earnings call, board presentation, or regulatory filing, the org
 ## Series Context
 
 This is the fifth article in Lozen Advisory's [AI Workforce Materiality series](/ai-workforce-materiality/). The next article, **The Materiality Overload Crisis in Form 10-K Human Capital Disclosures**, examines how human-capital disclosure is being asked to carry workforce risks that internal systems may not detect before loss appears.
+
+---
+
+## Crisis, Reputation, and Algorithmic Accountability Risk
+
+Organizations confronting unsupported AI claims, evidence gaps, or activated disclosure scrutiny can use Lozen Advisory’s [Crisis, Reputation, and Algorithmic Accountability Risk](/services/crisis-reputation-workforce-risk/) service to reconstruct the record and clarify accountability.

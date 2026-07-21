@@ -83,3 +83,9 @@ Massachusetts may be expanding access to menopause care. But access without meas
 *The Lozen Advisory Menopause Legislation Tracker audits federal and state menopause legislation by the pathway each bill establishes, the action required before that pathway activates, the data it can collect, and the populations left unmeasured.*
 
 *[lozenadvisory.com/menopause-legislation-tracker](/menopause-legislation-tracker/)*
+
+---
+
+## Market Intelligence
+
+Organizations evaluating legislation, benefit design, and the measurement gaps surrounding workforce policy can use Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) service to translate external developments into decision-ready analysis.

@@ -133,3 +133,8 @@ Series Context
 
 - **Next:** [[AI Investment Is Scaling Faster Than Human Capacity](/blog/ai-investment-scaling-human-capacity/)] topic urns from mandatory use to capital allocation, asking whether organizations are funding AI faster than the workforce systems required to convert that investment into durable operating value.
 
+---
+
+## Advisory Engagement
+
+Organizations moving from AI adoption mandates to recurring oversight can use Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) to strengthen governance ownership, review capacity, and operating accountability.
