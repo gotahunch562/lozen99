@@ -1,15 +1,19 @@
 ---
-import NarrativePage from "@/components/authority/NarrativePage.astro";
+import ServiceDetailPage from "@/components/authority/ServiceDetailPage.astro";
 import { createServiceJsonLd } from "@/lib/seo/jsonLd";
+import { getCollection } from "astro:content";
 
 const { frontmatter, slug } = Astro.props;
-
-import { getCollection } from "astro:content";
 
 const allServices = await getCollection("services");
 const relatedServices = allServices
   .filter((service) => service.data.title !== frontmatter.title)
-  .slice(0, 2);
+  .slice(0, 2)
+  .map((service) => ({
+    title: service.data.title,
+    description: service.data.shortDescription,
+    href: `/services/${service.id}`,
+  }));
 
 const title = `${frontmatter.title} | Lozen Advisory`;
 const description =
@@ -24,7 +28,7 @@ const serviceSlug =
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
-const serviceHref = `/services/${serviceSlug}`;
+const serviceHref = `/services/${serviceSlug}/`;
 
 const pageJsonLd = createServiceJsonLd({
   name: frontmatter.title,
@@ -34,84 +38,18 @@ const pageJsonLd = createServiceJsonLd({
 });
 ---
 
-<NarrativePage
+<ServiceDetailPage
   title={frontmatter.title}
   seoTitle={title}
   description={frontmatter.shortDescription || frontmatter.description}
   metaDescription={description}
-  eyebrow="Professional Service"
-  typeLabel={frontmatter.priceFrom}
-  dateLabel={frontmatter.duration}
-  articleJsonLd={pageJsonLd}
-  bottomCta={{
-    label: "Strategic Briefing",
-    title: "Request a private briefing.",
-    description:
-      "Lozen Advisory works with leaders when visibility, disclosure, retention risk, AI implementation burden, or workforce exposure requires a clearer decision structure.",
-    href: "/request-briefing",
-    linkLabel: "Request Briefing →",
-  }}
+  canonical={serviceHref}
+  eyebrow={frontmatter.eyebrow}
+  forAudience={frontmatter.forAudience}
+  engagementType={frontmatter.priceFrom}
+  format={frontmatter.duration}
+  jsonLd={pageJsonLd}
+  relatedServices={relatedServices}
 >
-  <h2>Service Details</h2>
-
   <slot />
-
-  {
-    relatedServices.length > 0 && (
-      <section class="service-detail-related" aria-label="Related services">
-        <h2>Related Services</h2>
-
-        <div class="service-detail-related__list">
-          {relatedServices.map((service) => (
-            <a href={`/services/${service.id}`} class="service-detail-related__link">
-              <span>{service.data.title}</span>
-              {service.data.shortDescription && <small>{service.data.shortDescription}</small>}
-            </a>
-          ))}
-        </div>
-      </section>
-    )
-  }
-</NarrativePage>
-
-<style>
-  .service-detail-related {
-    margin-top: 3rem;
-    border-top: 1px solid var(--color-base-300);
-    padding-top: 2.25rem;
-  }
-
-  .service-detail-related__list {
-    display: grid;
-    gap: 0.85rem;
-    margin-top: 1.25rem;
-  }
-
-  .service-detail-related__link {
-    display: grid;
-    gap: 0.4rem;
-    border-top: 1px solid var(--color-base-200);
-    padding-top: 1rem;
-    color: var(--color-base-950) !important;
-    text-decoration: none !important;
-  }
-
-  .service-detail-related__link span {
-    font-family: var(--font-display);
-    font-size: var(--lozen-card-title-size);
-    line-height: var(--lozen-card-title-line-height);
-    letter-spacing: var(--lozen-card-title-letter-spacing);
-  }
-
-  .service-detail-related__link small {
-    color: var(--color-base-600);
-    font-family: var(--font-sans);
-    font-size: var(--lozen-body-copy-small-size);
-    line-height: var(--lozen-body-copy-small-line-height);
-  }
-
-  .service-detail-related__link:hover span,
-  .service-detail-related__link:focus-visible span {
-    color: var(--color-accent-700);
-  }
-</style>
+</ServiceDetailPage>
