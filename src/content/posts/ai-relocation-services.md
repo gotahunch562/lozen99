@@ -6,17 +6,17 @@ pubDate: 2026-06-11
 datePublished: 2026-06-11
 dateModified: 2026-07-21
 category: AI Governance & Workforce Risk
-excerpt: "AI systems are accelerating output, transactions, discovery, and
-  decision support. The market is beginning to answer with proof layers:
-  citation checkers, provenance cards, agent spending logs, audit packets, and
-  permission records. These are necessary. They are not sufficient."
+excerpt: AI systems are accelerating output, transactions, discovery, and
+  decision support. All of this activity in Enterprise AI does not eliminate
+  human labor. It relocates the work into verification, correction, exception
+  handling, source validation, and liability review.
 description: Enterprise AI does not replace human labor. It relocates the work
   into verification, quality assurance, exception handling, and audit.
 image:
   url: /src/images/blog/corporate-ai-relocation-service.avif
-  alt: The labor does not disappear. It moves.
+  alt: The human labor does not disappear. It moves.
 heroImage: /src/images/blog/corporate-ai-relocation-service.avif
-heroAlt: The labor does not disappear. It moves.
+heroAlt: The human labor does not disappear. It moves.
 tags:
   - Power User Trap
   - Tacere
