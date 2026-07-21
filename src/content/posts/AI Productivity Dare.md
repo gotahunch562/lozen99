@@ -1,5 +1,5 @@
 ---
-title: The AI Productivity Dare
+title: The AI Productivity Hype
 seo_title: Why Reducing Headcount Is Not an AI Governance Strategy
 subtitle: Why Reducing Headcount Is Not an AI Governance Strategy
 slug: ai-productivity-dare
