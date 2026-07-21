@@ -40,6 +40,8 @@ const pageJsonLd = createServiceJsonLd({
   description={frontmatter.shortDescription || frontmatter.description}
   metaDescription={description}
   eyebrow="Professional Service"
+  typeLabel={frontmatter.priceFrom}
+  dateLabel={frontmatter.duration}
   articleJsonLd={pageJsonLd}
   bottomCta={{
     label: "Strategic Briefing",
@@ -51,8 +53,6 @@ const pageJsonLd = createServiceJsonLd({
   }}
 >
   <h2>Service Details</h2>
-
-  <p>{frontmatter.description}</p>
 
   <slot />
 
