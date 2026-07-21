@@ -13,14 +13,10 @@ metaDescription: "Governance Readiness Briefing for boards and CFOs evaluating A
 
 ## Service Details
 
-The Governance Readiness Briefing is designed for boards and executive teams that need clarity before AI-assisted work becomes a Caremark oversight question, a D&O or insurance exposure, or a reputational crisis.
+For boards and executive teams who need to know whether human accountability behind AI-assisted decisions is real and traceable under the Name Standard℠ — not a general AI education session.
 
-Clients use this briefing when AI tools are already influencing corporate decisions, but the organization has not yet established whether the people expected to approve that output have the capacity, information, authority, and formal right of refusal required to do so responsibly. A framework, a policy, or an adoption metric is not evidence of that — it discloses that a process exists, not that the process produced accountability.
+The briefing reviews what the organization asks people to sign off on, what evidence supports that approval, whether it would satisfy a director's duty under the Caremark line of cases, and whether the AI investment was governed with the rigor of any other material one.
 
-This is not a general AI education session. The briefing is delivered as a fixed-scope engagement, with the format determined by the number of governance questions, decision processes, and leadership stakeholders included in the review.
+Delivered as a fixed-scope engagement, scoped to the number of governance questions, decision processes, and stakeholders involved.
 
-Lozen Advisory brings the Algorithmic Accountability question directly into the decision room. The briefing clarifies what the organization currently asks people to sign off on, what evidence supports that approval, where AI-assisted work may be creating undocumented reliance, and whether human accountability remains traceable under the Name Standard℠.
-
-For boards, the briefing addresses the oversight question directly: whether a reporting system exists that would surface AI-related risk before an incident does, and whether that system would satisfy a director's duty under the Caremark line of cases. For CFOs, it addresses the capital-decision question: whether an AI adoption initiative was governed with the same rigor as any other material investment, or whether adoption was measured by a usage metric that says nothing about who is accountable when something goes wrong.
-
-The purpose is to help leadership determine whether current governance structures can support defensible sign-off, or whether the organization is relying on human review without giving people the conditions required to exercise judgment.
+See how Lozen Advisory can help your board prove its AI governance is defensible. [Request a briefing.](/request-briefing/)
