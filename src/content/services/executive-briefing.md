@@ -1,9 +1,10 @@
 ---
-dateModified: 2026-07-20
+dateModified: 2026-07-21
 title: "Governance Readiness Briefing"
 description: "A focused advisory session for boards and CFOs evaluating whether AI-assisted corporate decisions can be reviewed, verified, escalated, refused, and formally signed off under a clear accountability model — before the gap becomes a Caremark, D&O, or insurance exposure."
 shortDescription: "A focused advisory session for boards and CFOs evaluating whether AI-assisted decisions can withstand audit, litigation, or insurance scrutiny."
 priceFrom: "Fixed-scope briefing"
+eyebrow: "Fixed-Scope Advisory"
 duration: "2-hour or half-day session"
 image:
   url: "/src/images/services/executivebriefing.webp"
