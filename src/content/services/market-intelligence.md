@@ -1,9 +1,10 @@
 ---
-dateModified: 2026-07-20
+dateModified: 2026-07-21
 title: "Market Intelligence"
 description: "Research and analysis on Algorithmic Accountability, AI-assisted decision evidence gaps, board and D&O exposure, and the disclosure-dependent measurement failures that leave institutions unable to prove who was accountable when something goes wrong."
 shortDescription: "Research and analysis on Algorithmic Accountability, AI governance evidence gaps, board and D&O exposure, and disclosure-dependent institutional risk."
 priceFrom: "Custom research engagement"
+eyebrow: "Research Engagement"
 duration: "Project or recurring mandate"
 image:
   url: "/src/images/services/marketintelligence.webp"
