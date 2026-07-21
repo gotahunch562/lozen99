@@ -55,7 +55,7 @@ const pageJsonLd = createServiceJsonLd({
     href: service.href,
   })),
 });
-const dateModified = "2026-05-19";
+const dateModified = "2026-07-21";
 ---
 
 <NarrativePage
@@ -107,27 +107,12 @@ const dateModified = "2026-05-19";
     The absence of data is not the absence of risk.
   </p>
 
-  <p>
-    Lozen Advisory works with boards, board committees, and CFOs when an AI-assisted decision, adoption initiative, or governance framework is beginning to carry Caremark oversight, D&O, insurance, or reputational weight — and the organization cannot yet prove who was accountable. We advise on the infrastructure questions those conditions reveal: what the current system can and cannot detect, where human accountability must remain traceable under the Name Standard℠, and what a disclosure-independent design would require. The same structural failure also shows up in workforce systems, including retention risk, succession exposure, and benefits utilization, where it carries the same governance logic in a different domain.
-  </p>
-
-  <section class="service-scope" aria-label="What Lozen Advisory is not">
-    <div class="service-scope__label">Scope Clarification</div>
-
-    <div class="service-scope__grid">
-      <h2>What Lozen Advisory Is Not</h2>
-
-      <div class="service-scope__copy">
-        <p>
-          Lozen Advisory is not an AI vendor, a compliance checkbox audit, or a tool that reviews your models or code. We do not collect employee data, administer benefits, or audit workforce behavior. We are not an HR analytics platform, and we do not access your employees' records, claims history, or utilization files.
-        </p>
-
-        <p>
-          We advise on the design conditions that determine what your current infrastructure can detect and what it cannot — whether that infrastructure governs AI-assisted decisions or workforce risk. That is a governance question, not a data or technology question. The work is at the leadership level, with your board or your leadership team.
-        </p>
-      </div>
-    </div>
-  </section>
+  <ul class="service-stakes">
+    <li>Your AI governance framework may exist. Your evidence of who was accountable may not.</li>
+    <li>Caremark oversight, D&O exposure, and insurance underwriting now ask the same question — and expect an answer before an incident forces it.</li>
+    <li>The Name Standard℠ tests whether that answer would actually hold up.</li>
+    <li>The same failure shows up in workforce risk — retention, succession, benefits utilization — under the same governance logic, in a different domain.</li>
+  </ul>
 </NarrativePage>
 
 <style>
@@ -142,57 +127,38 @@ const dateModified = "2026-05-19";
     text-wrap: balance;
   }
 
-  .service-scope {
-    margin: 3rem 0 0;
-    border: 1px solid var(--color-base-300);
-    border-radius: 1.25rem;
-    background: var(--color-base-50);
-    padding: clamp(1.35rem, 3vw, 2rem);
-    box-shadow: 0 18px 42px rgba(6, 23, 47, 0.06);
-  }
-
-  .service-scope__label {
-    border-left: 1px solid var(--color-accent-500);
-    padding-left: 0.9rem;
-    color: var(--color-base-600);
-    font-family: var(--font-sans);
-    font-size: var(--lozen-meta-label-size);
-    font-weight: var(--lozen-meta-label-weight);
-    letter-spacing: var(--lozen-meta-label-letter-spacing);
-    line-height: 1.15;
-    text-transform: uppercase;
-  }
-
-  .service-scope__grid {
+  .service-stakes {
     display: grid;
-    grid-template-columns: minmax(12rem, 0.38fr) minmax(0, 1fr);
-    gap: clamp(1.35rem, 4vw, 2.75rem);
-    align-items: start;
-    margin-top: 1.35rem;
+    gap: 0;
+    margin: 1.75rem 0 0 !important;
+    padding: 0;
+    list-style: none;
   }
 
-  .service-scope h2 {
-    margin: 0 !important;
-    color: var(--color-base-950) !important;
-    font-family: var(--font-display);
-    font-size: clamp(1.55rem, 2.45vw, 2.15rem) !important;
-    font-weight: 400;
-    letter-spacing: -0.03em;
-    line-height: 1.12 !important;
-    text-wrap: balance;
-  }
-
-  .service-scope__copy {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .service-scope__copy p {
-    margin: 0 !important;
-    color: var(--color-base-750, var(--color-base-700)) !important;
+  .service-stakes li {
+    position: relative;
+    border-top: 1px solid var(--color-base-200);
+    padding: 1.15rem 0 1.15rem 1.5rem;
+    color: var(--color-base-800, var(--color-base-950));
     font-family: var(--font-sans);
-    font-size: 1.0625rem !important;
-    line-height: 1.82 !important;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    line-height: 1.55;
+  }
+
+  .service-stakes li:last-child {
+    border-bottom: 1px solid var(--color-base-200);
+  }
+
+  .service-stakes li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.55em;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: var(--color-accent-500);
   }
 
   .service-cards {
@@ -307,16 +273,6 @@ const dateModified = "2026-05-19";
   }
 
   @media (max-width: 760px) {
-    .service-scope__grid {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 1rem;
-    }
-
-    .service-scope__copy p {
-      font-size: 1rem !important;
-      line-height: 1.78 !important;
-    }
-
     .service-cards {
       left: auto;
       width: 100%;
@@ -337,6 +293,11 @@ const dateModified = "2026-05-19";
     .service-card__content p {
       font-size: 0.97rem !important;
       line-height: 1.65 !important;
+    }
+
+    .service-stakes li {
+      font-size: 1rem;
+      line-height: 1.5;
     }
   }
 </style>
