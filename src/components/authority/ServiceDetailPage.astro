@@ -1,0 +1,412 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { JsonLdObject } from "@/lib/seo/jsonLd";
+
+interface RelatedService {
+  title: string;
+  description?: string;
+  href: string;
+}
+
+interface Props {
+  title: string;
+  seoTitle?: string;
+  description?: string;
+  metaDescription?: string;
+  canonical?: string;
+  eyebrow?: string;
+  forAudience?: string;
+  engagementType?: string;
+  format?: string;
+  jsonLd?: JsonLdObject | JsonLdObject[];
+  relatedServices?: RelatedService[];
+}
+
+const {
+  title,
+  seoTitle,
+  description,
+  metaDescription,
+  canonical,
+  eyebrow = "Professional Service",
+  forAudience = "Boards and executive teams",
+  engagementType,
+  format,
+  jsonLd,
+  relatedServices = [],
+} = Astro.props;
+---
+
+<BaseLayout
+  title={seoTitle ?? title}
+  description={metaDescription ?? description}
+  canonical={canonical}
+  ogType="website"
+  jsonLd={jsonLd}
+>
+  <main class="service-page">
+    <header class="service-page__hero">
+      <div class="service-page__shell service-page__hero-shell">
+        <div class="service-page__hero-copy">
+          <p class="service-page__eyebrow">{eyebrow}</p>
+          <h1>{title}</h1>
+          {description && <p class="service-page__deck">{description}</p>}
+        </div>
+      </div>
+    </header>
+
+    <div class="service-page__shell service-page__layout">
+      <article class="service-page__article">
+        <div class="service-page__body">
+          <slot />
+        </div>
+
+        {relatedServices.length > 0 && (
+          <nav class="service-page__related" aria-label="Related services">
+            <p class="service-page__section-label">Related Services</p>
+            <div class="service-page__related-list">
+              {relatedServices.map((service) => (
+                <a href={service.href} class="service-page__related-link">
+                  <span>{service.title}</span>
+                  {service.description && <small>{service.description}</small>}
+                </a>
+              ))}
+            </div>
+          </nav>
+        )}
+
+        <section class="service-page__mobile-cta" aria-label="Request a briefing">
+          <p>Strategic Briefing</p>
+          <h2>Discuss the governance question in front of you.</h2>
+          <a href="/request-briefing/">Request Briefing →</a>
+        </section>
+      </article>
+
+      <aside class="service-page__rail" aria-label="Engagement brief">
+        <div class="service-page__brief">
+          <div class="service-page__brief-header">Engagement Brief</div>
+          <dl>
+            <div>
+              <dt>For</dt>
+              <dd>{forAudience}</dd>
+            </div>
+            {engagementType && (
+              <div>
+                <dt>Engagement</dt>
+                <dd>{engagementType}</dd>
+              </div>
+            )}
+            {format && (
+              <div>
+                <dt>Format</dt>
+                <dd>{format}</dd>
+              </div>
+            )}
+          </dl>
+          <a href="/request-briefing/" class="service-page__brief-cta">Request Briefing →</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .service-page {
+    background: var(--color-base-50);
+    color: var(--color-base-700);
+  }
+
+  .service-page__shell {
+    width: min(100%, 86rem);
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  .service-page__hero {
+    border-bottom: 1px solid var(--color-base-300);
+    background: linear-gradient(180deg, var(--color-base-100) 0%, #fff 100%);
+  }
+
+  .service-page__hero-shell {
+    padding-top: clamp(6.5rem, 9vw, 8rem);
+    padding-bottom: clamp(3rem, 5vw, 4.5rem);
+  }
+
+  .service-page__hero-copy {
+    max-width: 58rem;
+  }
+
+  .service-page__eyebrow,
+  .service-page__section-label,
+  .service-page__mobile-cta > p {
+    margin: 0 0 1rem;
+    color: var(--color-accent-700);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .service-page__hero h1 {
+    max-width: 54rem;
+    margin: 0;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 6vw, 5.25rem);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+  }
+
+  .service-page__deck {
+    max-width: 52rem;
+    margin: 1.6rem 0 0;
+    color: var(--color-base-700);
+    font-family: var(--font-sans);
+    font-size: clamp(1.08rem, 2vw, 1.35rem);
+    line-height: 1.55;
+  }
+
+  .service-page__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(17rem, 22rem);
+    gap: clamp(3rem, 7vw, 7rem);
+    align-items: start;
+    padding-top: clamp(3rem, 6vw, 5.5rem);
+    padding-bottom: clamp(4rem, 8vw, 7rem);
+  }
+
+  .service-page__article {
+    min-width: 0;
+    max-width: 48rem;
+  }
+
+  .service-page__body :global(> :first-child) {
+    margin-top: 0;
+  }
+
+  .service-page__body :global(h2) {
+    margin: 3rem 0 1rem;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 3vw, 2.35rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+
+  .service-page__body :global(h3) {
+    margin: 2.25rem 0 0.8rem;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .service-page__body :global(p),
+  .service-page__body :global(li) {
+    color: var(--color-base-700);
+    font-family: var(--font-sans);
+    font-size: var(--lozen-body-copy-size, 1.05rem);
+    line-height: 1.75;
+  }
+
+  .service-page__body :global(p) {
+    margin: 0 0 1.35rem;
+  }
+
+  .service-page__body :global(ul) {
+    display: grid;
+    gap: 0.72rem;
+    margin: 1.4rem 0 2rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .service-page__body :global(li) {
+    position: relative;
+    padding-left: 1.35rem;
+  }
+
+  .service-page__body :global(li::before) {
+    position: absolute;
+    top: 0.75em;
+    left: 0;
+    width: 0.36rem;
+    height: 0.36rem;
+    border-radius: 50%;
+    background: var(--color-accent-700);
+    content: "";
+  }
+
+  .service-page__body :global(blockquote) {
+    margin: 2.4rem 0;
+    border-left: 3px solid var(--color-accent-700);
+    padding: 0.25rem 0 0.25rem 1.5rem;
+  }
+
+  .service-page__body :global(blockquote p) {
+    margin: 0;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: clamp(1.45rem, 3vw, 2.05rem);
+    line-height: 1.35;
+  }
+
+  .service-page__body :global(a) {
+    color: var(--color-accent-700);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  .service-page__rail {
+    position: sticky;
+    top: 7rem;
+  }
+
+  .service-page__brief {
+    border: 1px solid var(--color-base-400);
+    background: #fff;
+  }
+
+  .service-page__brief-header {
+    background: var(--color-base-950);
+    padding: 1rem 1.2rem;
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .service-page__brief dl {
+    margin: 0;
+    padding: 0 1.2rem;
+  }
+
+  .service-page__brief dl > div {
+    border-bottom: 1px solid var(--color-base-200);
+    padding: 1.2rem 0;
+  }
+
+  .service-page__brief dt {
+    margin-bottom: 0.45rem;
+    color: var(--color-base-500);
+    font-family: var(--font-sans);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  .service-page__brief dd {
+    margin: 0;
+    color: var(--color-base-900);
+    font-family: var(--font-sans);
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  .service-page__brief-cta {
+    display: block;
+    margin: 1.2rem;
+    background: var(--color-accent-700);
+    padding: 0.95rem 1rem;
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .service-page__brief-cta:hover,
+  .service-page__brief-cta:focus-visible {
+    background: var(--color-accent-800, var(--color-accent-700));
+  }
+
+  .service-page__related {
+    margin-top: 3.75rem;
+    border-top: 1px solid var(--color-base-300);
+    padding-top: 2rem;
+  }
+
+  .service-page__related-list {
+    display: grid;
+    gap: 0;
+  }
+
+  .service-page__related-link {
+    display: grid;
+    gap: 0.38rem;
+    border-top: 1px solid var(--color-base-200);
+    padding: 1.1rem 0;
+    color: var(--color-base-950);
+    text-decoration: none;
+  }
+
+  .service-page__related-link span {
+    font-family: var(--font-display);
+    font-size: var(--lozen-card-title-size, 1.3rem);
+    line-height: 1.2;
+  }
+
+  .service-page__related-link small {
+    color: var(--color-base-600);
+    font-family: var(--font-sans);
+    font-size: var(--lozen-body-copy-small-size, 0.92rem);
+    line-height: 1.55;
+  }
+
+  .service-page__related-link:hover span,
+  .service-page__related-link:focus-visible span {
+    color: var(--color-accent-700);
+  }
+
+  .service-page__mobile-cta {
+    display: none;
+    margin-top: 3rem;
+    border-top: 1px solid var(--color-base-300);
+    padding-top: 2rem;
+  }
+
+  .service-page__mobile-cta h2 {
+    margin: 0 0 1.2rem;
+    color: var(--color-base-950);
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.15;
+  }
+
+  .service-page__mobile-cta a {
+    color: var(--color-accent-700);
+    font-family: var(--font-sans);
+    font-weight: 700;
+  }
+
+  @media (max-width: 860px) {
+    .service-page__layout {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .service-page__rail {
+      grid-row: 1;
+      position: static;
+    }
+
+    .service-page__article {
+      grid-row: 2;
+      max-width: none;
+    }
+
+    .service-page__mobile-cta {
+      display: block;
+    }
+  }
+</style>
