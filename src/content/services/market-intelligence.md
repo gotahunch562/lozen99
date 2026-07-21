@@ -12,7 +12,7 @@ image:
 metaDescription: "Market intelligence on Algorithmic Accountability, AI governance evidence gaps, board and D&O exposure, and disclosure-dependent institutional risk."
 ---
 
-Market intelligence on Algorithmic Accountability, for boards and CFOs tracking AI governance evidence gaps, D&O exposure, and insurance-market developments.
+The insurance market, proxy advisors, and regulators are moving on Algorithmic Accountability faster than most boards are tracking it. Market Intelligence keeps your board and your CFO ahead of that curve — seeing what counts as defensible AI governance before a regulator, an underwriter, or a proxy advisor decides it for you.
 
 Deliverables may include executive briefings, market scans, governance-pattern analysis, comparative institutional findings, and decision-ready recommendations — commissioned as a focused research mandate or structured as recurring intelligence support.
 
