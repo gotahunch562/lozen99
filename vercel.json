@@ -61,6 +61,11 @@
       "source": "/blog/corporate-ai-relocation-services/",
       "destination": "/blog/enterprise-ai-relocates-human-labor/",
       "permanent": true
+    },
+    {
+      "source": "/services/executive-briefing/",
+      "destination": "/services/governance-readiness-briefing/",
+      "permanent": true
     }
   ]
 }
