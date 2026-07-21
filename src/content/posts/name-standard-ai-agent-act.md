@@ -56,4 +56,4 @@ For board secretaries and governance officers, that asymmetry is the real takeaw
 
 For the broader board governance gaps this legislation enters, see [Four AI Governance Gaps Boards Are Missing Right Now](/blog/board-ai-governance-blind-spots/).
 
-***Board-facing teams evaluating whether their AI governance structure has a Name Standard℠ gap can [request a Governance Readiness Briefing](/request-briefing/).***
+Lozen Advisory’s [Governance Readiness Briefing](/services/governance-readiness-briefing/) evaluates whether AI-assisted decisions remain attributable, reviewable, and supported by evidence the board can rely on.

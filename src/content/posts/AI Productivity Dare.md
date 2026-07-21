@@ -77,4 +77,4 @@ The token-cost problem is exposing a rift in the **AI Hype Cycle**. By June 2026
 
 ---
 
-*The AI Workforce Materiality Briefing is a private governance advisory meeting for CFOs, General Counsel, and corporate boards. [Request the briefing.](/ai-workforce-materiality-briefing/)*
+Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.

@@ -94,8 +94,6 @@ She needs a strategy that was built for the room she is actually in, not the roo
 
 That gap is why the [menopause legislation tracker](/menopause-legislation-tracker/) matters. It organizes the policy record around what formal systems can measure, and what they still cannot see.
 
-## Commission a Strategic Briefing
+## Market Intelligence
 
-Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
-
-[Commission a Strategic Briefing](/request-briefing/)
+Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

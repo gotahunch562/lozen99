@@ -84,8 +84,6 @@ The common meaning of disclosure is revelation, the workplace meaning is HR reco
 
 Disclosure at work is not just the act of saying something. It is the moment private reality becomes organizational evidence.
 
-## Request a Strategic Briefing
+## Crisis, Reputation, and Algorithmic Accountability Risk
 
-Disclosure-dependent systems do not only shape what employees reveal, they shape what organizations are able to measure. Lozen Advisory advises organizations examining benefits ROI, leadership retention, workforce-risk visibility, and the measurement gaps created when support depends on disclosure.
-
-[Request a Strategic Briefing](/request-briefing/)
+Lozen Advisory’s [Crisis, Reputation, and Algorithmic Accountability Risk](/services/crisis-reputation-workforce-risk/) supports organizations responding to activated AI incidents, disclosure failures, accountability gaps, and reputational exposure.

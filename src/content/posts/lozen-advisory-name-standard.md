@@ -94,4 +94,4 @@ Human oversight is not enough if no one can explain who reviewed the output, wha
 
 ### **Prepare your board for AI accountability questions before the next meeting.**
 
-Lozen AI LegiRisk helps boards, general counsel, corporate secretaries, and risk leaders translate AI laws into the questions directors should ask, the evidence management should produce, the committee issues that should be escalated, and the accountability gaps that remain unresolved.  [Request Briefing](/request-briefing/)
+Lozen Advisory’s [Crisis, Reputation, and Algorithmic Accountability Risk](/services/crisis-reputation-workforce-risk/) supports organizations responding to activated AI incidents, disclosure failures, accountability gaps, and reputational exposure.

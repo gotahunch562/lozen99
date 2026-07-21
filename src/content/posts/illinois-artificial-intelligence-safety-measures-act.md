@@ -162,4 +162,4 @@ An audit creates evidence. Governance determines what happens because of it.
 
 Illinois has strengthened the first function. Companies still need an accountability architecture for the second.
 
-Board-facing teams evaluating whether their AI audit structure produces traceable human accountability can [request a Governance Readiness Briefing](/request-briefing/).
+Lozen Advisory’s [Governance Readiness Briefing](/services/governance-readiness-briefing/) evaluates whether AI-assisted decisions remain attributable, reviewable, and supported by evidence the board can rely on.

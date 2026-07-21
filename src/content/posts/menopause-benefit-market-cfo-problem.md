@@ -89,8 +89,6 @@ The market is measuring availability. CFOs need to measure exposure. The [Retent
 
 ---
 
-## Request a Strategic Briefing
+## Market Intelligence
 
-Lozen Advisory works with organizations examining benefits ROI, leadership retention, workforce-risk visibility, and the measurement gaps created when utilization depends on disclosure.
-
-[Request a Strategic Briefing](/request-briefing/)
+Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

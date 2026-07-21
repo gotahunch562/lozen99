@@ -96,8 +96,6 @@ A board-level inquiry should begin with questions such as:
 
 These are not IT implementation questions. They are capital-governance questions. If leadership cannot answer them, the organization may be funding AI faster than it is governing the human capacity required to make that investment work.
 
-### Secure a Strategic Briefing
+### Advisory Engagement
 
-AI adoption is a governance issue, not an IT project. Lozen Advisory conducts private, 60-minute Strategic Briefings for corporate boards, General Counsel, and CFOs. This is a targeted advisory intervention designed to expose unpriced human-capital liability, map your current verification strain, and deliver the exact frameworks required to govern AI at the enterprise level.
-
-**[Commission a Strategic Briefing](/ai-workforce-materiality-briefing/)**
+Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.

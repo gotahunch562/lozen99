@@ -63,8 +63,6 @@ The legal framework functions as designed. It captures what enters it but misses
 
 [Read the Disclosure-Independent Performance Protection℠ infrastructure.](/disclosure-independence-performance/)
 
-## Commission a Strategic Briefing
+## Market Intelligence
 
-Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
-
-[Commission a Strategic Briefing](https://chatgpt.com/request-briefing/)
+Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

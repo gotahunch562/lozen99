@@ -150,4 +150,4 @@ Already deployed does not mean ungovernable. But governance must begin with the 
 
 ---
 
-Board-facing teams evaluating whether their AI governance structure has a verifiable Name Standard℠ can [request a Governance Readiness Briefing](/request-briefing/).
+Lozen Advisory’s [Crisis, Reputation, and Algorithmic Accountability Risk](/services/crisis-reputation-workforce-risk/) supports organizations responding to activated AI incidents, disclosure failures, accountability gaps, and reputational exposure.

@@ -65,8 +65,6 @@ The record captures activity. It cannot capture the decision not to participate.
 
 This is not a policy design flaw. It is the condition that produces [Invisible Attrition℠](/invisible-attrition/). The women who need the leave most are precisely the ones least likely to request it, and the gap between their organizational impact and their presence in utilization records is not a measurement quirk. Leave data captures what was taken. It cannot capture the [women who kept their own counsel](https://zenodo.org/records/20370916) and never requested it, and that is not incidental to this analysis. It is the governing condition this entire analysis demonstrates.
 
-## Commission a Strategic Briefing
+## Market Intelligence
 
-Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
-
-[Commission a Strategic Briefing](/request-briefing/)
+Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

@@ -132,7 +132,7 @@ It examines where workforce data is producing incomplete evidence, where AI-assi
 
 The goal is not to draft the disclosure. The goal is to close the governance gap before the disclosure requirement arrives.
 
-[Request the AI Workforce Materiality Briefing →](/ai-workforce-materiality-briefing/)
+Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.
 
 ---
 

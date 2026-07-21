@@ -95,4 +95,4 @@ You are not waiting to feel like yourself again. You are navigating something re
 
 The first step is having the right name for what is happening. You have that now. The next step is a private path built around your life, your schedule, and your body as it is right now, not the body the system expected you to have.
 
-That is what [The Tender Path℠](/normal-blood-tests-feel-off/) was built for. The [MAPS Blueprint℠](/booking/) is where to start.
+Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

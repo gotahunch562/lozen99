@@ -80,14 +80,6 @@ The field is expanding into the workplace without incorporating the organization
 
 Until that changes, menopause at work will remain visible, but not operational. The [Northeastern research center announcement](https://news.northeastern.edu/2026/04/08/menopause-workplace-research-center/) is an important marker of field expansion; the remaining question is whether research can move from health visibility into organizational measurement.
 
-## Commission a Strategic Briefing
+## Market Intelligence
 
-Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
-
-[Commission a Strategic Briefing](/request-briefing/)
-
-Related Reading
-
-[Menopause at Work: The Data Employers Do Not See](/blog/menopause-at-work-unquantified-data-gap/)
-
-[Architecture of Invisible Attrition℠: Executive Report Series](/architecture-of-invisible-attrition-series/)
+Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

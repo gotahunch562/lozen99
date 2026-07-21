@@ -82,4 +82,4 @@ The defining question for enterprise AI is not whether machines can move faster 
 
 ***[Lozen Advisory](https://www.lozenadvisory.com/) helps boards, General Counsel, and executive teams identify where AI systems are creating undocumented reliance, unmeasured human verification labor, and decision debt inside enterprise workflows.***
 
-**[Request a briefing on AI decision debt and governance exposure.](/ai-workforce-materiality-briefing/)**
+Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.

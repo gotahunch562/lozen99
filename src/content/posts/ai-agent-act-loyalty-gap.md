@@ -81,4 +81,4 @@ The AI Agent Act is a governance architecture problem dressed as a consumer prot
 
 For the statutory mapping of the Name Standard℠ to the Act’s specific provisions — pillar by pillar — see [How the Name Standard℠ Maps to the AI AGENT Act](/blog/name-standard-ai-agent-act/). For the broader board governance context in which this legislation lands, see [Four AI Governance Gaps Boards Are Missing Right Now](/blog/board-ai-governance-blind-spots/).
 
-[Request a Governance Readiness Briefing →](/request-briefing/)
+Lozen Advisory’s [Governance Readiness Briefing](/services/governance-readiness-briefing/) evaluates whether AI-assisted decisions remain attributable, reviewable, and supported by evidence the board can rely on.

@@ -148,8 +148,6 @@ Before the next board meeting or budget cycle, the organization should be able t
 
 This article is part of Lozen Advisory’s [AI Workforce Materiality](/ai-workforce-materiality/) series, examining the workforce, financial, governance, and disclosure consequences of enterprise AI adoption.
 
-# Commission a Strategic Briefing
+# Advisory Engagement
 
-AI adoption is creating unpriced liability for CFOs, substantiation risk for General Counsel, and continuity exposure for boards. Lozen Advisory delivers private advisory on AI implementation risk, unmeasured verification strain, and the human-capital exposure organizations are building without measuring.
-
-[Commission a Strategic Briefing](/ai-workforce-materiality-briefing/)
+Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.

@@ -82,4 +82,4 @@ Executive leadership teams, Chief Legal Officers, and governing boards can use t
 - **The Capital Allocation Alignment:** Is technology expenditure securing institutional capacity, or is it functioning as unpriced substitution for an invisible retention risk?
 - **The Governance Load:** Has leadership identified where AI deployment is concentrating verification, correction, escalation, and accountability burdens before that concentration becomes key-person risk and fiduciary exposure?
 
-[Request a Governance Readiness Briefing](/request-briefing/) to evaluate whether your current AI investment strategy is protecting institutional governance capacity or quietly expanding fiduciary exposure.
+Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.

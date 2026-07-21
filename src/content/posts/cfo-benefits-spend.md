@@ -64,10 +64,6 @@ We work with finance, people, and workforce analytics leaders to identify where 
 
 If utilization requires disclosure, the dashboard is incomplete by design.
 
-## Request a Strategic Briefing
+## Market Intelligence
 
-Stop managing health spend blindly.
-
-Lozen Advisory works with a limited number of organizations at a time. Briefings are available to CFOs, CHROs, and senior workforce analytics leaders at organizations where ROI, leadership retention, or succession risk is an active concern.
-
-[Request a Strategic Briefing](/request-briefing/)
+Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

@@ -116,6 +116,6 @@ Although organizations often find it difficult to decide what is material. **Inf
 
 This is the third article in Lozen Advisory's [AI Workforce Materiality series.](/ai-workforce-materiality/) The next article, **The CFO Problem With AI ROI**, examines whether AI efficiency claims overstate returns when hidden verification labor is omitted from the calculation.
 
-## Commission a Strategic Briefing
+## Governance Readiness Briefing
 
-The governance burden behind AI adoption is creating unpriced attrition risk for CFOs, substantiation exposure for General Counsel, and continuity gaps for boards. Lozen Advisory delivers private advisory on AI implementation risk, unmeasured verification strain, and the institutional knowledge exposure organizations are building without measuring. [Commission a Strategic Briefing](/ai-workforce-materiality-briefing/)
+Lozen Advisory’s [Governance Readiness Briefing](/services/governance-readiness-briefing/) evaluates whether AI-assisted decisions remain attributable, reviewable, and supported by evidence the board can rely on.

@@ -116,11 +116,6 @@ What is already observable is this. Women leave legal practice at measurably hig
 
 That distinction matters. Not because it changes what happened, but because understanding it is the only way to change what happens next.
 
-## Commission a Strategic Briefing
+## Advisory Engagement
 
-Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
-
-[Commission a Strategic Briefing](/request-briefing/)
-
----
-
+Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.

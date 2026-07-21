@@ -93,5 +93,4 @@ The question is whether they inherit it before or after the attrition it fails t
 
 *This analysis applies Invisible Attrition℠ to the market conditions documented in [PwC's 2026](https://www.pwc.com/us/en/industries/health-industries/library/unlocking-the-menopause-market.html)* **[Unlocking The Menopause Market Forecast.](https://www.pwc.com/us/en/industries/health-industries/library/unlocking-the-menopause-market.html)**
 
-*For a private advisory on what your organization's benefit utilization data implies for board-level continuity risk and General Counsel substantiation exposure, commission a [Strategic Briefing](/request-briefing/)*
-
+Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

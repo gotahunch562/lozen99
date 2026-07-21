@@ -86,8 +86,6 @@ The legislation improves training. It expands coverage. It strengthens the clini
 
 That pre-engagement condition is where Invisible Attrition℠ begins: the [erosion of performance and capacity that occurs before any formal system detects](/invisible-attrition/) risk, and before any legislative framework is able to respond.
 
-## Commission a Strategic Briefing
+## Market Intelligence
 
-Menopause-at-work legislation is creating a new workforce-risk record for employers. Lozen Advisory advises senior executives, CFOs, General Counsel, and corporate boards on accommodation exposure, disclosure-dependent measurement gaps, retention risk, and the organizational consequences of policies that activate only after an employee is willing to become visible.
-
-[Commission a Strategic Briefing](/request-briefing/)
+Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

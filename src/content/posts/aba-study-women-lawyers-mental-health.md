@@ -145,5 +145,4 @@ The forthcoming ABA study will give the profession more data. The **June 2026 *P
 
 When the safest professional choice is silence, the data will understate the condition it is trying to measure.
 
-**Lozen Advisory provides strategic advisory for organizations evaluating disclosure-dependent gaps in leadership, retention, and workforce-risk systems.** [Request a briefing](/request-briefing/)
-
+Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.
