@@ -1,55 +1,30 @@
 ---
-import ServiceDetailPage from "@/components/authority/ServiceDetailPage.astro";
-import { createServiceJsonLd } from "@/lib/seo/jsonLd";
-import { getCollection } from "astro:content";
+import ServiceEditorial from "@/components/authority/ServiceEditorial.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 
 const { frontmatter, slug } = Astro.props;
 
-const allServices = await getCollection("services");
-const relatedServices = allServices
-  .filter((service) => service.data.title !== frontmatter.title)
-  .slice(0, 2)
-  .map((service) => ({
-    title: service.data.title,
-    description: service.data.shortDescription,
-    href: `/services/${service.id}`,
-  }));
-
-const title = `${frontmatter.title} | Lozen Advisory`;
-const description =
-  frontmatter.metaDescription ||
-  frontmatter.shortDescription ||
-  frontmatter.description;
-
-const serviceSlug =
-  slug ||
-  frontmatter.slug ||
-  frontmatter.title
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-const serviceHref = `/services/${serviceSlug}/`;
-
-const pageJsonLd = createServiceJsonLd({
-  name: frontmatter.title,
-  description,
-  href: serviceHref,
-  serviceType: frontmatter.category || "Governance advisory",
-});
+const title = `${frontmatter.title} — Lozen Advisory`;
+const description = frontmatter.metaDescription || frontmatter.deck || frontmatter.description;
+const canonical = `https://www.lozenadvisory.com/services/${slug}/`;
 ---
 
-<ServiceDetailPage
-  title={frontmatter.title}
-  seoTitle={title}
-  description={frontmatter.shortDescription || frontmatter.description}
-  metaDescription={description}
-  canonical={serviceHref}
-  eyebrow={frontmatter.eyebrow}
-  forAudience={frontmatter.forAudience}
-  engagementType={frontmatter.priceFrom}
-  format={frontmatter.duration}
-  jsonLd={pageJsonLd}
-  relatedServices={relatedServices}
->
-  <slot />
-</ServiceDetailPage>
+<BaseLayout title={title} description={description} canonical={canonical} ogType="website">
+  <ServiceEditorial
+    eyebrow={frontmatter.eyebrow}
+    headline={frontmatter.headline}
+    deck={frontmatter.deck}
+    framingLabel={frontmatter.framingLabel}
+    whoItsForLabel={frontmatter.whoItsForLabel}
+    whoItsFor={frontmatter.whoItsFor}
+    examineLabel={frontmatter.examineLabel}
+    examine={frontmatter.examine}
+    formatLabel={frontmatter.formatLabel}
+    formatStatement={frontmatter.formatStatement}
+    formatBody={frontmatter.formatBody}
+    closingLine={frontmatter.closingLine}
+    ctaSubject={frontmatter.ctaSubject}
+  >
+    <Fragment slot="framing" set:html={frontmatter.framingQuoteHtml} />
+  </ServiceEditorial>
+</BaseLayout>
