@@ -10,9 +10,9 @@ interface Props {
   deck: string;
   framingLabel?: string;
   whoItsForLabel?: string;
-  whoItsFor: string[];
+  whoItsFor?: string[];
   examineLabel?: string;
-  examine: ExamineItem[];
+  examine?: ExamineItem[];
   formatLabel?: string;
   formatStatement: string;
   formatBody: string;
@@ -27,9 +27,9 @@ const {
   deck,
   framingLabel = "The question this engagement answers",
   whoItsForLabel = "Who it's for",
-  whoItsFor,
+  whoItsFor = [],
   examineLabel = "What we examine",
-  examine,
+  examine = [],
   formatLabel = "Format",
   formatStatement,
   formatBody,
