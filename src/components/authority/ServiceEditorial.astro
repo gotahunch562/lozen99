@@ -52,8 +52,8 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
     </div>
   </header>
 
-  <main class="grb__shell">
-    <section class="grb__hero">
+  <section class="grb__hero">
+    <div class="grb__shell grb__hero-inner">
       <p class="grb__eyebrow">{eyebrow}</p>
       <h1 class="grb__h1">{headline}</h1>
       <p class="grb__deck">{deck}</p>
@@ -63,10 +63,12 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
           Request a briefing
           <span aria-hidden="true">→</span>
         </a>
-        <a href="#framing" class="grb__link-small">Read the framing</a>
+        <a href="#framing" class="grb__link-small grb__link-small--on-dark">Read the framing</a>
       </div>
-    </section>
+    </div>
+  </section>
 
+  <main class="grb__shell">
     <div class="grb__rule"></div>
 
     <section id="framing" class="grb__section">
@@ -210,8 +212,28 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
   }
 
   .grb__hero {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    background: var(--color-base-950);
+    border-bottom: 3px solid var(--color-accent-500);
+  }
+
+  .grb__hero-inner {
     padding-top: clamp(3.5rem, 8vw, 8rem);
     padding-bottom: clamp(3.5rem, 6vw, 8rem);
+  }
+
+  .grb__link-small--on-dark {
+    color: var(--color-base-200, rgba(255, 255, 255, 0.75));
+    text-decoration-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .grb__link-small--on-dark:hover,
+  .grb__link-small--on-dark:focus-visible {
+    color: #fff;
+    text-decoration-color: #fff;
   }
 
   .grb__eyebrow {
@@ -220,7 +242,7 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
     font-weight: var(--lozen-page-hero-eyebrow-weight, 700);
     letter-spacing: var(--lozen-page-hero-eyebrow-letter-spacing, 0.16em);
     text-transform: uppercase;
-    color: var(--color-accent-700);
+    color: var(--color-accent-500);
   }
 
   .grb__h1 {
@@ -231,7 +253,7 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
     font-weight: var(--lozen-page-hero-title-weight, 400);
     letter-spacing: var(--lozen-page-hero-title-letter-spacing, -0.03em);
     line-height: var(--lozen-page-hero-title-line-height, 1.04);
-    color: var(--color-base-950);
+    color: #fff;
   }
 
   .grb__deck {
@@ -242,7 +264,7 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
     font-weight: var(--lozen-page-hero-deck-weight, 400);
     letter-spacing: var(--lozen-page-hero-deck-letter-spacing, -0.01em);
     line-height: var(--lozen-page-hero-deck-line-height, 1.72);
-    color: var(--color-base-700);
+    color: var(--color-base-200, rgba(255, 255, 255, 0.78));
   }
 
   .grb__cta-row {
@@ -257,22 +279,24 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    border: 1px solid var(--color-base-950);
-    background: var(--color-base-950);
+    border: 1px solid var(--color-accent-500);
+    border-radius: 999px;
+    background: var(--color-accent-500);
     padding: 0.75rem 1.5rem;
     font-size: 0.72rem;
-    font-weight: 500;
+    font-weight: 800;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--color-base-50);
+    color: var(--color-base-950);
     text-decoration: none;
-    transition: background 180ms ease, color 180ms ease;
+    transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
   }
 
   .grb__button:hover,
   .grb__button:focus-visible {
-    background: var(--color-base-50);
-    color: var(--color-base-950);
+    background: var(--color-accent-300);
+    border-color: var(--color-accent-300);
+    transform: translateY(-1px);
   }
 
   .grb__rule {
