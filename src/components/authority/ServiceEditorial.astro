@@ -46,38 +46,40 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
 
 <div class="lozen-service-offer">
   <section class="lozen-service-offer__hero">
-    <Wrapper variant="standard" class="lozen-service-offer__hero-shell">
-      <div class="lozen-service-offer__hero-grid">
-        <div class="lozen-service-offer__hero-copy">
-          <p class="lozen-service-offer__eyebrow">{eyebrow}</p>
+    <Wrapper variant="standard">
+      <div class="lozen-service-offer__hero-shell">
+        <div class="lozen-service-offer__hero-grid">
+          <div class="lozen-service-offer__hero-copy">
+            <p class="lozen-service-offer__eyebrow">{eyebrow}</p>
 
-          <h1 class="lozen-service-offer__h1">{headline}</h1>
+            <h1 class="lozen-service-offer__h1">{headline}</h1>
 
-          <p class="lozen-service-offer__deck">{deck}</p>
+            <p class="lozen-service-offer__deck">{deck}</p>
 
-          <div class="lozen-service-offer__cta-row">
-            <a href={mailto} class="lozen-service-offer__button">
-              Request a briefing
-              <span aria-hidden="true">→</span>
-            </a>
+            <div class="lozen-service-offer__cta-row">
+              <a href={mailto} class="lozen-service-offer__button">
+                Request a briefing
+                <span aria-hidden="true">→</span>
+              </a>
 
-            <a href="#framing" class="lozen-service-offer__secondary-link">
-              Read the framing
-            </a>
+              <a href="#framing" class="lozen-service-offer__secondary-link">
+                Read the framing
+              </a>
+            </div>
           </div>
+
+          <aside class="lozen-service-offer__summary-card" aria-label="Engagement summary">
+            <p class="lozen-service-offer__card-label">Advisory focus</p>
+
+            <p class="lozen-service-offer__card-statement">
+              A focused board and executive advisory engagement.
+            </p>
+
+            <p class="lozen-service-offer__card-body">
+              Designed to clarify risk ownership, evidence gaps, and the operating decisions management must be able to explain.
+            </p>
+          </aside>
         </div>
-
-        <aside class="lozen-service-offer__summary-card" aria-label="Engagement summary">
-          <p class="lozen-service-offer__card-label">Advisory focus</p>
-
-          <p class="lozen-service-offer__card-statement">
-            A focused board and executive advisory engagement.
-          </p>
-
-          <p class="lozen-service-offer__card-body">
-            Designed to clarify risk ownership, evidence gaps, and the operating decisions management must be able to explain.
-          </p>
-        </aside>
       </div>
     </Wrapper>
   </section>
@@ -205,35 +207,18 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
   }
 
   .lozen-service-offer__hero-shell {
-    display: flex;
-    min-height: 36rem;
-    align-items: center;
-    padding-top: 8rem;
-    padding-bottom: 5rem;
+    padding-top: clamp(7.5rem, 9vw, 9rem);
+    padding-bottom: clamp(4rem, 6vw, 5.5rem);
   }
 
   .lozen-service-offer__hero-grid {
     display: grid;
     width: 100%;
     gap: 2.5rem;
-    align-items: center;
-  }
-
-  @media (min-width: 640px) {
-    .lozen-service-offer__hero-shell {
-      min-height: 40rem;
-      padding-top: 9rem;
-      padding-bottom: 6rem;
-    }
+    align-items: start;
   }
 
   @media (min-width: 1024px) {
-    .lozen-service-offer__hero-shell {
-      min-height: 100dvh;
-      padding-top: 10rem;
-      padding-bottom: 6rem;
-    }
-
     .lozen-service-offer__hero-grid {
       grid-template-columns: minmax(0, 1fr) minmax(18rem, 20rem);
       gap: 4rem;
@@ -241,7 +226,7 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
   }
 
   .lozen-service-offer__hero-copy {
-    max-width: 72rem;
+    max-width: 58rem;
   }
 
   .lozen-service-offer__eyebrow,
@@ -263,25 +248,25 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
   }
 
   .lozen-service-offer__h1 {
-    max-width: 72rem;
-    margin: 1.5rem 0 0;
+    max-width: 56rem;
+    margin: 1.25rem 0 0;
     font-family: var(--font-display);
-    font-size: var(--lozen-body-copy-large-size, 1.125rem);
+    font-size: clamp(2rem, 2.8vw, 2.85rem);
     font-weight: 400;
-    letter-spacing: -0.01em;
-    line-height: var(--lozen-body-copy-large-line-height, 1.7);
+    letter-spacing: -0.025em;
+    line-height: 1.12;
     color: #fff;
     text-wrap: balance;
   }
 
   .lozen-service-offer__deck {
-    max-width: 64rem;
-    margin: 1.75rem 0 0;
+    max-width: 54rem;
+    margin: 1.5rem 0 0;
     font-family: var(--font-sans);
-    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
     font-weight: 400;
     letter-spacing: -0.01em;
-    line-height: 1.8;
+    line-height: 1.72;
     color: rgba(255, 255, 255, 0.78);
   }
 
@@ -606,7 +591,6 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
 
   @media (max-width: 640px) {
     .lozen-service-offer__hero-shell {
-      min-height: 36rem;
       padding-top: 7.5rem;
       padding-bottom: 4rem;
     }
