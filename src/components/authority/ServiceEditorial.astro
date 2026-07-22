@@ -216,9 +216,9 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
 
   .grb__eyebrow {
     margin: 0;
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.28em;
+    font-size: var(--lozen-page-hero-eyebrow-size, 0.75rem);
+    font-weight: var(--lozen-page-hero-eyebrow-weight, 700);
+    letter-spacing: var(--lozen-page-hero-eyebrow-letter-spacing, 0.16em);
     text-transform: uppercase;
     color: var(--color-accent-700);
   }
@@ -227,10 +227,10 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
     max-width: 40rem;
     margin: 2rem 0 0;
     font-family: var(--font-display);
-    font-size: clamp(2.25rem, 5vw, 3.75rem);
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
+    font-size: var(--lozen-page-hero-title-size, clamp(2.15rem, 4.2vw, 3.75rem));
+    font-weight: var(--lozen-page-hero-title-weight, 400);
+    letter-spacing: var(--lozen-page-hero-title-letter-spacing, -0.03em);
+    line-height: var(--lozen-page-hero-title-line-height, 1.04);
     color: var(--color-base-950);
   }
 
@@ -238,8 +238,10 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
     max-width: 34rem;
     margin: 2rem 0 0;
     font-family: var(--font-display);
-    font-size: clamp(1.25rem, 2.4vw, 1.5rem);
-    line-height: 1.35;
+    font-size: var(--lozen-page-hero-deck-size, clamp(1rem, 1.25vw, 1.125rem));
+    font-weight: var(--lozen-page-hero-deck-weight, 400);
+    letter-spacing: var(--lozen-page-hero-deck-letter-spacing, -0.01em);
+    line-height: var(--lozen-page-hero-deck-line-height, 1.72);
     color: var(--color-base-700);
   }
 
