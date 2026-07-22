@@ -263,13 +263,13 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
   }
 
   .lozen-service-offer__h1 {
-    max-width: 72rem;
+    max-width: 58rem;
     margin: 1.5rem 0 0;
     font-family: var(--font-display);
-    font-size: var(--lozen-home-display-size);
-    font-weight: var(--lozen-home-display-weight);
-    letter-spacing: var(--lozen-home-display-letter-spacing);
-    line-height: var(--lozen-home-display-line-height);
+    font-size: var(--lozen-page-hero-title-size, clamp(2rem, 3.2vw, 3rem));
+    font-weight: var(--lozen-page-hero-title-weight, 400);
+    letter-spacing: var(--lozen-page-hero-title-letter-spacing, -0.03em);
+    line-height: var(--lozen-page-hero-title-line-height, 1.08);
     color: #fff;
     text-wrap: balance;
   }
