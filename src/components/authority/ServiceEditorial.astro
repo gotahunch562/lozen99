@@ -1,0 +1,458 @@
+---
+export interface ExamineItem {
+  title: string;
+  body: string;
+}
+
+interface Props {
+  eyebrow: string;
+  headline: string;
+  deck: string;
+  framingLabel?: string;
+  whoItsForLabel?: string;
+  whoItsFor: string[];
+  examineLabel?: string;
+  examine: ExamineItem[];
+  formatLabel?: string;
+  formatStatement: string;
+  formatBody: string;
+  closingLine: string;
+  ctaSubject: string;
+  email?: string;
+}
+
+const {
+  eyebrow,
+  headline,
+  deck,
+  framingLabel = "The question this engagement answers",
+  whoItsForLabel = "Who it's for",
+  whoItsFor,
+  examineLabel = "What we examine",
+  examine,
+  formatLabel = "Format",
+  formatStatement,
+  formatBody,
+  closingLine,
+  ctaSubject,
+  email = "hello@lozenadvisory.com",
+} = Astro.props;
+
+const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
+---
+
+<div class="grb">
+  <header class="grb__topbar">
+    <div class="grb__shell grb__topbar-inner">
+      <a href="/" class="grb__wordmark">
+        <span class="grb__wordmark-main">Lozen</span>
+        <span class="grb__wordmark-sub">Advisory</span>
+      </a>
+      <a href={mailto} class="grb__link-small">Request a briefing</a>
+    </div>
+  </header>
+
+  <main class="grb__shell">
+    <section class="grb__hero">
+      <p class="grb__eyebrow">{eyebrow}</p>
+      <h1 class="grb__h1">{headline}</h1>
+      <p class="grb__deck">{deck}</p>
+
+      <div class="grb__cta-row">
+        <a href={mailto} class="grb__button">
+          Request a briefing
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="#framing" class="grb__link-small">Read the framing</a>
+      </div>
+    </section>
+
+    <div class="grb__rule"></div>
+
+    <section id="framing" class="grb__section">
+      <p class="grb__label">{framingLabel}</p>
+      <blockquote class="grb__quote">
+        <slot name="framing" />
+      </blockquote>
+    </section>
+
+    <div class="grb__rule"></div>
+
+    <section class="grb__section grb__section--split">
+      <p class="grb__label">{whoItsForLabel}</p>
+      <div class="grb__split-content">
+        {whoItsFor.map((line, i) => (
+          <p class={`grb__statement ${i > 0 ? "grb__statement--muted" : ""}`}>{line}</p>
+        ))}
+      </div>
+    </section>
+
+    <div class="grb__rule"></div>
+
+    <section class="grb__section grb__section--split">
+      <p class="grb__label">{examineLabel}</p>
+      <ol class="grb__list">
+        {examine.map((item, i) => (
+          <li class="grb__list-item">
+            <span class="grb__list-num">{String(i + 1).padStart(2, "0")}</span>
+            <div>
+              <h3 class="grb__list-title">{item.title}</h3>
+              <p class="grb__list-body">{item.body}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <div class="grb__rule"></div>
+
+    <section class="grb__section grb__section--split">
+      <p class="grb__label">{formatLabel}</p>
+      <div>
+        <p class="grb__statement">{formatStatement}</p>
+        <p class="grb__body-text">{formatBody}</p>
+      </div>
+    </section>
+
+    <div class="grb__rule"></div>
+
+    <section class="grb__closing">
+      <p class="grb__closing-line">{closingLine}</p>
+      <a href={mailto} class="grb__closing-email">{email}</a>
+    </section>
+  </main>
+
+  <footer class="grb__footer">
+    <div class="grb__shell grb__footer-inner">
+      <div class="grb__wordmark">
+        <span class="grb__wordmark-main grb__wordmark-main--sm">Lozen</span>
+        <span class="grb__wordmark-sub">Advisory</span>
+      </div>
+      <p class="grb__footer-copy">© {new Date().getFullYear()} Lozen Advisory. All rights reserved.</p>
+      <a href={mailto} class="grb__footer-email">{email}</a>
+    </div>
+  </footer>
+</div>
+
+<style>
+  .grb {
+    min-height: 100vh;
+    background: var(--color-base-50);
+    color: var(--color-base-950);
+    font-family: var(--font-sans);
+  }
+
+  .grb ::selection {
+    background: var(--color-base-950);
+    color: var(--color-base-50);
+  }
+
+  .grb__shell {
+    width: min(100%, 48rem);
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .grb__topbar {
+    border-bottom: 1px solid var(--color-base-200);
+  }
+
+  .grb__topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.25rem;
+  }
+
+  .grb__wordmark {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+
+  .grb__wordmark-main {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--color-base-950);
+  }
+
+  .grb__wordmark-main--sm {
+    font-size: 1rem;
+  }
+
+  .grb__wordmark-sub {
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-base-500);
+  }
+
+  .grb__link-small {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-base-700);
+    text-decoration: underline;
+    text-decoration-color: var(--color-base-200);
+    text-underline-offset: 6px;
+    transition: color 180ms ease, text-decoration-color 180ms ease;
+  }
+
+  .grb__link-small:hover,
+  .grb__link-small:focus-visible {
+    color: var(--color-base-950);
+    text-decoration-color: var(--color-base-950);
+  }
+
+  .grb__hero {
+    padding-top: clamp(3.5rem, 8vw, 8rem);
+    padding-bottom: clamp(3.5rem, 6vw, 8rem);
+  }
+
+  .grb__eyebrow {
+    margin: 0;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-accent-700);
+  }
+
+  .grb__h1 {
+    max-width: 40rem;
+    margin: 2rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--color-base-950);
+  }
+
+  .grb__deck {
+    max-width: 34rem;
+    margin: 2rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 2.4vw, 1.5rem);
+    line-height: 1.35;
+    color: var(--color-base-700);
+  }
+
+  .grb__cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .grb__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid var(--color-base-950);
+    background: var(--color-base-950);
+    padding: 0.75rem 1.5rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-base-50);
+    text-decoration: none;
+    transition: background 180ms ease, color 180ms ease;
+  }
+
+  .grb__button:hover,
+  .grb__button:focus-visible {
+    background: var(--color-base-50);
+    color: var(--color-base-950);
+  }
+
+  .grb__rule {
+    height: 1px;
+    width: 100%;
+    background: var(--color-base-200);
+  }
+
+  .grb__section {
+    padding-block: clamp(3rem, 6vw, 7rem);
+  }
+
+  .grb__section--split {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .grb__section--split {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+      gap: 4rem;
+    }
+  }
+
+  .grb__label {
+    margin: 0;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--color-base-500);
+  }
+
+  .grb__quote {
+    margin: 2.5rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+    line-height: 1.4;
+    color: var(--color-base-950);
+  }
+
+  .grb__quote :global(em) {
+    font-style: italic;
+  }
+
+  .grb__quote :global(sup) {
+    color: var(--color-accent-700);
+  }
+
+  .grb__split-content {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+    line-height: 1.35;
+  }
+
+  .grb__statement {
+    margin: 0;
+    color: var(--color-base-950);
+  }
+
+  .grb__statement--muted {
+    color: var(--color-base-700);
+  }
+
+  .grb__body-text {
+    max-width: 34rem;
+    margin: 1.5rem 0 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-base-700);
+  }
+
+  .grb__list {
+    display: grid;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .grb__list-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+  }
+
+  .grb__list-num {
+    padding-top: 0.25rem;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    color: var(--color-accent-700);
+  }
+
+  .grb__list-title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 2vw, 1.4rem);
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--color-base-950);
+  }
+
+  .grb__list-title :global(sup) {
+    color: var(--color-accent-700);
+  }
+
+  .grb__list-body {
+    max-width: 34rem;
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--color-base-700);
+  }
+
+  .grb__closing {
+    padding-block: clamp(3.5rem, 8vw, 8rem);
+  }
+
+  .grb__closing-line {
+    max-width: 34rem;
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+    line-height: 1.35;
+    color: var(--color-base-700);
+  }
+
+  .grb__closing-email {
+    display: inline-block;
+    margin-top: 2rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 2.75rem);
+    line-height: 1.15;
+    color: var(--color-base-950);
+    text-decoration: underline;
+    text-decoration-color: var(--color-base-200);
+    text-underline-offset: 8px;
+    transition: text-decoration-color 180ms ease;
+  }
+
+  .grb__closing-email:hover,
+  .grb__closing-email:focus-visible {
+    text-decoration-color: var(--color-base-950);
+  }
+
+  .grb__footer {
+    border-top: 1px solid var(--color-base-200);
+  }
+
+  .grb__footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-block: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .grb__footer-inner {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .grb__footer-copy {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--color-base-500);
+  }
+
+  .grb__footer-email {
+    font-size: 0.75rem;
+    color: var(--color-base-500);
+    text-decoration: underline;
+    text-decoration-color: var(--color-base-200);
+    text-underline-offset: 6px;
+    transition: color 180ms ease, text-decoration-color 180ms ease;
+  }
+
+  .grb__footer-email:hover,
+  .grb__footer-email:focus-visible {
+    color: var(--color-base-950);
+    text-decoration-color: var(--color-base-950);
+  }
+</style>
