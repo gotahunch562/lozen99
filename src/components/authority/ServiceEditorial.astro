@@ -1,3 +1,4 @@
+
 ---
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 
@@ -27,7 +28,7 @@ const {
   eyebrow,
   headline,
   deck,
-  framingLabel = "The question this engagement answers",
+  framingLabel = "What this is",
   whoItsForLabel = "Who this is for",
   whoItsFor = [],
   examineLabel = "What Lozen examines",
@@ -68,9 +69,11 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
 
         <aside class="lozen-service-offer__summary-card" aria-label="Engagement summary">
           <p class="lozen-service-offer__card-label">Advisory focus</p>
+
           <p class="lozen-service-offer__card-statement">
             A focused board and executive advisory engagement.
           </p>
+
           <p class="lozen-service-offer__card-body">
             Designed to clarify risk ownership, evidence gaps, and the operating decisions management must be able to explain.
           </p>
@@ -103,10 +106,12 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
 
               <div class="lozen-service-offer__statement-list">
                 {whoItsFor.map((line, i) => (
-                  <p class:list={[
-                    "lozen-service-offer__statement",
-                    i > 0 && "lozen-service-offer__statement--muted",
-                  ]}>
+                  <p
+                    class:list={[
+                      "lozen-service-offer__statement",
+                      i > 0 && "lozen-service-offer__statement--muted",
+                    ]}
+                  >
                     {line}
                   </p>
                 ))}
@@ -193,15 +198,15 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
 
   .lozen-service-offer__hero {
     background:
-      radial-gradient(circle at 82% 18%, rgba(242, 211, 0, 0.16), transparent 28rem),
+      radial-gradient(circle at 82% 18%, rgba(242, 211, 0, 0.14), transparent 28rem),
       linear-gradient(135deg, var(--color-lozen-blue-950), var(--color-base-950));
     color: #fff;
     border-bottom: 3px solid var(--color-accent-500);
   }
 
   .lozen-service-offer__hero-shell {
-    padding-top: clamp(8.5rem, 13vw, 11rem);
-    padding-bottom: clamp(4rem, 8vw, 6.5rem);
+    padding-top: clamp(8.25rem, 12vw, 10.5rem);
+    padding-bottom: clamp(3.75rem, 7vw, 5.75rem);
   }
 
   .lozen-service-offer__hero-grid {
@@ -212,7 +217,7 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
 
   @media (min-width: 1024px) {
     .lozen-service-offer__hero-grid {
-      grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.38fr);
+      grid-template-columns: minmax(0, 0.98fr) minmax(280px, 0.36fr);
       gap: 4rem;
     }
   }
@@ -228,9 +233,9 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
     margin: 0;
     border-left: 2px solid var(--color-accent-500);
     padding-left: 1rem;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
+    font-size: var(--lozen-page-hero-eyebrow-size, 0.75rem);
+    font-weight: var(--lozen-page-hero-eyebrow-weight, 700);
+    letter-spacing: var(--lozen-page-hero-eyebrow-letter-spacing, 0.16em);
     line-height: 1.4;
     text-transform: uppercase;
   }
@@ -240,25 +245,25 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
   }
 
   .lozen-service-offer__h1 {
-    max-width: 52rem;
+    max-width: 50rem;
     margin: 1.5rem 0 0;
     font-family: var(--font-display);
-    font-size: clamp(2.15rem, 3.4vw, 3.25rem);
-    font-weight: 400;
-    letter-spacing: -0.035em;
-    line-height: 1.08;
-    text-transform: uppercase;
-    text-wrap: balance;
+    font-size: var(--lozen-page-hero-title-size, clamp(2.15rem, 4.2vw, 3.75rem));
+    font-weight: var(--lozen-page-hero-title-weight, 400);
+    letter-spacing: var(--lozen-page-hero-title-letter-spacing, -0.03em);
+    line-height: var(--lozen-page-hero-title-line-height, 1.04);
     color: #fff;
+    text-wrap: balance;
   }
 
   .lozen-service-offer__deck {
     max-width: 44rem;
     margin: 1.5rem 0 0;
     font-family: var(--font-sans);
-    font-size: clamp(1rem, 1.35vw, 1.18rem);
-    font-weight: 400;
-    line-height: 1.75;
+    font-size: var(--lozen-page-hero-deck-size, clamp(1rem, 1.25vw, 1.125rem));
+    font-weight: var(--lozen-page-hero-deck-weight, 400);
+    letter-spacing: var(--lozen-page-hero-deck-letter-spacing, -0.01em);
+    line-height: var(--lozen-page-hero-deck-line-height, 1.72);
     color: rgba(255, 255, 255, 0.78);
   }
 
@@ -365,10 +370,10 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
   .lozen-service-offer__card-statement {
     margin: 1.25rem 0 0;
     font-family: var(--font-display);
-    font-size: clamp(1.3rem, 2vw, 1.65rem);
+    font-size: clamp(1.25rem, 1.9vw, 1.55rem);
     font-weight: 400;
     letter-spacing: -0.02em;
-    line-height: 1.2;
+    line-height: 1.25;
     color: #fff;
   }
 
@@ -416,10 +421,10 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
   .lozen-service-offer__quote {
     margin: 0;
     font-family: var(--font-display);
-    font-size: clamp(1.45rem, 2.25vw, 2rem);
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
     font-weight: 400;
     letter-spacing: -0.02em;
-    line-height: 1.35;
+    line-height: 1.38;
     color: var(--color-base-950);
   }
 
@@ -448,10 +453,10 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
   .lozen-service-offer__statement {
     margin: 0;
     font-family: var(--font-display);
-    font-size: clamp(1.3rem, 2vw, 1.75rem);
+    font-size: clamp(1.25rem, 1.8vw, 1.55rem);
     font-weight: 400;
     letter-spacing: -0.02em;
-    line-height: 1.35;
+    line-height: 1.38;
     color: var(--color-base-950);
   }
 
@@ -499,7 +504,7 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
   .lozen-service-offer__list-title {
     margin: 0;
     font-family: var(--font-display);
-    font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+    font-size: clamp(1.15rem, 1.7vw, 1.4rem);
     font-weight: 400;
     letter-spacing: -0.015em;
     line-height: 1.25;
@@ -545,10 +550,10 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
     max-width: 46rem;
     margin: 1rem 0 0;
     font-family: var(--font-display);
-    font-size: clamp(1.65rem, 3vw, 2.45rem);
+    font-size: clamp(1.55rem, 2.75vw, 2.25rem);
     font-weight: 400;
     letter-spacing: -0.03em;
-    line-height: 1.16;
+    line-height: 1.18;
     color: var(--color-lozen-blue-950);
     text-wrap: balance;
   }
@@ -585,10 +590,6 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
     .lozen-service-offer__hero-shell {
       padding-top: 7.5rem;
       padding-bottom: 3.5rem;
-    }
-
-    .lozen-service-offer__h1 {
-      font-size: clamp(2rem, 10vw, 2.85rem);
     }
 
     .lozen-service-offer__summary-card {
