@@ -1,4 +1,6 @@
 ---
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
 export interface ExamineItem {
   title: string;
   body: string;
@@ -26,11 +28,11 @@ const {
   headline,
   deck,
   framingLabel = "The question this engagement answers",
-  whoItsForLabel = "Who it's for",
+  whoItsForLabel = "Who this is for",
   whoItsFor = [],
-  examineLabel = "What we examine",
+  examineLabel = "What Lozen examines",
   examine = [],
-  formatLabel = "Format",
+  formatLabel = "Engagement format",
   formatStatement,
   formatBody,
   closingLine,
@@ -41,444 +43,564 @@ const {
 const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
 ---
 
-<div class="grb">
-  <header class="grb__topbar">
-    <div class="grb__shell grb__topbar-inner">
-      <a href="/" class="grb__wordmark">
-        <span class="grb__wordmark-main">Lozen</span>
-        <span class="grb__wordmark-sub">Advisory</span>
-      </a>
-      <a href={mailto} class="grb__link-small">Request a briefing</a>
-    </div>
-  </header>
+<div class="lozen-service-offer">
+  <section class="lozen-service-offer__hero">
+    <Wrapper variant="standard" class="lozen-service-offer__hero-shell">
+      <div class="lozen-service-offer__hero-grid">
+        <div class="lozen-service-offer__hero-copy">
+          <p class="lozen-service-offer__eyebrow">{eyebrow}</p>
 
-  <section class="grb__hero">
-    <div class="grb__shell grb__hero-inner">
-      <p class="grb__eyebrow">{eyebrow}</p>
-      <h1 class="grb__h1">{headline}</h1>
-      <p class="grb__deck">{deck}</p>
+          <h1 class="lozen-service-offer__h1">{headline}</h1>
 
-      <div class="grb__cta-row">
-        <a href={mailto} class="grb__button">
-          Request a briefing
-          <span aria-hidden="true">→</span>
-        </a>
-        <a href="#framing" class="grb__link-small grb__link-small--on-dark">Read the framing</a>
+          <p class="lozen-service-offer__deck">{deck}</p>
+
+          <div class="lozen-service-offer__cta-row">
+            <a href={mailto} class="lozen-service-offer__button">
+              Request a briefing
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a href="#framing" class="lozen-service-offer__secondary-link">
+              Read the framing
+            </a>
+          </div>
+        </div>
+
+        <aside class="lozen-service-offer__summary-card" aria-label="Engagement summary">
+          <p class="lozen-service-offer__card-label">Advisory focus</p>
+          <p class="lozen-service-offer__card-statement">
+            A focused board and executive advisory engagement.
+          </p>
+          <p class="lozen-service-offer__card-body">
+            Designed to clarify risk ownership, evidence gaps, and the operating decisions management must be able to explain.
+          </p>
+        </aside>
       </div>
-    </div>
+    </Wrapper>
   </section>
 
-  <main class="grb__shell">
-    <div class="grb__rule"></div>
+  <main>
+    <section id="framing" class="lozen-service-offer__section lozen-service-offer__section--white">
+      <Wrapper variant="standard">
+        <div class="lozen-service-offer__section-grid">
+          <p class="lozen-service-offer__label">{framingLabel}</p>
 
-    <section id="framing" class="grb__section">
-      <p class="grb__label">{framingLabel}</p>
-      <blockquote class="grb__quote">
-        <slot name="framing" />
-      </blockquote>
+          <div class="lozen-service-offer__section-body">
+            <blockquote class="lozen-service-offer__quote">
+              <slot name="framing" />
+            </blockquote>
+          </div>
+        </div>
+      </Wrapper>
     </section>
 
-    <div class="grb__rule"></div>
+    {
+      whoItsFor.length > 0 && (
+        <section class="lozen-service-offer__section lozen-service-offer__section--soft">
+          <Wrapper variant="standard">
+            <div class="lozen-service-offer__section-grid">
+              <p class="lozen-service-offer__label">{whoItsForLabel}</p>
 
-    <section class="grb__section grb__section--split">
-      <p class="grb__label">{whoItsForLabel}</p>
-      <div class="grb__split-content">
-        {whoItsFor.map((line, i) => (
-          <p class={`grb__statement ${i > 0 ? "grb__statement--muted" : ""}`}>{line}</p>
-        ))}
-      </div>
-    </section>
-
-    <div class="grb__rule"></div>
-
-    <section class="grb__section grb__section--split">
-      <p class="grb__label">{examineLabel}</p>
-      <ol class="grb__list">
-        {examine.map((item, i) => (
-          <li class="grb__list-item">
-            <span class="grb__list-num">{String(i + 1).padStart(2, "0")}</span>
-            <div>
-              <h3 class="grb__list-title">{item.title}</h3>
-              <p class="grb__list-body">{item.body}</p>
+              <div class="lozen-service-offer__statement-list">
+                {whoItsFor.map((line, i) => (
+                  <p class:list={[
+                    "lozen-service-offer__statement",
+                    i > 0 && "lozen-service-offer__statement--muted",
+                  ]}>
+                    {line}
+                  </p>
+                ))}
+              </div>
             </div>
-          </li>
-        ))}
-      </ol>
+          </Wrapper>
+        </section>
+      )
+    }
+
+    {
+      examine.length > 0 && (
+        <section class="lozen-service-offer__section lozen-service-offer__section--white">
+          <Wrapper variant="standard">
+            <div class="lozen-service-offer__section-grid">
+              <p class="lozen-service-offer__label">{examineLabel}</p>
+
+              <ol class="lozen-service-offer__list">
+                {examine.map((item, i) => (
+                  <li class="lozen-service-offer__list-item">
+                    <span class="lozen-service-offer__list-num">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+
+                    <div>
+                      <h3 class="lozen-service-offer__list-title">{item.title}</h3>
+                      <p class="lozen-service-offer__list-body">{item.body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </Wrapper>
+        </section>
+      )
+    }
+
+    <section class="lozen-service-offer__section lozen-service-offer__section--soft">
+      <Wrapper variant="standard">
+        <div class="lozen-service-offer__section-grid">
+          <p class="lozen-service-offer__label">{formatLabel}</p>
+
+          <div class="lozen-service-offer__section-body">
+            <p class="lozen-service-offer__statement">{formatStatement}</p>
+            <p class="lozen-service-offer__body-text">{formatBody}</p>
+          </div>
+        </div>
+      </Wrapper>
     </section>
 
-    <div class="grb__rule"></div>
+    <section class="lozen-service-offer__closing">
+      <Wrapper variant="standard">
+        <div class="lozen-service-offer__closing-grid">
+          <div>
+            <p class="lozen-service-offer__closing-label">Next step</p>
+            <h2 class="lozen-service-offer__closing-line">{closingLine}</h2>
+          </div>
 
-    <section class="grb__section grb__section--split">
-      <p class="grb__label">{formatLabel}</p>
-      <div>
-        <p class="grb__statement">{formatStatement}</p>
-        <p class="grb__body-text">{formatBody}</p>
-      </div>
-    </section>
+          <div class="lozen-service-offer__closing-action">
+            <a href={mailto} class="lozen-service-offer__button lozen-service-offer__button--navy">
+              Request a briefing
+              <span aria-hidden="true">→</span>
+            </a>
 
-    <div class="grb__rule"></div>
-
-    <section class="grb__closing">
-      <p class="grb__closing-line">{closingLine}</p>
-      <a href={mailto} class="grb__closing-email">{email}</a>
+            <a href={mailto} class="lozen-service-offer__email">{email}</a>
+          </div>
+        </div>
+      </Wrapper>
     </section>
   </main>
-
-  <footer class="grb__footer">
-    <div class="grb__shell grb__footer-inner">
-      <div class="grb__wordmark">
-        <span class="grb__wordmark-main grb__wordmark-main--sm">Lozen</span>
-        <span class="grb__wordmark-sub">Advisory</span>
-      </div>
-      <p class="grb__footer-copy">© {new Date().getFullYear()} Lozen Advisory. All rights reserved.</p>
-      <a href={mailto} class="grb__footer-email">{email}</a>
-    </div>
-  </footer>
 </div>
 
 <style>
-  .grb {
-    min-height: 100vh;
+  .lozen-service-offer {
     background: var(--color-base-50);
     color: var(--color-base-950);
     font-family: var(--font-sans);
   }
 
-  .grb ::selection {
+  .lozen-service-offer ::selection {
     background: var(--color-base-950);
     color: var(--color-base-50);
   }
 
-  .grb__shell {
-    width: min(100%, 48rem);
-    margin-inline: auto;
-    padding-inline: 1.5rem;
-  }
-
-  .grb__topbar {
-    border-bottom: 1px solid var(--color-base-200);
-  }
-
-  .grb__topbar-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: 1.25rem;
-  }
-
-  .grb__wordmark {
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-    text-decoration: none;
-  }
-
-  .grb__wordmark-main {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    line-height: 1;
-    letter-spacing: -0.02em;
-    color: var(--color-base-950);
-  }
-
-  .grb__wordmark-main--sm {
-    font-size: 1rem;
-  }
-
-  .grb__wordmark-sub {
-    font-size: 0.625rem;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--color-base-500);
-  }
-
-  .grb__link-small {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--color-base-700);
-    text-decoration: underline;
-    text-decoration-color: var(--color-base-200);
-    text-underline-offset: 6px;
-    transition: color 180ms ease, text-decoration-color 180ms ease;
-  }
-
-  .grb__link-small:hover,
-  .grb__link-small:focus-visible {
-    color: var(--color-base-950);
-    text-decoration-color: var(--color-base-950);
-  }
-
-  .grb__hero {
-    position: relative;
-    left: 50%;
-    width: 100vw;
-    margin-left: -50vw;
-    background: var(--color-base-950);
+  .lozen-service-offer__hero {
+    background:
+      radial-gradient(circle at 82% 18%, rgba(242, 211, 0, 0.16), transparent 28rem),
+      linear-gradient(135deg, var(--color-lozen-blue-950), var(--color-base-950));
+    color: #fff;
     border-bottom: 3px solid var(--color-accent-500);
   }
 
-  .grb__hero-inner {
-    padding-top: clamp(3.5rem, 8vw, 8rem);
-    padding-bottom: clamp(3.5rem, 6vw, 8rem);
+  .lozen-service-offer__hero-shell {
+    padding-top: clamp(8.5rem, 13vw, 11rem);
+    padding-bottom: clamp(4rem, 8vw, 6.5rem);
   }
 
-  .grb__link-small--on-dark {
-    color: var(--color-base-200, rgba(255, 255, 255, 0.75));
-    text-decoration-color: rgba(255, 255, 255, 0.3);
-  }
-
-  .grb__link-small--on-dark:hover,
-  .grb__link-small--on-dark:focus-visible {
-    color: #fff;
-    text-decoration-color: #fff;
-  }
-
-  .grb__eyebrow {
-    margin: 0;
-    font-size: var(--lozen-page-hero-eyebrow-size, 0.75rem);
-    font-weight: var(--lozen-page-hero-eyebrow-weight, 700);
-    letter-spacing: var(--lozen-page-hero-eyebrow-letter-spacing, 0.16em);
-    text-transform: uppercase;
-    color: var(--color-accent-500);
-  }
-
-  .grb__h1 {
-    max-width: 40rem;
-    margin: 2rem 0 0;
-    font-family: var(--font-display);
-    font-size: var(--lozen-page-hero-title-size, clamp(2.15rem, 4.2vw, 3.75rem));
-    font-weight: var(--lozen-page-hero-title-weight, 400);
-    letter-spacing: var(--lozen-page-hero-title-letter-spacing, -0.03em);
-    line-height: var(--lozen-page-hero-title-line-height, 1.04);
-    color: #fff;
-  }
-
-  .grb__deck {
-    max-width: 34rem;
-    margin: 2rem 0 0;
-    font-family: var(--font-display);
-    font-size: var(--lozen-page-hero-deck-size, clamp(1rem, 1.25vw, 1.125rem));
-    font-weight: var(--lozen-page-hero-deck-weight, 400);
-    letter-spacing: var(--lozen-page-hero-deck-letter-spacing, -0.01em);
-    line-height: var(--lozen-page-hero-deck-line-height, 1.72);
-    color: var(--color-base-200, rgba(255, 255, 255, 0.78));
-  }
-
-  .grb__cta-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-
-  .grb__button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.75rem;
-    border: 1px solid var(--color-accent-500);
-    border-radius: 999px;
-    background: var(--color-accent-500);
-    padding: 0.75rem 1.5rem;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--color-base-950);
-    text-decoration: none;
-    transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
-  }
-
-  .grb__button:hover,
-  .grb__button:focus-visible {
-    background: var(--color-accent-300);
-    border-color: var(--color-accent-300);
-    transform: translateY(-1px);
-  }
-
-  .grb__rule {
-    height: 1px;
-    width: 100%;
-    background: var(--color-base-200);
-  }
-
-  .grb__section {
-    padding-block: clamp(3rem, 6vw, 7rem);
-  }
-
-  .grb__section--split {
+  .lozen-service-offer__hero-grid {
     display: grid;
-    gap: 2rem;
+    gap: 2.5rem;
+    align-items: end;
   }
 
-  @media (min-width: 768px) {
-    .grb__section--split {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  @media (min-width: 1024px) {
+    .lozen-service-offer__hero-grid {
+      grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.38fr);
       gap: 4rem;
     }
   }
 
-  .grb__label {
-    margin: 0;
-    font-size: 0.68rem;
-    font-weight: 500;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color: var(--color-base-500);
+  .lozen-service-offer__hero-copy {
+    max-width: 54rem;
   }
 
-  .grb__quote {
-    margin: 2.5rem 0 0;
-    font-family: var(--font-display);
-    font-size: clamp(1.4rem, 2.4vw, 1.75rem);
+  .lozen-service-offer__eyebrow,
+  .lozen-service-offer__label,
+  .lozen-service-offer__card-label,
+  .lozen-service-offer__closing-label {
+    margin: 0;
+    border-left: 2px solid var(--color-accent-500);
+    padding-left: 1rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
     line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  .lozen-service-offer__eyebrow {
+    color: var(--color-accent-500);
+  }
+
+  .lozen-service-offer__h1 {
+    max-width: 52rem;
+    margin: 1.5rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.15rem, 3.4vw, 3.25rem);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    text-transform: uppercase;
+    text-wrap: balance;
+    color: #fff;
+  }
+
+  .lozen-service-offer__deck {
+    max-width: 44rem;
+    margin: 1.5rem 0 0;
+    font-family: var(--font-sans);
+    font-size: clamp(1rem, 1.35vw, 1.18rem);
+    font-weight: 400;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .lozen-service-offer__cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem 1.75rem;
+    margin-top: 2rem;
+  }
+
+  .lozen-service-offer__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border: 1px solid var(--color-accent-500);
+    border-radius: 999px;
+    background: linear-gradient(180deg, #f4da26 0%, #f2d300 55%, #ceb300 100%);
+    padding: 0.85rem 1.35rem;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.55),
+      inset 0 -2px 1px rgba(0, 0, 0, 0.12),
+      0 2px 4px rgba(6, 23, 47, 0.25);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--color-base-950);
+    text-decoration: none;
+    transition:
+      background 180ms ease,
+      border-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .lozen-service-offer__button:hover,
+  .lozen-service-offer__button:focus-visible {
+    background: linear-gradient(180deg, #f7e158 0%, #f4da26 55%, #d9bc00 100%);
+    transform: translateY(-1px);
+  }
+
+  .lozen-service-offer__button--navy {
+    border-color: var(--color-lozen-blue-950);
+    background: linear-gradient(180deg, var(--color-lozen-blue-900) 0%, var(--color-lozen-blue-950) 100%);
+    color: var(--color-accent-500);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      inset 0 -2px 1px rgba(0, 0, 0, 0.35),
+      0 2px 4px rgba(6, 23, 47, 0.35);
+  }
+
+  .lozen-service-offer__button--navy:hover,
+  .lozen-service-offer__button--navy:focus-visible {
+    background: linear-gradient(180deg, var(--color-lozen-blue-800) 0%, var(--color-lozen-blue-900) 100%);
+  }
+
+  .lozen-service-offer__secondary-link {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.78);
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.3);
+    text-underline-offset: 6px;
+    transition:
+      color 180ms ease,
+      text-decoration-color 180ms ease;
+  }
+
+  .lozen-service-offer__secondary-link:hover,
+  .lozen-service-offer__secondary-link:focus-visible {
+    color: #fff;
+    text-decoration-color: #fff;
+  }
+
+  .lozen-service-offer__summary-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1.35rem;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(14px);
+  }
+
+  .lozen-service-offer__summary-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 3px;
+    background: var(--color-accent-500);
+  }
+
+  .lozen-service-offer__card-label {
+    border-left: 0;
+    padding-left: 0;
+    color: var(--color-accent-500);
+  }
+
+  .lozen-service-offer__card-statement {
+    margin: 1.25rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2vw, 1.65rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: #fff;
+  }
+
+  .lozen-service-offer__card-body {
+    margin: 1rem 0 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .lozen-service-offer__section {
+    padding-block: clamp(3.5rem, 7vw, 6rem);
+  }
+
+  .lozen-service-offer__section--white {
+    background: #fff;
+  }
+
+  .lozen-service-offer__section--soft {
+    background: var(--color-base-50);
+  }
+
+  .lozen-service-offer__section-grid {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 900px) {
+    .lozen-service-offer__section-grid {
+      grid-template-columns: minmax(180px, 0.34fr) minmax(0, 0.9fr);
+      gap: 4rem;
+      align-items: start;
+    }
+  }
+
+  .lozen-service-offer__label {
+    border-left-color: var(--color-accent-500);
+    color: var(--color-base-600);
+  }
+
+  .lozen-service-offer__section-body {
+    max-width: 46rem;
+  }
+
+  .lozen-service-offer__quote {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.45rem, 2.25vw, 2rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.35;
     color: var(--color-base-950);
   }
 
-  .grb__quote :global(em) {
+  .lozen-service-offer__quote :global(p) {
+    margin: 0;
+  }
+
+  .lozen-service-offer__quote :global(p + p) {
+    margin-top: 1rem;
+  }
+
+  .lozen-service-offer__quote :global(em) {
     font-style: italic;
   }
 
-  .grb__quote :global(sup) {
+  .lozen-service-offer__quote :global(sup) {
     color: var(--color-accent-700);
   }
 
-  .grb__split-content {
-    font-family: var(--font-display);
-    font-size: clamp(1.4rem, 2.4vw, 1.75rem);
-    line-height: 1.35;
+  .lozen-service-offer__statement-list {
+    display: grid;
+    gap: 1rem;
+    max-width: 46rem;
   }
 
-  .grb__statement {
+  .lozen-service-offer__statement {
     margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2vw, 1.75rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.35;
     color: var(--color-base-950);
   }
 
-  .grb__statement--muted {
+  .lozen-service-offer__statement--muted {
     color: var(--color-base-700);
   }
 
-  .grb__body-text {
-    max-width: 34rem;
-    margin: 1.5rem 0 0;
+  .lozen-service-offer__body-text {
+    max-width: 42rem;
+    margin: 1.25rem 0 0;
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--color-base-700);
   }
 
-  .grb__list {
+  .lozen-service-offer__list {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
+    max-width: 50rem;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  .grb__list-item {
+  .lozen-service-offer__list-item {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: 1.5rem;
+    gap: 1.25rem;
+    border-top: 1px solid var(--color-base-200);
+    padding-top: 1.5rem;
   }
 
-  .grb__list-num {
-    padding-top: 0.25rem;
+  .lozen-service-offer__list-item:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .lozen-service-offer__list-num {
+    padding-top: 0.15rem;
     font-family: var(--font-display);
     font-size: 0.85rem;
     color: var(--color-accent-700);
   }
 
-  .grb__list-title {
+  .lozen-service-offer__list-title {
     margin: 0;
     font-family: var(--font-display);
-    font-size: clamp(1.15rem, 2vw, 1.4rem);
+    font-size: clamp(1.2rem, 1.8vw, 1.45rem);
     font-weight: 400;
+    letter-spacing: -0.015em;
     line-height: 1.25;
     color: var(--color-base-950);
   }
 
-  .grb__list-title :global(sup) {
+  .lozen-service-offer__list-title :global(sup) {
     color: var(--color-accent-700);
   }
 
-  .grb__list-body {
-    max-width: 34rem;
-    margin: 0.5rem 0 0;
+  .lozen-service-offer__list-body {
+    max-width: 42rem;
+    margin: 0.6rem 0 0;
     font-size: 1rem;
-    line-height: 1.65;
+    line-height: 1.7;
     color: var(--color-base-700);
   }
 
-  .grb__closing {
-    padding-block: clamp(3.5rem, 8vw, 8rem);
+  .lozen-service-offer__closing {
+    background: var(--color-accent-500);
+    padding-block: clamp(3rem, 6vw, 5rem);
   }
 
-  .grb__closing-line {
-    max-width: 34rem;
-    margin: 0;
-    font-family: var(--font-display);
-    font-size: clamp(1.4rem, 2.4vw, 1.75rem);
-    line-height: 1.35;
-    color: var(--color-base-700);
+  .lozen-service-offer__closing-grid {
+    display: grid;
+    gap: 2rem;
+    align-items: end;
   }
 
-  .grb__closing-email {
-    display: inline-block;
-    margin-top: 2rem;
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem, 4vw, 2.75rem);
-    line-height: 1.15;
-    color: var(--color-base-950);
-    text-decoration: underline;
-    text-decoration-color: var(--color-base-200);
-    text-underline-offset: 8px;
-    transition: text-decoration-color 180ms ease;
-  }
-
-  .grb__closing-email:hover,
-  .grb__closing-email:focus-visible {
-    text-decoration-color: var(--color-base-950);
-  }
-
-  .grb__footer {
-    border-top: 1px solid var(--color-base-200);
-  }
-
-  .grb__footer-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    padding-block: 2rem;
-  }
-
-  @media (min-width: 768px) {
-    .grb__footer-inner {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+  @media (min-width: 900px) {
+    .lozen-service-offer__closing-grid {
+      grid-template-columns: minmax(0, 0.9fr) minmax(260px, 0.36fr);
+      gap: 4rem;
     }
   }
 
-  .grb__footer-copy {
-    margin: 0;
-    font-size: 0.75rem;
-    color: var(--color-base-500);
+  .lozen-service-offer__closing-label {
+    border-left-color: var(--color-lozen-blue-950);
+    color: var(--color-lozen-blue-950);
   }
 
-  .grb__footer-email {
-    font-size: 0.75rem;
-    color: var(--color-base-500);
+  .lozen-service-offer__closing-line {
+    max-width: 46rem;
+    margin: 1rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.65rem, 3vw, 2.45rem);
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 1.16;
+    color: var(--color-lozen-blue-950);
+    text-wrap: balance;
+  }
+
+  .lozen-service-offer__closing-action {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  @media (min-width: 900px) {
+    .lozen-service-offer__closing-action {
+      align-items: flex-end;
+      text-align: right;
+    }
+  }
+
+  .lozen-service-offer__email {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-lozen-blue-950);
     text-decoration: underline;
-    text-decoration-color: var(--color-base-200);
+    text-decoration-color: rgba(6, 23, 47, 0.28);
     text-underline-offset: 6px;
-    transition: color 180ms ease, text-decoration-color 180ms ease;
   }
 
-  .grb__footer-email:hover,
-  .grb__footer-email:focus-visible {
-    color: var(--color-base-950);
-    text-decoration-color: var(--color-base-950);
+  .lozen-service-offer__email:hover,
+  .lozen-service-offer__email:focus-visible {
+    text-decoration-color: var(--color-lozen-blue-950);
+  }
+
+  @media (max-width: 640px) {
+    .lozen-service-offer__hero-shell {
+      padding-top: 7.5rem;
+      padding-bottom: 3.5rem;
+    }
+
+    .lozen-service-offer__h1 {
+      font-size: clamp(2rem, 10vw, 2.85rem);
+    }
+
+    .lozen-service-offer__summary-card {
+      display: none;
+    }
+
+    .lozen-service-offer__cta-row {
+      align-items: stretch;
+    }
+
+    .lozen-service-offer__button {
+      width: 100%;
+    }
   }
 </style>
