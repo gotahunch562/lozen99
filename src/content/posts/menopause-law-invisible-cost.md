@@ -34,7 +34,7 @@ Women hold 28% of law firm partnerships. The gap between pipeline entry and seni
 
 DirectWomen, which has worked since 2007 to increase the representation of women lawyers on corporate boards, noted in its 2026 Board Institute announcement that the share of female director appointments declined last year, continuing a trend from a 2020 peak. The pipeline problem does not end at partnership. It also follows her into the next stage of her career, a trajectory explored in [When Leadership and Biology Collide Quietly in Law Firms](/blog/women-lawyers-leadership-perimenopause).
 
-That trajectory, from associate to partner to board candidate, runs through the same years when many women lawyers are navigating perimenopause, menopause at work, and other health challenges inside a profession that requires visibility for assistance but punishes disclosure. This is the professional reality for a woman attorney navigating perimenopause or menopause inside a legal practice that has no framework for what the [menopause lawyer](/menopause-support-women-lawyers/) combination requires.
+That trajectory, from associate to partner to board candidate, runs through the same years when many women lawyers are navigating perimenopause, menopause at work, and other health challenges inside a profession that requires visibility for assistance but punishes disclosure. This is the professional reality for a woman attorney navigating perimenopause or menopause inside a legal practice that has no framework for what the [menopause lawyer](/blog/aba-study-women-lawyers-mental-health/) combination requires.
 
 ---
 

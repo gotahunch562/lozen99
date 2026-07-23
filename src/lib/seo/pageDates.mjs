@@ -27,8 +27,6 @@ const EXCLUDED_EXACT_PATHS = new Set([
   "/sovereign-capacity-model/",
   "/why-lozen-advisory/",
   "/invisible-attrition/power-user-trap/",
-  "/normal-blood-tests-feel-off/",
-  "/menopause-support-women-lawyers/",
 ]);
 
 const EXCLUDED_PATH_PATTERNS = [

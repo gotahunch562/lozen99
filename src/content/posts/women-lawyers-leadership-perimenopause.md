@@ -29,7 +29,7 @@ Taken together, these developments suggest the legal profession is starting to e
 
 One of those pressures is timing.
 
-Many women reach senior leadership roles inside law firms in their forties and early fifties. These are the same years when the biological transition known as perimenopause often begins. This overlap explains why conversations about **women law firm leaders and menopause** are beginning to surface more frequently in the profession. For women navigating this intersection, Lozen Advisory provides confidential performance strategies designed specifically for the [menopause lawyer](/menopause-support-women-lawyers/) experience.
+Many women reach senior leadership roles inside law firms in their forties and early fifties. These are the same years when the biological transition known as perimenopause often begins. This overlap explains why conversations about **women law firm leaders and menopause** are beginning to surface more frequently in the profession. For women navigating this intersection, Lozen Advisory provides confidential performance strategies designed specifically for the [menopause lawyer](/blog/aba-study-women-lawyers-mental-health/) experience.
 
 What makes the moment distinctive is not weakness or decline. It is the intersection of two realities. Leadership roles at the top of a law firm require visible steadiness. Perimenopause introduces physiological changes that are rarely discussed in professional environments.
 

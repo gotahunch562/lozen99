@@ -115,5 +115,5 @@ The Tender Path was built for women who need a private strategy for navigating p
 
 Just a path back to yourself.
 
-For the private advisory path connected to this issue, see [Your Blood Tests Are Normal. But You Don’t Feel Like Yourself.](/normal-blood-tests-feel-off)
+For the private advisory path connected to this issue, see [Your Blood Tests Are Normal. But You Don’t Feel Like Yourself.](/menopause-and-the-law/)
 
