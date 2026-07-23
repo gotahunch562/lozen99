@@ -207,8 +207,17 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
   }
 
   .lozen-service-offer__hero-shell {
-    padding-top: clamp(7.5rem, 9vw, 9rem);
-    padding-bottom: clamp(4rem, 6vw, 5.5rem);
+    padding-top: clamp(6.25rem, 9vw, 8rem);
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+    display: flex;
+    align-items: flex-start;
+  }
+
+  @media (min-width: 1024px) {
+    .lozen-service-offer__hero-shell {
+      height: clamp(33rem, 46vw, 39rem);
+      overflow: hidden;
+    }
   }
 
   .lozen-service-offer__hero-grid {
@@ -591,8 +600,9 @@ const mailto = `mailto:${email}?subject=${encodeURIComponent(ctaSubject)}`;
 
   @media (max-width: 640px) {
     .lozen-service-offer__hero-shell {
-      padding-top: 7.5rem;
-      padding-bottom: 4rem;
+      min-height: auto;
+      padding-top: clamp(5.75rem, 18vw, 7rem);
+      padding-bottom: clamp(2.75rem, 9vw, 3.5rem);
     }
 
     .lozen-service-offer__summary-card {
