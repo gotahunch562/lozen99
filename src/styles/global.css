@@ -3071,11 +3071,17 @@ a .lozen-tracker-status-badge:focus-visible {
 }
 
 .lozen-internal-hero__wrapper {
-  min-height: clamp(27rem, 42vw, 34rem);
-  padding-top: clamp(8rem, 9vw, 9.5rem);
-  padding-bottom: clamp(6rem, 7vw, 7.5rem);
+  padding-top: clamp(6.25rem, 9vw, 8rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .lozen-internal-hero__wrapper {
+    height: clamp(33rem, 46vw, 39rem);
+    overflow: hidden;
+  }
 }
 
 .lozen-internal-hero__grid {
@@ -3087,7 +3093,7 @@ a .lozen-tracker-status-badge:focus-visible {
 @media (min-width: 1024px) {
   .lozen-internal-hero__grid {
     grid-template-columns: 0.72fr 1fr;
-    align-items: end;
+    align-items: start;
   }
 }
 
