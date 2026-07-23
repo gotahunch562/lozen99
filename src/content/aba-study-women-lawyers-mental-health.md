@@ -80,7 +80,7 @@ Will she be seen differently? Will clients be reassigned? Will leadership opport
 
 Women lawyers do not need to be told these risks exist. They watch how firms respond to other women. Then they make a calculation.
 
-That calculation is the missing data point. [Visibility has a price.](/billable-hour-visibility-tax/)
+That calculation is the missing data point. [Visibility has a price.](/blog/aba-study-women-lawyers-mental-health/)
 
 When access to support requires exposure, utilization cannot be treated as a proxy for need. Low use of resources does not mean low need. It may mean the women who most need support have correctly concluded that using the system is too risky.
 

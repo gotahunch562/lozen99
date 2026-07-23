@@ -90,7 +90,7 @@ Related Reading
 
 [Menopause at Work: The Data Employers Do Not See](/blog/menopause-at-work-unquantified-data-gap/)
 
-[Architecture of Invisible Attrition℠: Executive Report Series](/architecture-of-invisible-attrition-series/)
+[Architecture of Invisible Attrition℠: Executive Report Series](/invisible-attrition/)
 
 ---
 

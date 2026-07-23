@@ -19,7 +19,7 @@ const feedItems = [
   },
   {
     title: "The Architecture of Invisible Attrition — Executive Report Series",
-    path: "/architecture-of-invisible-attrition-series",
+    path: "/invisible-attrition/",
     description:
       "A four-part analysis of corporate retention systems and the structural flaws that compound leadership pipeline risk and succession exposure.",
   },

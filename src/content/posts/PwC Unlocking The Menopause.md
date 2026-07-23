@@ -31,7 +31,7 @@ isFeatured: false
 ---
 The $600 billion women’s health market that PwC forecasts by 2030 is real. The employer adoption surge it describes, from 4% to 25% of enterprises offering dedicated menopause benefits, is real. PwC’s diagnosis of why utilization remains low is also stated clearly: employees do not know these benefits exist or how to access them.
 
-That diagnosis is wrong. And organizations building strategy on it are investing in the wrong fix [while the attrition continues.](/architecture-of-invisible-attrition-series/)
+That diagnosis is wrong. And organizations building strategy on it are investing in the wrong fix [while the attrition continues.](/invisible-attrition/)
 
 What the forecast does not measure is whether awareness works. Awareness mantras are loud in the market  but they are based on assumptions not data.
 

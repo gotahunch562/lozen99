@@ -65,7 +65,7 @@ Important public routes include:
 - `/retention-calculator`
 - `/tools-resources`
 - `/invisible-attrition`
-- `/architecture-of-invisible-attrition-series`
+- `/invisible-attrition/`
 - `/events`
 - `/about`
 - `/about-ai`
@@ -169,16 +169,16 @@ The Executive Report Series is four reports plus a hub.
 Hub:
 
 ```text
-/architecture-of-invisible-attrition-series
+/invisible-attrition/
 ```
 
 Reports:
 
 ```text
-/voluntary-benefit-disclosure-gap
-/billable-hour-visibility-tax
-/succession-planning-retention-risk-data-gap
-/leadership-pipeline-manager-drain
+/menopause-and-the-law/
+/blog/aba-study-women-lawyers-mental-health/
+/retention-risk-analysis/
+/retention-risk-analysis/
 ```
 
 Do not describe the report series as five-part unless the actual public series structure changes.

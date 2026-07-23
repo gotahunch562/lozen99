@@ -32,7 +32,7 @@ spineDestination: retention-risk-analysis
 draft: false
 isFeatured: false
 ---
-Employers making decisions about menopause support are working from available data. Accommodation requests, leave utilization, healthcare benefit engagement, and manager escalations form the basis for what most organizations can measure. The [visibility constraint](/blog/billable-hour-visibility-tax) is the same across all of them: the system cannot measure what it has not been designed to collect. It reflects what employees report. It does not reflect what they do not.
+Employers making decisions about menopause support are working from available data. Accommodation requests, leave utilization, healthcare benefit engagement, and manager escalations form the basis for what most organizations can measure. The [visibility constraint](/blog/blog/aba-study-women-lawyers-mental-health/) is the same across all of them: the system cannot measure what it has not been designed to collect. It reflects what employees report. It does not reflect what they do not.
 
 ---
 

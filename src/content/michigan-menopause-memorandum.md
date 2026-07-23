@@ -66,7 +66,7 @@ The Memorandum's employer recommendations are thoughtful. Educate employees not 
 
 Every recommendation flows through the employer. Every solution assumes access to a woman who is willing to raise her hand inside a system she has already told you she does not trust. Only 12% of respondents were confident they knew who to ask for help when menopause symptoms presented workplace challenges. Only 8% expressed satisfaction with the menopause-related resources currently available at their workplace.
 
-The infrastructure the Memorandum recommends building is the same infrastructure [women are already declining to use.](/architecture-of-invisible-attrition-series/)
+The infrastructure the Memorandum recommends building is the same infrastructure [women are already declining to use.](/invisible-attrition/)
 
 ## The Number Behind the Number
 

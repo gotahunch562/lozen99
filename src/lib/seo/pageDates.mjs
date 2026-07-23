@@ -29,10 +29,6 @@ const EXCLUDED_EXACT_PATHS = new Set([
   "/invisible-attrition/power-user-trap/",
   "/normal-blood-tests-feel-off/",
   "/menopause-support-women-lawyers/",
-  "/billable-hour-visibility-tax/",
-  "/leadership-pipeline-manager-drain/",
-  "/succession-planning-retention-risk-data-gap/",
-  "/voluntary-benefit-disclosure-gap/",
 ]);
 
 const EXCLUDED_PATH_PATTERNS = [
