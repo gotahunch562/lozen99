@@ -242,7 +242,23 @@ const ogDescription = metaDescription ?? description;
   .chub-hero__inner {
     max-width: 80rem;
     margin: 0 auto;
-    padding: clamp(5rem, 9vw, 7.5rem) clamp(1.5rem, 4vw, 3rem) clamp(4rem, 7vw, 6rem);
+    padding-top: clamp(6.25rem, 9vw, 8rem);
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .chub-hero__inner {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .chub-hero__inner {
+      padding-inline: 2rem;
+      height: clamp(33rem, 46vw, 39rem);
+      overflow: hidden;
+    }
   }
 
   .chub-hero__meta {
