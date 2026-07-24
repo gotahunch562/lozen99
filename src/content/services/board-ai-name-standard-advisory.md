@@ -1,10 +1,10 @@
 ---
 dateModified: 2026-07-21
-title: "Board AI Governance Briefing"
+title: "Board AI Name Standard Briefing"
 eyebrow: "Fixed-Scope Advisory"
-headline: "Every board that approves an AI governance framework will eventually be asked to prove it worked."
-deck: "The Governance Readiness Briefing is where you find out the answer — before a regulator, an insurer, or a plaintiff's counsel does."
-metaDescription: "A fixed-scope briefing for boards and CFOs to prove their AI governance framework actually works — before a regulator, insurer, or plaintiff's counsel asks."
+headline: "Does your AI governance framework work."
+deck: "The Governance Name Standard℠ Briefing is where you find out the answer — before a regulator, an insurer, or a plaintiff's counsel does."
+metaDescription: "A fixed-scope briefing for boards and CFOs to prove their AI governance using the Name Standard℠ framework — before a regulator, insurer, or plaintiff's counsel asks."
 framingLabel: "The question the briefing answers"
 framingQuoteHtml: "Boards approve AI governance frameworks with the best of intentions — and then move on. This briefing is where the framework is examined against what it was meant to prevent: algorithmic accountability failures, the board's ongoing oversight duty under the <em>Caremark</em> line of cases, and whether the AI investment was governed with the rigor of any other material one — tested against the Name Standard<sup>℠</sup>, not a self-reported policy statement."
 whoItsForLabel: "Who it's for"
