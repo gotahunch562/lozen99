@@ -86,6 +86,6 @@ The legislation improves training. It expands coverage. It strengthens the clini
 
 That pre-engagement condition is where Invisible Attrition℠ begins: the [erosion of performance and capacity that occurs before any formal system detects](/invisible-attrition/) risk, and before any legislative framework is able to respond.
 
-## Market Intelligence
+## Board AI Market Intelligence
 
-Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.
+Lozen Advisory’s [Board AI Market Intelligence](/services/board-ai-market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

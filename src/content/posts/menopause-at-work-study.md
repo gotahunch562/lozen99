@@ -72,4 +72,4 @@ For a closer look at why current workplace research cannot yet measure the condi
 
 Lozen Advisory serves professional women navigating personal transitions that affect performance and career continuity, privately and without organizational relationship. If this piece describes your situation, the MAPS Blueprint is where to start.
 
-Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.
+Lozen Advisory’s [Board AI Market Intelligence](/services/board-ai-market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

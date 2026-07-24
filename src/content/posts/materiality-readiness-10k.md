@@ -132,7 +132,7 @@ It examines where workforce data is producing incomplete evidence, where AI-assi
 
 The goal is not to draft the disclosure. The goal is to close the governance gap before the disclosure requirement arrives.
 
-Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.
+Lozen Advisory’s [Board AI Governance Advisory](/services/board-ai-governance-advisory/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.
 
 ---
 

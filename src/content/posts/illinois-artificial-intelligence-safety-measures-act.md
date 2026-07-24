@@ -162,4 +162,4 @@ An audit creates evidence. Governance determines what happens because of it.
 
 Illinois has strengthened the first function. Companies still need an accountability architecture for the second.
 
-Lozen Advisory’s [Governance Readiness Briefing](/services/governance-readiness-briefing/) evaluates whether AI-assisted decisions remain attributable, reviewable, and supported by evidence the board can rely on.
+Lozen Advisory’s [Board AI Name Standard Advisory](/services/board-ai-name-standard-advisory/) evaluates whether AI-assisted decisions remain attributable, reviewable, and supported by evidence the board can rely on.

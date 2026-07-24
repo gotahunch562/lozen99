@@ -95,4 +95,4 @@ You are not waiting to feel like yourself again. You are navigating something re
 
 The first step is having the right name for what is happening. You have that now. The next step is a private path built around your life, your schedule, and your body as it is right now, not the body the system expected you to have.
 
-Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.
+Lozen Advisory’s [Board AI Market Intelligence](/services/board-ai-market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

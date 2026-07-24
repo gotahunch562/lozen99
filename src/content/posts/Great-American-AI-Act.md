@@ -62,4 +62,4 @@ A framework can be written, reviewed, and audited. A deployment report can be fi
 
 Sec. 113 creates anti-retaliation protection for employees and independent contractors who lawfully report violations of federal AI law. In the Name Standard℠ mapping, that matters because whistleblower protection is not the same as pre-deployment refusal authority. The draft protects a reporting pathway, but it does not appear to establish a named internal role with standing authority to pause, restrict, or reject deployment before the risk materializes.
 
-Lozen Advisory’s [Governance Readiness Briefing](/services/governance-readiness-briefing/) evaluates whether AI-assisted decisions remain attributable, reviewable, and supported by evidence the board can rely on.
+Lozen Advisory’s [Board AI Name Standard Advisory](/services/board-ai-name-standard-advisory/) evaluates whether AI-assisted decisions remain attributable, reviewable, and supported by evidence the board can rely on.

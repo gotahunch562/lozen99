@@ -150,4 +150,4 @@ Already deployed does not mean ungovernable. But governance must begin with the 
 
 ---
 
-Lozen Advisory’s [Crisis, Reputation, and Algorithmic Accountability Risk](/services/crisis-reputation-workforce-risk/) supports organizations responding to activated AI incidents, disclosure failures, accountability gaps, and reputational exposure.
+Lozen Advisory’s [Board AI Algorithmic Accountability](/services/board-ai-algorithmic-accountability/) supports organizations responding to activated AI incidents, disclosure failures, accountability gaps, and reputational exposure.

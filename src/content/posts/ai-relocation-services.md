@@ -55,4 +55,4 @@ That is not autonomy.
 
 That is [labor displacement inside the workflow.](https://www.deloitte.com/us/en/services/consulting/articles/defensive-ux-responsible-gen-ai-framework.html)
 
-Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.
+Lozen Advisory’s [Board AI Governance Advisory](/services/board-ai-governance-advisory/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.

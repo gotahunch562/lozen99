@@ -108,4 +108,4 @@ Recent FTC matters show how AI claims can become enforcement issues outside the 
 
 ---
 
-Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.
+Lozen Advisory’s [Board AI Governance Advisory](/services/board-ai-governance-advisory/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.

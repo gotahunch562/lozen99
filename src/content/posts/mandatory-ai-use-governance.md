@@ -135,6 +135,6 @@ Series Context
 
 ---
 
-## Advisory Engagement
+## Board AI Governance Advisory
 
-Organizations moving from AI adoption mandates to recurring oversight can use Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) to strengthen governance ownership, review capacity, and operating accountability.
+Organizations moving from AI adoption mandates to recurring oversight can use Lozen Advisory’s [Board AI Governance Advisory](/services/board-ai-governance-advisory/) to strengthen governance ownership, review capacity, and operating accountability.

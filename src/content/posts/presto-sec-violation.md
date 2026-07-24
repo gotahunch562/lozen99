@@ -113,6 +113,6 @@ The SEC wrote them back in.
 
 ---
 
-## Crisis, Reputation, and Algorithmic Accountability Risk
+## Board AI Algorithmic Accountability
 
-Organizations facing AI-related disclosure scrutiny, evidence failures, or reputational exposure can use Lozen Advisory’s [Crisis, Reputation, and Algorithmic Accountability Risk](/services/crisis-reputation-workforce-risk/) service to reconstruct what the record can prove and where accountability remained unresolved.
+Organizations facing AI-related disclosure scrutiny, evidence failures, or reputational exposure can use Lozen Advisory’s [Board AI Algorithmic Accountability](/services/board-ai-algorithmic-accountability/) service to reconstruct what the record can prove and where accountability remained unresolved.

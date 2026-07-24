@@ -94,4 +94,4 @@ Human oversight is not enough if no one can explain who reviewed the output, wha
 
 ### **Prepare your board for AI accountability questions before the next meeting.**
 
-Lozen Advisory’s [Crisis, Reputation, and Algorithmic Accountability Risk](/services/crisis-reputation-workforce-risk/) supports organizations responding to activated AI incidents, disclosure failures, accountability gaps, and reputational exposure.
+Lozen Advisory’s [Board AI Algorithmic Accountability](/services/board-ai-algorithmic-accountability/) supports organizations responding to activated AI incidents, disclosure failures, accountability gaps, and reputational exposure.

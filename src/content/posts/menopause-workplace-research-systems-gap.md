@@ -80,6 +80,6 @@ The field is expanding into the workplace without incorporating the organization
 
 Until that changes, menopause at work will remain visible, but not operational. The [Northeastern research center announcement](https://news.northeastern.edu/2026/04/08/menopause-workplace-research-center/) is an important marker of field expansion; the remaining question is whether research can move from health visibility into organizational measurement.
 
-## Market Intelligence
+## Board AI Market Intelligence
 
-Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.
+Lozen Advisory’s [Board AI Market Intelligence](/services/board-ai-market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

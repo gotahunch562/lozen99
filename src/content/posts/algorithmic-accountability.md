@@ -175,6 +175,6 @@ This is the territory [Lozen Advisory's executive AI governance curriculum](http
 
 ---
 
-## Governance Readiness Briefing
+## Board AI Name Standard Advisory
 
-Boards and executive teams evaluating whether human accountability remains traceable across AI-assisted work can use Lozen Advisory’s [Governance Readiness Briefing](/services/governance-readiness-briefing/) to identify evidence, ownership, and oversight gaps.
+Boards and executive teams evaluating whether human accountability remains traceable across AI-assisted work can use Lozen Advisory’s [Board AI Name Standard Advisory](/services/board-ai-name-standard-advisory/) to identify evidence, ownership, and oversight gaps.

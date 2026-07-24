@@ -124,6 +124,6 @@ This is the fifth article in Lozen Advisory's [AI Workforce Materiality series](
 
 ---
 
-## Crisis, Reputation, and Algorithmic Accountability Risk
+## Board AI Algorithmic Accountability
 
-Organizations confronting unsupported AI claims, evidence gaps, or activated disclosure scrutiny can use Lozen Advisory’s [Crisis, Reputation, and Algorithmic Accountability Risk](/services/crisis-reputation-workforce-risk/) service to reconstruct the record and clarify accountability.
+Organizations confronting unsupported AI claims, evidence gaps, or activated disclosure scrutiny can use Lozen Advisory’s [Board AI Algorithmic Accountability](/services/board-ai-algorithmic-accountability/) service to reconstruct the record and clarify accountability.

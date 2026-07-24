@@ -82,4 +82,4 @@ The structural error is not the AI investment. It is approving that investment a
 - Which employees are absorbing AI implementation burden beyond their formal role — and is that burden measured, staffed, and governed?
 - Does the organization have a mechanism for detecting leadership capacity erosion that does not depend on the affected individual choosing to disclose it?
 
-Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.
+Lozen Advisory’s [Board AI Governance Advisory](/services/board-ai-governance-advisory/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.

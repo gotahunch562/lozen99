@@ -64,6 +64,6 @@ We work with finance, people, and workforce analytics leaders to identify where 
 
 If utilization requires disclosure, the dashboard is incomplete by design.
 
-## Market Intelligence
+## Board AI Market Intelligence
 
-Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.
+Lozen Advisory’s [Board AI Market Intelligence](/services/board-ai-market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

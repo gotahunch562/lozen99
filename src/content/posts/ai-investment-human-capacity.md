@@ -96,6 +96,6 @@ A board-level inquiry should begin with questions such as:
 
 These are not IT implementation questions. They are capital-governance questions. If leadership cannot answer them, the organization may be funding AI faster than it is governing the human capacity required to make that investment work.
 
-### Advisory Engagement
+### Board AI Governance Advisory
 
-Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.
+Lozen Advisory’s [Board AI Governance Advisory](/services/board-ai-governance-advisory/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.

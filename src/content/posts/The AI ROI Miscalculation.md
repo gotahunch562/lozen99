@@ -84,4 +84,4 @@ For CFOs, this means AI ROI cannot be measured solely through cost reduction. Fo
 - Does the AI ROI calculation net out the verification, correction, and oversight labor required to make AI-generated output reliable?
 - Does the organization have an independent mechanism for identifying capacity erosion — one that does not depend on employee disclosure before it generates a signal?
 
-Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.
+Lozen Advisory’s [Board AI Governance Advisory](/services/board-ai-governance-advisory/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.

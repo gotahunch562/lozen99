@@ -84,4 +84,4 @@ The AI Accountability Agenda is part of a larger shift in AI governance language
 
 For board-facing teams, the question is not only what each proposal requires. The question is whether the organization can already produce evidence showing who reviews, who overrides, who documents, and who owns AI-assisted decisions — before a regulator, plaintiff, or whistleblower asks.
 
-Lozen Advisory’s [Governance Readiness Briefing](/services/governance-readiness-briefing/) evaluates whether AI-assisted decisions remain attributable, reviewable, and supported by evidence the board can rely on.
+Lozen Advisory’s [Board AI Name Standard Advisory](/services/board-ai-name-standard-advisory/) evaluates whether AI-assisted decisions remain attributable, reviewable, and supported by evidence the board can rely on.

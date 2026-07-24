@@ -94,6 +94,6 @@ She needs a strategy that was built for the room she is actually in, not the roo
 
 That gap is why the [menopause legislation tracker](/menopause-legislation-tracker/) matters. It organizes the policy record around what formal systems can measure, and what they still cannot see.
 
-## Market Intelligence
+## Board AI Market Intelligence
 
-Lozen Advisory’s [Market Intelligence](/services/market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.
+Lozen Advisory’s [Board AI Market Intelligence](/services/board-ai-market-intelligence/) translates external legal, insurance, workforce, and governance signals into decision-ready analysis for boards and executive teams.

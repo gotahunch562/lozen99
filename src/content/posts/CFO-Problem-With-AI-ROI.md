@@ -148,6 +148,6 @@ Before the next board meeting or budget cycle, the organization should be able t
 
 This article is part of Lozen Advisory’s [AI Workforce Materiality](/ai-workforce-materiality/) series, examining the workforce, financial, governance, and disclosure consequences of enterprise AI adoption.
 
-# Advisory Engagement
+# Board AI Governance Advisory
 
-Lozen Advisory’s [Advisory Engagement](/services/advisory-engagement/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.
+Lozen Advisory’s [Board AI Governance Advisory](/services/board-ai-governance-advisory/) helps boards and executive teams establish recurring oversight for AI implementation, accountability, and institutional capacity risk.
