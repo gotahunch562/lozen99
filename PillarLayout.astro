@@ -1,0 +1,325 @@
+---
+/**
+ * PillarLayout.astro
+ * src/layouts/PillarLayout.astro
+ *
+ * Frontmatter fields expected from the .md file:
+ *   title, heading, subtitle, metaDescription, jsonLdDescription,
+ *   definedTermName, definedTermDescription, definedTermAlternateName, pubDate, heroImage, heroAlt, clusters[]
+ *
+ * In Astro, markdown frontmatter is passed as Astro.props.frontmatter
+ * when the file uses the layout: field. All fields destructure from there.
+ */
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { createFrameworkPillarJsonLd } from "@/lib/seo/jsonLd";
+import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+const { frontmatter } = Astro.props;
+
+const {
+  title,
+  heading,
+  subtitle,
+  metaDescription,
+  jsonLdDescription,
+  definedTermName,
+  definedTermDescription,
+  definedTermAlternateName,
+  pubDate,
+  heroImage,
+  heroAlt = "",
+  clusters = [],
+} = frontmatter;
+
+const pageTitle = title || heading || "Lozen Advisory";
+const pageDescription = metaDescription || subtitle || "";
+const pageHref = frontmatter.slug || "/invisible-attrition";
+const frameworkTermName = definedTermName || "Invisible Attrition℠";
+const frameworkTermAlternateName =
+  definedTermAlternateName ||
+  (frameworkTermName === "Invisible Attrition℠" ? "Invisible Attrition" : undefined);
+const frameworkTermDescription =
+  definedTermDescription ||
+  "The unmeasured erosion of leadership and performance capacity that occurs before traditional, disclosure-dependent retention metrics detect risk.";
+const frameworkJsonLdDescription = jsonLdDescription || pageDescription;
+
+const frameworkJsonLd = createFrameworkPillarJsonLd({
+  title: pageTitle,
+  description: frameworkJsonLdDescription,
+  href: pageHref,
+  image: heroImage,
+  termName: frameworkTermName,
+  termAlternateName: frameworkTermAlternateName,
+  termDescription: frameworkTermDescription,
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: pageTitle, href: pageHref },
+  ],
+});
+
+const formattedDate = pubDate
+  ? new Date(pubDate).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "2-digit",
+    })
+  : "";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} jsonLd={frameworkJsonLd}>
+  <!-- Page header -->
+  <section class="overflow-hidden border-b border-base-200 bg-white">
+    <Wrapper
+      variant="standard"
+      class="pt-28 pb-12 sm:pt-32 sm:pb-14 lg:pt-36 lg:pb-16"
+    >
+      <div class="mx-auto max-w-5xl">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="lozen-type-eyebrow border-l border-base-300 pl-4 text-base-700"
+          >
+            Framework · Pillar Article
+          </Text>
+
+          {
+            pubDate && (
+              <time
+                datetime={pubDate}
+                class="font-sans text-sm font-medium text-base-700"
+              >
+                {formattedDate}
+              </time>
+            )
+          }
+        </div>
+
+        <Text
+          tag="h1"
+          variant="displayXL"
+          class="mt-7 max-w-4xl text-base-950 sm:mt-8"
+        >
+          {heading}
+        </Text>
+
+        {
+          subtitle && (
+            <Text
+              tag="p"
+              variant="textLG"
+              class="mt-5 max-w-3xl font-sans leading-8 text-base-800"
+            >
+              {subtitle}
+            </Text>
+          )
+        }
+      </div>
+    </Wrapper>
+  </section>
+
+  <!-- Optional hero image -->
+  {
+    heroImage && (
+      <section class="bg-white">
+        <Wrapper variant="standard" class="py-8">
+          <div class="mx-auto max-w-5xl">
+            <img
+              src={heroImage}
+              alt={heroAlt}
+              class="aspect-[16/7] w-full rounded-2xl object-cover shadow-2xl ring-1 ring-base-950/10 lg:rounded-3xl"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </Wrapper>
+      </section>
+    )
+  }
+
+  <!-- Article body -->
+  <section class="bg-white">
+    <Wrapper variant="standard" class="py-10 sm:py-12 lg:py-16">
+      <article
+        class="pillar-article prose prose-base mx-auto w-full max-w-5xl
+        prose-headings:font-display prose-headings:font-normal prose-headings:text-base-950
+        prose-h2:mt-14 prose-h2:mb-6 prose-h2:text-[var(--lozen-section-title-size)] prose-h2:leading-[var(--lozen-section-title-line-height)]
+        prose-p:font-sans prose-p:text-base-800 prose-p:leading-8 sm:prose-p:leading-9
+        prose-a:font-semibold prose-a:text-accent-700 prose-a:decoration-accent-500 prose-a:underline-offset-4 hover:prose-a:text-base-950
+        prose-strong:text-base-950 prose-li:text-base-800 prose-li:leading-8"
+      >
+        <slot />
+      </article>
+    </Wrapper>
+  </section>
+
+  <!-- Service mark footnote -->
+  <section class="bg-white">
+    <Wrapper variant="standard" class="pb-12 lg:pb-16">
+      <div class="mx-auto max-w-5xl border-t border-base-200 pt-6">
+        <Text
+          tag="p"
+          variant="textSM"
+          class="max-w-3xl font-sans italic leading-6 text-base-700"
+        >
+          Invisible Attrition℠ is a service mark of Lozen Advisory LLC.
+          The Invisible Attrition℠ framework was first published publicly on
+          February 15, 2026 at lozenadvisory.com/invisible-attrition.
+        </Text>
+      </div>
+    </Wrapper>
+  </section>
+
+  <!-- Cluster index -->
+  {
+    clusters.length > 0 && (
+      <section class="bg-base-950 text-white">
+        <Wrapper variant="standard" class="py-10 sm:py-12 lg:py-16">
+          <div class="mx-auto max-w-4xl">
+            <div class="mb-6 sm:mb-8">
+              <Text
+                tag="span"
+                variant="textSM"
+                class="lozen-type-eyebrow border-l border-base-300 pl-4 text-base-300"
+              >
+                Pillar Cluster
+              </Text>
+
+              <Text
+                tag="h2"
+                variant="displayLG"
+                class="mt-4 max-w-3xl text-white"
+              >
+                What the Framework Measures: Nine Dimensions of Invisible Attrition℠
+              </Text>
+
+              <Text
+                tag="p"
+                variant="textSM"
+                class="mt-3 max-w-2xl font-sans leading-6 text-base-300"
+              >
+                Nine cluster articles expanding the Invisible Attrition℠ framework.
+              </Text>
+            </div>
+
+            <div class="grid gap-3">
+              {clusters.map(
+                (
+                  cluster: {
+                    slug: string;
+                    title: string;
+                    description: string;
+                  },
+                  index: number,
+                ) => (
+                  <details
+                    class="group overflow-hidden rounded-xl border border-white/12 bg-white shadow-md ring-1 ring-white/10 transition-all duration-300 open:border-accent-500 open:shadow-xl"
+                    open={index === 0}
+                  >
+                    <summary class="flex cursor-pointer list-none items-center gap-3 px-4 py-3.5 text-left sm:px-5 sm:py-4 [&::-webkit-details-marker]:hidden">
+                      <span class="shrink-0 font-sans text-[0.68rem] font-semibold tracking-[0.16em] text-accent-700">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+
+                      <span class="flex-1 lozen-type-card-title-small text-base-950 transition-colors duration-200 group-hover:text-base-700">
+                        {cluster.title}
+                      </span>
+
+                      <span
+                        class="shrink-0 font-sans text-base font-light leading-none text-base-500 transition-colors duration-200 group-hover:text-accent-700 group-open:hidden"
+                        aria-hidden="true"
+                      >
+                        +
+                      </span>
+
+                      <span
+                        class="hidden shrink-0 font-sans text-base font-light leading-none text-accent-700 group-open:inline"
+                        aria-hidden="true"
+                      >
+                        −
+                      </span>
+                    </summary>
+
+                    <div class="border-t border-base-200 px-4 pb-4 pt-4 sm:px-5">
+                      <Text
+                        tag="p"
+                        variant="textSM"
+                        class="max-w-2xl font-sans leading-6 text-base-800"
+                      >
+                        {cluster.description}
+                      </Text>
+
+                      <a
+                        href={cluster.slug}
+                        class="mt-4 inline-flex font-sans text-sm font-semibold text-base-800 transition-all duration-300 hover:translate-x-1 hover:text-base-950"
+                      >
+                        Read article →
+                      </a>
+                    </div>
+                  </details>
+                ),
+              )}
+            </div>
+          </div>
+        </Wrapper>
+      </section>
+    )
+  }
+
+  <!-- Briefing CTA -->
+  <section class="border-t border-base-200 bg-white">
+    <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-20">
+      <div class="mx-auto max-w-5xl">
+        <div
+          class="relative overflow-hidden rounded-2xl border border-base-800 bg-base-950 p-6 shadow-2xl ring-1 ring-base-950/20 sm:p-8 lg:rounded-3xl lg:p-10"
+        >
+          <div
+            aria-hidden="true"
+            class="absolute inset-x-0 top-0 h-1 bg-accent-500"
+          >
+          </div>
+
+          <div class="max-w-3xl">
+            <Text
+              tag="span"
+              variant="textSM"
+              class="lozen-type-eyebrow text-base-300"
+            >
+              Strategic Briefing
+            </Text>
+
+            <Text
+              tag="h2"
+              variant="displayLG"
+              class="mt-4 max-w-3xl text-white"
+            >
+              Invisible Attrition℠ Retention Risk Audit
+            </Text>
+
+            <Text
+              tag="p"
+              variant="textBase"
+              class="mt-4 max-w-2xl font-sans leading-7 text-base-300"
+            >
+              A strategic consultation to identify why clean performance records
+              and engagement scores can mask compounding leadership continuity risk.
+            </Text>
+
+            <Button
+              isLink
+              href="/request-briefing"
+              variant="accent"
+              size="sm"
+              class="mt-7 w-fit"
+            >
+              Request Briefing →
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

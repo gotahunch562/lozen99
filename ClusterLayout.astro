@@ -1,0 +1,288 @@
+---
+/**
+ * ClusterLayout.astro
+ * src/layouts/ClusterLayout.astro
+ *
+ * Frontmatter fields expected from the .md file:
+ *   title, heading, subtitle, metaDescription, jsonLdDescription, pubDate,
+ *   datePublished, dateModified, clusterNumber, pillarSlug, pillarTitle,
+ *   prevCluster, nextCluster
+ *
+ * In Astro, markdown frontmatter is passed as Astro.props.frontmatter
+ * when the file uses the layout: field. All fields destructure from there.
+ */
+
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { createFrameworkClusterArticleJsonLd } from "@/lib/seo/jsonLd";
+import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+const { frontmatter } = Astro.props;
+
+const {
+  title,
+  heading,
+  subtitle,
+  metaDescription,
+  jsonLdDescription,
+  pubDate,
+  datePublished,
+  dateModified,
+  heroImage,
+  definedTermName,
+  definedTermDescription,
+  definedTermAlternateName,
+  clusterNumber,
+  pillarSlug,
+  pillarTitle,
+  prevCluster,
+  nextCluster,
+} = frontmatter;
+
+const pageTitle = title || heading || "Lozen Advisory";
+const pageDescription = metaDescription || subtitle || "";
+const pageHref = frontmatter.slug || Astro.url.pathname;
+const parentPillarHref = pillarSlug || "/invisible-attrition";
+const parentPillarTitle = pillarTitle || "Invisible Attrition℠";
+const frameworkTermName = definedTermName || "Invisible Attrition℠";
+const frameworkTermAlternateName =
+  definedTermAlternateName ||
+  (frameworkTermName === "Invisible Attrition℠" ? "Invisible Attrition" : undefined);
+const frameworkTermDescription =
+  definedTermDescription ||
+  "The unmeasured erosion of leadership and performance capacity that occurs before traditional, disclosure-dependent retention metrics detect risk.";
+const frameworkJsonLdDescription = jsonLdDescription || pageDescription;
+const publishedDate = datePublished || pubDate;
+
+const frameworkJsonLd = createFrameworkClusterArticleJsonLd({
+  title: pageTitle,
+  description: frameworkJsonLdDescription,
+  href: pageHref,
+  image: heroImage,
+  datePublished: publishedDate,
+  dateModified: dateModified || publishedDate,
+  section: parentPillarTitle,
+  termName: frameworkTermName,
+  termAlternateName: frameworkTermAlternateName,
+  termDescription: frameworkTermDescription,
+  termHref: parentPillarHref,
+  pillarTitle: parentPillarTitle,
+  pillarHref: parentPillarHref,
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: parentPillarTitle, href: parentPillarHref },
+    { name: pageTitle, href: pageHref },
+  ],
+});
+
+const formattedDate = pubDate
+  ? new Date(pubDate).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "2-digit",
+    })
+  : "";
+
+const clusterLabel = clusterNumber
+  ? String(clusterNumber).padStart(2, "0")
+  : "00";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} jsonLd={frameworkJsonLd}>
+  <!-- Page header -->
+  <section class="overflow-hidden border-b border-base-200 bg-white">
+    <Wrapper
+      variant="standard"
+      class="pt-28 pb-12 sm:pt-32 sm:pb-14 lg:pt-36 lg:pb-16"
+    >
+      <div class="mx-auto max-w-5xl">
+        {
+          parentPillarHref && parentPillarTitle && (
+            <a
+              href={parentPillarHref}
+              class="inline-flex font-sans text-sm font-semibold text-base-700 transition-colors duration-200 hover:text-accent-700"
+            >
+              ← {parentPillarTitle}
+            </a>
+          )
+        }
+
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+          <Text
+            tag="span"
+            variant="textSM"
+            class="lozen-type-eyebrow border-l border-base-300 pl-4 text-base-700"
+          >
+            Cluster {clusterLabel} · {parentPillarTitle}
+          </Text>
+
+          {
+            pubDate && (
+              <time
+                datetime={pubDate}
+                class="font-sans text-sm font-medium text-base-700"
+              >
+                {formattedDate}
+              </time>
+            )
+          }
+        </div>
+
+        <Text
+          tag="h1"
+          variant="displayXL"
+          class="mt-7 max-w-4xl text-base-950 sm:mt-8"
+        >
+          {heading}
+        </Text>
+
+        {
+          subtitle && (
+            <Text
+              tag="p"
+              variant="textLG"
+              class="mt-5 max-w-3xl font-sans leading-8 text-base-800"
+            >
+              {subtitle}
+            </Text>
+          )
+        }
+      </div>
+    </Wrapper>
+  </section>
+
+  <!-- Article body -->
+  <section class="bg-white">
+    <Wrapper
+      variant="prose"
+      class="cluster-article py-10 sm:py-12 lg:py-16 prose-headings:font-display prose-headings:font-normal prose-headings:text-base-950 prose-h2:mt-14 prose-h2:mb-6 prose-h2:text-[var(--lozen-section-title-size)] prose-h2:leading-[var(--lozen-section-title-line-height)] prose-p:font-sans prose-p:text-base-800 prose-p:leading-8 sm:prose-p:leading-9 prose-a:font-semibold prose-a:text-base-800 prose-a:decoration-base-400 prose-a:underline-offset-4 hover:prose-a:text-base-950"
+    >
+      <slot />
+    </Wrapper>
+  </section>
+
+  <!-- Cluster pagination -->
+  <section class="border-t border-base-200 bg-white">
+    <Wrapper variant="standard" class="py-10 sm:py-12 lg:py-14">
+      <div class="mx-auto max-w-5xl">
+        <div class="grid gap-4 sm:grid-cols-3 sm:items-stretch">
+          <div>
+            {
+              prevCluster?.slug ? (
+                <a
+                  href={prevCluster.slug}
+                  class="group flex h-full flex-col justify-between rounded-2xl border border-base-300 bg-base-50 p-5 no-underline shadow-sm ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-white hover:shadow-lg"
+                >
+                  <span class="font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-600">
+                    ← Previous
+                  </span>
+
+                  <span class="mt-4 lozen-type-card-title-small text-base-950 transition-colors duration-200 group-hover:text-base-700">
+                    {prevCluster.title}
+                  </span>
+                </a>
+              ) : (
+                <div class="hidden h-full rounded-2xl border border-transparent sm:block" />
+              )
+            }
+          </div>
+
+          <div>
+            {
+              parentPillarHref && parentPillarTitle && (
+                <a
+                  href={parentPillarHref}
+                  class="group flex h-full min-h-[8rem] flex-col items-center justify-center rounded-2xl border border-base-400 bg-white p-5 text-center no-underline shadow-lg ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:shadow-xl"
+                >
+                  <span class="lozen-type-eyebrow text-base-600">
+                    Framework
+                  </span>
+
+                  <span class="mt-4 lozen-type-card-title-small text-base-950 transition-colors duration-200 group-hover:text-base-700">
+                    Back to {parentPillarTitle}
+                  </span>
+                </a>
+              )
+            }
+          </div>
+
+          <div>
+            {
+              nextCluster?.slug ? (
+                <a
+                  href={nextCluster.slug}
+                  class="group flex h-full flex-col justify-between rounded-2xl border border-base-300 bg-base-50 p-5 text-left no-underline shadow-sm ring-1 ring-base-950/5 transition-all duration-300 hover:-translate-y-1 hover:border-accent-500 hover:bg-white hover:shadow-lg sm:text-right"
+                >
+                  <span class="font-sans text-xs font-semibold uppercase tracking-[0.18em] text-base-600">
+                    Next →
+                  </span>
+
+                  <span class="mt-4 lozen-type-card-title-small text-base-950 transition-colors duration-200 group-hover:text-base-700">
+                    {nextCluster.title}
+                  </span>
+                </a>
+              ) : (
+                <div class="hidden h-full rounded-2xl border border-transparent sm:block" />
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+  <!-- Briefing CTA -->
+  <section class="border-t border-base-200 bg-white">
+    <Wrapper variant="standard" class="py-12 sm:py-16 lg:py-20">
+      <div class="mx-auto max-w-5xl">
+        <div
+          class="relative overflow-hidden rounded-2xl border border-base-800 bg-base-950 p-6 shadow-2xl ring-1 ring-base-950/20 sm:p-8 lg:rounded-3xl lg:p-10"
+        >
+          <div
+            aria-hidden="true"
+            class="absolute inset-x-0 top-0 h-1 bg-accent-500"
+          >
+          </div>
+
+          <div class="max-w-3xl">
+            <Text
+              tag="span"
+              variant="textSM"
+              class="lozen-type-eyebrow text-base-300"
+            >
+              Strategic Briefing
+            </Text>
+
+            <Text
+              tag="h2"
+              variant="displayLG"
+              class="mt-4 max-w-3xl text-white"
+            >
+              Invisible Attrition℠ Retention Risk Audit
+            </Text>
+
+            <Text
+              tag="p"
+              variant="textBase"
+              class="mt-4 max-w-2xl font-sans leading-7 text-base-300"
+            >
+              A strategic consultation to identify why clean performance records
+              and engagement scores can mask compounding leadership continuity risk.
+            </Text>
+
+            <Button
+              isLink
+              href="/request-briefing"
+              variant="accent"
+              size="sm"
+              class="mt-7 w-fit"
+            >
+              Request Briefing →
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

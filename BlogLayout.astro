@@ -1,0 +1,585 @@
+---
+// Assets
+import { Image } from "astro:assets";
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import { createArticleJsonLd } from "@/lib/seo/jsonLd";
+// Sections
+import BlogCard from "@/components/blog/BlogCard.astro";
+import LegalSeriesConnector from "@/components/series/LegalSeriesConnector.astro";
+const { frontmatter, currentSlug: suppliedCurrentSlug } = Astro.props;
+const currentSlug = suppliedCurrentSlug || "";
+const displayTitle = frontmatter.title;
+const seoTitle = frontmatter.seo_title || frontmatter.title;
+const categoryLabel = frontmatter.category || "Insights";
+
+// Get published posts and filter by tag
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("posts");
+const frontmatterTags = frontmatter.tags ?? [];
+const filteredRelatedPosts = allPosts
+  .filter((post) => post.data.draft !== true)
+  .filter((post) => post.data.title !== displayTitle)
+  .filter((post) =>
+    (post.data.tags ?? []).some((tag) => frontmatterTags.includes(tag))
+  )
+  .slice(0, 2);
+const publishedDate = new Date(frontmatter.pubDate);
+const formattedPubDate = publishedDate.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "2-digit",
+});
+
+const seoDescription =
+  frontmatter.metaDescription || frontmatter.description || frontmatter.excerpt || "";
+
+const ogImage = frontmatter.image?.url?.src ?? frontmatter.image?.url;
+const ogImageAlt = frontmatter.image?.alt || displayTitle;
+
+const publishedDateIso = (frontmatter.datePublished || frontmatter.pubDate)?.toISOString?.() || new Date(frontmatter.datePublished || frontmatter.pubDate).toISOString();
+const modifiedDateIso = (frontmatter.dateModified || frontmatter.datePublished || frontmatter.pubDate)?.toISOString?.() || new Date(frontmatter.dateModified || frontmatter.datePublished || frontmatter.pubDate).toISOString();
+
+const articleJsonLd = createArticleJsonLd({
+  title: seoTitle,
+  description: seoDescription,
+  href: `/blog/${currentSlug}`,
+  image: ogImage,
+  datePublished: publishedDateIso,
+  dateModified: modifiedDateIso,
+  type: "BlogPosting",
+  section: frontmatter.category || frontmatter.tags?.[0],
+  keywords: frontmatter.tags,
+  breadcrumbs: [
+    { name: "Home", href: "/" },
+    { name: "Research & Analysis", href: "/blog" },
+    { name: displayTitle, href: `/blog/${currentSlug}` },
+  ],
+});
+
+const tags = (frontmatter.tags ?? []).map((tag) => {
+  const raw = (tag ?? "").toString().trim();
+  const slugSource = raw
+    .toLowerCase()
+    .replace(/^#+/, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  const slug = encodeURIComponent(slugSource || "tag");
+  const label =
+    raw.replace(/^#+/, "").replace(/[-_]+/g, " ").replace(/\s+/g, " ").trim() ||
+    "Tag";
+  return { label, slug };
+});
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDescription}
+  ogImage={ogImage}
+  ogImageAlt={ogImageAlt}
+  ogType="article"
+  jsonLd={articleJsonLd}
+>
+  <section class="bg-gradient-to-t from-base-200 to-white overflow-hidden">
+    <Wrapper variant="standard" class="pt-24 lg:pt-32">
+      <div class="max-w-3xl mx-auto text-center">
+        <Text
+          tag="span"
+          variant="textSM"
+          class="lozen-type-eyebrow border-l border-base-300 pl-4 text-base-700"
+        >
+          {categoryLabel}
+        </Text>
+        <Text
+          tag="h1"
+          variant="displayMD"
+          class="mt-8 text-base-900"
+        >
+          {displayTitle}
+        </Text>
+        <Text
+          tag="p"
+          variant="textBase"
+          class="mt-4 text-base-800 text-balance"
+        >
+          {frontmatter.description}
+        </Text>
+      </div>
+      <Image
+        width={1920}
+        height={1080}
+        src={frontmatter.image.url}
+        alt={frontmatter.image.alt}
+        class="size-full object-cover object-center rounded-t-3xl aspect-4/2 shadow-2xl outline-4 outline-base-500/10 mt-12"
+      />
+    </Wrapper>
+  </section>
+  <section class="lozen-blog-body-section">
+    <Wrapper variant="standard" class="py-12 lg:py-16">
+      <div class="lozen-blog-article-layout">
+        <article class="lozen-blog-article-shell">
+          <div class="lozen-blog-inline-meta" aria-label="Article metadata">
+            <span>
+              Published
+              <time datetime={publishedDate.toISOString()}>
+                {formattedPubDate}
+              </time>
+            </span>
+            <span>{categoryLabel}</span>
+            <a href="/blog">View all articles</a>
+          </div>
+
+          <div
+            class="lozen-blog-prose prose prose-lg w-full max-w-none mt-8
+            prose-headings:font-display prose-headings:font-normal prose-headings:text-base-900
+            prose-p:font-sans prose-p:text-base-800 prose-p:leading-8 prose-strong:text-base-900
+            prose-li:text-base-800 prose-li:leading-8
+            prose-a:text-accent-700 prose-a:border-b prose-a:border-accent-600 prose-a:no-underline
+            prose-a:transition-colors prose-a:duration-200
+            prose-a:hover:text-base-950 prose-a:hover:border-accent-500
+            prose-blockquote:border-l-accent-500 prose-blockquote:text-base-800
+            prose-li:marker:text-accent-500
+            prose-pre:border prose-pre:border-base-200 prose-pre:bg-base-50
+            prose-pre:rounded-xl prose-pre:scrollbar-hide
+            prose-tr:border-base-200 prose-thead:border-base-300"
+          >
+            <slot />
+            <LegalSeriesConnector currentSlug={currentSlug} />
+          </div>
+        </article>
+
+        <aside class="lozen-blog-rail" aria-label="Article metadata">
+          <div class="lozen-blog-rail__card">
+            <div class="lozen-blog-rail__section">
+              <p class="lozen-blog-rail__label">Published</p>
+              <time
+                class="lozen-blog-rail__date"
+                datetime={publishedDate.toISOString()}
+              >
+                {formattedPubDate}
+              </time>
+            </div>
+
+            <div class="lozen-blog-rail__section">
+              <p class="lozen-blog-rail__label">Topic</p>
+              <ul role="list" class="lozen-blog-rail__tags">
+                {
+                  tags.map(({ label, slug }) => (
+                    <li>
+                      <a href={`/blog/tags/${slug}`}>{label}</a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+
+            <div class="lozen-blog-rail__section">
+              <a class="lozen-blog-rail__archive-link" href="/blog">
+                View all articles
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </Wrapper>
+  </section>
+  {
+    filteredRelatedPosts.length > 0 && (
+      <section class="bg-gradient-to-b from-base-200 to-white">
+        <Wrapper variant="standard" class="py-12 lg:py-24">
+          <div class="grid grid-cols-1 lg:grid-cols-3 lg:items-end">
+            <div class="lg:col-span-2">
+              <Text
+                tag="h2"
+                variant="displayXL"
+                class="mt-8 text-base-900"
+              >
+                Related articles
+              </Text>
+              <Text tag="p" variant="textBase" class="text-base-800 mt-2">
+                Keep learning with more stories from our team.
+              </Text>
+            </div>
+            <Button
+              isLink
+              href="/blog"
+              variant="muted"
+              size="sm"
+              class="w-fit lg:mt-auto lg:ml-auto"
+            >
+              View all posts
+            </Button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            {filteredRelatedPosts.map((post) => (
+              <BlogCard post={post} />
+            ))}
+          </div>
+        </Wrapper>
+      </section>
+    )
+  }
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll("main a[href]");
+
+      links.forEach((link) => {
+        const href = link.getAttribute("href");
+
+        if (
+          !href ||
+          href.startsWith("#") ||
+          href.startsWith("mailto:") ||
+          href.startsWith("tel:")
+        ) {
+          return;
+        }
+
+        let url;
+
+        try {
+          url = new URL(href, window.location.href);
+        } catch {
+          return;
+        }
+
+        if (url.hostname !== window.location.hostname) {
+          link.setAttribute("target", "_blank");
+
+          const relValues = new Set(
+            (link.getAttribute("rel") || "")
+              .split(/\s+/)
+              .filter(Boolean)
+          );
+
+          relValues.add("noopener");
+          relValues.add("noreferrer");
+
+          link.setAttribute("rel", Array.from(relValues).join(" "));
+        }
+      });
+    });
+  </script>
+  <style is:inline>
+    .lozen-blog-body-section {
+      background:
+        radial-gradient(circle at 80% 6%, rgba(50, 70, 101, 0.08), transparent 34rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 252, 0.86));
+    }
+
+    .lozen-blog-article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2.5rem;
+      margin-inline: auto;
+      max-width: var(--lozen-prose-content-width);
+    }
+
+    .lozen-blog-article-shell {
+      min-width: 0;
+      width: 100%;
+    }
+
+    .lozen-blog-prose {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      max-width: none !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .lozen-blog-prose :where(h1) {
+      max-width: 13ch;
+      color: var(--color-base-950);
+      letter-spacing: 0.03em;
+    }
+
+    .lozen-blog-prose :where(p, ul, ol, blockquote) {
+      max-width: var(--lozen-prose-content-width);
+    }
+
+    .lozen-blog-prose :where(h2, h3, h4) {
+      max-width: var(--lozen-prose-content-width);
+    }
+
+    .lozen-blog-prose :where(blockquote) {
+      margin-left: 0;
+    }
+
+    .lozen-blog-inline-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+      align-items: center;
+      margin-top: 1.75rem;
+      padding: 0.875rem 1rem;
+      border: 1px solid rgba(112, 132, 158, 0.22);
+      border-radius: 1.25rem;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--color-base-700);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      line-height: 1.4;
+    }
+
+    .lozen-blog-inline-meta span,
+    .lozen-blog-inline-meta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .lozen-blog-inline-meta a {
+      color: var(--color-base-900);
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(196, 174, 46, 0.7);
+    }
+
+    .lozen-blog-inline-meta a:hover,
+    .lozen-blog-inline-meta a:focus-visible {
+      color: var(--color-base-950);
+      border-bottom-color: var(--color-accent-500);
+      outline: none;
+    }
+
+    .lozen-blog-rail {
+      display: none;
+    }
+
+    .lozen-blog-rail__card {
+      position: sticky;
+      top: 8rem;
+      overflow: hidden;
+      border: 1px solid rgba(112, 132, 158, 0.18);
+      border-radius: 1.25rem;
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: 0 1.25rem 3rem rgba(10, 24, 44, 0.12);
+      backdrop-filter: blur(14px);
+    }
+
+    .lozen-blog-rail__section {
+      padding: 1.125rem;
+      border-bottom: 1px solid rgba(112, 132, 158, 0.14);
+    }
+
+    .lozen-blog-rail__section:last-child {
+      border-bottom: 0;
+    }
+
+    .lozen-blog-rail__label {
+      margin: 0;
+      color: var(--color-base-600);
+      font-family: var(--font-sans);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .lozen-blog-rail__date {
+      display: block;
+      margin-top: 0.5rem;
+      color: var(--color-base-950);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    .lozen-blog-rail__tags {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin: 0.6rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .lozen-blog-rail__tags a,
+    .lozen-blog-rail__archive-link {
+      color: var(--color-base-900);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 650;
+      line-height: 1.45;
+      text-decoration: none;
+    }
+
+    .lozen-blog-rail__tags a:hover,
+    .lozen-blog-rail__tags a:focus-visible,
+    .lozen-blog-rail__archive-link:hover,
+    .lozen-blog-rail__archive-link:focus-visible {
+      color: var(--color-accent-700);
+      outline: none;
+    }
+
+    .lozen-blog-rail__archive-link {
+      display: inline-flex;
+      border-bottom: 1px solid rgba(196, 174, 46, 0.72);
+    }
+
+    @media (min-width: 1280px) {
+      .lozen-blog-article-layout {
+        grid-template-columns: minmax(0, var(--lozen-prose-content-width)) 13rem;
+        gap: 3rem;
+        align-items: start;
+        justify-content: center;
+        max-width: calc(var(--lozen-prose-content-width) + 16rem);
+      }
+
+      .lozen-blog-inline-meta {
+        display: none;
+      }
+
+      .lozen-blog-rail {
+        display: block;
+        min-width: 0;
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .lozen-blog-article-layout {
+        grid-template-columns: minmax(0, var(--lozen-prose-content-width)) 13rem;
+        gap: 4rem;
+        max-width: calc(var(--lozen-prose-content-width) + 17rem);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .lozen-blog-article-layout {
+        max-width: 100%;
+      }
+
+      .lozen-blog-inline-meta {
+        border-radius: 1rem;
+        padding: 0.8rem 0.9rem;
+      }
+
+      .lozen-blog-prose :where(h1) {
+        max-width: 100%;
+      }
+    }
+
+    .lozen-blog-share {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.625rem;
+      margin: 1.5rem 0 0;
+      font-family: var(--font-sans);
+    }
+
+    .lozen-blog-share__label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-base-700);
+    }
+
+    .lozen-blog-share__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-base-300);
+      border-radius: 999px;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--color-base-900);
+      background: rgba(255, 255, 255, 0.86);
+      text-decoration: none;
+      transition:
+        border-color 180ms ease,
+        background-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+    .lozen-blog-share__link:hover,
+    .lozen-blog-share__link:focus-visible {
+      border-color: var(--color-accent-600);
+      color: var(--color-base-950);
+      background: var(--color-accent-100);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    @media (max-width: 640px) {
+      .lozen-blog-share {
+        margin-top: 1.25rem;
+      }
+
+      .lozen-blog-share__link {
+        padding: 0.55rem 0.95rem;
+        font-size: 0.9375rem;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (document.querySelector(".lozen-blog-share")) return;
+
+      const heading = document.querySelector("main h1");
+      if (!heading) return;
+
+      const currentUrl = window.location.href.split("#")[0];
+      const pageTitle = document.title.replace(/\s*\|\s*Lozen Advisory\s*$/i, "").trim();
+
+      const links = [
+        {
+          label: "LinkedIn",
+          href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`,
+          external: true,
+        },
+        {
+          label: "X",
+          href: `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(pageTitle)}`,
+          external: true,
+        },
+        {
+          label: "Facebook",
+          href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`,
+          external: true,
+        },
+        {
+          label: "Email",
+          href: `mailto:?subject=${encodeURIComponent(pageTitle)}&body=${encodeURIComponent(currentUrl)}`,
+          external: false,
+        },
+      ];
+
+      const nav = document.createElement("nav");
+      nav.className = "lozen-blog-share";
+      nav.setAttribute("aria-label", "Share this article");
+
+      const label = document.createElement("span");
+      label.className = "lozen-blog-share__label";
+      label.textContent = "Share";
+      nav.appendChild(label);
+
+      links.forEach((item) => {
+        const link = document.createElement("a");
+        link.className = "lozen-blog-share__link";
+        link.href = item.href;
+        link.textContent = item.label;
+
+        if (item.external) {
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+        }
+
+        nav.appendChild(link);
+      });
+
+      heading.insertAdjacentElement("afterend", nav);
+    });
+  </script>
+
+</BaseLayout>

@@ -1,0 +1,1093 @@
+
+/*
+  AI LegiRisk Briefing Document System
+
+  Scope: Board AI Governance Snapshot, AI Accountability Exposure Check, Enterprise Exposure Map.
+  All three share this one system. Variants differ in content, not in tokens or components.
+
+  Type: Tenor Sans (display/headings, single weight — never request bold on it) and
+  DM Sans (body/UI text, 400 and 500 only). No mono family; labels use the body font
+  with size/case/tracking for distinction.
+
+  Hard constraints (do not relax these):
+  - Page background is always pure white. Never a warm/cream tint, anywhere, including
+    "surface" panels — printing this report should never cost more ink than plain text would.
+  - Body type sized and spaced for comfortable reading by a 50+ audience: no label or
+    caption text below ~14px, no continuous-reading paragraph wider than the --briefing-measure
+    token, no letter-spacing tightening on body copy.
+
+  Design standard:
+  - One-column report layout, centered, no sidebar reserve, no duplicate at-a-glance card.
+  - Enterprise Question uses a thick bordered block, never a filled dark block. It is the
+    one boxed/bordered moment on the page, on purpose — Primary Gap and the other section
+    headlines stay flat with a hairline rule above them, not a container.
+  - Enterprise exposure content supports a two-column architecture:
+    left = operating model + management examination; right = control visibility questions.
+  - Visual style reads as a governance-intelligence artifact, not a law-firm memo or a
+    marketing one-pager.
+  - Print is a derivative of the screen design, not a separate layout — the print block only
+    hides screen-only chrome and prevents bad page breaks. It does not resize type or
+    recompute margins; the browser's own print dialog owns paper size, margins, and scale.
+*/
+
+
+:root {
+  --briefing-font-display: "Tenor Sans", Arial, sans-serif;
+  --briefing-font-body: "DM Sans", Arial, sans-serif;
+
+  --briefing-page-max: 86rem;
+  --briefing-measure: 42rem;
+  --briefing-frame-margin: 1.75rem;
+
+  /* Display sizing is controlled through shared tokens. Tenor Sans reads smaller
+     than the prior display face at body-equivalent sizes, so report headlines and
+     question text sit above body scale while remaining restrained and print-friendly. */
+  --briefing-display-size: clamp(3rem, 4.2vw, 5rem);
+  --briefing-headline-size: clamp(1.45rem, 1.65vw, 1.8rem);
+  --briefing-quote-size: clamp(1.35rem, 1.55vw, 1.65rem);
+
+  --briefing-ink: #06172f;
+  --briefing-ink-strong: #031022;
+  --briefing-muted: #14294a;
+  --briefing-muted-2: #425873;
+
+  --briefing-paper: #ffffff;
+  --briefing-surface: #ffffff;
+  --briefing-surface-muted: #f5f8fb;
+
+  --briefing-navy: #06172f;
+  --briefing-accent: #0b1f3d;
+  --briefing-frame-blue: #1a56db;
+
+  --briefing-border: #d8e1ee;
+  --briefing-border-strong: #bdcadb;
+  --briefing-rule-soft: rgba(6, 23, 47, 0.14);
+
+  --briefing-teal: #0b6e7f;
+  --briefing-yellow: #f2d300;
+
+  --briefing-signal-low: #2f6f55;
+  --briefing-signal-moderate: #d97706;
+  --briefing-signal-high: #8c2f2f;
+
+  --briefing-focus-ring: #0b1f3d;
+
+  --briefing-shadow-flat: 0 1px 0 rgba(6, 23, 47, 0.06);
+}
+
+/* Page shell */
+
+.briefing-document {
+  min-height: 100vh;
+  margin: var(--briefing-frame-margin);
+  border: 5px solid var(--briefing-frame-blue);
+  background: var(--briefing-paper);
+  color: var(--briefing-ink);
+  font-family: var(--briefing-font-body);
+  font-size: 18px;
+  line-height: 1.64;
+  letter-spacing: normal;
+}
+
+.briefing-document * {
+  box-sizing: border-box;
+}
+
+.briefing-document a {
+  color: inherit;
+  text-decoration-color: rgba(6, 23, 47, 0.28);
+  text-underline-offset: 0.22em;
+}
+
+/* Hover color is scoped to inline prose links only. Buttons and CTAs set their
+   own color explicitly and must never inherit a hover rule from here. */
+.briefing-summary-lead a:hover,
+.briefing-doc-header-summary a:hover,
+.briefing-doc-header-gap a:hover,
+.briefing-body a:hover,
+.briefing-body-small a:hover,
+.briefing-conclusion-flat-text a:hover,
+.briefing-footer-note a:hover {
+  color: var(--briefing-accent);
+  text-decoration-color: var(--briefing-accent);
+}
+
+.briefing-document a:focus-visible,
+.briefing-document button:focus-visible {
+  outline: 2px solid var(--briefing-focus-ring);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Layout */
+
+.briefing-page {
+  width: min(100%, var(--briefing-page-max));
+  margin: 0 auto;
+  padding: 8rem 48px 6rem;
+}
+
+.briefing-page-grid {
+  display: block;
+}
+
+.briefing-main {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Masthead */
+
+.briefing-masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-bottom: 2px solid var(--briefing-border-strong);
+  padding-bottom: 1.05rem;
+  margin-bottom: 4.25rem;
+}
+
+.briefing-masthead-name {
+  margin: 0;
+  font-family: var(--briefing-font-display);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: normal;
+  color: var(--briefing-ink-strong);
+}
+
+.briefing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.briefing-doc-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 2.35rem;
+  border: 1px solid var(--briefing-frame-blue);
+  background: transparent;
+  color: var(--briefing-frame-blue);
+  padding: 0.58rem 0.85rem;
+  font-family: var(--briefing-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.briefing-doc-action:hover {
+  background: var(--briefing-frame-blue);
+  color: #ffffff;
+}
+
+.briefing-doc-action.is-primary {
+  border-color: var(--briefing-accent);
+  background: var(--briefing-accent);
+  color: #ffffff;
+}
+
+.briefing-doc-action.is-close {
+  border-color: var(--briefing-frame-blue);
+  color: var(--briefing-frame-blue);
+}
+
+.briefing-doc-action.is-primary:hover {
+  color: #ffffff;
+}
+
+.briefing-doc-action.is-close:hover {
+  background: var(--briefing-frame-blue);
+  color: #ffffff;
+}
+
+.briefing-doc-action svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Utility bar — hugs its own content; doesn't assume a second item exists */
+
+.briefing-util-bar {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  gap: 0.75rem;
+  border: 1px solid var(--briefing-border);
+  background: var(--briefing-surface);
+  padding: 0.65rem 1.1rem;
+  margin-bottom: 2.15rem;
+}
+
+.briefing-util-position {
+  font-family: var(--briefing-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--briefing-muted-2);
+  padding-left: 0.6rem;
+  border-left: 1px solid var(--briefing-border);
+}
+
+/* Typography */
+
+.briefing-document h1,
+.briefing-document h2,
+.briefing-document h3,
+.briefing-doc-header-title,
+.briefing-section-title,
+.briefing-card-title {
+  font-family: var(--briefing-font-display);
+  color: var(--briefing-ink-strong);
+}
+
+.briefing-doc-header-title {
+  margin: 0;
+  max-width: 64rem;
+  font-size: var(--briefing-display-size);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: normal;
+}
+
+/* Title-trail: a trailing citation/acronym on the H1 (e.g. the "(ADMT)" in
+   "Colorado SB 26-189 (ADMT)") rendered quieter than the rest of the headline —
+   same idea as Lovable's muted "— HB 172." treatment, adapted to how titles
+   are actually formatted here. Wired up automatically in the Astro template
+   via a trailing-parenthetical split; no manual markup needed. */
+.briefing-title-trail {
+  color: var(--briefing-muted-2);
+}
+
+/* Accent-word: spotlight exactly one key phrase inline in a sentence, instead
+   of making the whole sentence bigger or bolder. This is a content-authoring
+   tool, not something applied automatically to dynamic copy — wrap the one
+   phrase that earns it: <span class="briefing-accent-word">...</span>. */
+.briefing-accent-word {
+  color: var(--briefing-teal);
+}
+
+.briefing-section-title {
+  margin: 0;
+  font-size: var(--briefing-headline-size);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: normal;
+}
+
+.briefing-section-title-only {
+  max-width: 52rem;
+}
+
+.briefing-card-title {
+  margin: 0.45rem 0 0;
+  font-size: 1.18rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+.briefing-summary-lead,
+.briefing-body,
+.briefing-clean-list li,
+.briefing-question-list li,
+.briefing-doc-header-summary p,
+.briefing-doc-header-gap p,
+.briefing-conclusion-flat-text p {
+  font-size: 1.05rem;
+  line-height: 1.68;
+}
+
+.briefing-summary-lead {
+  margin: 0;
+  max-width: var(--briefing-measure);
+  font-family: var(--briefing-font-body);
+  font-weight: 400;
+  color: var(--briefing-muted);
+}
+
+.briefing-body {
+  margin: 0;
+  max-width: var(--briefing-measure);
+  color: var(--briefing-muted);
+}
+
+.briefing-body-small {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.62;
+  color: var(--briefing-muted);
+}
+
+.briefing-eyebrow,
+.briefing-section-number,
+.briefing-meta {
+  font-family: var(--briefing-font-body);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.briefing-eyebrow,
+.briefing-section-number {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  color: var(--briefing-accent);
+}
+
+.briefing-section-number {
+  color: var(--briefing-muted-2);
+}
+
+.briefing-meta {
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  color: var(--briefing-muted-2);
+}
+
+/* Report header */
+
+.briefing-doc-header {
+  margin-bottom: 4rem;
+  padding-bottom: 3.25rem;
+  border-bottom: 2px solid var(--briefing-border-strong);
+}
+
+.briefing-doc-header-summary {
+  margin-top: 1.35rem;
+}
+
+.briefing-doc-header-summary p {
+  margin: 0;
+  max-width: var(--briefing-measure);
+  color: var(--briefing-muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.briefing-doc-header-summary-with-icon {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.95rem;
+  align-items: start;
+}
+
+.briefing-summary-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  margin-top: 0.2rem;
+  color: var(--briefing-teal);
+}
+
+.briefing-summary-icon svg {
+  width: 1.65rem;
+  height: 1.65rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.briefing-doc-header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0;
+  margin-top: 1.65rem;
+}
+
+.briefing-doc-header-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 13.5rem;
+  padding: 0.1rem 1.65rem 0.1rem 0;
+  margin-right: 1.65rem;
+  border-right: 1px solid var(--briefing-rule-soft);
+}
+
+.briefing-doc-header-meta-item:last-child {
+  border-right: 0;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.briefing-doc-header-meta-label {
+  font-family: var(--briefing-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--briefing-muted-2);
+}
+
+.briefing-doc-header-meta-value {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--briefing-ink);
+}
+
+/* Signal pill — color is always paired with a label and a dot, never used alone */
+
+.briefing-signal-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  padding: 0.26rem 0.75rem 0.26rem 0.6rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--briefing-muted-2);
+  border-color: var(--briefing-border-strong);
+}
+
+.briefing-signal-pill .briefing-signal-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: currentColor;
+  flex: 0 0 auto;
+}
+
+.briefing-signal-pill[data-level="low"] {
+  color: var(--briefing-signal-low);
+  border-color: var(--briefing-signal-low);
+}
+
+.briefing-signal-pill[data-level="moderate"] {
+  color: var(--briefing-signal-moderate);
+  border-color: var(--briefing-signal-moderate);
+}
+
+.briefing-signal-pill[data-level="high"] {
+  color: var(--briefing-signal-high);
+  border-color: var(--briefing-signal-high);
+}
+
+/* Primary gap — a hairline rule and an eyebrow, exactly like every other section
+   break in this document. No background, no border-left, no padding box: a tinted
+   bordered container is a "this is an aside" signal, and Primary Gap is the
+   opposite of an aside. The one boxed/bordered moment on this page belongs to
+   the Enterprise Question block below, on purpose, and only there. */
+
+.briefing-primary-gap {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding-top: 3rem;
+  border-top: 2px solid var(--briefing-border-strong);
+  max-width: 48rem;
+}
+
+/* Enterprise Question / bordered question block */
+
+.briefing-hero,
+.briefing-hero-flat {
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.briefing-hero-flat > div {
+  max-width: none;
+}
+
+.briefing-question-card,
+.briefing-question {
+  border: 3px solid var(--briefing-navy);
+  background: var(--briefing-paper);
+  color: var(--briefing-ink);
+  padding: 1.85rem 2.1rem;
+}
+
+.briefing-question blockquote,
+.briefing-question-card blockquote,
+.briefing-question-card p:last-child {
+  margin: 0;
+  max-width: 52rem;
+  font-family: var(--briefing-font-display);
+  font-size: var(--briefing-quote-size);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: normal;
+  color: var(--briefing-ink-strong);
+}
+
+/* Sections */
+
+.briefing-section {
+  border-top: 1px solid var(--briefing-border-strong);
+  padding-top: 1.35rem;
+  margin-top: 2rem;
+}
+
+.briefing-exposure-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  gap: 4.75rem;
+  align-items: start;
+  border-top: 2px solid var(--briefing-border-strong);
+  padding-top: 3.75rem;
+  margin-top: 4rem;
+}
+
+.briefing-exposure-column {
+  min-width: 0;
+}
+
+.briefing-exposure-column .briefing-section-title {
+  margin-bottom: 1.25rem;
+}
+
+.briefing-exposure-kicker {
+  margin: 0 0 1rem;
+  font-family: var(--briefing-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--briefing-teal);
+}
+
+.briefing-exposure-title {
+  margin: 0 0 1.35rem;
+  font-family: var(--briefing-font-display);
+  font-size: var(--briefing-headline-size);
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: normal;
+  color: var(--briefing-ink-strong);
+}
+
+.briefing-exposure-subhead {
+  margin: 1.45rem 0 0.85rem;
+  font-family: var(--briefing-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--briefing-muted-2);
+}
+
+.briefing-source-note {
+  margin-top: 1.25rem;
+  padding: 1rem 1.15rem;
+  border-left: 2px solid var(--briefing-border-strong);
+  background: var(--briefing-surface-muted);
+}
+
+.briefing-source-note p {
+  margin: 0.35rem 0 0;
+  max-width: var(--briefing-measure);
+  font-size: 1rem;
+  line-height: 1.62;
+  color: var(--briefing-muted);
+}
+
+/* Lists */
+
+.briefing-clean-list,
+.briefing-dash-list,
+.briefing-control-list,
+.briefing-question-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.briefing-clean-list {
+  gap: 0.75rem;
+}
+
+.briefing-clean-list li {
+  border-top: 1px solid var(--briefing-border);
+  padding-top: 0.75rem;
+  color: var(--briefing-muted);
+}
+
+.briefing-clean-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.briefing-dash-list {
+  gap: 1rem;
+}
+
+.briefing-dash-list li {
+  display: grid;
+  grid-template-columns: 1.35rem minmax(0, 1fr);
+  gap: 0.7rem;
+  color: var(--briefing-muted);
+  font-size: 1.05rem;
+  line-height: 1.66;
+}
+
+.briefing-dash-list li::before {
+  content: "—";
+  color: var(--briefing-teal);
+  font-weight: 500;
+}
+
+.briefing-control-list,
+.briefing-question-list {
+  gap: 1rem;
+  counter-reset: briefing-question;
+}
+
+.briefing-control-list li,
+.briefing-question-list li {
+  position: relative;
+  border: 0;
+  border-left: 3px solid rgba(90, 58, 26, 0.42);
+  background: transparent;
+  padding: 0.12rem 0 0.12rem 1.2rem;
+  color: var(--briefing-muted);
+  font-size: 1.05rem;
+  line-height: 1.66;
+}
+
+.briefing-control-list li::before,
+.briefing-question-list li::before {
+  counter-increment: briefing-question;
+  content: "Q" counter(briefing-question);
+  display: inline-block;
+  margin-right: 0.6rem;
+  font-family: var(--briefing-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--briefing-muted-2);
+}
+
+/* Cards (kept for now — confirm whether Board Executive Briefing / Name Standard
+   actually use these; they're unused in Enterprise Exposure Map) */
+
+.briefing-card {
+  border: 1px solid var(--briefing-border);
+  background: var(--briefing-surface);
+  padding: 1.15rem;
+  box-shadow: var(--briefing-shadow-flat);
+}
+
+.briefing-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.briefing-card-grid.is-three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.briefing-card-grid.is-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Enterprise relevance — audience matrix. Content and layout brought over
+   from the Lovable reference by request; the dark full-bleed fill it used
+   there was NOT brought over — that's the same print-cost problem the
+   legacy .briefing-enterprise-relevance band already failed on and was
+   retired for. Flat, white, hairline-divided, consistent with every other
+   section in this system. */
+
+.briefing-relevance {
+  margin-top: 4rem;
+  padding-top: 4.5rem;
+  border-top: 2px solid var(--briefing-border-strong);
+}
+
+.briefing-relevance-lead {
+  max-width: 36rem;
+  margin: 1.25rem 0 0;
+  color: var(--briefing-muted);
+  font-size: 1.05rem;
+  line-height: 1.62;
+}
+
+.briefing-relevance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 3rem;
+  border-top: 2px solid var(--briefing-border-strong);
+  border-bottom: 2px solid var(--briefing-border-strong);
+}
+
+.briefing-relevance-cell {
+  padding: 2rem 1.75rem 1.5rem 0;
+  border-right: 2px solid var(--briefing-border-strong);
+}
+
+.briefing-relevance-cell:first-child {
+  padding-left: 0;
+}
+
+.briefing-relevance-cell:last-child {
+  border-right: 0;
+}
+
+.briefing-relevance-index {
+  margin: 0;
+  font-family: var(--briefing-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--briefing-muted-2);
+}
+
+.briefing-relevance-role {
+  margin: 0.75rem 0 0;
+  font-family: var(--briefing-font-display);
+  font-size: clamp(1.15rem, 1.3vw, 1.35rem);
+  font-weight: 400;
+  line-height: 1.26;
+  letter-spacing: normal;
+  color: var(--briefing-ink-strong);
+}
+
+.briefing-relevance-focus {
+  margin: 0.6rem 0 0;
+  color: var(--briefing-muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+/* Conclusion / close briefing standard */
+
+.briefing-conclusion-flat {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  border-top: 2px solid var(--briefing-border-strong);
+  border-bottom: 2px solid var(--briefing-border-strong);
+  background: var(--briefing-paper);
+  padding: 2.6rem 0;
+  margin-top: 4rem;
+}
+
+.briefing-conclusion-flat-text p {
+  margin: 1rem 0 0;
+  max-width: var(--briefing-measure);
+  color: var(--briefing-muted);
+}
+
+.briefing-conclusion-flat-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.briefing-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  border: 1px solid var(--briefing-border-strong);
+  background: transparent;
+  color: var(--briefing-ink);
+  padding: 0.8rem 1.2rem;
+  font-family: var(--briefing-font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.briefing-cta-button.is-primary {
+  border-color: var(--briefing-yellow);
+  background: var(--briefing-yellow);
+  color: var(--briefing-navy);
+}
+
+.briefing-cta-button.is-secondary {
+  border-color: var(--briefing-border);
+  background: #ffffff;
+  color: var(--briefing-ink);
+}
+
+.briefing-cta-button:hover {
+  transform: translateY(-1px);
+}
+
+.briefing-cta-button.is-primary:hover {
+  color: var(--briefing-navy);
+}
+
+.briefing-cta-button.is-secondary:hover {
+  color: var(--briefing-ink);
+}
+
+/* Footer */
+
+.briefing-footer-note {
+  border-top: 1px solid var(--briefing-border);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.briefing-footer-note .briefing-body-small {
+  max-width: 48rem;
+  font-size: 1rem;
+  line-height: 1.58;
+  color: var(--briefing-muted-2);
+}
+
+/*
+  Page nav remains available for multi-page reports such as Name Standard(SM).
+  Enterprise Exposure Map should not render bottom page nav.
+*/
+
+.briefing-page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: 1px solid var(--briefing-border);
+  background: var(--briefing-surface-muted);
+  padding: 0.75rem 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.briefing-page-jump {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.briefing-page-jump a {
+  font-family: var(--briefing-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--briefing-ink);
+  text-decoration: none;
+  padding: 0.45rem 0.72rem;
+  border: 1px solid var(--briefing-border);
+  background: var(--briefing-surface);
+}
+
+.briefing-page-jump a.is-active {
+  background: var(--briefing-accent);
+  border-color: var(--briefing-accent);
+  color: #ffffff;
+}
+
+.briefing-page-nav-meta {
+  font-family: var(--briefing-font-body);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--briefing-muted-2);
+}
+
+/* Visibility helpers */
+
+.print-only {
+  display: none;
+}
+
+.screen-only {
+  display: block;
+}
+
+/* Print behavior */
+
+@media print {
+  /* Print is a derivative of the screen design, not a separate layout. No
+     hand-computed paper size, margins, or font-size table here — the
+     browser's own print dialog already owns page size, margins, scale, and
+     whether background colors print at all. This block does exactly two
+     things: hide screen-only chrome, and stop a box from splitting awkwardly
+     across a page break. Nothing here makes anything smaller or tighter than
+     it is on screen. A multi-page printout is a normal, expected outcome. */
+
+  html,
+  body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .briefing-document {
+    border: none;
+    margin: 0;
+    background: #ffffff !important;
+  }
+
+  .briefing-section,
+  .briefing-primary-gap,
+  .briefing-question,
+  .briefing-question-card,
+  .briefing-card,
+  .briefing-source-note,
+  .briefing-relevance-cell,
+  .briefing-conclusion-flat {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .briefing-actions,
+  .briefing-util-bar,
+  .briefing-doc-action,
+  .briefing-conclusion-flat-actions,
+  .briefing-page-nav,
+  button,
+  nav,
+  .site-header,
+  .site-footer,
+  .no-print,
+  .screen-only {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  a[href]::after {
+    content: "";
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 980px) {
+  .briefing-document {
+    margin: 0.85rem;
+  }
+
+  .briefing-page {
+    padding: 4.5rem 24px 3.5rem;
+  }
+
+  .briefing-masthead {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .briefing-actions {
+    justify-content: flex-start;
+  }
+
+  .briefing-doc-header-title {
+    max-width: none;
+  }
+
+  .briefing-card-grid,
+  .briefing-card-grid.is-three,
+  .briefing-card-grid.is-four {
+    grid-template-columns: 1fr;
+  }
+
+  .briefing-conclusion-flat,
+  .briefing-exposure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .briefing-relevance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .briefing-relevance-cell:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .briefing-relevance-cell:nth-child(3),
+  .briefing-relevance-cell:nth-child(4) {
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--briefing-border-strong);
+  }
+
+  .briefing-question,
+  .briefing-question-card {
+    padding: 1.45rem;
+  }
+
+  .briefing-primary-gap {
+    padding-top: 1.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .briefing-document {
+    font-size: 17px;
+    margin: 0.4rem;
+  }
+
+  .briefing-page {
+    padding-inline: 18px;
+  }
+
+  .briefing-util-bar {
+    width: auto;
+    display: inline-flex;
+  }
+
+  .briefing-doc-header-meta {
+    gap: 1rem;
+  }
+
+  .briefing-doc-header-meta-item {
+    min-width: 100%;
+    margin-right: 0;
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .briefing-doc-header-title {
+    font-size: clamp(2.35rem, 13vw, 3.45rem);
+  }
+
+
+  .briefing-relevance-grid {
+    grid-template-columns: 1fr;
+    border-top: 0;
+  }
+
+  .briefing-relevance-cell {
+    padding: 1.1rem 0;
+    border-right: 0;
+    border-top: 2px solid var(--briefing-border-strong);
+  }
+
+  .briefing-relevance-cell:first-child {
+    padding-left: 0;
+    border-top: 0;
+  }
+}

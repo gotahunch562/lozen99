@@ -1,0 +1,111 @@
+---
+// Fundations
+import "@/styles/global.css";
+import BaseHead from "@/components/fundations/head/BaseHead.astro";
+import type { JsonLdObject } from "@/lib/seo/jsonLd";
+import {
+  createJsonLdGraph,
+  createOrganizationJsonLd,
+  createWebPageJsonLd,
+  createWebSiteJsonLd,
+  serializeJsonLd,
+} from "@/lib/seo/jsonLd";
+
+// Components
+import Search from "@/components/global/Search.astro";
+import Footer from "@/components/global/Footer.astro";
+import Navigation from "@/components/global/Navigation.astro";
+import Statcounter from "@/components/fundations/scripts/Statcounter.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  metaDescription?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+  ogType?: "website" | "article";
+  jsonLd?: JsonLdObject | JsonLdObject[];
+  includeBaseJsonLd?: boolean;
+  hideNavigation?: boolean;
+  hideFooter?: boolean;
+  dateModified?: string;
+}
+
+// Hides the navigation, or footer on selected screens by passing props:
+// <BaseLayout hideNavigation={true} hideFooter={true}>
+const {
+  title,
+  description,
+  metaDescription,
+  canonical,
+  ogImage,
+  ogImageAlt,
+  ogType,
+  jsonLd,
+  includeBaseJsonLd = true,
+  hideNavigation = false,
+  hideFooter = false,
+  dateModified,
+} = Astro.props;
+
+const jsonLdItems = (Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []) as JsonLdObject[];
+
+const hasWebPageJsonLd = jsonLdItems.some((item) => {
+  if (item["@type"] === "WebPage") return true;
+  const graph = item["@graph"];
+
+  return Array.isArray(graph) && graph.some((node) => {
+    return typeof node === "object" && node !== null && (node as JsonLdObject)["@type"] === "WebPage";
+  });
+});
+
+const canonicalHref = canonical ?? Astro.url.pathname;
+const defaultWebPageJsonLd =
+  includeBaseJsonLd &&
+  title &&
+  canonicalHref &&
+  !hasWebPageJsonLd
+    ? createWebPageJsonLd({
+        title,
+        description: description ?? metaDescription,
+        href: canonicalHref,
+        image: ogImage,
+        dateModified,
+      })
+    : undefined;
+
+const jsonLdGraph = createJsonLdGraph([
+  includeBaseJsonLd && createOrganizationJsonLd(),
+  includeBaseJsonLd && createWebSiteJsonLd(),
+  defaultWebPageJsonLd,
+  jsonLd,
+]);
+const hasJsonLd = Array.isArray(jsonLdGraph["@graph"]) && jsonLdGraph["@graph"].length > 0;
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <BaseHead
+      title={title}
+      description={description ?? metaDescription}
+      canonical={canonical}
+      ogImage={ogImage}
+      ogImageAlt={ogImageAlt}
+      ogType={ogType}
+    />
+    {hasJsonLd && <script type="application/ld+json" set:html={serializeJsonLd(jsonLdGraph)} />}
+  </head>
+
+  <body class="flex min-h-dvh flex-col">
+    {!hideNavigation && <Navigation />}
+    <main class="grow">
+      <slot />
+    </main>
+    {!hideFooter && <Footer />}
+    <div class="hidden xl:block">
+      <Search />
+    </div>
+    <Statcounter />
+  </body>
+</html>

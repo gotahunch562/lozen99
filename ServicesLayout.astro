@@ -1,0 +1,30 @@
+---
+import ServiceEditorial from "@/components/authority/ServiceEditorial.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const { frontmatter, slug } = Astro.props;
+
+const title = `${frontmatter.title} — Lozen Advisory`;
+const description = frontmatter.metaDescription || frontmatter.deck || frontmatter.description;
+const canonical = `https://www.lozenadvisory.com/services/${slug}/`;
+---
+
+<BaseLayout title={title} description={description} canonical={canonical} ogType="website">
+  <ServiceEditorial
+    eyebrow={frontmatter.eyebrow}
+    headline={frontmatter.headline}
+    deck={frontmatter.deck}
+    framingLabel={frontmatter.framingLabel}
+    whoItsForLabel={frontmatter.whoItsForLabel}
+    whoItsFor={frontmatter.whoItsFor}
+    examineLabel={frontmatter.examineLabel}
+    examine={frontmatter.examine}
+    formatLabel={frontmatter.formatLabel}
+    formatStatement={frontmatter.formatStatement}
+    formatBody={frontmatter.formatBody}
+    closingLine={frontmatter.closingLine}
+    ctaSubject={frontmatter.ctaSubject}
+  >
+    <Fragment slot="framing" set:html={frontmatter.framingQuoteHtml} />
+  </ServiceEditorial>
+</BaseLayout>

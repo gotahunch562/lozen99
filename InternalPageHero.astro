@@ -1,0 +1,44 @@
+---
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  deck: string;
+}
+
+const { eyebrow, title, deck } = Astro.props;
+---
+
+<section class="lozen-internal-hero">
+  <Wrapper variant="standard" class="lozen-internal-hero__wrapper">
+    <div class="lozen-internal-hero__grid">
+      <div>
+        <Text
+          tag="span"
+          variant="textSM"
+          class="lozen-internal-hero__eyebrow"
+        >
+          {eyebrow}
+        </Text>
+
+        <Text
+          tag="h1"
+          variant="displayXL"
+          class="lozen-internal-hero__title"
+        >
+          {title}
+        </Text>
+      </div>
+
+      <Text
+        tag="p"
+        variant="textBase"
+        class="lozen-internal-hero__deck"
+      >
+        {deck}
+      </Text>
+    </div>
+  </Wrapper>
+</section>
