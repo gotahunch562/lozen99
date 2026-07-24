@@ -1,6 +1,6 @@
 ---
 dateModified: 2026-07-21
-title: "Board AI Name Standard Briefing"
+title: "Board AI Name Standard℠ Briefing"
 eyebrow: "Fixed-Scope Advisory"
 headline: "Does your AI governance framework work."
 deck: "The Governance Name Standard℠ Briefing is where you find out the answer — before a regulator, an insurer, or a plaintiff's counsel does."
