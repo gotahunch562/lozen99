@@ -1,184 +1,44 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import CtaStrip from '../components/CtaStrip.astro';
-import FounderPortrait from '../components/FounderPortrait.astro';
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { createWebPageJsonLd } from "@/lib/seo/jsonLd";
+
+import Hero from "@/components/landing/Hero.astro";
+import BenefitsUtilizationSection from "@/components/landing/BenefitsUtilizationSection.astro";
+import IntelligenceAnalysisSection from "@/components/landing/IntelligenceAnalysisSection.astro";
+import PolicyGovernanceTrackerSection from "@/components/landing/PolicyGovernanceTrackerSection.astro";
+import WhatWeDoSection from "@/components/landing/WhatWeDoSection.astro";
+import AdvisoryFoundationSection from "@/components/landing/AdvisoryFoundationSection.astro";
+import AiGovernanceRetentionSection from "@/components/landing/AiGovernanceRetentionSection.astro";
+import BlogPreviewSection from "@/components/landing/BlogPreviewSection.astro";
+
+const title = "Lozen Advisory | Board Governance: AI & Menopause at Work";
+const description =
+"Lozen Advisory equips corporate boards with disclosure-independent governance for hidden risks: menopause at work and human-in-the-loop AI gaps.";
+const canonical = "https://www.lozenadvisory.com/";
+const dateModified = "2026-07-03";
+
+const pageJsonLd = createWebPageJsonLd({
+  title,
+  description,
+  dateModified,
+  href: canonical,
+  image: "/images/herobg.webp",
+});
 ---
 
-<BaseLayout title="Lozen Advisory | Board & CFO AI Governance Advisory" description="Lozen Advisory helps boards, CFOs, legal, and risk leaders evaluate AI accountability, authorization, and financial exposure using the Name Standard℠ and Disclosure-Independent Governance℠.">
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="grid-bg"></div>
-  <div class="wrap hero-inner">
-    <div>
-      <span class="pill"><span class="dot"></span> Board &amp; Governance Advisory</span>
-      <h1>AI Governance Is an <span class="hl">Accountability Problem</span></h1>
-      <p class="sub">Corporate boards are being asked to prove human accountability for AI-assisted decisions, disclosures, and enterprise actions — before a regulator, insurer, or plaintiff asks first. Lozen Advisory builds the evidence layer that makes that accountability defensible.</p>
-      <div class="hero-cta">
-        <a href="/request-briefing/" class="btn btn-accent">Request a Briefing →</a>
-        <a href="#services" class="btn btn-ghost">Explore Services</a>
-      </div>
-      <div class="trustline">
-        Founded by a U.S. Marine Corps veteran &amp; American Economic Review contributor · Chicago, IL
-      </div>
-    </div>
-    <div class="hero-card reveal">
-      <h4>What Boards Need to Answer</h4>
-
-      <div class="mini-stats">
-        <div class="mini">
-          <div class="n">01</div>
-          <div class="l">Who owned the decision?</div>
-        </div>
-
-        <div class="mini">
-          <div class="n">02</div>
-          <div class="l">What evidence was available?</div>
-        </div>
-
-        <div class="mini">
-          <div class="n">03</div>
-          <div class="l">Who had authority to approve or refuse?</div>
-        </div>
-
-        <div class="mini">
-          <div class="n">04</div>
-          <div class="l">What can the operating record prove?</div>
-        </div>
-      </div>
-
-      <div class="flags">
-        <span>AI accountability</span>
-        <span>Board oversight</span>
-        <span>Human attribution</span>
-        <span>Workforce materiality</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MARQUEE ============ -->
-<div class="marquee">
-  <div class="track">
-    <span>ALGORITHMIC ACCOUNTABILITY</span><span>•</span>
-    <span>BOARD AI GOVERNANCE</span><span>•</span>
-    <span>CFO MARKET INTELLIGENCE</span><span>•</span>
-    <span>THE NAME STANDARD℠</span><span>•</span>
-    <span>AI WORKFORCE MATERIALITY</span><span>•</span>
-    <span>DISCLOSURE-INDEPENDENT GOVERNANCE℠</span><span>•</span>
-
-    <span>ALGORITHMIC ACCOUNTABILITY</span><span>•</span>
-    <span>BOARD AI GOVERNANCE</span><span>•</span>
-    <span>CFO MARKET INTELLIGENCE</span><span>•</span>
-    <span>THE NAME STANDARD℠</span><span>•</span>
-    <span>AI WORKFORCE MATERIALITY</span><span>•</span>
-    <span>DISCLOSURE-INDEPENDENT GOVERNANCE℠</span><span>•</span>
-  </div>
-</div>
-
-<!-- ============ SERVICES (BENTO) ============ -->
-<section id="services">
-  <div class="wrap">
-    <div class="center" style="max-width:680px">
-      <span class="eyebrow">What we do</span>
-      <h2 class="h2">Advisory built around a single governance question</h2>
-      <p class="lead">From board-level AI accountability to CFO investment scrutiny, every engagement answers the same question: who is accountable, and can it be proven?</p>
-    </div>
-    <div class="bento">
-      <a href="/service-board-ai-governance-advisory/" class="card span3 feat reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><h3>Board AI Governance Advisory</h3><p>Your AI governance framework may exist. Your evidence of who was accountable may not — ongoing advisory for boards, CFOs, legal, and risk leaders.</p><span class="go">Learn more →</span></a>
-      <a href="/service-cfo-market-intelligence/" class="card span3 reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h3>CFO Market Intelligence</h3><p>Independent analysis for CFOs evaluating whether enterprise AI investment produces measurable returns — or transfers costs into hidden implementation and workforce exposure.</p><span class="go">Learn more →</span></a>
-      <a href="/service-board-ai-algorithmic-accountability/" class="card span2 reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div><h3>Algorithmic Accountability Risk</h3><p>Caremark oversight, D&amp;O exposure, and insurance underwriting now ask the same question: who was accountable, and can the organization prove it?</p><span class="go">Learn more →</span></a>
-      <a href="/service-board-ai-name-standard-advisory/" class="card span2 reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3>Name Standard℠ Advisory</h3><p>The Name Standard℠ tests whether the answer to who was accountable would actually hold up under a board, regulator, or subpoena.</p><span class="go">Learn more →</span></a>
-      <a href="/service-ai-workforce-materiality/" class="card span2 reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>AI Workforce Materiality</h3><p>Stop measuring software adoption. Start governing human-capital exposure — a 90-minute paid briefing for boards, CFOs, GCs, and CHROs.</p><span class="go">Learn more →</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ GOVERNANCE BLIND SPOT ============ -->
-<section class="pain">
-  <div class="wrap">
-    <div class="center" style="max-width:760px">
-      <span class="eyebrow">The core problem</span>
-      <h2 class="h2">Institutions can't govern what their systems weren't built to see</h2>
-      <p class="lead">In disclosure-dependent systems, silence is misread as absence, low utilization is misread as low need, and missing data produces false institutional confidence.</p>
-    </div>
-    <div class="pain-grid">
-      <div class="pain-item reveal"><div class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div><p><strong>Disclosure-dependent risk</strong> — institutional exposure produced when the evidence base depends on voluntary disclosure by the population most affected.</p></div>
-      <div class="pain-item reveal"><div class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div><p><strong>Unmeasured human capacity</strong> — the cognitive and governance burden absorbed by employees with technical proficiency and institutional knowledge, without organizational recognition.</p></div>
-      <div class="pain-item reveal"><div class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div><p><strong>Institutional opacity</strong> — the structural condition in which organizations cannot see what they cannot measure.</p></div>
-      <div class="pain-item reveal"><div class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></div><p><strong>Vendor / deployer exposure</strong> — accountability gaps created when AI systems are operated by third parties whose governance standards sit outside internal controls.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FOUNDER ============ -->
-<section id="founder">
-  <div class="wrap mentor-wrap">
-    <div class="mentor-photo reveal">
-      <FounderPortrait variant="mentor" alt="Akilah E. Kamaria, Founder &amp; Lead Advisor" />
-      <div class="mentor-badge">
-        <div><div class="nm">Akilah E. Kamaria</div><div class="rl">Founder &amp; Lead Advisor</div></div>
-        <div style="text-align:right"><div class="big">USMC</div><div class="rl">Veteran</div></div>
-      </div>
-    </div>
-    <div class="reveal">
-      <span class="eyebrow">Meet your lead advisor</span>
-      <h2 class="h2">Hi, I'm Akilah E. Kamaria</h2>
-      <p class="mentor-quote">I started my career as a data analyst, later contributing to landmark American Bar Foundation research on race and gender discrimination — published in The American Economic Review — and to foundational work on cybersecurity information sharing at the ISAO Standards Organization.<br><br>Lozen Advisory exists because institutions cannot govern what their systems were not designed to see. Menopause-at-work made that failure visible. AI workforce risk is a second observation of the same condition.</p>
-      <div class="mentor-sign">— Akilah E. Kamaria</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHAT THE ENGAGEMENT ESTABLISHES ============ -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="center" style="max-width:680px">
-      <span class="eyebrow">The Name Standard℠</span>
-      <h2 class="h2">What the engagement establishes</h2>
-    </div>
-    <div class="gain-grid">
-      <div class="gain reveal"><span class="ck">✓</span><p>Time Allocation — the responsible individual has the operational hours to verify AI-assisted outputs</p></div>
-      <div class="gain reveal"><span class="ck">✓</span><p>Review Capacity — the reviewer has the diagnostic source data to actively validate outputs</p></div>
-      <div class="gain reveal"><span class="ck">✓</span><p>Information Access — clear line of sight into content provenance and vendor-utilized models</p></div>
-      <div class="gain reveal"><span class="ck">✓</span><p>Documentation Infrastructure — human validation logged as internal compliance evidence</p></div>
-      <div class="gain reveal"><span class="ck">✓</span><p>Formal Right of Refusal — standing to halt, escalate, or document non-compliant AI outputs</p></div>
-      <div class="gain reveal"><span class="ck">✓</span><p>A board-ready answer to one question: when the AI gets it wrong, whose name is on it?</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SIGNATURE OBSERVATIONS ============ -->
-<section id="testi">
-  <div class="wrap">
-    <div class="center" style="max-width:680px">
-      <span class="eyebrow">In her words</span>
-      <h2 class="h2">Signature observations</h2>
-    </div>
-    <div class="t-grid">
-      <div class="t-card reveal"><p>"A guardrail may limit what an AI system can do. The Name Standard℠ asks who is responsible when it does it."</p><div class="who"><div class="av">AK</div><div><div class="nm">Akilah E. Kamaria</div><div class="rl">Founder, Lozen Advisory</div></div></div></div>
-      <div class="t-card reveal"><p>"The boardroom problem with AI is attribution and accountability."</p><div class="who"><div class="av">AK</div><div><div class="nm">Akilah E. Kamaria</div><div class="rl">Founder, Lozen Advisory</div></div></div></div>
-      <div class="t-card reveal"><p>"If management cannot answer the synthetic subpoena questions under a simulated request, they will not be able to answer them under a real one."</p><div class="who"><div class="av">AK</div><div><div class="nm">Akilah E. Kamaria</div><div class="rl">Founder, Lozen Advisory</div></div></div></div>
-    </div>
-    <p class="center lead" style="margin-top:46px;font-size:15px">Cited and published —</p>
-    <div class="logos">
-      <div class="lg">SSRN</div>
-      <div class="lg">SHRM</div>
-      <div class="lg">American Economic Review</div>
-      <div class="lg">National Law Review</div>
-      <div class="lg">ISAO Standards Org.</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA / CONTACT ============ -->
-<CtaStrip
-  id="contact"
-  title="Is your board receiving enough evidence to govern AI risk?"
-  description="Request a briefing for board, CFO, legal, or risk leadership on accountability gaps, human-attribution exposure, and what the operating record can actually prove."
-  primaryHref="/request-briefing/"
-  primaryLabel="Request a Board Briefing →"
-  secondaryHref="/contact/"
-  secondaryLabel="Contact Us"
-  paddedTop={true}
-/>
+<BaseLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  dateModified={dateModified}
+  jsonLd={pageJsonLd}
+>
+  <Hero />
+  <BenefitsUtilizationSection />
+  <AiGovernanceRetentionSection />
+  <IntelligenceAnalysisSection />
+  <PolicyGovernanceTrackerSection />
+  <WhatWeDoSection />
+  <AdvisoryFoundationSection />
+  <BlogPreviewSection />
 </BaseLayout>
