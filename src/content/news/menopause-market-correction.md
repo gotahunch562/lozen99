@@ -6,7 +6,7 @@ metaDescription: "The menopause-at-work market followed the playbook, but the pl
 pubDate: 2026-05-19
 category: "Market Correction"
 releaseLabel: "For Immediate Release"
-image: "/images/news/menopause-market-correction.jpg"
+image: "/news/menopause-market-correction.jpg"
 imageAlt: "Navy silhouette of a professional woman raising one hand."
 imageCaption: "Navy silhouette of a professional woman raising one hand. Credit: Lozen Advisory LLC."
 ---
