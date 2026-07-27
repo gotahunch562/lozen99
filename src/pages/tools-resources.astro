@@ -1,116 +1,54 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import InternalPageHero from "@/components/fundations/sections/InternalPageHero.astro";
-import Text from "@/components/fundations/elements/Text.astro";
-import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const resources = [
   {
-    label: "AI Governance Workbook",
-    title: "Human Accountability Trace (HAT)",
-    description:
-      "A governance workbook that tests whether your AI-assisted decisions are still traceable to an accountable human—and flags the ones that are not. Built on The Name Standard℠, HAT classifies decisions as Attributed, Nominally Attributed, Fragmented, Unattributed, or Non-Verifiable and summarizes exposure in a remediation dashboard.",
-    meta: "Excel workbook · Free download",
-    cta: "Download Human Accountability Trace (HAT)",
-    href: "/download/name-standard-human-accountability-trace-v8.xlsx",
+    label: 'AI Governance Workbook',
+    title: 'Human Accountability Trace (HAT)',
+    description: "A governance workbook that tests whether your AI-assisted decisions are still traceable to an accountable human — and flags the ones that are not. Built on The Name Standard℠, HAT classifies decisions as Attributed, Nominally Attributed, Fragmented, Unattributed, or Non-Verifiable and summarizes exposure in a remediation dashboard.",
+    meta: 'Excel workbook · Free download',
+    cta: 'Download Human Accountability Trace (HAT)',
+    href: '/download/name-standard-human-accountability-trace-v8.xlsx',
     download: true,
   },
   {
-    label: "Conference Handout",
-    title: "Performance Protection",
-    description:
-      "The cognitive disruption of perimenopause lands specifically in verbal memory, verbal fluency, and attention: exactly the functions your practice depends on. This handout outlines five evidence-based strategies to protect your performance during the transition.",
-    meta: "8 pages · PDF · Free download",
-    cta: "Download PDF",
-    href: "/download/performance-protection-handout.pdf",
+    label: 'Framework Brief',
+    title: 'The Power User Trap℠',
+    description: "AI adoption hides risk. The Power User Trap℠ begins when employees with technical proficiency and deep institutional knowledge become the informal validation layer for AI adoption. They learn the tools first, troubleshoot failures, verify outputs, train colleagues, and absorb the cognitive burden while standard productivity metrics show improvement. The organization sees adoption. It does not see the load. By the time the exit appears in retention data, the institutional knowledge is already gone.",
+    meta: 'PDF · Free download',
+    cta: 'Download the Power User Trap℠ Brief',
+    href: '#', // TODO: replace with the real download URL
     download: true,
-  },
-  {
-    label: "Personal Equity Tool",
-    title: "The Replacement Value Auditor℠",
-    description:
-      "You know what you produce. This is what it costs the firm to replace you. Replacement value is a standard workforce metric—benchmarked, documented, and used in leadership planning at the highest levels. This tool puts that data in your hands so you can audit your own economic leverage before you make your next move.",
-    meta: "Interactive tool · Free",
-    cta: "Open Calculator",
-    href: "/retention-calculator",
-    download: false,
   },
 ];
-
-const title = "Tools & Resources | Lozen Advisory";
-
-const description =
-  "Download AI governance workbooks, workforce-risk tools, executive resources, and performance-protection materials from Lozen Advisory.";
-
-const dateModified = "2026-07-14";
 ---
 
-<BaseLayout title={title} description={description}>
-  <InternalPageHero
-    eyebrow="Tools & Resources"
-    title="Tools & Resources"
-    deck="Frameworks, briefings, and resources from Lozen Advisory for evaluating workforce risk, AI governance, and organizational capacity."
-  />
+<BaseLayout title="Tools & Resources | Lozen Advisory" description="Download AI governance workbooks, workforce-risk tools, executive resources, and performance-protection materials from Lozen Advisory.">
+<section class="page-hero">
+  <div class="grid-bg"></div>
+  <div class="wrap inner">
+    <div class="crumb"><a href="/">Home</a> &nbsp;/&nbsp; Tools &amp; Resources</div>
+    <span class="pill">Tools &amp; Resources</span>
+    <h1>Tools &amp; Resources</h1>
+    <p class="sub">Frameworks, briefings, and resources from Lozen Advisory for evaluating workforce risk, AI governance, and organizational capacity.</p>
+  </div>
+</section>
 
-  <section>
-    <Wrapper variant="standard" class="py-12 lg:py-20">
-      <div class="grid gap-6 lg:grid-cols-3">
-        {
-          resources.map((resource) => (
-            <article class="group flex h-full flex-col rounded-3xl border border-base-200 bg-white p-6 shadow-xl transition-all duration-500 hover:-translate-y-1 hover:border-accent-400 hover:shadow-2xl sm:p-8">
-              <div class="flex flex-1 flex-col">
-                <Text
-                  tag="span"
-                  variant="textSM"
-                  class="font-medium uppercase tracking-wide text-accent-600"
-                >
-                  {resource.label}
-                </Text>
+<section>
+  <div class="wrap">
+    <div class="feature-grid">
+      {resources.map((r) => (
+        <article class="fcard reveal" style="display:flex;flex-direction:column">
+          <span class="eyebrow" style="margin-bottom:6px">{r.label}</span>
+          <h3>{r.title}</h3>
+          <p style="flex:1">{r.description}</p>
+          <p style="font-size:13px;color:var(--muted);margin-top:14px">{r.meta}</p>
+          <a href={r.href} download={r.download ? true : undefined} class="btn btn-primary" style="margin-top:16px;align-self:flex-start">{r.cta}</a>
+        </article>
+      ))}
+    </div>
 
-                <Text
-                  tag="h2"
-                  variant="displaySM"
-                  class="mt-5 font-display uppercase text-base-900"
-                >
-                  {resource.title}
-                </Text>
-
-                <Text tag="p" variant="textBase" class="mt-5 text-base-700">
-                  {resource.description}
-                </Text>
-
-                <Text
-                  tag="p"
-                  variant="textSM"
-                  class="mt-6 font-medium text-base-500"
-                >
-                  {resource.meta}
-                </Text>
-              </div>
-
-              <div class="mt-8">
-                <a
-                  href={resource.href}
-                  download={resource.download ? true : undefined}
-                  class="inline-flex h-11 items-center justify-center rounded-lg bg-accent-300 px-5 py-4 text-center text-sm font-medium text-base-900 transition-all duration-500 ease-in-out hover:bg-accent-400 focus:outline-2 focus:outline-offset-4 focus:outline-accent-400"
-                >
-                  {resource.cta}
-                </a>
-              </div>
-            </article>
-          ))
-        }
-      </div>
-
-      <div class="mt-12 rounded-3xl bg-base-950 p-6 shadow-2xl outline-4 outline-base-500/10 sm:p-8">
-        <Text tag="p" variant="textBase" class="text-base-200">
-          These tools and materials are provided for educational and
-          informational purposes only. They do not constitute legal, medical,
-          compliance, audit, or professional advice. Organizations and
-          individuals should evaluate their specific circumstances and consult
-          qualified professionals where appropriate.
-        </Text>
-      </div>
-    </Wrapper>
-  </section>
+    <p style="color:var(--muted);font-size:14px;line-height:1.7;margin-top:48px;max-width:760px">These tools and materials are provided for educational and informational purposes only. They do not constitute legal, medical, compliance, audit, or professional advice. Organizations and individuals should evaluate their specific circumstances and consult qualified professionals where appropriate.</p>
+  </div>
+</section>
 </BaseLayout>
