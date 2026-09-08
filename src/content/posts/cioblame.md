@@ -17,8 +17,12 @@ image:
   alt: cio walking away with bag
 heroImage: /src/images/blog/ceo_walk_away.avif
 heroAlt: cio walking away with bag
+tags:
+  - AI Governance
+  - AI Accountability
+  - Name Standard
 draft: false
-isFeatured: false
+isFeatured: true
 ---
  In survey released on Sep 08, 2026, 2,501 CIOs and CTOs across five countries, **52% said the CIO is accountable when an AI agent makes an error.** Customer service leadership came in at 16%. Legal and compliance: 6%. 8x8 titled that finding well, they said, **"The CIO Is Holding the Bag."**
 
