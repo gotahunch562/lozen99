@@ -34,9 +34,9 @@ The 8x8 data sharpens that argument into a specific case: [a CIO can be responsi
 
 ## Why Audit Trails Alone Can't Solve AI Governance
 
-8x8 also flags the audit trail as part of the fix, and it's right that one is necessary — if the CIO is expected to answer for what an AI system did, the organization has to preserve evidence sufficient to investigate it.
+[8x8 also flags the audit trail](https://www.8x8.com/communications-reckoning/when-ai-fails) as part of the fix, and it's right that one is necessary — if the CIO is expected to answer for what an AI system did, the organization has to preserve evidence sufficient to investigate it.
 
-But a log only proves that something happened. It doesn't establish who authorized the system to operate under those conditions, who approved its permissions, who was supposed to be monitoring it, or who accepted the risk. That gap is why I defined [**Evidence-Based Responsibility Reconstruction℠**](https://www.lozenadvisory.com/blog/evidence-based-responsibility-reconstruction/): when AI-mediated conduct becomes consequential, responsibility can't be read off the org chart or handed to whoever owns the tech stack. It has to be reconstructed from whatever record actually connects people to the decisions that shaped the system's conduct.
+But a log only proves that something happened. It doesn't establish who authorized the system to operate under those conditions, who approved its permissions, who was supposed to be monitoring it, or who accepted the risk. That gap is why I defined **[Evidence-Based Responsibility Reconstruction℠](https://www.lozenadvisory.com/blog/evidence-based-responsibility-reconstruction/)**: when AI-mediated conduct becomes consequential, responsibility can't be read off the org chart or handed to whoever owns the tech stack. It has to be reconstructed from whatever record actually connects people to the decisions that shaped the system's conduct.
 
 ## Moving Beyond Default CIO Accountability for AI Failures
 
